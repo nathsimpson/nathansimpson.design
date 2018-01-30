@@ -1,0 +1,72 @@
+.App-header {
+  padding: 20px;
+}
+
+.hero-half{
+  background: #252D34;
+  width: 50%;
+  padding: 15% 20px;
+  box-sizing: border-box;
+  font-size: 1.25em;
+}
+
+.hero-half:first-of-type{
+  background-color: red;
+  background-image: url(http://www.nsgd.com.au/nathansnow.jpg);
+  background-size: cover;
+}
+
+.portfolio_selector{
+  text-align: center;
+  padding: 3px;
+}
+
+.portfolio_selector li{
+  list-style: none;
+  display: inline-block;
+  margin: 3px;
+}
+
+
+.portfolio{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.portfolio_item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin:3px;
+}
+
+.portfolio_item_label {
+  display: none;
+}
+
+.portfolio_item_image{
+  width:100%;
+}
+
+.portfolio_item:hover .portfolio_item_label {
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  font-size: 2em;
+  line-height: 1.2em;
+  color: white;
+  z-index: 3;
+  padding: 10px;
+}
+.portfolio_item:hover .portfolio_item_gradient {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  background: none;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -o-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -moz-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: linear-gradient(rgba(37, 45, 52, 0), #252d34);
+}

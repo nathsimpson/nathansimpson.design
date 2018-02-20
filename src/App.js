@@ -8,23 +8,38 @@ var portfolioInfo = {
     {
       key: 1,
       projectName : "Simmo's Offroad Tours",
-      imagesrc : "nathansnow.jpg",
+      imagesrc : "wedding_cover.jpg",
       tags: ["brand", "ux", "dev"],
     },{
       key: 2,
       projectName : "ITC Learning Website",
-      imagesrc : "nathansnow.jpg",
+      imagesrc : "wedding_cover.jpg",
       tags: ["ux", "dev"],
     },{
       key: 3,
       projectName : "LARA - Automated Administration Assistant",
-      imagesrc : "nathansnow.jpg",
+      imagesrc : "wedding_cover.jpg",
       tags: ["dev"],
     },{
       key: 4,
       projectName : "AgriVita",
-      imagesrc : "nathansnow.jpg",
+      imagesrc : "agrivita_cover.jpg",
       tags: ["ux", "brand"],
+    },{
+      key: 4,
+      projectName : "Need A Nanny",
+      imagesrc : "needANanny_cover.jpg",
+      tags: ["ux", "brand"],
+    },{
+      key: 4,
+      projectName : "Sydney Water Branding Concept",
+      imagesrc : "agrivita_cover.jpg",
+      tags: ["brand"],
+    },{
+      key: 5,
+      projectName : "Nathan + Carrie Wedding",
+      imagesrc : "wedding_cover.jpg",
+      tags: ["more"],
     }
   ]
 }
@@ -60,14 +75,13 @@ class PortfolioItem extends Component{
   render(){
     return(
       <div className="portfolio_item">
-        <img className="portfolio_item_image" src={"http://www.nsgd.com.au/" + this.props.data.imagesrc} alt=""/>
+        <img className="portfolio_item_image" src={"http://www.nsgd.com.au/portfolio/" + this.props.data.imagesrc} alt=""/>
          <span className="portfolio_item_label">{this.props.data.projectName}</span>
          <div className="portfolio_item_gradient"></div>
       </div>
     )
   }
 }
-
 
 class Portfolio extends Component {
   constructor(props) {
@@ -77,10 +91,15 @@ class Portfolio extends Component {
   render(){
     return(
       <div className="portfolio">
+        <h2>Portfolio</h2>
+        <PortfolioFilter/>
+        <div className="portfolio_gallery">
         {this.state.projects.map(projectData =>
           <PortfolioItem data={projectData}/>
         )}
+
         <a href="#">More</a>
+        </div>
       </div>
     )
   }
@@ -128,8 +147,8 @@ class TreehouseBadges extends Component {
         )}
       </div>);
   }
-
 }
+
 
 class Footer extends Component {
   render(){
@@ -148,7 +167,6 @@ class Footer extends Component {
 }
 
 
-
 class App extends Component {
   render() {
     return (
@@ -164,7 +182,6 @@ class App extends Component {
           </div>
         </div>
         <hr/>
-        <PortfolioFilter/>
         <Portfolio/>
         <hr/>
         <TreehouseBadges/>

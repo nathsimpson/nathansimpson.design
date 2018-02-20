@@ -6,18 +6,22 @@ import './App.css';
 var portfolioInfo = {
   projects: [
     {
+      key: 1,
       projectName : "Simmo's Offroad Tours",
       imagesrc : "nathansnow.jpg",
       tags: ["brand", "ux", "dev"],
     },{
+      key: 2,
       projectName : "ITC Learning Website",
       imagesrc : "nathansnow.jpg",
       tags: ["ux", "dev"],
     },{
+      key: 3,
       projectName : "LARA - Automated Administration Assistant",
       imagesrc : "nathansnow.jpg",
       tags: ["dev"],
     },{
+      key: 4,
       projectName : "AgriVita",
       imagesrc : "nathansnow.jpg",
       tags: ["ux", "brand"],
@@ -45,6 +49,7 @@ class PortfolioFilter extends Component {
           <li>UX</li>
           <li>Dev</li>
           <li>Brand</li>
+          <li>More</li>
         </ul>
       </div>
     )
@@ -75,6 +80,7 @@ class Portfolio extends Component {
         {this.state.projects.map(projectData =>
           <PortfolioItem data={projectData}/>
         )}
+        <a href="#">More</a>
       </div>
     )
   }
@@ -88,6 +94,55 @@ class AboutMe extends Component {
         <h2>About Me</h2>
         <p></p>
       </div>
+    )
+  }
+}
+
+
+
+class TreehouseBadges extends Component {
+  constructor(){
+    super();
+    this.state = {
+      badges: []
+    };
+  }
+
+  componentDidMount(){
+    //may need to implement axios
+    fetch('https://teamtreehouse.com/nathansimpson.json')
+      .then(response => response.json())
+      .then(responseData=>{this.setState({badges: responseData.badges});
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
+
+  render() {
+    return(
+      <div className="badges">
+        <h2>Treehouse Badges</h2>
+        {this.state.badges.map(badge =>
+          <img className="badges_badge" src={badge.icon_url} title={badge.name} alt={badge.name} style={{width:'60px',margin:'-17px 12px 0px 0px'}}/>
+        )}
+      </div>);
+  }
+
+}
+
+class Footer extends Component {
+  render(){
+    return(
+      <footer className="aboutMe">
+        <ul>
+          <li><a href="https://twitter.com/nathansimpson95" target="_blank">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/nathan-simpson-71512a75?trk" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/nathansimpson95" target="_blank">GitHub</a></li>
+          <li><a href="https://codepen.io/nathansimpson/" target="_blank">CodePen</a></li>
+        </ul>
+        <span>Designed and Developed with heart by N in React</span>
+      </footer>
     )
   }
 }
@@ -112,7 +167,9 @@ class App extends Component {
         <PortfolioFilter/>
         <Portfolio/>
         <hr/>
-
+        <TreehouseBadges/>
+        <hr/>
+        <Footer/>
       </div>
     );
   }

@@ -23,6 +23,12 @@ body {
 
 hr{border: 3px solid #FA6D01;}
 
+footer{text-align: center;}
+footer ul{list-style: none; padding:0;}
+footer ul li{margin: 0 auto; display: inline-block; margin: 5px;}
+footer ul li a{color: white; text-decoration: none;}
+footer ul li a:hover{color: #FA6D01;}
+
 /* Extra Small Devices, Phones */
 @media (min-width: 576px) {
   .container{max-width:540px;}

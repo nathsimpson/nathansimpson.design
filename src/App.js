@@ -75,7 +75,7 @@ class PortfolioItem extends Component{
   render(){
     return(
       <div className="portfolio_item">
-        <img className="portfolio_item_image" src={"http://www.nsgd.com.au/portfolio/" + this.props.data.imagesrc} alt=""/>
+        <img className="portfolio_item_image" src={"http://files.nathansimpson.design/portfolio/" + this.props.data.imagesrc} alt=""/>
          <span className="portfolio_item_label">{this.props.data.projectName}</span>
          <div className="portfolio_item_gradient"></div>
       </div>

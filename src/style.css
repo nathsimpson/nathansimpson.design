@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'Texta';
+  font-weight: 100;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Thin-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Thin-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Thin-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Thin-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Thin-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Thin-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 100;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Thin-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Thin-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Thin-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Thin-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Thin-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Thin-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 200;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Light-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Light-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Light-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Light-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Light-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Light-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 200;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Light-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Light-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Light-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Light-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Light-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Light-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 300;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Book-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Book-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Book-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Book-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Book-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Book-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 300;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Book-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Book-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Book-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Book-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Book-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Book-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Regular-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Regular-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Regular-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Regular-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Regular-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Regular-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 400;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 500;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Medium-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Medium-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Medium-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Medium-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Medium-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Medium-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 500;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 600;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Bold-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Bold-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Bold-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Bold-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Bold-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Bold-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 600;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 700;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Heavy-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 700;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 800;
+  font-style: normal;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Black-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Black-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Black-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Black-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Black-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Black-webFont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: 'Texta';
+  font-weight: 800;
+  font-style: italic;
+  src: url("http://files.nathansimpson.design/fonts/Texta-Black-Italic-webfont.eot");
+  src: url("http://files.nathansimpson.design/fonts/Texta-Black-Italic-webFont.eot?#iefix") format("embedded-opentype"), url("http://files.nathansimpson.design/fonts/Texta-Black-Italic-webFont.woff") format("woff"), url("http://files.nathansimpson.design/fonts/Texta-Black-Italic-webFont.woff2") format("woff2"), url("http://files.nathansimpson.design/fonts/Texta-Black-Italic-webFont.ttf") format("truetype"), url("http://files.nathansimpson.design/fonts/Texta-Black-Italic-webFont.svg#webfont") format("svg"); }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: white;
+  font-family: 'Texta', sans-serif;
+  font-weight: 100; }
+
+h1, h2, h3, h4 {
+  font-weight: 100; }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch; }
+
+hr {
+  border: 3px solid #FA6D01; }
+
+footer {
+  text-align: center; }
+
+footer ul {
+  list-style: none;
+  padding: 0; }
+
+footer ul li {
+  margin: 0 auto;
+  display: inline-block;
+  margin: 5px; }
+
+footer ul li a {
+  color: white;
+  text-decoration: none; }
+
+footer ul li a:hover {
+  color: #FA6D01; }
+
+.App-header {
+  padding: 20px; }
+
+/* Extra Small Devices, Phones */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+/* Small Devices, Tablets */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+/* Medium Devices, Desktops */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+/* Large Devices, Wide Screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+/*helper class for youtube videos*/
+.embed-responsive {
+  margin-bottom: 15px; }
+
+.hero-half {
+  background: #252D34;
+  width: 50%;
+  padding: 15% 20px;
+  box-sizing: border-box;
+  font-size: 1.25em; }
+
+.hero-half:first-of-type {
+  background-image: url(http://files.nathansimpson.design/nathansnow.jpg);
+  background-size: cover; }
+
+.portfolio_gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.portfolio_item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 3px; }
+
+.portfolio_item_label {
+  display: none; }
+
+.portfolio_item_image {
+  width: 100%; }
+
+.portfolio_item:hover .portfolio_item_label {
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  font-size: 2em;
+  line-height: 1.2em;
+  color: white;
+  z-index: 3;
+  padding: 10px; }
+
+.portfolio_item:hover .portfolio_item_gradient {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  background: none;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -o-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -moz-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: linear-gradient(rgba(37, 45, 52, 0), #252d34); }
+
+.hero-half {
+  background: #252D34;
+  width: 50%;
+  padding: 15% 20px;
+  box-sizing: border-box;
+  font-size: 1.25em; }
+
+.hero-half:first-of-type {
+  background-image: url(http://files.nathansimpson.design/nathansnow.jpg);
+  background-size: cover; }
+
+.portfolio_gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.portfolio_item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 3px; }
+
+.portfolio_item_label {
+  display: none; }
+
+.portfolio_item_image {
+  width: 100%; }
+
+.portfolio_item:hover .portfolio_item_label {
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  font-size: 2em;
+  line-height: 1.2em;
+  color: white;
+  z-index: 3;
+  padding: 10px; }
+
+.portfolio_item:hover .portfolio_item_gradient {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  background: none;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -o-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -moz-linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: linear-gradient(rgba(37, 45, 52, 0), #252d34); }
+
+/*# sourceMappingURL=style.css.map */

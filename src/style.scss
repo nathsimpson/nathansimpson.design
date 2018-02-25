@@ -1,0 +1,70 @@
+@import 'scss/_variables.scss';
+@import 'scss/_fonts.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $black;
+  color: white;
+  font-family: 'Texta', sans-serif;
+  font-weight: 100;
+}
+
+h1,h2,h3,h4{
+  font-weight: 100;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+hr{border: 3px solid $nsOrange;}
+
+footer{text-align: center;}
+footer ul{list-style: none; padding:0;}
+footer ul li{margin: 0 auto; display: inline-block; margin: 5px;}
+footer ul li a{color: white; text-decoration: none;}
+footer ul li a:hover{color: $nsOrange;}
+
+
+.App-header {
+  padding: 20px;
+}
+
+/* Extra Small Devices, Phones */
+@media (min-width: 576px) {
+  .container{max-width:540px;}
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 768px) {
+  .container{max-width:720px;}
+}
+
+/* Medium Devices, Desktops */
+@media (min-width: 992px) {
+  .container{max-width:960px;}
+}
+
+/* Large Devices, Wide Screens */
+@media (min-width: 1200px){
+  .container{max-width:1140px;}
+}
+
+
+/*helper class for youtube videos*/
+.embed-responsive{margin-bottom:15px;}
+
+@import 'scss/_components.scss', 'scss/_components.scss';

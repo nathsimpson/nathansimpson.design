@@ -1,7 +1,3 @@
-.App-header {
-  padding: 20px;
-}
-
 .hero-half{
   background: #252D34;
   width: 50%;
@@ -11,19 +7,8 @@
 }
 
 .hero-half:first-of-type{
-  background-image: url(http://www.nsgd.com.au/nathansnow.jpg);
+  background-image: url(http://files.nathansimpson.design/nathansnow.jpg);
   background-size: cover;
-}
-
-.portfolio_selector{
-  text-align: center;
-  padding: 3px;
-}
-
-.portfolio_selector li{
-  list-style: none;
-  display: inline-block;
-  margin: 3px;
 }
 
 

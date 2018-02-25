@@ -89,7 +89,7 @@ class App extends Component {
           <div className="hero-half">
           </div>
           <div className="hero-half">
-            <h1>Hi I'm <span style={{color:'#FA6D01'}}>Nathan Simpson</span></h1>
+            <h1 style={{fontSize: '3em', fontWeight:500, lineHeight:'1em', margin: '10px 0px',}}>Hi I'm <br/><span style={{color:'#FA6D01'}}>Nathan Simpson</span></h1>
             <span>Designer and Frontend Developer from Sydney.</span>
           </div>
         </div>

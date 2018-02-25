@@ -1,15 +1,22 @@
 .hero-half{
   background: #252D34;
-  width: 50%;
   padding: 15% 20px;
   box-sizing: border-box;
   font-size: 1.25em;
+  width: 100%;
 }
 
 .hero-half:first-of-type{
   background-image: url(http://files.nathansimpson.design/nathansnow.jpg);
   background-size: cover;
 }
+
+@media (min-width: 768px) {
+  .hero-half{width: 50%;}
+  .hero-half:first-of-type{min-height: 400px;}
+}
+
+
 
 
 .portfolio_gallery{
@@ -36,7 +43,7 @@
   display: block;
   position: absolute;
   bottom: 6px;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.2em;
   color: white;
   z-index: 3;
@@ -49,8 +56,8 @@
   bottom: 0;
   background: none;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgba(37, 45, 52, 0), #252d34);
-  background: -o-linear-gradient(rgba(37, 45, 52, 0), #252d34);
-  background: -moz-linear-gradient(rgba(37, 45, 52, 0), #252d34);
-  background: linear-gradient(rgba(37, 45, 52, 0), #252d34);
+  background: -webkit-linear-gradient(rgba(37, 45, 52, 0), $nsDarkGrey);
+  background: -o-linear-gradient(rgba(37, 45, 52, 0), $nsDarkGrey);
+  background: -moz-linear-gradient(rgba(37, 45, 52, 0), $nsDarkGrey);
+  background: linear-gradient(rgba(37, 45, 52, 0), $nsDarkGrey);
 }

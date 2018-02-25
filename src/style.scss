@@ -7,7 +7,7 @@ body {
   background-color: $black;
   color: white;
   font-family: 'Texta', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 h1,h2,h3,h4{
@@ -37,11 +37,6 @@ footer ul{list-style: none; padding:0;}
 footer ul li{margin: 0 auto; display: inline-block; margin: 5px;}
 footer ul li a{color: white; text-decoration: none;}
 footer ul li a:hover{color: $nsOrange;}
-
-
-.App-header {
-  padding: 20px;
-}
 
 /* Extra Small Devices, Phones */
 @media (min-width: 576px) {

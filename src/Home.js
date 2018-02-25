@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import TreehouseBadges from './components/TreehouseBadges';
 import {PortfolioFilter, PortfolioItem} from './components/Portfolio';
+import ContactForm from './components/ContactForm';
 
 var portfolioInfo = {
   projects: [
@@ -97,6 +98,8 @@ class App extends Component {
         <Portfolio/>
         <hr/>
         <TreehouseBadges/>
+        <hr/>
+        <ContactForm/>
         <hr/>
         <Footer/>
       </div>

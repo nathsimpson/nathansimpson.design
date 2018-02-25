@@ -1,3 +1,4 @@
+//Hero
 .hero-half{
   background: #252D34;
   padding: 15% 20px;
@@ -16,9 +17,44 @@
   .hero-half:first-of-type{min-height: 400px;}
 }
 
+//Forms
+input, select, textarea{
+	color: #fff;
+	display: block;
+	width:100%;
+	max-width:400px;
+  font-size: 1rem;
+	margin:5px;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+	border:none;
+	background: $nsDarkGrey;
+	box-sizing: border-box;
+}
+
+select:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+}
+
+input::placeholder,
+textarea::placeholder{
+	color: rgba(255,255,255,0.4);
+}
+
+input:focus, select:focus, textarea:focus{
+	background: #FA6D01;
+	outline: none;
+  padding: 1rem 1rem;
+}
+
+input[type="submit"]{
+  display: initial;
+  width: initial;
+  background: $nsOrange;
+}
 
 
-
+//Portfolio
 .portfolio_gallery{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));

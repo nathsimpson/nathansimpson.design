@@ -3,8 +3,7 @@ import React from 'react';
 let portfolioSelectorStyles = {textAlign: 'center', padding: '3px'}
 let portfolioSelectorItemStyles = {listStyle: 'none', display: 'inline-block', margin: '3px'}
 
-
-export class PortfolioFilter extends React.Component {
+class PortfolioFilter extends React.Component {
  render(){
    return(
      <div className="portfolio_filter">
@@ -20,8 +19,7 @@ export class PortfolioFilter extends React.Component {
  }
 }
 
-
-export class PortfolioItem extends React.Component {
+class PortfolioItem extends React.Component {
  render(){
    return(
      <div className="portfolio_item">
@@ -32,3 +30,21 @@ export class PortfolioItem extends React.Component {
    );
  }
 }
+
+class Portfolio extends React.Component {
+  render(){
+    return(
+      <div className="portfolio">
+        <h2>Portfolio</h2>
+        <PortfolioFilter/>
+        <div className="portfolio_gallery">
+        {this.props.projects.map(projectData =>
+          <PortfolioItem data={projectData}/>
+        )}
+        <a href="#">More</a>
+        </div>
+      </div>
+    )
+  }
+}
+export default Portfolio;

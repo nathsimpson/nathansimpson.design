@@ -21,7 +21,6 @@ class Home extends React.Component {
        <TreehouseBadges/>
        <hr/>
        <ContactForm/>
-       <hr/>
      </main>
    );
  }

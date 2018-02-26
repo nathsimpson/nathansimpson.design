@@ -30,6 +30,7 @@ input, select, textarea{
 	border:none;
 	background: $nsDarkGrey;
 	box-sizing: border-box;
+  transition: padding 0.5s, background 0.5s;
 }
 
 select:not([size]):not([multiple]) {

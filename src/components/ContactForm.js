@@ -4,6 +4,8 @@ export default class ContactForm extends React.Component {
 
   render() {
     return(
+      <div style={{width:'100%'}}>
+      <h2>Contact Me</h2>
       <form>
       	<input type="text" name="name" placeholder="Name"/>
       	<input type="email" name="name" placeholder="Email"/>
@@ -17,6 +19,7 @@ export default class ContactForm extends React.Component {
       	<textarea name="name" placeholder="Message"></textarea>
       	<input type="submit"/>
       </form>
+      </div>
     );
   }
 }

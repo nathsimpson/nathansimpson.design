@@ -10,6 +10,7 @@ let footerlogostyles = {height: '1em'}
 
 const Footer = () => (
   <footer className="aboutMe">
+    <hr/>
     <ul style={{margin: '0.5em', fontSize:'2em'}}>
       <li><a href="https://twitter.com/nathansimpson95" target="_blank"><FontAwesomeIcon icon={faTwitter}/></a></li>
       <li><a href="https://www.linkedin.com/in/nathan-simpson-71512a75?trk" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></li>

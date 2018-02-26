@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
+import NotFound from './components/NotFound';
 
 
 var portfolioInfo = [
@@ -59,8 +60,11 @@ class App extends Component {
       <BrowserRouter>
       <div className="container">
         <Header/>
-        <Route exact path="/" render={()=><Home projects={this.state.portfolioData}/>} />
-        <Route path="/portfolio" render={()=><Portfolio projects={this.state.portfolioData}/>} />
+        <Switch>
+          <Route exact path="/" render={()=><Home projects={this.state.portfolioData}/>} />
+          <Route path="/portfolio" render={()=><Portfolio projects={this.state.portfolioData}/>} />
+          <Route component={NotFound} />
+        </Switch>
         <Footer/>
       </div>
       </BrowserRouter>

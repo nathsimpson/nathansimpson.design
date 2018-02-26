@@ -8,10 +8,12 @@ body {
   color: white;
   font-family: 'Texta', sans-serif;
   font-weight: 300;
+  font-size: 1.25em;
 }
 
 h1,h2,h3,h4{
   font-weight: 100;
+  font-size: 1.6em;
 }
 
 
@@ -31,12 +33,6 @@ h1,h2,h3,h4{
 }
 
 hr{border: 3px solid $nsOrange;}
-
-footer{text-align: center;}
-footer ul{list-style: none; padding:0;}
-footer ul li{margin: 0 auto; display: inline-block; margin: 5px;}
-footer ul li a{color: white; text-decoration: none;}
-footer ul li a:hover{color: $nsOrange;}
 
 /* Extra Small Devices, Phones */
 @media (min-width: 576px) {
@@ -62,4 +58,4 @@ footer ul li a:hover{color: $nsOrange;}
 /*helper class for youtube videos*/
 .embed-responsive{margin-bottom:15px;}
 
-@import 'scss/_components.scss', 'scss/_components.scss';
+@import 'scss/_components.scss', 'scss/_components.scss', 'scss/header.scss';

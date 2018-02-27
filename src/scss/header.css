@@ -1,35 +1,24 @@
 /*
 Error: Undefined variable: "$nsOrange".
-        on line 28 of /Users/nathansimpson/github/nathansimpson.design/src/scss/header.scss
+        on line 17 of /Users/nathansimpson/github/nathansimpson.design/src/scss/header.scss
 
-23:     padding: .7em;
-24:     text-align: center;
-25:     color: white;
-26:     border-bottom: 1px solid #999;
-27:     transition: background-color .3s, color .3s;
-28:     &:hover {color: $nsOrange; }
-29:   }
-30:   .nav__item--active{color: $nsOrange; }
-31: }
-32: 
-33: .site-content {
+12: 
+13: .header__logo{
+14:   height:60px;
+15:   width: auto;
+16: 
+17:   g .outline{fill:$nsOrange;}
+18:   g .solid{fill:black;}
+19: 
+20:   &:hover g .outline{fill:white;}
+21:   &:hover g .solid{fill:$nsOrange;}
+22: }
 
 Backtrace:
-/Users/nathansimpson/github/nathansimpson.design/src/scss/header.scss:28
+/Users/nathansimpson/github/nathansimpson.design/src/scss/header.scss:17
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -84,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$nsOrange\".\A         on line 28 of /Users/nathansimpson/github/nathansimpson.design/src/scss/header.scss\A \A 23:     padding: .7em;\A 24:     text-align: center;\A 25:     color: white;\A 26:     border-bottom: 1px solid #999;\A 27:     transition: background-color .3s, color .3s;\A 28:     &:hover {color: $nsOrange; }\A 29:   }\A 30:   .nav__item--active{color: $nsOrange; }\A 31: }\A 32: \A 33: .site-content {"; }
+  content: "Error: Undefined variable: \"$nsOrange\".\A         on line 17 of /Users/nathansimpson/github/nathansimpson.design/src/scss/header.scss\A \A 12: \A 13: .header__logo{\A 14:   height:60px;\A 15:   width: auto;\A 16: \A 17:   g .outline{fill:$nsOrange;}\A 18:   g .solid{fill:black;}\A 19: \A 20:   &:hover g .outline{fill:white;}\A 21:   &:hover g .solid{fill:$nsOrange;}\A 22: }"; }

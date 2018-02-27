@@ -43,7 +43,7 @@ textarea::placeholder{
 }
 
 input:focus, select:focus, textarea:focus{
-	background: #FA6D01;
+	background: $nsOrange;
 	outline: none;
   padding: 1rem 1rem;
 }
@@ -98,3 +98,13 @@ input[type="submit"]{
   background: -moz-linear-gradient(rgba(37, 45, 52, 0), $nsDarkGrey);
   background: linear-gradient(rgba(37, 45, 52, 0), $nsDarkGrey);
 }
+
+//resume
+.resume__item{
+  background: $nsDarkGrey;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.resume__item h2,.resume__item h3{margin:0;}

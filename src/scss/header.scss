@@ -10,6 +10,26 @@
   padding: 2em;
 }
 
+.header__logo{
+  height:60px;
+  width: auto;
+
+  g .outline{fill:$nsOrange;}
+  g .solid{fill:black;}
+
+  &:hover g .outline{fill:white;}
+  &:hover g .solid{fill:$nsOrange;}
+}
+
+
+
+
+
+
+.header__logo g .solid{fill:black;}
+.header__logo:hover g .outline{fill:white;}
+.header__logo:hover g .solid{fill:$nsOrange;}
+
 .nav {
   ul {
     list-style: none;

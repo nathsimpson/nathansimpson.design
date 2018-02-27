@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
+import About from './components/About';
+import Resume from './components/Resume';
 import NotFound from './components/NotFound';
 
 
@@ -63,6 +65,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={()=><Home projects={this.state.portfolioData}/>} />
           <Route path="/portfolio" render={()=><Portfolio projects={this.state.portfolioData}/>} />
+          <Route path="/about" component={About} />
+          <Route path="/resume" component={Resume} />
           <Route component={NotFound} />
         </Switch>
         <Footer/>

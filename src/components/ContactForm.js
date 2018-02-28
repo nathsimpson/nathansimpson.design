@@ -1,11 +1,15 @@
 import React from 'react';
 
 export default class ContactForm extends React.Component {
+  onSubmit = function(e){
+    e.preventDefault();
+  }
+
   render() {
     return(
       <div style={{width:'100%'}}>
       <h2 style={{textAlign: 'center'}}>Contact Me</h2>
-      <form style={{maxWidth: '400px', margin: '0 auto'}}>
+      <form onSubmit={this.onSubmit} style={{maxWidth: '400px', margin: '0 auto'}}>
       	<input type="text" name="name" placeholder="Name"/>
       	<input type="email" name="name" placeholder="Email"/>
       	<input type="tel" name="name" placeholder="Phone"/>

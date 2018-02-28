@@ -13,7 +13,14 @@ body {
 
 h1,h2,h3,h4{
   font-weight: 100;
-  font-size: 1.6em;
+}
+
+a{
+  color: $nsOrange;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 
@@ -58,4 +65,4 @@ hr{border: 3px solid $nsOrange;}
 /*helper class for youtube videos*/
 .embed-responsive{margin-bottom:15px;}
 
-@import 'scss/_components.scss', 'scss/_components.scss', 'scss/header.scss';
+@import 'scss/_components.scss', 'scss/_components.scss', 'scss/_header.scss';

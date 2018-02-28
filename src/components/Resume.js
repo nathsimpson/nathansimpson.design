@@ -96,14 +96,23 @@ class Skills extends React.Component {
     return(
       <section className="resume__item">
         <h2>Skills</h2>
+
+        <h3>Practical Skills</h3>
         <ul>
-          <li>Adobe Photoshop & Illustrator</li>
-          <li>Adobe XD</li>
-          <li>Adobe Animate & After Effects</li>
-          <li>HTML, CSS, JavaScript</li>
+          <li>Visual Design &amp; User Interface Design</li>
+          <li>Adobe Photoshop &amp; Illustrator</li>
+          <li>Adobe XD, Sketch and Prototyping Tools</li>
+          <li>Adobe Animate &amp; After Effects</li>
+          <li>macOS &amp; Windows</li>
+        </ul>
+
+        <h3>Code Skills</h3>
+        <ul>
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript - Including React and jQuery</li>
+          <li>PHP</li>
           <li>Swift</li>
-          <li>macOS & Windows</li>
-          <li>Microsoft Office</li>
+          <li>XML</li>
         </ul>
       </section>
     );
@@ -114,7 +123,7 @@ class Volunteer extends React.Component {
   render() {
     return(
       <section className="resume__item">
-        <h2>Skills</h2>
+        <h2>Volunteer History</h2>
         <h3>Service Host and Kids Church</h3>
         Elevation Church Penrith
         2016 - Present
@@ -131,21 +140,25 @@ class Volunteer extends React.Component {
 export default class Resume extends React.Component {
   render() {
     return(
-      <div>
+      <main>
         <h1>Resume</h1>
 
         <h2>Career Objectives</h2>
         <p>Bachelor of Design graduate seeking an entry level role in Web and Application Design, with the opportunity to further my interests in development. I can offer strong visual design and computer skills with a sound knowledge in HTML, CSS, JavaScript and Swift.</p>
-        <div style={{width:'60%'}}>
-          <Experience/>
-          <Education/>
+        <hr/>
+        <div style={{display:'flex', flexDirection:'row'}}>
+          <div style={{paddingRight:'20px'}}>
+            <Experience/>
+            <hr/>
+            <Education/>
+          </div>
+          <div style={{}}>
+            <Interests/>
+            <Skills/>
+            <Volunteer/>
+          </div>
         </div>
-        <div style={{width:'40%'}}>
-          <Interests/>
-          <Skills/>
-          <Volunteer/>
-        </div>
-      </div>
+      </main>
     );
   }
 }

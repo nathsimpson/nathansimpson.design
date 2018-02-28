@@ -14,8 +14,8 @@
   height:60px;
   width: auto;
 
-  g .outline{fill:$nsOrange;}
-  g .solid{fill:black;}
+  g .outline{fill:$nsOrange; transition: fill 0.5s;}
+  g .solid{fill:black; transition: fill 0.5s;}
 
   &:hover g .outline{fill:white;}
   &:hover g .solid{fill:$nsOrange;}

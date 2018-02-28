@@ -21,11 +21,14 @@ export default class TreehouseBadges extends React.Component {
 
   render() {
     return(
-      <div className="badges">
+      <div>
         <h2>Treehouse Badges</h2>
-        {this.state.badges.map(badge =>
-          <img className="badges_badge" src={badge.icon_url} title={badge.name} alt={badge.name} key={badge.id} style={{width:'60px',margin:'-17px 12px 0px 0px'}}/>
-        )}
+        <div className="badges">
+          {this.state.badges.map(badge =>
+            <img className="badges_badge" src={badge.icon_url} title={badge.name} alt={badge.name} key={badge.id} style={{width:'60px',margin:'-17px 12px 0px 0px'}}/>
+          )}
+        </div>
+        <a style={{textAlign:'center', display:'block'}} href="http://referrals.trhou.se/nathansimpson" target="_blank">Join me on Treehouse</a>
       </div>);
   }
 }

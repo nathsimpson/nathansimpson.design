@@ -6,7 +6,7 @@ export default class About extends React.Component {
       <main>
         <h1>About Nathan Simpson</h1>
         <h2>TL;DR</h2>
-        <p>I am a User Experience Designer and Frontend Developer living in Sydney NSW.</p>
+        <p>I am a User Experience Designer and Frontend Developer living in Sydney Australia, who enjoys making his designs come to life through code.</p>
         <p>I am currently studying Graphic Design at Western Sydney University, and I am learning JavaScript, React and Swift through TreeHouse.</p>
         <img style={{width:'200px'}} src="https://pbs.twimg.com/profile_images/760066045587578880/GlGTYCrE_400x400.jpg"/>
         <hr/>
@@ -16,7 +16,7 @@ export default class About extends React.Component {
         <hr/>
         <h2>The Back Story</h2>
         <p>I was born in Orange NSW to a Police Officer and a Nurse.</p>
-        <p>From a young age, I showed an interest and an understanding for technology and I enjoyed drawing cars when I should have been listening in class. I developed an interest in Apple when I was 10, because I was attracted to the Industrial and the User Experience Design that went into each product, and the branding and marketing that followed it.</p>
+        <p>From a young age, I showed an interest and an understanding for technology and I enjoyed drawing cars when I should have been listening in class. I developed an interest in Apple when I was 10, because I was attracted to the Industrial and the User Experience Design that went into each product, and the branding and marketing that followed it. This was the beginning of my love of design.</p>
         <p>When I was 12 my Dad left the Police Force, and decided to start his own business. Designing his logo was my first experience with Graphic design. I found my passion and began practicing with Photoshop and Illustrator.</p>
         <p>For my HSC Major Design Project, I branded 'Nathan Simpson Graphic Design', and started my campaign to get into the public eye as a professional Graphic Designer. It all paid off when my Major Project was nominated for inclusion in an exhibition at the Powerhouse Museum in Sydney.</p>
         <p>After finishing high school, I began learning HTML and CSS, before jumping into PHP and creating custom Wordpress themes for clients. I moved to Sydney in 2015, and continued freelancing.</p>

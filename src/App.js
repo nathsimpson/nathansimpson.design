@@ -13,17 +13,17 @@ var portfolioInfo = [
     {
       key: 1,
       projectName : "Simmo's Offroad Tours",
-      imagesrc : "wedding_cover.jpg",
+      imagesrc : "simmo_cover.jpg",
       tags: ["brand", "ux", "dev"],
     },{
       key: 2,
       projectName : "ITC Learning Website",
-      imagesrc : "wedding_cover.jpg",
+      imagesrc : "itc_cover.jpg",
       tags: ["ux", "dev"],
     },{
       key: 3,
       projectName : "LARA - Automated Administration Assistant",
-      imagesrc : "wedding_cover.jpg",
+      imagesrc : "lara_cover.jpg",
       tags: ["dev"],
     },{
       key: 4,
@@ -38,7 +38,7 @@ var portfolioInfo = [
     },{
       key: 4,
       projectName : "Sydney Water Branding Concept",
-      imagesrc : "agrivita_cover.jpg",
+      imagesrc : "sydney_water_cover.jpg",
       tags: ["brand"],
     },{
       key: 5,

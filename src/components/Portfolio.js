@@ -41,7 +41,6 @@ export default class Portfolio extends React.Component {
         {this.props.projects.map(projectData =>
           <PortfolioItem data={projectData}/>
         )}
-        <a href="#">More</a>
         </div>
       </div>
     )

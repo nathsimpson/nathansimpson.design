@@ -10,16 +10,16 @@ import NotFound from './components/NotFound';
 
 
 var portfolioInfo = [
-    {
+{
       key: 1,
-      projectName : "Simmo's Offroad Tours",
-      imagesrc : "simmo_cover.jpg",
-      tags: ["brand", "ux", "dev"],
-    },{
-      key: 2,
       projectName : "ITC Learning Website",
       imagesrc : "itc_cover.jpg",
       tags: ["ux", "dev"],
+    },{
+      key: 2,
+      projectName : "Simmo's Offroad Tours",
+      imagesrc : "simmo_cover.jpg",
+      tags: ["brand", "ux", "dev"],
     },{
       key: 3,
       projectName : "LARA - Automated Administration Assistant",
@@ -31,19 +31,39 @@ var portfolioInfo = [
       imagesrc : "agrivita_cover.jpg",
       tags: ["ux", "brand"],
     },{
-      key: 4,
+      key: 5,
       projectName : "Need A Nanny",
       imagesrc : "needANanny_cover.jpg",
       tags: ["ux", "brand"],
     },{
-      key: 4,
+      key: 6,
+      projectName : "John Emmanuel Floral Design",
+      imagesrc : "john_emmanuel/johnemmanuel_cover.jpg",
+      tags: ["ux", "dev"],
+    },{
+      key: 7,
       projectName : "Sydney Water Branding Concept",
       imagesrc : "sydney_water_cover.jpg",
       tags: ["brand"],
     },{
-      key: 5,
+      key: 8,
       projectName : "Nathan + Carrie Wedding",
       imagesrc : "wedding_cover.jpg",
+      tags: ["more"],
+    },{
+      key: 9,
+      projectName : "Aussie Fire Trucks",
+      imagesrc : "aussiefiretrucks_cover.jpg",
+      tags: ["dev"],
+    },{
+      key: 10,
+      projectName : "Sydney Transport Futures",
+      imagesrc : "aussiefiretrucks_cover.jpg",
+      tags: ["ux","dev"],
+    },{
+      key: 11,
+      projectName : "V8 Supercars Livery Designs",
+      imagesrc : "supercars/supercars_cover.jpg",
       tags: ["more"],
     }
 ]

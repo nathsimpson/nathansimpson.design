@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg';
 import {Link, NavLink} from 'react-router-dom';
 
 class LogoReact extends React.Component {

@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default class ContactForm extends React.Component {
-  onSubmit = function(e){
-    e.preventDefault();
-  }
 
   render() {
     return(

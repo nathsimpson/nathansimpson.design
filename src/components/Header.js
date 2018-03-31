@@ -23,7 +23,7 @@ class LogoReact extends React.Component {
 
 
 const Header = () => (
-  <header className="header" style={{padding: '20px'}}>
+  <header className="header">
     <Link exact to="/"><LogoReact/></Link>
     <nav className="nav">
       <ul>

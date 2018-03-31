@@ -16,25 +16,24 @@ module.exports = {
         test : /\.js$/,
         include : path.resolve(__dirname, 'src'),
         loader : 'babel-loader',
-        query: {
-          "presets" : ["es2015", "react"]
-        }
+        query: {"presets" : ["es2015", "react", "stage-2"]}
       },{
         test: /\.md$/,
         use: 'raw-loader'
       },{
         test: /\.scss$/,
         use: [
-          // creates style nodes from JS strings
-          {loader: "style-loader"},
-          // translates CSS into CommonJS
-          {loader: "css-loader"},
-          // compiles Sass to CSS
-          {loader: "sass-loader"}
+          {loader: "style-loader"},  // creates style nodes from JS strings
+          {loader: "css-loader"},    // translates CSS into CommonJS
+          {loader: "sass-loader"}    // compiles Sass to CSS
         ]
       },{
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192
+        },
+        include: path.resolve(__dirname, '../')
       }
     ]
   }

@@ -1,7 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
-let portfolioSelectorStyles = {textAlign: 'center', padding: '3px'}
-let portfolioSelectorItemStyles = {listStyle: 'none', display: 'inline-block', margin: '3px'}
+const portfolioSelectorStyles = {textAlign: 'center', padding: '3px'}
+const portfolioSelectorItemStyles = {listStyle: 'none', display: 'inline-block', margin: '3px'}
+
 
 class PortfolioFilter extends React.Component {
  render(){
@@ -22,11 +26,13 @@ class PortfolioFilter extends React.Component {
 class PortfolioItem extends React.Component {
  render(){
    return(
-     <div className="portfolio_item" key={this.props.data.key}>
-       <img className="portfolio_item_image" src={"http://files.nathansimpson.design/portfolio/" + this.props.data.imagesrc} alt=""/>
-        <span className="portfolio_item_label">{this.props.data.projectName}</span>
-        <div className="portfolio_item_gradient"></div>
-     </div>
+     <Link to={`/project/${this.props.data.key}`}>
+       <div className="portfolio_item" key={this.props.data.key}>
+         <img className="portfolio_item_image" src={"http://files.nathansimpson.design/portfolio/" + this.props.data.imagesrc} alt=""/>
+          <span className="portfolio_item_label">{this.props.data.projectName}</span>
+          <div className="portfolio_item_gradient"></div>
+       </div>
+     </Link>
    );
  }
 }
@@ -38,9 +44,9 @@ export default class Portfolio extends React.Component {
         <h1>Portfolio</h1>
         <PortfolioFilter/>
         <div className="portfolio_gallery">
-        {this.props.projects.map(projectData =>
-          <PortfolioItem data={projectData}/>
-        )}
+          {this.props.projects.map(project =>
+            <PortfolioItem data={project}/>
+          )}
         </div>
       </div>
     )

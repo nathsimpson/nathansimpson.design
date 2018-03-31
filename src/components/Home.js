@@ -2,6 +2,8 @@ import React from 'react';
 import TreehouseBadges from './TreehouseBadges';
 import Portfolio from './Portfolio';
 import ContactForm from './ContactForm';
+import { Route, Redirect } from 'react-router';
+import {Link, NavLink} from 'react-router-dom';
 
 class Home extends React.Component {
  render(){
@@ -17,6 +19,7 @@ class Home extends React.Component {
        </div>
        <hr/>
        <Portfolio projects={this.props.projects} limit={7}/>
+       <NavLink to="/project" className="nav__item" activeClassName="nav__item--active">Project page</NavLink>
        <hr/>
        <TreehouseBadges/>
        <hr/>

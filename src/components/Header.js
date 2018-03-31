@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg';
 import {Link, NavLink} from 'react-router-dom';
 
 class LogoReact extends React.Component {
@@ -24,7 +23,7 @@ class LogoReact extends React.Component {
 
 
 const Header = () => (
-  <header className="header" style={{padding: '20px'}}>
+  <header className="header">
     <Link exact to="/"><LogoReact/></Link>
     <nav className="nav">
       <ul>

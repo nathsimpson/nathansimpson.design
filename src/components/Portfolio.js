@@ -42,7 +42,6 @@ export default class Portfolio extends React.Component {
     return(
       <div className="portfolio">
         <h1>Portfolio</h1>
-        <PortfolioFilter/>
         <div className="portfolio_gallery">
           {this.props.projects.map(project =>
             <PortfolioItem data={project}/>

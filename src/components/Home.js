@@ -19,7 +19,6 @@ class Home extends React.Component {
        </div>
        <hr/>
        <Portfolio projects={this.props.projects} limit={7}/>
-       <NavLink to="/project" className="nav__item" activeClassName="nav__item--active">Project page</NavLink>
        <hr/>
        <TreehouseBadges/>
        <hr/>

@@ -1,27 +1,9 @@
-import express from 'express';
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import App from './client/App';
-import Html from './client/Html';
+var express = require("express");
+var path = require("path");
 
-const port = process.env.PORT || 3000;
-const server = express();
+var app = express();
 
-server.get('/', (req, res) => {
-  /**
-   * renderToString() will take our React app and turn it into a string
-   * to be inserted into our Html template function.
-   */
-  const body = renderToString(<App />);
-  const title = 'Server side Rendering with Styled Components';
-
-  res.send(
-    Html({
-      body,
-      title
-    })
-  );
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+  console.log("Listening on Port 3000");
 });
-
-server.listen(port)
-console.log(`Serving at http://localhost:${port}`);

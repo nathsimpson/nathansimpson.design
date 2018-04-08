@@ -7,7 +7,7 @@
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "start": "npm run build",
-    "build": "./node_modules/webpack/bin/webpack.js -p --progress",
+    "build": "./node_modules/webpack/bin/webpack.js -p --progress && node server",
     "dev": "webpack --d --p && webpack-dev-server --d --content-base public/ --inline --hot"
   },
   "author": "Nathan Simpson",

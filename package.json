@@ -7,7 +7,7 @@
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "start": "npm run build",
-    "build": "webpack --d && webpack-dev-server --d --content-base public/ --inline --hot"
+    "build": "webpack --d --p && webpack-dev-server --d --content-base public/ --inline --hot"
   },
   "author": "Nathan Simpson",
   "license": "ISC",

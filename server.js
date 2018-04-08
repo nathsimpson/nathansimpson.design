@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import App from './client/App';
 import Html from './client/Html';
 
-const port = 3000;
+const port = process.env.PORT ||3000;
 const server = express();
 
 server.get('/', (req, res) => {
@@ -23,5 +23,5 @@ server.get('/', (req, res) => {
   );
 });
 
-server.listen(process.env.PORT || port)
+server.listen(port)
 console.log(`Serving at http://localhost:${port}`);

@@ -8,7 +8,8 @@ module.exports = {
     publicPath:'/public/'
   },
   devServer: {
-    contentBase: "./src"
+    contentBase: "./src",
+    port: process.env.PORT || 3000
   },
   module : {
     rules : [

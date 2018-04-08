@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
-    "start": "npm run build",
-    "build": "./node_modules/webpack/bin/webpack.js -p --progress && node server",
-    "dev": "webpack --d --p && webpack-dev-server --d --content-base public/ --inline --hot"
+    "start": "npm run build && node server.js",
+    "build": "./node_modules/webpack/bin/webpack.js -p --progress",
+    "dev": "./node_modules/webpack/bin/webpack.js --d --p && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --d --content-base public/ --inline --hot"
   },
   "author": "Nathan Simpson",
   "license": "ISC",

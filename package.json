@@ -2,7 +2,7 @@
   "name": "nathansimpson.design",
   "version": "0.2.0",
   "private": true,
-  "description": "Another go at the nathansimpson.design site, without Create React App",
+  "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test --env=jsdom",

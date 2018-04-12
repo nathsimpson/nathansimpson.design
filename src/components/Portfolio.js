@@ -40,8 +40,7 @@ class PortfolioItem extends React.Component {
 export default class Portfolio extends React.Component {
   render(){
     return(
-      <div className="portfolio">
-        <h1>Portfolio</h1>
+      <div className="portfolio" id="portfolio">
         <div className="portfolio_gallery">
           {this.props.projects.map(project =>
             <PortfolioItem data={project}/>

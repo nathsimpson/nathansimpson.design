@@ -13,6 +13,7 @@
 .header__logo{
   height:60px;
   width: auto;
+  animation: fadein 2s;
 
   g .outline{fill:$nsOrange; transition: fill 0.5s;}
   g .solid{fill:black; transition: fill 0.5s;}
@@ -37,6 +38,7 @@
     margin: 0}
 
   a {
+    animation: fadein 2s;
     font-size: 1em;
     display: block;
     text-decoration: none;

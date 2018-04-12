@@ -88,7 +88,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route path="/" exact render={()=><Home projects={this.state.portfolioData}/>} />
-          <Route path="/portfolio" render={()=><Portfolio projects={this.state.portfolioData}/>} />
+          <Route path="#portfolio" render={()=><Home projects={this.state.portfolioData}/>} />
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
           <Route path="/project/:key" render={(props)=> <Project {...props} projects={this.state.portfolioData}/>} />

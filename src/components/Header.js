@@ -28,7 +28,6 @@ const Header = () => (
     <nav className="nav">
       <ul>
         <li><NavLink exact to="/" className="nav__item" activeClassName="nav__item--active">Home</NavLink></li>
-        <li><NavLink to="/portfolio" className="nav__item" activeClassName="nav__item--active">Portfolio</NavLink></li>
         <li><NavLink to="/about" className="nav__item" activeClassName="nav__item--active">About</NavLink></li>
         <li><NavLink to="/resume" className="nav__item" activeClassName="nav__item--active">Resume</NavLink></li>
       </ul>

@@ -1,6 +1,11 @@
 @import 'scss/_variables.scss';
 @import 'scss/_fonts.scss';
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 body {
   margin: 0;
   padding: 0;

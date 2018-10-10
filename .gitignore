@@ -8,7 +8,6 @@
 
 # production
 /build
-/public/bundle.js
 
 # misc
 .DS_Store

@@ -1,7 +1,8 @@
 .header,
 .nav ul {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -11,12 +12,12 @@
 }
 
 .header__logo{
-  height:60px;
+  height:40px;
   width: auto;
   animation: fadein 2s;
 
   g .outline{fill:$nsOrange; transition: fill 0.5s;}
-  g .solid{fill:black; transition: fill 0.5s;}
+  g .solid{fill:$nsSlate-Darkest; transition: fill 0.5s;}
 
   &:hover g .outline{fill:white;}
   &:hover g .solid{fill:$nsOrange;}
@@ -27,7 +28,7 @@
 
 
 
-.header__logo g .solid{fill:black;}
+.header__logo g .solid{fill:$nsSlate-Darkest;}
 .header__logo:hover g .outline{fill:white;}
 .header__logo:hover g .solid{fill:$nsOrange;}
 

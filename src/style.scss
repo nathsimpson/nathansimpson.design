@@ -9,22 +9,27 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $black;
+  background-color: $nsSlate-Darkest;
   color: white;
   font-family: 'Texta', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.25em;
 }
 
 h1{
-  font-weight: 300;
-  color: $nsOrange;
+  font-weight: 900;
+  font-size: 4em;
+  //color: $nsOrange;
+  text-transform: uppercase;
 }
 
 
 h2,h3,h4{
-  font-weight: 100;
+  text-transform: uppercase;
+  font-weight: 800;
 }
+
+p{max-width: 800px;}
 
 a{
   color: $nsOrange;
@@ -52,7 +57,7 @@ img{max-width: 100%;}
   align-items: stretch;
 }
 
-hr{border: 3px solid $nsOrange;}
+hr{border: 1px solid $nsOrange;}
 
 /* Extra Small Devices, Phones */
 @media (min-width: 576px) {
@@ -78,4 +83,4 @@ hr{border: 3px solid $nsOrange;}
 /*helper class for youtube videos*/
 .embed-responsive{margin-bottom:15px;}
 
-@import 'scss/_components.scss', 'scss/_components.scss', 'scss/_header.scss';
+@import 'scss/_components.scss', 'scss/_components.scss', 'scss/_header.scss', 'scss/_portfolio.scss';

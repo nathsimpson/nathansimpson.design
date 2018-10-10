@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
-    "start": "npm run build && node server.js",
     "build": "./node_modules/webpack/bin/webpack.js -p --progress",
-    "dev": "./node_modules/webpack/bin/webpack.js --d --p && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --d --content-base public/ --inline --hot"
+    "start": "npm run build && node server.js",
+    "dev": "nodemon --exec npm run start"
   },
   "author": "Nathan Simpson",
   "license": "ISC",
@@ -46,5 +46,10 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1",
     "webpack-node-externals": "^1.6.0"
+  },
+  "nodemonConfig": {
+    "ignore": ["public/*", "test/*"],
+    "delay": "2500",
+    "e": "js css scss"
   }
 }

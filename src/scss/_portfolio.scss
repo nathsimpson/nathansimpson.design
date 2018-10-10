@@ -1,0 +1,51 @@
+.portfolio_gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.portfolio_item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 3px;
+}
+
+.portfolio_item_label {
+  display: none;
+}
+
+.portfolio_item .portfolio_item_image {
+  filter: grayscale(100%);
+  width: 100%;
+  opacity: 0.4;
+  transition: filter 1s, opacity 0.5s;
+}
+
+.portfolio_item:hover .portfolio_item_image {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.portfolio_item:hover .portfolio_item_label {
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  color: white;
+  font-weight: 700;
+  z-index: 3;
+  padding: 10px;
+}
+.portfolio_item:hover .portfolio_item_gradient {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  background: none;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(37, 45, 52, 0), $black);
+  background: -o-linear-gradient(rgba(37, 45, 52, 0), $black);
+  background: -moz-linear-gradient(rgba(37, 45, 52, 0), $black);
+  background: linear-gradient(rgba(37, 45, 52, 0), $black);
+}

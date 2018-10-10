@@ -16,6 +16,7 @@ export default class Project extends React.Component {
       }*/
       return (
         <div className="project">
+          <a href="/">Back</a>
           <h1>{this.props.projects[projectID].projectName}</h1>
           <ReactMarkdown source={this.props.projects[projectID].markdown} />
         </div>

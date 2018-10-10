@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Switch, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 export default class Project extends React.Component {
@@ -16,7 +16,7 @@ export default class Project extends React.Component {
       }*/
       return (
         <div className="project">
-          <a href="/">Back</a>
+          <Link to={`/`}>Back</Link>
           <h1>{this.props.projects[projectID].projectName}</h1>
           <ReactMarkdown source={this.props.projects[projectID].markdown} />
         </div>

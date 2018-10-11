@@ -7,9 +7,10 @@
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "build": "webpack --progress",
-    "start": "npm run build && node server.js",
+    "start": "node server.js",
     "start:dev": "webpack-dev-server --hot --mode development",
-    "dev": "webpack --watch --progress --mode development && node server.js"
+    "dev": "webpack --watch --progress --mode development && node server.js",
+    "postinstall": "webpack --progress"
   },
   "author": "Nathan Simpson",
   "license": "ISC",

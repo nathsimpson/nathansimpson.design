@@ -1,4 +1,6 @@
-var path = require('path');
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 module.exports = {
   entry: path.resolve(__dirname, 'src') + '/index.js',
@@ -9,6 +11,9 @@ module.exports = {
   devServer: {
     contentBase: "./public",
     port: process.env.PORT || 3000
+  },
+  optimization: {
+    minimizer: [new UglifyJsPlugin()]
   },
   module : {
     rules : [

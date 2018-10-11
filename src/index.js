@@ -11,7 +11,7 @@ import Resume from './components/Resume';
 import Project from './components/Project';
 import NotFound from './components/NotFound';
 
-//require('./style.scss');
+require('./style.scss');
 
 var portfolioData = [
     {

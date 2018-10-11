@@ -7,7 +7,7 @@ module.exports = {
     filename: './public/bundle.js'
   },
   devServer: {
-    contentBase: "./src",
+    contentBase: "./public",
     port: process.env.PORT || 3000
   },
   module : {

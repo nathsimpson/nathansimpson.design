@@ -84,7 +84,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-      <div className="container">
+      <div style={{width: '100%', maxWidth: '1140px', padding: '0 15px', margin: '0 auto', boxSizing: 'border-box'}}>
         <Header/>
         <Switch>
           <Route path="/" exact render={()=><Home projects={this.state.portfolioData}/>} />

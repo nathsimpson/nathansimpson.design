@@ -118,23 +118,21 @@ export default class ContactForm extends React.Component {
       <div style={{width:'100%'}}>
       <h2 style={{textAlign: 'center'}}>Contact Me</h2>
       <form
-				data-netlify="true"
 				style={{maxWidth: '400px', margin: '0 auto'}}
 				name="contact"
 				method="POST"
-				data-netlify="true"
-				data-netlify-honeypot="bot-field"
 			>
       	<FormInput type="text" name="name" placeholder="Name"/>
-      	<FormInput type="email" name="name" placeholder="Email"/>
-      	<FormInput type="tel" name="name" placeholder="Phone"/>
+      	<FormInput type="email" name="email" placeholder="Email"/>
+      	<FormInput type="tel" name="phone" placeholder="Phone"/>
       	<FormSelect name="idliketo">
       		<option>I would like to..</option>
       		<option>Chat with you</option>
       		<option>Contract you</option>
       		<option>Employ you</option>
       	</FormSelect>
-      	<FormTxt name="name" placeholder="Message"/>
+				<input type="hidden" name="form-name" value="contact" />
+      	<FormTxt name="message" placeholder="Message"/>
       	<FormSubmit type="submit"/>
       </form>
       </div>

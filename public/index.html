@@ -17,6 +17,19 @@
 </head>
 <body>
   <div id="app" />
+  <!-- A little help for the Netlify post-processing bots -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <select name="idliketo">
+      <option>I would like to..</option>
+      <option>Chat with you</option>
+      <option>Contract you</option>
+      <option>Employ you</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
   <script src="../bundle.js" type="text/javascript"></script>
 </body>
 </html>

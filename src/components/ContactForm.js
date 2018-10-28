@@ -117,7 +117,7 @@ export default class ContactForm extends React.Component {
     return(
       <div style={{width:'100%'}}>
       <h2 style={{textAlign: 'center'}}>Contact Me</h2>
-      <form method="post" onSubmit={this.onSubmit} style={{maxWidth: '400px', margin: '0 auto'}}>
+      <form method="post" netlify style={{maxWidth: '400px', margin: '0 auto'}}>
       	<FormInput type="text" name="name" placeholder="Name"/>
       	<FormInput type="email" name="name" placeholder="Email"/>
       	<FormInput type="tel" name="name" placeholder="Phone"/>

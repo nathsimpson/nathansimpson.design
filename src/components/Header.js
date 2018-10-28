@@ -11,16 +11,6 @@ const Logo = styled.svg`
 
   &:hover g .outline{fill:white;}
   &:hover g .solid{fill: rgba(250, 109, 1, 1);}
-	
-	&:active, &:focus{
-		background: #fff;
-		outline: none;
-		color: #13171a;
-
-		&:placeholder{
-			color: rgba(0,0,0,0.2);
-		}
-	}
 `
 
 const LogoReact = () => (

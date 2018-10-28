@@ -1,29 +1,5 @@
 @font-face{
 	font-family: 'Texta';
-  font-weight: 400;
-  font-style: normal;
-	src: url('http://files.nathansimpson.design/fonts/Texta-Regular-webfont.eot');
-	src: url('http://files.nathansimpson.design/fonts/Texta-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Regular-webfont.woff') format('woff'),
-       url('http://files.nathansimpson.design/fonts/Texta-Regular-webfont.woff2') format('woff2'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Regular-webfont.ttf') format('truetype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Regular-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-  font-family: 'Texta';
-  font-weight: 400;
-  font-style: italic;
-	src: url('http://files.nathansimpson.design/fonts/Texta-Italic-webfont.eot');
-	src: url('http://files.nathansimpson.design/fonts/Texta-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Italic-webfont.woff') format('woff'),
-       url('http://files.nathansimpson.design/fonts/Texta-Italic-webfont.woff2') format('woff2'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Italic-webfont.ttf') format('truetype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Italic-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-	font-family: 'Texta';
   font-weight: 500;
   font-style: normal;
 	src: url('http://files.nathansimpson.design/fonts/Texta-Medium-webfont.eot');
@@ -44,54 +20,6 @@
        url('http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webfont.woff2') format('woff2'),
 	     url('http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webfont.ttf') format('truetype'),
 	     url('http://files.nathansimpson.design/fonts/Texta-Medium-Italic-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-	font-family: 'Texta';
-  font-weight: 600;
-  font-style: normal;
-	src: url('http://files.nathansimpson.design/fonts/Texta-Bold-webfont.eot');
-	src: url('http://files.nathansimpson.design/fonts/Texta-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Bold-webfont.woff') format('woff'),
-       url('http://files.nathansimpson.design/fonts/Texta-Bold-webfont.woff2') format('woff2'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Bold-webfont.ttf') format('truetype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Bold-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-  font-family: 'Texta';
-  font-weight: 600;
-  font-style: italic;
-	src: url('http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.eot');
-	src: url('http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.woff') format('woff'),
-       url('http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.woff2') format('woff2'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.ttf') format('truetype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Bold-Italic-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-	font-family: 'Texta';
-  font-weight: 700;
-  font-style: normal;
-	src: url('http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.eot');
-	src: url('http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.woff') format('woff'),
-       url('http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.woff2') format('woff2'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.ttf') format('truetype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Heavy-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-  font-family: 'Texta';
-  font-weight: 700;
-  font-style: italic;
-	src: url('http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.eot');
-	src: url('http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.woff') format('woff'),
-       url('http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.woff2') format('woff2'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.ttf') format('truetype'),
-	     url('http://files.nathansimpson.design/fonts/Texta-Heavy-Italic-webfont.svg#webfont') format('svg');
 }
 
 @font-face{

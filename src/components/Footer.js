@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faTwitter, faInstagram, faCodepen, faLinkedin, faGithub, faReact, faDribbble, faYoutube } from '@fortawesome/fontawesome-free'
+import { faHeart} from '@fortawesome/fontawesome-free-regular'
+import { faTwitter, faInstagram, faCodepen, faLinkedin, faGithub, faReact, faDribbble, faYoutube } from '@fortawesome/fontawesome-free-brands'
 
 import logo from '../logo.svg';
 
@@ -16,7 +17,6 @@ const Footer = () => (
       <li><a href="https://dribbble.com/nathansimpson" target="_blank"><FontAwesomeIcon icon={faDribbble} /></a></li>
       <li><a href="https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg" target="_blank"><FontAwesomeIcon icon={faYoutube} /></a></li>
     </ul>
-    <FontAwesomeIcon icon="Heart"/>
     <div style={{marginBottom:'10px'}}>
     <span>Designed and Developed with </span><FontAwesomeIcon icon={faHeart} /><span> by </span><img src={logo} style={{height: '1em', position: 'relative', top: '2px'}}/><span> in </span><FontAwesomeIcon icon={faReact} />
     </div>

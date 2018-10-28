@@ -1,14 +1,35 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import styled from 'styled-components'
+
+const Logo = styled.svg`
+  height: 50px;
+  width: auto;
+
+  g .outline{fill:rgba(250, 109, 1, 1);}
+  g .solid{fill:rgba(250, 109, 1, 0); transition: fill 0.5s;}
+
+  &:hover g .outline{fill:white;}
+  &:hover g .solid{fill: rgba(250, 109, 1, 1);}
+	
+	&:active, &:focus{
+		background: #fff;
+		outline: none;
+		color: #13171a;
+
+		&:placeholder{
+			color: rgba(0,0,0,0.2);
+		}
+	}
+`
 
 const LogoReact = () => (
-  <svg
+  <Logo
     version="1.1"
     className="header__logo"
     x="0px"
     y="0px"
     viewBox="0 0 158.6 102.8"
-    style={{ height: "50px", width: "auto" }}
   >
     <g>
       <path className="outline" d="M7,51.1L34.1,6h24.4l-23,38.8l0,0l-3.8,6.3L59,96.5H34.3L7,51.1z M53.1,26.8L65.5,6h0.4l39.2,69.4L92.5,96.5
@@ -21,46 +42,13 @@ const LogoReact = () => (
       <polygon className="solid" points="53.1,26.8 65.5,6 65.8,6 105.1,75.4 92.5,96.5"/>
       <polygon className="solid" points="124,96.5 99.5,96.5 121.9,58.7 126.5,51.1 99.3,6 124.1,6 151.3,51.1"/>
     </g>
-  </svg>
+  </Logo>
 );
 
-const Nav = () => (
-  <nav className="nav">
-    <ul>
-      <li>
-        <NavLink
-          exact
-          to="/"
-          className="nav__item"
-          activeClassName="nav__item--active"
-        >
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/about"
-          className="nav__item"
-          activeClassName="nav__item--active"
-        >
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/resume"
-          className="nav__item"
-          activeClassName="nav__item--active"
-        >
-          Resume
-        </NavLink>
-      </li>
-    </ul>
-  </nav>
-);
+
 
 const Header = () => (
-  <header className="header">
+  <header className="header" style={{maxWidth: '1200px', margin: '0 auto', padding: "20px 0px" }}>
     <Link exact to="/">
       <LogoReact />
     </Link>

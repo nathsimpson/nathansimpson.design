@@ -105,13 +105,13 @@ body {
 
 h1 {
   font-weight: 300;
-  color: #FA6D01; }
+  color: rgba(250, 109, 1, 1); }
 
 h2, h3, h4 {
   font-weight: 100; }
 
 a {
-  color: #FA6D01;
+  color: rgba(250, 109, 1, 1);
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -130,7 +130,7 @@ a {
   align-items: stretch; }
 
 hr {
-  border: 3px solid #FA6D01; }
+  border: 3px solid rgba(250, 109, 1, 1); }
 
 /* Extra Small Devices, Phones */
 @media (min-width: 576px) {
@@ -191,14 +191,14 @@ textarea::placeholder {
   color: rgba(255, 255, 255, 0.4); }
 
 input:focus, select:focus, textarea:focus {
-  background: #FA6D01;
+  background: rgba(250, 109, 1, 1);
   outline: none;
   padding: 1rem 1rem; }
 
 input[type="submit"] {
   display: initial;
   width: initial;
-  background: #FA6D01; }
+  background: rgba(250, 109, 1, 1); }
 
 .portfolio_gallery {
   display: grid;
@@ -286,14 +286,14 @@ textarea::placeholder {
   color: rgba(255, 255, 255, 0.4); }
 
 input:focus, select:focus, textarea:focus {
-  background: #FA6D01;
+  background: rgba(250, 109, 1, 1);
   outline: none;
   padding: 1rem 1rem; }
 
 input[type="submit"] {
   display: initial;
   width: initial;
-  background: #FA6D01; }
+  background: rgba(250, 109, 1, 1); }
 
 .portfolio_gallery {
   display: grid;
@@ -356,7 +356,7 @@ input[type="submit"] {
   height: 60px;
   width: auto; }
   .header__logo g .outline {
-    fill: #FA6D01;
+    fill: rgba(250, 109, 1, 1);
     transition: fill 0.5s; }
   .header__logo g .solid {
     fill: black;
@@ -364,7 +364,7 @@ input[type="submit"] {
   .header__logo:hover g .outline {
     fill: white; }
   .header__logo:hover g .solid {
-    fill: #FA6D01; }
+    fill: rgba(250, 109, 1, 1); }
 
 .header__logo g .solid {
   fill: black; }
@@ -373,7 +373,7 @@ input[type="submit"] {
   fill: white; }
 
 .header__logo:hover g .solid {
-  fill: #FA6D01; }
+  fill: rgba(250, 109, 1, 1); }
 
 .nav ul {
   list-style: none;
@@ -389,9 +389,9 @@ input[type="submit"] {
   border-bottom: 1px solid #999;
   transition: background-color .3s, color .3s; }
   .nav a:hover {
-    color: #FA6D01; }
+    color: rgba(250, 109, 1, 1); }
 .nav .nav__item--active {
-  color: #FA6D01; }
+  color: rgba(250, 109, 1, 1); }
 
 .site-content {
   min-height: 600px;
@@ -429,6 +429,6 @@ footer ul li a {
   text-decoration: none; }
 
 footer ul li a:hover {
-  color: #FA6D01; }
+  color: rgba(250, 109, 1, 1); }
 
 /*# sourceMappingURL=style.css.map */

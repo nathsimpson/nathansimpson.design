@@ -1,11 +1,6 @@
 @import 'scss/_variables.scss';
 @import 'scss/_fonts.scss';
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -16,71 +11,28 @@ body {
   font-size: 1.25em;
 }
 
-h1{
-  font-weight: 900;
-  font-size: 4em;
-  //color: $nsOrange;
-  text-transform: uppercase;
-}
-
-
-h2,h3,h4{
+h1,h2,h3,h4{
   text-transform: uppercase;
   font-weight: 800;
 }
 
-p{max-width: 800px;}
+h1{
+  font-size: 4em;
+}
 
 a{
   color: $nsOrange;
   text-decoration: none;
+  
   &:hover{
     text-decoration: underline;
   }
+
 }
 
 img{max-width: 100%;}
 
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
 hr{border: 1px solid $nsOrange;}
-
-/* Extra Small Devices, Phones */
-@media (min-width: 576px) {
-  .container{max-width:540px;}
-}
-
-/* Small Devices, Tablets */
-@media (min-width: 768px) {
-  .container{max-width:720px;}
-}
-
-/* Medium Devices, Desktops */
-@media (min-width: 992px) {
-  .container{max-width:960px;}
-}
-
-/* Large Devices, Wide Screens */
-@media (min-width: 1200px){
-  .container{max-width:1140px;}
-}
-
 
 /*helper class for youtube videos*/
 .embed-responsive{margin-bottom:15px;}
-
-@import 'scss/_components.scss', 'scss/_components.scss', 'scss/_header.scss', 'scss/_portfolio.scss';

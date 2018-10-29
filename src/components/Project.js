@@ -6,19 +6,23 @@ import ReactMarkdown from 'react-markdown';
 export default class Project extends React.Component {
 
   render(){
-      let projectData = this.props.data;
-      let projectID = this.props.match.params.key-1;
+      const projects = this.props.projects;
+      const projectID = this.props.match.params.slug;
 
-      console.log(projectID);
+      var projectData;
 
-      /**if (!projectData) {
-        return <div>Sorry, but the project was not found</div>
-      }*/
+      for(var i = 0; i < projects.length; i++) {
+          if (projects[i].slug == projectID) {
+            projectData = projects[i];
+              break;
+          }
+      }
+
       return (
         <div className="project">
           <Link to={`/`}>Back</Link>
-          <h1>{this.props.projects[projectID].projectName}</h1>
-          <ReactMarkdown source={this.props.projects[projectID].markdown} />
+          <h1>{projectData.projectName}</h1>
+          <ReactMarkdown source={projectData.markdown} />
         </div>
       )
     }

@@ -73,7 +73,7 @@ export default class Portfolio extends React.Component {
       <div className="portfolio" id="portfolio">
         <div style={{display: 'grid', gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))" }}>
           {this.props.projects.map(project =>
-            <Link to={`/project/${project.key}`} key={project.key}>
+            <Link to={`/project/${project.slug}`} key={project.slug}>
               <PortfolioItem data={project}/>
             </Link>
           )}

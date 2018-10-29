@@ -19,7 +19,7 @@ var portfolioData = [
       projectName : "The Garage",
       imagesrc : "thegarage/cover.jpg",
       tags: ["ux", "dev", "brand"],
-      markdown: 'Coming very soon.',
+      markdown: 'The Garage is the digital extension of Sydney’s car culture. Japanese, Offroad, Racing, Exotic, whatever your passion, you will find people, projects and events that will interest you. \n The Garage was my Major Design Project for my university degree. Throughout the project, I created the Application UX design, the branding and the marketing website for it. The app is currently under development to bring it to life.\n\n![App Screens](http://files.nathansimpson.design/portfolio/thegarage/mockups.jpg)\n![Event Stall](http://files.nathansimpson.design/portfolio/thegarage/eventStall.jpg)\n![ITC Learning Website](http://files.nathansimpson.design/portfolio/thegarage/logo_spin.gif) \n\n More coming soon',
       mdFileName: "simple.md"
     },{
       slug: "itc-learning",

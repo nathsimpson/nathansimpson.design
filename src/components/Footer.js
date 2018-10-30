@@ -24,7 +24,7 @@ const networks = [
   },{
     name: "Instagram",
     icon: faInstagram,
-    link: "https://www.instagram.com/nathanjsimpson95/",
+    link: "https://www.instagram.com/nathansimpson.design",
   },{
     name: "LinkedIn",
     icon: faLinkedin,

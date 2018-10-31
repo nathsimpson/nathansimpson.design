@@ -131,7 +131,6 @@ export default class ContactForm extends React.Component {
             <option>I would like to..</option>
             <option>Chat with you</option>
             <option>Contract you</option>
-            <option>Employ you</option>
           </FormSelect>
           <input type="hidden" name="form-name" value="contact" />
           <FormTxt name="message" placeholder="Message" />

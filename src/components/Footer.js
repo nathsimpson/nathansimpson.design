@@ -53,7 +53,7 @@ const networks = [
 const Footer = () => (
   <footer className="aboutMe" style={{textAlign: "center"}}>
     <hr/>
-    <ul style={{margin: '0.5em', fontSize:'1.5em', listStyle: 'none', padding: 0 }}>
+    <ul style={{margin: '0.5em', fontSize:'1em', listStyle: 'none', padding: 0 }}>
       {networks.map(network =>
         <li style={{margin: '0 auto', display: 'inline-block', margin: '5px'}}>
           <SocialLink href={network.link} target="_blank">
@@ -62,8 +62,8 @@ const Footer = () => (
         </li>
       )}
     </ul>
-    <div style={{marginBottom:'10px'}}>
-    <span>Designed and Developed with </span><FontAwesomeIcon icon={faHeart} /><span> by </span><img src={logo} style={{height: '1em', position: 'relative', top: '2px'}}/><span> in </span><FontAwesomeIcon icon={faReact} />
+    <div style={{marginBottom:'20px'}}>
+      <img src={logo} style={{height: '2em', position: 'relative', top: '2px'}}/>
     </div>
   </footer>
 );

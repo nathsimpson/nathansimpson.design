@@ -10,7 +10,7 @@ export default class Dribbble extends React.Component {
 
   componentDidMount() {
     //may need to implement axios
-    fetch('/test/dribbble.json')
+    fetch("/test/dribbble.json")
       .then(response => response.json())
       .then(responseData => {
         this.setState({ shots: responseData });
@@ -23,18 +23,18 @@ export default class Dribbble extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div style={{textAlign: 'center'}}>
+      <div style={{ textAlign: "center" }}>
         <h2>Work in Progress</h2>
         <div className="shots">
           {this.state.shots.map(shot => (
             <a href={shot.link} target="_blank">
-                  <img
-                  className="shots_shot"
-                  src={shot.image}
-                  title={shot.description}
-                  alt={shot.description}
-                  style={{ width: "300px", margin: '10px'}}
-                  />
+              <img
+                className="shots_shot"
+                src={shot.image}
+                title={shot.description}
+                alt={shot.description}
+                style={{ width: "300px", margin: "10px" }}
+              />
             </a>
           ))}
         </div>

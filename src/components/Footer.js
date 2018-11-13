@@ -32,17 +32,17 @@ const networks = [
   },{
     name: "Github",
     icon: faGithub,
-    link: "https://github.com/nathansimpson95",
+    link: "https://github.com/nathansimpsondesign",
   },{
     name: "Codepen",
     icon: faCodepen,
     link: "https://codepen.io/nathansimpson/",
   },{
-    name: "Dribbble",    
+    name: "Dribbble",
     icon: faDribbble,
     link: "https://dribbble.com/nathansimpson",
   },{
-    name: "YouTube",    
+    name: "YouTube",
     icon: faYoutube,
     link: "https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg",
   }

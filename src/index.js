@@ -65,6 +65,12 @@ var portfolioData = [
       tags: ["more"],
       markdown: '![Jayden Ojeda Motorsport](http://files.nathansimpson.design/portfolio/logos/1.jpg "Jayden Ojeda Motorsport")\n\n![Broadhead Tactical](http://files.nathansimpson.design/portfolio/logos/2.jpg "Broadhead Tactical")\n\n![GoLeft Action Sports](http://files.nathansimpson.design/portfolio/logos/3.jpg "GoLeft Action Sports")\n\n![Better Books and BAS](http://files.nathansimpson.design/portfolio/logos/4.jpg "Better Books and BAS")\n\n![Orange Post Local News Network](http://files.nathansimpson.design/portfolio/logos/5.jpg "Orange Post Local News Network")\n\n![Simmos Offroad Tours](http://files.nathansimpson.design/portfolio/logos/6.jpg "Simmos Offroad Tours")\n\n![POK Holdings](http://files.nathansimpson.design/portfolio/logos/7.jpg "POK Holdings")\n\n![Action Photos and Framing](http://files.nathansimpson.design/portfolio/logos/8.jpg "Action Photos and Framing")\n\n![Reconcile School Accounting](http://files.nathansimpson.design/portfolio/logos/9.jpg "Reconcile School Accounting")\n\n![All Ways Bricklaying](http://files.nathansimpson.design/portfolio/logos/10.jpg "All Ways Bricklaying")\n\n![Eden Garden and Rural](http://files.nathansimpson.design/portfolio/logos/11.jpg "Eden Garden and Rural")\n\n![Western Sydney Racing](http://files.nathansimpson.design/portfolio/logos/12.jpg "Western Sydney Racing")'
     },{
+      slug: 'supercars',
+      projectName : "Supercars Livery Designs",
+      imagesrc : "supercars/cover.jpg",
+      tags: ["more"],
+      markdown: '![SuperCheap Auto Racing, Chaz Mostert, Ford Mustang](http://files.nathansimpson.design/portfolio/supercars/1.jpg)\n\n![Pepsi Max Crew, Mark Winterbottom, Ford Falcon](http://files.nathansimpson.design/portfolio/supercars/2.jpg "Pepsi Max Crew, Mark Winterbottom, Ford Falcon")\n\n More coming soon.'
+    },{
       slug: 'wedding',
       projectName : "Nathan + Carrie Wedding",
       imagesrc : "wedding/cover.jpg",

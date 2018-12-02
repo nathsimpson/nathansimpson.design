@@ -9,9 +9,19 @@ import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Resume from './components/Resume';
 import Project from './components/Project';
+import Project2 from './components/Project2';
 import NotFound from './components/NotFound';
+fs = require ('fs');
 
 require('./style.scss');
+
+let projects = [];
+
+fs.readdirSync('/projects').forEach(project => {
+      var content=fs.readFileSync(project);
+      //parse body
+      projects.push(`${project}`)
+})
 
 var portfolioData = [
     {
@@ -19,7 +29,6 @@ var portfolioData = [
       projectName : "The Garage",
       imagesrc : "thegarage/cover.jpg",
       tags: ["ux", "dev", "brand"],
-      markdown: 'The Garage is the digital extension of Sydney’s car culture. Japanese, Offroad, Racing, Exotic, whatever your passion, you will find people, projects and events that will interest you. \n The Garage was my Major Design Project for my university degree. Throughout the project, I created the Application UX design, the branding and the marketing website for it. The app is currently under development to bring it to life.\n\n![App Screens](http://files.nathansimpson.design/portfolio/thegarage/mockups.jpg)\n![App Screens](http://files.nathansimpson.design/portfolio/thegarage/website.jpg)\n![Event Stall](http://files.nathansimpson.design/portfolio/thegarage/eventStall.jpg)\n![ITC Learning Website](http://files.nathansimpson.design/portfolio/thegarage/logo_spin.gif) \n\n More coming soon',
       mdFileName: "simple.md"
     },{
       slug: 'agrivita',
@@ -105,6 +114,7 @@ class App extends React.Component {
           <Route path="/about" component={About} />
           <Route path="/resume" component={Resume} />
           <Route path="/project/:slug" render={(props)=> <Project {...props} projects={this.state.portfolioData}/>} />
+          <Route path="/project2/:slug" render={(props)=> <Project2 {...props}/>} />
           <Route component={NotFound} />
         </Switch>
         <Footer/>

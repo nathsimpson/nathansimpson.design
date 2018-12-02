@@ -71,6 +71,7 @@ export default class Portfolio extends React.Component {
   render(){
     return(
       <div className="portfolio" id="portfolio">
+        <Link to={`/project2/test`} key='the-garage'>2</Link>
         <div style={{display: 'grid', gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))" }}>
           {this.props.projects.map(project =>
             <Link to={`/project/${project.slug}`} key={project.slug}>

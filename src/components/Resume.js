@@ -1,20 +1,26 @@
-import React from 'react';
+import React from "react";
 
 class Experience extends React.Component {
   render() {
-    return(
+    return (
       <section>
         <h2>Experience</h2>
 
         <div className="resume__item">
-          <h3>eLearning Development, Training & Support</h3>
+          <h3>eLearning Development, Training &amp; Support</h3>
           <p>ITC Learning - Crows Nest NSW</p>
           <p>2016 - Present</p>
           <ul>
-            <li>Working with project managers, clients and other designers throughout design projects</li>
+            <li>
+              Working with project managers, clients and other designers
+              throughout design projects
+            </li>
             <li>Training clients in the use of specialised software</li>
             <li>Providing technical support for clients via phone and email</li>
-            <li>Design, implementation and maintenance of a new website for the company</li>
+            <li>
+              Design, implementation and maintenance of a new website for the
+              company
+            </li>
           </ul>
         </div>
 
@@ -46,7 +52,7 @@ class Experience extends React.Component {
 
 class Education extends React.Component {
   render() {
-    return(
+    return (
       <section>
         <h2>Education</h2>
 
@@ -55,10 +61,16 @@ class Education extends React.Component {
           <p>Western Sydney University - Parramatta NSW</p>
           <p>2015 - 2018</p>
           <ul>
-            <li>Working with project managers, clients and other designers throughout design projects</li>
+            <li>
+              Working with project managers, clients and other designers
+              throughout design projects
+            </li>
             <li>Training clients in the use of specialised software</li>
             <li>Providing technical support for clients via phone and email</li>
-            <li>Design, implementation and maintenance of a new website for the company</li>
+            <li>
+              Design, implementation and maintenance of a new website for the
+              company
+            </li>
           </ul>
         </div>
 
@@ -72,10 +84,9 @@ class Education extends React.Component {
   }
 }
 
-
 class Interests extends React.Component {
   render() {
-    return(
+    return (
       <section className="resume__item">
         <h2>Interests</h2>
         <ul>
@@ -90,10 +101,9 @@ class Interests extends React.Component {
   }
 }
 
-
 class Skills extends React.Component {
   render() {
-    return(
+    return (
       <section className="resume__item">
         <h2>Skills</h2>
 
@@ -121,41 +131,42 @@ class Skills extends React.Component {
 
 class Volunteer extends React.Component {
   render() {
-    return(
+    return (
       <section className="resume__item">
         <h2>Volunteer History</h2>
         <h3>Service Host and Kids Church</h3>
-        Elevation Church Penrith
-        2016 - Present
+        Elevation Church Penrith 2016 - Present
         <h3>Volunteer</h3>
-        NSW State Emergency Service Orange
-        2014 - 2015
+        NSW State Emergency Service Orange 2014 - 2015
       </section>
     );
   }
 }
 
-
-
 export default class Resume extends React.Component {
   render() {
-    return(
+    return (
       <main>
         <h1>Resume</h1>
 
         <h2>Career Objectives</h2>
-        <p>Bachelor of Design graduate seeking an entry level role in Web and Application Design, with the opportunity to further my interests in development. I can offer strong visual design and computer skills with a sound knowledge in HTML, CSS, JavaScript and Swift.</p>
-        <hr/>
-        <div style={{display:'flex', flexDirection:'row'}}>
-          <div style={{paddingRight:'20px'}}>
-            <Experience/>
-            <hr/>
-            <Education/>
+        <p>
+          Bachelor of Design graduate seeking an entry level role in Web and
+          Application Design, with the opportunity to further my interests in
+          development. I can offer strong visual design and computer skills with
+          a sound knowledge in HTML, CSS, JavaScript and Swift.
+        </p>
+        <hr />
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div style={{ paddingRight: "20px" }}>
+            <Experience />
+            <hr />
+            <Education />
           </div>
           <div style={{}}>
-            <Interests/>
-            <Skills/>
-            <Volunteer/>
+            <Interests />
+            <Skills />
+            <Volunteer />
           </div>
         </div>
       </main>

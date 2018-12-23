@@ -7,8 +7,11 @@
 /coverage
 
 # production
+/.cache
 /build
 /public/bundle.js
+/public/static
+/public/render-page.js.map
 
 # misc
 .DS_Store

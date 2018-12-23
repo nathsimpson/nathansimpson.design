@@ -1,7 +1,7 @@
 import React from "react";
+import Layout from "../templates/layout";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Helmet from "react-helmet";
 import Portfolio from "../components/Portfolio";
 import Bio from "../components/Bio";
 import ContactForm from "../components/ContactForm";
@@ -10,16 +10,15 @@ import Dribbble from "../components/Dribbble";
 require("../style.scss");
 
 const App = ({ data }) => (
-  <div
-    style={{
-      width: "100%",
-      maxWidth: "1140px",
-      padding: "0 15px",
-      margin: "0 auto",
-      boxSizing: "border-box"
-    }}
-  >
-    <Header />
+  <Layout>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Nathan Simpson - Designer + Frontend Developer</title>
+      <meta
+        name="description"
+        content="I am a UX Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
+      />
+    </Helmet>
     <main>
       <div id="intro">
         <h1
@@ -44,8 +43,7 @@ const App = ({ data }) => (
       <hr />
       <ContactForm />
     </main>
-    <Footer />
-  </div>
+  </Layout>
 );
 
 export const portfolioQuery = graphql`

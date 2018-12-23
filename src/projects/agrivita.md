@@ -1,7 +1,7 @@
 ---
 title: "AgriVita"
 slug: /agrivita
-date: "2018-02-21"
+date: "2018-09-01"
 imagesrc: "agrivita/cover.jpg"
 ---
 

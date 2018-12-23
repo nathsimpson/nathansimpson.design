@@ -1,7 +1,7 @@
 ---
 title: "Need A Nanny"
 slug: "/need-a-nanny"
-date: "2018-02-21"
+date: "2018-07-01"
 imagesrc: "needananny/cover.jpg"
 ---
 

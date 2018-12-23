@@ -50,7 +50,7 @@ const App = ({ data }) => (
 
 export const portfolioQuery = graphql`
   query IndexProjects {
-    allMarkdownRemark(limit: 10) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id

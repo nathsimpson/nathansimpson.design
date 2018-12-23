@@ -26,8 +26,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log(node.frontmatter.slug);
-
       createPage({
         path: node.frontmatter.slug,
         component: projectTemplate,

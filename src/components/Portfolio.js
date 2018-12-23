@@ -1,8 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import styled from 'styled-components'
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 const PortfolioItemDiv = styled.div`
   width: 100%;
@@ -40,7 +38,6 @@ const PortfolioItemLabel = styled.span`
 `;
 
 const PortfolioItemGradient = styled.span`
-
   ${PortfolioItemDiv}:hover & {
     width: 100%;
     height: 200px;
@@ -56,29 +53,42 @@ const PortfolioItemGradient = styled.span`
 `;
 
 class PortfolioItem extends React.Component {
- render(){
-   return(
-      <PortfolioItemDiv>
-        <PortfolioItemImage className="portfolio_item_image" src={"http://files.nathansimpson.design/portfolio/" + this.props.data.imagesrc} alt=""/>
-        <PortfolioItemLabel className="portfolio_item_label">{this.props.data.projectName}</PortfolioItemLabel>
-        <PortfolioItemGradient/>
-      </PortfolioItemDiv>
+  render() {
+    const projectMeta = this.props.project.frontmatter;
+    return (
+      <Link to={`${projectMeta.slug}`} key={projectMeta.path}>
+        <PortfolioItemDiv>
+          <PortfolioItemImage
+            className="portfolio_item_image"
+            src={
+              "http://files.nathansimpson.design/portfolio/" +
+              projectMeta.imagesrc
+            }
+            alt={projectMeta.title}
+          />
+          <PortfolioItemLabel className="portfolio_item_label">
+            {projectMeta.title}
+          </PortfolioItemLabel>
+          <PortfolioItemGradient />
+        </PortfolioItemDiv>
+      </Link>
     );
   }
 }
 
-export default class Portfolio extends React.Component {
-  render(){
-    return(
-      <div className="portfolio" id="portfolio">
-        <div style={{display: 'grid', gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))" }}>
-          {this.props.projects.map(project =>
-            <Link to={`/project/${project.slug}`} key={project.slug}>
-              <PortfolioItem data={project}/>
-            </Link>
-          )}
-        </div>
-      </div>
-    )
-  }
-}
+const Portfolio = props => (
+  <div className="portfolio" id="portfolio">
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))"
+      }}
+    >
+      {props.data.allMarkdownRemark.edges.map(project => (
+        <PortfolioItem key={project.node.id} project={project.node} />
+      ))}
+    </div>
+  </div>
+);
+
+export default Portfolio;

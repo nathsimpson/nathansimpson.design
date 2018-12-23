@@ -123,6 +123,9 @@ export default class ContactForm extends React.Component {
           style={{ maxWidth: "400px", margin: "40px auto" }}
           name="contact"
           method="POST"
+          data-netlify="true"
+          netlify="true"
+          data-netlify-honeypot="bot-field"
         >
           <FormInput type="text" name="name" placeholder="Name" />
           <FormInput type="email" name="email" placeholder="Email" />

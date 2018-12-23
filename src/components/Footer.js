@@ -1,10 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart} from '@fortawesome/fontawesome-free-regular'
-import { faTwitter, faInstagram, faCodepen, faLinkedin, faGithub, faReact, faDribbble, faYoutube } from '@fortawesome/fontawesome-free-brands'
-import logo from '../logo.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faInstagram,
+  faCodepen,
+  faLinkedin,
+  faGithub,
+  faDribbble,
+  faYoutube
+} from "@fortawesome/fontawesome-free-brands";
+import logo from "../images/logo.svg";
 
 const SocialLink = styled.a`
   color: white;
@@ -15,55 +22,68 @@ const SocialLink = styled.a`
   }
 `;
 
-
 const networks = [
   {
     name: "Twitter",
     icon: faTwitter,
     link: "https://twitter.com/nathansimpson95"
-  },{
+  },
+  {
     name: "Instagram",
     icon: faInstagram,
-    link: "https://www.instagram.com/nathansimpson.design",
-  },{
+    link: "https://www.instagram.com/nathansimpson.design"
+  },
+  {
     name: "LinkedIn",
     icon: faLinkedin,
-    link: "https://www.linkedin.com/in/nathan-simpson-71512a75?trk",
-  },{
+    link: "https://www.linkedin.com/in/nathan-simpson-71512a75?trk"
+  },
+  {
     name: "Github",
     icon: faGithub,
-    link: "https://github.com/nathansimpsondesign",
-  },{
+    link: "https://github.com/nathansimpsondesign"
+  },
+  {
     name: "Codepen",
     icon: faCodepen,
-    link: "https://codepen.io/nathansimpson/",
-  },{
+    link: "https://codepen.io/nathansimpson/"
+  },
+  {
     name: "Dribbble",
     icon: faDribbble,
-    link: "https://dribbble.com/nathansimpson",
-  },{
+    link: "https://dribbble.com/nathansimpson"
+  },
+  {
     name: "YouTube",
     icon: faYoutube,
-    link: "https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg",
+    link: "https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg"
   }
-]
-
-
+];
 
 const Footer = () => (
-  <footer className="aboutMe" style={{textAlign: "center"}}>
-    <hr/>
-    <ul style={{margin: '0.5em', fontSize:'1em', listStyle: 'none', padding: 0 }}>
-      {networks.map(network =>
-        <li style={{margin: '0 auto', display: 'inline-block', margin: '5px'}}>
+  <footer className="aboutMe" style={{ textAlign: "center" }}>
+    <hr />
+    <ul
+      style={{
+        margin: "0.5em",
+        fontSize: "1em",
+        listStyle: "none",
+        padding: 0
+      }}
+    >
+      {networks.map(network => (
+        <li style={{ display: "inline-block", margin: "5px" }}>
           <SocialLink href={network.link} target="_blank">
             <FontAwesomeIcon icon={network.icon} />
           </SocialLink>
         </li>
-      )}
+      ))}
     </ul>
-    <div style={{marginBottom:'20px'}}>
-      <img src={logo} style={{height: '2em', position: 'relative', top: '2px'}}/>
+    <div style={{ marginBottom: "20px" }}>
+      <img
+        src={logo}
+        style={{ height: "2em", position: "relative", top: "2px" }}
+      />
     </div>
   </footer>
 );

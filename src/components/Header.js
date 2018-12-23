@@ -62,7 +62,7 @@ const Header = () => (
     style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px 0px" }}
   >
     <Link exact to="/">
-      <LogoReact />
+      <LogoReact style={{ width: 50 }} />
     </Link>
   </header>
 );

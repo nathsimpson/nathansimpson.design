@@ -3,9 +3,6 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 const Logo = styled.svg`
-  height: 50px;
-  width: auto;
-
   g .outline {
     fill: rgba(250, 109, 1, 1);
   }
@@ -29,6 +26,7 @@ const LogoReact = () => (
     x="0px"
     y="0px"
     viewBox="0 0 158.6 102.8"
+    style={{ height: 50, width: "auto" }}
   >
     <g>
       <path
@@ -62,7 +60,7 @@ const Header = () => (
     style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px 0px" }}
   >
     <Link exact to="/">
-      <LogoReact style={{ width: 50 }} />
+      <LogoReact />
     </Link>
   </header>
 );

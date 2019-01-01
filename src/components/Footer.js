@@ -84,6 +84,17 @@ const Footer = () => (
         src={logo}
         style={{ height: "2em", position: "relative", top: "2px" }}
       />
+      <p
+        style={{
+          fontSize: "0.6em",
+          textTransform: "uppercase",
+          letterSpacing: "1px",
+          opacity: "0.4",
+          marginTop: 10
+        }}
+      >
+        &copy; Copyright 2019 Nathan Simpson. Made in Sydney Australia.
+      </p>
     </div>
   </footer>
 );

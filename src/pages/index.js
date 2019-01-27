@@ -10,40 +10,42 @@ import Dribbble from "../components/Dribbble";
 require("../style.scss");
 
 const App = ({ data }) => (
-  <Layout>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Nathan Simpson - Designer + Frontend Developer</title>
-      <meta
-        name="description"
-        content="I am a UX Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
-      />
-    </Helmet>
-    <main>
-      <div id="intro">
-        <h1
-          style={{
-            lineHeight: "1em",
-            margin: "10px 0px"
-          }}
-        >
-          NATHAN SIMPSON
+	<Layout>
+		<Helmet>
+			<meta charSet="utf-8" />
+			<title>Nathan Simpson - Designer + Frontend Developer</title>
+			<meta
+				name="description"
+				content="I am a UX Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
+			/>
+		</Helmet>
+		<main>
+			<div id="intro" style={{ marginBottom: 42 }}>
+				<h1
+					style={{
+						margin: 0
+					}}
+				>
+					NATHAN SIMPSON
         </h1>
-        <p>
-          I am a UX Designer, Frontend Developer, and aspiring entrepreneur,
-          passionate about building ideas from concept to prototype.
+				<p style={{
+					margin: 0,
+					maxWidth: 600
+				}}>
+					I am a UX Designer, Frontend Developer, and aspiring entrepreneur,
+					passionate about building ideas from concept to prototype.
         </p>
-      </div>
-      <hr />
-      <Portfolio data={data} />
-      <hr />
-      <Bio />
-      <hr />
-      <Dribbble />
-      <hr />
-      <ContactForm />
-    </main>
-  </Layout>
+			</div>
+			<hr />
+			<Portfolio data={data} />
+			<hr />
+			<Bio />
+			<hr />
+			<Dribbble />
+			<hr />
+			<ContactForm />
+		</main>
+	</Layout>
 );
 
 export const portfolioQuery = graphql`

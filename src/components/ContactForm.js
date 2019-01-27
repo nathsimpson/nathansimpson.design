@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const FormInput = styled.input`
   background: #252d34;
@@ -115,31 +115,31 @@ const FormSubmit = styled.input`
 `;
 
 export default class ContactForm extends React.Component {
-  render() {
-    return (
-      <div style={{ width: "100%" }}>
-        <h2 style={{ textAlign: "center" }}>Contact Me</h2>
-        <form
-          style={{ maxWidth: "400px", margin: "40px auto" }}
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <FormInput type="text" name="name" placeholder="Name" />
-          <FormInput type="email" name="email" placeholder="Email" />
-          <FormInput type="tel" name="phone" placeholder="Phone" />
-          <FormSelect name="idliketo">
-            <option>I would like to..</option>
-            <option>Chat with you</option>
-            <option>Contract you</option>
-          </FormSelect>
-          <input type="hidden" name="form-name" value="contact" />
-          <FormTxt name="message" placeholder="Message" />
-          <FormSubmit type="submit" />
-        </form>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div style={{ width: "100%" }}>
+				<h2 style={{ textAlign: "center" }}>Contact Me</h2>
+				<form
+					style={{ maxWidth: "400px", margin: "40px auto" }}
+					name="contact"
+					method="POST"
+					data-netlify="true"
+					netlify="true"
+					data-netlify-honeypot="bot-field"
+				>
+					<FormInput type="text" name="name" placeholder="Name" />
+					<FormInput type="email" name="email" placeholder="Email" />
+					<FormInput type="tel" name="phone" placeholder="Phone" />
+					<FormSelect name="idliketo">
+						<option>I would like to..</option>
+						<option>Chat with you</option>
+						<option>Contract you</option>
+					</FormSelect>
+					<input type="hidden" name="form-name" value="contact" />
+					<FormTxt name="message" placeholder="Message" />
+					<FormSubmit type="submit" />
+				</form>
+			</div>
+		);
+	}
 }

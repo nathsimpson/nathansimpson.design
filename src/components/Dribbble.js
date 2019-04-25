@@ -10,11 +10,13 @@ export default class Dribbble extends React.Component {
 
   componentDidMount() {
     //may need to implement axios
-    fetch("https://api.jrvs.app/read/remote/dribbble")
+    fetch("https://api.jrvs.app/dribbble")
       .then(response => response.json())
-      .then(data => data.filter(shot => !shot.image.includes('.gif')))
-      .then(data => data.splice(0,6,''))
-      .then(data => {this.setState({ shots: data })})
+      .then(data => data.filter(shot => !shot.image.includes(".gif")))
+      .then(data => data.splice(0, 6, ""))
+      .then(data => {
+        this.setState({ shots: data });
+      })
       .catch(error => {
         console.log(error);
       });

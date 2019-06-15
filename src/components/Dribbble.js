@@ -14,7 +14,7 @@ export default class Dribbble extends React.Component {
 
   componentDidMount() {
     //may need to implement axios
-    fetch("https://api.jrvs.app/dribbble")
+    fetch("https://api.jrvs.app/get/dribbble")
       .then(response => response.json())
       .then(data => data.filter(shot => !shot.image.includes(".gif")))
       .then(data => data.splice(0, 8, ""))

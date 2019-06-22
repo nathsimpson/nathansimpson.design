@@ -1,6 +1,8 @@
+// @jsx jsx
 import React from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
+import { jsx, css } from "@emotion/core";
 
 const Logo = styled.svg`
   g .outline {
@@ -21,10 +23,7 @@ const Logo = styled.svg`
 
 const LogoReact = () => (
   <Logo
-    version="1.1"
     className="header__logo"
-    x="0px"
-    y="0px"
     viewBox="0 0 158.6 102.8"
     style={{ height: 50, width: "auto" }}
   >
@@ -61,11 +60,56 @@ const LogoReact = () => (
 const Header = () => (
   <header
     className="header"
-    style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px 0px" }}
+    css={{
+      maxWidth: "1300px",
+      margin: "0 auto",
+      padding: "20px 0px",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center"
+    }}
   >
     <Link exact to="/">
       <LogoReact />
     </Link>
+
+    <ul
+      css={{
+        display: "flex",
+        flexDirection: "row",
+        listStyle: "none",
+        padding: 0
+      }}
+    >
+      {[
+        {
+          label: "About",
+          link: "/about"
+        },
+        {
+          label: "Talks",
+          link: "/talks"
+        }
+      ].map(item => (
+        <li>
+          <Link
+            css={{ color: "white", margin: "0px 6px", fontWeight: 500 }}
+            to={item.link}
+          >
+            {item.label}
+          </Link>
+        </li>
+      ))}
+      <li>
+        <Link
+          css={{ color: "white", margin: "0px 6px", fontWeight: 500 }}
+          to={"/ds"}
+        >
+          {"DS"}
+        </Link>
+      </li>
+    </ul>
   </header>
 );
 

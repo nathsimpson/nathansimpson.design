@@ -5,6 +5,45 @@ import styled from "@emotion/styled";
 
 /** @jsx jsx */
 
+const Portfolio = ({ data }) => (
+  <div>
+    <div
+      css={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gridColumnGap: 16,
+        gridRowGap: 16
+      }}
+    >
+      {data.allMarkdownRemark.edges.map(project => (
+        <PortfolioItem
+          key={project.node.id}
+          project={project.node.frontmatter}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+const PortfolioItem = ({ project }) => {
+  return (
+    <Link to={`${project.slug}`} key={project.path}>
+      <PortfolioItemDiv className="PortfolioItemDiv">
+        <PortfolioItemImage
+          src={
+            "http://files.nathansimpson.design/portfolio/" + project.imagesrc
+          }
+          alt={project.title}
+        />
+        <PortfolioItemLabel className="portfolio_item_label">
+          {project.title}
+        </PortfolioItemLabel>
+        <PortfolioItemGradient />
+      </PortfolioItemDiv>
+    </Link>
+  );
+};
+
 const PortfolioItemDiv = styled.div({
   width: "100%",
   height: 0,
@@ -56,46 +95,5 @@ const PortfolioItemGradient = styled.span({
     background: "linear-gradient(rgba(37, 45, 52, 0), #000)"
   }
 });
-
-class PortfolioItem extends React.Component {
-  render() {
-    const projectMeta = this.props.project.frontmatter;
-    return (
-      <Link to={`${projectMeta.slug}`} key={projectMeta.path}>
-        <PortfolioItemDiv className="PortfolioItemDiv">
-          <PortfolioItemImage
-            className="portfolio_item_image"
-            src={
-              "http://files.nathansimpson.design/portfolio/" +
-              projectMeta.imagesrc
-            }
-            alt={projectMeta.title}
-          />
-          <PortfolioItemLabel className="portfolio_item_label">
-            {projectMeta.title}
-          </PortfolioItemLabel>
-          <PortfolioItemGradient />
-        </PortfolioItemDiv>
-      </Link>
-    );
-  }
-}
-
-const Portfolio = props => (
-  <div className="portfolio" id="portfolio">
-    <div
-      css={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-        gridColumnGap: 16,
-        gridRowGap: 16
-      }}
-    >
-      {props.data.allMarkdownRemark.edges.map(project => (
-        <PortfolioItem key={project.node.id} project={project.node} />
-      ))}
-    </div>
-  </div>
-);
 
 export default Portfolio;

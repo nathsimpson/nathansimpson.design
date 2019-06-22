@@ -11,7 +11,7 @@ import {
   faDribbble,
   faYoutube
 } from "@fortawesome/fontawesome-free-brands";
-import logo from "../images/logo.svg";
+import logo from "../../images/logo.svg";
 
 const SocialLink = styled.a`
   color: white;

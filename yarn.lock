@@ -6609,6 +6609,11 @@ hastscript@^4.0.0:
     property-information "^4.0.0"
     space-separated-tokens "^1.0.0"
 
+hex-alpha@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hex-alpha/-/hex-alpha-1.0.0.tgz#56335e215b474ddfbae1f1c115e4b5029a6d13df"
+  integrity sha512-xl1paTr8uOdkZ7mb8f5tbg5RSsvgB0PqGZ4NBASbQC7y2BTOYvtr+YMaBV96xD4+TuEKwXZ9QGaFlynwmP/ApA==
+
 hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"

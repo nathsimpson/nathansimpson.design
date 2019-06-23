@@ -3,13 +3,14 @@ import React from "react";
 import { jsx, css } from "@emotion/core";
 import { colors, borderRadius, boxShadow } from "../../theme";
 
-const Card = ({ children }) => (
+const Card = ({ children, style }) => (
   <div
     css={{
       ...boxShadow[1],
       background: colors.slate[30],
       padding: "16px 24px",
-      borderRadius: borderRadius.lg
+      borderRadius: borderRadius.lg,
+      ...style
     }}
   >
     {children}

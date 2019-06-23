@@ -1,11 +1,9 @@
 import hexAlpha from "hex-alpha";
 
 export const colors = {
-  white: "#ffffff",
-  black: "#000000",
   orange: "#fa6d01",
   slate: {
-    "0": "#11161a",
+    "0": "#0c0f13",
     "10": "#13181d",
     "20": "#171d22",
     "30": "#1e242a",
@@ -16,12 +14,9 @@ export const colors = {
     "80": "#808d99",
     "90": "#a0aeba"
   },
-  green: {
-    "0": "#d5ffc0",
-    "5": "#90f160",
-    "10": "#52e409",
-    "20": "#2d8700"
-  }
+  green: "#52e409",
+  purple: "#E509E3",
+  thinkmill: "#FF3838"
 };
 
 export const breakpoints = {

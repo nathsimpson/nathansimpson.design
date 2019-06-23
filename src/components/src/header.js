@@ -102,12 +102,12 @@ const Header = () => (
         </li>
       ))}
       <li>
-        <Link
+        {/* <Link
           css={{ color: "white", margin: "0px 6px", fontWeight: 500 }}
           to={"/ds"}
         >
-          {"DS"}
-        </Link>
+          {"DS"} //icon goes here
+        </Link> */}
       </li>
     </ul>
   </header>

@@ -34,6 +34,11 @@ export default ({ children }) => (
           }
         },
 
+        p: {
+          ...text[4],
+          maxWidth: 800
+        },
+
         h1: headings[1],
         h2: headings[2],
         h3: headings[3],

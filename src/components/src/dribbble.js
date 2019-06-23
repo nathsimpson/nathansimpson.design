@@ -17,7 +17,7 @@ export default class Dribbble extends React.Component {
     fetch("https://api.jrvs.app/get/dribbble")
       .then(response => response.json())
       .then(data => data.filter(shot => !shot.image.includes(".gif")))
-      .then(data => data.splice(0, 8, ""))
+      .then(data => data.splice(0, 4, ""))
       .then(data => {
         this.setState({ shots: data });
       })

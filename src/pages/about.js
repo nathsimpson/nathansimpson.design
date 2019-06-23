@@ -5,7 +5,6 @@ import { jsx, css } from "@emotion/core";
 
 import Helmet from "react-helmet";
 import { ContactForm } from "../components";
-import Dribbble from "../components/Dribbble";
 
 const App = ({ data }) => (
   <Layout>
@@ -38,8 +37,6 @@ const App = ({ data }) => (
           SydJS and React Sydney meetups.
         </p>
       </div>
-      <hr />
-      <ContactForm />
     </main>
   </Layout>
 );

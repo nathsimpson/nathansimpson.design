@@ -20,7 +20,8 @@ export default ({ children }) => (
           ...text[3],
           margin: 0,
           padding: 0,
-          fontFamily: '"SF Pro Display", "San Francisco", "roboto", sans-serif',
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
           color: colors.slate[90],
           backgroundColor: colors.slate[10]
         },

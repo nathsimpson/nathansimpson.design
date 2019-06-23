@@ -17,7 +17,7 @@ export default class Dribbble extends React.Component {
     fetch("https://api.jrvs.app/get/dribbble")
       .then(response => response.json())
       .then(data => data.filter(shot => !shot.image.includes(".gif")))
-      .then(data => data.splice(0, 8, ""))
+      .then(data => data.splice(0, 4, ""))
       .then(data => {
         this.setState({ shots: data });
       })
@@ -28,8 +28,15 @@ export default class Dribbble extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
-        <h2>Work in Progress</h2>
+      <div>
+        <h2 style={{ marginBottom: 0 }}>Dribbble Shots</h2>
+        <p style={{ marginTop: 2, marginBottom: 26 }}>
+          Check out my{" "}
+          <a href="https://dribbble.com/nathansimpson" target="_blank">
+            Dribbble
+          </a>{" "}
+          page to see more
+        </p>
         <div
           css={{
             display: "grid",
@@ -50,13 +57,6 @@ export default class Dribbble extends React.Component {
             </a>
           ))}
         </div>
-        <a
-          style={{ textAlign: "center", display: "block" }}
-          href="https://dribbble.com/nathansimpson"
-          target="_blank"
-        >
-          View more on Dribbble
-        </a>
       </div>
     );
   }

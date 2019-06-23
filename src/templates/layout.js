@@ -20,7 +20,7 @@ export default ({ children }) => (
           ...text[3],
           margin: 0,
           padding: 0,
-          fontFamily: '"SF Pro Display", sans-serif',
+          fontFamily: '"SF Pro Display", "San Francisco", "roboto", sans-serif',
           color: colors.slate[90],
           backgroundColor: colors.slate[10]
         },

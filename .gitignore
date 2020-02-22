@@ -9,9 +9,7 @@
 # production
 /.cache
 /build
-/public/bundle.js
-/public/static
-/public/render-page.js.map
+/public
 
 # misc
 .DS_Store

@@ -19,21 +19,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-37909733-3",
+        trackingId: 'UA-37909733-3',
         head: false,
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
         // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-        cookieDomain: "nathansimpson.design"
+        cookieDomain: 'nathansimpson.design'
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/projects`,
-        name: "projects"
+        name: 'projects'
       }
     },
-    "gatsby-transformer-remark"
+    'gatsby-transformer-remark'
 
     // {
     //   resolve: `gatsby-plugin-manifest`,

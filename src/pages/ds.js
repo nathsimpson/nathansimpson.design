@@ -1,9 +1,9 @@
 // @jsx jsx
-import React from "react";
-import Layout from "../templates/layout";
-import { jsx, css } from "@emotion/core";
-import Helmet from "react-helmet";
-import { colors, text, headings } from "../theme";
+import React from 'react';
+import Layout from '../templates/layout';
+import { jsx, css } from '@emotion/core';
+import Helmet from 'react-helmet';
+import { colors, text, headings } from '../theme';
 
 export default () => (
   <Layout>
@@ -20,14 +20,14 @@ export default () => (
 
       <div>
         <h2>Colors</h2>
-        <div css={{ display: "flex", flexDirection: "row" }}>
+        <div css={{ display: 'flex', flexDirection: 'row' }}>
           {Object.keys(colors.slate).map(s => (
             <div
               css={{
                 width: 80,
                 height: 70,
                 backgroundColor: colors.slate[s],
-                color: "white"
+                color: 'white'
               }}
             >
               {`slate.${s}`}

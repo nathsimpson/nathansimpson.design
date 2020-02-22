@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
-import { jsx, css } from "@emotion/core";
-import styled from "@emotion/styled";
+import React from 'react';
+import { Link } from 'gatsby';
+import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 
 /** @jsx jsx */
 
@@ -9,8 +9,8 @@ const Portfolio = ({ data }) => (
   <div>
     <div
       css={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
         gridColumnGap: 16,
         gridRowGap: 16
       }}
@@ -31,7 +31,7 @@ const PortfolioItem = ({ project }) => {
       <PortfolioItemDiv className="PortfolioItemDiv">
         <PortfolioItemImage
           src={
-            "http://files.nathansimpson.design/portfolio/" + project.imagesrc
+            'http://files.nathansimpson.design/portfolio/' + project.imagesrc
           }
           alt={project.title}
         />
@@ -45,54 +45,54 @@ const PortfolioItem = ({ project }) => {
 };
 
 const PortfolioItemDiv = styled.div({
-  width: "100%",
+  width: '100%',
   height: 0,
-  paddingBottom: "100%",
-  overflow: "hidden",
-  position: "relative",
+  paddingBottom: '100%',
+  overflow: 'hidden',
+  position: 'relative',
   margin: 0
 });
 
 const PortfolioItemImage = styled.img({
-  filter: "grayscale(100%)",
-  width: "100%",
+  filter: 'grayscale(100%)',
+  width: '100%',
   opacity: 0.4,
-  transition: "filter 1s, opacity 0.5s",
+  transition: 'filter 1s, opacity 0.5s',
 
-  ".PortfolioItemDiv:hover &": {
-    filter: "grayscale(0%)",
+  '.PortfolioItemDiv:hover &': {
+    filter: 'grayscale(0%)',
     opacity: 1
   }
 });
 
 const PortfolioItemLabel = styled.span({
-  display: "none",
-  position: "absolute",
+  display: 'none',
+  position: 'absolute',
   bottom: 0,
-  fontSize: "1.5em",
-  lineHeight: "1.2em",
-  color: "white",
+  fontSize: '1.5em',
+  lineHeight: '1.2em',
+  color: 'white',
   fontWeight: 700,
   zIndex: 3,
   padding: 10,
 
-  ".PortfolioItemDiv:hover &": {
-    display: "block"
+  '.PortfolioItemDiv:hover &': {
+    display: 'block'
   }
 });
 
 const PortfolioItemGradient = styled.span({
-  ".PortfolioItemDiv:hover &": {
-    width: "100%",
+  '.PortfolioItemDiv:hover &': {
+    width: '100%',
     height: 200,
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
     left: 0,
-    background: "none",
-    background: "-webkit-linear-gradient(rgba(37, 45, 52, 0), #000)",
-    background: "-o-linear-gradient(rgba(37, 45, 52, 0), #000)",
-    background: "-moz-linear-gradient(rgba(37, 45, 52, 0), #000)",
-    background: "linear-gradient(rgba(37, 45, 52, 0), #000)"
+    background: 'none',
+    background: '-webkit-linear-gradient(rgba(37, 45, 52, 0), #000)',
+    background: '-o-linear-gradient(rgba(37, 45, 52, 0), #000)',
+    background: '-moz-linear-gradient(rgba(37, 45, 52, 0), #000)',
+    background: 'linear-gradient(rgba(37, 45, 52, 0), #000)'
   }
 });
 

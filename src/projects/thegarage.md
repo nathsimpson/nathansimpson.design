@@ -1,8 +1,8 @@
 ---
-title: "The Garage"
-slug: "/thegarage"
-date: "2018-11-26"
-imagesrc: "thegarage/cover.jpg"
+title: 'The Garage'
+slug: '/thegarage'
+date: '2018-11-26'
+imagesrc: 'thegarage/cover.jpg'
 ---
 
 The Garage is the digital extension of Sydney’s car culture. Japanese, Offroad, Racing, Exotic, whatever your passion, you will find people, projects and events that will interest you.

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const Tweet = styled.div`
   width: 100%;
@@ -18,8 +18,8 @@ export default class Twitter extends React.Component {
   }
 
   componentDidMount() {
-    //may need to implement axios
-    fetch("https://api.jrvs.app/twitter")
+    // may need to implement axios
+    fetch('https://api.jrvs.app/twitter')
       .then(response => response.json())
       .then(response => {
         this.setState({ tweets: response.data });
@@ -31,7 +31,7 @@ export default class Twitter extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: 'center' }}>
         <h2>Tweets</h2>
         <div className="tweets">
           {this.state.tweets.map(tweet => (
@@ -41,7 +41,7 @@ export default class Twitter extends React.Component {
           ))}
         </div>
         <a
-          style={{ textAlign: "center", display: "block" }}
+          style={{ textAlign: 'center', display: 'block' }}
           href="https://twitter.com/nathansimpson"
           target="_blank"
         >

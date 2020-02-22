@@ -8,6 +8,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "start": "npm run dev",
+    "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
     "lint:eslint": "eslint ."
   },
   "author": "Nathan Simpson",

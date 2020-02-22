@@ -1,8 +1,8 @@
 // @jsx jsx
-import React from "react";
-import { Link } from "gatsby";
-import styled from "@emotion/styled";
-import { jsx, css } from "@emotion/core";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+import { jsx, css } from '@emotion/core';
 
 const Logo = styled.svg`
   g .outline {
@@ -25,7 +25,7 @@ const LogoReact = () => (
   <Logo
     className="header__logo"
     viewBox="0 0 158.6 102.8"
-    style={{ height: 50, width: "auto" }}
+    style={{ height: 50, width: 'auto' }}
   >
     <g>
       <path
@@ -61,13 +61,13 @@ const Header = () => (
   <header
     className="header"
     css={{
-      maxWidth: "1300px",
-      margin: "0 auto",
-      padding: "20px 0px",
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center"
+      maxWidth: '1300px',
+      margin: '0 auto',
+      padding: '20px 0px',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center'
     }}
   >
     <Link exact to="/">
@@ -76,25 +76,25 @@ const Header = () => (
 
     <ul
       css={{
-        display: "flex",
-        flexDirection: "row",
-        listStyle: "none",
+        display: 'flex',
+        flexDirection: 'row',
+        listStyle: 'none',
         padding: 0
       }}
     >
       {[
         {
-          label: "About",
-          link: "/about"
+          label: 'About',
+          link: '/about'
         },
         {
-          label: "Talks",
-          link: "/talks"
+          label: 'Talks',
+          link: '/talks'
         }
       ].map(item => (
         <li>
           <Link
-            css={{ color: "white", margin: "0px 6px", fontWeight: 500 }}
+            css={{ color: 'white', margin: '0px 6px', fontWeight: 500 }}
             to={item.link}
           >
             {item.label}

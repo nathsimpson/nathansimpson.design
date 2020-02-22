@@ -1,4 +1,4 @@
-import { breakpoints } from "../theme";
+import { breakpoints } from '../theme';
 
 // Media queries getter
 export const getBreakpoints = () => {

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { jsx, css } from "@emotion/core";
+import { jsx, css } from '@emotion/core';
 
 /** @jsx jsx */
 
@@ -13,11 +13,11 @@ export default class Dribbble extends React.Component {
   }
 
   componentDidMount() {
-    //may need to implement axios
-    fetch("https://api.jrvs.app/get/dribbble")
+    // may need to implement axios
+    fetch('https://api.jrvs.app/get/dribbble')
       .then(response => response.json())
-      .then(data => data.filter(shot => !shot.image.includes(".gif")))
-      .then(data => data.splice(0, 4, ""))
+      .then(data => data.filter(shot => !shot.image.includes('.gif')))
+      .then(data => data.splice(0, 4, ''))
       .then(data => {
         this.setState({ shots: data });
       })
@@ -31,16 +31,16 @@ export default class Dribbble extends React.Component {
       <div>
         <h2 style={{ marginBottom: 0 }}>Dribbble Shots</h2>
         <p style={{ marginTop: 2, marginBottom: 26 }}>
-          Check out my{" "}
+          Check out my{' '}
           <a href="https://dribbble.com/nathansimpson" target="_blank">
             Dribbble
-          </a>{" "}
+          </a>{' '}
           page to see more
         </p>
         <div
           css={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gridColumnGap: 16,
             gridRowGap: 16
           }}
@@ -52,7 +52,7 @@ export default class Dribbble extends React.Component {
                 src={shot.image}
                 title={shot.description}
                 alt={shot.description}
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
               />
             </a>
           ))}

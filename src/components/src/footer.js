@@ -1,7 +1,5 @@
-// @jsx jsx
-import React from 'react';
-import styled from '@emotion/styled';
-import { jsx, css } from '@emotion/core';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -28,7 +26,10 @@ export default () => (
       }}
     >
       {networks.map(network => (
-        <li style={{ display: 'inline-block', margin: '0px 5px' }}>
+        <li
+          style={{ display: 'inline-block', margin: '0px 5px' }}
+          key={network.name}
+        >
           <a
             css={{
               color: colors.slate[80],
@@ -40,6 +41,7 @@ export default () => (
             }}
             href={network.link}
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={network.icon} />
           </a>

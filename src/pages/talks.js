@@ -1,10 +1,8 @@
-// @jsx jsx
-import React from 'react';
+/** @jsx jsx */
 import Layout from '../templates/layout';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 import Helmet from 'react-helmet';
-import { ContactForm } from '../components';
 import { getBreakpoints } from '../helpers/utils';
 
 const mq = getBreakpoints();
@@ -41,7 +39,7 @@ export default () => (
             'At the May SydJS meetup, Thinkmill unveiled Keystone 5 with a line-up of talks. In this talk, I show off how I am building The Garage, a social network for car lovers, using Keystone 5 and React Native.'
         }
       ].map(talk => (
-        <Video talk={talk} />
+        <Video talk={talk} key={talk.id} />
       ))}
     </main>
   </Layout>

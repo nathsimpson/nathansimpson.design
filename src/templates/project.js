@@ -1,7 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Layout from '../templates/layout';
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 export default class Template extends React.Component {
   render() {

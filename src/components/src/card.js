@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import { colors, borderRadius, boxShadow } from '../../theme';
 
 const Card = ({ children, style }) => (

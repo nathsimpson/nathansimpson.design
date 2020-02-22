@@ -1,8 +1,8 @@
+/** @jsx jsx */
+
 import React from 'react';
 
-import { jsx, css } from '@emotion/core';
-
-/** @jsx jsx */
+import { jsx } from '@emotion/core';
 
 export default class Dribbble extends React.Component {
   constructor() {
@@ -32,7 +32,11 @@ export default class Dribbble extends React.Component {
         <h2 style={{ marginBottom: 0 }}>Dribbble Shots</h2>
         <p style={{ marginTop: 2, marginBottom: 26 }}>
           Check out my{' '}
-          <a href="https://dribbble.com/nathansimpson" target="_blank">
+          <a
+            href="https://dribbble.com/nathansimpson"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Dribbble
           </a>{' '}
           page to see more
@@ -45,13 +49,13 @@ export default class Dribbble extends React.Component {
             gridRowGap: 16
           }}
         >
-          {this.state.shots.map(shot => (
-            <a href={shot.link} target="_blank">
+          {this.state.shots.map(({ id, link, image, description }) => (
+            <a href={link} key={id} target="_blank" rel="noopener noreferrer">
               <img
                 className="shots_shot"
-                src={shot.image}
-                title={shot.description}
-                alt={shot.description}
+                src={image}
+                title={description}
+                alt={description}
                 style={{ width: '100%' }}
               />
             </a>

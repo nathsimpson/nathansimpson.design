@@ -1,8 +1,7 @@
-// @jsx jsx
-import React from 'react';
+/** @jsx jsx */
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 const Logo = styled.svg`
   g .outline {
@@ -92,7 +91,7 @@ const Header = () => (
           link: '/talks'
         }
       ].map(item => (
-        <li>
+        <li key={item.label}>
           <Link
             css={{ color: 'white', margin: '0px 6px', fontWeight: 500 }}
             to={item.link}

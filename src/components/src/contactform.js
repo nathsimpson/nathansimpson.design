@@ -1,7 +1,5 @@
 /** @jsx jsx */
-
-import React from 'react';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { borderRadius, colors, text } from '../../theme';
 

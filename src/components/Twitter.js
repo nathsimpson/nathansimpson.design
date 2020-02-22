@@ -34,9 +34,9 @@ export default class Twitter extends React.Component {
       <div style={{ textAlign: 'center' }}>
         <h2>Tweets</h2>
         <div className="tweets">
-          {this.state.tweets.map(tweet => (
-            <Tweet>
-              <span>{tweet.text}</span>
+          {this.state.tweets.map(({ id, text }) => (
+            <Tweet key={id}>
+              <span>{text}</span>
             </Tweet>
           ))}
         </div>
@@ -44,6 +44,7 @@ export default class Twitter extends React.Component {
           style={{ textAlign: 'center', display: 'block' }}
           href="https://twitter.com/nathansimpson"
           target="_blank"
+          rel="noopener noreferrer"
         >
           View more on Twitter
         </a>

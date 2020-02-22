@@ -1,5 +1,3 @@
-import hexAlpha from 'hex-alpha';
-
 export const colors = {
   orange: '#fa6d01',
   slate: {

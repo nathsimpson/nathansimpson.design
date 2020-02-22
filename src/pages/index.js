@@ -1,7 +1,7 @@
-// @jsx jsx
-import React from 'react';
+/** @jsx jsx */
 import Layout from '../templates/layout';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
+import { graphql } from 'gatsby';
 
 import Helmet from 'react-helmet';
 import Portfolio from '../components/Portfolio';
@@ -129,6 +129,7 @@ const App = ({ data }) => (
                     backgroundColor: hexAlpha(colors.orange, 0.2),
                     borderRadius: borderRadius.sm
                   }}
+                  key={item}
                 >
                   {item}
                 </li>
@@ -188,7 +189,10 @@ const App = ({ data }) => (
                     'A really simple package that enables you to specify an opacity for your HEX colours'
                 }
               ].map(item => (
-                <li css={{ marginBottom: 16, listStyle: 'none' }}>
+                <li
+                  css={{ marginBottom: 16, listStyle: 'none' }}
+                  key={item.name}
+                >
                   <Card>
                     <div
                       css={{
@@ -247,7 +251,11 @@ const App = ({ data }) => (
                     >
                       {item.desc}
                     </p>
-                    <a href={item.link} target="_blank">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       See more
                     </a>
                   </Card>

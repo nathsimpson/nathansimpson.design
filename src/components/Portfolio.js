@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'gatsby';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
 /** @jsx jsx */
@@ -88,10 +87,10 @@ const PortfolioItemGradient = styled.span({
     position: 'absolute',
     bottom: 0,
     left: 0,
-    background: 'none',
-    background: '-webkit-linear-gradient(rgba(37, 45, 52, 0), #000)',
-    background: '-o-linear-gradient(rgba(37, 45, 52, 0), #000)',
-    background: '-moz-linear-gradient(rgba(37, 45, 52, 0), #000)',
+    // background: 'none',
+    // background: '-webkit-linear-gradient(rgba(37, 45, 52, 0), #000)',
+    // background: '-o-linear-gradient(rgba(37, 45, 52, 0), #000)',
+    // background: '-moz-linear-gradient(rgba(37, 45, 52, 0), #000)',
     background: 'linear-gradient(rgba(37, 45, 52, 0), #000)'
   }
 });

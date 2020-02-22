@@ -1,6 +1,5 @@
-// @jsx jsx
-import React from 'react';
-import { jsx, css, Global } from '@emotion/core';
+/** @jsx jsx */
+import { jsx, Global } from '@emotion/core';
 import { Header, Footer } from '../components';
 import { colors, text, headings } from '../theme';
 

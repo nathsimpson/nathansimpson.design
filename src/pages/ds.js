@@ -1,7 +1,6 @@
-// @jsx jsx
-import React from 'react';
+/** @jsx jsx */
 import Layout from '../templates/layout';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { colors, text, headings } from '../theme';
 
@@ -29,6 +28,7 @@ export default () => (
                 backgroundColor: colors.slate[s],
                 color: 'white'
               }}
+              key={s}
             >
               {`slate.${s}`}
             </div>
@@ -40,7 +40,7 @@ export default () => (
         <h2>Text</h2>
         <div>
           {Object.keys(text).map(t => (
-            <p css={{ ...text[t], margin: 0 }}>{`Text ${t}.`}</p>
+            <p css={{ ...text[t], margin: 0 }} key={t}>{`Text ${t}.`}</p>
           ))}
         </div>
       </div>
@@ -49,7 +49,7 @@ export default () => (
         <h2>Headings</h2>
         <div>
           {Object.keys(headings).map(h => (
-            <p css={headings[h]}>{`H${h}`}</p>
+            <p css={headings[h]} key={h}>{`H${h}`}</p>
           ))}
         </div>
       </div>

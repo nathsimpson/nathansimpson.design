@@ -1,7 +1,6 @@
 ---
 title: "Simmo's Offroad Tours"
 path: '/simmos-offroad-tours'
-slug: '/simmos-offroad-tours'
 date: '2018-10-01'
 imagesrc: 'simmo/cover.jpg'
 type: project

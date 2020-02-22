@@ -18,12 +18,12 @@ export default class Template extends React.Component {
 }
 
 export const query = graphql`
-  query ProjectsBySlug($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query ProjectsByPath($path: String) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         title
-        slug
+        path
         date(formatString: "MMMM DD YYYY")
         type
       }

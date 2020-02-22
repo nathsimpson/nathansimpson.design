@@ -14,7 +14,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             frontmatter {
               path
-              slug
               title
               type
             }
@@ -32,7 +31,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.frontmatter.path,
         component: projectTemplate,
         context: {
-          slug: node.frontmatter.slug
+          path: node.frontmatter.path
         }
       });
     });

@@ -1,7 +1,6 @@
 ---
 title: 'Supercars Livery Designs'
 path: '/supercars'
-slug: '/supercars'
 date: '2018-02-21'
 imagesrc: 'supercars/cover.jpg'
 type: project

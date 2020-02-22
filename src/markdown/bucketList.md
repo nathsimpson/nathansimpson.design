@@ -1,6 +1,5 @@
 ---
 path: '/bucketlist'
-slug: '/bucketlist'
 date: '2019-05-04'
 title: 'BucketList'
 ---

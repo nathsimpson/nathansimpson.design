@@ -1,7 +1,6 @@
 ---
 title: 'The Garage'
 path: '/thegarage'
-slug: '/thegarage'
 date: '2018-11-26'
 imagesrc: 'thegarage/cover.jpg'
 type: project

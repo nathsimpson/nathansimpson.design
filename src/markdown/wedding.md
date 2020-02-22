@@ -1,7 +1,6 @@
 ---
 title: 'Nathan + Carrie Wedding'
 path: '/wedding'
-slug: '/wedding'
 date: '2016-02-06'
 imagesrc: 'wedding/cover.jpg'
 type: project

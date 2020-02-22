@@ -28,7 +28,7 @@ const Portfolio = ({ data }) => (
 
 const PortfolioItem = ({ project }) => {
   return (
-    <Link to={`${project.slug}`} key={project.path}>
+    <Link to={`${project.path}`} key={project.path}>
       <PortfolioItemDiv className="PortfolioItemDiv">
         <PortfolioItemImage
           src={

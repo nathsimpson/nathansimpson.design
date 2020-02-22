@@ -1,6 +1,5 @@
 ---
 title: 'Need A Nanny'
-slug: '/need-a-nanny'
 path: '/need-a-nanny'
 date: '2018-07-01'
 imagesrc: 'needananny/cover.jpg'

@@ -1,8 +1,10 @@
 ---
 title: 'Supercars Livery Designs'
+path: '/supercars'
 slug: '/supercars'
 date: '2018-02-21'
 imagesrc: 'supercars/cover.jpg'
+type: project
 ---
 
 ![SuperCheap Auto Racing, Chaz Mostert, Ford Mustang](http://files.nathansimpson.design/portfolio/supercars/1.jpg)

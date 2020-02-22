@@ -14,12 +14,14 @@ const Portfolio = ({ data }) => (
         gridRowGap: 16
       }}
     >
-      {data.allMarkdownRemark.edges.map(project => (
-        <PortfolioItem
-          key={project.node.id}
-          project={project.node.frontmatter}
-        />
-      ))}
+      {data.allMarkdownRemark.edges
+        .filter(({ node }) => node.frontmatter.type === 'project')
+        .map(project => (
+          <PortfolioItem
+            key={project.node.id}
+            project={project.node.frontmatter}
+          />
+        ))}
     </div>
   </div>
 );

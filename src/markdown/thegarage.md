@@ -1,8 +1,10 @@
 ---
 title: 'The Garage'
+path: '/thegarage'
 slug: '/thegarage'
 date: '2018-11-26'
 imagesrc: 'thegarage/cover.jpg'
+type: project
 ---
 
 The Garage is the digital extension of Sydney’s car culture. Japanese, Offroad, Racing, Exotic, whatever your passion, you will find people, projects and events that will interest you.

@@ -285,6 +285,7 @@ export const portfolioQuery = graphql`
             slug
             title
             imagesrc
+            type
           }
         }
       }

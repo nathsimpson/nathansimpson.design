@@ -1,8 +1,10 @@
 ---
 title: 'Need A Nanny'
 slug: '/need-a-nanny'
+path: '/need-a-nanny'
 date: '2018-07-01'
 imagesrc: 'needananny/cover.jpg'
+type: project
 ---
 
 With Need a Nanny, the nights off that parents desperately need are just a couple of taps away. Need a Nanny makes it simple to request a Nanny, and allows parents to rest at ease knowing that their children are in the care of a true professional.

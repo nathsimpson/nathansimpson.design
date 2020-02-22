@@ -13,8 +13,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
+              path
               slug
               title
+              type
             }
           }
         }
@@ -27,7 +29,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.slug,
+        path: node.frontmatter.path,
         component: projectTemplate,
         context: {
           slug: node.frontmatter.slug

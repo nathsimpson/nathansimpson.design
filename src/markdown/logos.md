@@ -1,8 +1,10 @@
 ---
 title: 'Logo Designs'
 slug: '/logos'
+path: '/logos'
 date: '2018-02-21'
 imagesrc: 'logos/cover.jpg'
+type: project
 ---
 
 ![Jayden Ojeda Motorsport](http://files.nathansimpson.design/portfolio/logos/1.jpg 'Jayden Ojeda Motorsport')

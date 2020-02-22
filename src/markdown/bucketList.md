@@ -1,4 +1,9 @@
-# BucketList
+---
+path: '/bucketlist'
+slug: '/bucketlist'
+date: '2019-05-04'
+title: 'BucketList'
+---
 
 - [x] Finish University
 - [x] Get married

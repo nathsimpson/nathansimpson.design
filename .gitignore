@@ -9,7 +9,6 @@
 # production
 /.cache
 /build
-/public
 
 # misc
 .DS_Store

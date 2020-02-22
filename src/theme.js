@@ -1,22 +1,20 @@
-import hexAlpha from "hex-alpha";
-
 export const colors = {
-  orange: "#fa6d01",
+  orange: '#fa6d01',
   slate: {
-    "0": "#0c0f13",
-    "10": "#13181d",
-    "20": "#171d22",
-    "30": "#1e242a",
-    "40": "#272f37",
-    "50": "#353f47",
-    "60": "#48535d",
-    "70": "#616e79",
-    "80": "#808d99",
-    "90": "#a0aeba"
+    '0': '#0c0f13',
+    '10': '#13181d',
+    '20': '#171d22',
+    '30': '#1e242a',
+    '40': '#272f37',
+    '50': '#353f47',
+    '60': '#48535d',
+    '70': '#616e79',
+    '80': '#808d99',
+    '90': '#a0aeba'
   },
-  green: "#52e409",
-  purple: "#E509E3",
-  thinkmill: "#FF3838"
+  green: '#52e409',
+  purple: '#E509E3',
+  thinkmill: '#FF3838'
 };
 
 export const breakpoints = {
@@ -27,9 +25,9 @@ export const breakpoints = {
 };
 
 export const borderRadius = {
-  sm: "3px",
-  md: "6px",
-  lg: "12px"
+  sm: '3px',
+  md: '6px',
+  lg: '12px'
 };
 
 export const boxShadow = {
@@ -72,26 +70,26 @@ export const text = {
 export const headings = {
   1: {
     ...text[7],
-    color: "white",
-    margin: "12px 0",
+    color: 'white',
+    margin: '12px 0',
     fontWeight: 900
   },
   2: {
     ...text[6],
-    color: "white",
-    margin: "12px 0",
+    color: 'white',
+    margin: '12px 0',
     fontWeight: 800
   },
   3: {
     ...text[5],
-    color: "white",
-    margin: "12px 0",
+    color: 'white',
+    margin: '12px 0',
     fontWeight: 600
   },
   4: {
     ...text[4],
-    color: "white",
-    margin: "12px 0",
+    color: 'white',
+    margin: '12px 0',
     fontWeight: 600
   }
 };

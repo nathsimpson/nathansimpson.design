@@ -1,11 +1,8 @@
-// @jsx jsx
-import React from "react";
-import Layout from "../templates/layout";
-import { jsx, css } from "@emotion/core";
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import Layout from '../templates/layout';
 
-import Helmet from "react-helmet";
-import { ContactForm } from "../components";
-
+import Helmet from 'react-helmet';
 const App = ({ data }) => (
   <Layout>
     <Helmet>

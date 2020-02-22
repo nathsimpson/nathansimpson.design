@@ -1,11 +1,11 @@
-import facepaint from "facepaint";
-import { breakpoints } from "../theme";
+import facepaint from 'facepaint';
+import { breakpoints } from '../theme';
 
 const bpEntries = Object.entries(breakpoints);
 const maxWidth = (width, m = true) =>
-  `${m ? "@media " : ""}(max-width: ${width}px)`;
+  `${m ? '@media ' : ''}(max-width: ${width}px)`;
 const minWidth = (width, m = true) =>
-  `${m ? "@media " : ""}(min-width: ${width}px)`;
+  `${m ? '@media ' : ''}(min-width: ${width}px)`;
 
 // MIN-width queries (default)
 export const media = bpEntries.reduce(

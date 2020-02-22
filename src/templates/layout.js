@@ -1,17 +1,16 @@
-// @jsx jsx
-import React from "react";
-import { jsx, css, Global } from "@emotion/core";
-import { Header, Footer } from "../components";
-import { colors, text, headings } from "../theme";
+/** @jsx jsx */
+import { jsx, Global } from '@emotion/core';
+import { Header, Footer } from '../components';
+import { colors, text, headings } from '../theme';
 
 export default ({ children }) => (
   <div
     style={{
-      width: "100%",
-      maxWidth: "1300px",
-      padding: "0 16px",
-      margin: "0 auto",
-      boxSizing: "border-box"
+      width: '100%',
+      maxWidth: '1300px',
+      padding: '0 16px',
+      margin: '0 auto',
+      boxSizing: 'border-box'
     }}
   >
     <Global
@@ -28,10 +27,10 @@ export default ({ children }) => (
 
         a: {
           color: colors.orange,
-          textDecoration: "none",
+          textDecoration: 'none',
 
-          "&:hover": {
-            textDecoration: "underline"
+          '&:hover': {
+            textDecoration: 'underline'
           }
         },
 
@@ -46,7 +45,7 @@ export default ({ children }) => (
         h4: headings[4],
 
         img: {
-          maxWidth: "100%"
+          maxWidth: '100%'
         },
 
         hr: {

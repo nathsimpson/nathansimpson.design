@@ -1,14 +1,14 @@
-// @jsx jsx
-import React from "react";
-import Layout from "../templates/layout";
-import { jsx, css } from "@emotion/core";
+/** @jsx jsx */
+import Layout from '../templates/layout';
+import { jsx } from '@emotion/core';
+import { graphql } from 'gatsby';
 
-import Helmet from "react-helmet";
-import Portfolio from "../components/Portfolio";
-import { Card, ContactForm, Dribbble } from "../components";
-import { colors, borderRadius, text } from "../theme";
-import hexAlpha from "hex-alpha";
-import { getBreakpoints } from "../helpers/utils";
+import Helmet from 'react-helmet';
+import Portfolio from '../components/Portfolio';
+import { Card, ContactForm, Dribbble } from '../components';
+import { colors, borderRadius, text } from '../theme';
+import hexAlpha from 'hex-alpha';
+import { getBreakpoints } from '../helpers/utils';
 
 const mq = getBreakpoints();
 
@@ -25,10 +25,10 @@ const App = ({ data }) => (
     <main>
       <div
         css={{
-          display: "flex",
-          minHeight: "60vh",
-          justifyContent: "center",
-          flexDirection: "column"
+          display: 'flex',
+          minHeight: '60vh',
+          justifyContent: 'center',
+          flexDirection: 'column'
         }}
       >
         <h1 css={{ margin: 0 }}>Nathan Simpson</h1>
@@ -39,7 +39,7 @@ const App = ({ data }) => (
             maxWidth: 600
           }}
         >
-          Designer &amp; Frontend Developer at{" "}
+          Designer &amp; Frontend Developer at{' '}
           <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
           Passionate about building products from concept to delivery.
         </p>
@@ -81,17 +81,17 @@ const App = ({ data }) => (
 
         <div
           css={{
-            display: "flex",
-            flexWrap: "wrap"
+            display: 'flex',
+            flexWrap: 'wrap'
           }}
         >
           <div
             css={{
-              boxSizing: "border-box",
+              boxSizing: 'border-box',
               paddingRight: 16,
-              width: "100%",
+              width: '100%',
               [mq[1]]: {
-                width: "50%"
+                width: '50%'
               }
             }}
           >
@@ -104,24 +104,24 @@ const App = ({ data }) => (
             <h3>Experienced with</h3>
             <ul
               css={{
-                listStyle: "none",
+                listStyle: 'none',
                 padding: 0,
-                display: "flex",
-                flexWrap: "wrap"
+                display: 'flex',
+                flexWrap: 'wrap'
               }}
             >
               {[
-                "JavaScript",
-                "React",
-                "React Native",
-                "NextJS",
-                "Gatsby",
-                "NodeJS",
-                "Keystone"
+                'JavaScript',
+                'React',
+                'React Native',
+                'NextJS',
+                'Gatsby',
+                'NodeJS',
+                'Keystone'
               ].map(item => (
                 <li
                   css={{
-                    padding: "4px 8px",
+                    padding: '4px 8px',
                     border: `1px solid ${colors.orange}`,
                     marginRight: 6,
                     marginBottom: 6,
@@ -129,6 +129,7 @@ const App = ({ data }) => (
                     backgroundColor: hexAlpha(colors.orange, 0.2),
                     borderRadius: borderRadius.sm
                   }}
+                  key={item}
                 >
                   {item}
                 </li>
@@ -137,9 +138,9 @@ const App = ({ data }) => (
           </div>
           <div
             css={{
-              width: "100%",
+              width: '100%',
               [mq[1]]: {
-                width: "50%"
+                width: '50%'
               }
             }}
           >
@@ -147,60 +148,63 @@ const App = ({ data }) => (
             <ul css={{ padding: 0 }}>
               {[
                 {
-                  name: "The Garage",
-                  link: "https://thegarageapp.com",
-                  type: "Owner",
+                  name: 'The Garage',
+                  link: 'https://thegarageapp.com',
+                  type: 'Owner',
                   desc:
-                    "The Garage is an social network for car lovers in Sydney Australia."
+                    'The Garage is an social network for car lovers in Sydney Australia.'
                 },
                 {
-                  name: "KeystoneJS",
+                  name: 'KeystoneJS',
                   link:
-                    "https://github.com/keystonejs/keystone-5/graphs/contributors",
-                  type: "Contributor",
+                    'https://github.com/keystonejs/keystone-5/graphs/contributors',
+                  type: 'Contributor',
                   openSource: true,
                   team: true,
                   desc:
-                    "KeystoneJS is a scalable platform and CMS for Node.js applications. `schema => ({ GraphQL, AdminUI })`"
+                    'KeystoneJS is a scalable platform and CMS for Node.js applications. `schema => ({ GraphQL, AdminUI })`'
                 },
                 {
-                  name: "Reckon Single Touch Payroll",
+                  name: 'Reckon Single Touch Payroll',
                   link:
-                    "https://apps.apple.com/au/app/reckon-single-touch-payroll/id1458071904",
+                    'https://apps.apple.com/au/app/reckon-single-touch-payroll/id1458071904',
                   team: true,
                   desc:
-                    "With Reckon Single Touch Payroll, you can submit your employee payroll in just a few simple steps. It’s perfect for small businesses that are always on the go."
+                    'With Reckon Single Touch Payroll, you can submit your employee payroll in just a few simple steps. It’s perfect for small businesses that are always on the go.'
                 },
                 {
-                  name: "IsobelJS",
+                  name: 'IsobelJS',
                   openSource: true,
-                  link: "https://isobeljs.com/",
-                  type: "Owner",
+                  link: 'https://isobeljs.com/',
+                  type: 'Owner',
                   desc:
-                    "A beginner-friendly NodeJS framework for fetching data from your social profiles and other sources, to display in your own apps and websites."
+                    'A beginner-friendly NodeJS framework for fetching data from your social profiles and other sources, to display in your own apps and websites.'
                 },
                 {
-                  name: "hex-alpha",
+                  name: 'hex-alpha',
                   openSource: true,
-                  link: "https://github.com/nathsimpson/hex-alpha",
-                  type: "Owner",
+                  link: 'https://github.com/nathsimpson/hex-alpha',
+                  type: 'Owner',
                   desc:
-                    "A really simple package that enables you to specify an opacity for your HEX colours"
+                    'A really simple package that enables you to specify an opacity for your HEX colours'
                 }
               ].map(item => (
-                <li css={{ marginBottom: 16, listStyle: "none" }}>
+                <li
+                  css={{ marginBottom: 16, listStyle: 'none' }}
+                  key={item.name}
+                >
                   <Card>
                     <div
                       css={{
                         ...text[1],
-                        display: "flex",
-                        alignItems: "center"
+                        display: 'flex',
+                        alignItems: 'center'
                       }}
                     >
                       <span
                         css={{
                           ...text[4],
-                          color: "white",
+                          color: 'white',
                           fontWeight: 500
                         }}
                       >
@@ -210,7 +214,7 @@ const App = ({ data }) => (
                         <div
                           css={{
                             ...text[1],
-                            padding: "3px 6px",
+                            padding: '3px 6px',
                             border: `1px solid ${colors.purple}`,
                             marginLeft: 6,
                             backgroundColor: hexAlpha(colors.purple, 0.1),
@@ -225,7 +229,7 @@ const App = ({ data }) => (
                         <div
                           css={{
                             ...text[1],
-                            padding: "3px 6px",
+                            padding: '3px 6px',
                             border: `1px solid ${colors.green}`,
                             marginLeft: 6,
                             backgroundColor: hexAlpha(colors.green, 0.1),
@@ -240,14 +244,18 @@ const App = ({ data }) => (
                     <p
                       css={{
                         ...text[2],
-                        margin: "10px 0",
+                        margin: '10px 0',
                         color: colors.slate[90]
                       }}
                       x
                     >
                       {item.desc}
                     </p>
-                    <a href={item.link} target="_blank">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       See more
                     </a>
                   </Card>
@@ -285,7 +293,7 @@ export const portfolioQuery = graphql`
 `;
 
 const Block = ({ children }) => (
-  <div css={{ margin: "128px auto" }}>{children}</div>
+  <div css={{ margin: '128px auto' }}>{children}</div>
 );
 
 export default App;

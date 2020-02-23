@@ -1,8 +1,9 @@
 ---
 title: 'AgriVita'
-slug: /agrivita
+path: /agrivita
 date: '2018-09-01'
 imagesrc: 'agrivita/cover.jpg'
+type: project
 ---
 
 AgriVita is an iPhone Application designed to help Australian backyard-gardeners take care of their plants and animals.

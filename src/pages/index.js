@@ -282,9 +282,10 @@ export const portfolioQuery = graphql`
         node {
           id
           frontmatter {
-            slug
+            path
             title
             imagesrc
+            type
           }
         }
       }

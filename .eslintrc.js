@@ -9,7 +9,8 @@ module.exports = {
     'standard/computed-property-even-spacing': 0,
     'no-template-curly-in-string': 0,
     camelcase: 0,
-    'import/no-duplicates': 0
+    'import/no-duplicates': 0,
+    'react/jsx-no-target-blank': 0
   },
   env: {
     browser: true

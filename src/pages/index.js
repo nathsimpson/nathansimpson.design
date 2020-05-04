@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 
 import Helmet from 'react-helmet';
 import Portfolio from '../components/Portfolio';
-import { Card, ContactForm, Dribbble } from '../components';
+import { Card, Contact, Dribbble } from '../components';
 import { colors, borderRadius, text } from '../theme';
 import hexAlpha from 'hex-alpha';
 import { getBreakpoints } from '../helpers/utils';
@@ -43,7 +43,7 @@ const App = ({ data }) => (
           <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
           Passionate about building products from concept to delivery.
         </p>
-        {/* <div
+        <div
           style={{
             background: colors.slate[0],
             padding: 12,
@@ -61,11 +61,14 @@ const App = ({ data }) => (
           >
             Latest
           </p>
-          <p css={{ ...text[2], margin: 0 }}>
-            Thinkmill recently helped Reckon deliver "Single Touch Payroll" for
-            Australian Businesses
+          <p css={{ ...text[2], color: 'white', margin: 0 }}>
+            Thinkmill recently helped Reckon deliver{' '}
+            <a href="https://www.reckon.com/au/payroll-app/" target="_blank">
+              Reckon Payroll
+            </a>{' '}
+            for Australian Businesses
           </p>
-        </div> */}
+        </div>
       </div>
 
       <h2>Design</h2>
@@ -117,7 +120,8 @@ const App = ({ data }) => (
                 'NextJS',
                 'Gatsby',
                 'NodeJS',
-                'Keystone'
+                'Keystone',
+                'Swift'
               ].map(item => (
                 <li
                   css={{
@@ -144,7 +148,7 @@ const App = ({ data }) => (
               }
             }}
           >
-            <h3>Some things I've built</h3>
+            <h3>Some things I've worked on</h3>
             <ul css={{ padding: 0 }}>
               {[
                 {
@@ -165,12 +169,11 @@ const App = ({ data }) => (
                     'KeystoneJS is a scalable platform and CMS for Node.js applications. `schema => ({ GraphQL, AdminUI })`'
                 },
                 {
-                  name: 'Reckon Single Touch Payroll',
-                  link:
-                    'https://apps.apple.com/au/app/reckon-single-touch-payroll/id1458071904',
+                  name: 'Reckon Payroll',
+                  link: 'https://www.reckon.com/au/payroll-app/',
                   team: true,
                   desc:
-                    'With Reckon Single Touch Payroll, you can submit your employee payroll in just a few simple steps. It’s perfect for small businesses that are always on the go.'
+                    'Enables small businesses to conveniently do Payroll and STP reporting from an iOS or Android device.'
                 },
                 {
                   name: 'IsobelJS',
@@ -270,7 +273,7 @@ const App = ({ data }) => (
         <Dribbble />
       </Block>
 
-      <ContactForm />
+      <Contact />
     </main>
   </Layout>
 );

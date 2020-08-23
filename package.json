@@ -5,7 +5,8 @@
   "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
+    "buildFunctions": "cd functions/getDribbbleShots && npm install && cd ../../",
+    "build": "npm run buildFunctions && gatsby build",
     "dev": "gatsby develop",
     "start": "npm run dev",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",

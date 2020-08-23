@@ -4,6 +4,6 @@
   "description": "Lambda function for retrieving Dribbble shots",
   "author": "Nathan Simpson",
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.6.0"
   }
 }

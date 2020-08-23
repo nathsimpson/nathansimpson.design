@@ -1,0 +1,9 @@
+{
+  "name": "get-dribbble-shots",
+  "version": "1.0.0",
+  "description": "Lambda function for retrieving Dribbble shots",
+  "author": "Nathan Simpson",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}

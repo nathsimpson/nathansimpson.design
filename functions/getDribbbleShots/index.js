@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 const ACCESS_TOKEN = process.env.DRIBBBLE_ACCESS_TOKEN;
 const API_ENDPOINT = `https://api.dribbble.com/v2/user/shots?access_token=${ACCESS_TOKEN}`;
@@ -17,6 +17,5 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: data
     }))
-
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };

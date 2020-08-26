@@ -4,6 +4,9 @@
   "private": true,
   "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
+  "engines": {
+    "node": "10.21.0"
+  },
   "scripts": {
     "postinstall": "netlify-lambda install",
     "build:lambda": "netlify-lambda build functions",

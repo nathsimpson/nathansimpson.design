@@ -5,8 +5,9 @@
   "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
   "scripts": {
-    "buildFunctions": "cd functions/getDribbbleShots && npm install && cd ../../",
-    "build": "npm run buildFunctions && gatsby build",
+    "postinstall": "netlify-lambda install",
+    "build:lambda": "netlify-lambda build functions",
+    "build": "npm run build:lambda && gatsby build",
     "dev": "gatsby develop",
     "start": "npm run dev",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",

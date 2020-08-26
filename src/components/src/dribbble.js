@@ -14,7 +14,7 @@ export default class Dribbble extends React.Component {
 
   componentDidMount() {
     // may need to implement axios
-    fetch('https://nathansimpson.design/.netlify/functions/getDribbbleShots')
+    fetch('/.netlify/functions/getDribbbleShots')
       .then(response => response.json())
       .then(data => data.filter(shot => !shot.image.includes('.gif')))
       .then(data => data.splice(0, 4, ''))

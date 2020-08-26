@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
     )
     .then(data => ({
       statusCode: 200,
-      body: data
+      body: JSON.stringify(data)
     }))
-    .catch(error => ({ statusCode: 422, body: String(error) }));
+    .catch(error => ({ statusCode: 422, body: JSON.stringify(error) }));
 };

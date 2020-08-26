@@ -10,6 +10,7 @@
 /.cache
 /build
 /public
+/built-lambda
 
 # misc
 .DS_Store

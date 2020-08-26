@@ -115,13 +115,14 @@ const App = ({ data }) => (
             >
               {[
                 'JavaScript',
+                'TypeScript',
+                'Swift',
                 'React',
                 'React Native',
                 'NextJS',
                 'Gatsby',
                 'NodeJS',
-                'Keystone',
-                'Swift'
+                'Keystone'
               ].map(item => (
                 <li
                   css={{

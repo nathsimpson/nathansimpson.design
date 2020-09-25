@@ -10,7 +10,10 @@ exports.handler = async (event, context) => {
       data.map(shot => ({
         description: shot.description.replace(/(<([^>]+)>)/gi, ''),
         image: shot.images.normal,
-        link: shot.html_url
+        link:
+          shot.images && (shot.images.hidpi || shot.images.normal)
+            ? shot.images.hidpi || shot.images.normal
+            : shot.html_url
       }))
     )
     .then(data => ({

@@ -6,12 +6,17 @@ import styled from '@emotion/styled';
 
 const Portfolio = ({ data }) => (
   <div>
+    <h2>Design</h2>
+    <p>
+      Design has been my passion for over 10 years. I focus on User Interface
+      (UI) Design for native and web apps, with the odd Branding project here
+      and there.
+    </p>
     <div
       css={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gridColumnGap: 16,
-        gridRowGap: 16
+        gap: 12
       }}
     >
       {data.allMarkdownRemark.edges

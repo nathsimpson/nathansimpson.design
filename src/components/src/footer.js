@@ -56,7 +56,7 @@ export default () => (
           margin: '12px auto'
         }}
       >
-        &copy; Copyright 2019 Nathan Simpson. Made in Sydney Australia.
+        &copy; Copyright 2020 Nathan Simpson. Made in Sydney Australia.
       </p>
       <img src={logo} style={{ height: 32, position: 'relative', top: 6 }} />
     </div>
@@ -84,19 +84,19 @@ const networks = [
     icon: faGithub,
     link: 'https://github.com/nathsimpson'
   },
-  {
-    name: 'Codepen',
-    icon: faCodepen,
-    link: 'https://codepen.io/nathansimpson/'
-  },
+  // {
+  //   name: 'Codepen',
+  //   icon: faCodepen,
+  //   link: 'https://codepen.io/nathansimpson/'
+  // },
   {
     name: 'Dribbble',
     icon: faDribbble,
     link: 'https://dribbble.com/nathansimpson'
-  },
-  {
-    name: 'YouTube',
-    icon: faYoutube,
-    link: 'https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg'
   }
+  // {
+  //   name: 'YouTube',
+  //   icon: faYoutube,
+  //   link: 'https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg'
+  // }
 ];

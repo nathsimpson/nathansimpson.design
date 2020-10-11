@@ -58,7 +58,7 @@ const developmentProjects = [
     link: 'https://github.com/nathsimpson/hex-alpha',
     type: 'Owner',
     desc:
-      'A really simple package that enables you to specify an opacity for your HEX colours',
+      'A really simple package that enables you to specify an opacity for your HEX colours.',
     skills: ['JavaScript']
   },
   {

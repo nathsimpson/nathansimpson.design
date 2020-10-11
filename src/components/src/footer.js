@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
   faInstagram,
-  faCodepen,
+  // faCodepen,
   faLinkedin,
   faGithub,
-  faDribbble,
-  faYoutube
+  faDribbble
+  // faYoutube
 } from '@fortawesome/fontawesome-free-brands';
 import logo from '../../images/logo.svg';
 import { colors, text } from '../../theme';

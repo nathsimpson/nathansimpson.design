@@ -11,7 +11,7 @@ export default ({ children }) => (
     style={{
       width: '100%',
       maxWidth: '1300px',
-      padding: '0 16px',
+      padding: '0 24px',
       margin: '0 auto',
       boxSizing: 'border-box'
     }}

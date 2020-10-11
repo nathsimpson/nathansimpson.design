@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../templates/layout';
+import Layout from '../components/src/layout';
 import { graphql, Link } from 'gatsby';
 
 export default class Template extends React.Component {
@@ -7,11 +7,9 @@ export default class Template extends React.Component {
     const project = this.props.data.markdownRemark;
     return (
       <Layout>
-        <div className="project">
-          <Link to="/">Back</Link>
-          <h1>{project.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: project.html }} />
-        </div>
+        <Link to="/">Back</Link>
+        <h1>{project.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: project.html }} />
       </Layout>
     );
   }

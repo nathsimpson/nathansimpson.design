@@ -1,7 +1,10 @@
 /** @jsx jsx */
 import { jsx, Global } from '@emotion/core';
-import { Header, Footer } from '../components';
-import { colors, text, headings } from '../theme';
+import Helmet from 'react-helmet';
+
+import Header from './header';
+import Footer from './footer';
+import { colors, text, headings } from '../../theme';
 
 export default ({ children }) => (
   <div
@@ -13,6 +16,14 @@ export default ({ children }) => (
       boxSizing: 'border-box'
     }}
   >
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Nathan Simpson - UI Designer + Developer</title>
+      <meta
+        name="description"
+        content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
+      />
+    </Helmet>
     <Global
       styles={{
         body: {
@@ -35,7 +46,9 @@ export default ({ children }) => (
         },
 
         p: {
-          ...text[4],
+          ...text[2],
+          fontFamily:
+            'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace',
           maxWidth: 800
         },
 
@@ -50,11 +63,18 @@ export default ({ children }) => (
 
         hr: {
           border: `1px solid ${colors.orange}`
+        },
+
+        blockquote: {
+          borderLeft: '3px solid #fa6d01',
+          margin: 0,
+          paddingLeft: 12,
+          color: 'white'
         }
       }}
     />
     <Header />
-    {children}
+    <main>{children}</main>
     <Footer />
   </div>
 );

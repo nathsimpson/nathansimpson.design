@@ -18,9 +18,9 @@ const App = ({ data }) => (
         flexDirection: 'column'
       }}
     >
-      <h1 css={{ margin: 0 }}>Nathan Simpson</h1>
+      <h1>Nathan Simpson</h1>
 
-      <p css={{ margin: 0 }}>
+      <p>
         UI Designer &amp; Developer at{' '}
         <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
         I'm passionate about Design Systems, and building products from concept

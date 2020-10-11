@@ -23,13 +23,25 @@ const talks = [
     id: '8D_bwTpDTTs',
     name: 'How I prototyped a social network with Keystone 5',
     desc:
-      'At the May SydJS meetup, Thinkmill unveiled Keystone 5 with a line-up of talks. In this talk, I show off how I am building The Garage, a social network for car lovers, using Keystone 5 and React Native.'
+      'At the May 2019 SydJS meetup, Thinkmill unveiled Keystone 5 with a line-up of talks. In this talk, I show off how I am building The Garage, a social network for car lovers, using Keystone 5 and React Native.'
   }
 ];
 
 export default () => (
   <Layout>
     <h1>Talks</h1>
+    <p>
+      Occasionally I give talks at{' '}
+      <a href="https://www.sydjs.com/" target="_blank">
+        SydJS
+      </a>
+      {' and '}
+      <a href="https://www.meetup.com/en-AU/React-Sydney/" target="_blank">
+        React Sydney
+      </a>{' '}
+      meetups. Check out the recordings below, and come and say hi at the next
+      one!
+    </p>
     {talks.map(talk => (
       <Video talk={talk} key={talk.id} />
     ))}

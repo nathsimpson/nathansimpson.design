@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Layout } from '../components';
 import { jsx } from '@emotion/core';
-import { colors, text, headings } from '../theme';
+import { colors, fontsizes, headings } from '../theme';
 
 export default () => (
   <Layout>
@@ -27,10 +27,10 @@ export default () => (
     </div>
 
     <div>
-      <h2>Text</h2>
+      <h2>Font sizes</h2>
       <div>
-        {Object.keys(text).map(t => (
-          <p css={{ ...text[t], margin: 0 }} key={t}>{`Text ${t}.`}</p>
+        {Object.keys(fontsizes).map(t => (
+          <p css={{ ...fontsizes[t], margin: 0 }} key={t}>{`Size ${t}.`}</p>
         ))}
       </div>
     </div>

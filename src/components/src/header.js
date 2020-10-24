@@ -4,49 +4,6 @@ import { jsx } from '@emotion/core';
 
 import { colors } from '../../theme';
 
-const Header = () => (
-  <header
-    className="header"
-    css={{
-      maxWidth: '1300px',
-      margin: '0 auto',
-      padding: '20px 0px',
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}
-  >
-    <div css={{ display: 'flex', flex: 1 }}>
-      <Link
-        exact
-        to="/"
-        css={{
-          display: 'flex',
-          alignItems: 'center',
-          color: colors.orange,
-          textDecoration: 'none',
-          '&:hover': {
-            color: '#fff',
-            textDecoration: 'none'
-          }
-        }}
-      >
-        <BackIcon />
-        Back
-      </Link>
-    </div>
-
-    <Link exact to="/">
-      <Logo />
-    </Link>
-
-    <div css={{ display: 'flex', flex: 1, alignItems: 'flex-end' }} />
-  </header>
-);
-
-export default Header;
-
 export const Logo = () => (
   <svg
     viewBox="0 0 158.6 102.8"
@@ -116,3 +73,46 @@ export const BackIcon = () => {
     </svg>
   );
 };
+
+const Header = () => (
+  <header
+    className="header"
+    css={{
+      maxWidth: '1300px',
+      margin: '0 auto',
+      padding: '20px 0px',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    }}
+  >
+    <div css={{ display: 'flex', flex: 1 }}>
+      <Link
+        exact
+        to="/"
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          color: colors.orange,
+          textDecoration: 'none',
+          '&:hover': {
+            color: '#fff',
+            textDecoration: 'none'
+          }
+        }}
+      >
+        <BackIcon />
+        Back
+      </Link>
+    </div>
+
+    <Link exact to="/">
+      <Logo />
+    </Link>
+
+    <div css={{ display: 'flex', flex: 1, alignItems: 'flex-end' }} />
+  </header>
+);
+
+export default Header;

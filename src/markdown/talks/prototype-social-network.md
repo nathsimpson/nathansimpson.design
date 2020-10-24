@@ -1,5 +1,5 @@
 ---
-title: How I prototyped a social network with Keystone 5
+title: Prototyping a social network with Keystone 5
 path: '/talks/prototype-a-social-network'
 date: '2019-06-23'
 type: talk

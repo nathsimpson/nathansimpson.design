@@ -25,6 +25,7 @@ export const talksQuery = graphql`
             title
             imagesrc
             type
+            youtubeid
           }
         }
       }

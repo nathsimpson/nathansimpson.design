@@ -26,30 +26,50 @@ export const Talks = ({ data }) => (
             borderLeft: `2px solid ${colors.orange}`,
             borderBottomRightRadius: borderRadius.lg,
             borderTopRightRadius: borderRadius.lg,
-            padding: spacing.large,
+            display: 'flex',
             marginBottom: spacing.small,
             maxWidth: 800
           }}
           key={node.id}
         >
-          <h3
+          <a
+            href={node.frontmatter.path}
             css={{
-              margin: 0,
-              fontSize: fontsizes.xlarge
+              width: 220,
+              backgroundColor: colors.slate['40'],
+              backgroundImage: `url(https://i.ytimg.com/vi/${node.frontmatter.youtubeid}/hqdefault.jpg)`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div
+            css={{
+              display: 'flex',
+              flexDirection: 'column',
+              flex: 1,
+              padding: spacing.large
             }}
           >
-            {node.frontmatter.title}
-          </h3>
-          <p
-            css={{
-              marginTop: spacing.small,
-              marginBottom: spacing.none,
-              fontSize: fontsizes.small
-            }}
-          >
-            {node.html.replace(/<\/?p>/g, '')}{' '}
-            <a href={node.frontmatter.path}>Watch now</a>{' '}
-          </p>
+            <h3
+              css={{
+                margin: 0,
+                fontSize: fontsizes.xlarge
+              }}
+            >
+              {node.frontmatter.title}
+            </h3>
+            <p
+              css={{
+                marginTop: spacing.small,
+                marginBottom: spacing.none,
+                fontSize: fontsizes.small
+              }}
+            >
+              {node.html.replace(/<\/?p>/g, '').slice(0, 148)}
+              {'... '}
+              <a href={node.frontmatter.path}>Watch now</a>{' '}
+            </p>
+          </div>
         </div>
       ))}
   </div>

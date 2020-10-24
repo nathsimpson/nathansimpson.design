@@ -22,7 +22,7 @@ const App = ({ data }) => (
       <Logo />
       <h1 css={{ margin: 0 }}>Nathan Simpson</h1>
 
-      <p>
+      <p css={{ margin: 0 }}>
         UI Designer &amp; Developer at{' '}
         <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
         I'm passionate about Design Systems, and building products from concept
@@ -86,6 +86,7 @@ export const portfolioQuery = graphql`
             title
             imagesrc
             type
+            youtubeid
           }
         }
       }

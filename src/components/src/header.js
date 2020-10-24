@@ -1,30 +1,29 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
-import styled from '@emotion/styled';
 import { jsx } from '@emotion/core';
 
-const Logo = styled.svg`
-  g .outline {
-    fill: rgba(250, 109, 1, 1);
-  }
-  g .solid {
-    fill: rgba(250, 109, 1, 0);
-    transition: fill 0.5s;
-  }
+import { colors } from '../../theme';
 
-  &:hover g .outline {
-    fill: white;
-  }
-  &:hover g .solid {
-    fill: rgba(250, 109, 1, 1);
-  }
-`;
-
-const LogoReact = () => (
-  <Logo
-    className="header__logo"
+export const Logo = () => (
+  <svg
     viewBox="0 0 158.6 102.8"
-    style={{ height: 50, width: 'auto' }}
+    css={{
+      height: 50,
+      width: 'auto',
+      'g .outline': {
+        fill: 'rgba(250, 109, 1, 1)'
+      },
+      'g .solid': {
+        fill: 'rgba(250, 109, 1, 0)',
+        transition: 'fill 0.5s'
+      },
+      '&:hover g .outline': {
+        fill: 'white'
+      },
+      '&:hover g .solid': {
+        fill: 'rgba(250, 109, 1, 1)'
+      }
+    }}
   >
     <g>
       <path
@@ -53,8 +52,27 @@ const LogoReact = () => (
         points="124,96.5 99.5,96.5 121.9,58.7 126.5,51.1 99.3,6 124.1,6 151.3,51.1"
       />
     </g>
-  </Logo>
+  </svg>
 );
+
+export const BackIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="icon"
+    >
+      <polyline points="15 18 9 12 15 6" />
+    </svg>
+  );
+};
 
 const Header = () => (
   <header
@@ -69,46 +87,31 @@ const Header = () => (
       alignItems: 'center'
     }}
   >
+    <div css={{ display: 'flex', flex: 1 }}>
+      <Link
+        exact
+        to="/"
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          color: colors.orange,
+          textDecoration: 'none',
+          '&:hover': {
+            color: '#fff',
+            textDecoration: 'none'
+          }
+        }}
+      >
+        <BackIcon />
+        Back
+      </Link>
+    </div>
+
     <Link exact to="/">
-      <LogoReact />
+      <Logo />
     </Link>
 
-    <ul
-      css={{
-        display: 'flex',
-        flexDirection: 'row',
-        listStyle: 'none',
-        padding: 0
-      }}
-    >
-      {[
-        {
-          label: 'About',
-          link: '/about'
-        },
-        {
-          label: 'Talks',
-          link: '/talks'
-        }
-      ].map(item => (
-        <li key={item.label}>
-          <Link
-            css={{ color: 'white', margin: '0px 6px', fontWeight: 500 }}
-            to={item.link}
-          >
-            {item.label}
-          </Link>
-        </li>
-      ))}
-      <li>
-        {/* <Link
-          css={{ color: "white", margin: "0px 6px", fontWeight: 500 }}
-          to={"/ds"}
-        >
-          {"DS"} //icon goes here
-        </Link> */}
-      </li>
-    </ul>
+    <div css={{ display: 'flex', flex: 1, alignItems: 'flex-end' }} />
   </header>
 );
 

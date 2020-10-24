@@ -1,21 +1,25 @@
-import React from 'react';
-import Layout from '../templates/layout';
-import { graphql, Link } from 'gatsby';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import Layout from '../components/src/layout';
+import { Header } from '../components';
+import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
-export default class Template extends React.Component {
-  render() {
-    const project = this.props.data.markdownRemark;
-    return (
-      <Layout>
-        <div className="project">
-          <Link to="/">Back</Link>
-          <h1>{project.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: project.html }} />
-        </div>
-      </Layout>
-    );
-  }
-}
+export default ({ data }) => {
+  const project = data.markdownRemark;
+  return (
+    <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{project.frontmatter.title} - Nathan Simpson's portfolio</title>
+      </Helmet>
+      <Header />
+
+      <h1>{project.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: project.html }} />
+    </Layout>
+  );
+};
 
 export const query = graphql`
   query ProjectsByPath($path: String) {

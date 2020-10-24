@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
   faInstagram,
-  faCodepen,
+  // faCodepen,
   faLinkedin,
   faGithub,
-  faDribbble,
-  faYoutube
+  faDribbble
+  // faYoutube
 } from '@fortawesome/fontawesome-free-brands';
 import logo from '../../images/logo.svg';
-import { colors, text } from '../../theme';
+import { colors, fontsizes } from '../../theme';
 
 export default () => (
   <footer className="aboutMe" style={{ textAlign: 'center' }}>
@@ -51,7 +51,7 @@ export default () => (
     <div style={{ marginBottom: '32px' }}>
       <p
         style={{
-          ...text[1],
+          fontSize: fontsizes.xsmall,
           color: colors.slate[80],
           margin: '12px auto'
         }}

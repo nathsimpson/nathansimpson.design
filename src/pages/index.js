@@ -1,51 +1,76 @@
 /** @jsx jsx */
-import Layout from '../templates/layout';
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
-import Helmet from 'react-helmet';
 import Portfolio from '../components/Portfolio';
 import { Development } from '../components/Development';
-import { Contact, Dribbble } from '../components';
+import { Talks } from '../components/Talks';
+import { Block, Contact, Dribbble, Layout, Logo } from '../components';
 
 const App = ({ data }) => (
   <Layout>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Nathan Simpson - UI Designer + Developer</title>
-      <meta
-        name="description"
-        content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
-      />
-    </Helmet>
-    <main>
-      <div
-        css={{
-          display: 'flex',
-          minHeight: '60vh',
-          maxWidth: 600,
-          justifyContent: 'center',
-          flexDirection: 'column'
-        }}
-      >
-        <h1 css={{ margin: 0 }}>Nathan Simpson</h1>
+    <div
+      css={{
+        display: 'flex',
+        alignItems: 'flex-start',
+        minHeight: '60vh',
+        maxWidth: 800,
+        justifyContent: 'center',
+        flexDirection: 'column'
+      }}
+    >
+      <Logo />
+      <h1 css={{ margin: 0 }}>Nathan Simpson</h1>
 
-        <p css={{ margin: 0 }}>
-          UI Designer &amp; Developer at{' '}
-          <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
-          I'm passionate about Design Systems, and building products from
-          concept to delivery.
-        </p>
-      </div>
+      <p>
+        UI Designer &amp; Developer at{' '}
+        <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
+        I'm passionate about Design Systems, and building products from concept
+        to delivery.
+      </p>
+    </div>
 
-      <Portfolio data={data} />
+    <Portfolio data={data} />
 
-      <Development />
+    <Development />
 
-      <Dribbble />
+    <Dribbble />
 
-      <Contact />
-    </main>
+    <Block>
+      <h2>Talks</h2>
+      <Talks data={data} />
+    </Block>
+
+    <Block>
+      <h2>Bio</h2>
+
+      <p>
+        Nathan Simpson is a frontend developer and user-interface designer based
+        in Sydney, Australia. He is experienced with building and using Design
+        Systems, and is passionate about building useful applications from
+        concept to delivery.
+      </p>
+
+      <p>
+        Born in Orange NSW, Nathan started designing logos and posters for
+        family members from 13 year old. He then started developing a taste for
+        digital experiences, and began designing websites and building them in
+        HTML and CSS. After "accidentally" learning some PHP through creating
+        custom Wordpress themes for clients, Nathan started getting into
+        JavaScript and React.
+      </p>
+
+      <p>
+        Nathan has a Bachelor of Design (Visual Communication) from Western
+        Sydney University, where he studied Web and Interactive Design, Data
+        Visualisation, and Programming Fundamentals. He also took an elective at
+        the Sydney School of Entrepreneurship. Nathan learnt Frontend
+        Development technologies like Javascript and React through Treehouse.
+        Nathan is a regular attendee at SydJS and React Sydney meetups.
+      </p>
+    </Block>
+
+    <Contact />
   </Layout>
 );
 
@@ -55,6 +80,7 @@ export const portfolioQuery = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
             path
             title

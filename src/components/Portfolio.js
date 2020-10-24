@@ -37,7 +37,7 @@ const PortfolioItem = ({ project }) => {
       <PortfolioItemDiv className="PortfolioItemDiv">
         <PortfolioItemImage
           src={
-            'http://files.nathansimpson.design/portfolio/' + project.imagesrc
+            'https://files.nathansimpson.design/portfolio/' + project.imagesrc
           }
           alt={project.title}
         />

@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { Block } from './src/block';
 import { Badge } from './src/badge';
 import Card from './src/card';
-import { colors, text } from '../theme';
+import { colors, fontsizes } from '../theme';
 
 const skills = [
   'JavaScript',
@@ -58,15 +58,15 @@ const developmentProjects = [
     link: 'https://github.com/nathsimpson/hex-alpha',
     type: 'Owner',
     desc:
-      'A really simple package that enables you to specify an opacity for your HEX colours',
+      'A really simple package that enables you to specify an opacity for your HEX colours.',
     skills: ['JavaScript']
   },
   {
     name: 'ITCLearning Website',
     link: '/itc-learning',
     desc:
-      'A WordPress website for a previous employer, featuring custom forms to handle registrations for webinars and events.',
-    skills: ['WordPress', 'SCSS']
+      'A WordPress-based website for a previous employer; Featuring a custom theme and registrations for webinars and events.',
+    skills: ['SCSS', 'WordPress', 'PHP']
   }
 ];
 
@@ -80,7 +80,6 @@ const DevelopmentProject = ({ item }) => (
   >
     <h4
       css={{
-        ...text[4],
         color: 'white',
         marginTop: 0,
         marginBottom: 6,
@@ -91,7 +90,6 @@ const DevelopmentProject = ({ item }) => (
     </h4>
     <p
       css={{
-        ...text[2],
         margin: '0px',
         marginBottom: 12,
         color: colors.slate[90]
@@ -105,7 +103,7 @@ const DevelopmentProject = ({ item }) => (
     </p>
     <div
       css={{
-        ...text[1],
+        fontSize: fontsizes.xsmall,
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap'

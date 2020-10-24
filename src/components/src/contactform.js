@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { borderRadius, colors, text } from '../../theme';
+import { borderRadius, colors, fontsizes } from '../../theme';
 
 export default () => (
   <div style={{ width: '100%' }}>
@@ -98,7 +98,7 @@ const FormSubmit = styled.input({
 const Label = ({ label, isRequired }) => (
   <label
     css={{
-      ...text[2],
+      fontSize: fontsizes.medium,
       color: colors.slate[90],
       display: 'block',
       marginBottom: 6

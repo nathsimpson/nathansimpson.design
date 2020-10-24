@@ -4,6 +4,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
   const projectTemplate = path.resolve('src/templates/project.js');
+  const talkTemplate = path.resolve('src/templates/talk.js');
 
   return graphql(`
     {
@@ -16,6 +17,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               title
               type
+              youtubeid
             }
           }
         }
@@ -27,9 +29,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const template = {
+        project: projectTemplate,
+        talk: talkTemplate
+      }[node.frontmatter.type || 'project'];
+
       createPage({
         path: node.frontmatter.path,
-        component: projectTemplate,
+        component: template,
         context: {
           path: node.frontmatter.path
         }

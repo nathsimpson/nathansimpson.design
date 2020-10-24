@@ -1,5 +1,6 @@
 export const colors = {
   orange: '#fa6d01',
+  white: '#ffffff',
   slate: {
     '0': '#0c0f13',
     '10': '#13181d',
@@ -13,8 +14,18 @@ export const colors = {
     '90': '#a0aeba'
   },
   green: '#52e409',
-  purple: '#E509E3',
-  thinkmill: '#FF3838'
+  purple: '#E509E3'
+};
+
+export const spacing = {
+  none: 0,
+  xsmall: 4,
+  small: 8,
+  medium: 12,
+  large: 16,
+  xlarge: 24,
+  xxlarge: 32,
+  xxxlarge: 40
 };
 
 export const breakpoints = {
@@ -25,9 +36,9 @@ export const breakpoints = {
 };
 
 export const borderRadius = {
-  sm: '3px',
-  md: '6px',
-  lg: '12px'
+  sm: 3,
+  md: 6,
+  lg: 12
 };
 
 export const boxShadow = {
@@ -36,60 +47,47 @@ export const boxShadow = {
   }
 };
 
-export const text = {
-  1: {
-    fontSize: 12,
-    lineHeight: 1.4
-  },
-  2: {
-    fontSize: 16,
-    lineHeight: 1.4
-  },
-  3: {
-    fontSize: 18,
-    lineHeight: 1.4
-  },
-  4: {
-    fontSize: 20,
-    lineHeight: 1.4
-  },
-  5: {
-    fontSize: 24,
-    lineHeight: 1.4
-  },
-  6: {
-    fontSize: 40,
-    lineHeight: 1.4
-  },
-  7: {
-    fontSize: 70,
-    lineHeight: 1.4
-  }
+export const fontsizes = {
+  xsmall: 12,
+  small: 14,
+  medium: 16,
+  large: 18,
+  xlarge: 24,
+  xxlarge: 32,
+  xxxlarge: 48
 };
 
 export const headings = {
   1: {
-    ...text[7],
+    fontSize: 70,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 900
   },
   2: {
-    ...text[6],
+    fontSize: fontsizes.xxxlarge,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 800
   },
   3: {
-    ...text[5],
+    fontSize: fontsizes.xxlarge,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 600
   },
   4: {
-    ...text[4],
+    fontSize: fontsizes.xlarge,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 600
   }
 };

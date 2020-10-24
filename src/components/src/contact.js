@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Block } from './block';
 
 export default () => (
-  <div>
+  <Block>
     <h2>Contact Me</h2>
     <p>
       Would you like to get in touch? Feel free to message me through{' '}
@@ -15,5 +16,5 @@ export default () => (
       </a>
       .
     </p>
-  </div>
+  </Block>
 );

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { borderRadius, colors, fontsize, spacing } from '../theme';
+import { borderRadius, colors, fontsizes, spacing } from '../theme';
 
 export const Talks = ({ data }) => (
   <div>
@@ -32,14 +32,19 @@ export const Talks = ({ data }) => (
           }}
           key={node.id}
         >
-          <h3 css={{ margin: 0, fontSize: fontsize.large }}>
+          <h3
+            css={{
+              margin: 0,
+              fontSize: fontsizes.xlarge
+            }}
+          >
             {node.frontmatter.title}
           </h3>
           <p
             css={{
               marginTop: spacing.small,
               marginBottom: spacing.none,
-              fontSize: fontsize.small
+              fontSize: fontsizes.small
             }}
           >
             {node.html.replace(/<\/?p>/g, '')}{' '}

@@ -2,11 +2,12 @@
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
-import { Layout } from '../components';
+import { Layout, Header } from '../components';
 import { Talks } from '../components/Talks';
 
 export default ({ data }) => (
   <Layout>
+    <Header />
     <h1>Talks</h1>
     <Talks data={data} />
   </Layout>

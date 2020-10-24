@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core';
 import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { graphql } from 'gatsby';
+import { fontsizes } from '../theme';
 
 export default ({ data }) => {
   const talk = data.markdownRemark;
@@ -10,7 +11,6 @@ export default ({ data }) => {
   return (
     <Layout>
       <Header />
-      <h1>{talk.frontmatter.title}</h1>
       <iframe
         width="100%"
         height="450"
@@ -25,6 +25,7 @@ export default ({ data }) => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
+      <h1 css={{ fontSize: fontsizes.xxlarge }}>{talk.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: talk.html }} />
     </Layout>
   );

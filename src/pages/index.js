@@ -41,7 +41,7 @@ const App = ({ data }) => (
       <Talks data={data} />
     </Block>
 
-    <div>
+    <Block>
       <h2>Bio</h2>
 
       <p>
@@ -68,7 +68,7 @@ const App = ({ data }) => (
         Development technologies like Javascript and React through Treehouse.
         Nathan is a regular attendee at SydJS and React Sydney meetups.
       </p>
-    </div>
+    </Block>
 
     <Contact />
   </Layout>

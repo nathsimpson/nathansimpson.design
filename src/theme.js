@@ -47,70 +47,47 @@ export const boxShadow = {
   }
 };
 
-export const fontsize = {
+export const fontsizes = {
   xsmall: 12,
   small: 14,
   medium: 16,
   large: 18,
   xlarge: 24,
   xxlarge: 32,
-  xxxlarge: 70
-};
-
-export const text = {
-  1: {
-    fontSize: 12,
-    lineHeight: 1.4
-  },
-  2: {
-    fontSize: 16,
-    lineHeight: 1.4
-  },
-  3: {
-    fontSize: 18,
-    lineHeight: 1.4
-  },
-  4: {
-    fontSize: 20,
-    lineHeight: 1.4
-  },
-  5: {
-    fontSize: 24,
-    lineHeight: 1.4
-  },
-  6: {
-    fontSize: 40,
-    lineHeight: 1.4
-  },
-  7: {
-    fontSize: 70,
-    lineHeight: 1.4
-  }
+  xxxlarge: 48
 };
 
 export const headings = {
   1: {
-    ...text[7],
+    fontSize: 70,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 900
   },
   2: {
-    ...text[6],
+    fontSize: fontsizes.xxxlarge,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 800
   },
   3: {
-    ...text[5],
+    fontSize: fontsizes.xxlarge,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 600
   },
   4: {
-    ...text[4],
+    fontSize: fontsizes.xlarge,
+    lineHeight: 1.2,
     color: 'white',
-    margin: '12px 0',
+    margin: 0,
+    marginTop: spacing.xlarge,
     fontWeight: 600
   }
 };

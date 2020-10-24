@@ -10,6 +10,6 @@ ITC Learning is an eLearning Consultancy in North Sydney, comprised of 15 people
 
 We built the site on Wordpress, as I wasn’t the only one that would maintain the site. We also installed a ‘page builder’ plugin to allow other team members to make changes. The site has a custom theme, based on Bootstrap CSS. My skills in development allowed me to create custom plugins to handle registrations for webinars and events, using various APIs.
 
-![ITC Learning Website](http://files.nathansimpson.design/portfolio/itc/1.jpg 'ITC Learning Website')
+![ITC Learning Website](https://files.nathansimpson.design/portfolio/itc/1.jpg 'ITC Learning Website')
 
-![ITC Learning Website](http://files.nathansimpson.design/portfolio/itc/2.jpg 'ITC Learning Website')',
+![ITC Learning Website](https://files.nathansimpson.design/portfolio/itc/2.jpg 'ITC Learning Website')',

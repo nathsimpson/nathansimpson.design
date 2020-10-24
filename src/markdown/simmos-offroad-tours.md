@@ -12,16 +12,16 @@ The logo was designed when I was starting to take an interest in graphic design.
 
 Over the years, I have designed everything from the logo, to flyers, to a custom Wordpress website.
 
-![Logo](http://files.nathansimpson.design/portfolio/simmo/logo.jpg 'Logo')
+![Logo](https://files.nathansimpson.design/portfolio/simmo/logo.jpg 'Logo')
 
-![Website](http://files.nathansimpson.design/portfolio/simmo/web.png 'Website')
+![Website](https://files.nathansimpson.design/portfolio/simmo/web.png 'Website')
 
-![Flyer](http://files.nathansimpson.design/portfolio/simmo/flyer.png 'Flyer')
+![Flyer](https://files.nathansimpson.design/portfolio/simmo/flyer.png 'Flyer')
 
-![Vehicle wrap - process](http://files.nathansimpson.design/portfolio/simmo/wrap_process.jpg 'Vehicle wrap - process')
+![Vehicle wrap - process](https://files.nathansimpson.design/portfolio/simmo/wrap_process.jpg 'Vehicle wrap - process')
 
-![alt text](http://files.nathansimpson.design/portfolio/simmo/wrap_final.png 'Vehicle wrap - Final')
+![alt text](https://files.nathansimpson.design/portfolio/simmo/wrap_final.png 'Vehicle wrap - Final')
 
-![Vehicle wrap - Front](http://files.nathansimpson.design/portfolio/simmo/wrap_front.jpg 'Vehicle wrap - Front')
+![Vehicle wrap - Front](https://files.nathansimpson.design/portfolio/simmo/wrap_front.jpg 'Vehicle wrap - Front')
 
-![Vehicle wrap - Rear](http://files.nathansimpson.design/portfolio/simmo/wrap_back.jpg 'Vehicle wrap - Rear')'
+![Vehicle wrap - Rear](https://files.nathansimpson.design/portfolio/simmo/wrap_back.jpg 'Vehicle wrap - Rear')'

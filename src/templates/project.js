@@ -3,11 +3,16 @@ import { jsx } from '@emotion/core';
 import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 export default ({ data }) => {
   const project = data.markdownRemark;
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{project.frontmatter.title} - Nathan Simpson's portfolio</title>
+      </Helmet>
       <Header />
 
       <h1>{project.frontmatter.title}</h1>

@@ -1,5 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import Helmet from 'react-helmet';
+
 import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { graphql } from 'gatsby';
@@ -10,6 +12,10 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{talk.frontmatter.title} - Nathan Simpson's talks</title>
+      </Helmet>
       <Header />
       <iframe
         width="100%"

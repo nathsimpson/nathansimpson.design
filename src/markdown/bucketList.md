@@ -19,6 +19,8 @@ title: 'Bucket List'
 - ~~Become a web designer/developer~~ 👨🏻‍💻
 - Drop my _junior_ title 🍼
 - ~~Do work for a large national/international company~~ 🏢
+- Lead a project
+- Be a Mentor
 
 ## Hobbies
 

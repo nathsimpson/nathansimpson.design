@@ -11,14 +11,7 @@ export const Logo = () => (
         fill: 'rgba(250, 109, 1, 1)'
       },
       'g .solid': {
-        fill: 'rgba(250, 109, 1, 0)',
-        transition: 'fill 0.5s'
-      },
-      '&:hover g .outline': {
-        fill: 'white'
-      },
-      '&:hover g .solid': {
-        fill: 'rgba(250, 109, 1, 1)'
+        fill: 'rgba(250, 109, 1, 0)'
       }
     }}
   >

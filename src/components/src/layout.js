@@ -2,7 +2,6 @@
 import { jsx, Global } from '@emotion/core';
 import Helmet from 'react-helmet';
 
-import Header from './header';
 import Footer from './footer';
 import { colors, text, headings } from '../../theme';
 
@@ -27,7 +26,7 @@ export default ({ children }) => (
     <Global
       styles={{
         body: {
-          ...text[3],
+          ...text[2],
           margin: 0,
           padding: 0,
           fontFamily:
@@ -66,14 +65,13 @@ export default ({ children }) => (
         },
 
         blockquote: {
-          borderLeft: '3px solid #fa6d01',
+          borderLeft: `3px solid ${colors.orange}`,
           margin: 0,
           paddingLeft: 12,
           color: 'white'
         }
       }}
     />
-    <Header />
     <main>{children}</main>
     <Footer />
   </div>

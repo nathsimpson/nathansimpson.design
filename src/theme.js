@@ -1,5 +1,6 @@
 export const colors = {
   orange: '#fa6d01',
+  white: '#ffffff',
   slate: {
     '0': '#0c0f13',
     '10': '#13181d',
@@ -13,8 +14,18 @@ export const colors = {
     '90': '#a0aeba'
   },
   green: '#52e409',
-  purple: '#E509E3',
-  thinkmill: '#FF3838'
+  purple: '#E509E3'
+};
+
+export const spacing = {
+  none: 0,
+  xsmall: 4,
+  small: 8,
+  medium: 12,
+  large: 16,
+  xlarge: 24,
+  xxlarge: 32,
+  xxxlarge: 40
 };
 
 export const breakpoints = {
@@ -25,15 +36,25 @@ export const breakpoints = {
 };
 
 export const borderRadius = {
-  sm: '3px',
-  md: '6px',
-  lg: '12px'
+  sm: 3,
+  md: 6,
+  lg: 12
 };
 
 export const boxShadow = {
   1: {
     boxShadow: `0px 6px 12px ${colors.slate[0]}`
   }
+};
+
+export const fontsize = {
+  xsmall: 12,
+  small: 14,
+  medium: 16,
+  large: 18,
+  xlarge: 24,
+  xxlarge: 32,
+  xxxlarge: 70
 };
 
 export const text = {

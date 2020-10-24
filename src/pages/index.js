@@ -4,7 +4,8 @@ import { graphql } from 'gatsby';
 
 import Portfolio from '../components/Portfolio';
 import { Development } from '../components/Development';
-import { Contact, Dribbble, Layout, Logo } from '../components';
+import { Talks } from '../components/Talks';
+import { Block, Contact, Dribbble, Layout, Logo } from '../components';
 
 const App = ({ data }) => (
   <Layout>
@@ -13,12 +14,13 @@ const App = ({ data }) => (
         display: 'flex',
         alignItems: 'flex-start',
         minHeight: '60vh',
-        maxWidth: 600,
+        maxWidth: 800,
         justifyContent: 'center',
         flexDirection: 'column'
       }}
     >
-      <h1>Nathan Simpson</h1>
+      <Logo />
+      <h1 css={{ margin: 0 }}>Nathan Simpson</h1>
 
       <p>
         UI Designer &amp; Developer at{' '}
@@ -34,6 +36,40 @@ const App = ({ data }) => (
 
     <Dribbble />
 
+    <Block>
+      <h2>Talks</h2>
+      <Talks data={data} />
+    </Block>
+
+    <div>
+      <h2>Bio</h2>
+
+      <p>
+        Nathan Simpson is a frontend developer and user-interface designer based
+        in Sydney, Australia. He is experienced with building and using Design
+        Systems, and is passionate about building useful applications from
+        concept to delivery.
+      </p>
+
+      <p>
+        Born in Orange NSW, Nathan started designing logos and posters for
+        family members from 13 year old. He then started developing a taste for
+        digital experiences, and began designing websites and building them in
+        HTML and CSS. After "accidentally" learning some PHP through creating
+        custom Wordpress themes for clients, Nathan started getting into
+        JavaScript and React.
+      </p>
+
+      <p>
+        Nathan has a Bachelor of Design (Visual Communication) from Western
+        Sydney University, where he studied Web and Interactive Design, Data
+        Visualisation, and Programming Fundamentals. He also took an elective at
+        the Sydney School of Entrepreneurship. Nathan learnt Frontend
+        Development technologies like Javascript and React through Treehouse.
+        Nathan is a regular attendee at SydJS and React Sydney meetups.
+      </p>
+    </div>
+
     <Contact />
   </Layout>
 );
@@ -44,6 +80,7 @@ export const portfolioQuery = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
             path
             title

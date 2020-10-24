@@ -65,8 +65,8 @@ const developmentProjects = [
     name: 'ITCLearning Website',
     link: '/itc-learning',
     desc:
-      'A WordPress website for a previous employer, featuring custom forms to handle registrations for webinars and events.',
-    skills: ['WordPress', 'SCSS']
+      'A WordPress-based website for a previous employer; Featuring a custom theme and registrations for webinars and events.',
+    skills: ['SCSS', 'WordPress', 'PHP']
   }
 ];
 

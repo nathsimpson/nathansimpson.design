@@ -1,7 +1,5 @@
 /** @jsx jsx */
-
 import React from 'react';
-
 import { jsx } from '@emotion/core';
 
 import { Block } from './block';
@@ -31,8 +29,8 @@ export default class Dribbble extends React.Component {
   render() {
     return (
       <Block>
-        <h2 style={{ marginBottom: 0 }}>Dribbble Shots</h2>
-        <p style={{ marginTop: 2, marginBottom: 26 }}>
+        <h2 css={{ marginBottom: 0 }}>Dribbble Shots</h2>
+        <p css={{ marginBottom: 26 }}>
           Check out my{' '}
           <a
             href="https://dribbble.com/nathansimpson"
@@ -58,7 +56,7 @@ export default class Dribbble extends React.Component {
                 src={image}
                 title={description}
                 alt={description}
-                style={{ width: '100%' }}
+                css={{ width: '100%' }}
               />
             </a>
           ))}

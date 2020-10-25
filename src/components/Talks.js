@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 
 import { borderRadius, colors, fontsizes, spacing } from '../theme';
+import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
   <div>
@@ -20,57 +21,66 @@ export const Talks = ({ data }) => (
     {data.allMarkdownRemark.edges
       .filter(({ node }) => node.frontmatter.type === 'talk')
       .map(({ node }) => (
-        <div
-          css={{
-            backgroundColor: colors.slate['30'],
-            borderLeft: `2px solid ${colors.orange}`,
-            borderBottomRightRadius: borderRadius.lg,
-            borderTopRightRadius: borderRadius.lg,
-            display: 'flex',
-            marginBottom: spacing.small,
-            maxWidth: 800
-          }}
-          key={node.id}
-        >
-          <a
-            href={node.frontmatter.path}
-            css={{
-              width: 220,
-              backgroundColor: colors.slate['40'],
-              backgroundImage: `url(https://i.ytimg.com/vi/${node.frontmatter.youtubeid}/hqdefault.jpg)`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div
-            css={{
-              display: 'flex',
-              flexDirection: 'column',
-              flex: 1,
-              padding: spacing.large
-            }}
-          >
-            <h3
-              css={{
-                margin: 0,
-                fontSize: fontsizes.xlarge
-              }}
-            >
-              {node.frontmatter.title}
-            </h3>
-            <p
-              css={{
-                marginTop: spacing.small,
-                marginBottom: spacing.none,
-                fontSize: fontsizes.small
-              }}
-            >
-              {node.html.replace(/<\/?p>/g, '').slice(0, 148)}
-              {'... '}
-              <a href={node.frontmatter.path}>Watch now</a>{' '}
-            </p>
-          </div>
-        </div>
+        <Talk node={node} key={node.id} />
       ))}
   </div>
 );
+
+const Talk = ({ node }) => {
+  return (
+    <div
+      css={mq({
+        backgroundColor: colors.slate['30'],
+        borderLeft: ['none', `2px solid ${colors.orange}`],
+        borderTop: [`2px solid ${colors.orange}`, 'none'],
+        borderBottomRightRadius: borderRadius.lg,
+        borderTopRightRadius: [0, borderRadius.lg],
+        borderBottomLeftRadius: [borderRadius.lg, 0],
+        display: 'flex',
+        flexDirection: ['column', 'row'],
+        marginBottom: spacing.large,
+        maxWidth: 800
+      })}
+    >
+      <a
+        href={node.frontmatter.path}
+        css={mq({
+          width: ['auto', 220],
+          height: [160, 'auto'],
+          backgroundColor: colors.slate['40'],
+          backgroundImage: `url(https://i.ytimg.com/vi/${node.frontmatter.youtubeid}/hqdefault.jpg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        })}
+      />
+      <div
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: 1,
+          padding: spacing.large
+        }}
+      >
+        <h3
+          css={{
+            margin: 0,
+            fontSize: fontsizes.xlarge
+          }}
+        >
+          {node.frontmatter.title}
+        </h3>
+        <p
+          css={{
+            marginTop: spacing.small,
+            marginBottom: spacing.none,
+            fontSize: fontsizes.small
+          }}
+        >
+          {node.html.replace(/<\/?p>/g, '').slice(0, 148)}
+          {'... '}
+          <a href={node.frontmatter.path}>Watch now</a>{' '}
+        </p>
+      </div>
+    </div>
+  );
+};

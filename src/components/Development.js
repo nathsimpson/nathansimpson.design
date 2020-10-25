@@ -4,6 +4,7 @@ import { Block } from './src/block';
 import { Badge } from './src/badge';
 import Card from './src/card';
 import { colors, fontsizes } from '../theme';
+import { mq } from '../helpers/utils';
 
 const skills = [
   'JavaScript',
@@ -183,12 +184,12 @@ export const Development = () => {
       <div>
         <h3>Some projects I've worked on</h3>
         <ul
-          css={{
+          css={mq({
             padding: 0,
             display: 'grid',
             gap: 12,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))'
-          }}
+            gridTemplateColumns: ['1fr', 'repeat(auto-fit, minmax(350px, 1fr))']
+          })}
         >
           {developmentProjects.map(item => (
             <DevelopmentProject item={item} key={item.name} />

@@ -13,3 +13,5 @@ Aside from being passionate about Product Development, I am also an avid motorsp
 ![Pepsi Max Crew, Mark Winterbottom, Ford Falcon](https://files.nathansimpson.design/portfolio/motorsport/2.jpg 'Pepsi Max Crew, Mark Winterbottom, Ford Falcon')
 
 ![Lando Norris Helmet Design Competition Entry](https://files.nathansimpson.design/portfolio/motorsport/lando_helmet.jpg 'Lando Norris Helmet Design Competition Entry')
+
+![McLaren Overalls Design Competition Entry](https://files.nathansimpson.design/portfolio/motorsport/overalls.jpg 'McLaren Overalls Design Competition Entry')

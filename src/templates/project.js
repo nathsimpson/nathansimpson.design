@@ -15,8 +15,10 @@ export default ({ data }) => {
       </Helmet>
       <Header />
 
-      <h1>{project.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: project.html }} />
+      <div css={{ maxWidth: 800, margin: '0 auto' }}>
+        <h1>{project.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: project.html }} />
+      </div>
     </Layout>
   );
 };

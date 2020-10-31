@@ -1,3 +1,30 @@
+export const pallete = {
+  orange: '#fa6d01',
+  neutral0: '#0c0f13',
+  neutral10: '#13181d',
+  neutral20: '#171d22',
+  neutral30: '#1e242a',
+  neutral40: '#272f37',
+  neutral50: '#353f47',
+  neutral60: '#48535d',
+  neutral70: '#616e79',
+  neutral80: '#808d99',
+  neutral90: '#a0aeba',
+  neutral100: '#fff',
+  green: '#52e409',
+  purple: '#E509E3'
+};
+
+export const colors2 = {
+  brand: pallete.orange,
+  link: pallete.orange,
+  background: pallete.neutral10,
+  text: pallete.neutral90,
+  heading: pallete.neutral100,
+  projectTeam: pallete.green,
+  purpleOpenSource: pallete.purple
+};
+
 export const colors = {
   orange: '#fa6d01',
   white: '#ffffff',
@@ -59,7 +86,7 @@ export const fontsizes = {
 
 export const headings = {
   1: {
-    fontSize: 70,
+    fontSize: 64,
     lineHeight: 1.2,
     color: 'white',
     margin: 0,

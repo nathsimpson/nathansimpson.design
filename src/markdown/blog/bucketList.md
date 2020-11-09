@@ -1,7 +1,21 @@
 ---
 path: '/bucketlist'
 title: 'Bucket List'
+date: '2016-02-06'
+type: post
 ---
+
+## Career
+
+- ~~Become a web designer/developer~~ 👨🏻‍💻
+- ~~Do work for a large national/international company~~ 🏢
+- ~~Give three talks at meetups~~
+- ~~Contribute to an open source project~~
+- Drop my _junior_ title 🍼
+- Launch my own product
+- Speak at a conference
+- Lead a project
+- Be a Mentor
 
 ## Life
 
@@ -9,18 +23,10 @@ title: 'Bucket List'
 - ~~Move to Sydney~~ 🏙
 - ~~Finish University~~ 🎓
 - ~~Get married~~ 🤵🏻
-- Buy a house 🏡
 - ~~Buy first new car~~ 🚗
+- Buy a house 🏡
 - Have a son 👶
 - Have a daughter 👶
-
-## Career
-
-- ~~Become a web designer/developer~~ 👨🏻‍💻
-- Drop my _junior_ title 🍼
-- ~~Do work for a large national/international company~~ 🏢
-- Lead a project
-- Be a Mentor
 
 ## Hobbies
 

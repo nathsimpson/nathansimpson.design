@@ -81,40 +81,38 @@ export const fontsizes = {
   large: 18,
   xlarge: 24,
   xxlarge: 32,
-  xxxlarge: 48
+  xxxlarge: 38,
+  xxxxlarge: 52
+};
+
+const baseHeadingStyle = {
+  fontFamily:
+    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
+  lineHeight: 1.1,
+  color: 'white',
+  margin: 0,
+  marginTop: spacing.xlarge
 };
 
 export const headings = {
   1: {
-    fontSize: 64,
-    lineHeight: 1.2,
-    color: 'white',
-    margin: 0,
-    marginTop: spacing.xlarge,
+    ...baseHeadingStyle,
+    fontSize: fontsizes.xxxxlarge,
     fontWeight: 900
   },
   2: {
+    ...baseHeadingStyle,
     fontSize: fontsizes.xxxlarge,
-    lineHeight: 1.2,
-    color: 'white',
-    margin: 0,
-    marginTop: spacing.xlarge,
-    fontWeight: 800
+    fontWeight: 900
   },
   3: {
-    fontSize: fontsizes.xxlarge,
-    lineHeight: 1.2,
-    color: 'white',
-    margin: 0,
-    marginTop: spacing.xlarge,
+    ...baseHeadingStyle,
+    fontSize: fontsizes.xlarge,
     fontWeight: 600
   },
   4: {
+    ...baseHeadingStyle,
     fontSize: fontsizes.xlarge,
-    lineHeight: 1.2,
-    color: 'white',
-    margin: 0,
-    marginTop: spacing.xlarge,
     fontWeight: 600
   }
 };

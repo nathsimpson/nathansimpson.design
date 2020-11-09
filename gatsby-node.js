@@ -5,6 +5,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   const projectTemplate = path.resolve('src/templates/project.js');
   const talkTemplate = path.resolve('src/templates/talk.js');
+  const postTemplate = path.resolve('src/templates/post.js');
 
   return graphql(`
     {
@@ -31,7 +32,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const template = {
         project: projectTemplate,
-        talk: talkTemplate
+        talk: talkTemplate,
+        post: postTemplate
       }[node.frontmatter.type || 'project'];
 
       createPage({

@@ -1,3 +1,10 @@
+export const fontFamilies = {
+  heading:
+    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
+  body:
+    'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
+};
+
 export const pallete = {
   orange: '#fa6d01',
   neutral0: '#0c0f13',
@@ -86,8 +93,7 @@ export const fontsizes = {
 };
 
 const baseHeadingStyle = {
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
+  fontFamily: fontFamilies.heading,
   lineHeight: 1.1,
   color: 'white',
   margin: 0,

@@ -1,8 +1,9 @@
+/** @jsx jsx */
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
-/** @jsx jsx */
+import { headings } from '../theme';
 
 const Portfolio = ({ data }) => (
   <div>
@@ -41,9 +42,7 @@ const PortfolioItem = ({ project }) => {
           }
           alt={project.title}
         />
-        <PortfolioItemLabel className="portfolio_item_label">
-          {project.title}
-        </PortfolioItemLabel>
+        <PortfolioItemLabel>{project.title}</PortfolioItemLabel>
         <PortfolioItemGradient />
       </PortfolioItemDiv>
     </Link>
@@ -72,13 +71,10 @@ const PortfolioItemImage = styled.img({
 });
 
 const PortfolioItemLabel = styled.span({
+  ...headings['3'],
   display: 'none',
   position: 'absolute',
   bottom: 0,
-  fontSize: '1.5em',
-  lineHeight: '1.2em',
-  color: 'white',
-  fontWeight: 700,
   zIndex: 3,
   padding: 10,
 
@@ -94,10 +90,6 @@ const PortfolioItemGradient = styled.span({
     position: 'absolute',
     bottom: 0,
     left: 0,
-    // background: 'none',
-    // background: '-webkit-linear-gradient(rgba(37, 45, 52, 0), #000)',
-    // background: '-o-linear-gradient(rgba(37, 45, 52, 0), #000)',
-    // background: '-moz-linear-gradient(rgba(37, 45, 52, 0), #000)',
     background: 'linear-gradient(rgba(37, 45, 52, 0), #000)'
   }
 });

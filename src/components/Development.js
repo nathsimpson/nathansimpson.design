@@ -29,12 +29,13 @@ const developmentProjects = [
     skills: ['TypeScript', 'React', 'React Native', 'GraphQL']
   },
   {
-    name: 'Balance Design System',
-    link: 'https://reckon-web-design-system.netlify.app/',
+    name: 'KeystoneJS',
+    link: 'https://github.com/keystonejs/keystone-5/graphs/contributors',
     type: 'Contributor',
+    openSource: true,
     team: true,
-    desc: 'Balance is a cross-platform Design System for Reckon products.',
-    skills: ['TypeScript', 'Design Systems', 'React', 'React Native']
+    desc: 'KeystoneJS is a scalable platform and CMS for Node.js applications.',
+    skills: ['NodeJS', 'React']
   },
   {
     name: 'The Garage',

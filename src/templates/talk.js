@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/src/layout';
 import { Header } from '../components';
-import { graphql } from 'gatsby';
-import { fontsizes } from '../theme';
+import { colors, fontsizes } from '../theme';
 
 export default ({ data }) => {
   const talk = data.markdownRemark;
@@ -17,22 +17,33 @@ export default ({ data }) => {
         <title>{talk.frontmatter.title} - Nathan Simpson's talks</title>
       </Helmet>
       <Header />
-      <iframe
-        width="100%"
-        height="450"
-        css={{
-          boxSizing: 'border-box',
-          paddingRight: 16,
-          width: '100%',
-          maxWidth: 800
-        }}
-        src={`https://www.youtube.com/embed/${talk.frontmatter.youtubeid}`}
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-      <h1 css={{ fontSize: fontsizes.xxlarge }}>{talk.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: talk.html }} />
+      <div css={{ maxWidth: 800, margin: '0 auto' }}>
+        <iframe
+          width="100%"
+          height="450"
+          css={{
+            boxSizing: 'border-box',
+            paddingRight: 16,
+            width: '100%'
+          }}
+          src={`https://www.youtube.com/embed/${talk.frontmatter.youtubeid}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <div
+          css={{
+            borderBottom: `1px solid ${colors.slate['50']}`
+          }}
+        >
+          <h1>{talk.frontmatter.title}</h1>
+          <div css={{ margin: '12px 0px', fontSize: fontsizes.xsmall }}>
+            Posted on {talk.frontmatter.date}
+          </div>
+        </div>
+
+        <div dangerouslySetInnerHTML={{ __html: talk.html }} />
+      </div>
     </Layout>
   );
 };

@@ -27,12 +27,15 @@ export const Talks = ({ data }) => (
 );
 
 const Talk = ({ node }) => {
+  const defaultBorder = `1px solid ${colors.slate['50']}`;
+
   return (
     <div
       css={mq({
         backgroundColor: colors.slate['30'],
-        borderLeft: ['none', `2px solid ${colors.orange}`],
-        borderTop: [`2px solid ${colors.orange}`, 'none'],
+        border: defaultBorder,
+        borderLeft: [defaultBorder, `2px solid ${colors.orange}`],
+        borderTop: [`2px solid ${colors.orange}`, defaultBorder],
         borderBottomRightRadius: borderRadius.lg,
         borderTopRightRadius: [0, borderRadius.lg],
         borderBottomLeftRadius: [borderRadius.lg, 0],

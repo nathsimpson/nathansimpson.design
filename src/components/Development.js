@@ -26,7 +26,7 @@ const developmentProjects = [
     team: true,
     desc:
       'Enables small businesses to conveniently do Payroll and STP reporting from an browser or mobile device.',
-    skills: ['TypeScript', 'Design Systems', 'React', 'React Native']
+    skills: ['TypeScript', 'React', 'React Native', 'GraphQL']
   },
   {
     name: 'KeystoneJS',
@@ -81,10 +81,8 @@ const DevelopmentProject = ({ item }) => (
   >
     <h4
       css={{
-        color: 'white',
         marginTop: 0,
-        marginBottom: 6,
-        fontWeight: 500
+        marginBottom: 6
       }}
     >
       {item.name}
@@ -145,57 +143,50 @@ export const Development = () => {
     <Block>
       <h2>Development</h2>
 
-      <div
+      <p>
+        I love bringing concepts to life through code. Most of my time is spent
+        building products for awesome clients, as well as creating and
+        contributing to open source libraries. I share many of my projects to{' '}
+        <a href="https://github.com/nathsimpson" target="_blank">
+          GitHub
+        </a>
+        .
+      </p>
+
+      <p>I'm experienced with the following technologies...</p>
+
+      <ul
         css={{
-          boxSizing: 'border-box',
-          paddingRight: 16
+          maxWidth: 600,
+          listStyle: 'none',
+          padding: 0,
+          display: 'flex',
+          flexWrap: 'wrap'
         }}
       >
-        <p>
-          I love bringing concepts to life through code. Most of my time is
-          spent building products for awesome clients, as well as creating and
-          contributing to open source libraries. I share many of my projects to{' '}
-          <a href="https://github.com/nathsimpson" target="_blank">
-            GitHub
-          </a>
-          .
-        </p>
-        <h3>Experienced with</h3>
+        {skills.map(item => (
+          <Badge
+            label={item}
+            as="li"
+            key={item}
+            style={{ marginRight: 6, marginBottom: 6 }}
+          />
+        ))}
+      </ul>
 
-        <ul
-          css={{
-            maxWidth: 600,
-            listStyle: 'none',
-            padding: 0,
-            display: 'flex',
-            flexWrap: 'wrap'
-          }}
-        >
-          {skills.map(item => (
-            <Badge
-              label={item}
-              as="li"
-              key={item}
-              style={{ marginRight: 6, marginBottom: 6 }}
-            />
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h3>Some projects I've worked on</h3>
-        <ul
-          css={mq({
-            padding: 0,
-            display: 'grid',
-            gap: 12,
-            gridTemplateColumns: ['1fr', 'repeat(auto-fit, minmax(350px, 1fr))']
-          })}
-        >
-          {developmentProjects.map(item => (
-            <DevelopmentProject item={item} key={item.name} />
-          ))}
-        </ul>
-      </div>
+      <h3>Some projects I've worked on...</h3>
+      <ul
+        css={mq({
+          padding: 0,
+          display: 'grid',
+          gap: 12,
+          gridTemplateColumns: ['1fr', 'repeat(auto-fit, minmax(350px, 1fr))']
+        })}
+      >
+        {developmentProjects.map(item => (
+          <DevelopmentProject item={item} key={item.name} />
+        ))}
+      </ul>
     </Block>
   );
 };

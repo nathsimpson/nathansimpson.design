@@ -3,7 +3,7 @@ import { jsx, Global } from '@emotion/core';
 import Helmet from 'react-helmet';
 
 import Footer from './footer';
-import { colors, fontsizes, headings } from '../../theme';
+import { colors, fontsizes, headings, fontFamilies } from '../../theme';
 
 export default ({ children }) => (
   <div
@@ -30,8 +30,7 @@ export default ({ children }) => (
           margin: 0,
           padding: 0,
           lineHeight: 1.5,
-          fontFamily:
-            "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
+          fontFamily: fontFamilies.body,
           color: colors.slate[90],
           backgroundColor: colors.slate[10]
         },
@@ -48,8 +47,6 @@ export default ({ children }) => (
         p: {
           fontSize: fontsizes.medium,
           lineHeight: 1.5,
-          fontFamily:
-            'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace',
           maxWidth: 800
         },
 

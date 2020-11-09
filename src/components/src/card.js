@@ -9,6 +9,7 @@ const Card = ({ children, style, as = 'div' }) => {
       css={{
         ...boxShadow[1],
         background: colors.slate[30],
+        border: `1px solid ${colors.slate['50']}`,
         padding: '16px 24px',
         borderRadius: borderRadius.lg,
         ...style

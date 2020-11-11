@@ -32,7 +32,9 @@ export default ({ data }) => {
               fontSize: fontsizes.xsmall
             }}
           >
-            Posted on {post.frontmatter.date}
+            Posted on {post.frontmatter.date}.
+            {post.frontmatter.updated &&
+              ` Updated on ${post.frontmatter.updated}`}
           </div>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -49,6 +51,7 @@ export const query = graphql`
         title
         path
         date(formatString: "MMMM DD YYYY")
+        updated(formatString: "MMMM DD YYYY")
         type
       }
     }

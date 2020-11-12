@@ -33,7 +33,7 @@ export default ({ data }) => {
         />
         <div
           css={{
-            borderBottom: `1px solid ${colors.slate['50']}`
+            borderBottom: `1px solid ${colors.border}`
           }}
         >
           <h1>{talk.frontmatter.title}</h1>

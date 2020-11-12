@@ -91,7 +91,7 @@ const DevelopmentProject = ({ item }) => (
       css={{
         margin: '0px',
         marginBottom: 12,
-        color: colors.slate[90]
+        color: colors.foreground
       }}
       x
     >

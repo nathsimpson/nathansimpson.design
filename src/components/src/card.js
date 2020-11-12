@@ -8,8 +8,8 @@ const Card = ({ children, style, as = 'div' }) => {
     <Tag
       css={{
         ...boxShadow[1],
-        background: colors.slate[30],
-        border: `1px solid ${colors.slate['50']}`,
+        background: colors.backgroundEmphasis,
+        border: `1px solid ${colors.border}`,
         padding: '16px 24px',
         borderRadius: borderRadius.lg,
         ...style

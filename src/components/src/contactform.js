@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { borderRadius, colors, fontsizes } from '../../theme';
+import hexAlpha from 'hex-alpha';
 
 export default () => (
   <div style={{ width: '100%' }}>
@@ -29,10 +30,11 @@ export default () => (
 );
 
 const baseInputStyles = {
-  background: colors.slate[30],
-  border: 'none',
+  background: colors.input.background,
+  color: colors.input.foreground,
+  outlineColor: colors.brand,
+  border: `1px solid ${colors.border}`,
   fontSize: '1em',
-  color: '#fff',
   display: 'block',
   width: '100%',
   maxWidth: 400,
@@ -41,12 +43,12 @@ const baseInputStyles = {
   boxSizing: 'border-box',
   transition: 'all 0.5s',
   '&:hover': {
-    background: colors.slate[40]
+    background: colors.input.hover.background,
+    color: colors.input.hover.foreground
   },
   '&:active, &:focus': {
-    background: '#fff',
-    outline: 'none',
-    color: colors.slate[10]
+    background: colors.input.active.background,
+    color: colors.input.active.foreground
   }
 };
 
@@ -78,20 +80,20 @@ const TextInput = props => (
 );
 
 const FormSubmit = styled.input({
-  background: 'rgba(250, 109, 1, 1)',
+  background: hexAlpha(colors.link, 0.2),
   border: 'none',
   fontSize: '1em',
-  color: '#fff',
+  color: colors.link,
   marginTop: 6,
-  padding: '6px 18px',
+  padding: '12px 24px',
   borderRadius: borderRadius.md,
   boxSizing: 'border-box',
   transition: 'all 0.5s',
   fontWeight: 700,
 
   '&:hover': {
-    background: '#fff',
-    color: '#13171a'
+    background: colors.link,
+    color: colors.foregroundEmphasis
   }
 });
 
@@ -99,7 +101,7 @@ const Label = ({ label, isRequired }) => (
   <label
     css={{
       fontSize: fontsizes.medium,
-      color: colors.slate[90],
+      color: colors.foreground,
       display: 'block',
       marginBottom: 6
     }}

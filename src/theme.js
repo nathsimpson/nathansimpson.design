@@ -5,8 +5,10 @@ export const fontFamilies = {
     'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
 };
 
-export const pallete = {
+export const palette = {
   orange: '#fa6d01',
+  green: '#52e409',
+  purple: '#E509E3',
   neutral0: '#0c0f13',
   neutral10: '#13181d',
   neutral20: '#171d22',
@@ -17,38 +19,31 @@ export const pallete = {
   neutral70: '#616e79',
   neutral80: '#808d99',
   neutral90: '#a0aeba',
-  neutral100: '#fff',
-  green: '#52e409',
-  purple: '#E509E3'
-};
-
-export const colors2 = {
-  brand: pallete.orange,
-  link: pallete.orange,
-  background: pallete.neutral10,
-  text: pallete.neutral90,
-  heading: pallete.neutral100,
-  projectTeam: pallete.green,
-  purpleOpenSource: pallete.purple
+  neutral100: '#ffffff'
 };
 
 export const colors = {
-  orange: '#fa6d01',
-  white: '#ffffff',
-  slate: {
-    '0': '#0c0f13',
-    '10': '#13181d',
-    '20': '#171d22',
-    '30': '#1e242a',
-    '40': '#272f37',
-    '50': '#353f47',
-    '60': '#48535d',
-    '70': '#616e79',
-    '80': '#808d99',
-    '90': '#a0aeba'
-  },
-  green: '#52e409',
-  purple: '#E509E3'
+  brand: palette.orange,
+  brandSecondary: palette.neutral100,
+  link: palette.orange,
+  linkHover: palette.white,
+  background: palette.neutral10,
+  backgroundEmphasis: palette.neutral30,
+  border: palette.neutral50,
+  foregroundEmphasis: palette.neutral100,
+  foreground: palette.neutral90,
+  input: {
+    background: palette.neutral40,
+    foreground: palette.neutral90,
+    hover: {
+      background: palette.neutral50,
+      foreground: palette.neutral100
+    },
+    active: {
+      background: palette.neutral30,
+      foreground: palette.neutral100
+    }
+  }
 };
 
 export const spacing = {
@@ -77,7 +72,7 @@ export const borderRadius = {
 
 export const boxShadow = {
   1: {
-    boxShadow: `0px 6px 12px ${colors.slate[0]}`
+    boxShadow: `0px 6px 12px ${palette.neutral0}`
   }
 };
 
@@ -95,7 +90,7 @@ export const fontsizes = {
 const baseHeadingStyle = {
   fontFamily: fontFamilies.heading,
   lineHeight: 1.1,
-  color: 'white',
+  color: colors.foregroundEmphasis,
   margin: 0,
   marginTop: spacing.xlarge
 };

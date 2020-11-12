@@ -94,10 +94,10 @@ const Header = () => (
         css={{
           display: 'flex',
           alignItems: 'center',
-          color: colors.orange,
+          color: colors.link,
           textDecoration: 'none',
           '&:hover': {
-            color: '#fff',
+            color: colors.linkHover,
             textDecoration: 'none'
           }
         }}

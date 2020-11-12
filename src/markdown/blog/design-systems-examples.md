@@ -32,6 +32,10 @@ What? I can't take inpiration from a Design System I worked on?
 
 Personally, I think the best design systems aren't the ones built for the masses, but the opinionated ones built for purpose by a company. Still, if you need to reference some high-quality components, [ChakraUI](https://chakra-ui.com/getting-started) is not bad at all.
 
+### Design Systems for Figma
+
+[A collection](https://www.designsystemsforfigma.com/) of some fantastic Design System Figma files.
+
 ### More
 
 - [Primer by GitHub](https://primer.style/)
@@ -40,6 +44,7 @@ Personally, I think the best design systems aren't the ones built for the masses
 - [The Australian Government Design System](https://designsystem.gov.au/)
 - [Carbon by IBM](https://www.carbondesignsystem.com/components/overview)
 - [Lightning by Salesforce](https://www.lightningdesignsystem.com/)
+- [Audi brand](https://www.audi.com/ci/en/renewed-brand.html)
 
 ---
 
@@ -50,6 +55,8 @@ Some of the must-have tools for anyone building a Design System.
 ### Figma
 
 If you're designing a Design System, [Figma](https://www.figma.com/) is the go-to design tool. Not only is it collaborative thanks to it being cloud-based, but you can define symbols (and variants of them) that can be used across files - perfect for product design teams. The plugin library is also full of useful enhancements.
+
+Check out [Design Systems for Figma](https://www.designsystemsforfigma.com/) if you're ever looking for some great examples.
 
 ### StoryBook
 

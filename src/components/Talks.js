@@ -26,12 +26,19 @@ export const Talks = ({ data }) => (
   </div>
 );
 
-const Talk = ({ node }) => {
+const Talk = ({
+  node: {
+    html,
+    frontmatter: { path, youtubeid, title }
+  }
+}) => {
   const defaultBorder = `1px solid ${colors.slate['50']}`;
 
   return (
-    <div
+    <a
+      href={path}
       css={mq({
+        color: colors.slate[90],
         backgroundColor: colors.slate['30'],
         border: defaultBorder,
         borderLeft: [defaultBorder, `2px solid ${colors.orange}`],
@@ -42,16 +49,21 @@ const Talk = ({ node }) => {
         display: 'flex',
         flexDirection: ['column', 'row'],
         marginBottom: spacing.large,
-        maxWidth: 800
+        maxWidth: 800,
+        '&:hover': {
+          textDecoration: 'none'
+        },
+        '&:hover span': {
+          textDecoration: 'underline'
+        }
       })}
     >
-      <a
-        href={node.frontmatter.path}
+      <div
         css={mq({
           width: ['auto', 220],
           height: [160, 'auto'],
           backgroundColor: colors.slate['40'],
-          backgroundImage: `url(https://i.ytimg.com/vi/${node.frontmatter.youtubeid}/hqdefault.jpg)`,
+          backgroundImage: `url(https://i.ytimg.com/vi/${youtubeid}/hqdefault.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         })}
@@ -70,7 +82,7 @@ const Talk = ({ node }) => {
             fontSize: fontsizes.xlarge
           }}
         >
-          {node.frontmatter.title}
+          {title}
         </h3>
         <p
           css={{
@@ -79,11 +91,13 @@ const Talk = ({ node }) => {
             fontSize: fontsizes.small
           }}
         >
-          {node.html.replace(/<\/?p>/g, '').slice(0, 148)}
+          {html.replace(/<\/?p>/g, '').slice(0, 148)}
           {'... '}
-          <a href={node.frontmatter.path}>Watch now</a>{' '}
+          <span href={path} css={{ color: colors.orange }}>
+            Watch now
+          </span>
         </p>
       </div>
-    </div>
+    </a>
   );
 };

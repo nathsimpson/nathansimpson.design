@@ -10,9 +10,9 @@
   "scripts": {
     "postinstall": "netlify-lambda install",
     "build:lambda": "netlify-lambda build functions",
-    "build": "npm run build:lambda && gatsby build",
+    "build": "yarn build:lambda && gatsby build",
     "dev": "gatsby develop",
-    "start": "npm run dev",
+    "start": "yarn dev",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
     "lint:eslint": "eslint ."
   },

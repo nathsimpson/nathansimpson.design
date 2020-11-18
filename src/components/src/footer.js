@@ -32,11 +32,11 @@ export default () => (
         >
           <a
             css={{
-              color: colors.slate[80],
+              color: colors.foreground,
               textDecoration: 'none',
 
               '&:hover': {
-                color: colors.orange
+                color: colors.link
               }
             }}
             href={network.link}
@@ -52,7 +52,6 @@ export default () => (
       <p
         style={{
           fontSize: fontsizes.xsmall,
-          color: colors.slate[80],
           margin: '12px auto'
         }}
       >

@@ -31,12 +31,12 @@ export default ({ children }) => (
           padding: 0,
           lineHeight: 1.5,
           fontFamily: fontFamilies.body,
-          color: colors.slate[90],
-          backgroundColor: colors.slate[10]
+          color: colors.foreground,
+          backgroundColor: colors.background
         },
 
         a: {
-          color: colors.orange,
+          color: colors.link,
           textDecoration: 'none',
 
           '&:hover': {
@@ -60,11 +60,11 @@ export default ({ children }) => (
         },
 
         hr: {
-          border: `1px solid ${colors.orange}`
+          border: `1px solid ${colors.brand}`
         },
 
         blockquote: {
-          borderLeft: `3px solid ${colors.orange}`,
+          borderLeft: `3px solid ${colors.brand}`,
           margin: 0,
           paddingLeft: 12,
           color: 'white'

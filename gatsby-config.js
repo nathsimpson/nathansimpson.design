@@ -40,8 +40,8 @@ module.exports = {
         name: 'Nathan Simpson : Designer + Developer',
         short_name: 'Nathan Simpson',
         start_url: `/`,
-        background_color: `##fa6d01`,
-        theme_color: `##fa6d01`,
+        background_color: `#fa6d01`,
+        theme_color: `#fa6d01`,
         display: `minimal-ui`,
         icon: `src/images/favicon-32.png` // This path is relative to the root of the site.
       }

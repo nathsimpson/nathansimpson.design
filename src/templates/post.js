@@ -20,7 +20,7 @@ export default ({ data }) => {
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
         <div
           css={{
-            borderBottom: `1px solid ${colors.slate['50']}`
+            borderBottom: `1px solid ${colors.border}`
           }}
         >
           <h1>{post.frontmatter.title}</h1>

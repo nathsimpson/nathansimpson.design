@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { colors, borderRadius } from '../../theme';
+import { palette, borderRadius } from '../../theme';
 import hexAlpha from 'hex-alpha';
 
 const sizes = {
@@ -20,9 +20,9 @@ export const Badge = ({
   return (
     <Tag
       css={{
-        border: `1px solid ${colors[color]}`,
-        color: colors[color],
-        backgroundColor: hexAlpha(colors[color], 0.2),
+        border: `1px solid ${palette[color]}`,
+        color: palette[color],
+        backgroundColor: hexAlpha(palette[color], 0.2),
         borderRadius: borderRadius.sm,
         fontSize: sizes[size] * 4,
         paddingTop: sizes[size],

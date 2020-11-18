@@ -14,7 +14,7 @@ const PostCard = ({ id, frontmatter, html }) => {
     >
       <div
         css={{
-          borderBottom: `1px solid ${colors.slate['50']}`
+          borderBottom: `1px solid ${colors.border}`
         }}
       >
         <a href={frontmatter.path}>
@@ -30,6 +30,7 @@ const PostCard = ({ id, frontmatter, html }) => {
           <Badge label={frontmatter.type} size="small" />
           <span css={{ marginLeft: 6, fontSize: fontsizes.xsmall }}>
             Posted on {frontmatter.date}
+            {frontmatter.updated && `. Updated on ${frontmatter.updated}`}
           </span>
         </div>
       </div>
@@ -81,7 +82,8 @@ export const talksQuery = graphql`
           html
           frontmatter {
             path
-            date
+            date(formatString: "MMMM DD YYYY")
+            updated(formatString: "MMMM DD YYYY")
             title
             imagesrc
             type

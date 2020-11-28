@@ -74,7 +74,7 @@ export const BackIcon = () => {
   );
 };
 
-const Header = () => (
+const Header = ({ backLink = '/' }) => (
   <header
     className="header"
     css={{
@@ -90,7 +90,7 @@ const Header = () => (
     <div css={{ display: 'flex', flex: 1 }}>
       <Link
         exact
-        to="/"
+        to={backLink}
         css={{
           display: 'flex',
           alignItems: 'center',

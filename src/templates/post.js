@@ -16,7 +16,7 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
       </Helmet>
-      <Header />
+      <Header backLink="/blog" />
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
         <div
           css={{

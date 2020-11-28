@@ -18,10 +18,6 @@ export default ({ children }) => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Nathan Simpson - UI Designer + Developer</title>
-      <meta
-        name="description"
-        content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
-      />
     </Helmet>
     <Global
       styles={{

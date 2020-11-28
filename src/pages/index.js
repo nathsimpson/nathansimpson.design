@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 import Portfolio from '../components/Portfolio';
 import { Development } from '../components/Development';
@@ -19,6 +20,12 @@ const App = ({ data }) => (
         flexDirection: 'column'
       }}
     >
+      <Helmet>
+        <meta
+          name="description"
+          content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
+        />
+      </Helmet>
       <Logo />
       <h1>Nathan Simpson</h1>
       <p>

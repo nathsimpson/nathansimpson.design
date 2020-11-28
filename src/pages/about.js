@@ -1,10 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Helmet } from 'react-helmet';
+
 import { Layout, Header } from '../components';
 
 const App = ({ data }) => (
   <Layout>
     <Header />
+    <Helmet>
+      <title>Nathan Simpson - UI Designer + Developer</title>
+    </Helmet>
     <div
       css={{
         maxWidth: 800,

@@ -14,7 +14,7 @@
     "dev": "gatsby develop",
     "start": "yarn dev",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
-    "lint:eslint": "eslint ."
+    "lint": "eslint ."
   },
   "author": "Nathan Simpson",
   "license": "ISC",

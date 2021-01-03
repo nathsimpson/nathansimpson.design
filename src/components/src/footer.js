@@ -55,7 +55,7 @@ export default () => (
           margin: '12px auto'
         }}
       >
-        &copy; Copyright 2020 Nathan Simpson. Made in Sydney Australia.
+        &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
       </p>
       <img src={logo} style={{ height: 32, position: 'relative', top: 6 }} />
     </div>

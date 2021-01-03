@@ -4,6 +4,7 @@ module.exports = {
   parser: 'babel-eslint',
   rules: {
     'prettier/prettier': 'error',
+    'react/jsx-fragments': 0,
     'react/prop-types': 0,
     'react/no-unused-prop-types': 0,
     'standard/computed-property-even-spacing': 0,

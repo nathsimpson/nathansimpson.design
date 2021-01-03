@@ -77,14 +77,14 @@ export const boxShadow = {
 };
 
 export const fontsizes = {
-  xsmall: 12,
-  small: 14,
-  medium: 16,
-  large: 18,
-  xlarge: 24,
-  xxlarge: 32,
-  xxxlarge: 38,
-  xxxxlarge: 52
+  xsmall: '0.75rem',
+  small: '0.875rem',
+  medium: '1rem',
+  large: '1.25rem',
+  xlarge: '1.5rem',
+  xxlarge: '1.875rem',
+  xxxlarge: '2.25rem',
+  xxxxlarge: '3rem'
 };
 
 const baseHeadingStyle = {

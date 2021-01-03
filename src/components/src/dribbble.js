@@ -2,8 +2,6 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
-import { Block } from './block';
-
 export default class Dribbble extends React.Component {
   constructor() {
     super();
@@ -28,10 +26,10 @@ export default class Dribbble extends React.Component {
 
   render() {
     return (
-      <Block>
-        <h2 css={{ marginBottom: 0 }}>Dribbble Shots</h2>
+      <div>
+        <h3 css={{ marginBottom: 0 }}>Other work</h3>
         <p css={{ marginBottom: 26 }}>
-          Check out my{' '}
+          I occasionally post WIP designs on my{' '}
           <a
             href="https://dribbble.com/nathansimpson"
             target="_blank"
@@ -39,7 +37,7 @@ export default class Dribbble extends React.Component {
           >
             Dribbble
           </a>{' '}
-          page to see more
+          page.
         </p>
         <div
           css={{
@@ -61,7 +59,7 @@ export default class Dribbble extends React.Component {
             </a>
           ))}
         </div>
-      </Block>
+      </div>
     );
   }
 }

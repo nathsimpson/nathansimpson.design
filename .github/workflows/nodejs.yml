@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - run: yarn lint:eslint
+      - run: yarn lint
       - run: yarn build
         env:
           CI: true

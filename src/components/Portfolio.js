@@ -3,16 +3,11 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { headings } from '../theme';
+import { headings, spacing } from '../theme';
 
 const Portfolio = ({ data }) => (
   <div>
-    <h2>Design</h2>
-    <p>
-      Design has been my passion for over 10 years. I focus on User Interface
-      (UI) Design for native and web apps, with the odd Branding project here
-      and there.
-    </p>
+    <h3 css={{ marginBottom: spacing.large }}>Projects</h3>
     <div
       css={{
         display: 'grid',

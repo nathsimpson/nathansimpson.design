@@ -2,6 +2,7 @@
 path: '/bucketlist'
 title: 'Bucket List'
 date: '2016-02-06'
+updated: '2021-01-08'
 type: post
 ---
 

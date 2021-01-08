@@ -11,7 +11,7 @@ type: post
 - ~~Do work for a large national/international company~~ 🏢
 - ~~Give three talks at meetups~~
 - ~~Contribute to an open source project~~
-- Drop my _junior_ title 🍼
+- ~~Drop my _junior_ title 🍼~~
 - Launch my own product
 - Speak at a conference
 - Lead a project
@@ -24,7 +24,9 @@ type: post
 - ~~Finish University~~ 🎓
 - ~~Get married~~ 🤵🏻
 - ~~Buy first new car~~ 🚗
+- ~~Invest in the Stock Market 📈~~
 - Buy a house 🏡
+- Buy an investment property 🏠
 - Have a son 👶
 - Have a daughter 👶
 
@@ -40,7 +42,8 @@ type: post
 
 ## Travel
 
-- Go to Japan 🇯🇵
-- Go to America 🇺🇸
+- ~~Fiji 🇫🇯~~
+- Japan 🇯🇵
+- America 🇺🇸
 - Go Mountain biking at a ski resort 🚵‍♂️
 - Go Skiing overseas ⛷

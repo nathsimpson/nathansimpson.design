@@ -3,6 +3,8 @@ import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
 import { Layout, Header } from '../components';
 
+import { colors } from '../theme';
+
 export const DesignSystemTemplate = ({ data }) => {
   const post = data.markdownRemark;
 
@@ -16,6 +18,7 @@ export const DesignSystemTemplate = ({ data }) => {
       <div
         css={{
           display: 'grid',
+          columnGap: 12,
           gridTemplateColumns: '300px 1fr'
         }}
       >
@@ -38,7 +41,14 @@ export const DesignSystemTemplate = ({ data }) => {
 
 const NavigationBar = ({ data }) => {
   return (
-    <ul css={{ marginTop: 24 }}>
+    <ul
+      css={{
+        marginTop: 24,
+        listStyle: 'none',
+        padding: 0,
+        borderRight: `1px solid ${colors.brand}`
+      }}
+    >
       <li>
         <a href="/design-system">Welcome</a>
       </li>

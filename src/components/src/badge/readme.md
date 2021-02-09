@@ -8,3 +8,7 @@ type: designsystem
 # Badge
 
 This is a badge component.
+
+```jsx
+<Badge label="Badge" />
+```

@@ -6,6 +6,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const projectTemplate = path.resolve('src/templates/project.js');
   const talkTemplate = path.resolve('src/templates/talk.js');
   const postTemplate = path.resolve('src/templates/post.js');
+  const designSystemTemplate = path.resolve('src/templates/designsystem.js');
 
   return graphql(`
     {
@@ -31,6 +32,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const template = {
+        designsystem: designSystemTemplate,
         project: projectTemplate,
         talk: talkTemplate,
         post: postTemplate

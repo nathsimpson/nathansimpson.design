@@ -33,6 +33,13 @@ module.exports = {
         name: 'markdown-pages'
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/components`,
+        name: 'markdown-pages'
+      }
+    },
     'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-manifest`,

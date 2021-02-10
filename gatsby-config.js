@@ -37,18 +37,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/components`,
-        name: 'markdown-pages'
+        name: 'design-system'
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-prismjs`,
             options: {}
           }
-        ]
+        ],
+        extensions: ['.md', '.mdx'],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/project.js'),
+          'design-system': require.resolve('./src/components/DesignSystem.js')
+        }
       }
     },
     {

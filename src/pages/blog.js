@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Card, Layout, Header, Badge } from '../components';
 import { fontsizes, colors } from '../theme';
 
-const PostCard = ({ id, frontmatter, html }) => {
+const PostCard = ({ id, frontmatter, body }) => {
   return (
     <Card
       style={{
@@ -42,11 +43,7 @@ const PostCard = ({ id, frontmatter, html }) => {
         />
       )}
 
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${html.slice(0, 220)}...`
-        }}
-      />
+      <MDXRenderer>{body}</MDXRenderer>
 
       <a href={frontmatter.path}>Read more</a>
     </Card>
@@ -61,7 +58,7 @@ export default ({ data }) => (
       <p>A collection of thoughts and experiences.</p>
 
       <div css={{ marginTop: 24 }}>
-        {data.allMarkdownRemark.edges
+        {data.allMdx.edges
           .filter(({ node: p }) =>
             ['post', 'talk'].includes(p.frontmatter.type)
           )
@@ -75,11 +72,11 @@ export default ({ data }) => (
 
 export const talksQuery = graphql`
   query allPosts {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             date(formatString: "MMMM DD YYYY")

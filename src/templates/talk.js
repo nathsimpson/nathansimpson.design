@@ -2,13 +2,14 @@
 import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { colors, fontsizes } from '../theme';
 
 export default ({ data }) => {
-  const talk = data.markdownRemark;
+  const talk = data.mdx;
 
   return (
     <Layout>
@@ -42,7 +43,7 @@ export default ({ data }) => {
           </div>
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: talk.html }} />
+        <MDXRenderer>{talk.body}</MDXRenderer>
       </div>
     </Layout>
   );
@@ -50,8 +51,8 @@ export default ({ data }) => {
 
 export const query = graphql`
   query TalksByPath($path: String) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         title
         path

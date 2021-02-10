@@ -10,11 +10,11 @@ export default ({ data }) => {
 
 export const dsComponentQuery = graphql`
   query DesignSystemPageQuery($path: String) {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             date(formatString: "MMMM DD YYYY")
@@ -27,8 +27,8 @@ export const dsComponentQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         title
         path

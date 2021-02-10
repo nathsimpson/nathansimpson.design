@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
+import { Link } from 'gatsby';
 import { Card, Layout, Header } from '../components';
+import { Mdx } from './Mdx';
 
 export const DesignSystemTemplate = ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
 
   return (
     <Layout>
@@ -20,12 +22,12 @@ export const DesignSystemTemplate = ({ data }) => {
           gridTemplateColumns: '300px 1fr'
         }}
       >
-        <NavigationBar data={data.allMarkdownRemark.edges} />
+        <NavigationBar data={data.allMdx.edges} />
 
         <Card>
           {post ? (
             <div>
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              <Mdx>{post.body}</Mdx>
             </div>
           ) : (
             <div>
@@ -49,14 +51,18 @@ const NavigationBar = ({ data }) => {
       }}
     >
       <li>
-        <a href="/design-system">Welcome</a>
+        <Link to="/design-system">
+          <a>Welcome</a>
+        </Link>
       </li>
       {data
-        .filter(({ node: p }) => ['designsystem'].includes(p.frontmatter.type))
+        .filter(({ node: p }) => ['design-system'].includes(p.frontmatter.type))
         .map(({ node }) => {
           return (
             <li key={node.id}>
-              <a href={node.frontmatter.path}>{node.frontmatter.title}</a>
+              <Link to={node.frontmatter.path} key={node.id}>
+                <a>{node.frontmatter.title}</a>
+              </Link>
             </li>
           );
         })}

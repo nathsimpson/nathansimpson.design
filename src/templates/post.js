@@ -2,13 +2,14 @@
 import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { colors, fontsizes } from '../theme';
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
 
   return (
     <Layout>
@@ -37,7 +38,7 @@ export default ({ data }) => {
               ` Updated on ${post.frontmatter.updated}`}
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <MDXRenderer>{post.body}</MDXRenderer>
       </div>
     </Layout>
   );
@@ -45,8 +46,8 @@ export default ({ data }) => {
 
 export const query = graphql`
   query PostsByPath($path: String) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         title
         path

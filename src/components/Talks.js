@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { borderRadius, colors, fontsizes, spacing } from '../theme';
 import { mq } from '../helpers/utils';
@@ -18,7 +19,7 @@ export const Talks = ({ data }) => (
       meetups. Check out the recordings below, and come and say hi at the next
       one!
     </p>
-    {data.allMarkdownRemark.edges
+    {data.allMdx.edges
       .filter(({ node }) => node.frontmatter.type === 'talk')
       .map(({ node }) => (
         <Talk node={node} key={node.id} />
@@ -28,7 +29,7 @@ export const Talks = ({ data }) => (
 
 const Talk = ({
   node: {
-    html,
+    body,
     frontmatter: { path, youtubeid, title }
   }
 }) => {
@@ -91,7 +92,7 @@ const Talk = ({
             fontSize: fontsizes.small
           }}
         >
-          {html.replace(/<\/?p>/g, '').slice(0, 148)}
+          <MDXRenderer>{body}</MDXRenderer>
           {'... '}
           <span href={path} css={{ color: colors.orange }}>
             Watch now

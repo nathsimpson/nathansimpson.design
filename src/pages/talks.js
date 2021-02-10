@@ -15,11 +15,11 @@ export default ({ data }) => (
 
 export const talksQuery = graphql`
   query allTalks {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             title

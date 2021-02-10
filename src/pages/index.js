@@ -101,11 +101,11 @@ const App = ({ data }) => (
 
 export const portfolioQuery = graphql`
   query IndexProjects {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             title

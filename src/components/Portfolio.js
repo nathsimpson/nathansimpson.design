@@ -15,7 +15,7 @@ const Portfolio = ({ data }) => (
         gap: 12
       }}
     >
-      {data.allMarkdownRemark.edges
+      {data.allMdx.edges
         .filter(({ node }) => node.frontmatter.type === 'project')
         .map(project => (
           <PortfolioItem

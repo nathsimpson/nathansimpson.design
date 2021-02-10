@@ -1,7 +1,7 @@
 const path = require('path');
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   const projectTemplate = path.resolve('src/templates/project.js');
   const talkTemplate = path.resolve('src/templates/talk.js');
@@ -10,10 +10,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
-            html
+            body
             id
             frontmatter {
               path
@@ -30,9 +30,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(res.errors);
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const mdx = res.data.allMdx.edges;
+
+    mdx.forEach(({ node }) => {
       const template = {
-        designsystem: designSystemTemplate,
+        'design-system': designSystemTemplate,
         project: projectTemplate,
         talk: talkTemplate,
         post: postTemplate

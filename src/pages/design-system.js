@@ -12,11 +12,11 @@ export default DesignSystem;
 
 export const dsComponentQuery = graphql`
   query allDSPages {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             date(formatString: "MMMM DD YYYY")

@@ -2,7 +2,7 @@
 title: Logo
 date: '2021-02-10'
 path: '/design-system/logo'
-type: designsystem
+type: design-system
 ---
 
 # Logo

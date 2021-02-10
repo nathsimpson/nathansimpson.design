@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import { Layout, Header } from '../components';
 
-const App = ({ data }) => (
+const App = () => (
   <Layout>
     <Header />
     <Helmet>

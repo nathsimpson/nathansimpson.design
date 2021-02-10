@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
-import { Layout, Header } from '../components';
-
-import { colors } from '../theme';
+import { Card, Layout, Header } from '../components';
 
 export const DesignSystemTemplate = ({ data }) => {
   const post = data.markdownRemark;
@@ -24,16 +22,18 @@ export const DesignSystemTemplate = ({ data }) => {
       >
         <NavigationBar data={data.allMarkdownRemark.edges} />
 
-        {post ? (
-          <div>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
-        ) : (
-          <div>
-            <h1>Design System</h1>
-            <p>This is the design system.</p>
-          </div>
-        )}
+        <Card>
+          {post ? (
+            <div>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
+          ) : (
+            <div>
+              <h1>Design System</h1>
+              <p>This is the design system.</p>
+            </div>
+          )}
+        </Card>
       </div>
     </Layout>
   );
@@ -45,8 +45,7 @@ const NavigationBar = ({ data }) => {
       css={{
         marginTop: 24,
         listStyle: 'none',
-        padding: 0,
-        borderRight: `1px solid ${colors.brand}`
+        padding: 0
       }}
     >
       <li>

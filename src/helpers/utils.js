@@ -1,5 +1,5 @@
 import facepaint from 'facepaint';
-import { breakpoints } from '../theme';
+import { breakpoints } from '../../design-system/theme';
 
 const bpEntries = Object.entries(breakpoints);
 const maxWidth = (width, m = true) =>

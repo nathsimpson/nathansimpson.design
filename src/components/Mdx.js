@@ -5,10 +5,10 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import dracula from 'prism-react-renderer/themes/dracula';
 
-import { Badge } from './src/badge';
-import { Logo } from './src/logo';
-import { Card } from './src/card';
-import { colors, spacing, borderRadius } from '../theme';
+import { Badge } from '../../design-system/badge';
+import { Logo } from '../../design-system/logo';
+import { Card } from '../../design-system/card';
+import { colors, spacing, borderRadius } from '../../design-system/theme';
 
 const DsComponents = {
   Badge,

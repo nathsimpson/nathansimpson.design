@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Block } from './src/block';
-import { Badge } from './src/badge';
-import { Card } from './src/card';
-import { colors, fontsizes } from '../theme';
+import { Badge } from '../../design-system/badge';
+import { colors, fontsizes } from '../../design-system/theme';
+import { Card } from '../../design-system/card';
 import { mq } from '../helpers/utils';
 
 const skills = [

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { borderRadius, colors, fontsizes } from '../../theme';
+import { borderRadius, colors, fontsizes } from '../../../design-system/theme';
 import hexAlpha from 'hex-alpha';
 
 export default () => (

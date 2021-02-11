@@ -3,8 +3,10 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Card, Layout, Header, Badge } from '../components';
-import { fontsizes, colors } from '../theme';
+import { Layout, Header } from '../components';
+import { Badge } from '../../design-system/badge';
+import { Card } from '../../design-system/card';
+import { fontsizes, colors } from '../../design-system/theme';
 
 const PostCard = ({ id, frontmatter, body }) => {
   return (

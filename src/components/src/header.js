@@ -2,7 +2,7 @@
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
-import { colors } from '../../theme';
+import { colors } from '../../../design-system/theme';
 
 export const Logo = () => (
   <svg

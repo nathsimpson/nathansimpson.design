@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { palette, borderRadius } from '../../../theme';
+import { palette, borderRadius } from '../theme';
 import hexAlpha from 'hex-alpha';
 
 const sizes = {

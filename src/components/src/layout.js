@@ -3,7 +3,12 @@ import { jsx, Global } from '@emotion/core';
 import Helmet from 'react-helmet';
 
 import Footer from './footer';
-import { colors, fontsizes, headings, fontFamilies } from '../../theme';
+import {
+  colors,
+  fontsizes,
+  headings,
+  fontFamilies
+} from '../../../design-system/theme';
 
 export default ({ children }) => (
   <div

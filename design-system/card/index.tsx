@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { colors, borderRadius, boxShadow } from '../../../theme';
+import { colors, borderRadius, boxShadow } from '../theme';
 
 export const Card = ({ children, style, as = 'div' }) => {
   const Tag = as;

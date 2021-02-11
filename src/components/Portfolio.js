@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { headings, spacing } from '../theme';
+import { headings, spacing } from '../../design-system/theme';
 
 const Portfolio = ({ data }) => (
   <div>

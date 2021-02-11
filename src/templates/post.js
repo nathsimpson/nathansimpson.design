@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/src/layout';
 import { Header } from '../components';
-import { colors, fontsizes } from '../theme';
+import { colors, fontsizes } from '../../design-system/theme';
 
 export default ({ data }) => {
   const post = data.mdx;

@@ -12,7 +12,7 @@ import {
   // faYoutube
 } from '@fortawesome/fontawesome-free-brands';
 import logo from '../../images/logo.svg';
-import { colors, fontsizes } from '../../theme';
+import { colors, fontsizes } from '../../../design-system/theme';
 
 export default () => (
   <footer className="aboutMe" style={{ textAlign: 'center' }}>

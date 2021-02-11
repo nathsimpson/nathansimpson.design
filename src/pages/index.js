@@ -7,8 +7,10 @@ import Helmet from 'react-helmet';
 import Portfolio from '../components/Portfolio';
 import { Development } from '../components/Development';
 import { Talks } from '../components/Talks';
-import { Block, Contact, Dribbble, Layout, Logo } from '../components';
-import { colors } from '../theme';
+import { Block, Contact, Dribbble, Layout } from '../components';
+import { Logo } from '../../design-system/logo';
+
+import { colors } from '../../design-system/theme';
 
 const Hero = () => {
   return (

@@ -2,7 +2,12 @@
 import { jsx } from '@emotion/core';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { borderRadius, colors, fontsizes, spacing } from '../theme';
+import {
+  borderRadius,
+  colors,
+  fontsizes,
+  spacing
+} from '../../design-system/theme';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (

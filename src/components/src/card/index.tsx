@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { colors, borderRadius, boxShadow } from '../../theme';
+import { colors, borderRadius, boxShadow } from '../../../theme';
 
-const Card = ({ children, style, as = 'div' }) => {
+export const Card = ({ children, style, as = 'div' }) => {
   const Tag = as;
   return (
     <Tag
@@ -19,5 +19,3 @@ const Card = ({ children, style, as = 'div' }) => {
     </Tag>
   );
 };
-
-export default Card;

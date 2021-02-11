@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Block } from './src/block';
 import { Badge } from './src/badge';
-import Card from './src/card';
+import { Card } from './src/card';
 import { colors, fontsizes } from '../theme';
 import { mq } from '../helpers/utils';
 

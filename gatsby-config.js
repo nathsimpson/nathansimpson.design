@@ -41,6 +41,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/theme`,
+        name: 'design-system'
+      }
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.md', '.mdx'],

@@ -6,7 +6,7 @@ exports.createPages = ({ actions, graphql }) => {
   const projectTemplate = path.resolve('src/templates/project.js');
   const talkTemplate = path.resolve('src/templates/talk.js');
   const postTemplate = path.resolve('src/templates/post.js');
-  const designSystemTemplate = path.resolve('src/templates/designsystem.js');
+  const designSystemTemplate = path.resolve('src/templates/designSystem.js');
 
   return graphql(`
     {

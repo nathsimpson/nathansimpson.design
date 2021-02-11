@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
-import { Card, Layout, Header } from '../components';
+import { Layout, Header } from '../components';
 import { Mdx } from './Mdx';
 
 export const DesignSystemTemplate = ({ data }) => {
@@ -24,7 +24,7 @@ export const DesignSystemTemplate = ({ data }) => {
       >
         <NavigationBar data={data.allMdx.edges} />
 
-        <Card>
+        <div>
           {post ? (
             <div>
               <Mdx>{post.body}</Mdx>
@@ -35,7 +35,7 @@ export const DesignSystemTemplate = ({ data }) => {
               <p>This is the design system.</p>
             </div>
           )}
-        </Card>
+        </div>
       </div>
     </Layout>
   );

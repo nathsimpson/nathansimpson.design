@@ -1,6 +1,5 @@
 ---
 title: Logo
-date: '2021-02-10'
 path: '/design-system/logo'
 type: design-system
 ---
@@ -9,6 +8,6 @@ type: design-system
 
 This is a Logo component.
 
-```jsx
+```js
 <Logo />
 ```

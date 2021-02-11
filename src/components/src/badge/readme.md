@@ -1,6 +1,5 @@
 ---
 title: Badge
-date: '2021-02-10'
 path: '/design-system/badge'
 type: design-system
 ---

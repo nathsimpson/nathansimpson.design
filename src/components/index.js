@@ -1,6 +1,6 @@
 import { Block } from './src/block';
 import { Badge } from './src/badge';
-import Card from './src/card';
+import { Card } from './src/card';
 import Footer from './src/footer';
 import Header from './src/header';
 import Contact from './src/contact';

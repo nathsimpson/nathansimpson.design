@@ -43,12 +43,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {}
-          }
-        ],
         extensions: ['.md', '.mdx'],
         defaultLayouts: {
           default: require.resolve('./src/templates/project.js'),

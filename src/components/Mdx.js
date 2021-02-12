@@ -8,12 +8,16 @@ import dracula from 'prism-react-renderer/themes/dracula';
 import { Badge } from '../../design-system/badge';
 import { Logo } from '../../design-system/logo';
 import { Card } from '../../design-system/card';
+import { Text, Heading } from '../../design-system/typography';
+
 import { colors, spacing, borderRadius } from '../../design-system/theme';
 
 const DsComponents = {
   Badge,
   Card,
-  Logo
+  Heading,
+  Logo,
+  Text
 };
 
 const components = {

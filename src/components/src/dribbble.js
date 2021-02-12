@@ -2,6 +2,8 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
+import { Heading, Text } from '../../../design-system/typography';
+
 export default class Dribbble extends React.Component {
   constructor() {
     super();
@@ -27,8 +29,9 @@ export default class Dribbble extends React.Component {
   render() {
     return (
       <div>
-        <h3 css={{ marginBottom: 0 }}>Other work</h3>
-        <p css={{ marginBottom: 26 }}>
+        <Heading level={3}>Other work</Heading>
+
+        <Text css={{ marginBottom: 26 }}>
           I occasionally post WIP designs on my{' '}
           <a
             href="https://dribbble.com/nathansimpson"
@@ -38,7 +41,7 @@ export default class Dribbble extends React.Component {
             Dribbble
           </a>{' '}
           page.
-        </p>
+        </Text>
         <div
           css={{
             display: 'grid',

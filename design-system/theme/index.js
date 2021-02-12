@@ -49,34 +49,3 @@ export const fontsizes = {
   xxxlarge: '2.25rem',
   xxxxlarge: '3rem'
 };
-
-const baseHeadingStyle = {
-  fontFamily: fontFamilies.heading,
-  lineHeight: 1.1,
-  color: colors.foregroundEmphasis,
-  margin: 0,
-  marginTop: spacing.xlarge
-};
-
-export const headings = {
-  1: {
-    ...baseHeadingStyle,
-    fontSize: fontsizes.xxxxlarge,
-    fontWeight: 900
-  },
-  2: {
-    ...baseHeadingStyle,
-    fontSize: fontsizes.xxxlarge,
-    fontWeight: 900
-  },
-  3: {
-    ...baseHeadingStyle,
-    fontSize: fontsizes.xlarge,
-    fontWeight: 600
-  },
-  4: {
-    ...baseHeadingStyle,
-    fontSize: fontsizes.xlarge,
-    fontWeight: 600
-  }
-};

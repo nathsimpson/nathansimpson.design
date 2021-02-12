@@ -2,10 +2,12 @@
 import { jsx } from '@emotion/core';
 import { Block } from './block';
 
+import { Heading, Text } from '../../../design-system/typography';
+
 export default () => (
   <Block>
-    <h2>Contact Me</h2>
-    <p>
+    <Heading level={2}>Contact Me</Heading>
+    <Text>
       Would you like to get in touch? Feel free to message me through{' '}
       <a href="https://twitter.com/nathjsimpson" target="_blank">
         Twitter
@@ -15,6 +17,6 @@ export default () => (
         LinkedIn
       </a>
       .
-    </p>
+    </Text>
   </Block>
 );

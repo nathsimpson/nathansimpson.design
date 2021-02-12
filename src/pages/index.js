@@ -11,6 +11,7 @@ import { Block, Contact, Dribbble, Layout } from '../components';
 import { Logo } from '../../design-system/logo';
 
 import { colors } from '../../design-system/theme';
+import { Heading, Text } from '../../design-system/typography';
 
 const Hero = () => {
   return (
@@ -40,17 +41,19 @@ const Hero = () => {
           />
         </Helmet>
         <Logo />
-        <h1>Nathan Simpson</h1>
-        <p
+        <Heading level={1}>Nathan Simpson</Heading>
+        <div
           css={{
             maxWidth: 800
           }}
         >
-          I'm a UI Designer &amp; Developer at{' '}
-          <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
-          I'm passionate about Design Systems, and building products from
-          concept to delivery.
-        </p>
+          <Text>
+            I'm a UI Designer &amp; Developer at{' '}
+            <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney,
+            Australia. I'm passionate about Design Systems, and building
+            products from concept to delivery.
+          </Text>
+        </div>
 
         <div css={{ marginBottom: 12 }}>
           <a css={{ display: 'inline', marginRight: 16 }} href="/about">
@@ -71,7 +74,7 @@ const App = ({ data }) => (
 
     <Layout>
       <Block>
-        <h2>Design</h2>
+        <Heading level={2}>Design</Heading>
         <p>
           Design has been my passion for over 10 years. I focus on User
           Interface (UI) Design for native and web apps, with the odd Branding
@@ -90,7 +93,7 @@ const App = ({ data }) => (
       <hr />
 
       <Block>
-        <h2>Talks</h2>
+        <Heading level={2}>Talks</Heading>
         <Talks data={data} />
       </Block>
 

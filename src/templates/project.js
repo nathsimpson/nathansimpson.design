@@ -6,6 +6,8 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+import { Heading } from '../../design-system/typography';
+
 export default ({ data }) => {
   const project = data.mdx;
   return (
@@ -17,7 +19,7 @@ export default ({ data }) => {
       <Header />
 
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
-        <h1>{project.frontmatter.title}</h1>
+        <Heading level={1}>{project.frontmatter.title}</Heading>
         <MDXRenderer>{project.body}</MDXRenderer>
       </div>
     </Layout>

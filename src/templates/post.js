@@ -6,7 +6,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/src/layout';
 import { Header } from '../components';
-import { colors, fontsizes } from '../../design-system/theme';
+import { colors } from '../../design-system/theme';
+import { Heading, Text } from '../../design-system/typography';
 
 export default ({ data }) => {
   const post = data.mdx;
@@ -24,18 +25,19 @@ export default ({ data }) => {
             borderBottom: `1px solid ${colors.border}`
           }}
         >
-          <h1>{post.frontmatter.title}</h1>
+          <Heading level={1}>{post.frontmatter.title}</Heading>
           <div
             css={{
               display: 'flex',
               alignItems: 'center',
-              margin: '12px 0px',
-              fontSize: fontsizes.xsmall
+              margin: '12px 0px'
             }}
           >
-            Posted on {post.frontmatter.date}.
-            {post.frontmatter.updated &&
-              ` Updated on ${post.frontmatter.updated}`}
+            <Text size="small" as="span">
+              Posted on {post.frontmatter.date}.
+              {post.frontmatter.updated &&
+                ` Updated on ${post.frontmatter.updated}`}
+            </Text>
           </div>
         </div>
         <MDXRenderer>{post.body}</MDXRenderer>

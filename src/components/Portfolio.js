@@ -3,11 +3,20 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { headings, spacing } from '../../design-system/theme';
+import { Heading } from '../../design-system/typography';
+
+import {
+  fontsizes,
+  fontFamilies,
+  colors,
+  spacing
+} from '../../design-system/theme';
 
 const Portfolio = ({ data }) => (
   <div>
-    <h3 css={{ marginBottom: spacing.large }}>Projects</h3>
+    <Heading level={3} css={{ marginBottom: spacing.large }}>
+      Projects
+    </Heading>
     <div
       css={{
         display: 'grid',
@@ -66,7 +75,13 @@ const PortfolioItemImage = styled.img({
 });
 
 const PortfolioItemLabel = styled.span({
-  ...headings['3'],
+  fontFamily: fontFamilies.heading,
+  lineHeight: 1.1,
+  color: colors.foregroundEmphasis,
+  margin: 0,
+  marginTop: spacing.xlarge,
+  fontSize: fontsizes.xlarge,
+  fontWeight: 600,
   display: 'none',
   position: 'absolute',
   bottom: 0,

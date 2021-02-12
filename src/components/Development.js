@@ -2,9 +2,10 @@
 import { jsx } from '@emotion/core';
 import { Block } from './src/block';
 import { Badge } from '../../design-system/badge';
-import { colors, fontsizes } from '../../design-system/theme';
 import { Card } from '../../design-system/card';
 import { mq } from '../helpers/utils';
+
+import { Heading, Text } from '../../design-system/typography';
 
 const skills = [
   'JavaScript',
@@ -79,30 +80,15 @@ const DevelopmentProject = ({ item }) => (
       maxWidth: 600
     }}
   >
-    <h4
-      css={{
-        marginTop: 0,
-        marginBottom: 6
-      }}
-    >
-      {item.name}
-    </h4>
-    <p
-      css={{
-        margin: '0px',
-        marginBottom: 12,
-        color: colors.foreground
-      }}
-      x
-    >
+    <Heading level={4}>{item.name}</Heading>
+    <Text>
       {item.desc}{' '}
       <a href={item.link} css={{}} target="_blank" rel="noopener noreferrer">
         Learn more
       </a>
-    </p>
+    </Text>
     <div
       css={{
-        fontSize: fontsizes.xsmall,
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap'
@@ -112,7 +98,7 @@ const DevelopmentProject = ({ item }) => (
         <Badge
           label="Team"
           size="small"
-          color="purple"
+          color="decorativePurple"
           style={{ marginRight: 4, marginBottom: 4 }}
         />
       )}
@@ -121,7 +107,7 @@ const DevelopmentProject = ({ item }) => (
         <Badge
           label="Open Source"
           size="small"
-          color="green"
+          color="decorativeGreen"
           style={{ marginRight: 4, marginBottom: 4 }}
         />
       )}
@@ -141,9 +127,9 @@ const DevelopmentProject = ({ item }) => (
 export const Development = () => {
   return (
     <Block>
-      <h2>Development</h2>
+      <Heading level={2}>Development</Heading>
 
-      <p>
+      <Text>
         I love bringing concepts to life through code. Most of my time is spent
         building products for awesome clients, as well as creating and
         contributing to open source libraries. I share many of my projects to{' '}
@@ -151,9 +137,9 @@ export const Development = () => {
           GitHub
         </a>
         .
-      </p>
+      </Text>
 
-      <p>I'm experienced with the following technologies...</p>
+      <Text>I'm experienced with the following technologies...</Text>
 
       <ul
         css={{
@@ -174,7 +160,8 @@ export const Development = () => {
         ))}
       </ul>
 
-      <h3>Some projects I've worked on...</h3>
+      <Heading level={3}>Some projects I've worked on...</Heading>
+
       <ul
         css={mq({
           padding: 0,

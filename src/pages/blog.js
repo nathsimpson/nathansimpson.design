@@ -6,7 +6,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Layout, Header } from '../components';
 import { Badge } from '../../design-system/badge';
 import { Card } from '../../design-system/card';
-import { fontsizes, colors } from '../../design-system/theme';
+import { colors } from '../../design-system/theme';
+import { Heading, Text } from '../../design-system/typography';
 
 const PostCard = ({ id, frontmatter, body }) => {
   return (
@@ -21,7 +22,9 @@ const PostCard = ({ id, frontmatter, body }) => {
         }}
       >
         <a href={frontmatter.path}>
-          <h2 css={{ margin: 0 }}>{frontmatter.title}</h2>
+          <Heading level={2} css={{ margin: 0 }}>
+            {frontmatter.title}
+          </Heading>
         </a>
         <div
           css={{
@@ -31,10 +34,10 @@ const PostCard = ({ id, frontmatter, body }) => {
           }}
         >
           <Badge label={frontmatter.type} size="small" />
-          <span css={{ marginLeft: 6, fontSize: fontsizes.xsmall }}>
+          <Text as="span" size="small" css={{ marginLeft: 6 }}>
             Posted on {frontmatter.date}
             {frontmatter.updated && `. Updated on ${frontmatter.updated}`}
-          </span>
+          </Text>
         </div>
       </div>
 
@@ -56,8 +59,8 @@ export default ({ data }) => (
   <Layout>
     <Header />
     <div css={{ maxWidth: 800, margin: '0 auto' }}>
-      <h1>Blog</h1>
-      <p>A collection of thoughts and experiences.</p>
+      <Heading level={1}>Blog</Heading>
+      <Text>A collection of thoughts and experiences.</Text>
 
       <div css={{ marginTop: 24 }}>
         {data.allMdx.edges

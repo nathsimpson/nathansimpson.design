@@ -5,6 +5,8 @@ import { Link } from 'gatsby';
 import { Layout, Header } from '../components';
 import { Mdx } from './Mdx';
 
+import { Heading, Text } from '../../design-system/typography';
+
 export const DesignSystemTemplate = ({ data }) => {
   const post = data.mdx;
 
@@ -31,8 +33,8 @@ export const DesignSystemTemplate = ({ data }) => {
             </div>
           ) : (
             <div>
-              <h1>Design System</h1>
-              <p>This is the design system.</p>
+              <Heading level={1}>Design System</Heading>
+              <Text>This is the design system.</Text>
             </div>
           )}
         </div>

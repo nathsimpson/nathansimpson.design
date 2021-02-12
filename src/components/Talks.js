@@ -2,6 +2,8 @@
 import { jsx } from '@emotion/core';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+import { Heading } from '../../design-system/typography';
+
 import {
   borderRadius,
   colors,
@@ -82,14 +84,15 @@ const Talk = ({
           padding: spacing.large
         }}
       >
-        <h3
+        <Heading
+          level={3}
           css={{
             margin: 0,
             fontSize: fontsizes.xlarge
           }}
         >
           {title}
-        </h3>
+        </Heading>
         <p
           css={{
             marginTop: spacing.small,

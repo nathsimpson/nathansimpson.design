@@ -18,20 +18,21 @@ export const spacing = {
   xlarge: 24,
   xxlarge: 32,
   xxxlarge: 40
-};
+} as const;
 
 export const breakpoints = {
   sm: 640,
   md: 768,
   lg: 1024,
   xl: 1280
-};
+} as const;
 
 export const radii = {
+  none: 0,
   sm: 3,
   md: 6,
   lg: 12
-};
+} as const;
 
 export const boxShadow = {
   1: {
@@ -48,4 +49,7 @@ export const fontsizes = {
   xxlarge: '1.875rem',
   xxxlarge: '2.25rem',
   xxxxlarge: '3rem'
-};
+} as const;
+
+export type SpacingType = keyof typeof spacing;
+export type RadiiType = keyof typeof radii;

@@ -6,6 +6,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import dracula from 'prism-react-renderer/themes/dracula';
 
 import { Badge } from '../../design-system/badge';
+import { Box, FlexBox } from '../../design-system/box';
 import { Logo } from '../../design-system/logo';
 import { Card } from '../../design-system/card';
 import { Text, Heading } from '../../design-system/typography';
@@ -15,6 +16,8 @@ import { Divider } from '../../design-system/divider';
 
 const DsComponents = {
   Badge,
+  Box,
+  FlexBox,
   Card,
   Divider,
   Heading,

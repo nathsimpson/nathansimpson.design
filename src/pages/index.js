@@ -13,6 +13,7 @@ import { Logo } from '../../design-system/logo';
 import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
+import { Stack } from '../../design-system/stack';
 
 const Hero = () => {
   return (
@@ -41,29 +42,37 @@ const Hero = () => {
             content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
           />
         </Helmet>
-        <Logo size="medium" />
-        <Heading level={1}>Nathan Simpson</Heading>
-        <div
-          css={{
-            maxWidth: 800
-          }}
-        >
-          <Text>
-            I'm a UI Designer &amp; Developer at{' '}
-            <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney,
-            Australia. I'm passionate about Design Systems, and building
-            products from concept to delivery.
-          </Text>
-        </div>
+        <Stack gap="medium" align="start">
+          <Logo size="medium" />
+          <Heading level={1}>G'day, I'm Nath</Heading>
+          <div
+            css={{
+              maxWidth: 800
+            }}
+          >
+            <Text as="span">
+              I'm a UI Designer &amp; Developer at{' '}
+              <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney,
+              Australia. I'm passionate about Design Systems, and building
+              products from concept to delivery.
+            </Text>
+          </div>
 
-        <div css={{ marginBottom: 12 }}>
-          <a css={{ display: 'inline', marginRight: 16 }} href="/about">
-            About
-          </a>
-          <a css={{ display: 'inline', marginRight: 16 }} href="/blog">
-            Blog
-          </a>
-        </div>
+          <div css={{ marginBottom: 12 }}>
+            <a css={{ display: 'inline', marginRight: 16 }} href="/about">
+              About
+            </a>
+            <a css={{ display: 'inline', marginRight: 16 }} href="/blog">
+              Blog
+            </a>
+            <a
+              css={{ display: 'inline', marginRight: 16 }}
+              href="/design-system"
+            >
+              Design System
+            </a>
+          </div>
+        </Stack>
       </div>
     </div>
   );
@@ -97,10 +106,6 @@ const App = ({ data }) => (
         <Heading level={2}>Talks</Heading>
         <Talks data={data} />
       </Block>
-
-      <Divider />
-
-      <Contact />
     </Layout>
   </Fragment>
 );

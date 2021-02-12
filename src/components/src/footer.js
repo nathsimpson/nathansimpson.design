@@ -15,52 +15,49 @@ import { Logo } from '../../../design-system/logo';
 import { colors } from '../../../design-system/theme';
 import { Divider } from '../../../design-system/divider';
 import { Text } from '../../../design-system/typography';
+import { Stack } from '../../../design-system/stack';
 
 export default () => (
-  <footer className="aboutMe" style={{ textAlign: 'center' }}>
+  <footer style={{ textAlign: 'center' }}>
     <Divider />
-    <ul
-      style={{
-        margin: 0,
-        fontSize: 26,
-        listStyle: 'none',
-        padding: 0
-      }}
-    >
-      {networks.map(network => (
-        <li
-          style={{ display: 'inline-block', margin: '0px 5px' }}
-          key={network.name}
-        >
-          <a
-            css={{
-              color: colors.foreground,
-              textDecoration: 'none',
-
-              '&:hover': {
-                color: colors.link
-              }
-            }}
-            href={network.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={network.icon} />
-          </a>
-        </li>
-      ))}
-    </ul>
-    <div style={{ marginBottom: '32px' }}>
-      <Text
-        size="xsmall"
-        css={{
-          margin: '0 auto'
+    <Stack gap="medium" marginY="medium">
+      <ul
+        style={{
+          margin: 0,
+          fontSize: 26,
+          listStyle: 'none',
+          padding: 0
         }}
       >
+        {networks.map(network => (
+          <li
+            style={{ display: 'inline-block', margin: '0px 5px' }}
+            key={network.name}
+          >
+            <a
+              css={{
+                color: colors.foreground,
+                textDecoration: 'none',
+
+                '&:hover': {
+                  color: colors.link
+                }
+              }}
+              href={network.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={network.icon} />
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <Text size="xsmall" as="span">
         &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
       </Text>
       <Logo size="small" />
-    </div>
+    </Stack>
   </footer>
 );
 

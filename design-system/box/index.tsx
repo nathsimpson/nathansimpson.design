@@ -1,2 +1,2 @@
-export { Box } from './box';
+export { Box, BoxProps } from './box';
 export { FlexBox } from './flexbox';

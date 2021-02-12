@@ -34,7 +34,15 @@ export const DesignSystemTemplate = ({ data }) => {
           ) : (
             <div>
               <Heading level={1}>Design System</Heading>
-              <Text>This is the design system.</Text>
+              <Text>
+                Did I mention I love design systems? To proove it, this entire
+                website is based on one.
+              </Text>
+
+              <Text>
+                Explore all of the components in the left sidebar, or view the
+                code on GitHub.
+              </Text>
             </div>
           )}
         </div>

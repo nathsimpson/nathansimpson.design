@@ -12,6 +12,7 @@ import { Logo } from '../../design-system/logo';
 
 import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
+import { Divider } from '../../design-system/divider';
 
 const Hero = () => {
   return (
@@ -86,18 +87,18 @@ const App = ({ data }) => (
         <Dribbble />
       </Block>
 
-      <hr />
+      <Divider />
 
       <Development />
 
-      <hr />
+      <Divider />
 
       <Block>
         <Heading level={2}>Talks</Heading>
         <Talks data={data} />
       </Block>
 
-      <hr />
+      <Divider />
 
       <Contact />
     </Layout>

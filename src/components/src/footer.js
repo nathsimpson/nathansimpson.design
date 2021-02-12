@@ -13,10 +13,11 @@ import {
 } from '@fortawesome/fontawesome-free-brands';
 import logo from '../../images/logo.svg';
 import { colors, fontsizes } from '../../../design-system/theme';
+import { Divider } from '../../../design-system/divider';
 
 export default () => (
   <footer className="aboutMe" style={{ textAlign: 'center' }}>
-    <hr />
+    <Divider />
     <ul
       style={{
         margin: 0,

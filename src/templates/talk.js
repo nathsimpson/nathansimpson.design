@@ -2,8 +2,8 @@
 import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+import { Mdx } from '../components/Mdx';
 import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { colors } from '../../design-system/theme';
@@ -45,7 +45,7 @@ export default ({ data }) => {
           </Text>
         </div>
 
-        <MDXRenderer>{talk.body}</MDXRenderer>
+        <Mdx>{talk.body}</Mdx>
       </div>
     </Layout>
   );

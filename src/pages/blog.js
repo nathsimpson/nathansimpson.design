@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Layout, Header } from '../components';
+import { Mdx } from '../components/Mdx';
 import { Badge } from '../../design-system/badge';
 import { Card } from '../../design-system/card';
 import { colors } from '../../design-system/theme';
@@ -48,7 +48,7 @@ const PostCard = ({ id, frontmatter, body }) => {
         />
       )}
 
-      <MDXRenderer>{body}</MDXRenderer>
+      <Mdx>{body}</Mdx>
 
       <a href={frontmatter.path}>Read more</a>
     </Card>

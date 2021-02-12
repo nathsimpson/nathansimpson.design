@@ -4,7 +4,7 @@ import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Mdx } from '../components/Mdx';
 
 import { Heading } from '../../design-system/typography';
 
@@ -20,7 +20,7 @@ export default ({ data }) => {
 
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
         <Heading level={1}>{project.frontmatter.title}</Heading>
-        <MDXRenderer>{project.body}</MDXRenderer>
+        <Mdx>{project.body}</Mdx>
       </div>
     </Layout>
   );

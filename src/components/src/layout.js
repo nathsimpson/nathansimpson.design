@@ -51,10 +51,6 @@ export default ({ children }) => (
           maxWidth: '100%'
         },
 
-        hr: {
-          border: `1px solid ${colors.brand}`
-        },
-
         blockquote: {
           borderLeft: `3px solid ${colors.brand}`,
           margin: 0,

@@ -11,16 +11,26 @@ import { Card } from '../../design-system/card';
 import { Text, Heading } from '../../design-system/typography';
 
 import { colors, spacing, borderRadius } from '../../design-system/theme';
+import { Divider } from '../../design-system/divider';
 
 const DsComponents = {
   Badge,
   Card,
+  Divider,
   Heading,
   Logo,
   Text
 };
 
 const components = {
+  p: props => <Text {...props} />,
+  h1: props => <Heading level={1} {...props} />,
+  h2: props => <Heading level={2} {...props} />,
+  h3: props => <Heading level={3} {...props} />,
+  h4: props => <Heading level={4} {...props} />,
+  h5: props => <Heading level={5} {...props} />,
+  h6: props => <Heading level={6} {...props} />,
+  hr: () => <Divider />,
   code: props => (
     <div
       css={{

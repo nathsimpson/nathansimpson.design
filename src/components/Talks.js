@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Mdx } from '../components/Mdx';
 
 import { Heading } from '../../design-system/typography';
 
@@ -100,7 +100,7 @@ const Talk = ({
             fontSize: fontsizes.small
           }}
         >
-          <MDXRenderer>{body}</MDXRenderer>
+          <Mdx>{body}</Mdx>
           {'... '}
           <span href={path} css={{ color: colors.orange }}>
             Watch now

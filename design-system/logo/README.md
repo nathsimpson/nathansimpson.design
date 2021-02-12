@@ -8,6 +8,11 @@ type: design-system
 
 This is a Logo component.
 
+Logo has two sizes...
+
+- small
+- medium
+
 ```js
-<Logo />
+<Logo size="medium" />
 ```

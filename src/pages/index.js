@@ -41,7 +41,7 @@ const Hero = () => {
             content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
           />
         </Helmet>
-        <Logo />
+        <Logo size="medium" />
         <Heading level={1}>Nathan Simpson</Heading>
         <div
           css={{

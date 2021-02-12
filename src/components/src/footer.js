@@ -11,9 +11,10 @@ import {
   faDribbble
   // faYoutube
 } from '@fortawesome/fontawesome-free-brands';
-import logo from '../../images/logo.svg';
-import { colors, fontsizes } from '../../../design-system/theme';
+import { Logo } from '../../../design-system/logo';
+import { colors } from '../../../design-system/theme';
 import { Divider } from '../../../design-system/divider';
+import { Text } from '../../../design-system/typography';
 
 export default () => (
   <footer className="aboutMe" style={{ textAlign: 'center' }}>
@@ -50,15 +51,15 @@ export default () => (
       ))}
     </ul>
     <div style={{ marginBottom: '32px' }}>
-      <p
-        style={{
-          fontSize: fontsizes.xsmall,
-          margin: '12px auto'
+      <Text
+        size="xsmall"
+        css={{
+          margin: '0 auto'
         }}
       >
         &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
-      </p>
-      <img src={logo} style={{ height: 32, position: 'relative', top: 6 }} />
+      </Text>
+      <Logo size="small" />
     </div>
   </footer>
 );

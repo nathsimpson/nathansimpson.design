@@ -1,11 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-export const Logo = () => (
+const sizes = {
+  small: 32,
+  medium: 50
+} as const;
+
+export const Logo = ({ size = 'medium' }: { size: keyof typeof sizes }) => (
   <svg
     viewBox="0 0 158.6 102.8"
     css={{
-      height: 50,
+      height: sizes[size],
       width: 'auto',
       'g .outline': {
         fill: 'rgba(250, 109, 1, 1)'

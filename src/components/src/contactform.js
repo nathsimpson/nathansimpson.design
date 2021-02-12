@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { borderRadius, colors, fontsizes } from '../../../design-system/theme';
+import { radii, colors, fontsizes } from '../../../design-system/theme';
 import hexAlpha from 'hex-alpha';
 
 export default () => (
@@ -39,7 +39,7 @@ const baseInputStyles = {
   width: '100%',
   maxWidth: 400,
   padding: '0.75rem',
-  borderRadius: borderRadius.md,
+  borderRadius: radii.md,
   boxSizing: 'border-box',
   transition: 'all 0.5s',
   '&:hover': {
@@ -86,7 +86,7 @@ const FormSubmit = styled.input({
   color: colors.link,
   marginTop: 6,
   padding: '12px 24px',
-  borderRadius: borderRadius.md,
+  borderRadius: radii.md,
   boxSizing: 'border-box',
   transition: 'all 0.5s',
   fontWeight: 700,

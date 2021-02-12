@@ -4,12 +4,7 @@ import { Mdx } from '../components/Mdx';
 
 import { Heading } from '../../design-system/typography';
 
-import {
-  borderRadius,
-  colors,
-  fontsizes,
-  spacing
-} from '../../design-system/theme';
+import { radii, colors, fontsizes, spacing } from '../../design-system/theme';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
@@ -51,9 +46,9 @@ const Talk = ({
         border: defaultBorder,
         borderLeft: [defaultBorder, `2px solid ${colors.brand}`],
         borderTop: [`2px solid ${colors.brand}`, defaultBorder],
-        borderBottomRightRadius: borderRadius.lg,
-        borderTopRightRadius: [0, borderRadius.lg],
-        borderBottomLeftRadius: [borderRadius.lg, 0],
+        borderBottomRightRadius: radii.lg,
+        borderTopRightRadius: [0, radii.lg],
+        borderBottomLeftRadius: [radii.lg, 0],
         display: 'flex',
         flexDirection: ['column', 'row'],
         marginBottom: spacing.large,

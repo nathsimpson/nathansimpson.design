@@ -10,7 +10,7 @@ import { Logo } from '../../design-system/logo';
 import { Card } from '../../design-system/card';
 import { Text, Heading } from '../../design-system/typography';
 
-import { colors, spacing, borderRadius } from '../../design-system/theme';
+import { colors, spacing, radii } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
 
 const DsComponents = {
@@ -36,7 +36,7 @@ const components = {
       css={{
         border: `1px solid ${colors.border}`,
         // padding: '16px 24px',
-        borderRadius: borderRadius.lg
+        borderRadius: radii.lg
       }}
     >
       <LiveProvider code={props.children} scope={DsComponents} {...props}>

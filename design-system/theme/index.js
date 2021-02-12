@@ -27,7 +27,7 @@ export const breakpoints = {
   xl: 1280
 };
 
-export const borderRadius = {
+export const radii = {
   sm: 3,
   md: 6,
   lg: 12

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { colors, borderRadius, boxShadow } from '../theme';
+import { colors, radii, boxShadow } from '../theme';
 
 export const Card = ({ children, style, as = 'div' }) => {
   const Tag = as;
@@ -11,7 +11,7 @@ export const Card = ({ children, style, as = 'div' }) => {
         background: colors.backgroundEmphasis,
         border: `1px solid ${colors.border}`,
         padding: '16px 24px',
-        borderRadius: borderRadius.lg,
+        borderRadius: radii.lg,
         ...style
       }}
     >

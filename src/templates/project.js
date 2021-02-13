@@ -6,8 +6,6 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Mdx } from '../components/Mdx';
 
-import { Heading } from '../../design-system/typography';
-
 export default ({ data }) => {
   const project = data.mdx;
   return (

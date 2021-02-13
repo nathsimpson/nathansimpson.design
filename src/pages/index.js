@@ -10,7 +10,6 @@ import { Talks } from '../components/Talks';
 import { Dribbble, Layout } from '../components';
 import { Logo } from '../../design-system/logo';
 
-import { Box } from '../../design-system/box';
 import { Cluster } from '../../design-system/cluster';
 import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';

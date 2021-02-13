@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Mdx } from '../components/Mdx';
 
 import { Heading } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
-import { radii, colors, fontsizes, spacing } from '../../design-system/theme';
+import { radii, colors, spacing } from '../../design-system/theme';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (

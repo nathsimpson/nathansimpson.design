@@ -13,13 +13,14 @@ import {
 } from '../../design-system/theme';
 
 const Portfolio = ({ data }) => (
-  <div>
+  <div css={{ width: '100%' }}>
     <Heading level={3} css={{ marginBottom: spacing.large }}>
       Projects
     </Heading>
     <div
       css={{
         display: 'grid',
+        width: '100%',
         gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
         gap: 12
       }}
@@ -59,7 +60,8 @@ const PortfolioItemDiv = styled.div({
   paddingBottom: '100%',
   overflow: 'hidden',
   position: 'relative',
-  margin: 0
+  margin: 0,
+  textAlign: 'left'
 });
 
 const PortfolioItemImage = styled.img({

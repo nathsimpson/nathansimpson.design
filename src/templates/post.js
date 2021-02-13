@@ -6,7 +6,8 @@ import { graphql } from 'gatsby';
 import { Mdx } from '../components/Mdx';
 import Layout from '../components/src/layout';
 import { Header } from '../components';
-import { colors } from '../../design-system/theme';
+import { Divider } from '../../design-system/divider';
+import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
 
 export default ({ data }) => {
@@ -20,17 +21,12 @@ export default ({ data }) => {
       </Helmet>
       <Header backLink="/blog" />
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
-        <div
-          css={{
-            borderBottom: `1px solid ${colors.border}`
-          }}
-        >
+        <Stack gap="small">
           <Heading level={1}>{post.frontmatter.title}</Heading>
           <div
             css={{
               display: 'flex',
-              alignItems: 'center',
-              margin: '12px 0px'
+              alignItems: 'center'
             }}
           >
             <Text size="small" as="span">
@@ -39,8 +35,10 @@ export default ({ data }) => {
                 ` Updated on ${post.frontmatter.updated}`}
             </Text>
           </div>
-        </div>
-        <Mdx>{post.body}</Mdx>
+
+          <Divider />
+          <Mdx>{post.body}</Mdx>
+        </Stack>
       </div>
     </Layout>
   );

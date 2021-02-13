@@ -1,8 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { ElementType, ReactElement, StyleHTMLAttributes } from 'react';
 import { colors, radii, boxShadow } from '../theme';
 
-export const Card = ({ children, style, as = 'div' }) => {
+type CardProps = {
+  children: ReactElement;
+  as: ElementType;
+  style: StyleHTMLAttributes<'div'>;
+};
+
+export const Card = ({ children, style, as = 'div' }: CardProps) => {
   const Tag = as;
   return (
     <Tag

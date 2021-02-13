@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Box } from '../box';
 
 import { colors, fontsizes, fontFamilies } from '../theme';
 
 type TextProps = {
   as?: 'p' | 'span';
+  children: String;
   color?: 'default' | 'emphasis';
   size?: keyof typeof fontsizes;
 };
@@ -15,14 +17,15 @@ export const Text = ({
   as = 'p',
   ...props
 }: TextProps) => {
-  const Tag = as;
   return (
-    <Tag
+    <Box
+      as={as}
       {...props}
-      style={{
+      css={{
         color: colors[colorMap[color]],
         fontFamily: fontFamilies.body,
-        fontSize: fontsizes[size]
+        fontSize: fontsizes[size],
+        maxWidth: 800
       }}
     />
   );

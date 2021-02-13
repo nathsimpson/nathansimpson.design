@@ -10,6 +10,7 @@ import { Box, FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { Logo } from '../../design-system/logo';
 import { Card } from '../../design-system/card';
+import { Cluster } from '../../design-system/cluster';
 import { Text, Heading } from '../../design-system/typography';
 
 import { colors, spacing, radii } from '../../design-system/theme';
@@ -19,6 +20,7 @@ const DsComponents = {
   Badge,
   Box,
   Card,
+  Cluster,
   Divider,
   FlexBox,
   Heading,
@@ -28,7 +30,7 @@ const DsComponents = {
 };
 
 const components = {
-  p: props => <Text {...props} />,
+  p: props => <Text marginBottom="medium" {...props} />,
   h1: props => <Heading level={1} {...props} />,
   h2: props => <Heading level={2} {...props} />,
   h3: props => <Heading level={3} {...props} />,
@@ -36,6 +38,7 @@ const components = {
   h5: props => <Heading level={5} {...props} />,
   h6: props => <Heading level={6} {...props} />,
   hr: () => <Divider />,
+  wrapper: ({ children }) => <Stack gap="large">{children}</Stack>,
   code: props => (
     <div
       css={{

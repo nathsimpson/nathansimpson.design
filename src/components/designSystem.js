@@ -6,6 +6,7 @@ import { Layout, Header } from '../components';
 import { Mdx } from './Mdx';
 
 import { Heading, Text } from '../../design-system/typography';
+import { Stack } from '../../design-system/stack';
 
 export const DesignSystemTemplate = ({ data }) => {
   const post = data.mdx;
@@ -32,18 +33,22 @@ export const DesignSystemTemplate = ({ data }) => {
               <Mdx>{post.body}</Mdx>
             </div>
           ) : (
-            <div>
+            <Stack gap="medium">
               <Heading level={1}>Design System</Heading>
               <Text>
-                Did I mention I love design systems? To proove it, this entire
+                Did I mention I love design systems? To prove it, this entire
                 website is based on one.
               </Text>
 
               <Text>
                 Explore all of the components in the left sidebar, or view the
-                code on GitHub.
+                code on{' '}
+                <a href="https://github.com/nathsimpson/nathansimpson.design">
+                  GitHub
+                </a>
+                .
               </Text>
-            </div>
+            </Stack>
           )}
         </div>
       </div>
@@ -53,9 +58,10 @@ export const DesignSystemTemplate = ({ data }) => {
 
 const NavigationBar = ({ data }) => {
   return (
-    <ul
+    <Stack
+      as="ul"
+      gap="small"
       css={{
-        marginTop: 24,
         listStyle: 'none',
         padding: 0
       }}
@@ -66,7 +72,9 @@ const NavigationBar = ({ data }) => {
         </Link>
       </li>
       {data
-        .filter(({ node: p }) => ['design-system'].includes(p.frontmatter.type))
+
+        .filter(({ node: p }) => p.frontmatter.type === 'design-system')
+        .sort(({ node }) => node.frontmatter.title)
         .map(({ node }) => {
           return (
             <li key={node.id}>
@@ -76,6 +84,6 @@ const NavigationBar = ({ data }) => {
             </li>
           );
         })}
-    </ul>
+    </Stack>
   );
 };

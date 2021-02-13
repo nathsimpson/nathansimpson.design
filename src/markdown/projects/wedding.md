@@ -6,6 +6,8 @@ imagesrc: 'wedding/cover.jpg'
 type: project
 ---
 
+# Nathan + Carrie Wedding
+
 For my wedding in February 2016, I designed the invitations, place cards, order of service brochures and event website, around a unified visual theme that matched the garden wedding ceremony with vintage touches.
 
 ![Image 1](https://files.nathansimpson.design/portfolio/wedding/img1.jpg 'Image 1')

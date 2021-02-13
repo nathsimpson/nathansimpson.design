@@ -1,18 +1,21 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Box, BoxProps } from '../box';
 
 import { colors, fontsizes, fontFamilies } from '../theme';
 
-type HeadingProps = {
+type HeadingProps = BoxProps & {
+  children: string;
   level: 1 | 2 | 3 | 4 | 5 | 6;
 };
 
 export const Heading = ({ level = 1, ...props }: HeadingProps) => {
-  const Tag = `h${level}`;
+  const tag = tagMap[level];
 
   return (
-    <Tag
+    <Box
       {...props}
+      as={tag}
       css={{
         fontFamily: fontFamilies.heading,
         lineHeight: 1.1,
@@ -50,3 +53,12 @@ const headings = {
     fontWeight: 600
   }
 };
+
+const tagMap = {
+  1: 'h1',
+  2: 'h2',
+  3: 'h3',
+  4: 'h4',
+  5: 'h5',
+  6: 'h6'
+} as const;

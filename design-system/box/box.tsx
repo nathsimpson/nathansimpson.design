@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { ReactElement } from 'react';
+import { ReactElement, ElementType } from 'react';
 
 import {
   BoxMarginProps,
@@ -13,6 +13,7 @@ import {
 } from './utils';
 
 export const Box = ({
+  as = 'div',
   bg = 'none',
   children,
   height,
@@ -66,8 +67,9 @@ export const Box = ({
     roundingTop
   });
 
+  const Tag = as;
   return (
-    <div
+    <Tag
       {...props}
       css={{
         backgroundColor: colorMap[bg],
@@ -80,13 +82,14 @@ export const Box = ({
       }}
     >
       {children}
-    </div>
+    </Tag>
   );
 };
 
 export type BoxProps = BoxMarginProps &
   BoxPaddingProps &
   BoxRadiiProps & {
+    as: ElementType;
     /** Background color */
     bg: 'none' | 'base' | 'emphasis';
     /** The content of this flex container. */

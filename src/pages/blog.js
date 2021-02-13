@@ -6,6 +6,7 @@ import { Layout, Header } from '../components';
 import { Mdx } from '../components/Mdx';
 import { Badge } from '../../design-system/badge';
 import { Card } from '../../design-system/card';
+import { Stack } from '../../design-system/stack';
 import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 
@@ -59,10 +60,10 @@ export default ({ data }) => (
   <Layout>
     <Header />
     <div css={{ maxWidth: 800, margin: '0 auto' }}>
-      <Heading level={1}>Blog</Heading>
-      <Text>A collection of thoughts and experiences.</Text>
+      <Stack gap="medium">
+        <Heading level={1}>Blog</Heading>
+        <Text>A collection of thoughts and experiences.</Text>
 
-      <div css={{ marginTop: 24 }}>
         {data.allMdx.edges
           .filter(({ node: p }) =>
             ['post', 'talk'].includes(p.frontmatter.type)
@@ -70,7 +71,7 @@ export default ({ data }) => (
           .map(({ node }) => {
             return <PostCard {...node} key={node.id} />;
           })}
-      </div>
+      </Stack>
     </div>
   </Layout>
 );

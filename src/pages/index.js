@@ -7,9 +7,11 @@ import Helmet from 'react-helmet';
 import Portfolio from '../components/Portfolio';
 import { Development } from '../components/Development';
 import { Talks } from '../components/Talks';
-import { Block, Contact, Dribbble, Layout } from '../components';
+import { Dribbble, Layout } from '../components';
 import { Logo } from '../../design-system/logo';
 
+import { Box } from '../../design-system/box';
+import { Cluster } from '../../design-system/cluster';
 import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
@@ -31,9 +33,10 @@ const Hero = () => {
           margin: '0 auto',
           boxSizing: 'border-box',
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           justifyContent: 'center',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          textAlign: 'center'
         }}
       >
         <Helmet>
@@ -42,14 +45,10 @@ const Hero = () => {
             content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
           />
         </Helmet>
-        <Stack gap="medium" align="start">
+        <Stack gap="medium" align="center">
           <Logo size="medium" />
-          <Heading level={1}>G'day, I'm Nath</Heading>
-          <div
-            css={{
-              maxWidth: 800
-            }}
-          >
+          <Heading level={1}>G'day, I'm Nath.</Heading>
+          <div css={{ maxWidth: 800 }}>
             <Text as="span">
               I'm a UI Designer &amp; Developer at{' '}
               <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney,
@@ -58,20 +57,11 @@ const Hero = () => {
             </Text>
           </div>
 
-          <div css={{ marginBottom: 12 }}>
-            <a css={{ display: 'inline', marginRight: 16 }} href="/about">
-              About
-            </a>
-            <a css={{ display: 'inline', marginRight: 16 }} href="/blog">
-              Blog
-            </a>
-            <a
-              css={{ display: 'inline', marginRight: 16 }}
-              href="/design-system"
-            >
-              Design System
-            </a>
-          </div>
+          <Cluster gap="small">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/design-system">Design System</a>
+          </Cluster>
         </Stack>
       </div>
     </div>
@@ -83,29 +73,35 @@ const App = ({ data }) => (
     <Hero />
 
     <Layout>
-      <Block>
-        <Heading level={2}>Design</Heading>
-        <p>
-          Design has been my passion for over 10 years. I focus on User
-          Interface (UI) Design for native and web apps, with the odd Branding
-          project here and there.
-        </p>
+      <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
+        <Stack
+          gap="xlarge"
+          align="center"
+          css={{ textAlign: 'center', width: '100%' }}
+        >
+          <Heading level={2}>Design</Heading>
+          <Text as="p">
+            Design has been my passion for over 10 years. I focus on User
+            Interface (UI) Design for native and web apps, with the odd Branding
+            project here and there.
+          </Text>
 
-        <Portfolio data={data} />
+          <Portfolio data={data} />
 
-        <Dribbble />
-      </Block>
+          <Dribbble />
+        </Stack>
 
-      <Divider />
+        <Divider />
 
-      <Development />
+        <Development />
 
-      <Divider />
+        <Divider />
 
-      <Block>
-        <Heading level={2}>Talks</Heading>
-        <Talks data={data} />
-      </Block>
+        <Stack align="center">
+          <Heading level={2}>Talks</Heading>
+          <Talks data={data} />
+        </Stack>
+      </Stack>
     </Layout>
   </Fragment>
 );

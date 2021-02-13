@@ -14,6 +14,7 @@
     "dev": "gatsby develop",
     "start": "yarn dev",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
+    "types": "tsc --project tsconfig.json",
     "lint": "eslint ."
   },
   "author": "Nathan Simpson",

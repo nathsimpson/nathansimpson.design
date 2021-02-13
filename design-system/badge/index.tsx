@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { ElementType } from 'react';
 import { colors, radii } from '../theme';
 import hexAlpha from 'hex-alpha';
 
@@ -10,7 +11,7 @@ const sizes = {
 
 type BadgeProps = {
   label: string;
-  // as: any;
+  as: ElementType;
   color: 'brand' | 'decorativeGreen' | 'decorativePurple';
   size: keyof typeof sizes;
 };

@@ -3,12 +3,12 @@ import { jsx } from '@emotion/core';
 import { Mdx } from '../components/Mdx';
 
 import { Heading } from '../../design-system/typography';
-
+import { Stack } from '../../design-system/stack';
 import { radii, colors, fontsizes, spacing } from '../../design-system/theme';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
-  <div>
+  <div css={{ textAlign: 'center' }}>
     <p>
       Occasionally I give talks at{' '}
       <a href="https://www.sydjs.com/" target="_blank">
@@ -53,6 +53,7 @@ const Talk = ({
         flexDirection: ['column', 'row'],
         marginBottom: spacing.large,
         maxWidth: 800,
+        textAlign: 'left',
         '&:hover': {
           textDecoration: 'none'
         },
@@ -75,32 +76,15 @@ const Talk = ({
         css={{
           display: 'flex',
           flexDirection: 'column',
-          flex: 1,
-          padding: spacing.large
+          flex: 1
         }}
       >
-        <Heading
-          level={3}
-          css={{
-            margin: 0,
-            fontSize: fontsizes.xlarge
-          }}
-        >
-          {title}
-        </Heading>
-        <p
-          css={{
-            marginTop: spacing.small,
-            marginBottom: spacing.none,
-            fontSize: fontsizes.small
-          }}
-        >
-          <Mdx>{body}</Mdx>
-          {'... '}
-          <span href={path} css={{ color: colors.orange }}>
+        <Stack gap="small" padding="large">
+          <Heading level={3}>{title}</Heading>
+          <span href={path} css={{ color: colors.brand }}>
             Watch now
           </span>
-        </p>
+        </Stack>
       </div>
     </a>
   );

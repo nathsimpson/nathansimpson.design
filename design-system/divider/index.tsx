@@ -6,7 +6,9 @@ export const Divider = () => {
   return (
     <hr
       css={{
-        border: `1px solid ${colors.border}`
+        border: `1px solid ${colors.border}`,
+        width: '100%',
+        margin: 0
       }}
     />
   );

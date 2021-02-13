@@ -18,9 +18,9 @@ import { Text } from '../../../design-system/typography';
 import { Stack } from '../../../design-system/stack';
 
 export default () => (
-  <footer style={{ textAlign: 'center' }}>
+  <footer>
     <Divider />
-    <Stack gap="medium" marginY="medium">
+    <Stack gap="medium" marginY="medium" align="center">
       <ul
         style={{
           margin: 0,

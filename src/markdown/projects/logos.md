@@ -6,6 +6,8 @@ imagesrc: 'logos/cover.jpg'
 type: project
 ---
 
+# Logo Designs
+
 ![Jayden Ojeda Motorsport](https://files.nathansimpson.design/portfolio/logos/1.jpg 'Jayden Ojeda Motorsport')
 
 ![Broadhead Tactical](https://files.nathansimpson.design/portfolio/logos/2.jpg 'Broadhead Tactical')

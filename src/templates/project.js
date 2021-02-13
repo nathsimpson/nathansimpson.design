@@ -19,7 +19,6 @@ export default ({ data }) => {
       <Header />
 
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
-        <Heading level={1}>{project.frontmatter.title}</Heading>
         <Mdx>{project.body}</Mdx>
       </div>
     </Layout>

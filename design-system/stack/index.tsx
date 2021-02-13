@@ -31,7 +31,7 @@ export const Stack: React.FunctionComponent<StackProps> = ({
 
   return (
     <Box
-      style={{
+      css={{
         display: 'grid',
         // prevent grid children from expanding the gap to fill the available space
         [dimension]: 'fit-content',

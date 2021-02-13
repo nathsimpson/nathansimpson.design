@@ -1,13 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Box, BoxProps } from '../box';
+import { Box, BoxMarginProps, BoxPaddingProps, BoxRadiiProps } from '../box';
 
 import { colors, fontsizes, fontFamilies } from '../theme';
 
-type HeadingProps = BoxProps & {
-  children: string;
-  level: 1 | 2 | 3 | 4 | 5 | 6;
-};
+type HeadingProps = BoxMarginProps &
+  BoxPaddingProps &
+  BoxRadiiProps & {
+    children: string;
+    level: 1 | 2 | 3 | 4 | 5 | 6;
+  };
 
 export const Heading = ({ level = 1, ...props }: HeadingProps) => {
   const tag = tagMap[level];

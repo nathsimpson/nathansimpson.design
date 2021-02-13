@@ -1,2 +1,5 @@
 .cache/
+.github/
 public/
+built-lambda/
+node_modules/

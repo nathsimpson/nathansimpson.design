@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core';
 import { Children, ReactNode } from 'react';
 import { Box, BoxProps } from '../box';
 import { spacing, SpacingType } from '../theme';
+import { forwardRefWithAs } from '../utils';
 
 const alignment = {
   center: 'center',
@@ -20,41 +21,39 @@ type ClusterProps = {
   gap?: SpacingType;
 } & BoxProps;
 
-export const Cluster = ({
-  align = 'start',
-  children,
-  gap = 'none',
-  ...props
-}: ClusterProps) => {
-  const resolvedAlign = alignment[align];
-  const resolvedGap = spacing[gap];
+export const Cluster = forwardRefWithAs<'div', ClusterProps>(
+  ({ align = 'start', children, gap = 'none', ...props }, ref) => {
+    const resolvedAlign = alignment[align];
+    const resolvedGap = spacing[gap];
 
-  return (
-    <Box
-      css={{
-        alignItems: resolvedAlign,
-        display: 'flex',
-        flexWrap: 'wrap',
-        marginLeft: -resolvedGap,
-        marginTop: -resolvedGap,
-        overflow: 'hidden'
-      }}
-      {...props}
-    >
-      {Children.map(children, child =>
-        child !== null && child !== undefined ? (
-          <div
-            css={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              paddingLeft: resolvedGap,
-              paddingTop: resolvedGap
-            }}
-          >
-            {child}
-          </div>
-        ) : null
-      )}
-    </Box>
-  );
-};
+    return (
+      <Box
+        css={{
+          alignItems: resolvedAlign,
+          display: 'flex',
+          flexWrap: 'wrap',
+          marginLeft: -resolvedGap,
+          marginTop: -resolvedGap,
+          overflow: 'hidden'
+        }}
+        ref={ref}
+        {...props}
+      >
+        {Children.map(children, child =>
+          child !== null && child !== undefined ? (
+            <div
+              css={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                paddingLeft: resolvedGap,
+                paddingTop: resolvedGap
+              }}
+            >
+              {child}
+            </div>
+          ) : null
+        )}
+      </Box>
+    );
+  }
+);

@@ -1,6 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { ReactElement, ElementType } from 'react';
+import {
+  ReactElement,
+  ElementType,
+  FunctionComponent,
+  StyleHTMLAttributes
+} from 'react';
 
 import {
   BoxMarginProps,
@@ -12,7 +17,7 @@ import {
   colorMap
 } from './utils';
 
-export const Box = ({
+export const Box: FunctionComponent<BoxProps> = ({
   as = 'div',
   bg = 'none',
   children,
@@ -36,10 +41,10 @@ export const Box = ({
   roundingLeft,
   roundingRight,
   roundingTop,
-  // style,
+  style,
   width,
   ...props
-}: BoxProps) => {
+}) => {
   const marginObj = getMarginStyles({
     margin,
     marginBottom,
@@ -89,15 +94,15 @@ export const Box = ({
 export type BoxProps = BoxMarginProps &
   BoxPaddingProps &
   BoxRadiiProps & {
-    as: ElementType;
+    as?: ElementType;
     /** Background color */
-    bg: 'none' | 'base' | 'emphasis';
+    bg?: 'none' | 'base' | 'emphasis';
     /** The content of this flex container. */
-    children: ReactElement;
+    children?: ReactElement | string;
     /** Height */
-    height: number;
+    height?: number;
     /** Width */
-    width: number;
+    width?: number;
     /** The regular style prop */
-    // style: StylePropType,
+    style?: StyleHTMLAttributes<'div'>;
   };

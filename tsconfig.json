@@ -12,5 +12,5 @@
     "noEmit": true,
     "allowJs": true
   },
-  "include": ["./src/**/*", "design-system/*",],
+  "include": ["./src/**/*", "design-system/*"],
 }

@@ -18,47 +18,45 @@ import { Text } from '../../../design-system/typography';
 import { Stack } from '../../../design-system/stack';
 
 export default () => (
-  <footer>
+  <Stack gap="medium" marginY="xlarge" align="center" as="footer">
     <Divider />
-    <Stack gap="medium" marginY="medium" align="center">
-      <ul
-        style={{
-          margin: 0,
-          fontSize: 26,
-          listStyle: 'none',
-          padding: 0
-        }}
-      >
-        {networks.map(network => (
-          <li
-            style={{ display: 'inline-block', margin: '0px 5px' }}
-            key={network.name}
+    <ul
+      style={{
+        margin: 0,
+        fontSize: 26,
+        listStyle: 'none',
+        padding: 0
+      }}
+    >
+      {networks.map(network => (
+        <li
+          style={{ display: 'inline-block', margin: '0px 5px' }}
+          key={network.name}
+        >
+          <a
+            css={{
+              color: colors.foreground,
+              textDecoration: 'none',
+
+              '&:hover': {
+                color: colors.link
+              }
+            }}
+            href={network.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <a
-              css={{
-                color: colors.foreground,
-                textDecoration: 'none',
+            <FontAwesomeIcon icon={network.icon} />
+          </a>
+        </li>
+      ))}
+    </ul>
 
-                '&:hover': {
-                  color: colors.link
-                }
-              }}
-              href={network.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={network.icon} />
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <Text size="xsmall" as="span">
-        &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
-      </Text>
-      <Logo size="small" />
-    </Stack>
-  </footer>
+    <Text size="xsmall" as="span">
+      &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
+    </Text>
+    <Logo size="small" />
+  </Stack>
 );
 
 const networks = [

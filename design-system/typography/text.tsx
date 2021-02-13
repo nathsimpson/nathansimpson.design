@@ -6,7 +6,7 @@ import { colors, fontsizes, fontFamilies } from '../theme';
 
 type TextProps = {
   as?: 'p' | 'span';
-  children: String;
+  children: string;
   color?: 'default' | 'emphasis';
   size?: keyof typeof fontsizes;
 };

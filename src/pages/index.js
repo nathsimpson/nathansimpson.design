@@ -57,7 +57,7 @@ const Hero = () => {
             </Text>
           </div>
 
-          <Cluster gap="small">
+          <Cluster gap="large">
             <a href="/about">About</a>
             <a href="/blog">Blog</a>
             <a href="/design-system">Design System</a>

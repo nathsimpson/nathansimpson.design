@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Block } from './src/block';
 import { Badge } from '../../design-system/badge';
 import { Card } from '../../design-system/card';
 import { Cluster } from '../../design-system/cluster';
@@ -85,7 +84,7 @@ const DevelopmentProject = ({ item }) => (
   >
     <Stack gap="small">
       <Heading level={4}>{item.name}</Heading>
-      <Text>
+      <Text size="small">
         {item.desc}{' '}
         <a href={item.link} css={{}} target="_blank" rel="noopener noreferrer">
           Learn more

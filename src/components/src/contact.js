@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Block } from './block';
 
 import { Heading, Text } from '../../../design-system/typography';
 
 export default () => (
-  <Block>
+  <div>
     <Heading level={2}>Contact Me</Heading>
     <Text>
       Would you like to get in touch? Feel free to message me through{' '}
@@ -18,5 +17,5 @@ export default () => (
       </a>
       .
     </Text>
-  </Block>
+  </div>
 );

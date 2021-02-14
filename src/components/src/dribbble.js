@@ -2,6 +2,7 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
+import { Stack } from '../../../design-system/stack';
 import { Heading, Text } from '../../../design-system/typography';
 
 export default class Dribbble extends React.Component {
@@ -28,10 +29,14 @@ export default class Dribbble extends React.Component {
 
   render() {
     return (
-      <div css={{ width: '100%' }}>
+      <Stack
+        gap="medium"
+        align="center"
+        css={{ textAlign: 'center', width: '100%' }}
+      >
         <Heading level={3}>Other work</Heading>
 
-        <Text css={{ marginBottom: 26 }}>
+        <Text>
           I occasionally post WIP designs on my{' '}
           <a
             href="https://dribbble.com/nathansimpson"
@@ -62,7 +67,7 @@ export default class Dribbble extends React.Component {
             </a>
           ))}
         </div>
-      </div>
+      </Stack>
     );
   }
 }

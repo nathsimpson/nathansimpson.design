@@ -46,7 +46,7 @@ module.exports = {
         extensions: ['.md', '.mdx'],
         defaultLayouts: {
           default: require.resolve('./src/templates/project.js'),
-          'design-system': require.resolve('./src/components/DesignSystem.js')
+          'design-system': require.resolve('./src/components/designSystem.js')
         }
       }
     },

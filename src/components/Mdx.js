@@ -37,6 +37,14 @@ const components = {
   h4: props => <Heading level={4} {...props} />,
   h5: props => <Heading level={5} {...props} />,
   h6: props => <Heading level={6} {...props} />,
+  em: props => (
+    <Text as="em" color="emphasis" css={{ fontStyle: 'normal' }} {...props} />
+  ),
+  img: props => (
+    <div style={{ width: '100%', textAlign: 'center' }}>
+      <img {...props} />
+    </div>
+  ),
   hr: () => <Divider />,
   wrapper: ({ children }) => <Stack gap="large">{children}</Stack>,
   code: props => (

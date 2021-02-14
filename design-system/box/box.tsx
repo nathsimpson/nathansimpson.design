@@ -1,11 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import {
-  ReactElement,
-  ElementType,
-  FunctionComponent,
-  StyleHTMLAttributes
-} from 'react';
+import { ReactNode, ElementType, StyleHTMLAttributes } from 'react';
 
 import {
   BoxMarginProps,
@@ -16,80 +11,85 @@ import {
   getRadiiStyles,
   colorMap
 } from './utils';
+import { forwardRefWithAs } from '../utils';
 
-export const Box: FunctionComponent<BoxProps> = ({
-  as = 'div',
-  bg = 'none',
-  children,
-  height,
-  margin,
-  marginBottom,
-  marginLeft,
-  marginRight,
-  marginTop,
-  marginX,
-  marginY,
-  padding,
-  paddingBottom,
-  paddingLeft,
-  paddingRight,
-  paddingTop,
-  paddingX,
-  paddingY,
-  rounding,
-  roundingBottom,
-  roundingLeft,
-  roundingRight,
-  roundingTop,
-  style,
-  width,
-  ...props
-}) => {
-  const marginObj = getMarginStyles({
-    margin,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    marginTop,
-    marginX,
-    marginY
-  });
+export const Box = forwardRefWithAs<'div', BoxProps>(
+  (
+    {
+      as: Tag = 'div',
+      bg = 'none',
+      children,
+      height,
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      marginX,
+      marginY,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      paddingX,
+      paddingY,
+      rounding,
+      roundingBottom,
+      roundingLeft,
+      roundingRight,
+      roundingTop,
+      style,
+      width,
+      ...props
+    },
+    ref
+  ) => {
+    const marginObj = getMarginStyles({
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      marginX,
+      marginY
+    });
 
-  const paddingObj = getPaddingStyles({
-    padding,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    paddingX,
-    paddingY
-  });
-  const radiiObj = getRadiiStyles({
-    rounding,
-    roundingBottom,
-    roundingLeft,
-    roundingRight,
-    roundingTop
-  });
+    const paddingObj = getPaddingStyles({
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      paddingX,
+      paddingY
+    });
+    const radiiObj = getRadiiStyles({
+      rounding,
+      roundingBottom,
+      roundingLeft,
+      roundingRight,
+      roundingTop
+    });
 
-  const Tag = as;
-  return (
-    <Tag
-      {...props}
-      css={{
-        backgroundColor: colorMap[bg],
-        ...radiiObj,
-        ...marginObj,
-        ...paddingObj,
-        height,
-        width
-        // ...style
-      }}
-    >
-      {children}
-    </Tag>
-  );
-};
+    return (
+      <Tag
+        {...props}
+        css={{
+          backgroundColor: colorMap[bg],
+          ...radiiObj,
+          ...marginObj,
+          ...paddingObj,
+          height,
+          width
+          // ...style
+        }}
+      >
+        {children}
+      </Tag>
+    );
+  }
+);
 
 export type BoxProps = BoxMarginProps &
   BoxPaddingProps &
@@ -98,7 +98,7 @@ export type BoxProps = BoxMarginProps &
     /** Background color */
     bg?: 'none' | 'base' | 'emphasis';
     /** The content of this flex container. */
-    children?: ReactElement | string;
+    children?: ReactNode | string;
     /** Height */
     height?: number;
     /** Width */

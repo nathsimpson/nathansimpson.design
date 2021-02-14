@@ -7,6 +7,8 @@ type: project
 skills: UI, Logo Design
 ---
 
+# AgriVita
+
 AgriVita is an iPhone Application designed to help Australian backyard-gardeners take care of their plants and animals.
 
 Add your plants for growth and water tracking, organise them into plots, and receive reminders to water them as well as suggestions for fertilisation, weeding, or protecting them from birds or insects.

@@ -2,6 +2,9 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
+import { Stack } from '../../../design-system/stack';
+import { Heading, Text } from '../../../design-system/typography';
+
 export default class Dribbble extends React.Component {
   constructor() {
     super();
@@ -26,9 +29,14 @@ export default class Dribbble extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3 css={{ marginBottom: 0 }}>Other work</h3>
-        <p css={{ marginBottom: 26 }}>
+      <Stack
+        gap="medium"
+        align="center"
+        css={{ textAlign: 'center', width: '100%' }}
+      >
+        <Heading level={3}>Other work</Heading>
+
+        <Text>
           I occasionally post WIP designs on my{' '}
           <a
             href="https://dribbble.com/nathansimpson"
@@ -38,13 +46,14 @@ export default class Dribbble extends React.Component {
             Dribbble
           </a>{' '}
           page.
-        </p>
+        </Text>
         <div
           css={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gridColumnGap: 16,
-            gridRowGap: 16
+            gridRowGap: 16,
+            width: '100%'
           }}
         >
           {this.state.shots.map(({ id, link, image, description }) => (
@@ -59,7 +68,7 @@ export default class Dribbble extends React.Component {
             </a>
           ))}
         </div>
-      </div>
+      </Stack>
     );
   }
 }

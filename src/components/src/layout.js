@@ -3,7 +3,7 @@ import { jsx, Global } from '@emotion/core';
 import Helmet from 'react-helmet';
 
 import Footer from './footer';
-import { colors, fontsizes, headings, fontFamilies } from '../../theme';
+import { colors, fontsizes, fontFamilies } from '../../../design-system/theme';
 
 export default ({ children }) => (
   <div
@@ -21,6 +21,7 @@ export default ({ children }) => (
     </Helmet>
     <Global
       styles={{
+        // TODO: remove or clean me
         body: {
           fontSize: fontsizes.medium,
           margin: 0,
@@ -46,17 +47,8 @@ export default ({ children }) => (
           maxWidth: 800
         },
 
-        h1: headings[1],
-        h2: headings[2],
-        h3: headings[3],
-        h4: headings[4],
-
         img: {
           maxWidth: '100%'
-        },
-
-        hr: {
-          border: `1px solid ${colors.brand}`
         },
 
         blockquote: {

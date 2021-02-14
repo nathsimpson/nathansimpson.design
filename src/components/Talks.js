@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { borderRadius, colors, fontsizes, spacing } from '../theme';
+import { Heading } from '../../design-system/typography';
+import { Stack } from '../../design-system/stack';
+import { radii, colors, spacing } from '../../design-system/theme';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
-  <div>
+  <div css={{ textAlign: 'center' }}>
     <p>
       Occasionally I give talks at{' '}
       <a href="https://www.sydjs.com/" target="_blank">
@@ -18,7 +20,7 @@ export const Talks = ({ data }) => (
       meetups. Check out the recordings below, and come and say hi at the next
       one!
     </p>
-    {data.allMarkdownRemark.edges
+    {data.allMdx.edges
       .filter(({ node }) => node.frontmatter.type === 'talk')
       .map(({ node }) => (
         <Talk node={node} key={node.id} />
@@ -28,7 +30,7 @@ export const Talks = ({ data }) => (
 
 const Talk = ({
   node: {
-    html,
+    body,
     frontmatter: { path, youtubeid, title }
   }
 }) => {
@@ -43,13 +45,14 @@ const Talk = ({
         border: defaultBorder,
         borderLeft: [defaultBorder, `2px solid ${colors.brand}`],
         borderTop: [`2px solid ${colors.brand}`, defaultBorder],
-        borderBottomRightRadius: borderRadius.lg,
-        borderTopRightRadius: [0, borderRadius.lg],
-        borderBottomLeftRadius: [borderRadius.lg, 0],
+        borderBottomRightRadius: radii.lg,
+        borderTopRightRadius: [0, radii.lg],
+        borderBottomLeftRadius: [radii.lg, 0],
         display: 'flex',
         flexDirection: ['column', 'row'],
         marginBottom: spacing.large,
         maxWidth: 800,
+        textAlign: 'left',
         '&:hover': {
           textDecoration: 'none'
         },
@@ -72,31 +75,15 @@ const Talk = ({
         css={{
           display: 'flex',
           flexDirection: 'column',
-          flex: 1,
-          padding: spacing.large
+          flex: 1
         }}
       >
-        <h3
-          css={{
-            margin: 0,
-            fontSize: fontsizes.xlarge
-          }}
-        >
-          {title}
-        </h3>
-        <p
-          css={{
-            marginTop: spacing.small,
-            marginBottom: spacing.none,
-            fontSize: fontsizes.small
-          }}
-        >
-          {html.replace(/<\/?p>/g, '').slice(0, 148)}
-          {'... '}
-          <span href={path} css={{ color: colors.orange }}>
+        <Stack gap="small" padding="large">
+          <Heading level={3}>{title}</Heading>
+          <span href={path} css={{ color: colors.brand }}>
             Watch now
           </span>
-        </p>
+        </Stack>
       </div>
     </a>
   );

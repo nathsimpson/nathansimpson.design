@@ -5,21 +5,23 @@ import { graphql } from 'gatsby';
 import { Layout, Header } from '../components';
 import { Talks } from '../components/Talks';
 
+import { Heading } from '../../design-system/typography';
+
 export default ({ data }) => (
   <Layout>
     <Header />
-    <h1>Talks</h1>
+    <Heading level={1}>Talks</Heading>
     <Talks data={data} />
   </Layout>
 );
 
 export const talksQuery = graphql`
   query allTalks {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             title

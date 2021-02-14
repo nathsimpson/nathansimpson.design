@@ -3,12 +3,15 @@ import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
+import { Mdx } from '../components/Mdx';
 import Layout from '../components/src/layout';
 import { Header } from '../components';
-import { colors, fontsizes } from '../theme';
+import { Divider } from '../../design-system/divider';
+import { Stack } from '../../design-system/stack';
+import { Heading, Text } from '../../design-system/typography';
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
 
   return (
     <Layout>
@@ -18,26 +21,24 @@ export default ({ data }) => {
       </Helmet>
       <Header backLink="/blog" />
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
-        <div
-          css={{
-            borderBottom: `1px solid ${colors.border}`
-          }}
-        >
-          <h1>{post.frontmatter.title}</h1>
+        <Stack gap="small">
+          <Heading level={1}>{post.frontmatter.title}</Heading>
           <div
             css={{
               display: 'flex',
-              alignItems: 'center',
-              margin: '12px 0px',
-              fontSize: fontsizes.xsmall
+              alignItems: 'center'
             }}
           >
-            Posted on {post.frontmatter.date}.
-            {post.frontmatter.updated &&
-              ` Updated on ${post.frontmatter.updated}`}
+            <Text size="small" as="span">
+              Posted on {post.frontmatter.date}.
+              {post.frontmatter.updated &&
+                ` Updated on ${post.frontmatter.updated}`}
+            </Text>
           </div>
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          <Divider />
+          <Mdx>{post.body}</Mdx>
+        </Stack>
       </div>
     </Layout>
   );
@@ -45,8 +46,8 @@ export default ({ data }) => {
 
 export const query = graphql`
   query PostsByPath($path: String) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         title
         path

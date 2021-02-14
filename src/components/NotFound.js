@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { Heading } from '../../design-system/typography';
+
 export default class NotFound extends React.Component {
   render() {
     return (
       <main>
-        <h1>404 Nothing was found</h1>
+        <Heading level={1}>404 Nothing was found</Heading>
       </main>
     );
   }

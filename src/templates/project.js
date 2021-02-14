@@ -4,9 +4,10 @@ import Layout from '../components/src/layout';
 import { Header } from '../components';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import { Mdx } from '../components/Mdx';
 
 export default ({ data }) => {
-  const project = data.markdownRemark;
+  const project = data.mdx;
   return (
     <Layout>
       <Helmet>
@@ -16,8 +17,7 @@ export default ({ data }) => {
       <Header />
 
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
-        <h1>{project.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: project.html }} />
+        <Mdx>{project.body}</Mdx>
       </div>
     </Layout>
   );
@@ -25,8 +25,8 @@ export default ({ data }) => {
 
 export const query = graphql`
   query ProjectsByPath($path: String) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         title
         path

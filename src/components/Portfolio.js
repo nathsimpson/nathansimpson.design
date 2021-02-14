@@ -3,19 +3,29 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { headings, spacing } from '../theme';
+import { Heading } from '../../design-system/typography';
+
+import {
+  fontsizes,
+  fontFamilies,
+  colors,
+  spacing
+} from '../../design-system/theme';
 
 const Portfolio = ({ data }) => (
-  <div>
-    <h3 css={{ marginBottom: spacing.large }}>Projects</h3>
+  <div css={{ width: '100%' }}>
+    <Heading level={3} css={{ marginBottom: spacing.large }}>
+      Projects
+    </Heading>
     <div
       css={{
         display: 'grid',
+        width: '100%',
         gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
         gap: 12
       }}
     >
-      {data.allMarkdownRemark.edges
+      {data.allMdx.edges
         .filter(({ node }) => node.frontmatter.type === 'project')
         .map(project => (
           <PortfolioItem
@@ -50,7 +60,8 @@ const PortfolioItemDiv = styled.div({
   paddingBottom: '100%',
   overflow: 'hidden',
   position: 'relative',
-  margin: 0
+  margin: 0,
+  textAlign: 'left'
 });
 
 const PortfolioItemImage = styled.img({
@@ -66,7 +77,13 @@ const PortfolioItemImage = styled.img({
 });
 
 const PortfolioItemLabel = styled.span({
-  ...headings['3'],
+  fontFamily: fontFamilies.heading,
+  lineHeight: 1.1,
+  color: colors.foregroundEmphasis,
+  margin: 0,
+  marginTop: spacing.xlarge,
+  fontSize: fontsizes.xlarge,
+  fontWeight: 600,
   display: 'none',
   position: 'absolute',
   bottom: 0,

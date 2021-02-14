@@ -6,6 +6,8 @@ imagesrc: 'needananny/cover.jpg'
 type: project
 ---
 
+# Need A Nanny
+
 With Need a Nanny, the nights off that parents desperately need are just a couple of taps away. Need a Nanny makes it simple to request a Nanny, and allows parents to rest at ease knowing that their children are in the care of a true professional.
 
 The Need a Nanny app makes this possible, thanks to it’s interface that puts an emphasis on convenience and speed, ensuring that those moments that parents have off of their feet aren’t spent tapping through confusing menus.

@@ -11,12 +11,15 @@ import {
   faDribbble
   // faYoutube
 } from '@fortawesome/fontawesome-free-brands';
-import logo from '../../images/logo.svg';
-import { colors, fontsizes } from '../../theme';
+import { Logo } from '../../../design-system/logo';
+import { colors } from '../../../design-system/theme';
+import { Divider } from '../../../design-system/divider';
+import { Text } from '../../../design-system/typography';
+import { Stack } from '../../../design-system/stack';
 
 export default () => (
-  <footer className="aboutMe" style={{ textAlign: 'center' }}>
-    <hr />
+  <Stack gap="medium" marginY="xlarge" align="center" as="footer">
+    <Divider />
     <ul
       style={{
         margin: 0,
@@ -48,18 +51,12 @@ export default () => (
         </li>
       ))}
     </ul>
-    <div style={{ marginBottom: '32px' }}>
-      <p
-        style={{
-          fontSize: fontsizes.xsmall,
-          margin: '12px auto'
-        }}
-      >
-        &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
-      </p>
-      <img src={logo} style={{ height: 32, position: 'relative', top: 6 }} />
-    </div>
-  </footer>
+
+    <Text size="xsmall" as="span">
+      &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
+    </Text>
+    <Logo size="small" />
+  </Stack>
 );
 
 const networks = [

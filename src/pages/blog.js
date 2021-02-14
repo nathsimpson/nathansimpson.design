@@ -2,10 +2,15 @@
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
-import { Card, Layout, Header, Badge } from '../components';
-import { fontsizes, colors } from '../theme';
+import { Layout, Header } from '../components';
+import { Mdx } from '../components/Mdx';
+import { Badge } from '../../design-system/badge';
+import { Card } from '../../design-system/card';
+import { Stack } from '../../design-system/stack';
+import { colors } from '../../design-system/theme';
+import { Heading, Text } from '../../design-system/typography';
 
-const PostCard = ({ id, frontmatter, html }) => {
+const PostCard = ({ id, frontmatter, body }) => {
   return (
     <Card
       style={{
@@ -18,7 +23,9 @@ const PostCard = ({ id, frontmatter, html }) => {
         }}
       >
         <a href={frontmatter.path}>
-          <h2 css={{ margin: 0 }}>{frontmatter.title}</h2>
+          <Heading level={2} css={{ margin: 0 }}>
+            {frontmatter.title}
+          </Heading>
         </a>
         <div
           css={{
@@ -28,10 +35,10 @@ const PostCard = ({ id, frontmatter, html }) => {
           }}
         >
           <Badge label={frontmatter.type} size="small" />
-          <span css={{ marginLeft: 6, fontSize: fontsizes.xsmall }}>
+          <Text as="span" size="small" css={{ marginLeft: 6 }}>
             Posted on {frontmatter.date}
             {frontmatter.updated && `. Updated on ${frontmatter.updated}`}
-          </span>
+          </Text>
         </div>
       </div>
 
@@ -42,11 +49,7 @@ const PostCard = ({ id, frontmatter, html }) => {
         />
       )}
 
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${html.slice(0, 220)}...`
-        }}
-      />
+      <Mdx>{body}</Mdx>
 
       <a href={frontmatter.path}>Read more</a>
     </Card>
@@ -57,29 +60,29 @@ export default ({ data }) => (
   <Layout>
     <Header />
     <div css={{ maxWidth: 800, margin: '0 auto' }}>
-      <h1>Blog</h1>
-      <p>A collection of thoughts and experiences.</p>
+      <Stack gap="medium">
+        <Heading level={1}>Blog</Heading>
+        <Text>A collection of thoughts and experiences.</Text>
 
-      <div css={{ marginTop: 24 }}>
-        {data.allMarkdownRemark.edges
+        {data.allMdx.edges
           .filter(({ node: p }) =>
             ['post', 'talk'].includes(p.frontmatter.type)
           )
           .map(({ node }) => {
             return <PostCard {...node} key={node.id} />;
           })}
-      </div>
+      </Stack>
     </div>
   </Layout>
 );
 
 export const talksQuery = graphql`
   query allPosts {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             date(formatString: "MMMM DD YYYY")

@@ -2,7 +2,8 @@
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
-import { colors } from '../../theme';
+import { colors, spacing } from '../../../design-system/theme';
+import { Cluster } from '../../../design-system/cluster';
 
 export const Logo = () => (
   <svg
@@ -74,17 +75,37 @@ export const BackIcon = () => {
   );
 };
 
+const navItems = [
+  {
+    url: '/',
+    label: 'Home'
+  },
+  {
+    url: '/about',
+    label: 'About'
+  },
+  {
+    url: '/blog',
+    label: 'Blog'
+  },
+  {
+    url: '/design-system',
+    label: 'Design System'
+  }
+];
+
 const Header = ({ backLink = '/' }) => (
   <header
     className="header"
     css={{
       maxWidth: '1300px',
-      margin: '0 auto',
+      margin: `0 auto ${spacing.large}px`,
       padding: '20px 0px',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems: 'center'
+      alignItems: 'center',
+      borderBottom: `1px solid ${colors.border}`
     }}
   >
     <div css={{ display: 'flex', flex: 1 }}>
@@ -111,7 +132,29 @@ const Header = ({ backLink = '/' }) => (
       <Logo />
     </Link>
 
-    <div css={{ display: 'flex', flex: 1, alignItems: 'flex-end' }} />
+    <div css={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }}>
+      <Cluster gap="medium" align="end">
+        {navItems.map(({ url, label }) => (
+          <Link
+            key={url}
+            exact
+            to={url}
+            css={{
+              display: 'flex',
+              alignItems: 'center',
+              color: colors.link,
+              textDecoration: 'none',
+              '&:hover': {
+                color: colors.linkHover,
+                textDecoration: 'none'
+              }
+            }}
+          >
+            {label}
+          </Link>
+        ))}
+      </Cluster>
+    </div>
   </header>
 );
 

@@ -6,6 +6,8 @@ imagesrc: 'thegarage/cover.jpg'
 type: project
 ---
 
+# The Garage
+
 > The Garage is the digital extension of Sydney’s car culture. Japanese, Offroad, Racing, Exotic, whatever your passion, you will find people, projects and events that will interest you.
 
 ![Awarded Best In Show by Industry Experts](https://files.nathansimpson.design/portfolio/thegarage/bestInShow-badge.svg)

@@ -3,12 +3,15 @@ import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
+import { Mdx } from '../components/Mdx';
 import Layout from '../components/src/layout';
 import { Header } from '../components';
-import { colors, fontsizes } from '../theme';
+import { colors } from '../../design-system/theme';
+
+import { Heading, Text } from '../../design-system/typography';
 
 export default ({ data }) => {
-  const talk = data.markdownRemark;
+  const talk = data.mdx;
 
   return (
     <Layout>
@@ -36,13 +39,13 @@ export default ({ data }) => {
             borderBottom: `1px solid ${colors.border}`
           }}
         >
-          <h1>{talk.frontmatter.title}</h1>
-          <div css={{ margin: '12px 0px', fontSize: fontsizes.xsmall }}>
+          <Heading level={1}>{talk.frontmatter.title}</Heading>
+          <Text as="span" css={{ margin: '12px 0px' }} size="small">
             Posted on {talk.frontmatter.date}
-          </div>
+          </Text>
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: talk.html }} />
+        <Mdx>{talk.body}</Mdx>
       </div>
     </Layout>
   );
@@ -50,8 +53,8 @@ export default ({ data }) => {
 
 export const query = graphql`
   query TalksByPath($path: String) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         title
         path

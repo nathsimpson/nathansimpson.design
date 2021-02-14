@@ -33,7 +33,23 @@ module.exports = {
         name: 'markdown-pages'
       }
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/design-system`,
+        name: 'design-system'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.md', '.mdx'],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/project.js'),
+          'design-system': require.resolve('./src/components/designSystem.js')
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,6 +62,7 @@ module.exports = {
         icon: `src/images/favicon-32.png` // This path is relative to the root of the site.
       }
     }
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

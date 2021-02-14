@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Block } from './src/block';
-import { Badge } from './src/badge';
-import Card from './src/card';
-import { colors, fontsizes } from '../theme';
+import { Badge } from '../../design-system/badge';
+import { Card } from '../../design-system/card';
+import { Cluster } from '../../design-system/cluster';
+import { Stack } from '../../design-system/stack';
 import { mq } from '../helpers/utils';
+
+import { Heading, Text } from '../../design-system/typography';
 
 const skills = [
   'JavaScript',
@@ -54,20 +56,20 @@ const developmentProjects = [
     skills: ['NodeJS']
   },
   {
-    name: 'hex-alpha',
-    openSource: true,
-    link: 'https://github.com/nathsimpson/hex-alpha',
-    type: 'Owner',
-    desc:
-      'A really simple package that enables you to specify an opacity for your HEX colours.',
-    skills: ['JavaScript']
-  },
-  {
     name: 'ITCLearning Website',
     link: '/itc-learning',
     desc:
       'A WordPress-based website for a previous employer; Featuring a custom theme and registrations for webinars and events.',
     skills: ['SCSS', 'WordPress', 'PHP']
+  },
+  {
+    name: 'nathansimpson.design',
+    openSource: true,
+    link: 'https://github.com/nathsimpson/nathansimpson.design',
+    type: 'Owner',
+    desc:
+      'This website is one of my favourite side-projects. All of the code is available on GitHub for your enjoyment.',
+    skills: ['TypeScript', 'Gatsby', 'Design Systems']
   }
 ];
 
@@ -76,74 +78,60 @@ const DevelopmentProject = ({ item }) => (
     as="li"
     style={{
       listStyle: 'none',
-      maxWidth: 600
+      maxWidth: 600,
+      textAlign: 'left'
     }}
   >
-    <h4
-      css={{
-        marginTop: 0,
-        marginBottom: 6
-      }}
-    >
-      {item.name}
-    </h4>
-    <p
-      css={{
-        margin: '0px',
-        marginBottom: 12,
-        color: colors.foreground
-      }}
-      x
-    >
-      {item.desc}{' '}
-      <a href={item.link} css={{}} target="_blank" rel="noopener noreferrer">
-        Learn more
-      </a>
-    </p>
-    <div
-      css={{
-        fontSize: fontsizes.xsmall,
-        display: 'flex',
-        alignItems: 'center',
-        flexWrap: 'wrap'
-      }}
-    >
-      {item.team && (
-        <Badge
-          label="Team"
-          size="small"
-          color="purple"
-          style={{ marginRight: 4, marginBottom: 4 }}
-        />
-      )}
+    <Stack gap="small">
+      <Heading level={4}>{item.name}</Heading>
+      <Text size="small">
+        {item.desc}{' '}
+        <a href={item.link} css={{}} target="_blank" rel="noopener noreferrer">
+          Learn more
+        </a>
+      </Text>
+      <Cluster gap="xsmall">
+        {item.team && (
+          <Badge
+            label="Team"
+            size="small"
+            color="decorativePurple"
+            style={{ marginRight: 4, marginBottom: 4 }}
+          />
+        )}
 
-      {item.openSource && (
-        <Badge
-          label="Open Source"
-          size="small"
-          color="green"
-          style={{ marginRight: 4, marginBottom: 4 }}
-        />
-      )}
+        {item.openSource && (
+          <Badge
+            label="Open Source"
+            size="small"
+            color="decorativeGreen"
+            style={{ marginRight: 4, marginBottom: 4 }}
+          />
+        )}
 
-      {item.skills.map(skill => (
-        <Badge
-          label={skill}
-          size="small"
-          style={{ marginRight: 4, marginBottom: 4 }}
-          key={skill}
-        />
-      ))}
-    </div>
+        {item.skills.map(skill => (
+          <Badge
+            label={skill}
+            size="small"
+            style={{ marginRight: 4, marginBottom: 4 }}
+            key={skill}
+          />
+        ))}
+      </Cluster>
+    </Stack>
   </Card>
 );
 
 export const Development = () => {
   return (
-    <Block>
-      <h2>Development</h2>
+    <Stack
+      gap="medium"
+      align="center"
+      css={{ textAlign: 'center', width: '100%' }}
+    >
+      <Heading level={2}>Development</Heading>
 
-      <p>
+      <Text>
         I love bringing concepts to life through code. Most of my time is spent
         building products for awesome clients, as well as creating and
         contributing to open source libraries. I share many of my projects to{' '}
@@ -151,17 +139,17 @@ export const Development = () => {
           GitHub
         </a>
         .
-      </p>
+      </Text>
 
-      <p>I'm experienced with the following technologies...</p>
+      <Text>I'm experienced with the following technologies...</Text>
 
-      <ul
+      <Cluster
+        as="ul"
+        gap="small"
+        align="center"
         css={{
           maxWidth: 600,
-          listStyle: 'none',
-          padding: 0,
-          display: 'flex',
-          flexWrap: 'wrap'
+          listStyle: 'none'
         }}
       >
         {skills.map(item => (
@@ -172,13 +160,15 @@ export const Development = () => {
             style={{ marginRight: 6, marginBottom: 6 }}
           />
         ))}
-      </ul>
+      </Cluster>
 
-      <h3>Some projects I've worked on...</h3>
+      <Heading level={3}>Some projects I've worked on...</Heading>
+
       <ul
         css={mq({
           padding: 0,
           display: 'grid',
+          width: '100%',
           gap: 12,
           gridTemplateColumns: ['1fr', 'repeat(auto-fit, minmax(350px, 1fr))']
         })}
@@ -187,6 +177,6 @@ export const Development = () => {
           <DevelopmentProject item={item} key={item.name} />
         ))}
       </ul>
-    </Block>
+    </Stack>
   );
 };

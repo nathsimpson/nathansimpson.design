@@ -7,8 +7,14 @@ import Helmet from 'react-helmet';
 import Portfolio from '../components/Portfolio';
 import { Development } from '../components/Development';
 import { Talks } from '../components/Talks';
-import { Block, Contact, Dribbble, Layout, Logo } from '../components';
-import { colors } from '../theme';
+import { Dribbble, Layout } from '../components';
+import { Logo } from '../../design-system/logo';
+
+import { Cluster } from '../../design-system/cluster';
+import { colors } from '../../design-system/theme';
+import { Heading, Text } from '../../design-system/typography';
+import { Divider } from '../../design-system/divider';
+import { Stack } from '../../design-system/stack';
 
 const Hero = () => {
   return (
@@ -26,9 +32,10 @@ const Hero = () => {
           margin: '0 auto',
           boxSizing: 'border-box',
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           justifyContent: 'center',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          textAlign: 'center'
         }}
       >
         <Helmet>
@@ -37,27 +44,24 @@ const Hero = () => {
             content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
           />
         </Helmet>
-        <Logo />
-        <h1>Nathan Simpson</h1>
-        <p
-          css={{
-            maxWidth: 800
-          }}
-        >
-          I'm a UI Designer &amp; Developer at{' '}
-          <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney, Australia.
-          I'm passionate about Design Systems, and building products from
-          concept to delivery.
-        </p>
+        <Stack gap="medium" align="center">
+          <Logo size="medium" />
+          <Heading level={1}>G'day, I'm Nath.</Heading>
+          <div css={{ maxWidth: 800 }}>
+            <Text as="span">
+              I'm a UI Designer &amp; Developer at{' '}
+              <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney,
+              Australia. I'm passionate about Design Systems, and building
+              products from concept to delivery.
+            </Text>
+          </div>
 
-        <div css={{ marginBottom: 12 }}>
-          <a css={{ display: 'inline', marginRight: 16 }} href="/about">
-            About
-          </a>
-          <a css={{ display: 'inline', marginRight: 16 }} href="/blog">
-            Blog
-          </a>
-        </div>
+          <Cluster gap="large">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/design-system">Design System</a>
+          </Cluster>
+        </Stack>
       </div>
     </div>
   );
@@ -68,44 +72,46 @@ const App = ({ data }) => (
     <Hero />
 
     <Layout>
-      <Block>
-        <h2>Design</h2>
-        <p>
-          Design has been my passion for over 10 years. I focus on User
-          Interface (UI) Design for native and web apps, with the odd Branding
-          project here and there.
-        </p>
+      <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
+        <Stack
+          gap="xlarge"
+          align="center"
+          css={{ textAlign: 'center', width: '100%' }}
+        >
+          <Heading level={2}>Design</Heading>
+          <Text as="p">
+            Design has been my passion for over 10 years. I focus on User
+            Interface (UI) Design for native and web apps, with the odd Branding
+            project here and there.
+          </Text>
 
-        <Portfolio data={data} />
+          <Portfolio data={data} />
 
-        <Dribbble />
-      </Block>
+          <Dribbble />
+        </Stack>
 
-      <hr />
+        <Divider />
 
-      <Development />
+        <Development />
 
-      <hr />
+        <Divider />
 
-      <Block>
-        <h2>Talks</h2>
-        <Talks data={data} />
-      </Block>
-
-      <hr />
-
-      <Contact />
+        <Stack align="center">
+          <Heading level={2}>Talks</Heading>
+          <Talks data={data} />
+        </Stack>
+      </Stack>
     </Layout>
   </Fragment>
 );
 
 export const portfolioQuery = graphql`
   query IndexProjects {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          html
+          body
           frontmatter {
             path
             title

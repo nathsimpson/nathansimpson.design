@@ -28,7 +28,7 @@ export default class Dribbble extends React.Component {
 
   render() {
     return (
-      <div>
+      <div css={{ width: '100%' }}>
         <Heading level={3}>Other work</Heading>
 
         <Text css={{ marginBottom: 26 }}>

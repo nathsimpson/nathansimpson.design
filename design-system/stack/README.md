@@ -6,7 +6,9 @@ type: design-system
 
 # Stack
 
-This is a Stack component.
+Stack component is a core layout component that enables uniform spacing between children.
+
+The gap prop expects any of our theme spacing tokens.
 
 ```jsx
 <Stack gap="small">

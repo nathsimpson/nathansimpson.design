@@ -52,7 +52,8 @@ export default class Dribbble extends React.Component {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gridColumnGap: 16,
-            gridRowGap: 16
+            gridRowGap: 16,
+            width: '100%'
           }}
         >
           {this.state.shots.map(({ id, link, image, description }) => (

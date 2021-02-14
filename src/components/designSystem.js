@@ -74,7 +74,10 @@ const NavigationBar = ({ data }) => {
       {data
 
         .filter(({ node: p }) => p.frontmatter.type === 'design-system')
-        .sort(({ node }) => node.frontmatter.title)
+        .sort(({ node: { frontmatter: a } }, { node: { frontmatter: b } }) =>
+          // assumes no two pages will be named the same.
+          a.title > b.title ? 1 : -1
+        )
         .map(({ node }) => {
           return (
             <li key={node.id}>

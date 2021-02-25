@@ -28,10 +28,10 @@ export const Tag = ({
   color = 'brand',
   size = 'medium'
 }: TagProps) => {
-  const Tag = as || 'div';
+  const Div = as || 'div';
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
-    <Tag
+    <Div
       css={{
         border: `1px solid ${colorMap[color]}`,
         color: colorMap[color],
@@ -46,6 +46,6 @@ export const Tag = ({
       }}
     >
       {formattedLabel}
-    </Tag>
+    </Div>
   );
 };

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Badge } from '../../design-system/badge';
+import { Tag } from '../../design-system/tag';
 import { Card } from '../../design-system/card';
 import { Cluster } from '../../design-system/cluster';
 import { Stack } from '../../design-system/stack';
@@ -92,25 +92,25 @@ const DevelopmentProject = ({ item }) => (
       </Text>
       <Cluster gap="xsmall">
         {item.team && (
-          <Badge
+          <Tag
             label="Team"
             size="small"
-            color="decorativePurple"
+            color="purple"
             style={{ marginRight: 4, marginBottom: 4 }}
           />
         )}
 
         {item.openSource && (
-          <Badge
+          <Tag
             label="Open Source"
             size="small"
-            color="decorativeGreen"
+            color="green"
             style={{ marginRight: 4, marginBottom: 4 }}
           />
         )}
 
         {item.skills.map(skill => (
-          <Badge
+          <Tag
             label={skill}
             size="small"
             style={{ marginRight: 4, marginBottom: 4 }}
@@ -153,7 +153,7 @@ export const Development = () => {
         }}
       >
         {skills.map(item => (
-          <Badge
+          <Tag
             label={item}
             as="li"
             key={item}

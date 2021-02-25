@@ -9,28 +9,35 @@ const sizes = {
   small: 3
 };
 
-type BadgeProps = {
+const colorMap = {
+  brand: colors.brand,
+  purple: colors.decorative.purple,
+  green: colors.decorative.green
+} as const;
+
+type TagProps = {
   label: string;
   as: ElementType;
-  color: 'brand' | 'decorativeGreen' | 'decorativePurple';
+  color: keyof typeof colorMap;
   size: keyof typeof sizes;
 };
 
-export const Badge = ({
+export const Tag = ({
   label,
   as,
   color = 'brand',
   size = 'medium'
-}: BadgeProps) => {
+}: TagProps) => {
   const Tag = as || 'div';
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
     <Tag
       css={{
-        border: `1px solid ${colors[color]}`,
-        color: colors[color],
-        backgroundColor: hexAlpha(colors[color], 0.2),
+        border: `1px solid ${colorMap[color]}`,
+        color: colorMap[color],
+        backgroundColor: hexAlpha(colorMap[color], 0.2),
         borderRadius: radii.small,
+        display: 'inline-flex',
         fontSize: sizes[size] * 4,
         paddingTop: sizes[size],
         paddingBottom: sizes[size],

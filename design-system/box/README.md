@@ -6,12 +6,12 @@ type: design-system
 
 # Box
 
-Box is a layout component allows convenient usage of design tokens for.
+Box is a layout component that provides convenient APIs of design tokens for...
 
-- margin
-- padding
-- radii
-- background colors
+- Margin
+- Padding
+- Radii (border radius)
+- Background colors
 
 ```jsx
 <Box bg="emphasis" padding="medium">

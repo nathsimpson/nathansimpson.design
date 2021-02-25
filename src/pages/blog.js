@@ -3,25 +3,16 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
 import { Layout, Header } from '../components';
-import { Mdx } from '../components/Mdx';
 import { Badge } from '../../design-system/badge';
+import { Divider } from '../../design-system/divider';
 import { Card } from '../../design-system/card';
 import { Stack } from '../../design-system/stack';
-import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 
-const PostCard = ({ id, frontmatter, body }) => {
+const PostCard = ({ id, frontmatter, body, excerpt }) => {
   return (
-    <Card
-      style={{
-        marginBottom: 32
-      }}
-    >
-      <div
-        css={{
-          borderBottom: `1px solid ${colors.border}`
-        }}
-      >
+    <Card>
+      <div>
         <a href={frontmatter.path}>
           <Heading level={2} css={{ margin: 0 }}>
             {frontmatter.title}
@@ -41,17 +32,24 @@ const PostCard = ({ id, frontmatter, body }) => {
           </Text>
         </div>
       </div>
+      <Stack gap="small">
+        <Divider />
 
-      {frontmatter.youtubeid && (
-        <img
-          css={{ width: '100%', height: 200, objectFit: 'cover' }}
-          src={`https://i.ytimg.com/vi/${frontmatter.youtubeid}/hqdefault.jpg`}
+        {frontmatter.youtubeid && (
+          <img
+            css={{ width: '100%', height: 200, objectFit: 'cover' }}
+            src={`https://i.ytimg.com/vi/${frontmatter.youtubeid}/hqdefault.jpg`}
+          />
+        )}
+
+        <p
+          dangerouslySetInnerHTML={{
+            __html: frontmatter.description || excerpt
+          }}
         />
-      )}
 
-      <Mdx>{body}</Mdx>
-
-      <a href={frontmatter.path}>Read more</a>
+        <a href={frontmatter.path}>Read more</a>
+      </Stack>
     </Card>
   );
 };
@@ -60,9 +58,11 @@ export default ({ data }) => (
   <Layout>
     <Header />
     <div css={{ maxWidth: 800, margin: '0 auto' }}>
-      <Stack gap="medium">
-        <Heading level={1}>Blog</Heading>
-        <Text>A collection of thoughts and experiences.</Text>
+      <Stack gap="xxlarge">
+        <Stack gap="medium" marginX="xlarge">
+          <Heading level={1}>Blog</Heading>
+          <Text>A collection of thoughts and experiences.</Text>
+        </Stack>
 
         {data.allMdx.edges
           .filter(({ node: p }) =>
@@ -83,6 +83,7 @@ export const talksQuery = graphql`
         node {
           id
           body
+          excerpt
           frontmatter {
             path
             date(formatString: "MMMM DD YYYY")

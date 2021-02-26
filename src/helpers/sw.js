@@ -1,7 +1,7 @@
-const PKG = require("../../package.json");
-const minify = require("babel-minify");
-const path = require("path");
-const fs = require("fs");
+const PKG = require('../../package.json');
+const minify = require('babel-minify');
+const path = require('path');
+const fs = require('fs');
 
 const NAME = `'nathan-simpson_${PKG.version}'`;
 
@@ -15,15 +15,15 @@ const listFilesInFolder = (dir, root) => {
   fs.readdirSync(dir)
     .filter(
       file =>
-        !file.startsWith(".") &&
-        file !== "sw.min.js" &&
-        file !== "sw.template.js"
+        !file.startsWith('.') &&
+        file !== 'sw.min.js' &&
+        file !== 'sw.template.js'
     )
     .forEach(file => {
       if (!isDirectory(dir, file)) {
-        const subPath = `${dir}/${file.replace("index.html", "")}`;
+        const subPath = `${dir}/${file.replace('index.html', '')}`;
         const filePath = path.relative(root, subPath);
-        const ext = fs.statSync(subPath).isDirectory() ? "/" : "";
+        const ext = fs.statSync(subPath).isDirectory() ? '/' : '';
         files.push(JSON.stringify(`${filePath}${ext}`));
       } else {
         files = [...files, ...listFilesInFolder(`${dir}/${file}`, root)];
@@ -34,7 +34,7 @@ const listFilesInFolder = (dir, root) => {
 
 const getTemplateText = (NAME, filesToCache) => {
   let template = fs
-    .readFileSync("src/templates/sw.template.js", "utf8")
+    .readFileSync('src/templates/sw.template.js', 'utf8')
     .replace(/\{\{NAME\}\}/g, NAME)
     .replace(/\{\{FILES\}\}/g, filesToCache);
 
@@ -42,7 +42,7 @@ const getTemplateText = (NAME, filesToCache) => {
   return minified.code;
 };
 
-const filesToCache = listFilesInFolder("public");
+const filesToCache = listFilesInFolder('public');
 const swFile = getTemplateText(NAME, filesToCache);
 
-fs.writeFileSync("public/sw.min.js", swFile);
+fs.writeFileSync('public/sw.min.js', swFile);

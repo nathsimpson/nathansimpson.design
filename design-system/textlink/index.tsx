@@ -7,7 +7,10 @@ import { colors, fontsizes, FontSizeType, fontFamilies } from '../theme';
 const getStyles = (size?: FontSizeType) => ({
   color: colors.link,
   fontFamily: fontFamilies.body,
-  fontSize: size ? fontsizes[size] : 'auto'
+  fontSize: size ? fontsizes[size] : 'auto',
+  '&:hover, &:focus': {
+    color: colors.linkHover
+  }
 });
 
 export const TextLink = ({

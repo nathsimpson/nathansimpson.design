@@ -53,3 +53,4 @@ export const fontsizes = {
 
 export type SpacingType = keyof typeof spacing;
 export type RadiiType = keyof typeof radii;
+export type FontSizeType = keyof typeof fontsizes;

@@ -12,6 +12,7 @@ import { Stack } from '../../design-system/stack';
 import { Logo } from '../../design-system/logo';
 import { Card } from '../../design-system/card';
 import { Cluster } from '../../design-system/cluster';
+import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
 import { Text, Heading } from '../../design-system/typography';
 
 import { colors, spacing, radii } from '../../design-system/theme';
@@ -29,7 +30,9 @@ const DsComponents = {
   Logo,
   Stack,
   Tag,
-  Text
+  Text,
+  TextLink,
+  TextLinkGatsby
 };
 
 const components = {

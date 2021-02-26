@@ -15,6 +15,7 @@ import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
+import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
 
 const Hero = () => {
   return (
@@ -50,16 +51,16 @@ const Hero = () => {
           <div css={{ maxWidth: 800 }}>
             <Text as="span">
               I'm a UI Designer &amp; Developer at{' '}
-              <a href="https://thinkmill.com.au">Thinkmill</a> in Sydney,
-              Australia. I'm passionate about Design Systems, and building
-              products from concept to delivery.
+              <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
+              Sydney, Australia. I'm passionate about Design Systems, and
+              building products from concept to delivery.
             </Text>
           </div>
 
           <Cluster gap="large">
-            <a href="/about">About</a>
-            <a href="/blog">Blog</a>
-            <a href="/design-system">Design System</a>
+            <TextLinkGatsby to="/about">About</TextLinkGatsby>
+            <TextLinkGatsby to="/blog">Blog</TextLinkGatsby>
+            <TextLinkGatsby to="/design-system">Design System</TextLinkGatsby>
           </Cluster>
         </Stack>
       </div>

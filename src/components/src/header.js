@@ -4,6 +4,7 @@ import { jsx } from '@emotion/core';
 
 import { colors, spacing } from '../../../design-system/theme';
 import { Cluster } from '../../../design-system/cluster';
+import { TextLinkGatsby } from '../../../design-system/textlink';
 
 export const Logo = () => (
   <svg
@@ -135,23 +136,9 @@ const Header = ({ backLink = '/' }) => (
     <div css={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }}>
       <Cluster gap="medium" align="end">
         {navItems.map(({ url, label }) => (
-          <Link
-            key={url}
-            exact
-            to={url}
-            css={{
-              display: 'flex',
-              alignItems: 'center',
-              color: colors.link,
-              textDecoration: 'none',
-              '&:hover': {
-                color: colors.linkHover,
-                textDecoration: 'none'
-              }
-            }}
-          >
+          <TextLinkGatsby key={url} exact to={url}>
             {label}
-          </Link>
+          </TextLinkGatsby>
         ))}
       </Cluster>
     </div>

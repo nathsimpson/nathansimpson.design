@@ -6,8 +6,6 @@ type: design-system
 
 # Button
 
-Button allows
-
 ```jsx
 <Stack gap="small">
   <Button label="Submit" size="medium" weight="primary" />
@@ -17,9 +15,11 @@ Button allows
 
 ## LinkButton
 
+Shares the same styles as a Button, but works as an anchor link.
+
 ```jsx
 <Stack gap="small">
-  <LinkButton label="Next" size="medium" weight="primary" />
-  <LinkButton label="Next" size="medium" weight="secondary" />
+  <LinkButton href="#" label="Next" size="medium" weight="primary" />
+  <LinkButton href="#" label="Next" size="medium" weight="secondary" />
 </Stack>
 ```

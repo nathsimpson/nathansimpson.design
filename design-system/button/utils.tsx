@@ -32,7 +32,7 @@ export const useButtonStyles = ({
     boxSizing: 'border-box',
     lineHeight: 1,
     ...weights[weight]
-  };
+  } as const;
 };
 
 const weights = {
@@ -40,7 +40,7 @@ const weights = {
     border: 'none',
     color: 'white',
     backgroundColor: colors.brand,
-    '&:hover': {
+    '&:hover, &:focus': {
       backgroundColor: hexAlpha(colors.brand, 0.8),
       textDecoration: 'none'
     }
@@ -49,7 +49,7 @@ const weights = {
     border: `2px solid ${colors.brand}`,
     color: colors.brand,
     background: 'none',
-    '&:hover': {
+    '&:hover, &:focus': {
       backgroundColor: hexAlpha(colors.brand, 0.2),
       textDecoration: 'none'
     }

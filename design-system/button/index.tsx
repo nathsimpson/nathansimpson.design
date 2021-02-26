@@ -7,7 +7,7 @@ export const Button = ({ label, size = 'medium', weight }: ButtonProps) => {
   const styles = useButtonStyles({ size, weight });
 
   return (
-    <button css={{ ...styles }} type="button">
+    <button css={styles} type="button">
       {label}
     </button>
   );
@@ -21,5 +21,5 @@ export const LinkButton = ({
   href: 'string';
 }) => {
   const styles = useButtonStyles({ size, weight });
-  return <a css={{ ...styles }}>{label}</a>;
+  return <a css={styles}>{label}</a>;
 };

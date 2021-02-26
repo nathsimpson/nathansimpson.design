@@ -39,7 +39,7 @@ const baseInputStyles = {
   width: '100%',
   maxWidth: 400,
   padding: '0.75rem',
-  borderRadius: radii.md,
+  borderRadius: radii.medium,
   boxSizing: 'border-box',
   transition: 'all 0.5s',
   '&:hover': {
@@ -86,7 +86,7 @@ const FormSubmit = styled.input({
   color: colors.link,
   marginTop: 6,
   padding: '12px 24px',
-  borderRadius: radii.md,
+  borderRadius: radii.medium,
   boxSizing: 'border-box',
   transition: 'all 0.5s',
   fontWeight: 700,

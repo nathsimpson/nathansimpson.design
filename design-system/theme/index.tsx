@@ -29,9 +29,9 @@ export const breakpoints = {
 
 export const radii = {
   none: 0,
-  sm: 3,
-  md: 6,
-  lg: 12
+  small: 3,
+  medium: 6,
+  large: 12
 } as const;
 
 export const boxShadow = {

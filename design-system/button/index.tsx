@@ -31,6 +31,8 @@ const useButtonStyles = ({ size }) => {
     color: 'white',
     borderRadius: radii[size],
     backgroundColor: colors.brand,
+    display: 'block',
+    width: 'fit-content',
 
     '&:hover': {
       backgroundColor: hexAlpha(colors.brand, 0.8),

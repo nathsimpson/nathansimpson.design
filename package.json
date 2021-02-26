@@ -12,7 +12,7 @@
     "build:lambda": "netlify-lambda build functions",
     "build:gatsby": "gatsby build",
     "build:sw": "node src/helpers/sw.js --disabled-for-now",
-    "build": "yarn build:lambda && build:gatsby",
+    "build": "yarn build:lambda && yarn build:gatsby",
     "dev": "gatsby develop",
     "start": "yarn dev",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",

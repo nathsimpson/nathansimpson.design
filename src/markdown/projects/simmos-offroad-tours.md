@@ -8,7 +8,7 @@ type: project
 
 # Simmo's Offroad Tours
 
-Simmo's Offroad Tours is 4WD Tourism Company in Orange NSW, providing winery tours, scenic 4wd tours and camping holidays in the central west of New South Wales.
+Simmo's Offroad Tours is an outdoor tourism company in Orange NSW, providing winery tours, scenic 4wd tours and camping holidays in the central west of New South Wales.
 
 It is owned by my father, who is a former Police Officer. He started the business when I was first getting interested in Graphic Design, and the business has been a great outlet for me to learn valuable skills I have used throughout my career.
 

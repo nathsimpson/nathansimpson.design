@@ -3,6 +3,26 @@ import { colors } from './colors';
 import { spacing } from './index';
 
 export const ColorsExample = () => {
+  const colorsArr: { label: string; value: string }[] = [];
+
+  const generateCards = ({
+    parent = '',
+    value
+  }: {
+    parent?: string;
+    value: object;
+  }) =>
+    Object.keys(value).forEach((c: string) => {
+      console.log(c);
+      if (typeof value[c] === 'string') {
+        colorsArr.push({ label: `${parent}.${c}`, value: value[c] });
+      } else {
+        generateCards({ parent: `${parent}.${c}`, value: value[c] });
+      }
+    });
+
+  generateCards({ value: colors });
+
   return (
     <div
       style={{
@@ -12,14 +32,14 @@ export const ColorsExample = () => {
         gap: spacing.small
       }}
     >
-      {Object.keys(colors).map(c => (
-        <Color name={c} color={colors[c]} key={c} />
+      {colorsArr.map(c => (
+        <Color {...c} key={c.label} />
       ))}
     </div>
   );
 };
 
-const Color = ({ name, color }) => {
+const Color = ({ label, value }) => {
   return (
     <div
       style={{
@@ -31,7 +51,7 @@ const Color = ({ name, color }) => {
         style={{
           width: '100%',
           height: 100,
-          backgroundColor: color,
+          backgroundColor: value,
           border: `1px solid ${colors.border}`
         }}
       />
@@ -42,8 +62,8 @@ const Color = ({ name, color }) => {
           backgroundColor: colors.backgroundEmphasis
         }}
       >
-        <p>{name}</p>
-        <p>Hex: {color.toString()}</p>
+        <p>{label}</p>
+        <p>Hex: {value.toString()}</p>
       </div>
     </div>
   );

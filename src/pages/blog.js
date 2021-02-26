@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
 import { Layout, Header } from '../components';
-import { Badge } from '../../design-system/badge';
+import { Tag } from '../../design-system/tag';
 import { Divider } from '../../design-system/divider';
 import { Card } from '../../design-system/card';
 import { Stack } from '../../design-system/stack';
@@ -25,7 +25,7 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
             margin: '12px 0px'
           }}
         >
-          <Badge label={frontmatter.type} size="small" />
+          <Tag label={frontmatter.type} size="small" />
           <Text as="span" size="small" css={{ marginLeft: 6 }}>
             Posted on {frontmatter.date}
             {frontmatter.updated && `. Updated on ${frontmatter.updated}`}

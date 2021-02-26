@@ -26,8 +26,10 @@ export const colors = {
   border: palette.neutral50,
   foregroundEmphasis: palette.neutral100,
   foreground: palette.neutral90,
-  decorativeGreen: '#52e409',
-  decorativePurple: '#E509E3',
+  decorative: {
+    green: '#52e409',
+    purple: '#E509E3'
+  },
   input: {
     background: palette.neutral40,
     foreground: palette.neutral90,

@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import dracula from 'prism-react-renderer/themes/dracula';
 
+import { Button, LinkButton } from '../../design-system/button';
 import { Badge } from '../../design-system/badge';
 import { Box, FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
@@ -19,11 +20,13 @@ import { Divider } from '../../design-system/divider';
 const DsComponents = {
   Badge,
   Box,
+  Button,
   Card,
   Cluster,
   Divider,
   FlexBox,
   Heading,
+  LinkButton,
   Logo,
   Stack,
   Text
@@ -52,7 +55,7 @@ const components = {
       css={{
         border: `1px solid ${colors.border}`,
         // padding: '16px 24px',
-        borderRadius: radii.lg
+        borderRadius: radii.large
       }}
     >
       <LiveProvider code={props.children} scope={DsComponents} {...props}>

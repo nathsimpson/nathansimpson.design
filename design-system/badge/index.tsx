@@ -30,7 +30,7 @@ export const Badge = ({
         border: `1px solid ${colors[color]}`,
         color: colors[color],
         backgroundColor: hexAlpha(colors[color], 0.2),
-        borderRadius: radii.sm,
+        borderRadius: radii.small,
         fontSize: sizes[size] * 4,
         paddingTop: sizes[size],
         paddingBottom: sizes[size],

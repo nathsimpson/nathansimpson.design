@@ -18,7 +18,7 @@ export const Card = ({ children, style, as = 'div' }: CardProps) => {
         background: colors.backgroundEmphasis,
         border: `1px solid ${colors.border}`,
         padding: '16px 24px',
-        borderRadius: radii.lg,
+        borderRadius: radii.large,
         ...style
       }}
     >

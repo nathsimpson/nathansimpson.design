@@ -33,7 +33,7 @@ const listFilesInFolder = (dir, root) => {
 };
 
 const getTemplateText = (NAME, filesToCache) => {
-  let template = fs
+  const template = fs
     .readFileSync('src/templates/sw.template.js', 'utf8')
     .replace(/\{\{NAME\}\}/g, NAME)
     .replace(/\{\{FILES\}\}/g, filesToCache);

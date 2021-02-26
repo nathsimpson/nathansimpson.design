@@ -4,19 +4,23 @@ import { jsx } from '@emotion/core';
 import { Heading } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
 import { radii, colors, spacing } from '../../design-system/theme';
+import { TextLink } from '../../design-system/textlink';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ textAlign: 'center' }}>
     <p>
       Occasionally I give talks at{' '}
-      <a href="https://www.sydjs.com/" target="_blank">
+      <TextLink href="https://www.sydjs.com/" target="_blank">
         SydJS
-      </a>
+      </TextLink>
       {' and '}
-      <a href="https://www.meetup.com/en-AU/React-Sydney/" target="_blank">
+      <TextLink
+        href="https://www.meetup.com/en-AU/React-Sydney/"
+        target="_blank"
+      >
         React Sydney
-      </a>{' '}
+      </TextLink>{' '}
       meetups. Check out the recordings below, and come and say hi at the next
       one!
     </p>

@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
-import { Link } from 'gatsby';
 import { Layout, Header } from '../components';
 import { Mdx } from './Mdx';
 
 import { Heading, Text } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
+import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
 
 export const DesignSystemTemplate = ({ data }) => {
   const post = data.mdx;
@@ -43,9 +43,9 @@ export const DesignSystemTemplate = ({ data }) => {
               <Text>
                 Explore all of the components in the left sidebar, or view the
                 code on{' '}
-                <a href="https://github.com/nathsimpson/nathansimpson.design">
+                <TextLink href="https://github.com/nathsimpson/nathansimpson.design">
                   GitHub
-                </a>
+                </TextLink>
                 .
               </Text>
             </Stack>
@@ -67,9 +67,9 @@ const NavigationBar = ({ data }) => {
       }}
     >
       <li>
-        <Link to="/design-system">
+        <TextLinkGatsby to="/design-system">
           <a>Welcome</a>
-        </Link>
+        </TextLinkGatsby>
       </li>
       {data
 
@@ -81,9 +81,9 @@ const NavigationBar = ({ data }) => {
         .map(({ node }) => {
           return (
             <li key={node.id}>
-              <Link to={node.frontmatter.path} key={node.id}>
-                <a>{node.frontmatter.title}</a>
-              </Link>
+              <TextLinkGatsby to={node.frontmatter.path} key={node.id}>
+                {node.frontmatter.title}
+              </TextLinkGatsby>
             </li>
           );
         })}

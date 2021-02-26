@@ -7,6 +7,7 @@ import { Stack } from '../../design-system/stack';
 import { mq } from '../helpers/utils';
 
 import { Heading, Text } from '../../design-system/typography';
+import { TextLink } from '../../design-system/textlink';
 
 const skills = [
   'JavaScript',
@@ -86,9 +87,9 @@ const DevelopmentProject = ({ item }) => (
       <Heading level={4}>{item.name}</Heading>
       <Text size="small">
         {item.desc}{' '}
-        <a href={item.link} css={{}} target="_blank" rel="noopener noreferrer">
+        <TextLink href={item.link} target="_blank" rel="noopener noreferrer">
           Learn more
-        </a>
+        </TextLink>
       </Text>
       <Cluster gap="xsmall">
         {item.team && (
@@ -135,9 +136,9 @@ export const Development = () => {
         I love bringing concepts to life through code. Most of my time is spent
         building products for awesome clients, as well as creating and
         contributing to open source libraries. I share many of my projects to{' '}
-        <a href="https://github.com/nathsimpson" target="_blank">
+        <TextLink href="https://github.com/nathsimpson" target="_blank">
           GitHub
-        </a>
+        </TextLink>
         .
       </Text>
 

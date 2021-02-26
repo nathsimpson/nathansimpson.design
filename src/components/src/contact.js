@@ -2,19 +2,20 @@
 import { jsx } from '@emotion/core';
 
 import { Heading, Text } from '../../../design-system/typography';
+import { TextLink } from '../../../design-system/textlink';
 
 export default () => (
   <div>
     <Heading level={2}>Contact Me</Heading>
     <Text>
       Would you like to get in touch? Feel free to message me through{' '}
-      <a href="https://twitter.com/nathjsimpson" target="_blank">
+      <TextLink href="https://twitter.com/nathjsimpson" target="_blank">
         Twitter
-      </a>{' '}
+      </TextLink>{' '}
       or{' '}
-      <a href="https://www.linkedin.com/in/nathan-simpson-71512a75/?trk">
+      <TextLink href="https://www.linkedin.com/in/nathan-simpson-71512a75/?trk">
         LinkedIn
-      </a>
+      </TextLink>
       .
     </Text>
   </div>

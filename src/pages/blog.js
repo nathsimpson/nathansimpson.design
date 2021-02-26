@@ -6,49 +6,45 @@ import { Layout, Header } from '../components';
 import { Tag } from '../../design-system/tag';
 import { Divider } from '../../design-system/divider';
 import { Card } from '../../design-system/card';
+import { FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
+import { TextLinkGatsby } from '../../design-system/textlink';
 
 const PostCard = ({ id, frontmatter, body, excerpt }) => {
+  const postedOn = `${frontmatter.date}. ${
+    frontmatter.updated ? `Updated ${frontmatter.updated}.` : ''
+  }`;
+
   return (
     <Card>
-      <div>
-        <a href={frontmatter.path}>
-          <Heading level={2} css={{ margin: 0 }}>
-            {frontmatter.title}
-          </Heading>
-        </a>
-        <div
-          css={{
-            display: 'flex',
-            alignItems: 'center',
-            margin: '12px 0px'
-          }}
-        >
-          <Tag label={frontmatter.type} size="small" />
-          <Text as="span" size="small" css={{ marginLeft: 6 }}>
-            Posted on {frontmatter.date}
-            {frontmatter.updated && `. Updated on ${frontmatter.updated}`}
-          </Text>
-        </div>
-      </div>
       <Stack gap="small">
+        <TextLinkGatsby to={frontmatter.path}>
+          <Heading level={2}>{frontmatter.title}</Heading>
+        </TextLinkGatsby>
+        <FlexBox orientation="horizontal" align="center">
+          <Tag label={frontmatter.type} size="small" />
+          <Text as="span" size="small" marginLeft="small">
+            {postedOn}
+          </Text>
+        </FlexBox>
+
         <Divider />
 
         {frontmatter.youtubeid && (
           <img
-            css={{ width: '100%', height: 200, objectFit: 'cover' }}
+            css={{ width: '100%', height: 400, objectFit: 'cover' }}
             src={`https://i.ytimg.com/vi/${frontmatter.youtubeid}/hqdefault.jpg`}
           />
         )}
 
-        <p
+        <Text
           dangerouslySetInnerHTML={{
             __html: frontmatter.description || excerpt
           }}
         />
 
-        <a href={frontmatter.path}>Read more</a>
+        <TextLinkGatsby to={frontmatter.path}>Read more</TextLinkGatsby>
       </Stack>
     </Card>
   );

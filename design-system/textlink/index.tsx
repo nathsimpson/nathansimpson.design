@@ -8,8 +8,10 @@ const getStyles = (size?: FontSizeType) => ({
   color: colors.link,
   fontFamily: fontFamilies.body,
   fontSize: size ? fontsizes[size] : 'auto',
+  textDecoration: 'none',
   '&:hover, &:focus': {
-    color: colors.linkHover
+    color: colors.linkHover,
+    textDecoration: 'underline'
   }
 });
 

@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 
 import { Stack } from '../../../design-system/stack';
 import { Heading, Text } from '../../../design-system/typography';
-
+import { TextLink } from '../../../design-system/textlink';
 export default class Dribbble extends React.Component {
   constructor() {
     super();
@@ -38,13 +38,13 @@ export default class Dribbble extends React.Component {
 
         <Text>
           I occasionally post WIP designs on my{' '}
-          <a
+          <TextLink
             href="https://dribbble.com/nathansimpson"
             target="_blank"
             rel="noopener noreferrer"
           >
             Dribbble
-          </a>{' '}
+          </TextLink>{' '}
           page.
         </Text>
         <div

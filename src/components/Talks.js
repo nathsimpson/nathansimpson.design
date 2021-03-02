@@ -57,9 +57,7 @@ const Talk = ({
         marginBottom: spacing.large,
         maxWidth: 800,
         textAlign: 'left',
-        '&:hover': {
-          textDecoration: 'none'
-        },
+        textDecoration: 'none',
         '&:hover span': {
           textDecoration: 'underline'
         }

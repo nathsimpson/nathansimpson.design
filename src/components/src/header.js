@@ -88,10 +88,6 @@ const navItems = [
   {
     url: '/blog',
     label: 'Blog'
-  },
-  {
-    url: '/design-system',
-    label: 'Design System'
   }
 ];
 

@@ -36,7 +36,8 @@ const DsComponents = {
 };
 
 const components = {
-  p: props => <Text marginBottom="medium" {...props} />,
+  p: props => <Text {...props} />,
+  a: props => <TextLink {...props} />,
   h1: props => <Heading level={1} {...props} />,
   h2: props => <Heading level={2} {...props} />,
   h3: props => <Heading level={3} {...props} />,

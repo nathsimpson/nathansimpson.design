@@ -32,15 +32,6 @@ export default ({ children }) => (
           backgroundColor: colors.background
         },
 
-        a: {
-          color: colors.link,
-          textDecoration: 'none',
-
-          '&:hover': {
-            textDecoration: 'underline'
-          }
-        },
-
         p: {
           fontSize: fontsizes.medium,
           lineHeight: 1.5,

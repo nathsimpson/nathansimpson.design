@@ -9,6 +9,10 @@ type: design-system
 Tags are used to label, categorise or classify items using keywords that describe them.
 
 ```jsx
+import { Tag } from 'design-system/tag';
+```
+
+```jsx live
 <Tag label="Tag" size="medium" />
 ```
 
@@ -25,7 +29,7 @@ There are three colors to choose from...
 - green
 - purple
 
-```jsx
+```jsx live
 <Stack gap="xsmall" orientation="horizontal">
   <Tag label="brand" color="brand" />
   <Tag label="green" color="green" />

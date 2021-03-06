@@ -8,7 +8,7 @@ type: design-system
 
 This is a Card component.
 
-```jsx
+```jsx live
 <Card>
   <p>I'm in a card!</p>
 </Card>

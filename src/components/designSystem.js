@@ -50,7 +50,11 @@ const NavigationBar = ({ data }) => {
       </li>
       {data
 
-        .filter(({ node: p }) => p.frontmatter.type === 'design-system')
+        .filter(
+          ({ node: p }) =>
+            p.frontmatter.type === 'design-system' &&
+            p.frontmatter.title !== 'Design System'
+        )
         .sort(({ node: { frontmatter: a } }, { node: { frontmatter: b } }) =>
           // assumes no two pages will be named the same.
           a.title > b.title ? 1 : -1

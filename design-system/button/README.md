@@ -7,6 +7,10 @@ type: design-system
 # Button
 
 ```jsx
+import { Button, LinkButton } from 'design-system/button';
+```
+
+```jsx live
 <Stack gap="small">
   <Button label="Submit" size="medium" weight="primary" />
   <Button label="Submit" size="medium" weight="secondary" />
@@ -17,7 +21,8 @@ type: design-system
 
 Shares the same styles as a Button, but works as an anchor link.
 
-```jsx
+```jsx live
+// This is a commment
 <Stack gap="small">
   <LinkButton href="#" label="Next" size="medium" weight="primary" />
   <LinkButton href="#" label="Next" size="medium" weight="secondary" />

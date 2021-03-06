@@ -3,7 +3,8 @@ import { jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import dracula from 'prism-react-renderer/themes/dracula';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import { codeHighlightTheme } from './codeHighlightTheme';
 
 import { Button, LinkButton } from '../../design-system/button';
 import { Tag } from '../../design-system/tag';
@@ -15,7 +16,7 @@ import { Cluster } from '../../design-system/cluster';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
 import { Text, Heading } from '../../design-system/typography';
 
-import { colors, spacing, radii } from '../../design-system/theme';
+import { colors, spacing, radii, fontsizes } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
 
 const DsComponents = {
@@ -34,6 +35,61 @@ const DsComponents = {
   TextLink,
   TextLinkGatsby
 };
+
+const CodePreview = props => {
+  const className = props.className || '';
+  const matches = className.match(/language-(?<lang>.*)/);
+  return (
+    <Highlight
+      {...defaultProps}
+      code={props.children.trim()}
+      theme={codeHighlightTheme}
+      language={
+        matches && matches.groups && matches.groups.lang
+          ? matches.groups.lang
+          : ''
+      }
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre className={className} style={style}>
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })} key={i}>
+              {line.map((token, key) => (
+                <span {...getTokenProps({ token, key })} key={key} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  );
+};
+
+const CodeEditor = props => (
+  <div
+    css={{
+      border: `1px solid ${colors.border}`,
+      borderRadius: radii.medium
+    }}
+  >
+    <LiveProvider code={props.children} scope={DsComponents} {...props}>
+      <div
+        css={{
+          padding: spacing.medium
+        }}
+      >
+        <LivePreview />
+      </div>
+      <LiveError />
+      <LiveEditor
+        theme={codeHighlightTheme}
+        style={{
+          background: colors.backgroundEmphasis
+        }}
+      />
+    </LiveProvider>
+  </div>
+);
 
 const components = {
   p: props => <Text {...props} />,
@@ -54,32 +110,28 @@ const components = {
   ),
   hr: () => <Divider />,
   wrapper: ({ children }) => <Stack gap="large">{children}</Stack>,
-  code: props => (
-    <div
-      css={{
-        border: `1px solid ${colors.border}`,
-        // padding: '16px 24px',
-        borderRadius: radii.large
-      }}
-    >
-      <LiveProvider code={props.children} scope={DsComponents} {...props}>
-        <div
-          css={{
-            padding: spacing.medium
-          }}
-        >
-          <LivePreview />
-        </div>
-        <LiveError />
-        <LiveEditor
-          theme={dracula}
-          style={{
-            background: colors.backgroundEmphasis
-          }}
-        />
-      </LiveProvider>
-    </div>
-  )
+  code: props => {
+    if (props.live) {
+      return <CodeEditor {...props} />;
+    } else {
+      return <CodePreview {...props} />;
+    }
+  },
+  inlineCode: props => {
+    return (
+      <Text
+        as="pre"
+        css={{
+          display: 'inline',
+          color: colors.foregroundEmphasis,
+          backgroundColor: colors.backgroundEmphasis,
+          padding: spacing.xsmall,
+          borderRadius: radii.small
+        }}
+        {...props}
+      />
+    );
+  }
 };
 
 export const Mdx = ({ children }) => {

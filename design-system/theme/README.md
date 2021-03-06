@@ -12,7 +12,9 @@ A collection of core design tokens for the design system.
 
 ## Colors
 
-`import { colors } from 'design-system/theme';`
+```jsx
+import { colors } from 'design-system/theme';
+```
 
 Our colours are named with semantic meaning in mind.
 
@@ -27,7 +29,9 @@ We use two font family groups across the site.
 
 ## Spacing
 
-`import { spacing } from 'design-system/theme';`
+```jsx
+import { spacing } from 'design-system/theme';
+```
 
 - none (0)
 - xsmall (4)
@@ -40,16 +44,24 @@ We use two font family groups across the site.
 
 ## breakpoints
 
-`import { breakpoints } from 'design-system/theme';`
+```jsx
+import { breakpoints } from 'design-system/theme';
+```
 
 ## Radii
 
-`import { radii } from 'design-system/theme';`
+```jsx
+import { radii } from 'design-system/theme';
+```
 
 ## boxShadow
 
-`import { boxShadow } from 'design-system/theme';`
+```jsx
+import { boxShadow } from 'design-system/theme';
+```
 
 ## fontsizes
 
-`import { fontsizes } from 'design-system/theme';`
+```jsx
+import { fontsizes } from 'design-system/theme';
+```

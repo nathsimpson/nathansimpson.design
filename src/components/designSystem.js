@@ -27,30 +27,7 @@ export const DesignSystemTemplate = ({ data }) => {
       >
         <NavigationBar data={data.allMdx.edges} />
 
-        <div>
-          {post ? (
-            <div>
-              <Mdx>{post.body}</Mdx>
-            </div>
-          ) : (
-            <Stack gap="medium">
-              <Heading level={1}>Design System</Heading>
-              <Text>
-                Did I mention I love design systems? To prove it, this entire
-                website is based on one.
-              </Text>
-
-              <Text>
-                Explore all of the components in the left sidebar, or view the
-                code on{' '}
-                <TextLink href="https://github.com/nathsimpson/nathansimpson.design">
-                  GitHub
-                </TextLink>
-                .
-              </Text>
-            </Stack>
-          )}
-        </div>
+        <Mdx>{post.body}</Mdx>
       </div>
     </Layout>
   );

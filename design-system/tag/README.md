@@ -30,9 +30,9 @@ There are three colors to choose from...
 - purple
 
 ```jsx live
-<Stack gap="xsmall" orientation="horizontal">
+<Cluster gap="small">
   <Tag label="brand" color="brand" />
   <Tag label="green" color="green" />
   <Tag label="purple" color="purple" />
-</Stack>
+</Cluster>
 ```

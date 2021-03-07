@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { Footer } from './footer';
 import { colors, fontsizes, fontFamilies } from '../../design-system/theme';
 
+// TODO: delete this?
 export const Layout = ({ children }) => (
   <div
     style={{

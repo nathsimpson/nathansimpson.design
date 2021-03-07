@@ -21,7 +21,7 @@ export const DesignSystemTemplate = ({ data }) => {
         css={{
           display: 'grid',
           columnGap: 12,
-          gridTemplateColumns: '300px 1fr'
+          gridTemplateColumns: '240px 1fr'
         }}
       >
         <NavigationBar data={data.allMdx.edges} />

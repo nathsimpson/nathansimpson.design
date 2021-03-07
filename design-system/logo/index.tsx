@@ -7,7 +7,24 @@ const sizes = {
   medium: 50
 } as const;
 
-export const Logo = ({ size = 'medium' }: { size: keyof typeof sizes }) => (
+const hoverStyles = {
+  'g .outline': {
+    fill: colors.brand
+  },
+  'g .solid': {
+    fill: colors.background,
+    transition: 'fill 0.5s'
+  },
+  '&:hover g .outline': {
+    fill: colors.brandSecondary
+  },
+  '&:hover g .solid': {
+    fill: colors.brand
+  }
+}
+
+
+export const Logo = ({ size = 'medium', isInteractive }: { size: keyof typeof sizes, isInteractive: boolean }) => (
   <svg
     viewBox="0 0 158.6 102.8"
     css={{

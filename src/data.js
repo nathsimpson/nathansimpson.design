@@ -88,6 +88,13 @@ export const development_projects = [
     skills: ['TypeScript', 'React', 'React Native', 'GraphQL']
   },
   {
+    name: 'Balance Design System',
+    link: 'https://balance.reckon.com',
+    team: true,
+    desc: "Reckon's family of Design Systems for web and mobile experiences.",
+    skills: ['Design Systems', 'TypeScript', 'React', 'React Native']
+  },
+  {
     name: 'KeystoneJS',
     link: 'https://github.com/keystonejs/keystone-5/graphs/contributors',
     type: 'Contributor',
@@ -95,13 +102,6 @@ export const development_projects = [
     team: true,
     desc: 'KeystoneJS is a scalable platform and CMS for Node.js applications.',
     skills: ['NodeJS', 'React']
-  },
-  {
-    name: 'The Garage',
-    link: 'https://thegarageapp.com',
-    type: 'Owner',
-    desc: 'The Garage is an social network for car lovers in Sydney Australia.',
-    skills: ['React Native', 'Keystone']
   },
   {
     name: 'IsobelJS',

@@ -6,6 +6,7 @@ import { colors, fontsizes, FontSizeType, fontFamilies } from '../theme';
 
 const getStyles = (size?: FontSizeType) => ({
   color: colors.link,
+  cursor: 'pointer',
   fontFamily: fontFamilies.body,
   fontSize: size ? fontsizes[size] : 'auto',
   textDecoration: 'none',

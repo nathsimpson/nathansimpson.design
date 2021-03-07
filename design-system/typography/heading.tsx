@@ -40,7 +40,7 @@ const headings = {
   },
   3: {
     fontSize: fontsizes.xlarge,
-    fontWeight: 600
+    fontWeight: 900
   },
   4: {
     fontSize: fontsizes.xlarge,

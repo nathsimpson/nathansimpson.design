@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { Header, Layout, Mdx } from '../components';
+import { BackButton } from '../components/backButton';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
@@ -17,9 +18,11 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
       </Helmet>
-      <Header backLink="/blog" />
+      <Header />
       <div css={{ maxWidth: 800, margin: '0 auto' }}>
         <Stack gap="small">
+          <BackButton link="/blog" />
+
           <Heading level={1}>{post.frontmatter.title}</Heading>
           <div
             css={{

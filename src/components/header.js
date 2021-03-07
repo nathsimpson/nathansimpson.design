@@ -10,7 +10,7 @@ export const Logo = () => (
   <svg
     viewBox="0 0 158.6 102.8"
     css={{
-      height: 50,
+      height: 24,
       width: 'auto',
       'g .outline': {
         fill: colors.brand
@@ -57,25 +57,6 @@ export const Logo = () => (
   </svg>
 );
 
-export const BackIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="icon"
-    >
-      <polyline points="15 18 9 12 15 6" />
-    </svg>
-  );
-};
-
 const navItems = [
   {
     url: '/',
@@ -97,33 +78,15 @@ export const Header = ({ backLink = '/' }) => (
     css={{
       maxWidth: '1300px',
       margin: `0 auto ${spacing.large}px`,
-      padding: '20px 0px',
+      padding: '8px 0px',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems: 'center',
-      borderBottom: `1px solid ${colors.border}`
+      alignItems: 'center'
+      // borderBottom: `1px solid ${colors.border}`
     }}
   >
-    <div css={{ display: 'flex', flex: 1 }}>
-      <Link
-        exact
-        to={backLink}
-        css={{
-          display: 'flex',
-          alignItems: 'center',
-          color: colors.link,
-          textDecoration: 'none',
-          '&:hover': {
-            color: colors.linkHover,
-            textDecoration: 'none'
-          }
-        }}
-      >
-        <BackIcon />
-        Back
-      </Link>
-    </div>
+    {/* <BackButton link={backLink} /> */}
 
     <Link exact to="/">
       <Logo />

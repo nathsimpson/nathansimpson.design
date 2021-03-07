@@ -2,9 +2,9 @@
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
-import { colors, spacing } from '../../../design-system/theme';
-import { Cluster } from '../../../design-system/cluster';
-import { TextLinkGatsby } from '../../../design-system/textlink';
+import { colors, spacing } from '../../design-system/theme';
+import { Cluster } from '../../design-system/cluster';
+import { TextLinkGatsby } from '../../design-system/textlink';
 
 export const Logo = () => (
   <svg
@@ -91,7 +91,7 @@ const navItems = [
   }
 ];
 
-const Header = ({ backLink = '/' }) => (
+export const Header = ({ backLink = '/' }) => (
   <header
     className="header"
     css={{
@@ -140,5 +140,3 @@ const Header = ({ backLink = '/' }) => (
     </div>
   </header>
 );
-
-export default Header;

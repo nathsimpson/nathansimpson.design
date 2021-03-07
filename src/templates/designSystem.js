@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
-import { DesignSystemTemplate } from '../components/designSystem';
+import { DesignSystemTemplate } from '../components';
 
 export default ({ data }) => {
   return <DesignSystemTemplate data={data} />;

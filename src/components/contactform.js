@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { radii, colors, fontsizes } from '../../../design-system/theme';
+import { radii, colors, fontsizes } from '../../design-system/theme';
 import hexAlpha from 'hex-alpha';
 
-export default () => (
+export const ContactForm = () => (
   <div style={{ width: '100%' }}>
     <h2 style={{ textAlign: 'center' }}>Contact Me</h2>
     <form

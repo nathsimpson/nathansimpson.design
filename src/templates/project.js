@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import Layout from '../components/src/layout';
-import { Header } from '../components';
+import { Header, Layout, Mdx } from '../components';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { Mdx } from '../components/Mdx';
 
 export default ({ data }) => {
   const project = data.mdx;

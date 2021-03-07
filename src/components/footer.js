@@ -11,13 +11,13 @@ import {
   faDribbble,
   faYoutube
 } from '@fortawesome/fontawesome-free-brands';
-import { colors } from '../../../design-system/theme';
-import { Divider } from '../../../design-system/divider';
-import { Text } from '../../../design-system/typography';
-import { TextLinkGatsby } from '../../../design-system/textlink';
-import { Stack } from '../../../design-system/stack';
+import { colors } from '../../design-system/theme';
+import { Divider } from '../../design-system/divider';
+import { Text } from '../../design-system/typography';
+import { TextLinkGatsby } from '../../design-system/textlink';
+import { Stack } from '../../design-system/stack';
 
-export default () => (
+export const Footer = () => (
   <Stack gap="medium" marginY="xlarge" align="center" as="footer">
     <Divider />
 

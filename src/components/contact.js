@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { Heading, Text } from '../../../design-system/typography';
-import { TextLink } from '../../../design-system/textlink';
+import { Heading, Text } from '../../design-system/typography';
+import { TextLink } from '../../design-system/textlink';
 
-export default () => (
+export const Contact = () => (
   <div>
     <Heading level={2}>Contact Me</Heading>
     <Text>

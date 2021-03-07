@@ -3,9 +3,7 @@ import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { Mdx } from '../components/Mdx';
-import Layout from '../components/src/layout';
-import { Header } from '../components';
+import { Header, Layout, Mdx } from '../components';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';

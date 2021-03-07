@@ -2,10 +2,10 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
-import { Stack } from '../../../design-system/stack';
-import { Heading, Text } from '../../../design-system/typography';
-import { TextLink } from '../../../design-system/textlink';
-export default class Dribbble extends React.Component {
+import { Stack } from '../../design-system/stack';
+import { Heading, Text } from '../../design-system/typography';
+import { TextLink } from '../../design-system/textlink';
+export class Dribbble extends React.Component {
   constructor() {
     super();
     this.state = {

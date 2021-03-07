@@ -12,7 +12,7 @@ import {
   spacing
 } from '../../design-system/theme';
 
-const Portfolio = ({ data }) => (
+export const Portfolio = ({ data }) => (
   <div css={{ width: '100%' }}>
     <Heading level={3} css={{ marginBottom: spacing.large }}>
       Projects
@@ -105,5 +105,3 @@ const PortfolioItemGradient = styled.span({
     background: 'linear-gradient(rgba(37, 45, 52, 0), #000)'
   }
 });
-
-export default Portfolio;

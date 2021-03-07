@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Heading } from '../../design-system/typography';
 
-export default class NotFound extends React.Component {
+export class NotFound extends React.Component {
   render() {
     return (
       <main>

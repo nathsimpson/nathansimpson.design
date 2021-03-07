@@ -2,10 +2,10 @@
 import { jsx, Global } from '@emotion/core';
 import Helmet from 'react-helmet';
 
-import Footer from './footer';
-import { colors, fontsizes, fontFamilies } from '../../../design-system/theme';
+import { Footer } from './footer';
+import { colors, fontsizes, fontFamilies } from '../../design-system/theme';
 
-export default ({ children }) => (
+export const Layout = ({ children }) => (
   <div
     style={{
       width: '100%',

@@ -4,10 +4,7 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-import Portfolio from '../components/Portfolio';
-import { Development } from '../components/Development';
-import { Talks } from '../components/Talks';
-import { Dribbble, Layout } from '../components';
+import { Portfolio, Development, Talks, Dribbble, Layout } from '../components';
 import { Logo } from '../../design-system/logo';
 
 import { Cluster } from '../../design-system/cluster';

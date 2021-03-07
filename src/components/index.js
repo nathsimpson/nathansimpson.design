@@ -1,8 +1,13 @@
-import Footer from './src/footer';
-import Header from './src/header';
-import Contact from './src/contact';
-import Layout from './src/layout';
-import ContactForm from './src/contactform';
-import Dribbble from './src/dribbble';
-
-export { Contact, ContactForm, Dribbble, Footer, Header, Layout };
+export { Contact } from './contact';
+export { ContactForm } from './contactform';
+export { codeHighlightTheme } from './codeHighlightTheme';
+export { DesignSystemTemplate } from './designSystem';
+export { Development } from './Development';
+export { Dribbble } from './dribbble';
+export { Footer } from './footer';
+export { Header } from './header';
+export { Layout } from './layout';
+export { Mdx } from './Mdx';
+export { NotFound } from './NotFound';
+export { Portfolio } from './Portfolio';
+export { Talks } from './Talks';

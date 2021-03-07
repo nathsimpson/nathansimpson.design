@@ -84,6 +84,7 @@ const CodeEditor = props => (
       <LiveEditor
         theme={codeHighlightTheme}
         style={{
+          fontSize: fontsizes.medium,
           background: colors.backgroundEmphasis
         }}
       />

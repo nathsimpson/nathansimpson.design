@@ -1,6 +1,6 @@
 import React from 'react';
-import { colors } from './colors';
-import { spacing } from './index';
+import { colors } from '../colors';
+import { spacing } from '../index';
 
 export const ColorsExample = () => {
   const colorsArr: { label: string; value: string }[] = [];

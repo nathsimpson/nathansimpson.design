@@ -13,6 +13,6 @@ Logo has two sizes...
 - small
 - medium
 
-```js
+```jsx live
 <Logo size="medium" />
 ```

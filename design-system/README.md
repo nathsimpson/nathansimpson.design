@@ -6,6 +6,6 @@ type: design-system
 
 # Design System
 
-Did I mention I love design systems? To prove it, this entire website is based on one.
+I created this Design System to showcase my experience and interest in Design Systems.
 
-Explore all of the components in the left sidebar, or view the code on [GitHub](https://github.com/nathsimpson/nathansimpson.design).
+It is totally open source, but is currently not published for public consumption. Instead, you can explore the code on [GitHub](https://github.com/nathsimpson/nathansimpson.design), or experiment with each of the components in their previews.

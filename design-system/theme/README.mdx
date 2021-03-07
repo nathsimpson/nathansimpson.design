@@ -1,0 +1,94 @@
+---
+title: Theme
+path: '/design-system/theme'
+type: design-system
+---
+
+import { ColorsExample } from './examples/colors';
+import { RadiiExample } from './examples/radii';
+import { SpacingExample } from './examples/spacing';
+
+# Theme
+
+A collection of core design tokens for the design system.
+
+- Colors
+- Spacing
+- Radii
+- breakpoints
+- boxShadow
+- fontsizes
+- fontFamilies
+
+## Colors
+
+Our colours are named with semantic meaning in mind.
+
+```jsx
+import { colors } from 'design-system/theme';
+```
+
+<ColorsExample />
+
+---
+
+## Spacing
+
+Tokens used for consistent margin or padding between elements.
+
+The best way to consume these tokens is through `<Box />` and other layout components, though they can be imported if needed.
+
+```jsx
+import { spacing } from 'design-system/theme';
+```
+
+<SpacingExample />
+
+---
+
+## Radii
+
+Tokens used for border radius.
+
+Radii can be used through utility props in `<Box />` component.
+
+```jsx
+import { radii } from 'design-system/theme';
+```
+
+<RadiiExample />
+
+---
+
+## breakpoints
+
+```jsx
+import { breakpoints } from 'design-system/theme';
+```
+
+---
+
+## boxShadow
+
+```jsx
+import { boxShadow } from 'design-system/theme';
+```
+
+---
+
+## fontsizes
+
+```jsx
+import { fontsizes } from 'design-system/theme';
+```
+
+---
+
+## fontFamilies
+
+We use two font family groups across the site.
+
+- heading
+- body
+
+The best way to consume these tokens is through `<Text />` and `<Heading />` components.

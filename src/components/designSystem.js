@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet';
 import { Layout, Header } from '../components';
 import { Mdx } from './Mdx';
 
-import { Heading, Text } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
-import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
+import { TextLinkGatsby } from '../../design-system/textlink';
 
 export const DesignSystemTemplate = ({ data }) => {
   const post = data.mdx;

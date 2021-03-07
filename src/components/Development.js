@@ -9,70 +9,7 @@ import { mq } from '../helpers/utils';
 import { Heading, Text } from '../../design-system/typography';
 import { TextLink } from '../../design-system/textlink';
 
-const skills = [
-  'JavaScript',
-  'TypeScript',
-  'Design Systems',
-  'React',
-  'React Native',
-  'NextJS',
-  'Gatsby',
-  'NodeJS',
-  'Keystone',
-  'Swift'
-];
-
-const developmentProjects = [
-  {
-    name: 'Reckon Payroll App and Web',
-    link: 'https://www.reckon.com/au/payroll-app/',
-    team: true,
-    desc:
-      'Enables small businesses to conveniently do Payroll and STP reporting from an browser or mobile device.',
-    skills: ['TypeScript', 'React', 'React Native', 'GraphQL']
-  },
-  {
-    name: 'KeystoneJS',
-    link: 'https://github.com/keystonejs/keystone-5/graphs/contributors',
-    type: 'Contributor',
-    openSource: true,
-    team: true,
-    desc: 'KeystoneJS is a scalable platform and CMS for Node.js applications.',
-    skills: ['NodeJS', 'React']
-  },
-  {
-    name: 'The Garage',
-    link: 'https://thegarageapp.com',
-    type: 'Owner',
-    desc: 'The Garage is an social network for car lovers in Sydney Australia.',
-    skills: ['React Native', 'Keystone']
-  },
-  {
-    name: 'IsobelJS',
-    openSource: true,
-    link: 'https://isobeljs.com/',
-    type: 'Owner',
-    desc:
-      'A beginner-friendly NodeJS framework for fetching data from your social profiles and other sources, to display in your own apps and websites.',
-    skills: ['NodeJS']
-  },
-  {
-    name: 'ITCLearning Website',
-    link: '/itc-learning',
-    desc:
-      'A WordPress-based website for a previous employer; Featuring a custom theme and registrations for webinars and events.',
-    skills: ['SCSS', 'WordPress', 'PHP']
-  },
-  {
-    name: 'nathansimpson.design',
-    openSource: true,
-    link: 'https://github.com/nathsimpson/nathansimpson.design',
-    type: 'Owner',
-    desc:
-      'This website is one of my favourite side-projects. All of the code is available on GitHub for your enjoyment.',
-    skills: ['TypeScript', 'Gatsby', 'Design Systems']
-  }
-];
+import { development_projects, development_skills } from '../data';
 
 const DevelopmentProject = ({ item }) => (
   <Card
@@ -153,7 +90,7 @@ export const Development = () => {
           listStyle: 'none'
         }}
       >
-        {skills.map(item => (
+        {development_skills.map(item => (
           <Tag
             label={item}
             as="li"
@@ -174,7 +111,7 @@ export const Development = () => {
           gridTemplateColumns: ['1fr', 'repeat(auto-fit, minmax(350px, 1fr))']
         })}
       >
-        {developmentProjects.map(item => (
+        {development_projects.map(item => (
           <DevelopmentProject item={item} key={item.name} />
         ))}
       </ul>

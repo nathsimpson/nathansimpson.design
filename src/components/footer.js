@@ -33,7 +33,7 @@ export const Footer = () => (
       ))}
     </ul>
 
-    <Text size="xsmall" as="span">
+    <Text size="xsmall" as="span" align="center">
       &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
     </Text>
 

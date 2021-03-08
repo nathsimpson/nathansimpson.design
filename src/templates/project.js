@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Header, Layout, Mdx } from '../components';
+import { BackButton } from '../components/backButton';
+import { spacing } from '../../design-system/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
@@ -14,7 +16,16 @@ export default ({ data }) => {
       </Helmet>
       <Header />
 
-      <div css={{ maxWidth: 800, margin: '0 auto' }}>
+      <div
+        css={{
+          maxWidth: 800,
+          margin: '0 auto',
+          paddingLeft: spacing.xxlarge,
+          paddingRight: spacing.xxlarge
+        }}
+      >
+        <BackButton link="/" />
+
         <Mdx>{project.body}</Mdx>
       </div>
     </Layout>

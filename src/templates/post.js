@@ -5,9 +5,11 @@ import { graphql } from 'gatsby';
 
 import { Header, Layout, Mdx } from '../components';
 import { BackButton } from '../components/backButton';
+import { Box } from '../../design-system/box';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
+import { spacing } from '../../design-system/theme';
 
 export default ({ data }) => {
   const post = data.mdx;
@@ -19,7 +21,14 @@ export default ({ data }) => {
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
       </Helmet>
       <Header />
-      <div css={{ maxWidth: 800, margin: '0 auto' }}>
+      <Box
+        css={{
+          maxWidth: 800,
+          margin: '0 auto',
+          paddingLeft: spacing.xxlarge,
+          paddingRight: spacing.xxlarge
+        }}
+      >
         <Stack gap="small">
           <BackButton link="/blog" />
 
@@ -40,7 +49,7 @@ export default ({ data }) => {
           <Divider />
           <Mdx>{post.body}</Mdx>
         </Stack>
-      </div>
+      </Box>
     </Layout>
   );
 };

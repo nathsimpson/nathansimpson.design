@@ -7,15 +7,7 @@ import { colors, fontsizes, fontFamilies } from '../../design-system/theme';
 
 // TODO: delete this?
 export const Layout = ({ children }) => (
-  <div
-    style={{
-      width: '100%',
-      maxWidth: '1300px',
-      padding: '0 24px',
-      margin: '0 auto',
-      boxSizing: 'border-box'
-    }}
-  >
+  <div>
     <Helmet>
       <meta charSet="utf-8" />
       <title>Nathan Simpson - UI Designer + Developer</title>

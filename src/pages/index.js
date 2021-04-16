@@ -27,6 +27,7 @@ const Hero = () => {
       css={{
         padding: '128px 0px',
         backgroundColor: colors.backgroundEmphasis,
+        borderBottom: `1px solid ${colors.border}`,
         width: '100%'
       }}
     >
@@ -64,7 +65,7 @@ const Hero = () => {
           <Cluster gap="large">
             <TextLinkGatsby to="/about">About</TextLinkGatsby>
             <TextLinkGatsby to="/blog">Blog</TextLinkGatsby>
-            <TextLinkGatsby to="/design-system">Design System</TextLinkGatsby>
+            {/* <TextLinkGatsby to="/design-system">Design System</TextLinkGatsby> */}
           </Cluster>
         </Stack>
       </div>

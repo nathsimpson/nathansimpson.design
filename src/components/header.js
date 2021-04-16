@@ -2,8 +2,8 @@
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
-import {Logo} from '../../design-system/logo'
-import { colors, spacing } from '../../design-system/theme';
+import { Logo } from '../../design-system/logo';
+import { colors } from '../../design-system/theme';
 import { Cluster } from '../../design-system/cluster';
 import { TextLinkGatsby } from '../../design-system/textlink';
 
@@ -23,16 +23,13 @@ const navItems = [
 ];
 
 export const Header = ({ backLink = '/' }) => (
-  <div css={{
-    backgroundColor: colors.backgroundEmphasis,
-    margin: '0 auto'
-  }}>
   <header
     className="header"
     css={{
+      boxSizing: 'border-box',
       maxWidth: '1300px',
-      margin: '0 auto',
-      padding: '8px 12px',
+      margin: '0 auto 24px',
+      padding: '8px 24px',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -40,7 +37,7 @@ export const Header = ({ backLink = '/' }) => (
     }}
   >
     <Link exact to="/">
-      <Logo size="small"/>
+      <Logo size="small" isInteractive />
     </Link>
 
     <div css={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }}>
@@ -53,5 +50,4 @@ export const Header = ({ backLink = '/' }) => (
       </Cluster>
     </div>
   </header>
-  </div>
 );

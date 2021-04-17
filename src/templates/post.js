@@ -4,9 +4,12 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { Header, Layout, Mdx } from '../components';
+import { BackButton } from '../components/backButton';
+import { Box } from '../../design-system/box';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
+import { spacing } from '../../design-system/theme';
 
 export default ({ data }) => {
   const post = data.mdx;
@@ -17,9 +20,18 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
       </Helmet>
-      <Header backLink="/blog" />
-      <div css={{ maxWidth: 800, margin: '0 auto' }}>
+      <Header />
+      <Box
+        css={{
+          maxWidth: 800,
+          margin: '0 auto',
+          paddingLeft: spacing.xxlarge,
+          paddingRight: spacing.xxlarge
+        }}
+      >
         <Stack gap="small">
+          <BackButton link="/blog" />
+
           <Heading level={1}>{post.frontmatter.title}</Heading>
           <div
             css={{
@@ -37,7 +49,7 @@ export default ({ data }) => {
           <Divider />
           <Mdx>{post.body}</Mdx>
         </Stack>
-      </div>
+      </Box>
     </Layout>
   );
 };

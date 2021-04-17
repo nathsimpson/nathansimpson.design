@@ -1,4 +1,5 @@
 export { Contact } from './contact';
+export { Container } from './container';
 export { ContactForm } from './contactform';
 export { codeHighlightTheme } from './codeHighlightTheme';
 export { DesignSystemTemplate } from './designSystem';

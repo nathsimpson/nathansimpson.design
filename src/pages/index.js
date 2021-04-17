@@ -4,7 +4,14 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-import { Portfolio, Development, Talks, Dribbble, Layout } from '../components';
+import {
+  Container,
+  Portfolio,
+  Development,
+  Talks,
+  Dribbble,
+  Layout
+} from '../components';
 import { Logo } from '../../design-system/logo';
 
 import { Cluster } from '../../design-system/cluster';
@@ -20,6 +27,7 @@ const Hero = () => {
       css={{
         padding: '128px 0px',
         backgroundColor: colors.backgroundEmphasis,
+        borderBottom: `1px solid ${colors.border}`,
         width: '100%'
       }}
     >
@@ -57,7 +65,7 @@ const Hero = () => {
           <Cluster gap="large">
             <TextLinkGatsby to="/about">About</TextLinkGatsby>
             <TextLinkGatsby to="/blog">Blog</TextLinkGatsby>
-            <TextLinkGatsby to="/design-system">Design System</TextLinkGatsby>
+            {/* <TextLinkGatsby to="/design-system">Design System</TextLinkGatsby> */}
           </Cluster>
         </Stack>
       </div>
@@ -69,37 +77,39 @@ const App = ({ data }) => (
   <Fragment>
     <Hero />
 
-    <Layout>
-      <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
-        <Stack
-          gap="xlarge"
-          align="center"
-          css={{ textAlign: 'center', width: '100%' }}
-        >
-          <Heading level={2}>Design</Heading>
-          <Text as="p">
-            Design has been my passion for over 10 years. I focus on User
-            Interface (UI) Design for native and web apps, with the odd Branding
-            project here and there.
-          </Text>
+    <Container>
+      <Layout>
+        <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
+          <Stack
+            gap="xlarge"
+            align="center"
+            css={{ textAlign: 'center', width: '100%' }}
+          >
+            <Heading level={2}>Design</Heading>
+            <Text as="p">
+              Design has been my passion for over 10 years. I focus on User
+              Interface (UI) Design for native and web apps, with the odd
+              Branding project here and there.
+            </Text>
 
-          <Portfolio data={data} />
+            <Portfolio data={data} />
 
-          <Dribbble />
+            <Dribbble />
+          </Stack>
+
+          <Divider />
+
+          <Development />
+
+          <Divider />
+
+          <Stack align="center">
+            <Heading level={2}>Talks</Heading>
+            <Talks data={data} />
+          </Stack>
         </Stack>
-
-        <Divider />
-
-        <Development />
-
-        <Divider />
-
-        <Stack align="center">
-          <Heading level={2}>Talks</Heading>
-          <Talks data={data} />
-        </Stack>
-      </Stack>
-    </Layout>
+      </Layout>
+    </Container>
   </Fragment>
 );
 

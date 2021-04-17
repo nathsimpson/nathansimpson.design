@@ -7,14 +7,36 @@ const sizes = {
   medium: 50
 } as const;
 
-export const Logo = ({ size = 'medium' }: { size: keyof typeof sizes }) => (
+const hoverStyles = {
+  '&:hover g .outline': {
+    fill: colors.brandSecondary
+  },
+  '&:hover g .solid': {
+    opacity: 1
+  }
+};
+
+export const Logo = ({
+  size = 'medium',
+  isInteractive
+}: {
+  size: keyof typeof sizes;
+  isInteractive: boolean;
+}) => (
   <svg
     viewBox="0 0 158.6 102.8"
     css={{
       height: sizes[size],
       width: 'auto',
-      'g .outline': { fill: colors.brand },
-      'g .solid': { fill: 'none' }
+      'g .outline': {
+        fill: colors.brand
+      },
+      'g .solid': {
+        fill: colors.brand,
+        opacity: 0,
+        transition: 'opacity 0.5s'
+      },
+      ...Object(isInteractive ? hoverStyles : {})
     }}
   >
     <g>

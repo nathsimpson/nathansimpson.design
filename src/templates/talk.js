@@ -4,7 +4,9 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { Header, Layout, Mdx } from '../components';
-import { colors } from '../../design-system/theme';
+import { Divider } from '../../design-system/divider';
+import { Stack } from '../../design-system/stack';
+import { spacing } from '../../design-system/theme';
 
 import { Heading, Text } from '../../design-system/typography';
 
@@ -18,32 +20,37 @@ export default ({ data }) => {
         <title>{talk.frontmatter.title} - Nathan Simpson's talks</title>
       </Helmet>
       <Header />
-      <div css={{ maxWidth: 800, margin: '0 auto' }}>
-        <iframe
-          width="100%"
-          height="450"
-          css={{
-            boxSizing: 'border-box',
-            paddingRight: 16,
-            width: '100%'
-          }}
-          src={`https://www.youtube.com/embed/${talk.frontmatter.youtubeid}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-        <div
-          css={{
-            borderBottom: `1px solid ${colors.border}`
-          }}
-        >
+      <div
+        css={{
+          maxWidth: 800,
+          margin: '0 auto',
+          paddingLeft: spacing.xxlarge,
+          paddingRight: spacing.xxlarge
+        }}
+      >
+        <Stack gap="large">
+          <iframe
+            width="100%"
+            height="450"
+            css={{
+              boxSizing: 'border-box',
+              paddingRight: 16,
+              width: '100%'
+            }}
+            src={`https://www.youtube.com/embed/${talk.frontmatter.youtubeid}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+
           <Heading level={1}>{talk.frontmatter.title}</Heading>
-          <Text as="span" css={{ margin: '12px 0px' }} size="small">
+          <Text as="span" size="xsmall">
             Posted on {talk.frontmatter.date}
           </Text>
-        </div>
+          <Divider />
 
-        <Mdx>{talk.body}</Mdx>
+          <Mdx>{talk.body}</Mdx>
+        </Stack>
       </div>
     </Layout>
   );

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
-import { Layout, Header } from '../components';
+import { Container, Layout, Header } from '../components';
 import { Mdx } from './Mdx';
 
 import { Stack } from '../../design-system/stack';
@@ -17,17 +17,19 @@ export const DesignSystemTemplate = ({ data }) => {
         <title>Nathan Simpson - UI Designer + Developer</title>
       </Helmet>
 
-      <div
-        css={{
-          display: 'grid',
-          columnGap: 12,
-          gridTemplateColumns: '300px 1fr'
-        }}
-      >
-        <NavigationBar data={data.allMdx.edges} />
+      <Container>
+        <div
+          css={{
+            display: 'grid',
+            columnGap: 12,
+            gridTemplateColumns: '240px 1fr'
+          }}
+        >
+          <NavigationBar data={data.allMdx.edges} />
 
-        <Mdx>{post.body}</Mdx>
-      </div>
+          <Mdx>{post.body}</Mdx>
+        </div>
+      </Container>
     </Layout>
   );
 };

@@ -9,6 +9,7 @@ import { Card } from '../../design-system/card';
 import { FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
+import { spacing } from '../../design-system/theme';
 import { TextLinkGatsby } from '../../design-system/textlink';
 
 const PostCard = ({ id, frontmatter, body, excerpt }) => {
@@ -53,7 +54,14 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
 export default ({ data }) => (
   <Layout>
     <Header />
-    <div css={{ maxWidth: 800, margin: '0 auto' }}>
+    <div
+      css={{
+        maxWidth: 800,
+        margin: '0 auto',
+        paddingLeft: spacing.small,
+        paddingRight: spacing.small
+      }}
+    >
       <Stack gap="xxlarge">
         <Stack gap="medium" marginX="xlarge">
           <Heading level={1}>Blog</Heading>

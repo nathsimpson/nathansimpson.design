@@ -29,6 +29,7 @@ export const Header = ({ backLink = '/' }) => (
       boxSizing: 'border-box',
       maxWidth: '1300px',
       margin: '0 auto 24px',
+      borderBottom: `1px solid ${colors.border}`,
       padding: '8px 24px',
       display: 'flex',
       flexDirection: 'row',

@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import { Header, Layout, Mdx } from '../components';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
-import { colors, spacing } from '../../design-system/theme';
+import { spacing } from '../../design-system/theme';
 
 import { Heading, Text } from '../../design-system/typography';
 

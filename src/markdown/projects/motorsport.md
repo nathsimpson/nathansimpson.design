@@ -18,7 +18,7 @@ Aside from being passionate about Product Development, I am also an avid motorsp
 
 ## Formula 1
 
-The template for the Formula 1 cars was created by Whiskey Tango Foxtrot on [internationalmotorsportgraphics.com](http://internationalmotorsportgraphics.com/viewtopic.php?f=9&t=20&start=180).
+The template for the Formula 1 cars was created by Whiskey Tango Foxtrot on [International Motorsport Graphics](http://internationalmotorsportgraphics.com/viewtopic.php?f=9&t=20&start=180).
 
 ![Self-branded Formula 1 car (1)](https://files.nathansimpson.design/portfolio/motorsport/f1_1.jpg 'Self-branded Formula 1 car (1)')
 

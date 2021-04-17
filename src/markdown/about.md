@@ -29,6 +29,14 @@ In 2015 I moved to Sydney and began studying the _Bachelor of Design (Visual Com
 
 ---
 
+## Speaking and Writing
+
+I've spoken at the SydJS and React Sydney meetups. I try to post [recordings](/blog) of these talks on my website.
+
+I also occasionally write articles on [The Apple Post](https://www.theapplepost.com/author/nathan-simpson/).
+
+---
+
 ## Hobbies
 
 Outside of work, I'm usually working on a side-project, or watching Formula 1 at crazy-o'clock.

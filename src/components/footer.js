@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '../../design-system/icon';
 import { colors } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
 import { Text } from '../../design-system/typography';
@@ -63,7 +63,7 @@ export const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={network.icon} />
+            <Icon icon={network.icon} size={24} />
           </a>
         </li>
       ))}

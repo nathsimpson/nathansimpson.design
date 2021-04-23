@@ -11,22 +11,22 @@ import {
 export const footer_socialNetworks = [
   {
     name: 'Twitter',
-    icon: faTwitter,
+    icon: 'twitter',
     link: 'https://twitter.com/nathjsimpson'
   },
   {
     name: 'Instagram',
-    icon: faInstagram,
+    icon: 'instagram',
     link: 'https://www.instagram.com/nathansimpson.design'
   },
   {
     name: 'LinkedIn',
-    icon: faLinkedin,
+    icon: 'linkedin',
     link: 'https://www.linkedin.com/in/nathan-simpson-71512a75?trk'
   },
   {
     name: 'Github',
-    icon: faGithub,
+    icon: 'github',
     link: 'https://github.com/nathsimpson'
   },
   // {
@@ -36,12 +36,12 @@ export const footer_socialNetworks = [
   // },
   {
     name: 'Dribbble',
-    icon: faDribbble,
+    icon: 'dribbble',
     link: 'https://dribbble.com/nathansimpson'
   },
   {
     name: 'YouTube',
-    icon: faYoutube,
+    icon: 'youtube',
     link: 'https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg'
   }
 ];
@@ -93,24 +93,6 @@ export const development_projects = [
     team: true,
     desc: "Reckon's family of Design Systems for web and mobile experiences.",
     skills: ['Design Systems', 'TypeScript', 'React', 'React Native']
-  },
-  {
-    name: 'KeystoneJS',
-    link: 'https://github.com/keystonejs/keystone-5/graphs/contributors',
-    type: 'Contributor',
-    openSource: true,
-    team: true,
-    desc: 'KeystoneJS is a scalable platform and CMS for Node.js applications.',
-    skills: ['NodeJS', 'React']
-  },
-  {
-    name: 'IsobelJS',
-    openSource: true,
-    link: 'https://isobeljs.com/',
-    type: 'Owner',
-    desc:
-      'A beginner-friendly NodeJS framework for fetching data from your social profiles and other sources, to display in your own apps and websites.',
-    skills: ['NodeJS']
   },
   {
     name: 'ITCLearning Website',

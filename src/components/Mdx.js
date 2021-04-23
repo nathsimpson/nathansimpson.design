@@ -7,7 +7,9 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import { codeHighlightTheme } from './codeHighlightTheme';
 
 import { Button, LinkButton } from '../../design-system/button';
+import { ContentCard } from '../../design-system/contentcard';
 import { Icon } from '../../design-system/icon';
+import { Tiles } from '../../design-system/tiles';
 import { Tag } from '../../design-system/tag';
 import { Box, FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
@@ -25,6 +27,7 @@ const DsComponents = {
   Button,
   Card,
   Cluster,
+  ContentCard,
   Divider,
   FlexBox,
   Heading,
@@ -35,7 +38,8 @@ const DsComponents = {
   Tag,
   Text,
   TextLink,
-  TextLinkGatsby
+  TextLinkGatsby,
+  Tiles
 };
 
 const CodePreview = props => {

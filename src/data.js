@@ -1,32 +1,22 @@
-import {
-  faTwitter,
-  faInstagram,
-  // faCodepen,
-  faLinkedin,
-  faGithub,
-  faDribbble,
-  faYoutube
-} from '@fortawesome/fontawesome-free-brands';
-
 export const footer_socialNetworks = [
   {
     name: 'Twitter',
-    icon: faTwitter,
+    icon: 'twitter',
     link: 'https://twitter.com/nathjsimpson'
   },
   {
     name: 'Instagram',
-    icon: faInstagram,
+    icon: 'instagram',
     link: 'https://www.instagram.com/nathansimpson.design'
   },
   {
     name: 'LinkedIn',
-    icon: faLinkedin,
+    icon: 'linkedin',
     link: 'https://www.linkedin.com/in/nathan-simpson-71512a75?trk'
   },
   {
     name: 'Github',
-    icon: faGithub,
+    icon: 'github',
     link: 'https://github.com/nathsimpson'
   },
   // {
@@ -36,12 +26,12 @@ export const footer_socialNetworks = [
   // },
   {
     name: 'Dribbble',
-    icon: faDribbble,
+    icon: 'dribbble',
     link: 'https://dribbble.com/nathansimpson'
   },
   {
     name: 'YouTube',
-    icon: faYoutube,
+    icon: 'youtube',
     link: 'https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg'
   }
 ];

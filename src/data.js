@@ -1,13 +1,3 @@
-import {
-  faTwitter,
-  faInstagram,
-  // faCodepen,
-  faLinkedin,
-  faGithub,
-  faDribbble,
-  faYoutube
-} from '@fortawesome/fontawesome-free-brands';
-
 export const footer_socialNetworks = [
   {
     name: 'Twitter',
@@ -93,6 +83,24 @@ export const development_projects = [
     team: true,
     desc: "Reckon's family of Design Systems for web and mobile experiences.",
     skills: ['Design Systems', 'TypeScript', 'React', 'React Native']
+  },
+  {
+    name: 'KeystoneJS',
+    link: 'https://github.com/keystonejs/keystone-5/graphs/contributors',
+    type: 'Contributor',
+    openSource: true,
+    team: true,
+    desc: 'KeystoneJS is a scalable platform and CMS for Node.js applications.',
+    skills: ['NodeJS', 'React']
+  },
+  {
+    name: 'IsobelJS',
+    openSource: true,
+    link: 'https://isobeljs.com/',
+    type: 'Owner',
+    desc:
+      'A beginner-friendly NodeJS framework for fetching data from your social profiles and other sources, to display in your own apps and websites.',
+    skills: ['NodeJS']
   },
   {
     name: 'ITCLearning Website',

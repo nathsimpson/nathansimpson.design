@@ -21,7 +21,7 @@ export const Logo = ({
   isInteractive
 }: {
   size: keyof typeof sizes;
-  isInteractive: boolean;
+  isInteractive?: boolean;
 }) => (
   <svg
     viewBox="0 0 158.6 102.8"

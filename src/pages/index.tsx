@@ -15,11 +15,14 @@ import {
 import { Logo } from '../../design-system/logo';
 
 import { Cluster } from '../../design-system/cluster';
-import { colors } from '../../design-system/theme';
+import { colors, spacing } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
+import { ContentCard } from '../../design-system/contentcard';
+import { Tiles } from '../../design-system/tiles';
+import { development_projects } from '../data';
 
 const Hero = () => {
   return (
@@ -80,22 +83,7 @@ const App = ({ data }) => (
     <Container>
       <Layout>
         <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
-          <Stack
-            gap="xlarge"
-            align="center"
-            css={{ textAlign: 'center', width: '100%' }}
-          >
-            <Heading level={2}>Design</Heading>
-            <Text as="p">
-              Design has been my passion for over 10 years. I focus on User
-              Interface (UI) Design for native and web apps, with the odd
-              Branding project here and there.
-            </Text>
-
-            <Portfolio data={data} />
-
-            <Dribbble />
-          </Stack>
+          <Portfolio data={data} />
 
           <Divider />
 
@@ -103,7 +91,11 @@ const App = ({ data }) => (
 
           <Divider />
 
-          <Stack align="center">
+          <Dribbble />
+
+          <Divider />
+
+          <Stack gap="small" align="center">
             <Heading level={2}>Talks</Heading>
             <Talks data={data} />
           </Stack>
@@ -126,6 +118,7 @@ export const portfolioQuery = graphql`
             imagesrc
             type
             youtubeid
+            tag
           }
         }
       }

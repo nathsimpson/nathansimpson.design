@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { cardStyles } from '../card';
@@ -11,7 +11,7 @@ import { fontsizes, fontFamilies, colors } from '../theme';
 type ContentCardProps = {
   desc?: string;
   path: string;
-  image: string;
+  image?: string;
   title: string;
   tag: 'Design' | 'Development';
 };
@@ -24,25 +24,7 @@ export const ContentCard = ({
   tag
 }: ContentCardProps) => {
   return (
-    <Link
-      to={path}
-      css={{
-        ...cardStyles,
-        textDecoration: 'none',
-        boxSizing: 'border-box',
-        cursor: 'pointer',
-        textAlign: 'left',
-        // CSS trick to make a square
-        height: 0,
-        padding: 0,
-        paddingBottom: '100%',
-        wordWrap: 'normal',
-
-        '&:hover': {
-          backgroundColor: colors.backgroundHover
-        }
-      }}
-    >
+    <Link to={path} css={contentCardStyles}>
       <Stack gap="small">
         {image && (
           <div
@@ -80,4 +62,21 @@ const Label = styled.div({
   textDecoration: 'none',
   display: 'block',
   width: '100%'
+});
+
+const contentCardStyles = css({
+  ...cardStyles,
+  textDecoration: 'none',
+  boxSizing: 'border-box',
+  cursor: 'pointer',
+  textAlign: 'left',
+  // CSS trick to make a square
+  height: 0,
+  padding: 0,
+  paddingBottom: '100%',
+  wordWrap: 'normal',
+
+  '&:hover': {
+    backgroundColor: colors.backgroundHover
+  }
 });

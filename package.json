@@ -5,7 +5,7 @@
   "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
   "engines": {
-    "node": ">=10.22.0"
+    "node": ">=12.8.4"
   },
   "scripts": {
     "postinstall": "netlify-lambda install",

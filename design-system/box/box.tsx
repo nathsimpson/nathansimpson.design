@@ -97,8 +97,8 @@ export type BoxProps = BoxMarginProps &
     as?: ElementType;
     /** Background color */
     bg?: 'none' | 'base' | 'emphasis';
-    /** The content of this flex container. */
-    children?: ReactNode | string;
+    /** The content of this container. */
+    children?: ReactNode | ReactNode[] | string;
     /** Height */
     height?: number;
     /** Width */

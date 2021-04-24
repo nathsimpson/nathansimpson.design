@@ -49,13 +49,13 @@ export type BoxRadiiProps = {
 
 export type FlexProps = {
   /** Define the initial main size of a flex item. */
-  basis: number | string;
+  basis?: number | string;
   /** You can pass shorthand values directly to the CSS flex property. e.g.<Box flex="0 1 auto" /> */
-  flex: number | string;
+  flex?: number | string;
   /** Define grow "factor" of a flex item. It accepts a unitless value, which dictates the amount of available space inside the flex container the item should take up. */
-  grow: number;
+  grow?: number;
   /** Define shrink "factor" of a flex item. It accepts a unitless value, which dictates the amount of available space inside the flex container the item should take up. */
-  shrink: number;
+  shrink?: number;
 };
 
 export const getMarginStyles = ({

@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { ReactElement } from 'react';
-import { colors, spacing, radii, SpacingType, RadiiType } from '../theme';
 import { BoxProps } from './box';
 
 import {
@@ -17,14 +15,14 @@ import {
 } from './utils';
 
 export const FlexBox = ({
-  align,
+  align = 'start',
   bg = 'none',
   basis,
   children,
   flex,
   grow,
   height,
-  justify,
+  justify = 'start',
   margin,
   marginBottom,
   marginLeft,
@@ -109,9 +107,9 @@ export const FlexBox = ({
 export type FlexBoxProps = BoxProps &
   FlexProps & {
     /** The align prop maps to the align-items CSS property, and defines the alignment of items along the cross-axis of the flex container. */
-    align: keyof typeof alignmentMap;
+    align?: keyof typeof alignmentMap;
     /** The justify prop maps to the justify-content CSS property, and defines the distribution of space between items along the main-axis of the flex container. */
-    justify: keyof typeof justificationMap;
+    justify?: keyof typeof justificationMap;
     /** The orientation prop maps to the flex direction CSS property, allowing us to maintain a consistent API among the design system primitives. */
-    orientation: keyof typeof orientationMap;
+    orientation?: keyof typeof orientationMap;
   };

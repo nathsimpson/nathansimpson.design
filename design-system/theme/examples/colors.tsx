@@ -13,7 +13,6 @@ export const ColorsExample = () => {
     value: object;
   }) =>
     Object.keys(value).forEach((c: string) => {
-      console.log(c);
       if (typeof value[c] === 'string') {
         colorsArr.push({ label: `${parent}.${c}`, value: value[c] });
       } else {

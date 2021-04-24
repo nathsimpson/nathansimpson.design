@@ -37,7 +37,7 @@ export const Header = ({ backLink = '/' }) => (
       alignItems: 'center'
     }}
   >
-    <Link exact to="/">
+    <Link exact to="/" alt="Home">
       <Logo size="small" isInteractive />
     </Link>
 

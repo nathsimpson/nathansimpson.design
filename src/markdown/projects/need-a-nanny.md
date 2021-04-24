@@ -4,6 +4,7 @@ path: '/need-a-nanny'
 date: '2018-07-01'
 imagesrc: 'needananny/cover.jpg'
 type: project
+tag: Design
 ---
 
 # Need A Nanny

@@ -4,6 +4,7 @@ path: '/logos'
 date: '2018-02-21'
 imagesrc: 'logos/cover.jpg'
 type: project
+tag: Design
 ---
 
 # Logo Designs
@@ -30,4 +31,4 @@ type: project
 
 ![Eden Garden and Rural](https://files.nathansimpson.design/portfolio/logos/11.jpg 'Eden Garden and Rural')
 
-![Western Sydney Racing](https://files.nathansimpson.design/portfolio/logos/12.jpg 'Western Sydney Racing')'
+![Western Sydney Racing](https://files.nathansimpson.design/portfolio/logos/12.jpg 'Western Sydney Racing')

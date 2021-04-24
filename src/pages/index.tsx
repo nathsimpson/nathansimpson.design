@@ -15,14 +15,11 @@ import {
 import { Logo } from '../../design-system/logo';
 
 import { Cluster } from '../../design-system/cluster';
-import { colors, spacing } from '../../design-system/theme';
+import { colors } from '../../design-system/theme';
 import { Heading, Text } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
-import { ContentCard } from '../../design-system/contentcard';
-import { Tiles } from '../../design-system/tiles';
-import { development_projects } from '../data';
 
 const Hero = () => {
   return (

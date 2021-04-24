@@ -8,7 +8,7 @@ import { spacing } from '../../design-system/theme';
 
 export const Portfolio = ({ data }) => (
   <div css={{ width: '100%' }}>
-    <Heading level={3} css={{ marginBottom: spacing.large }}>
+    <Heading level={2} css={{ marginBottom: spacing.large }}>
       Projects
     </Heading>
     <Tiles>

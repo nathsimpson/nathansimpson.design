@@ -69,7 +69,7 @@ const contentCardStyles = css({
   display: 'flex',
   flexDirection: 'column',
   textDecoration: 'none',
-  minHeight: 200,
+  minHeight: 250,
   boxSizing: 'border-box',
   cursor: 'pointer',
   textAlign: 'left',

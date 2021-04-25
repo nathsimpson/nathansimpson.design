@@ -105,6 +105,9 @@ Yes, I am one of _those_ people that quite like [TypeScript](https://www.typescr
 
 Based in Sydney Australia, the [Design System Meetup](https://designsystemmeetup.com/) is a fantastic community of Design System professionals from various organisations, to connect and collaborate.
 
-### More
+---
 
+## Articles and Guides
+
+- [Designing accessible color systems by Stripe](https://stripe.com/blog/accessible-color-systems)
 - [Apple Human Interface guidelines](https://developer.apple.com/design/human-interface-guidelines/)

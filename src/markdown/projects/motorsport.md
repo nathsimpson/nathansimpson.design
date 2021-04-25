@@ -4,6 +4,7 @@ path: '/motorsport'
 date: '2018-02-21'
 imagesrc: 'motorsport/cover.jpg'
 type: project
+tag: Design
 ---
 
 # Motorsport Graphic Designs

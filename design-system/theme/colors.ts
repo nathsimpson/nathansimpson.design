@@ -22,13 +22,14 @@ export const colors = {
   linkHover: palette.neutral100,
   background: palette.neutral10,
   backgroundEmphasis: palette.neutral30,
+  backgroundHover: palette.neutral40,
   shadow: palette.neutral0,
   border: palette.neutral50,
   foregroundEmphasis: palette.neutral100,
   foreground: palette.neutral90,
   decorative: {
-    green: '#52e409',
-    purple: '#E509E3'
+    green: palette.green,
+    purple: palette.purple
   },
   input: {
     background: palette.neutral40,

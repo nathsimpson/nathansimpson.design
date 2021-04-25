@@ -103,13 +103,6 @@ export const development_projects = [
     skills: ['NodeJS']
   },
   {
-    name: 'ITCLearning Website',
-    link: '/itc-learning',
-    desc:
-      'A WordPress-based website for a previous employer; Featuring a custom theme and registrations for webinars and events.',
-    skills: ['SCSS', 'WordPress', 'PHP']
-  },
-  {
     name: 'nathansimpson.design',
     openSource: true,
     link: 'https://github.com/nathsimpson/nathansimpson.design',

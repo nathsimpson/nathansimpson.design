@@ -34,7 +34,7 @@ export class Dribbble extends React.Component {
         align="center"
         css={{ textAlign: 'center', width: '100%' }}
       >
-        <Heading level={3}>Other work</Heading>
+        <Heading level={2}>Other work</Heading>
 
         <Text>
           I occasionally post WIP designs on my{' '}

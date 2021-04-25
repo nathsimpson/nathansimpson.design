@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Fragment } from 'react';
 import { jsx } from '@emotion/core';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import Helmet from 'react-helmet';
 
 import {
@@ -14,9 +14,10 @@ import {
 } from '../components';
 import { Logo } from '../../design-system/logo';
 
+import { Box } from '../../design-system/box';
 import { Cluster } from '../../design-system/cluster';
 import { colors } from '../../design-system/theme';
-import { Heading, Text } from '../../design-system/typography';
+import { Heading } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
@@ -53,19 +54,17 @@ const Hero = () => {
         <Stack gap="medium" align="center">
           <Logo size="medium" />
           <Heading level={1}>G'day, I'm Nath.</Heading>
-          <div css={{ maxWidth: 800 }}>
-            <Text as="span">
-              I'm a UI Designer &amp; Developer at{' '}
-              <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
-              Sydney, Australia. I'm passionate about Design Systems, and
-              building products from concept to delivery.
-            </Text>
-          </div>
+
+          <Box as="p">
+            I'm a UI Designer &amp; Developer at{' '}
+            <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
+            Sydney, Australia. I'm passionate about Design Systems, and building
+            products from concept to delivery.
+          </Box>
 
           <Cluster gap="large">
             <TextLinkGatsby to="/about">About</TextLinkGatsby>
             <TextLinkGatsby to="/blog">Blog</TextLinkGatsby>
-            {/* <TextLinkGatsby to="/design-system">Design System</TextLinkGatsby> */}
           </Cluster>
         </Stack>
       </div>
@@ -73,29 +72,14 @@ const Hero = () => {
   );
 };
 
-const App = ({ data }) => (
+const App = ({ data }: PageProps) => (
   <Fragment>
     <Hero />
 
     <Container>
       <Layout>
         <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
-          <Stack
-            gap="xlarge"
-            align="center"
-            css={{ textAlign: 'center', width: '100%' }}
-          >
-            <Heading level={2}>Design</Heading>
-            <Text as="p">
-              Design has been my passion for over 10 years. I focus on User
-              Interface (UI) Design for native and web apps, with the odd
-              Branding project here and there.
-            </Text>
-
-            <Portfolio data={data} />
-
-            <Dribbble />
-          </Stack>
+          <Portfolio data={data} />
 
           <Divider />
 
@@ -103,7 +87,11 @@ const App = ({ data }) => (
 
           <Divider />
 
-          <Stack align="center">
+          <Dribbble />
+
+          <Divider />
+
+          <Stack gap="small" align="center">
             <Heading level={2}>Talks</Heading>
             <Talks data={data} />
           </Stack>
@@ -126,6 +114,7 @@ export const portfolioQuery = graphql`
             imagesrc
             type
             youtubeid
+            tag
           }
         }
       }

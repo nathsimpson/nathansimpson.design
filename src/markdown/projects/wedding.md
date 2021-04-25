@@ -4,6 +4,7 @@ path: '/wedding'
 date: '2016-02-06'
 imagesrc: 'wedding/cover.jpg'
 type: project
+tag: Design
 ---
 
 # Nathan + Carrie Wedding

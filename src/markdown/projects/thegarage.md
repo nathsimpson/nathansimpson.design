@@ -4,6 +4,7 @@ path: '/thegarage'
 date: '2018-11-26'
 imagesrc: 'thegarage/cover.jpg'
 type: project
+tag: Design
 ---
 
 # The Garage

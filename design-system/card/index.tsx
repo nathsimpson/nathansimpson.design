@@ -9,16 +9,20 @@ type CardProps = {
   style: StyleHTMLAttributes<'div'>;
 };
 
+export const cardStyles = {
+  ...boxShadow[1],
+  background: colors.backgroundEmphasis,
+  border: `1px solid ${colors.border}`,
+  padding: '16px 24px',
+  borderRadius: radii.large
+};
+
 export const Card = ({ children, style, as = 'div' }: CardProps) => {
   const Tag = as;
   return (
     <Tag
       css={{
-        ...boxShadow[1],
-        background: colors.backgroundEmphasis,
-        border: `1px solid ${colors.border}`,
-        padding: '16px 24px',
-        borderRadius: radii.large,
+        ...cardStyles,
         ...style
       }}
     >

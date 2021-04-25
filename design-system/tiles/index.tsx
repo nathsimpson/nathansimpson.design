@@ -1,16 +1,19 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { ReactElement } from 'react';
+import { spacing } from '../theme';
 
-export const Tiles = props => {
+export const Tiles = ({ children }: { children: ReactElement[] }) => {
   return (
     <div
       css={{
         display: 'grid',
-        width: '100%',
         gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: 12
+        gap: spacing.large,
+        width: '100%'
       }}
-      {...props}
-    />
+    >
+      {children}
+    </div>
   );
 };

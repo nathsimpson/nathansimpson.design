@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import { FlexBox } from '../box';
 import { cardStyles } from '../card';
 import { Stack } from '../stack';
 import { Text } from '../typography';
@@ -25,23 +26,21 @@ export const ContentCard = ({
 }: ContentCardProps) => {
   return (
     <Link to={path} css={contentCardStyles}>
-      <Stack gap="small">
-        {image && (
-          <div
-            css={{
-              borderTopLeftRadius: cardStyles.borderRadius,
-              borderTopRightRadius: cardStyles.borderRadius,
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              // flex: 1,
-              width: '100%',
-              // display: 'flex',
-              height: 0,
-              paddingTop: '70%'
-            }}
-          />
-        )}
+      {image && (
+        <div
+          css={{
+            display: 'flex',
+            flex: 1,
+            borderTopLeftRadius: cardStyles.borderRadius,
+            borderTopRightRadius: cardStyles.borderRadius,
+            backgroundImage: `url(${image})`,
+            backgroundSize: 'cover',
+            width: '100%'
+          }}
+        />
+      )}
 
+      <FlexBox>
         <Stack gap="xsmall" padding="medium">
           <Text as="span" size="xsmall">
             {tag}
@@ -49,7 +48,7 @@ export const ContentCard = ({
           <Label>{title}</Label>
           {!image && desc && <Text>{desc}</Text>}
         </Stack>
-      </Stack>
+      </FlexBox>
     </Link>
   );
 };
@@ -66,14 +65,15 @@ const Label = styled.div({
 
 const contentCardStyles = css({
   ...cardStyles,
+  aspectRatio: '1',
+  display: 'flex',
+  flexDirection: 'column',
   textDecoration: 'none',
+  minHeight: 200,
   boxSizing: 'border-box',
   cursor: 'pointer',
   textAlign: 'left',
-  // CSS trick to make a square
-  height: 0,
   padding: 0,
-  paddingBottom: '100%',
   wordWrap: 'normal',
 
   '&:hover': {

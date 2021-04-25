@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
 import { Logo } from '../../design-system/logo';
-import { colors } from '../../design-system/theme';
+import { colors, spacing } from '../../design-system/theme';
 import { Cluster } from '../../design-system/cluster';
 import { TextLinkGatsby } from '../../design-system/textlink';
 
@@ -22,14 +22,15 @@ const navItems = [
   }
 ];
 
-export const Header = ({ backLink = '/' }) => (
+export const Header = ({ hasDivider = true }: { hasDivider: boolean }) => (
   <header
     className="header"
     css={{
       boxSizing: 'border-box',
       maxWidth: '1300px',
-      margin: '0 auto 24px',
-      borderBottom: `1px solid ${colors.border}`,
+      margin: '0 auto',
+      marginBottom: spacing[hasDivider ? 'xlarge' : 'none'],
+      borderBottom: hasDivider ? `1px solid ${colors.border}` : 'none',
       padding: '8px 24px',
       display: 'flex',
       flexDirection: 'row',
@@ -37,14 +38,14 @@ export const Header = ({ backLink = '/' }) => (
       alignItems: 'center'
     }}
   >
-    <Link exact to="/" alt="Home">
+    <Link to="/">
       <Logo size="small" isInteractive />
     </Link>
 
     <div css={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }}>
       <Cluster gap="medium" align="end">
         {navItems.map(({ url, label }) => (
-          <TextLinkGatsby key={url} exact to={url}>
+          <TextLinkGatsby key={url} to={url}>
             {label}
           </TextLinkGatsby>
         ))}

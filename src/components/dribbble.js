@@ -29,11 +29,7 @@ export class Dribbble extends React.Component {
 
   render() {
     return (
-      <Stack
-        gap="medium"
-        align="center"
-        css={{ textAlign: 'center', width: '100%' }}
-      >
+      <Stack gap="medium" css={{ width: '100%' }}>
         <Heading level={2}>Other work</Heading>
 
         <Text>

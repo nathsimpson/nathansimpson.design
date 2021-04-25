@@ -1,72 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Tag } from '../../design-system/tag';
-import { Card } from '../../design-system/card';
 import { Cluster } from '../../design-system/cluster';
 import { Stack } from '../../design-system/stack';
-import { mq } from '../helpers/utils';
 
 import { Heading, Text } from '../../design-system/typography';
 import { TextLink } from '../../design-system/textlink';
 
-import { development_projects, development_skills } from '../data';
-
-const DevelopmentProject = ({ item }) => (
-  <Card
-    as="li"
-    style={{
-      listStyle: 'none',
-      maxWidth: 600,
-      textAlign: 'left'
-    }}
-  >
-    <Stack gap="small">
-      <Heading level={4}>{item.name}</Heading>
-      <Text size="small">
-        {item.desc}{' '}
-        <TextLink href={item.link} target="_blank" rel="noopener noreferrer">
-          Learn more
-        </TextLink>
-      </Text>
-      <Cluster gap="xsmall">
-        {item.team && (
-          <Tag
-            label="Team"
-            size="small"
-            color="purple"
-            style={{ marginRight: 4, marginBottom: 4 }}
-          />
-        )}
-
-        {item.openSource && (
-          <Tag
-            label="Open Source"
-            size="small"
-            color="green"
-            style={{ marginRight: 4, marginBottom: 4 }}
-          />
-        )}
-
-        {item.skills.map(skill => (
-          <Tag
-            label={skill}
-            size="small"
-            style={{ marginRight: 4, marginBottom: 4 }}
-            key={skill}
-          />
-        ))}
-      </Cluster>
-    </Stack>
-  </Card>
-);
+import { development_skills } from '../data';
 
 export const Development = () => {
   return (
-    <Stack
-      gap="medium"
-      align="center"
-      css={{ textAlign: 'center', width: '100%' }}
-    >
+    <Stack gap="medium" css={{ width: '100%' }}>
       <Heading level={2}>Development</Heading>
 
       <Text>
@@ -99,22 +44,6 @@ export const Development = () => {
           />
         ))}
       </Cluster>
-
-      <Heading level={3}>Some projects I've worked on...</Heading>
-
-      <ul
-        css={mq({
-          padding: 0,
-          display: 'grid',
-          width: '100%',
-          gap: 12,
-          gridTemplateColumns: ['1fr', 'repeat(auto-fit, minmax(350px, 1fr))']
-        })}
-      >
-        {development_projects.map(item => (
-          <DevelopmentProject item={item} key={item.name} />
-        ))}
-      </ul>
     </Stack>
   );
 };

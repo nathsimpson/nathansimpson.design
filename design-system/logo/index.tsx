@@ -12,7 +12,7 @@ const hoverStyles = {
     fill: colors.brandSecondary
   },
   '&:hover g .solid': {
-    opacity: 1
+    // opacity: 1
   }
 };
 

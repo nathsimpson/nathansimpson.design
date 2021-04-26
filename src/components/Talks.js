@@ -1,34 +1,39 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
+import { cardStyles } from '../../design-system/card';
 import { Heading } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
-import { radii, colors, spacing } from '../../design-system/theme';
+import { radii, colors } from '../../design-system/theme';
 import { TextLink } from '../../design-system/textlink';
 import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
-  <div css={{ textAlign: 'center' }}>
-    <p>
-      Occasionally I give talks at{' '}
-      <TextLink href="https://www.sydjs.com/" target="_blank">
-        SydJS
-      </TextLink>
-      {' and '}
-      <TextLink
-        href="https://www.meetup.com/en-AU/React-Sydney/"
-        target="_blank"
-      >
-        React Sydney
-      </TextLink>{' '}
-      meetups. Check out the recordings below, and come and say hi at the next
-      one!
-    </p>
-    {data.allMdx.edges
-      .filter(({ node }) => node.frontmatter.type === 'talk')
-      .map(({ node }) => (
-        <Talk node={node} key={node.id} />
-      ))}
+  <div css={{ width: '100%' }}>
+    <Stack gap="small" align="start">
+      <Heading level={2}>Talks</Heading>
+
+      <p>
+        Occasionally I give talks at{' '}
+        <TextLink href="https://www.sydjs.com/" target="_blank">
+          SydJS
+        </TextLink>
+        {' and '}
+        <TextLink
+          href="https://www.meetup.com/en-AU/React-Sydney/"
+          target="_blank"
+        >
+          React Sydney
+        </TextLink>{' '}
+        meetups. Check out the recordings below, and come and say hi at the next
+        one!
+      </p>
+      {data.allMdx.edges
+        .filter(({ node }) => node.frontmatter.type === 'talk')
+        .map(({ node }) => (
+          <Talk node={node} key={node.id} />
+        ))}
+    </Stack>
   </div>
 );
 
@@ -44,19 +49,16 @@ const Talk = ({
     <a
       href={path}
       css={mq({
-        color: colors.foreground,
-        backgroundColor: colors.backgroundEmphasis,
-        border: defaultBorder,
+        ...cardStyles,
         borderLeft: [defaultBorder, `2px solid ${colors.brand}`],
         borderTop: [`2px solid ${colors.brand}`, defaultBorder],
-        borderBottomRightRadius: radii.large,
-        borderTopRightRadius: [0, radii.large],
+        borderTopLeftRadius: radii.none,
         borderBottomLeftRadius: [radii.large, 0],
         display: 'flex',
         flexDirection: ['column', 'row'],
-        marginBottom: spacing.large,
         maxWidth: 800,
-        textAlign: 'left',
+        padding: 0,
+        width: '100%',
         textDecoration: 'none',
         '&:hover span': {
           textDecoration: 'underline'

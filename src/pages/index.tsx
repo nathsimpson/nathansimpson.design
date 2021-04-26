@@ -119,6 +119,7 @@ export const portfolioQuery = graphql`
             type
             youtubeid
             tag
+            desc
           }
         }
       }

@@ -10,7 +10,9 @@ const sizes = {
 };
 
 const colorMap = {
+  default: colors.foreground,
   brand: colors.brand,
+  blue: colors.decorative.blue,
   purple: colors.decorative.purple,
   green: colors.decorative.green
 } as const;
@@ -25,7 +27,7 @@ type TagProps = {
 export const Tag = ({
   label,
   as,
-  color = 'brand',
+  color = 'default',
   size = 'medium'
 }: TagProps) => {
   const Div = as || 'div';

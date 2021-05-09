@@ -25,13 +25,17 @@ Tag comes in two sizes...
 
 There are three colors to choose from...
 
+- default
 - brand
+- blue
 - green
 - purple
 
 ```jsx live
 <Cluster gap="small">
+  <Tag label="default" color="default" />
   <Tag label="brand" color="brand" />
+  <Tag label="blue" color="blue" />
   <Tag label="green" color="green" />
   <Tag label="purple" color="purple" />
 </Cluster>

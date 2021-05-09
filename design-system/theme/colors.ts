@@ -2,6 +2,7 @@ export const palette = {
   orange: '#fa6d01',
   green: '#52e409',
   purple: '#E509E3',
+  blue: '#089aef',
   neutral0: '#0c0f13',
   neutral10: '#13181d',
   neutral20: '#171d22',
@@ -29,7 +30,8 @@ export const colors = {
   foreground: palette.neutral90,
   decorative: {
     green: palette.green,
-    purple: palette.purple
+    purple: palette.purple,
+    blue: palette.blue
   },
   input: {
     background: palette.neutral40,

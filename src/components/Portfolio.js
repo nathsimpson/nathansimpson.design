@@ -21,6 +21,7 @@ export const Portfolio = ({ data }) => (
             <ContentCard
               key={node.id}
               project={meta}
+              desc={meta.desc}
               tag={meta.tag}
               path={meta.path}
               image={

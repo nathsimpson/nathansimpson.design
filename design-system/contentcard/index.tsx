@@ -31,6 +31,8 @@ export const ContentCard = ({
           css={{
             display: 'flex',
             flex: 1,
+            backgroundColor: colors.backgroundHover,
+            borderBottom: `1px solid ${colors.border}`,
             borderTopLeftRadius: cardStyles.borderRadius,
             borderTopRightRadius: cardStyles.borderRadius,
             backgroundImage: `url(${image})`,

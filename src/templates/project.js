@@ -2,12 +2,14 @@
 import { jsx } from '@emotion/core';
 import { Header, Layout, Mdx } from '../components';
 import { BackButton } from '../components/backButton';
-import { spacing } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
 export default ({ data }) => {
   const project = data.mdx;
+  const { spacing } = useTheme();
+
   return (
     <Layout>
       <Helmet>

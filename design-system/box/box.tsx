@@ -9,7 +9,7 @@ import {
   getMarginStyles,
   getPaddingStyles,
   getRadiiStyles,
-  colorMap
+  useBoxColors
 } from './utils';
 import { forwardRefWithAs } from '../utils';
 
@@ -72,11 +72,13 @@ export const Box = forwardRefWithAs<'div', BoxProps>(
       roundingTop
     });
 
+    const colors = useBoxColors();
+
     return (
       <Tag
         {...props}
         css={{
-          backgroundColor: colorMap[bg],
+          backgroundColor: colors[bg],
           ...radiiObj,
           ...marginObj,
           ...paddingObj,

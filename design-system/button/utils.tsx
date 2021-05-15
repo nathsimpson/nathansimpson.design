@@ -1,8 +1,8 @@
-import { colors, spacing, fontsizes, fontFamilies, radii } from '../theme';
+import { useTheme } from '../theme';
 import hexAlpha from 'hex-alpha';
 
 type ButtonSize = 'small' | 'medium' | 'large';
-type ButtonWeight = keyof typeof weights;
+type ButtonWeight = 'primary' | 'secondary';
 
 export type ButtonProps = {
   label: string;
@@ -17,6 +17,29 @@ export const useButtonStyles = ({
   size: ButtonSize;
   weight: ButtonWeight;
 }) => {
+  const { colors, spacing, fontsizes, fontFamilies, radii } = useTheme();
+
+  const weights = {
+    primary: {
+      border: 'none',
+      color: 'white',
+      backgroundColor: colors.text.link,
+      '&:hover, &:focus': {
+        backgroundColor: hexAlpha(colors.text.link, 0.8),
+        textDecoration: 'none'
+      }
+    },
+    secondary: {
+      border: `2px solid ${colors.text.link}`,
+      color: colors.text.link,
+      background: 'none',
+      '&:hover, &:focus': {
+        backgroundColor: hexAlpha(colors.text.link, 0.2),
+        textDecoration: 'none'
+      }
+    }
+  } as const;
+
   return {
     fontFamily: fontFamilies.heading,
     fontWeight: 900,
@@ -33,25 +56,4 @@ export const useButtonStyles = ({
     lineHeight: 1,
     ...weights[weight]
   } as const;
-};
-
-const weights = {
-  primary: {
-    border: 'none',
-    color: 'white',
-    backgroundColor: colors.brand,
-    '&:hover, &:focus': {
-      backgroundColor: hexAlpha(colors.brand, 0.8),
-      textDecoration: 'none'
-    }
-  },
-  secondary: {
-    border: `2px solid ${colors.brand}`,
-    color: colors.brand,
-    background: 'none',
-    '&:hover, &:focus': {
-      backgroundColor: hexAlpha(colors.brand, 0.2),
-      textDecoration: 'none'
-    }
-  }
 };

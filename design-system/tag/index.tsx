@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
-import { colors, radii } from '../theme';
+import { useTheme } from '../theme';
 import hexAlpha from 'hex-alpha';
 
 const sizes = {
@@ -9,18 +9,10 @@ const sizes = {
   small: 3
 };
 
-const colorMap = {
-  default: colors.foreground,
-  brand: colors.brand,
-  blue: colors.decorative.blue,
-  purple: colors.decorative.purple,
-  green: colors.decorative.green
-} as const;
-
 type TagProps = {
   label: string;
   as: ElementType;
-  color: keyof typeof colorMap;
+  color: 'default' | 'brand' | 'blue' | 'purple' | 'green';
   size: keyof typeof sizes;
 };
 
@@ -30,6 +22,15 @@ export const Tag = ({
   color = 'default',
   size = 'medium'
 }: TagProps) => {
+  const { colors, radii } = useTheme();
+  const colorMap = {
+    default: colors.text.default,
+    brand: colors.global.brand,
+    blue: colors.decorative.blue,
+    purple: colors.decorative.purple,
+    green: colors.decorative.green
+  } as const;
+
   const Div = as || 'div';
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (

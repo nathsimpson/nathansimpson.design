@@ -6,12 +6,13 @@ import { graphql } from 'gatsby';
 import { Header, Layout, Mdx } from '../components';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
-import { spacing } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 
 import { Heading, Text } from '../../design-system/typography';
 
 export default ({ data }) => {
   const talk = data.mdx;
+  const { spacing } = useTheme();
 
   return (
     <Layout>

@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import { codeHighlightTheme } from './codeHighlightTheme';
+import { useCodeHighlightTheme } from './codeHighlightTheme';
 
 import { Button, LinkButton } from '../../design-system/button';
 import { ContentCard } from '../../design-system/contentcard';
@@ -19,7 +19,7 @@ import { Cluster } from '../../design-system/cluster';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
 import { Text, Heading } from '../../design-system/typography';
 
-import { colors, spacing, radii, fontsizes } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
 
 const DsComponents = {
@@ -45,11 +45,13 @@ const DsComponents = {
 const CodePreview = props => {
   const className = props.className || '';
   const matches = className.match(/language-(?<lang>.*)/);
+  const codeTheme = useCodeHighlightTheme();
+
   return (
     <Highlight
       {...defaultProps}
       code={props.children.trim()}
-      theme={codeHighlightTheme}
+      theme={codeTheme}
       language={
         matches && matches.groups && matches.groups.lang
           ? matches.groups.lang
@@ -71,32 +73,38 @@ const CodePreview = props => {
   );
 };
 
-const CodeEditor = props => (
-  <div
-    css={{
-      border: `1px solid ${colors.border}`,
-      borderRadius: radii.medium
-    }}
-  >
-    <LiveProvider code={props.children} scope={DsComponents} {...props}>
-      <div
-        css={{
-          padding: spacing.medium
-        }}
-      >
-        <LivePreview />
-      </div>
-      <LiveError />
-      <LiveEditor
-        theme={codeHighlightTheme}
-        style={{
-          fontSize: fontsizes.medium,
-          background: colors.backgroundEmphasis
-        }}
-      />
-    </LiveProvider>
-  </div>
-);
+const CodeEditor = props => {
+  const { colors, fontsizes, radii, spacing } = useTheme();
+  const codeTheme = useCodeHighlightTheme();
+
+  return (
+    <div
+      css={{
+        border: `1px solid ${colors.global.border}`,
+        borderRadius: radii.medium,
+        maxWidth: 900
+      }}
+    >
+      <LiveProvider code={props.children} scope={DsComponents} {...props}>
+        <div
+          css={{
+            padding: spacing.medium
+          }}
+        >
+          <LivePreview />
+        </div>
+        <LiveError />
+        <LiveEditor
+          theme={codeTheme}
+          style={{
+            fontSize: fontsizes.medium
+            // background: colors.background.emphasis
+          }}
+        />
+      </LiveProvider>
+    </div>
+  );
+};
 
 const components = {
   p: props => <Text {...props} />,
@@ -125,15 +133,68 @@ const components = {
     }
   },
   inlineCode: props => {
+    const { colors, radii, spacing } = useTheme();
     return (
       <Text
         as="pre"
         css={{
           display: 'inline',
-          color: colors.foregroundEmphasis,
-          backgroundColor: colors.backgroundEmphasis,
+          color: colors.text.emphasis,
+          backgroundColor: colors.background.emphasis,
           padding: spacing.xsmall,
           borderRadius: radii.small
+        }}
+        {...props}
+      />
+    );
+  },
+  table: props => {
+    return (
+      <table
+        css={{
+          // border: `1px solid ${colors.border}`,
+          // border: 'none',
+          // borderCollapse: 'collapse',
+          width: '100%'
+        }}
+        {...props}
+      />
+    );
+  },
+  thead: props => {
+    const { fontFamilies, colors } = useTheme();
+    return (
+      <thead
+        css={{
+          textAlign: 'left',
+          fontFamily: fontFamilies.heading,
+          color: colors.text.emphasis
+        }}
+        {...props}
+      />
+    );
+  },
+  tr: props => {
+    const { colors } = useTheme();
+    return (
+      <tr
+        css={{
+          // paddingTop: spacing.small,
+          // paddingBottom: spacing.small,
+          borderBottom: `1px solid ${colors.global.border}`
+        }}
+        {...props}
+      />
+    );
+  },
+  td: props => {
+    const { colors, spacing } = useTheme();
+    return (
+      <td
+        css={{
+          paddingTop: spacing.small,
+          paddingBottom: spacing.small,
+          borderBottom: `1px solid ${colors.global.border}`
         }}
         {...props}
       />

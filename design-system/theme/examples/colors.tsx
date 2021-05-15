@@ -1,8 +1,9 @@
 import React from 'react';
-import { colors } from '../colors';
+import { useTheme } from '../themecontext';
 import { spacing } from '../index';
 
 export const ColorsExample = () => {
+  const { colors } = useTheme();
   const colorsArr: { label: string; value: string }[] = [];
 
   const generateCards = ({
@@ -39,11 +40,12 @@ export const ColorsExample = () => {
 };
 
 const Color = ({ label, value }) => {
+  const { colors } = useTheme();
   return (
     <div
       style={{
         minWidth: 200,
-        border: `1px solid ${colors.border}`
+        border: `1px solid ${colors.global.border}`
       }}
     >
       <div
@@ -51,14 +53,14 @@ const Color = ({ label, value }) => {
           width: '100%',
           height: 100,
           backgroundColor: value,
-          border: `1px solid ${colors.border}`
+          border: `1px solid ${colors.global.border}`
         }}
       />
 
       <div
         style={{
           padding: spacing.xsmall,
-          backgroundColor: colors.backgroundEmphasis
+          backgroundColor: colors.background.emphasis
         }}
       >
         <p>{label}</p>

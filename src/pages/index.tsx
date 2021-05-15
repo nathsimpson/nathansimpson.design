@@ -15,19 +15,20 @@ import {
 } from '../components';
 
 import { Box } from '../../design-system/box';
-import { colors } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 import { Heading } from '../../design-system/typography';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { TextLink } from '../../design-system/textlink';
 
 const Hero = () => {
+  const { colors } = useTheme();
   return (
     <div
       css={{
         padding: '128px 0px',
-        backgroundColor: colors.backgroundEmphasis,
-        borderBottom: `1px solid ${colors.border}`,
+        backgroundColor: colors.background.emphasis,
+        borderBottom: `1px solid ${colors.global.border}`,
         width: '100%'
       }}
     >
@@ -66,17 +67,20 @@ const Hero = () => {
   );
 };
 
-const Avatar = () => (
-  <img
-    src="https://files.nathansimpson.design/avatar.jpeg"
-    css={{
-      width: 100,
-      height: 100,
-      borderRadius: 50,
-      backgroundColor: colors.foreground
-    }}
-  />
-);
+const Avatar = () => {
+  const { colors } = useTheme();
+  return (
+    <img
+      src="https://files.nathansimpson.design/avatar.jpeg"
+      css={{
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        backgroundColor: colors.text.default
+      }}
+    />
+  );
+};
 
 const App = ({ data }: PageProps) => (
   <Fragment>

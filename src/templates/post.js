@@ -9,10 +9,11 @@ import { Box } from '../../design-system/box';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
-import { spacing } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 
 export default ({ data }) => {
   const post = data.mdx;
+  const { spacing } = useTheme();
 
   return (
     <Layout>

@@ -1,7 +1,4 @@
-import {
-  colors, // TODO: delete me!
-  darkColors
-} from './colors';
+import { darkColors, lightColors } from './colors';
 
 export { palette, colors } from './colors';
 
@@ -37,12 +34,6 @@ export const radii = {
   large: 12
 } as const;
 
-export const boxShadow = {
-  1: {
-    boxShadow: `0px 6px 12px ${colors.shadow}`
-  }
-};
-
 export const fontsizes = {
   xsmall: '0.75rem',
   small: '0.875rem',
@@ -62,7 +53,11 @@ export const themeDark = {
   spacing,
   breakpoints,
   radii,
-  boxShadow,
+  boxShadow: {
+    1: {
+      boxShadow: `0px 6px 12px ${darkColors.global.shadow}`
+    }
+  },
   fontsizes,
   fontFamilies,
   colors: darkColors
@@ -72,8 +67,12 @@ export const themeLight = {
   spacing,
   breakpoints,
   radii,
-  boxShadow,
+  boxShadow: {
+    1: {
+      boxShadow: `0px 6px 12px ${lightColors.global.shadow}`
+    }
+  },
   fontsizes,
   fontFamilies,
-  colors: darkColors
+  colors: lightColors
 };

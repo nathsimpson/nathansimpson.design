@@ -2,6 +2,8 @@ import { colors } from './colors';
 
 export { palette, colors } from './colors';
 
+export { ThemeProvider, useTheme } from './themecontext';
+
 export const fontFamilies = {
   heading:
     "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",

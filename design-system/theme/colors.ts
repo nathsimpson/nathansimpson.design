@@ -16,6 +16,8 @@ export const palette = {
   neutral100: '#ffffff'
 };
 
+const primary = palette.orange;
+
 export const colors = {
   brand: palette.orange,
   brandSecondary: palette.neutral100,
@@ -45,4 +47,32 @@ export const colors = {
       foreground: palette.neutral100
     }
   }
+};
+
+export const darkColors = {
+  global: {
+    brand: palette.orange,
+    border: palette.neutral50,
+    shadow: palette.neutral0
+  },
+  text: {
+    default: palette.neutral90,
+    emphasis: palette.neutral100,
+    link: primary,
+    linkHover: palette.neutral100
+  },
+  background: {
+    default: palette.neutral10,
+    emphasis: palette.neutral30,
+    hover: palette.neutral40
+  },
+  input: {
+    background: palette.neutral40,
+    backgroundHover: palette.neutral50,
+    backgroundActive: palette.neutral30,
+    foreground: palette.neutral90,
+    foregroundHover: palette.neutral100,
+    foregroundActive: palette.neutral100
+  },
+  decorative: [palette.green, palette.purple, palette.blue]
 };

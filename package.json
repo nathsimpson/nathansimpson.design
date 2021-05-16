@@ -13,6 +13,7 @@
     "build": "yarn build:lambda && gatsby build",
     "dev": "gatsby develop",
     "start": "yarn dev",
+    "clean": "gatsby clean",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
     "types": "tsc --project tsconfig.json",
     "lint": "eslint ."

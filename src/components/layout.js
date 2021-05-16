@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Global } from '@emotion/core';
+import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 
 import { Footer } from './footer';
@@ -9,7 +10,7 @@ import { useTheme } from '../../design-system/theme';
 export const Layout = ({ children }) => {
   const { colors, fontsizes, fontFamilies } = useTheme();
   return (
-    <div>
+    <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Nathan Simpson - UI Designer + Developer</title>
@@ -47,6 +48,6 @@ export const Layout = ({ children }) => {
       />
       <main>{children}</main>
       <Footer />
-    </div>
+    </Fragment>
   );
 };

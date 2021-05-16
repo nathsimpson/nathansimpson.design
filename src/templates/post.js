@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { Header, Layout, Mdx } from '../components';
+import { Header, Mdx } from '../components';
 import { BackButton } from '../components/backButton';
 import { Box } from '../../design-system/box';
 import { Divider } from '../../design-system/divider';
@@ -16,7 +16,7 @@ export default ({ data }) => {
   const { spacing } = useTheme();
 
   return (
-    <Layout>
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
@@ -51,7 +51,7 @@ export default ({ data }) => {
           <Mdx>{post.body}</Mdx>
         </Stack>
       </Box>
-    </Layout>
+    </div>
   );
 };
 

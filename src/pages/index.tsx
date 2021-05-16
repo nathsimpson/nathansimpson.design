@@ -10,8 +10,7 @@ import {
   Portfolio,
   Development,
   Talks,
-  Dribbble,
-  Layout
+  Dribbble
 } from '../components';
 
 import { Box } from '../../design-system/box';
@@ -88,23 +87,21 @@ const App = ({ data }: PageProps) => (
     <Hero />
 
     <Container>
-      <Layout>
-        <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
-          <Portfolio data={data} />
+      <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
+        <Portfolio data={data} />
 
-          <Divider />
+        <Divider />
 
-          <Development />
+        <Development />
 
-          <Divider />
+        <Divider />
 
-          <Dribbble />
+        <Dribbble />
 
-          <Divider />
+        <Divider />
 
-          <Talks data={data} />
-        </Stack>
-      </Layout>
+        <Talks data={data} />
+      </Stack>
     </Container>
   </Fragment>
 );

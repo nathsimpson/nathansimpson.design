@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Header, Layout, Mdx } from '../components';
+import { Header, Mdx } from '../components';
 import { BackButton } from '../components/backButton';
 import { useTheme } from '../../design-system/theme';
 import { graphql } from 'gatsby';
@@ -11,7 +11,7 @@ export default ({ data }) => {
   const { spacing } = useTheme();
 
   return (
-    <Layout>
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{project.frontmatter.title} - Nathan Simpson's portfolio</title>
@@ -30,7 +30,7 @@ export default ({ data }) => {
 
         <Mdx>{project.body}</Mdx>
       </div>
-    </Layout>
+    </div>
   );
 };
 

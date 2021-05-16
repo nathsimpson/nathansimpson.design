@@ -1,6 +1,6 @@
 import { darkColors, lightColors } from './colors';
 
-export { palette, colors } from './colors';
+export { palette } from './colors';
 
 export const fontFamilies = {
   heading:
@@ -48,6 +48,7 @@ export const fontsizes = {
 export type SpacingType = keyof typeof spacing;
 export type RadiiType = keyof typeof radii;
 export type FontSizeType = keyof typeof fontsizes;
+export type Theme = typeof themeDark;
 
 export const themeDark = {
   spacing,

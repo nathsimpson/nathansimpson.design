@@ -1,6 +1,6 @@
 import React, { ReactElement, createContext, useContext } from 'react';
 
-import { themeDark } from './themes';
+import { themeDark, Theme } from './themes';
 
 // Context lets us pass a value deep into the component tree
 // without explicitly threading it through every component.
@@ -11,9 +11,10 @@ export const ThemeContext = createContext({
 
 export const ThemeProvider = ({
   children,
-  theme: definedTheme = {}
+  theme: definedTheme
 }: {
   children: ReactElement;
+  theme?: Theme;
 }) => {
   const defaultTheme = useTheme();
 

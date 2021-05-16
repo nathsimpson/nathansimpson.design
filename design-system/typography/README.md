@@ -20,6 +20,13 @@ Text component is used for all body text in the app. It includes our body font f
 <Text>Gday mate</Text>
 ```
 
+| Prop     | Options                | Default   |
+| -------- | ---------------------- | --------- |
+| as?      | `p` ,`span`            | `p`       |
+| children | string                 |           |
+| color?   | `default` , `emphasis` | `default` |
+| size?    | SizingType             | `medium`  |
+
 ## Heading
 
 Used for all headings in the app. It exposes a prop for 'level', as well the same utility props from Box.
@@ -34,3 +41,8 @@ Used for all headings in the app. It exposes a prop for 'level', as well the sam
   <Heading level={6}>Heading Six</Heading>
 </Stack>
 ```
+
+| Prop     | Options     | Default |
+| -------- | ----------- | ------- |
+| children | string      |         |
+| level?   | 1,2,3,4,5,6 | 1       |

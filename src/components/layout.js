@@ -14,6 +14,7 @@ export const Layout = ({ children }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Nathan Simpson - UI Designer + Developer</title>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#F8F000" />
       </Helmet>
       <Global
         styles={{

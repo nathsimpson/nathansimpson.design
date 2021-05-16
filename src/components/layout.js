@@ -18,7 +18,6 @@ export const Layout = ({ children }) => {
       </Helmet>
       <Global
         styles={{
-          // TODO: remove or clean me
           body: {
             fontSize: fontsizes.medium,
             margin: 0,

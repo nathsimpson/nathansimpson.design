@@ -2,28 +2,17 @@
 import { jsx } from '@emotion/core';
 import { Button } from '../../design-system/button';
 import { Icon } from '../../design-system/icon';
-import { useTheme } from '../../design-system/theme';
+import { useTheme, useThemeContext } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
 import { Text } from '../../design-system/typography';
 import { TextLinkGatsby } from '../../design-system/textlink';
 import { Stack } from '../../design-system/stack';
 
-import {
-  footer_navItems,
-  footer_socialNetworks,
-  selectedThemeTokenName
-} from '../data';
-
-const toggleTheme = () => {
-  const currentTheme = localStorage.getItem(selectedThemeTokenName);
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem(selectedThemeTokenName, newTheme);
-  location.reload();
-};
+import { footer_navItems, footer_socialNetworks } from '../data';
 
 export const Footer = () => {
   const { colors } = useTheme();
-
+  const { onThemeChange, themeName } = useThemeContext();
   return (
     <Stack gap="medium" marginY="xlarge" align="center" as="footer">
       <Divider />
@@ -86,7 +75,9 @@ export const Footer = () => {
 
       <Button
         label="Toggle theme"
-        onClick={toggleTheme}
+        onClick={() => {
+          onThemeChange(themeName === 'light' ? 'dark' : 'light');
+        }}
         size="small"
         weight="secondary"
       />

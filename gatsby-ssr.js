@@ -1,24 +1,11 @@
 const React = require('react');
 const { Layout } = require('./src/components/layout');
-const {
-  ThemeProvider,
-  themeLight,
-  themeDark
-} = require('./design-system/theme');
-const { selectedThemeTokenName } = require('./src/data');
+const { ThemeProvider, themeDark } = require('./design-system/theme');
 
 // Wraps every page in a component
 exports.wrapPageElement = ({ element, props }) => {
-  const selectedTheme = localStorage.getItem(selectedThemeTokenName);
-
-  if (!selectedTheme) {
-    localStorage.setItem(selectedThemeTokenName, 'dark');
-  }
-
-  const theme = selectedTheme === 'light' ? themeLight : themeDark;
-
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeDark}>
       <Layout>{element}</Layout>
     </ThemeProvider>
   );

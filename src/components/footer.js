@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Button } from '../../design-system/button';
 import { Icon } from '../../design-system/icon';
 import { useTheme } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
@@ -7,7 +8,18 @@ import { Text } from '../../design-system/typography';
 import { TextLinkGatsby } from '../../design-system/textlink';
 import { Stack } from '../../design-system/stack';
 
-import { footer_navItems, footer_socialNetworks } from '../data';
+import {
+  footer_navItems,
+  footer_socialNetworks,
+  selectedThemeTokenName
+} from '../data';
+
+const toggleTheme = () => {
+  const currentTheme = localStorage.getItem(selectedThemeTokenName);
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(selectedThemeTokenName, newTheme);
+  location.reload();
+};
 
 export const Footer = () => {
   const { colors } = useTheme();
@@ -71,6 +83,13 @@ export const Footer = () => {
           </li>
         ))}
       </ul>
+
+      <Button
+        label="Toggle theme"
+        onClick={toggleTheme}
+        size="small"
+        weight="secondary"
+      />
     </Stack>
   );
 };

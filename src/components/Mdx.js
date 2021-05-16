@@ -207,3 +207,11 @@ export const Mdx = ({ children }) => {
     </MDXProvider>
   );
 };
+
+export const MdxWithoutH1 = ({ children }) => {
+  return (
+    <MDXProvider components={{ ...components, h1: () => null }}>
+      <MDXRenderer>{children}</MDXRenderer>
+    </MDXProvider>
+  );
+};

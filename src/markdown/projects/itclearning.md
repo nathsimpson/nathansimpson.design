@@ -6,6 +6,7 @@ imagesrc: 'itc/cover.jpg'
 type: project
 desc: A WordPress-based website for a previous employer; Featuring a custom theme and registrations for webinars and events.
 tag: Development
+skills: 'SCSS,WordPress,PHP'
 ---
 
 # ITC Learning Website

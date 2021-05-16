@@ -12,9 +12,9 @@ Used to input text into forms.
 <TextInput value="Nathan Simpson" label="Name" isRequired />
 ```
 
-| Prop        | Options    | Default |
-| ----------- | ---------- | ------- |
-| isRequired? | boolean    | false   |
-| label       | string     |         |
-| onChange    | () => void |         |
-| value       | string     |         |
+| Prop        | Options       | Default |
+| ----------- | ------------- | ------- |
+| isRequired? | boolean       | false   |
+| label       | string        |         |
+| onChange    | event => void |         |
+| value       | string        |         |

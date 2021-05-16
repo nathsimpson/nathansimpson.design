@@ -1,3 +1,5 @@
+export const selectedThemeTokenName = 'ns-selectedTheme';
+
 export const footer_socialNetworks = [
   {
     name: 'Twitter',

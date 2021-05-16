@@ -3,18 +3,19 @@ import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { Header, Layout, Mdx } from '../components';
+import { Header, Mdx } from '../components';
 import { Divider } from '../../design-system/divider';
 import { Stack } from '../../design-system/stack';
-import { spacing } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 
 import { Heading, Text } from '../../design-system/typography';
 
 export default ({ data }) => {
   const talk = data.mdx;
+  const { spacing } = useTheme();
 
   return (
-    <Layout>
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{talk.frontmatter.title} - Nathan Simpson's talks</title>
@@ -52,7 +53,7 @@ export default ({ data }) => {
           <Mdx>{talk.body}</Mdx>
         </Stack>
       </div>
-    </Layout>
+    </div>
   );
 };
 

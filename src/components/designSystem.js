@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
-import { Container, Layout, Header } from '../components';
+import { Container, Header } from '../components';
 import { Mdx } from './Mdx';
 
 import { Stack } from '../../design-system/stack';
@@ -11,7 +11,7 @@ export const DesignSystemTemplate = ({ data }) => {
   const post = data.mdx;
 
   return (
-    <Layout>
+    <div>
       <Header />
       <Helmet>
         <title>Nathan Simpson - UI Designer + Developer</title>
@@ -30,7 +30,7 @@ export const DesignSystemTemplate = ({ data }) => {
           <Mdx>{post.body}</Mdx>
         </div>
       </Container>
-    </Layout>
+    </div>
   );
 };
 

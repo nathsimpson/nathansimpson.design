@@ -2,19 +2,23 @@
 import { jsx } from '@emotion/core';
 import { Link } from 'gatsby';
 
-import { colors, fontsizes, FontSizeType, fontFamilies } from '../theme';
+import { useTheme, FontSizeType } from '../theme';
 
-const getStyles = (size?: FontSizeType) => ({
-  color: colors.link,
-  cursor: 'pointer',
-  fontFamily: fontFamilies.body,
-  fontSize: size ? fontsizes[size] : 'auto',
-  textDecoration: 'none',
-  '&:hover, &:focus': {
-    color: colors.linkHover,
-    textDecoration: 'underline'
-  }
-});
+const getStyles = (size?: FontSizeType) => {
+  const { colors, fontFamilies, fontsizes } = useTheme();
+
+  return {
+    color: colors.text.link,
+    cursor: 'pointer',
+    fontFamily: fontFamilies.body,
+    fontSize: size ? fontsizes[size] : 'auto',
+    textDecoration: 'none',
+    '&:hover, &:focus': {
+      color: colors.text.linkHover,
+      textDecoration: 'underline'
+    }
+  };
+};
 
 export const TextLink = ({
   size,

@@ -9,7 +9,7 @@ import {
   getFlexStyles,
   FlexProps,
   alignmentMap,
-  colorMap,
+  useBoxColors,
   justificationMap,
   orientationMap
 } from './utils';
@@ -81,6 +81,8 @@ export const FlexBox = ({
     basis
   });
 
+  const colors = useBoxColors();
+
   return (
     <div
       {...props}
@@ -91,7 +93,7 @@ export const FlexBox = ({
         ...paddingObj,
         display: 'flex',
         alignItems: alignmentMap[align],
-        backgroundColor: colorMap[bg],
+        backgroundColor: colors[bg],
         flexDirection: orientationMap[orientation],
         height,
         justifyContent: justificationMap[justify],

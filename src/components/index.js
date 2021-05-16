@@ -1,13 +1,11 @@
 export { Contact } from './contact';
 export { Container } from './container';
-export { ContactForm } from './contactform';
-export { codeHighlightTheme } from './codeHighlightTheme';
+// export { ContactForm } from './contactform';
 export { DesignSystemTemplate } from './designSystem';
 export { Development } from './Development';
 export { Dribbble } from './dribbble';
 export { Footer } from './footer';
 export { Header } from './header';
-export { Layout } from './layout';
 export { Mdx } from './Mdx';
 export { NotFound } from './NotFound';
 export { Portfolio } from './Portfolio';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ICONS } from './icons';
-import { colors } from '../theme';
+import { useTheme } from '../theme';
 
 export const Icon = ({
   icon,
@@ -11,6 +11,11 @@ export const Icon = ({
   size: number; // TODO: fix this
   color?: 'foreground' | 'link'; // TODO: type this
 }) => {
+  const theme = useTheme();
+  const colors = {
+    foreground: theme.colors.text.default,
+    link: theme.colors.text.link
+  };
   return (
     <svg
       width={size}

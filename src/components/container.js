@@ -1,7 +1,8 @@
 import React from 'react';
-import { spacing } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 
 export const Container = ({ ...props }) => {
+  const { spacing } = useTheme();
   return (
     <div
       style={{

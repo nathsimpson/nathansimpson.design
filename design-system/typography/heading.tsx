@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Box, BoxMarginProps, BoxPaddingProps, BoxRadiiProps } from '../box';
-
-import { colors, fontsizes, fontFamilies } from '../theme';
+import { useTheme, fontsizes, fontFamilies } from '../theme';
 
 type HeadingProps = BoxMarginProps &
   BoxPaddingProps &
@@ -12,6 +11,7 @@ type HeadingProps = BoxMarginProps &
   };
 
 export const Heading = ({ level = 1, ...props }: HeadingProps) => {
+  const { colors } = useTheme();
   const tag = tagMap[level];
 
   return (
@@ -21,7 +21,7 @@ export const Heading = ({ level = 1, ...props }: HeadingProps) => {
       css={{
         fontFamily: fontFamilies.heading,
         lineHeight: 1.1,
-        color: colors.foregroundEmphasis,
+        color: colors.text.emphasis,
         margin: 0,
         ...headings[level]
       }}

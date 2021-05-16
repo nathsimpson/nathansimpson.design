@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Box } from '../box';
-
-import { colors, fontsizes, fontFamilies } from '../theme';
+import { useTheme, FontSizeType } from '../theme';
 
 type TextProps = {
   as?: 'p' | 'span';
   children: string;
   color?: 'default' | 'emphasis';
-  size?: keyof typeof fontsizes;
+  size?: FontSizeType;
 };
 
 export const Text = ({
@@ -17,12 +16,13 @@ export const Text = ({
   as = 'p',
   ...props
 }: TextProps) => {
+  const { colors, fontsizes, fontFamilies } = useTheme();
   return (
     <Box
       as={as}
       {...props}
       css={{
-        color: colors[colorMap[color]],
+        color: colors.text[color],
         fontFamily: fontFamilies.body,
         fontSize: fontsizes[size],
         maxWidth: 800
@@ -30,8 +30,3 @@ export const Text = ({
     />
   );
 };
-
-const colorMap = {
-  default: 'foreground',
-  emphasis: 'foregroundEmphasis'
-} as const;

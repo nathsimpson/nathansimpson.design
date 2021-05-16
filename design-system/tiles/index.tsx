@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ReactElement } from 'react';
-import { spacing } from '../theme';
+import { useTheme } from '../theme';
 
 export const Tiles = ({ children }: { children: ReactElement[] }) => {
+  const { spacing } = useTheme();
   return (
     <div
       css={{

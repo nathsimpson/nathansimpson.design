@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { cardStyles } from '../../design-system/card';
+import { useCardStyles } from '../../design-system/card';
 import { Heading } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
-import { radii, colors } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 import { TextLink } from '../../design-system/textlink';
 import { mq } from '../helpers/utils';
 
@@ -43,15 +43,17 @@ const Talk = ({
     frontmatter: { path, youtubeid, title }
   }
 }) => {
-  const defaultBorder = `1px solid ${colors.border}`;
+  const { colors, radii } = useTheme();
+  const cardStyles = useCardStyles();
+  const defaultBorder = `1px solid ${colors.global.border}`;
 
   return (
     <a
       href={path}
       css={mq({
         ...cardStyles,
-        borderLeft: [defaultBorder, `2px solid ${colors.brand}`],
-        borderTop: [`2px solid ${colors.brand}`, defaultBorder],
+        borderLeft: [defaultBorder, `2px solid ${colors.global.brand}`],
+        borderTop: [`2px solid ${colors.global.brand}`, defaultBorder],
         borderTopLeftRadius: radii.none,
         borderBottomLeftRadius: [radii.large, 0],
         display: 'flex',
@@ -69,7 +71,7 @@ const Talk = ({
         css={mq({
           width: ['auto', 220],
           height: [160, 'auto'],
-          backgroundColor: colors.backgroundEmphasis,
+          backgroundColor: colors.background.emphasis,
           backgroundImage: `url(https://i.ytimg.com/vi/${youtubeid}/hqdefault.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
@@ -84,7 +86,7 @@ const Talk = ({
       >
         <Stack gap="small" padding="large">
           <Heading level={3}>{title}</Heading>
-          <span href={path} css={{ color: colors.brand }}>
+          <span href={path} css={{ color: colors.text.link }}>
             Watch now
           </span>
         </Stack>

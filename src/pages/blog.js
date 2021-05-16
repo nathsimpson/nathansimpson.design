@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
-import { Layout, Header } from '../components';
+import { Header } from '../components';
 import { Tag } from '../../design-system/tag';
 import { Divider } from '../../design-system/divider';
 import { Card } from '../../design-system/card';
@@ -52,7 +52,7 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
 };
 
 export default ({ data }) => (
-  <Layout>
+  <div>
     <Header />
     <div
       css={{
@@ -77,7 +77,7 @@ export default ({ data }) => (
           })}
       </Stack>
     </div>
-  </Layout>
+  </div>
 );
 
 export const talksQuery = graphql`

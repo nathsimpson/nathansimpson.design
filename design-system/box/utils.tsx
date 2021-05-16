@@ -1,4 +1,4 @@
-import { colors, spacing, radii, SpacingType, RadiiType } from '../theme';
+import { useTheme, spacing, radii, SpacingType, RadiiType } from '../theme';
 
 export type BoxMarginProps = {
   /** Margin */
@@ -140,8 +140,12 @@ export const justificationMap = {
   stretch: 'stretch'
 } as const;
 
-export const colorMap = {
-  none: 'none',
-  base: colors.background,
-  emphasis: colors.backgroundEmphasis
-} as const;
+export const useBoxColors = () => {
+  const { colors } = useTheme();
+
+  return {
+    none: 'none',
+    base: colors.background.default,
+    emphasis: colors.background.emphasis
+  } as const;
+};

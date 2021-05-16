@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../colors';
+import { useTheme } from '../themecontext';
 import { spacing } from '../index';
 import { Stack } from '../../stack';
 import { Text } from '../../typography';
@@ -15,13 +15,14 @@ export const SpacingExample = () => {
 };
 
 const Block = ({ label }) => {
+  const { colors, spacing } = useTheme();
   return (
     <Stack orientation="horizontal" align="center" gap="small">
       <div
         style={{
           width: spacing[label],
           height: spacing.xlarge,
-          backgroundColor: colors.brand
+          backgroundColor: colors.global.brand
         }}
       />
 

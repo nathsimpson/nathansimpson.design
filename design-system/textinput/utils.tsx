@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { radii, colors, fontsizes } from '../theme';
+import { useTheme } from '../theme';
 import { SyntheticEvent } from 'react';
 
 export type InputProps = {
@@ -11,10 +11,11 @@ export type InputProps = {
 };
 
 export const useInputStyles = () => {
+  const { radii, colors } = useTheme();
   return {
     background: colors.input.background,
     color: colors.input.foreground,
-    border: `1px solid ${colors.border}`,
+    border: `1px solid ${colors.global.border}`,
     fontSize: '1em',
     display: 'block',
     width: '100%',
@@ -24,13 +25,13 @@ export const useInputStyles = () => {
     boxSizing: 'border-box',
     transition: 'all 0.5s',
     '&:hover': {
-      background: colors.input.hover.background,
-      color: colors.input.hover.foreground
+      background: colors.input.backgroundHover,
+      color: colors.input.foregroundHover
     },
     '&:active, &:focus': {
-      background: colors.input.active.background,
-      color: colors.input.active.foreground,
-      outline: `2px solid ${colors.brand}`
+      background: colors.input.backgroundActive,
+      color: colors.input.foregroundActive,
+      outline: `2px solid ${colors.global.brand}`
     }
   } as const;
 };
@@ -41,16 +42,21 @@ export const Label = ({
 }: {
   label: string;
   isRequired: boolean;
-}) => (
-  <label
-    css={{
-      fontSize: fontsizes.medium,
-      color: colors.foreground,
-      display: 'block',
-      marginBottom: 6
-    }}
-  >
-    {label}
-    {isRequired && <span css={{ color: colors.brand, marginLeft: 2 }}>*</span>}
-  </label>
-);
+}) => {
+  const { colors, fontsizes } = useTheme();
+  return (
+    <label
+      css={{
+        fontSize: fontsizes.medium,
+        color: colors.text.default,
+        display: 'block',
+        marginBottom: 6
+      }}
+    >
+      {label}
+      {isRequired && (
+        <span css={{ color: colors.global.brand, marginLeft: 2 }}>*</span>
+      )}
+    </label>
+  );
+};

@@ -9,7 +9,7 @@ type: design-system
 Used to input text into forms.
 
 ```jsx live
-<TextInput value="Nathan Simpson" label="Name" />
+<TextInput value="Nathan Simpson" label="Name" isRequired />
 ```
 
 | Prop        | Options    | Default |

@@ -13,7 +13,6 @@ import { Tiles } from '../../design-system/tiles';
 import { Tag } from '../../design-system/tag';
 import { Box, FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
-import { Logo } from '../../design-system/logo';
 import { Card } from '../../design-system/card';
 import { Cluster } from '../../design-system/cluster';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
@@ -33,7 +32,6 @@ const DsComponents = {
   Heading,
   Icon,
   LinkButton,
-  Logo,
   Stack,
   Tag,
   Text,

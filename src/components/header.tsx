@@ -2,7 +2,7 @@
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
-import { Logo } from '../../design-system/logo';
+import { Icon } from '../../design-system/icon';
 import { useTheme } from '../../design-system/theme';
 import { Cluster } from '../../design-system/cluster';
 import { TextLinkGatsby } from '../../design-system/textlink';
@@ -40,8 +40,18 @@ export const Header = ({ hasDivider = true }: { hasDivider: boolean }) => {
         alignItems: 'center'
       }}
     >
-      <Link to="/">
-        <Logo size="small" isInteractive />
+      <Link
+        to="/"
+        css={{
+          color: colors.global.brand,
+          textDecoration: 'none',
+
+          '&:hover': {
+            color: colors.text.linkHover
+          }
+        }}
+      >
+        <Icon icon="ns" size={50} />
       </Link>
 
       <div css={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }}>

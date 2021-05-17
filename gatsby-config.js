@@ -54,12 +54,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Nathan Simpson : Designer + Developer',
-        short_name: 'Nathan Simpson',
+        short_name: 'Nathan',
         start_url: `/`,
-        background_color: `#fa6d01`,
+        background_color: '#13171a',
         theme_color: `#fa6d01`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon-32.png` // This path is relative to the root of the site.
+        display: 'standalone',
+        icon: 'src/images/icon.png'
       }
     }
 

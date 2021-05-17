@@ -14,10 +14,10 @@ export const Layout = ({ children }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Nathan Simpson - UI Designer + Developer</title>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FA6D01" />
       </Helmet>
       <Global
         styles={{
-          // TODO: remove or clean me
           body: {
             fontSize: fontsizes.medium,
             margin: 0,

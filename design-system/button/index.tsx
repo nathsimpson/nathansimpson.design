@@ -1,10 +1,19 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Icon } from '../icon';
 
 import { useButtonStyles, ButtonProps } from './utils';
 
+const iconSizes = {
+  small: 17,
+  medium: 19,
+  large: 24
+};
+
 export const Button = ({
   label,
+  iconBefore,
+  iconAfter,
   size = 'medium',
   weight = 'primary',
   ...props
@@ -15,18 +24,30 @@ export const Button = ({
 
   return (
     <button css={styles} type="button" {...props}>
+      {iconBefore && <Icon size={iconSizes[size]} icon={iconBefore} />}
       {label}
+      {iconAfter && <Icon size={iconSizes[size]} icon={iconAfter} />}
     </button>
   );
 };
 
 export const LinkButton = ({
   label,
+  iconAfter,
+  iconBefore,
   size = 'medium',
-  weight = 'primary'
+  weight = 'primary',
+  href,
+  ...props
 }: ButtonProps & {
   href: 'string';
 }) => {
   const styles = useButtonStyles({ size, weight });
-  return <a css={styles}>{label}</a>;
+  return (
+    <a css={styles} href={href} {...props}>
+      {iconBefore && <Icon size={iconSizes[size]} icon={iconBefore} />}
+      {label}
+      {iconAfter && <Icon size={iconSizes[size]} icon={iconAfter} />}
+    </a>
+  );
 };

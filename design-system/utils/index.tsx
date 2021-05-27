@@ -7,6 +7,8 @@ import {
   forwardRef
 } from 'react';
 
+export { default as hexAlpha } from 'hex-alpha';
+
 type ElementTagNameMap = HTMLElementTagNameMap &
   Pick<
     SVGElementTagNameMap,

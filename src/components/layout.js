@@ -30,8 +30,7 @@ export const Layout = ({ children }) => {
 
           p: {
             fontSize: fontsizes.medium,
-            lineHeight: 1.5,
-            maxWidth: 800
+            lineHeight: 1.5
           },
 
           img: {

@@ -10,7 +10,7 @@ import { mq } from '../helpers/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>
-    <Stack gap="small" align="start">
+    <Stack gap="small" align="start" css={{ maxWidth: 800 }}>
       <Heading level={2}>Talks</Heading>
 
       <p>

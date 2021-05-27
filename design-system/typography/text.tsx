@@ -24,8 +24,7 @@ export const Text = ({
       css={{
         color: colors.text[color],
         fontFamily: fontFamilies.body,
-        fontSize: fontsizes[size],
-        maxWidth: 800
+        fontSize: fontsizes[size]
       }}
     />
   );

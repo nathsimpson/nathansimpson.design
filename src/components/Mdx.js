@@ -79,8 +79,7 @@ const CodeEditor = props => {
     <div
       css={{
         border: `1px solid ${colors.global.border}`,
-        borderRadius: radii.medium,
-        maxWidth: 900
+        borderRadius: radii.medium
       }}
     >
       <LiveProvider code={props.children} scope={DsComponents} {...props}>

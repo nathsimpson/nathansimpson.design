@@ -50,7 +50,7 @@ const Hero = () => {
             content="I am a UI Designer, Frontend Developer, and aspiring entrepreneur, passionate about building ideas from concept to prototype."
           />
         </Helmet>
-        <Stack gap="medium">
+        <Stack gap="medium" css={{ maxWidth: 800 }}>
           <Avatar />
           <Heading level={1}>G'day, I'm Nath 👋</Heading>
 

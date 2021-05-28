@@ -47,7 +47,7 @@ Buttons can include icons on the left or right sides.
 
 ### Props
 
-| Prop       | Type                        | Default   |
+| Prop       | Type                           | Default   |
 | ---------- | ------------------------------ | --------- |
 | iconAfter  | IconType                       |           |
 | iconBefore | IconType                       |           |
@@ -66,7 +66,7 @@ Shares the same styles as a Button, but works as an anchor link.
 
 ### Props
 
-| Prop       | Type                        | Default   |
+| Prop       | Type                           | Default   |
 | ---------- | ------------------------------ | --------- |
 | href       | url string                     |           |
 | iconAfter  | IconType                       |           |

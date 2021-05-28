@@ -14,7 +14,7 @@ export const DesignSystemTemplate = ({ data }) => {
     <div>
       <Header />
       <Helmet>
-        <title>Nathan Simpson - UI Designer + Developer</title>
+        <title>Design System - Nathan Simpson</title>
       </Helmet>
 
       <Container>

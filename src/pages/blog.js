@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import { Header } from '../components';
 import { Tag } from '../../design-system/tag';
@@ -51,9 +52,12 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
   );
 };
 
-export default ({ data }) => (
+const Blog = ({ data }) => (
   <div>
     <Header />
+    <Helmet>
+      <title>Blog - Nathan Simpson</title>
+    </Helmet>
     <div
       css={{
         maxWidth: 800,
@@ -79,6 +83,8 @@ export default ({ data }) => (
     </div>
   </div>
 );
+
+export default Blog;
 
 export const talksQuery = graphql`
   query allPosts {

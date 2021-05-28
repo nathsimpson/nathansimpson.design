@@ -78,6 +78,7 @@ export const Footer = () => {
         onClick={() => {
           onThemeChange(themeName === 'light' ? 'dark' : 'light');
         }}
+        iconBefore={themeName === 'light' ? 'moon' : 'sun'}
         size="small"
         weight="secondary"
       />

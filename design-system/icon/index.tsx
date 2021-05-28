@@ -2,12 +2,14 @@ import React from 'react';
 import { ICONS } from './icons';
 import { useTheme } from '../theme';
 
+export type IconType = keyof typeof ICONS;
+
 export const Icon = ({
   icon,
   size = 16,
   color
 }: {
-  icon: keyof typeof ICONS;
+  icon: IconType;
   size: number; // TODO: fix this
   color?: 'foreground' | 'link'; // TODO: type this
 }) => {

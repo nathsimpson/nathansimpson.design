@@ -5,6 +5,7 @@ date: '2018-11-26'
 imagesrc: 'thegarage/cover.jpg'
 type: project
 tag: Design
+skills: 'User Experience,React Native,Keystone,Branding'
 ---
 
 # The Garage

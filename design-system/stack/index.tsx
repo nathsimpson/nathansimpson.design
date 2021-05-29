@@ -41,9 +41,6 @@ export const Stack: React.FunctionComponent<StackProps> = ({
         // support horizontal orientation
         gridAutoFlow: autoFlow,
 
-        // prevent grid children from expanding the gap to fill the available space
-        [dimension]: 'fit-content',
-
         // min-width and min-height declarations prevent overflow issues
         // https://css-tricks.com/preventing-a-grid-blowout/
         minHeight: 0,

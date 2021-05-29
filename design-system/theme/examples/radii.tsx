@@ -27,7 +27,7 @@ const Block = ({ label }) => {
           backgroundColor: colors.global.brand
         }}
       />
-      <Text>{`${label} (${spacing[label].toString()})`}</Text>
+      <Text>{`${label} (${radii[label].toString()})`}</Text>
     </Stack>
   );
 };

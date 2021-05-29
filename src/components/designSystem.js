@@ -2,8 +2,11 @@
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
 import { Container, Header } from '../components';
-import { Mdx } from './Mdx';
+import { MdxWithoutH1 } from './Mdx';
 
+import { Heading } from '../../design-system/typography';
+import { LinkButton } from '../../design-system/button';
+import { FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { TextLinkGatsby } from '../../design-system/textlink';
 
@@ -27,7 +30,24 @@ export const DesignSystemTemplate = ({ data }) => {
         >
           <NavigationBar data={data.allMdx.edges} />
 
-          <Mdx>{post.body}</Mdx>
+          <article>
+            <FlexBox
+              orientation="horizontal"
+              justify="between"
+              marginBottom="large"
+              align="end"
+            >
+              <Heading>{post.frontmatter.title}</Heading>
+              <LinkButton
+                label="Edit on GitHub"
+                weight="secondary"
+                size="small"
+                iconBefore="github"
+                href={`https://github.com/nathsimpson/nathansimpson.design/edit/master${post.frontmatter.path}/README.md`}
+              />
+            </FlexBox>
+            <MdxWithoutH1>{post.body}</MdxWithoutH1>
+          </article>
         </div>
       </Container>
     </div>

@@ -5,6 +5,7 @@ date: '2018-10-01'
 imagesrc: 'simmo/cover.jpg'
 type: project
 tag: Design
+skills: 'Branding,Web Design,NextJS,Keystone,Vehicle graphics'
 ---
 
 # Simmo's Offroad Tours

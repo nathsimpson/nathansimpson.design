@@ -70,7 +70,6 @@ const NavigationBar = ({ data }) => {
         </TextLinkGatsby>
       </li>
       {data
-
         .filter(
           ({ node: p }) =>
             p.frontmatter.type === 'design-system' &&

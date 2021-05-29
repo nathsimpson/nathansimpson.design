@@ -1,7 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Header, Mdx } from '../components';
+import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
+import { Cluster } from '../../design-system/cluster';
+import { Heading } from '../../design-system/typography';
+import { Stack } from '../../design-system/stack';
+import { Tag } from '../../design-system/tag';
 import { useTheme } from '../../design-system/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
@@ -9,6 +13,9 @@ import Helmet from 'react-helmet';
 export default ({ data }) => {
   const project = data.mdx;
   const { spacing } = useTheme();
+  const skills = project.frontmatter.skills
+    ? project.frontmatter.skills.split(',')
+    : [];
 
   return (
     <div>
@@ -27,8 +34,19 @@ export default ({ data }) => {
         }}
       >
         <BackButton link="/" />
+        <Stack gap="medium">
+          <Heading level="1">{project.frontmatter.title}</Heading>
 
-        <Mdx>{project.body}</Mdx>
+          {skills.length ? (
+            <Cluster gap="small">
+              {skills.map(skill => (
+                <Tag key={skill} label={skill} size="small" />
+              ))}
+            </Cluster>
+          ) : null}
+
+          <MdxWithoutH1>{project.body}</MdxWithoutH1>
+        </Stack>
       </div>
     </div>
   );
@@ -43,6 +61,7 @@ export const query = graphql`
         path
         date(formatString: "MMMM DD YYYY")
         type
+        skills
       }
     }
   }

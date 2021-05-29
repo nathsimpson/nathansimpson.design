@@ -2,9 +2,6 @@
 import { jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import { useCodeHighlightTheme } from './codeHighlightTheme';
 
 import { Button, LinkButton } from '../../design-system/button';
 import { ContentCard } from '../../design-system/contentcard';
@@ -17,9 +14,10 @@ import { Card } from '../../design-system/card';
 import { Cluster } from '../../design-system/cluster';
 import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
 import { Text, Heading } from '../../design-system/typography';
-
 import { useTheme } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
+
+import { CodeEditor, CodePreview } from './CodeEditor';
 
 const DsComponents = {
   Box,
@@ -38,69 +36,6 @@ const DsComponents = {
   TextLink,
   TextLinkGatsby,
   Tiles
-};
-
-const CodePreview = props => {
-  const className = props.className || '';
-  const matches = className.match(/language-(?<lang>.*)/);
-  const codeTheme = useCodeHighlightTheme();
-
-  return (
-    <Highlight
-      {...defaultProps}
-      code={props.children.trim()}
-      theme={codeTheme}
-      language={
-        matches && matches.groups && matches.groups.lang
-          ? matches.groups.lang
-          : ''
-      }
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })} key={i}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} key={key} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  );
-};
-
-const CodeEditor = ({ children }) => {
-  const { colors, fontsizes, radii, spacing } = useTheme();
-  const codeTheme = useCodeHighlightTheme();
-
-  return (
-    <div
-      css={{
-        border: `1px solid ${colors.global.border}`,
-        borderRadius: radii.medium
-      }}
-    >
-      <LiveProvider code={children} scope={DsComponents}>
-        <div
-          css={{
-            padding: spacing.medium,
-            whiteSpace: 'normal'
-          }}
-        >
-          <LivePreview />
-        </div>
-        <LiveError />
-        <LiveEditor
-          theme={codeTheme}
-          style={{
-            fontSize: fontsizes.medium
-          }}
-        />
-      </LiveProvider>
-    </div>
-  );
 };
 
 const components = {
@@ -124,7 +59,7 @@ const components = {
   wrapper: ({ children }) => <Stack gap="large">{children}</Stack>,
   code: props => {
     if (props.live) {
-      return <CodeEditor {...props} />;
+      return <CodeEditor components={DsComponents} {...props} />;
     } else {
       return <CodePreview {...props} />;
     }

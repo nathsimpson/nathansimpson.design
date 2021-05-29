@@ -21,10 +21,10 @@ ContentCards can appear with or without images. If no image is provided, the des
     image="https://files.nathansimpson.design/portfolio/simmo/cover.jpg"
   />
   <ContentCard
-    title="The Design System Manifesto"
+    title="hexAlpha"
     path="/"
     tag="Development"
-    desc="Enables small businesses to conveniently do Payroll and STP reporting from an browser or mobile device."
+    desc="A really simple package that enables you to specify an opacity for your HEX colours."
   />
 </Tiles>
 ```

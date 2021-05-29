@@ -22,8 +22,8 @@ export const spacing = {
 
 export const breakpoints = {
   sm: 640,
-  md: 768,
-  lg: 1024,
+  md: 768, // tablet
+  lg: 1024, // desktop
   xl: 1280
 } as const;
 
@@ -31,7 +31,8 @@ export const radii = {
   none: 0,
   small: 3,
   medium: 6,
-  large: 12
+  large: 12,
+  circle: 99
 } as const;
 
 export const fontsizes = {

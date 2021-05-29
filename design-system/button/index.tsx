@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { useTheme } from '../theme';
 import { Icon } from '../icon';
 
-import { useButtonStyles, ButtonProps } from './utils';
+import { useButtonStyles, ButtonProps, IconButtonProps } from './utils';
 
 const iconSizes = {
   small: 17,
@@ -49,5 +50,37 @@ export const LinkButton = ({
       {label}
       {iconAfter && <Icon size={iconSizes[size]} icon={iconAfter} />}
     </a>
+  );
+};
+
+export const IconButton = ({
+  label,
+  icon,
+  size = 'medium',
+  weight = 'primary',
+  ...props
+}: IconButtonProps) => {
+  const buttonStyles = useButtonStyles({ size, weight });
+  const { radii, spacing } = useTheme();
+
+  const iconSizeMap = {
+    small: 20,
+    medium: 24,
+    large: 32
+  };
+
+  return (
+    <button
+      css={{
+        ...buttonStyles,
+        borderRadius: radii.circle,
+        padding: spacing[size] / 2
+      }}
+      type="button"
+      aria-label={label}
+      {...props}
+    >
+      <Icon size={iconSizeMap[size]} icon={icon} />
+    </button>
   );
 };

@@ -74,3 +74,22 @@ Shares the same styles as a Button, but works as an anchor link.
 | label      | string                         |           |
 | size?      | `small`, `medium`, `large`     | `medium`  |
 | weight     | `primary`, `secondary`, `none` | `primary` |
+
+
+## IconButton
+
+A small circular button for when only an icon will do. Typically to trigger
+an immediate action like creating an item or toggling a theme.
+
+```jsx live
+<IconButton size="medium" weight="primary" icon="plus" onPress={()=>{}} />
+```
+### Props
+
+| Prop       | Type                           | Default   |
+| ---------- | ------------------------------ | --------- |
+| icon       | IconType                       |           |
+| label      | string                         |           |
+| onPress    | () => void                     |           |
+| size?      | `small`, `medium`, `large`     | `medium`  |
+| weight     | `primary`, `secondary`, `none` | `primary` |

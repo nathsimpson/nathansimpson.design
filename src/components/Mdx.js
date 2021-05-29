@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Button, LinkButton } from '../../design-system/button';
+import { Button, LinkButton, IconButton } from '../../design-system/button';
 import { ContentCard } from '../../design-system/contentcard';
 import { Icon } from '../../design-system/icon';
 import { Tiles } from '../../design-system/tiles';
@@ -29,6 +29,7 @@ const DsComponents = {
   FlexBox,
   Heading,
   Icon,
+  IconButton,
   LinkButton,
   Stack,
   Tag,

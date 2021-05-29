@@ -71,7 +71,7 @@ const CodePreview = props => {
   );
 };
 
-const CodeEditor = props => {
+const CodeEditor = ({ children }) => {
   const { colors, fontsizes, radii, spacing } = useTheme();
   const codeTheme = useCodeHighlightTheme();
 
@@ -82,10 +82,11 @@ const CodeEditor = props => {
         borderRadius: radii.medium
       }}
     >
-      <LiveProvider code={props.children} scope={DsComponents} {...props}>
+      <LiveProvider code={children} scope={DsComponents}>
         <div
           css={{
-            padding: spacing.medium
+            padding: spacing.medium,
+            whiteSpace: 'normal'
           }}
         >
           <LivePreview />
@@ -95,7 +96,6 @@ const CodeEditor = props => {
           theme={codeTheme}
           style={{
             fontSize: fontsizes.medium
-            // background: colors.background.emphasis
           }}
         />
       </LiveProvider>

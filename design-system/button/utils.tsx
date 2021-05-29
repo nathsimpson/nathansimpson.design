@@ -17,7 +17,7 @@ export type IconButtonProps = {
   icon: IconType;
   /** The label is read out by screenreaders */
   label: string;
-  onPress: () => void;
+  onClick: () => void;
   size: ButtonSize;
   weight: ButtonWeight;
 };

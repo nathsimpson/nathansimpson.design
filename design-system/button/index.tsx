@@ -19,7 +19,7 @@ export const Button = ({
   weight = 'primary',
   ...props
 }: ButtonProps & {
-  onPress: () => void;
+  onClick: () => void;
 }) => {
   const styles = useButtonStyles({ size, weight });
 

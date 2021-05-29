@@ -8,6 +8,7 @@ import { useCodeHighlightTheme } from './codeHighlightTheme';
 
 export const CodePreview = ({ className = '', children }) => {
   const matches = className.match(/language-(?<lang>.*)/);
+  const { colors } = useTheme();
   const codeTheme = useCodeHighlightTheme();
 
   return (
@@ -22,7 +23,10 @@ export const CodePreview = ({ className = '', children }) => {
       }
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
+        <pre
+          className={className}
+          style={{ ...style, border: `1px solid ${colors.global.border}` }}
+        >
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })} key={i}>
               {line.map((token, key) => (

@@ -94,7 +94,7 @@ export const Header = ({ hasDivider = true }: { hasDivider: boolean }) => {
         css={{
           [maxBreak('sm')]: {
             transform: 'translate(-100%)',
-            transition: 'transform 300ms linear',
+            transition: 'transform 300ms ease-out',
             width: 240,
             position: 'fixed',
             top: 0,

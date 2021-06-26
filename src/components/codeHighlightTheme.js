@@ -1,9 +1,10 @@
-import { useTheme } from '../../design-system/theme';
+import { themeDark } from '../../design-system/theme';
 
 // Original: https://github.com/dracula/visual-studio-code
 // Converted automatically using ./tools/themeFromVsCode
 export const useCodeHighlightTheme = () => {
-  const { colors, fontFamilies } = useTheme();
+  // We only use the dark theme for code highlighting.
+  const { colors, fontFamilies } = themeDark;
   return {
     plain: {
       color: '#F8F8F2',

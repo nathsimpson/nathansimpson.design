@@ -6,6 +6,8 @@ export const fontFamilies = {
   heading:
     "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
   body:
+    'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace',
+  mono:
     'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
 };
 

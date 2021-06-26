@@ -65,12 +65,13 @@ const components = {
     }
   },
   inlineCode: props => {
-    const { colors, radii, spacing } = useTheme();
+    const { colors, radii, spacing, fontFamilies } = useTheme();
     return (
       <Text
         as="pre"
         css={{
           display: 'inline',
+          fontFamily: fontFamilies.mono,
           color: colors.text.emphasis,
           backgroundColor: colors.background.emphasis,
           padding: spacing.xsmall,

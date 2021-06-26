@@ -31,11 +31,11 @@ export const Heading = ({ level = 1, ...props }: HeadingProps) => {
 
 const headings = {
   1: {
-    fontSize: fontsizes.xxxxlarge,
+    fontSize: fontsizes.xxxlarge,
     fontWeight: 900
   },
   2: {
-    fontSize: fontsizes.xxxlarge,
+    fontSize: fontsizes.xxlarge,
     fontWeight: 900
   },
   3: {

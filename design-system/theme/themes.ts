@@ -6,6 +6,8 @@ export const fontFamilies = {
   heading:
     "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
   body:
+    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
+  mono:
     'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
 };
 
@@ -41,8 +43,7 @@ export const fontsizes = {
   large: '1.25rem',
   xlarge: '1.5rem',
   xxlarge: '1.875rem',
-  xxxlarge: '2.25rem',
-  xxxxlarge: '3rem'
+  xxxlarge: '2.5rem'
 } as const;
 
 export type SpacingType = keyof typeof spacing;

@@ -41,7 +41,7 @@ export const CodePreview = ({ className = '', children }) => {
 };
 
 export const CodeEditor = ({ children, components }) => {
-  const { colors, fontsizes, radii, spacing } = useTheme();
+  const { colors, radii, spacing } = useTheme();
   const codeTheme = useCodeHighlightTheme();
 
   return (
@@ -61,12 +61,7 @@ export const CodeEditor = ({ children, components }) => {
           <LivePreview />
         </div>
         <LiveError />
-        <LiveEditor
-          theme={codeTheme}
-          style={{
-            fontSize: fontsizes.medium
-          }}
-        />
+        <LiveEditor theme={codeTheme} />
       </LiveProvider>
     </div>
   );

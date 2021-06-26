@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Button } from '../../design-system/button';
 import { Icon } from '../../design-system/icon';
-import { useTheme, useThemeContext } from '../../design-system/theme';
+import { useTheme } from '../../design-system/theme';
 import { Divider } from '../../design-system/divider';
 import { Text } from '../../design-system/typography';
 import { TextLinkGatsby } from '../../design-system/textlink';
@@ -12,7 +11,6 @@ import { footer_navItems, footer_socialNetworks } from '../data';
 
 export const Footer = () => {
   const { colors } = useTheme();
-  const { onThemeChange, themeName } = useThemeContext();
   return (
     <Stack gap="medium" marginY="xlarge" align="center" as="footer">
       <Divider />
@@ -72,16 +70,6 @@ export const Footer = () => {
           </li>
         ))}
       </ul>
-
-      <Button
-        label="Toggle theme"
-        onClick={() => {
-          onThemeChange(themeName === 'light' ? 'dark' : 'light');
-        }}
-        iconBefore={themeName === 'light' ? 'moon' : 'sun'}
-        size="small"
-        weight="secondary"
-      />
     </Stack>
   );
 };

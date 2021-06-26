@@ -13,6 +13,15 @@ export type ButtonProps = {
   weight: ButtonWeight;
 };
 
+export type IconButtonProps = {
+  icon: IconType;
+  /** The label is read out by screenreaders */
+  label: string;
+  onClick: () => void;
+  size: ButtonSize;
+  weight: ButtonWeight;
+};
+
 export const useButtonStyles = ({
   size,
   weight

@@ -6,7 +6,7 @@ import { Heading } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
 import { useTheme } from '../../design-system/theme';
 import { TextLink } from '../../design-system/textlink';
-import { mq } from '../helpers/utils';
+import { useMediaQuery } from '../../design-system/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>
@@ -46,6 +46,7 @@ const Talk = ({
   const { colors, radii } = useTheme();
   const cardStyles = useCardStyles();
   const defaultBorder = `1px solid ${colors.global.border}`;
+  const { mq } = useMediaQuery();
 
   return (
     <a

@@ -57,7 +57,7 @@ module.exports = {
         short_name: 'Nathan',
         start_url: `/`,
         background_color: '#13171a',
-        theme_color: `#fa6d01`,
+        theme_color: '#13171a',
         display: 'standalone',
         icon: 'src/images/icon.png'
       }

@@ -2,6 +2,9 @@ import React from 'react';
 import { useTheme } from '../themecontext';
 import { spacing } from '../index';
 
+import { Text } from '../../typography';
+import { Stack } from '../../stack';
+
 export const ColorsExample = () => {
   const { colors } = useTheme();
   const colorsArr: { label: string; value: string }[] = [];
@@ -53,19 +56,14 @@ const Color = ({ label, value }) => {
           width: '100%',
           height: 100,
           backgroundColor: value,
-          border: `1px solid ${colors.global.border}`
+          borderBottom: `1px solid ${colors.global.border}`
         }}
       />
 
-      <div
-        style={{
-          padding: spacing.xsmall,
-          backgroundColor: colors.background.emphasis
-        }}
-      >
-        <p>{label}</p>
-        <p>Hex: {value.toString()}</p>
-      </div>
+      <Stack gap="xsmall" bg="emphasis" padding="small">
+        <Text color="emphasis">{label}</Text>
+        <Text size="small">{value.toString()}</Text>
+      </Stack>
     </div>
   );
 };

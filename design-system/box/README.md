@@ -6,24 +6,27 @@ type: design-system
 
 # Box
 
-Box is a layout component that provides convenient APIs of design tokens for...
+Box is the most fundamental layout component, which most of the other components are based on.
+Box provides convenient utility props for common styles, using our [design tokens](theme). These include props for...
 
 - Margin
 - Padding
-- Radii (border radius)
-- Background colors
+- Rounding (border radius)
+- Background color
 
 ```jsx
 import { Box } from 'design-system/box';
 ```
 
 ```jsx live
-<Box bg="emphasis" padding="medium">
+<Box bg="emphasis" padding="medium" marginLeft="large" rounding="medium">
   <Text as="span">Hello</Text>
 </Box>
 ```
 
-Box is compatible with semantic HTMl tags...
+## As Prop
+
+Using the As prop, you specify the HTML tag to be rendered. `div` is the default.
 
 ```jsx live
 <Box as="section">

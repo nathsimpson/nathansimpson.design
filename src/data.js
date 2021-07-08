@@ -33,6 +33,11 @@ export const footer_socialNetworks = [
     name: 'YouTube',
     icon: 'youtube',
     link: 'https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg'
+  },
+  {
+    name: 'Polywork',
+    icon: 'polywork',
+    link: 'https://www.polywork.com/nathsimpson'
   }
 ];
 

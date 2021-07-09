@@ -18,7 +18,6 @@ export const Box = forwardRefWithAs<'div', BoxProps>(
     {
       as: Tag = 'div',
       bg = 'none',
-      children,
       height,
       margin,
       marginBottom,
@@ -73,7 +72,6 @@ export const Box = forwardRefWithAs<'div', BoxProps>(
     });
 
     const colors = useBoxColors();
-
     return (
       <Tag
         {...props}
@@ -84,11 +82,9 @@ export const Box = forwardRefWithAs<'div', BoxProps>(
           ...paddingObj,
           height,
           width
-          // ...style
         }}
-      >
-        {children}
-      </Tag>
+        ref={ref}
+      />
     );
   }
 );

@@ -1,5 +1,5 @@
 import facepaint from 'facepaint';
-import { breakpoints, useTheme } from '../theme';
+import { breakpoints, useTheme } from '../../theme';
 
 type BreakPoints = typeof breakpoints;
 type BreakPoint = keyof BreakPoints;

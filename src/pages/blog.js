@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { Header } from '../components';
 import { Tag } from '../../design-system/tag';
 import { Divider } from '../../design-system/divider';
-import { Card } from '../../design-system/card';
+import { useCardStyles } from '../../design-system/card';
 import { FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { Heading, Text } from '../../design-system/typography';
@@ -14,12 +14,13 @@ import { spacing } from '../../design-system/theme';
 import { TextLinkGatsby } from '../../design-system/textlink';
 
 const PostCard = ({ id, frontmatter, body, excerpt }) => {
+  const cardStyles = useCardStyles();
   const postedOn = `${frontmatter.date}. ${
     frontmatter.updated ? `Updated ${frontmatter.updated}.` : ''
   }`;
 
   return (
-    <Card>
+    <div css={cardStyles}>
       <Stack gap="small">
         <TextLinkGatsby to={frontmatter.path}>
           <Heading level={2}>{frontmatter.title}</Heading>
@@ -48,7 +49,7 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
 
         <TextLinkGatsby to={frontmatter.path}>Read more</TextLinkGatsby>
       </Stack>
-    </Card>
+    </div>
   );
 };
 

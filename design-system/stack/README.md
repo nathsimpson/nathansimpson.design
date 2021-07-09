@@ -18,17 +18,17 @@ The gap prop expects any of our theme spacing tokens.
 
 ```jsx live
 <Stack gap="small">
-  <Card>
-    <p>Card in a Stack.</p>
-  </Card>
+  <Box bg="emphasis" padding="small" width={50} height={50}>
+    <Text>1</Text>
+  </Box>
 
-  <Card>
-    <p>Card in a Stack.</p>
-  </Card>
+  <Box bg="emphasis" padding="small" width={50} height={50}>
+    <Text>2</Text>
+  </Box>
 
-  <Card>
-    <p>Card in a Stack.</p>
-  </Card>
+  <Box bg="emphasis" padding="small" width={50} height={50}>
+    <Text>3</Text>
+  </Box>
 </Stack>
 ```
 
@@ -38,16 +38,16 @@ Orientation changes the direction of the Stack.
 
 ```jsx live
 <Stack orientation="horizontal" gap="small">
-  <Card>
-    <p>Card in a Stack.</p>
-  </Card>
+  <Box bg="emphasis" padding="small" width={50} height={50}>
+    <Text>1</Text>
+  </Box>
 
-  <Card>
-    <p>Card in a Stack.</p>
-  </Card>
+  <Box bg="emphasis" padding="small" width={50} height={50}>
+    <Text>2</Text>
+  </Box>
 
-  <Card>
-    <p>Card in a Stack.</p>
-  </Card>
+  <Box bg="emphasis" padding="small" width={50} height={50}>
+    <Text>3</Text>
+  </Box>
 </Stack>
 ```

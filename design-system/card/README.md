@@ -39,3 +39,17 @@ Cards can appear with or without images. If no image is provided, the desciption
 | path   | string                   | Link to a Gatsby page                                         |
 | tag    | 'Design' , 'Development' |                                                               |
 | title  | string                   |                                                               |
+
+## useCardStyles
+
+The useCardStyles hook is available if you want to decorate an element with the same styles as the Card component.
+
+```jsx
+const styles = useCardStyles();
+
+const Element = () => (
+  <div style={styles}>
+    Using Card Styles
+  </div>
+)
+```

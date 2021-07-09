@@ -1,19 +1,27 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Stack } from '../stack';
 import { spacing } from '../theme';
 import { Text } from '../typography';
 import { Icon } from './index';
 import { ICONS } from './icons';
+import { useMediaQuery } from '../utils/useMediaQuery';
 
 export const IconsExample = () => {
+  const { mq } = useMediaQuery();
   return (
     <div
-      style={{
+      css={mq({
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr 1fr 1fr',
+        gridTemplateColumns: [
+          'repeat(2, 1fr)',
+          'repeat(3, 1fr)',
+          'repeat(4, 1fr)',
+          'repeat(5, 1fr)'
+        ],
         width: '100%',
-        gap: spacing.small
-      }}
+        gap: spacing.medium
+      })}
     >
       {(Object.keys(ICONS) as (keyof typeof ICONS)[]).map(c => (
         <IconExample icon={c} key={c} />
@@ -23,7 +31,13 @@ export const IconsExample = () => {
 };
 
 const IconExample = ({ icon }: { icon: keyof typeof ICONS }) => (
-  <Stack gap="medium" align="center">
+  <Stack
+    align="center"
+    bg="emphasis"
+    gap="medium"
+    paddingY="large"
+    rounding="medium"
+  >
     <Icon icon={icon} size={32} />
     <Text>{icon}</Text>
   </Stack>

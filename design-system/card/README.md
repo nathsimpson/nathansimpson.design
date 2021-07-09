@@ -12,6 +12,10 @@ Typically Cards are tiled together, using the Tiles component.
 
 Cards can appear with or without images. If no image is provided, the desciption text will be visible instead.
 
+```jsx
+import { Card, useCardStyles } from 'design-system/card';
+```
+
 ```jsx live
 <Tiles>
   <Card
@@ -42,7 +46,7 @@ Cards can appear with or without images. If no image is provided, the desciption
 
 ## useCardStyles
 
-The useCardStyles hook is available if you want to decorate an element with the same styles as the Card component.
+The useCardStyles hook is available if you want to decorate an element with the same styles as the Card component's container.
 
 ```jsx
 const styles = useCardStyles();

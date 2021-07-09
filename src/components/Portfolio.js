@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 
 import { Heading } from '../../design-system/typography';
-import { ContentCard } from '../../design-system/contentcard';
+import { Card } from '../../design-system/card';
 import { Tiles } from '../../design-system/tiles';
 import { useTheme } from '../../design-system/theme';
 
@@ -20,7 +20,7 @@ export const Portfolio = ({ data }) => {
             const meta = node.frontmatter;
 
             return (
-              <ContentCard
+              <Card
                 key={node.id}
                 project={meta}
                 desc={meta.desc}

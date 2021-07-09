@@ -2,10 +2,9 @@
 import { jsx } from '@emotion/core';
 import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
-import { Cluster } from '../../design-system/cluster';
 import { Heading } from '../../design-system/typography';
 import { Stack } from '../../design-system/stack';
-import { Tag } from '../../design-system/tag';
+import { Tags } from '../../design-system/tag';
 import { useTheme } from '../../design-system/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
@@ -37,13 +36,7 @@ export default ({ data }) => {
         <Stack gap="medium">
           <Heading level="1">{project.frontmatter.title}</Heading>
 
-          {skills.length ? (
-            <Cluster gap="small">
-              {skills.map(skill => (
-                <Tag key={skill} label={skill} size="small" />
-              ))}
-            </Cluster>
-          ) : null}
+          {skills.length ? <Tags items={skills} /> : null}
 
           <MdxWithoutH1>{project.body}</MdxWithoutH1>
         </Stack>

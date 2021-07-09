@@ -40,3 +40,13 @@ There are three colors to choose from...
   <Tag label="purple" color="purple" />
 </Cluster>
 ```
+
+
+## Tags
+For conveience, we also have a 'Tags' component.
+
+Tags uses 'small' size by default.
+
+```jsx live
+<Tags items={[ "Design Systems", "User Experience", "WCAG"  ]} size="small" />
+```

@@ -12,7 +12,7 @@ export const footer_socialNetworks = [
   {
     name: 'LinkedIn',
     icon: 'linkedin',
-    link: 'https://www.linkedin.com/in/nathan-simpson-71512a75?trk'
+    link: 'https://www.linkedin.com/in/nathsimpson'
   },
   {
     name: 'Github',

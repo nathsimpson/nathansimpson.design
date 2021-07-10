@@ -1,6 +1,6 @@
 ---
-title: Theme
-path: '/design-system/theme'
+title: Design Tokens
+path: '/design-system/tokens'
 type: design-system
 ---
 
@@ -8,7 +8,7 @@ import { ColorsExample } from './examples/colors';
 import { RadiiExample } from './examples/radii';
 import { SpacingExample } from './examples/spacing';
 
-# Theme
+# Design Tokens
 
 A collection of core design tokens for the design system.
 
@@ -20,12 +20,14 @@ A collection of core design tokens for the design system.
 - fontsizes
 - fontFamilies
 
+The best way to consume these tokens is through utility props, like the ones in [Box](box). Otherwise you can make use of the [useTheme](usetheme) hook.
+
 ## Colors
 
 Our colours are named with semantic meaning in mind.
 
 ```jsx
-import { colors } from 'design-system/theme';
+const { colors } = useTheme();
 ```
 
 <ColorsExample />
@@ -39,7 +41,7 @@ Tokens used for consistent margin or padding between elements.
 The best way to consume these tokens is through `<Box />` and other layout components, though they can be imported if needed.
 
 ```jsx
-import { spacing } from 'design-system/theme';
+const { spacing } = useTheme();
 ```
 
 <SpacingExample />
@@ -53,7 +55,7 @@ Tokens used for border radius.
 Radii can be used through utility props in `<Box />` component.
 
 ```jsx
-import { radii } from 'design-system/theme';
+const { radii } = useTheme();
 ```
 
 <RadiiExample />
@@ -63,7 +65,7 @@ import { radii } from 'design-system/theme';
 ## breakpoints
 
 ```jsx
-import { breakpoints } from 'design-system/theme';
+const { breakpoints } = useTheme();
 ```
 
 | Token | Width | Notes           |
@@ -78,7 +80,7 @@ import { breakpoints } from 'design-system/theme';
 ## boxShadow
 
 ```jsx
-import { boxShadow } from 'design-system/theme';
+const { boxShadow } = useTheme();
 ```
 
 ---
@@ -86,7 +88,7 @@ import { boxShadow } from 'design-system/theme';
 ## fontsizes
 
 ```jsx
-import { fontsizes } from 'design-system/theme';
+const { fontsizes } = useTheme();
 ```
 
 ---

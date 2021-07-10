@@ -7,7 +7,7 @@ type: design-system
 # Box
 
 Box is the most fundamental layout component, which most of the other components are based on.
-Box provides convenient utility props for common styles, using our [design tokens](theme). These include props for...
+Box provides convenient utility props for common styles, using our [design tokens](tokens). These include props for...
 
 - Margin
 - Padding

@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Button, LinkButton, IconButton } from '../../design-system/button';
 import { Icon } from '../../design-system/icon';
 import { Tiles } from '../../design-system/tiles';
-import { Tag } from '../../design-system/tag';
+import { Tag, Tags } from '../../design-system/tag';
 import { Box, FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { Card } from '../../design-system/card';
@@ -31,6 +31,7 @@ const DsComponents = {
   LinkButton,
   Stack,
   Tag,
+  Tags,
   Text,
   TextLink,
   TextLinkGatsby,

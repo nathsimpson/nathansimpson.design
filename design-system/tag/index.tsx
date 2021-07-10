@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
 import { useTheme } from '../theme';
+import { Cluster } from '../cluster';
 import hexAlpha from 'hex-alpha';
 
 const sizes = {
@@ -11,9 +12,9 @@ const sizes = {
 
 type TagProps = {
   label: string;
-  as: ElementType;
-  color: 'default' | 'brand' | 'blue' | 'purple' | 'green';
-  size: keyof typeof sizes;
+  as?: ElementType;
+  color?: 'default' | 'brand' | 'blue' | 'purple' | 'green';
+  size?: keyof typeof sizes;
 };
 
 export const Tag = ({
@@ -39,7 +40,7 @@ export const Tag = ({
         border: `1px solid ${colorMap[color]}`,
         color: colorMap[color],
         backgroundColor: hexAlpha(colorMap[color], 0.2),
-        borderRadius: radii.small,
+        borderRadius: radii.medium,
         display: 'inline-flex',
         fontSize: sizes[size] * 4,
         paddingTop: sizes[size],
@@ -52,3 +53,17 @@ export const Tag = ({
     </Div>
   );
 };
+
+export const Tags = ({
+  items,
+  size = 'small'
+}: {
+  items: string[];
+  size?: keyof typeof sizes;
+}) => (
+  <Cluster gap={size}>
+    {items.map(item => (
+      <Tag label={item} key={item} size={size} />
+    ))}
+  </Cluster>
+);

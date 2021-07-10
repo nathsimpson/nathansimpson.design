@@ -2,6 +2,7 @@
 title: Utils
 path: '/design-system/utils'
 type: design-system
+section: hooks
 ---
 
 # Utils

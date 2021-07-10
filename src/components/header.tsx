@@ -30,7 +30,7 @@ const navItems = [
   }
 ];
 
-export const Header = ({ hasDivider = true }: { hasDivider: boolean }) => {
+export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
   const { spacing, colors } = useTheme();
   const { onThemeChange, themeName } = useThemeContext();
   const { maxBreak, minBreak } = useMediaQuery();

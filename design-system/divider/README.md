@@ -2,6 +2,7 @@
 title: Divider
 path: '/design-system/divider'
 type: design-system
+section: layout
 ---
 
 # Divider

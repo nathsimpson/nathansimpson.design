@@ -2,6 +2,7 @@
 title: Box
 path: '/design-system/box'
 type: design-system
+section: layout
 ---
 
 # Box

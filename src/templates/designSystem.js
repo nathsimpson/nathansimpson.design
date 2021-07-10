@@ -10,19 +10,18 @@ export default ({ data }) => {
 
 export const dsComponentQuery = graphql`
   query DesignSystemPageQuery($path: String) {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___title], order: ASC }
+      filter: { frontmatter: { type: { eq: "design-system" } } }
+    ) {
       edges {
         node {
           id
-          body
           frontmatter {
             path
-            date(formatString: "MMMM DD YYYY")
-            updated(formatString: "MMMM DD YYYY")
+            section
             title
-            imagesrc
             type
-            youtubeid
           }
         }
       }

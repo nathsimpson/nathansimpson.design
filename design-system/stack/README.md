@@ -2,6 +2,7 @@
 title: Stack
 path: '/design-system/stack'
 type: design-system
+section: layout
 ---
 
 # Stack

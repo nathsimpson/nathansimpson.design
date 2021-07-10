@@ -1,23 +1,34 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Helmet } from 'react-helmet';
-import { Container, Header } from '../components';
+import { Container, Header } from '.';
 import { MdxWithoutH1 } from './Mdx';
 
-import { Heading } from '../../design-system/typography';
+import { Heading, Text } from '../../design-system/typography';
 import { LinkButton } from '../../design-system/button';
 import { FlexBox } from '../../design-system/box';
 import { Stack } from '../../design-system/stack';
 import { TextLinkGatsby } from '../../design-system/textlink';
 
 export const DesignSystemTemplate = ({ data }) => {
-  const post = data.mdx;
+  const {
+    body,
+    frontmatter: { title, path }
+  } = data.mdx;
+  const navigationItems = data.allMdx.edges
+    .map(({ node: { frontmatter: fm } }) => ({
+      to: fm.path,
+      label: fm.title,
+      section: fm.section
+    }))
+    .filter(({ label }) => !['Design System', 'Design Tokens'].includes(label));
+  const githubUrl = `https://github.com/nathsimpson/nathansimpson.design/edit/master${path}/README.md`;
 
   return (
     <div>
       <Header />
       <Helmet>
-        <title>Design System - Nathan Simpson</title>
+        <title>{`${title} - Design System - Nathan Simpson`}</title>
       </Helmet>
 
       <Container>
@@ -28,7 +39,7 @@ export const DesignSystemTemplate = ({ data }) => {
             gridTemplateColumns: '240px 1fr'
           }}
         >
-          <NavigationBar data={data.allMdx.edges} />
+          <NavigationBar items={navigationItems} />
 
           <article>
             <FlexBox
@@ -37,16 +48,16 @@ export const DesignSystemTemplate = ({ data }) => {
               marginBottom="large"
               align="end"
             >
-              <Heading>{post.frontmatter.title}</Heading>
+              <Heading>{title}</Heading>
               <LinkButton
                 label="Edit on GitHub"
                 weight="secondary"
                 size="small"
                 iconBefore="github"
-                href={`https://github.com/nathsimpson/nathansimpson.design/edit/master${post.frontmatter.path}/README.md`}
+                href={githubUrl}
               />
             </FlexBox>
-            <MdxWithoutH1>{post.body}</MdxWithoutH1>
+            <MdxWithoutH1>{body}</MdxWithoutH1>
           </article>
         </div>
       </Container>
@@ -54,40 +65,44 @@ export const DesignSystemTemplate = ({ data }) => {
   );
 };
 
-const NavigationBar = ({ data }) => {
+const NavigationBar = ({ items }) => {
+  const layout = items.filter(({ section }) => section === 'layout');
+  const hooks = items.filter(({ section }) => section === 'hooks');
+  const components = items.filter(
+    ({ section }) => !['layout', 'hooks'].includes(section)
+  );
+
   return (
-    <Stack
-      as="ul"
-      gap="small"
-      css={{
-        listStyle: 'none',
-        padding: 0
-      }}
-    >
-      <li>
-        <TextLinkGatsby to="/design-system">
-          <a>Welcome</a>
-        </TextLinkGatsby>
-      </li>
-      {data
-        .filter(
-          ({ node: p }) =>
-            p.frontmatter.type === 'design-system' &&
-            p.frontmatter.title !== 'Design System'
-        )
-        .sort(({ node: { frontmatter: a } }, { node: { frontmatter: b } }) =>
-          // assumes no two pages will be named the same.
-          a.title > b.title ? 1 : -1
-        )
-        .map(({ node }) => {
-          return (
-            <li key={node.id}>
-              <TextLinkGatsby to={node.frontmatter.path} key={node.id}>
-                {node.frontmatter.title}
-              </TextLinkGatsby>
-            </li>
-          );
-        })}
+    <Stack gap="large">
+      <NavBlock
+        label="Guides"
+        items={[
+          { label: 'Welcome', to: '/design-system' },
+          { label: 'Design Tokens', to: '/design-system/tokens' }
+        ]}
+      />
+      <NavBlock items={layout} label="Layout" />
+      <NavBlock items={components} label="Components" />
+      <NavBlock items={hooks} label="Hooks" />
     </Stack>
+  );
+};
+
+const NavBlock = ({ label, items }) => {
+  return (
+    <Stack as="ul" gap="none" padding="none">
+      <Text size="xsmall">{label}</Text>
+      {items.map(({ to, label }) => (
+        <NavItem to={to} key={to} label={label} />
+      ))}
+    </Stack>
+  );
+};
+
+const NavItem = ({ label, to }) => {
+  return (
+    <li css={{ listStyle: 'none' }}>
+      <TextLinkGatsby to={to}>{label}</TextLinkGatsby>
+    </li>
   );
 };

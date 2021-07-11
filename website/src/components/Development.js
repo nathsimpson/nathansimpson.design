@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Tag } from '../../design-system/tag';
-import { Cluster } from '../../design-system/cluster';
-import { Stack } from '../../design-system/stack';
+import { Tag } from '@design-system/tag';
+import { Cluster } from '@design-system/cluster';
+import { Stack } from '@design-system/stack';
 
-import { Heading, Text } from '../../design-system/typography';
-import { TextLink } from '../../design-system/textlink';
+import { Heading, Text } from '@design-system/typography';
+import { TextLink } from '@design-system/textlink';
 
 import { development_skills } from '../data';
 

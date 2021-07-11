@@ -2,14 +2,14 @@
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 
-import { Box } from '../../design-system/box';
-import { IconButton } from '../../design-system/button';
-import { Icon } from '../../design-system/icon';
-import { Stack } from '../../design-system/stack';
-import { useTheme, useThemeContext } from '../../design-system/theme';
-import { Cluster } from '../../design-system/cluster';
-import { TextLinkGatsby } from '../../design-system/textlink';
-import { useMediaQuery } from '../../design-system/utils';
+import { Box } from '@design-system/box';
+import { IconButton } from '@design-system/button';
+import { Icon } from '@design-system/icon';
+import { Stack } from '@design-system/stack';
+import { useTheme, useThemeContext } from '@design-system/theme';
+import { Cluster } from '@design-system/cluster';
+import { TextLinkGatsby } from '@design-system/textlink';
+import { useMediaQuery } from '@design-system/utils';
 
 const navItems = [
   {

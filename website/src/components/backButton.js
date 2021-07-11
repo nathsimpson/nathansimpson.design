@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { TextLinkGatsby } from '../../design-system/textlink';
-import { Icon } from '../../design-system/icon';
+import { TextLinkGatsby } from '@design-system/textlink';
+import { Icon } from '@design-system/icon';
 import { jsx } from '@emotion/core';
 
 export const BackButton = ({ link }) => {

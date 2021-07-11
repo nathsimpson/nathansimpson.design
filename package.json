@@ -11,12 +11,10 @@
     "website"
   ],
   "scripts": {
-    "postinstall": "netlify-lambda install",
-    "build:lambda": "netlify-lambda build functions",
-    "build": "yarn build:lambda && gatsby build",
-    "dev": "gatsby develop",
+    "build": "cd website && yarn build:lambda && gatsby build",
+    "dev": "cd website && gatsby develop",
     "start": "yarn dev",
-    "clean": "gatsby clean",
+    "clean": "cd website && gatsby clean",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
     "types": "tsc --project tsconfig.json",
     "lint": "eslint ."

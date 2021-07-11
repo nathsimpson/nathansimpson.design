@@ -1,4 +1,4 @@
-import { themeDark } from '../../design-system/theme';
+import { themeDark } from '@design-system/theme';
 
 // Original: https://github.com/dracula/visual-studio-code
 // Converted automatically using ./tools/themeFromVsCode

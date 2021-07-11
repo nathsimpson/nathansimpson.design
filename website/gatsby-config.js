@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Nathan Simpson - Designer + Frontend Developer`,
@@ -36,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/design-system`,
+        path: `${__dirname}/../design-system`,
         name: 'design-system'
       }
     },
@@ -60,6 +62,15 @@ module.exports = {
         theme_color: '#13171a',
         display: 'standalone',
         icon: 'src/images/icon.png'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@design-system': path.resolve(__dirname, '../design-system')
+        },
+        extensions: []
       }
     }
 

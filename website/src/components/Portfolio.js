@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { Heading } from '../../design-system/typography';
-import { Card } from '../../design-system/card';
-import { Tiles } from '../../design-system/tiles';
-import { useTheme } from '../../design-system/theme';
+import { Heading } from '@design-system/typography';
+import { Card } from '@design-system/card';
+import { Tiles } from '@design-system/tiles';
+import { useTheme } from '@design-system/theme';
 
 export const Portfolio = ({ data }) => {
   const { spacing } = useTheme();

@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 
 import { Footer } from './footer';
-import { useTheme } from '../../design-system/theme';
+import { useTheme } from '@design-system/theme';
 
 // TODO: delete this?
 export const Layout = ({ children }) => {

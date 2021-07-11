@@ -4,11 +4,11 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { Header, Mdx } from '../components';
-import { Divider } from '../../design-system/divider';
-import { Stack } from '../../design-system/stack';
-import { useTheme } from '../../design-system/theme';
+import { Divider } from '@design-system/divider';
+import { Stack } from '@design-system/stack';
+import { useTheme } from '@design-system/theme';
 
-import { Heading, Text } from '../../design-system/typography';
+import { Heading, Text } from '@design-system/typography';
 
 export default ({ data }) => {
   const talk = data.mdx;

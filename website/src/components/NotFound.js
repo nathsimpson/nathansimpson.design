@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading } from '../../design-system/typography';
+import { Heading } from '@design-system/typography';
 
 export class NotFound extends React.Component {
   render() {

@@ -4,14 +4,14 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Header } from '../components';
-import { Tag } from '../../design-system/tag';
-import { Divider } from '../../design-system/divider';
-import { useCardStyles } from '../../design-system/card';
-import { FlexBox } from '../../design-system/box';
-import { Stack } from '../../design-system/stack';
-import { Heading, Text } from '../../design-system/typography';
-import { spacing } from '../../design-system/theme';
-import { TextLinkGatsby } from '../../design-system/textlink';
+import { Tag } from '@design-system/tag';
+import { Divider } from '@design-system/divider';
+import { useCardStyles } from '@design-system/card';
+import { FlexBox } from '@design-system/box';
+import { Stack } from '@design-system/stack';
+import { Heading, Text } from '@design-system/typography';
+import { spacing } from '@design-system/theme';
+import { TextLinkGatsby } from '@design-system/textlink';
 
 const PostCard = ({ id, frontmatter, body, excerpt }) => {
   const cardStyles = useCardStyles();

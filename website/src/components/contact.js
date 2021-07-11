@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { Heading, Text } from '../../design-system/typography';
-import { TextLink } from '../../design-system/textlink';
+import { Heading, Text } from '@design-system/typography';
+import { TextLink } from '@design-system/textlink';
 
 export const Contact = () => (
   <div>

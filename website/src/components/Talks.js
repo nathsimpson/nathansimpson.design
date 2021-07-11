@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { useCardStyles } from '../../design-system/card';
-import { Heading } from '../../design-system/typography';
-import { Stack } from '../../design-system/stack';
-import { useTheme } from '../../design-system/theme';
-import { TextLink } from '../../design-system/textlink';
-import { useMediaQuery } from '../../design-system/utils';
+import { useCardStyles } from '@design-system/card';
+import { Heading } from '@design-system/typography';
+import { Stack } from '@design-system/stack';
+import { useTheme } from '@design-system/theme';
+import { TextLink } from '@design-system/textlink';
+import { useMediaQuery } from '@design-system/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>

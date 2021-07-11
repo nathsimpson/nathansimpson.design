@@ -10,7 +10,13 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@design-system/*": [
+        "./design-system/*"
+      ],
+    },
     "allowJs": true
   },
-  "include": ["./src/**/*", "design-system/*"],
+  "include": ["./website/src/**/*", "./design-system/*"],
 }

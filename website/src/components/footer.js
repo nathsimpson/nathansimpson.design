@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Icon } from '../../design-system/icon';
-import { useTheme } from '../../design-system/theme';
-import { Divider } from '../../design-system/divider';
-import { Text } from '../../design-system/typography';
-import { TextLinkGatsby } from '../../design-system/textlink';
-import { Stack } from '../../design-system/stack';
+import { Icon } from '@design-system/icon';
+import { useTheme } from '@design-system/theme';
+import { Divider } from '@design-system/divider';
+import { Text } from '@design-system/typography';
+import { TextLinkGatsby } from '@design-system/textlink';
+import { Stack } from '@design-system/stack';
 
 import { footer_navItems, footer_socialNetworks } from '../data';
 

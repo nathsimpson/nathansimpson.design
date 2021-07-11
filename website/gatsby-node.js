@@ -1,5 +1,4 @@
 const path = require('path');
-
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -48,3 +47,13 @@ exports.createPages = ({ actions, graphql }) => {
     });
   });
 };
+
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//   actions.setWebpackConfig({
+//     resolve: {
+//       alias: {
+//         '@design-system': path.resolve(__dirname, '../design-system')
+//       }
+//     }
+//   });
+// };

@@ -3,20 +3,21 @@ import { jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Button, LinkButton, IconButton } from '../../design-system/button';
-import { Icon } from '../../design-system/icon';
-import { Tiles } from '../../design-system/tiles';
-import { Tag, Tags } from '../../design-system/tag';
-import { Box, FlexBox } from '../../design-system/box';
-import { Stack } from '../../design-system/stack';
-import { Card } from '../../design-system/card';
-import { Cluster } from '../../design-system/cluster';
-import { TextLink, TextLinkGatsby } from '../../design-system/textlink';
-import { Text, Heading } from '../../design-system/typography';
-import { useTheme } from '../../design-system/theme';
-import { Divider } from '../../design-system/divider';
+import { Button, LinkButton, IconButton } from '@design-system/button';
+import { Icon } from '@design-system/icon';
+import { Tiles } from '@design-system/tiles';
+import { Tag, Tags } from '@design-system/tag';
+import { Box, FlexBox } from '@design-system/box';
+import { Stack } from '@design-system/stack';
+import { Card } from '@design-system/card';
+import { Cluster } from '@design-system/cluster';
+import { TextLink, TextLinkGatsby } from '@design-system/textlink';
+import { Text, Heading } from '@design-system/typography';
+import { useTheme } from '@design-system/theme';
+import { Divider } from '@design-system/divider';
 
 import { CodeEditor, CodePreview } from './CodeEditor';
+import { Table, TableHead, TableRow, TableCell } from './Table';
 
 const DsComponents = {
   Box,
@@ -36,6 +37,24 @@ const DsComponents = {
   TextLink,
   TextLinkGatsby,
   Tiles
+};
+
+const InlineCode = props => {
+  const { colors, radii, spacing, fontFamilies } = useTheme();
+  return (
+    <Text
+      as="pre"
+      css={{
+        display: 'inline',
+        fontFamily: fontFamilies.mono,
+        color: colors.text.emphasis,
+        backgroundColor: colors.background.emphasis,
+        padding: spacing.xsmall,
+        borderRadius: radii.small
+      }}
+      {...props}
+    />
+  );
 };
 
 const components = {
@@ -65,73 +84,19 @@ const components = {
     }
   },
   inlineCode: props => {
-    const { colors, radii, spacing, fontFamilies } = useTheme();
-    return (
-      <Text
-        as="pre"
-        css={{
-          display: 'inline',
-          fontFamily: fontFamilies.mono,
-          color: colors.text.emphasis,
-          backgroundColor: colors.background.emphasis,
-          padding: spacing.xsmall,
-          borderRadius: radii.small
-        }}
-        {...props}
-      />
-    );
+    return <InlineCode {...props} />;
   },
   table: props => {
-    return (
-      <table
-        css={{
-          // border: `1px solid ${colors.border}`,
-          // border: 'none',
-          // borderCollapse: 'collapse',
-          width: '100%'
-        }}
-        {...props}
-      />
-    );
+    return <Table {...props} />;
   },
   thead: props => {
-    const { fontFamilies, colors } = useTheme();
-    return (
-      <thead
-        css={{
-          textAlign: 'left',
-          fontFamily: fontFamilies.heading,
-          color: colors.text.emphasis
-        }}
-        {...props}
-      />
-    );
+    return <TableHead {...props} />;
   },
   tr: props => {
-    const { colors } = useTheme();
-    return (
-      <tr
-        css={{
-          // paddingTop: spacing.small,
-          // paddingBottom: spacing.small,
-          borderBottom: `1px solid ${colors.global.border}`
-        }}
-        {...props}
-      />
-    );
+    return <TableRow {...props} />;
   },
   td: props => {
-    const { colors, spacing } = useTheme();
-    return (
-      <td
-        css={{
-          paddingTop: spacing.small,
-          paddingBottom: spacing.small,
-          borderBottom: `1px solid ${colors.global.border}`
-        }}
-        {...props}
-      />
-    );
+    return <TableCell {...props} />;
   }
 };
 

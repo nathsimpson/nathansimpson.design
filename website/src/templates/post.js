@@ -11,7 +11,7 @@ import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
 import { useTheme } from '@design-system/theme';
 
-export default ({ data }) => {
+const PostTemplate = ({ data }) => {
   const post = data.mdx;
   const { spacing } = useTheme();
 
@@ -69,3 +69,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default PostTemplate;

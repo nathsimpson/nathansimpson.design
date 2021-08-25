@@ -10,7 +10,7 @@ import { useTheme } from '@design-system/theme';
 
 import { Heading, Text } from '@design-system/typography';
 
-export default ({ data }) => {
+const TalkTemplate = ({ data }) => {
   const talk = data.mdx;
   const { spacing } = useTheme();
 
@@ -40,6 +40,7 @@ export default ({ data }) => {
             }}
             src={`https://www.youtube.com/embed/${talk.frontmatter.youtubeid}`}
             frameBorder="0"
+            title="YouTube video"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
@@ -71,3 +72,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default TalkTemplate;

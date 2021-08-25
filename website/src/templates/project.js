@@ -9,7 +9,7 @@ import { useTheme } from '@design-system/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-export default ({ data }) => {
+const ProjectTemplate = ({ data }) => {
   const project = data.mdx;
   const { spacing } = useTheme();
   const skills = project.frontmatter.skills
@@ -59,3 +59,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default ProjectTemplate;

@@ -2,10 +2,10 @@
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
-import { DesignSystemTemplate } from '../components';
+import { DesignSystemTemplate as Layout } from '../components';
 
-export default ({ data }) => {
-  return <DesignSystemTemplate data={data} />;
+const DesignSystemTemplate = ({ data }) => {
+  return <Layout data={data} />;
 };
 
 export const dsComponentQuery = graphql`
@@ -38,3 +38,5 @@ export const dsComponentQuery = graphql`
     }
   }
 `;
+
+export default DesignSystemTemplate;

@@ -1,79 +1,27 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { BoxProps } from './box';
+import { BoxProps, useBoxStyles } from './box';
 
 import {
-  getMarginStyles,
-  getPaddingStyles,
-  getRadiiStyles,
   getFlexStyles,
   FlexProps,
   alignmentMap,
-  useBoxColors,
   justificationMap,
   orientationMap
 } from './utils';
 
 export const FlexBox = ({
   align = 'start',
-  bg = 'none',
+  as: Tag = 'div',
   basis,
-  children,
   flex,
   grow,
-  height,
   justify = 'start',
-  margin,
-  marginBottom,
-  marginLeft,
-  marginRight,
-  marginTop,
-  marginX,
-  marginY,
   orientation = 'vertical',
-  padding,
-  paddingBottom,
-  paddingLeft,
-  paddingRight,
-  paddingTop,
-  paddingX,
-  paddingY,
-  rounding,
-  roundingBottom,
-  roundingLeft,
-  roundingRight,
-  roundingTop,
   shrink,
-  // style,
-  width,
   ...props
 }: FlexBoxProps) => {
-  const marginObj = getMarginStyles({
-    margin,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    marginTop,
-    marginX,
-    marginY
-  });
-
-  const paddingObj = getPaddingStyles({
-    padding,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    paddingX,
-    paddingY
-  });
-  const radiiObj = getRadiiStyles({
-    rounding,
-    roundingBottom,
-    roundingLeft,
-    roundingRight,
-    roundingTop
-  });
+  const boxStyles = useBoxStyles(props);
   const flexStyles = getFlexStyles({
     flex,
     grow,
@@ -81,29 +29,16 @@ export const FlexBox = ({
     basis
   });
 
-  const colors = useBoxColors();
+  const styles = {
+    ...boxStyles,
+    ...flexStyles,
+    display: 'flex',
+    alignItems: alignmentMap[align],
+    flexDirection: orientationMap[orientation],
+    justifyContent: justificationMap[justify]
+  };
 
-  return (
-    <div
-      {...props}
-      css={{
-        ...flexStyles,
-        ...radiiObj,
-        ...marginObj,
-        ...paddingObj,
-        display: 'flex',
-        alignItems: alignmentMap[align],
-        backgroundColor: colors[bg],
-        flexDirection: orientationMap[orientation],
-        height,
-        justifyContent: justificationMap[justify],
-        width
-        // ...style
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <Tag {...props} css={styles} />;
 };
 
 export type FlexBoxProps = BoxProps &

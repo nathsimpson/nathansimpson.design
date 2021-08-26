@@ -14,80 +14,32 @@ import {
 import { forwardRefWithAs } from '../utils';
 
 export const Box = forwardRefWithAs<'div', BoxProps>(
-  (
-    {
-      as: Tag = 'div',
-      bg = 'none',
-      height,
-      margin,
-      marginBottom,
-      marginLeft,
-      marginRight,
-      marginTop,
-      marginX,
-      marginY,
-      padding,
-      paddingBottom,
-      paddingLeft,
-      paddingRight,
-      paddingTop,
-      paddingX,
-      paddingY,
-      rounding,
-      roundingBottom,
-      roundingLeft,
-      roundingRight,
-      roundingTop,
-      style,
-      width,
-      ...props
-    },
-    ref
-  ) => {
-    const marginObj = getMarginStyles({
-      margin,
-      marginBottom,
-      marginLeft,
-      marginRight,
-      marginTop,
-      marginX,
-      marginY
-    });
-
-    const paddingObj = getPaddingStyles({
-      padding,
-      paddingBottom,
-      paddingLeft,
-      paddingRight,
-      paddingTop,
-      paddingX,
-      paddingY
-    });
-    const radiiObj = getRadiiStyles({
-      rounding,
-      roundingBottom,
-      roundingLeft,
-      roundingRight,
-      roundingTop
-    });
-
-    const colors = useBoxColors();
-    return (
-      <Tag
-        {...props}
-        css={{
-          backgroundColor: colors[bg],
-          ...radiiObj,
-          ...marginObj,
-          ...paddingObj,
-          height,
-          width
-        }}
-        ref={ref}
-      />
-    );
+  ({ as: Tag = 'div', bg = 'none', style, ...props }, ref) => {
+    const boxStyles = useBoxStyles(props);
+    return <Tag {...props} css={boxStyles} ref={ref} />;
   }
 );
+
+export const useBoxStyles = ({
+  bg = 'none',
+  height,
+  width,
+  ...props
+}: BoxProps) => {
+  const margin = getMarginStyles(props);
+  const padding = getPaddingStyles(props);
+  const radii = getRadiiStyles(props);
+  const colors = useBoxColors();
+
+  return {
+    backgroundColor: colors[bg],
+    height,
+    ...margin,
+    ...padding,
+    ...radii,
+    width
+  };
+};
 
 export type BoxProps = BoxMarginProps &
   BoxPaddingProps &

@@ -3,8 +3,8 @@ import { jsx } from '@emotion/core';
 import { Stack } from '../stack';
 import { spacing } from '../theme';
 import { Text } from '../typography';
-import { Icon } from './index';
-import { ICONS } from './icons';
+import { Icon } from './src/index';
+import { ICONS } from './src/icons';
 import { useMediaQuery } from '../utils/useMediaQuery';
 
 export const IconsExample = () => {

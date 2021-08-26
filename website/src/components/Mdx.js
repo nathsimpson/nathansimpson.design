@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Button, LinkButton, IconButton } from '@design-system/button';
-import { Icon } from '@design-system/icon';
+import { Icon } from '@nathsimpson/icon';
 import { Tiles } from '@design-system/tiles';
 import { Tag, Tags } from '@design-system/tag';
 import { Box, FlexBox } from '@design-system/box';

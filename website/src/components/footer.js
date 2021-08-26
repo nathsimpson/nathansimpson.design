@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Icon } from '@design-system/icon';
+import { Icon } from '@nathsimpson/icon';
 import { useTheme } from '@nathsimpson/theme';
 import { Divider } from '@design-system/divider';
 import { Text } from '@design-system/typography';

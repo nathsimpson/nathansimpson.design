@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { useTheme } from '@nathsimpson/theme';
-import { Icon } from '../icon';
+import { Icon } from '@nathsimpson/icon';
 
 import { useButtonStyles, ButtonProps, IconButtonProps } from './utils';
 

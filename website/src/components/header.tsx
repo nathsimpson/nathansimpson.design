@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 
 import { Box } from '@design-system/box';
 import { IconButton } from '@design-system/button';
-import { Icon } from '@design-system/icon';
+import { Icon } from '@nathsimpson/icon';
 import { Stack } from '@design-system/stack';
 import { useTheme, useThemeContext } from '@nathsimpson/theme';
 import { Cluster } from '@design-system/cluster';

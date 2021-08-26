@@ -10,7 +10,7 @@ import { useMediaQuery } from '@design-system/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>
-    <Stack gap="small" align="start" css={{ maxWidth: 800 }}>
+    <div css={{ maxWidth: 800 }}>
       <Heading level={2}>Talks</Heading>
 
       <p>
@@ -28,12 +28,15 @@ export const Talks = ({ data }) => (
         meetups. Check out the recordings below, and come and say hi at the next
         one!
       </p>
-      {data.allMdx.edges
-        .filter(({ node }) => node.frontmatter.type === 'talk')
-        .map(({ node }) => (
-          <Talk node={node} key={node.id} />
-        ))}
-    </Stack>
+
+      <Stack gap="small">
+        {data.allMdx.edges
+          .filter(({ node }) => node.frontmatter.type === 'talk')
+          .map(({ node }) => (
+            <Talk node={node} key={node.id} />
+          ))}
+      </Stack>
+    </div>
   </div>
 );
 

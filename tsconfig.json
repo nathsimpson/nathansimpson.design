@@ -12,11 +12,9 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@design-system/*": [
-        "./design-system/*"
-      ],
+      "@design-system/*": ["./design-system/*"]
     },
     "allowJs": true
   },
-  "include": ["./website/src/**/*", "./design-system/*"],
+  "include": ["./website/src/**/*", "./design-system/*"]
 }

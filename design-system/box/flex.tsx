@@ -10,7 +10,7 @@ import {
   orientationMap
 } from './utils';
 
-export const FlexBox = ({
+export const Flex = ({
   align = 'start',
   as: Tag = 'div',
   basis,

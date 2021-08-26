@@ -1,37 +1,40 @@
 import { useTheme, spacing, radii, SpacingType, RadiiType } from '../theme';
+import { useMediaQuery } from '../utils';
+
+export type ResponsiveProp<T> = T | readonly (T | null)[];
 
 export type BoxMarginProps = {
   /** Margin */
-  margin?: SpacingType;
+  margin?: ResponsiveProp<SpacingType>;
   /** Margin bottom */
-  marginBottom?: SpacingType;
+  marginBottom?: ResponsiveProp<SpacingType>;
   /** Margin left */
-  marginLeft?: SpacingType;
+  marginLeft?: ResponsiveProp<SpacingType>;
   /** Margin right */
-  marginRight?: SpacingType;
+  marginRight?: ResponsiveProp<SpacingType>;
   /** Margin top */
-  marginTop?: SpacingType;
+  marginTop?: ResponsiveProp<SpacingType>;
   /** Margin horizontal */
-  marginX?: SpacingType;
+  marginX?: ResponsiveProp<SpacingType>;
   /** Margin vertical */
-  marginY?: SpacingType;
+  marginY?: ResponsiveProp<SpacingType>;
 };
 
 export type BoxPaddingProps = {
   /** Padding */
-  padding?: SpacingType;
+  padding?: ResponsiveProp<SpacingType>;
   /** Padding bottom */
-  paddingBottom?: SpacingType;
+  paddingBottom?: ResponsiveProp<SpacingType>;
   /** Padding left */
-  paddingLeft?: SpacingType;
+  paddingLeft?: ResponsiveProp<SpacingType>;
   /** Padding right */
-  paddingRight?: SpacingType;
+  paddingRight?: ResponsiveProp<SpacingType>;
   /** Padding top */
-  paddingTop?: SpacingType;
+  paddingTop?: ResponsiveProp<SpacingType>;
   /** Padding horizontal */
-  paddingX?: SpacingType;
+  paddingX?: ResponsiveProp<SpacingType>;
   /** Padding vertical */
-  paddingY?: SpacingType;
+  paddingY?: ResponsiveProp<SpacingType>;
 };
 
 export type BoxRadiiProps = {
@@ -66,12 +69,21 @@ export const getMarginStyles = ({
   marginTop,
   marginX,
   marginY
-}: BoxMarginProps) => ({
-  marginTop: spacing[marginTop || marginY || margin || 'none'],
-  marginBottom: spacing[marginBottom || marginY || margin || 'none'],
-  marginLeft: spacing[marginLeft || marginX || margin || 'none'],
-  marginRight: spacing[marginRight || marginX || margin || 'none']
-});
+}: BoxMarginProps) => {
+  const { mapResponsiveProp } = useMediaQuery();
+
+  const mb = marginBottom || marginY || margin;
+  const mt = marginTop || marginY || margin;
+  const ml = marginLeft || marginX || margin;
+  const mr = marginRight || marginX || margin;
+
+  return {
+    marginBottom: mb && mapResponsiveProp(mb, spacing),
+    marginTop: mt && mapResponsiveProp(mt, spacing),
+    marginLeft: ml && mapResponsiveProp(ml, spacing),
+    marginRight: mr && mapResponsiveProp(mr, spacing)
+  };
+};
 
 export const getPaddingStyles = ({
   padding,
@@ -81,12 +93,21 @@ export const getPaddingStyles = ({
   paddingTop,
   paddingX,
   paddingY
-}: BoxPaddingProps) => ({
-  paddingTop: spacing[paddingTop || paddingY || padding || 'none'],
-  paddingBottom: spacing[paddingBottom || paddingY || padding || 'none'],
-  paddingLeft: spacing[paddingLeft || paddingX || padding || 'none'],
-  paddingRight: spacing[paddingRight || paddingX || padding || 'none']
-});
+}: BoxPaddingProps) => {
+  const { mapResponsiveProp } = useMediaQuery();
+
+  const pb = paddingBottom || paddingY || padding;
+  const pt = paddingTop || paddingY || padding;
+  const pl = paddingLeft || paddingX || padding;
+  const pr = paddingRight || paddingX || padding;
+
+  return {
+    paddingBottom: pb && mapResponsiveProp(pb, spacing),
+    paddingTop: pt && mapResponsiveProp(pt, spacing),
+    paddingLeft: pl && mapResponsiveProp(pl, spacing),
+    paddingRight: pr && mapResponsiveProp(pr, spacing)
+  };
+};
 
 export const getRadiiStyles = ({
   rounding,
@@ -94,15 +115,27 @@ export const getRadiiStyles = ({
   roundingLeft,
   roundingRight,
   roundingTop
-}: BoxRadiiProps) => ({
-  borderTopLeftRadius: radii[roundingTop || roundingLeft || rounding || 'none'],
-  borderTopRightRadius:
-    radii[roundingTop || roundingRight || rounding || 'none'],
-  borderBottomLeftRadius:
-    radii[roundingBottom || roundingLeft || rounding || 'none'],
-  borderBottomRightRadius:
-    radii[roundingBottom || roundingRight || rounding || 'none']
-});
+}: BoxRadiiProps) => {
+  const { mapResponsiveProp } = useMediaQuery();
+
+  const borderBottomLeftRadius = roundingBottom || roundingLeft || rounding;
+  const borderBottomRightRadius = roundingBottom || roundingRight || rounding;
+  const borderTopLeftRadius = roundingTop || roundingLeft || rounding;
+  const borderTopRightRadius = roundingTop || roundingRight || rounding;
+
+  return {
+    borderBottomLeftRadius:
+      borderBottomLeftRadius &&
+      mapResponsiveProp(borderBottomLeftRadius, radii),
+    borderBottomRightRadius:
+      borderBottomRightRadius &&
+      mapResponsiveProp(borderBottomRightRadius, radii),
+    borderTopLeftRadius:
+      borderTopLeftRadius && mapResponsiveProp(borderTopLeftRadius, radii),
+    borderTopRightRadius:
+      borderTopRightRadius && mapResponsiveProp(borderTopRightRadius, radii)
+  };
+};
 
 export const getFlexStyles = ({ flex, basis, grow, shrink }: FlexProps) => {
   if (flex) {

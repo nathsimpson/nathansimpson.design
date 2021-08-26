@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { BoxProps, useBoxStyles } from './box';
+import { Box, BoxProps } from './box';
+import { forwardRefWithAs } from '../utils';
 
 import {
   getFlexStyles,
@@ -10,36 +11,39 @@ import {
   orientationMap
 } from './utils';
 
-export const Flex = ({
-  align = 'start',
-  as: Tag = 'div',
-  basis,
-  flex,
-  grow,
-  justify = 'start',
-  orientation = 'vertical',
-  shrink,
-  ...props
-}: FlexBoxProps) => {
-  const boxStyles = useBoxStyles(props);
-  const flexStyles = getFlexStyles({
-    flex,
-    grow,
-    shrink,
-    basis
-  });
+export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
+  (
+    {
+      align = 'start',
+      as: Tag = 'div',
+      basis,
+      flex,
+      grow,
+      justify = 'start',
+      orientation = 'vertical',
+      shrink,
+      ...props
+    },
+    ref
+  ) => {
+    const flexStyles = getFlexStyles({
+      flex,
+      grow,
+      shrink,
+      basis
+    });
 
-  const styles = {
-    ...boxStyles,
-    ...flexStyles,
-    display: 'flex',
-    alignItems: alignmentMap[align],
-    flexDirection: orientationMap[orientation],
-    justifyContent: justificationMap[justify]
-  };
+    const styles = {
+      ...flexStyles,
+      display: 'flex',
+      alignItems: alignmentMap[align],
+      flexDirection: orientationMap[orientation],
+      justifyContent: justificationMap[justify]
+    };
 
-  return <Tag {...props} css={styles} />;
-};
+    return <Box ref={ref} css={styles} {...props} />;
+  }
+);
 
 export type FlexBoxProps = BoxProps &
   FlexProps & {

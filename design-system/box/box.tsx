@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { useMediaQuery, forwardRefWithAs } from '@design-system/utils';
 import { ReactNode, ElementType, StyleHTMLAttributes } from 'react';
 
 import {
@@ -11,12 +12,62 @@ import {
   getRadiiStyles,
   useBoxColors
 } from './utils';
-import { forwardRefWithAs } from '../utils';
 
 export const Box = forwardRefWithAs<'div', BoxProps>(
-  ({ as: Tag = 'div', bg = 'none', style, ...props }, ref) => {
-    const boxStyles = useBoxStyles(props);
-    return <Tag {...props} css={boxStyles} ref={ref} />;
+  (
+    {
+      as: Tag = 'div',
+      bg,
+      height,
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      marginX,
+      marginY,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      paddingX,
+      paddingY,
+      rounding,
+      roundingBottom,
+      roundingLeft,
+      roundingRight,
+      roundingTop,
+      width,
+      ...props
+    },
+    ref
+  ) => {
+    const boxStyles = useBoxStyles({
+      bg,
+      height,
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      marginX,
+      marginY,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      paddingX,
+      paddingY,
+      rounding,
+      roundingBottom,
+      roundingLeft,
+      roundingRight,
+      roundingTop,
+      width
+    });
+    return <Tag css={boxStyles} ref={ref} {...props} />;
   }
 );
 
@@ -26,19 +77,20 @@ export const useBoxStyles = ({
   width,
   ...props
 }: BoxProps) => {
+  const { mq, mapResponsiveProp } = useMediaQuery();
   const margin = getMarginStyles(props);
   const padding = getPaddingStyles(props);
   const radii = getRadiiStyles(props);
   const colors = useBoxColors();
 
-  return {
-    backgroundColor: colors[bg],
+  return mq({
+    background: mapResponsiveProp(bg, colors),
     height,
     ...margin,
     ...padding,
     ...radii,
     width
-  };
+  });
 };
 
 export type BoxProps = BoxMarginProps &

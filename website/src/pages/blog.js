@@ -10,7 +10,7 @@ import { useCardStyles } from '@design-system/card';
 import { FlexBox } from '@design-system/box';
 import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
-import { spacing } from '@design-system/theme';
+import { spacing } from '@nathsimpson/theme';
 import { TextLinkGatsby } from '@design-system/textlink';
 
 const PostCard = ({ id, frontmatter, body, excerpt }) => {

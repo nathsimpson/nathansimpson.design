@@ -13,7 +13,7 @@ import { Card } from '@design-system/card';
 import { Cluster } from '@design-system/cluster';
 import { TextLink, TextLinkGatsby } from '@design-system/textlink';
 import { Text, Heading } from '@design-system/typography';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { Divider } from '@design-system/divider';
 
 import { CodeEditor, CodePreview } from './CodeEditor';

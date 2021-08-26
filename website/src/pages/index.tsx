@@ -14,7 +14,7 @@ import {
 } from '../components';
 
 import { Box } from '@design-system/box';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { Heading } from '@design-system/typography';
 import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';

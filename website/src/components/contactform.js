@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { radii, colors, fontsizes } from '@design-system/theme';
+import { radii, colors, fontsizes } from '@nathsimpson/theme';
 import hexAlpha from 'hex-alpha';
 
 export const ContactForm = () => (

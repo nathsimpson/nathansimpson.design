@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 
 import { Box, BoxProps } from '../box';
-import { spacing, SpacingType } from '../theme';
+import { spacing, SpacingType } from '@nathsimpson/theme';
 
 const alignment = {
   center: 'center',

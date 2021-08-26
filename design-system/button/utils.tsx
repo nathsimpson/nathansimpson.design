@@ -1,4 +1,4 @@
-import { useTheme } from '../theme';
+import { useTheme } from '@nathsimpson/theme';
 import hexAlpha from 'hex-alpha';
 import { IconType } from '../icon';
 

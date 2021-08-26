@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ReactElement } from 'react';
-import { useTheme } from '../theme';
+import { useTheme } from '@nathsimpson/theme';
 
 export const Tiles = ({ children }: { children: ReactElement[] }) => {
   const { spacing } = useTheme();

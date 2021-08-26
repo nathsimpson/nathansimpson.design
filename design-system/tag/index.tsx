@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
-import { useTheme } from '../theme';
+import { useTheme } from '@nathsimpson/theme';
 import { Cluster } from '../cluster';
 import hexAlpha from 'hex-alpha';
 

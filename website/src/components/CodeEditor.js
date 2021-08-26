@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { useCodeHighlightTheme } from './codeHighlightTheme';
 
 export const CodePreview = ({ className = '', children }) => {

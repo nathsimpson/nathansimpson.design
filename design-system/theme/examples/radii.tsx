@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useTheme } from '../themecontext';
+import { useTheme } from '../src/themecontext';
 import { Stack } from '../../stack';
 import { Text } from '../../typography';
 

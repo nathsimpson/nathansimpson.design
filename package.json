@@ -15,8 +15,9 @@
     "dev": "cd website && gatsby develop",
     "clean": "cd website && gatsby clean",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
+    "postinstall:preconstruct": "preconstruct dev",
     "postinstall:manypkg": "manypkg check",
-    "postinstall": "yarn postinstall:manypkg",
+    "postinstall": "yarn postinstall:manypkg && yarn postinstall:preconstruct",
     "types": "tsc --project tsconfig.json",
     "lint": "eslint ."
   },
@@ -28,6 +29,7 @@
     "@manypkg/cli": "^0.18.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@preconstruct/cli": "^2.1.1",
     "@types/facepaint": "^1.2.1",
     "@types/react-dom": "^17.0.1",
     "@types/react-helmet": "^6.1.0",
@@ -90,5 +92,10 @@
   },
   "resolutions": {
     "remark": "11.0.2"
+  },
+  "preconstruct": {
+    "packages": [
+      "design-system/*"
+    ]
   }
 }

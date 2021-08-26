@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Box } from '../box';
-import { useTheme, FontSizeType } from '../theme';
+import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
 type TextProps = {
   as?: 'p' | 'span';

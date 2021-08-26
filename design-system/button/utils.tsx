@@ -1,5 +1,5 @@
 import { useTheme } from '@nathsimpson/theme';
-import hexAlpha from 'hex-alpha';
+import { hexAlpha } from '@nathsimpson/utils';
 import { IconType } from '@nathsimpson/icon';
 
 type ButtonSize = 'small' | 'medium' | 'large';

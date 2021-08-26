@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ReactNode, ElementType, StyleHTMLAttributes } from 'react';
+import { forwardRefWithAs } from '@nathsimpson/utils';
 
 import {
   BoxMarginProps,
@@ -11,7 +12,6 @@ import {
   getRadiiStyles,
   useBoxColors
 } from './utils';
-import { forwardRefWithAs } from '../utils';
 
 export const Box = forwardRefWithAs<'div', BoxProps>(
   (

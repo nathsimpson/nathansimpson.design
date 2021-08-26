@@ -1,7 +1,5 @@
 import { useTheme, spacing, radii, SpacingType, RadiiType } from '../theme';
-import { useMediaQuery } from '../utils';
-
-export type ResponsiveProp<T> = T | readonly (T | null)[];
+import { useMediaQuery, ResponsiveProp } from '../utils';
 
 export type BoxMarginProps = {
   /** Margin */

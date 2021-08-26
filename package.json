@@ -15,9 +15,7 @@
     "dev": "cd website && gatsby develop",
     "clean": "cd website && gatsby clean",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
-    "postinstall:preconstruct": "preconstruct dev",
-    "postinstall:manypkg": "manypkg check",
-    "postinstall": "yarn postinstall:manypkg && yarn postinstall:preconstruct",
+    "postinstall": "preconstruct dev && manypkg check",
     "types": "tsc --project tsconfig.json",
     "lint": "eslint ."
   },

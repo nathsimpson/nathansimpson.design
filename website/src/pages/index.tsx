@@ -54,7 +54,7 @@ const Hero = () => {
           <Avatar />
           <Heading level={1}>G'day, I'm Nath 👋</Heading>
 
-          <Box as="p">
+          <Box as="p" margin="none">
             I'm a UI Designer &amp; Developer at{' '}
             <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
             Sydney, Australia. I'm passionate about Design Systems, and building

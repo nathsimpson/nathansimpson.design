@@ -58,7 +58,7 @@ const InlineCode = props => {
 };
 
 const components = {
-  p: props => <Text {...props} />,
+  p: props => <Text margin="none" {...props} />,
   a: props => <TextLink {...props} />,
   h1: props => <Heading level={1} {...props} />,
   h2: props => <Heading level={2} {...props} />,

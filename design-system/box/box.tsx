@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { useMediaQuery, forwardRefWithAs } from '@design-system/utils';
-import { ReactNode, ElementType, StyleHTMLAttributes } from 'react';
-import { forwardRefWithAs } from '@nathsimpson/utils';
+import { useMediaQuery, forwardRefWithAs } from '@nathsimpson/utils';
+import { ReactNode, ElementType } from 'react';
 
 import {
   BoxMarginProps,

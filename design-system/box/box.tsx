@@ -105,6 +105,4 @@ export type BoxProps = BoxMarginProps &
     height?: number;
     /** Width */
     width?: number;
-    /** The regular style prop */
-    style?: StyleHTMLAttributes<'div'>;
   };

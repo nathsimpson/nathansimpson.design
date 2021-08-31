@@ -58,7 +58,7 @@ const InlineCode = props => {
 };
 
 const components = {
-  p: props => <Text margin="none" {...props} />,
+  p: props => <Text {...props} />,
   a: props => <TextLink {...props} />,
   h1: props => <Heading level={1} {...props} />,
   h2: props => <Heading level={2} {...props} />,
@@ -69,6 +69,7 @@ const components = {
   em: props => (
     <Text as="em" color="emphasis" css={{ fontStyle: 'normal' }} {...props} />
   ),
+  ul: props => <Box as="ul" margin="none" {...props} />,
   img: props => (
     <div style={{ width: '100%', textAlign: 'center' }}>
       <img {...props} />

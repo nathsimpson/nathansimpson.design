@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Box } from '../box';
+import { Box, BoxProps } from '../box';
 import { useTheme, FontSizeType } from '../theme';
+import { useMediaQuery, ResponsiveProp } from '../utils';
 
 type TextProps = {
   as?: 'p' | 'span';
-  children: string;
-  color?: 'default' | 'emphasis';
+  color?: ResponsiveProp<'default' | 'emphasis'>;
   size?: FontSizeType;
-};
+} & BoxProps;
 
 export const Text = ({
   size = 'medium',
@@ -17,15 +17,18 @@ export const Text = ({
   ...props
 }: TextProps) => {
   const { colors, fontsizes, fontFamilies } = useTheme();
+  const { mq, mapResponsiveProp } = useMediaQuery();
+
   return (
     <Box
       as={as}
+      margin="none"
       {...props}
-      css={{
-        color: colors.text[color],
+      css={mq({
+        color: mapResponsiveProp(color, colors.text),
         fontFamily: fontFamilies.body,
         fontSize: fontsizes[size]
-      }}
+      })}
     />
   );
 };

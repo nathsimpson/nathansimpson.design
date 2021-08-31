@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Tag } from '@design-system/tag';
 import { Cluster } from '@design-system/cluster';
+import { Stack } from '@design-system/stack';
 
 import { Heading, Text } from '@design-system/typography';
 import { TextLink } from '@design-system/textlink';
@@ -11,7 +12,7 @@ import { development_skills } from '../data';
 export const Development = () => {
   return (
     <div css={{ width: '100%' }}>
-      <div css={{ maxWidth: 800 }}>
+      <Stack gap="medium" css={{ maxWidth: 800 }}>
         <Heading level={2}>Development</Heading>
 
         <Text>
@@ -41,7 +42,7 @@ export const Development = () => {
             <Tag label={item} as="li" key={item} />
           ))}
         </Cluster>
-      </div>
+      </Stack>
     </div>
   );
 };

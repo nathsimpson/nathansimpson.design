@@ -49,7 +49,7 @@ const Hero = () => {
         <Stack gap="medium" css={{ maxWidth: 800 }}>
           <Avatar />
           <Heading level={1}>G'day, I'm Nath 👋</Heading>
-          <Text as="p" margin="none" size="large">
+          <Text as="p" size="large">
             I'm a UI Designer &amp; Developer at{' '}
             <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
             Sydney, Australia. I'm passionate about Design Systems, and building

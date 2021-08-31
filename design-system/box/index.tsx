@@ -1,3 +1,3 @@
 export * from './box';
-export { FlexBox } from './flexbox';
+export { Flex } from './flex';
 export * from './utils';

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
-import { FlexBox } from '../box';
+import { Flex } from '../box';
 import { Stack } from '../stack';
 import { Text } from '../typography';
 import { useTheme } from '../theme';
@@ -65,7 +65,7 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
         />
       )}
 
-      <FlexBox>
+      <Flex>
         <Stack gap="xsmall" padding="medium">
           <Text as="span" size="xsmall">
             {tag}
@@ -85,7 +85,7 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
           </span>
           {!image && desc && <Text>{desc}</Text>}
         </Stack>
-      </FlexBox>
+      </Flex>
     </Link>
   );
 };

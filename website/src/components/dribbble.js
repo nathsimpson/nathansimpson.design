@@ -2,7 +2,6 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
-import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
 import { TextLink } from '@design-system/textlink';
 export class Dribbble extends React.Component {
@@ -29,7 +28,7 @@ export class Dribbble extends React.Component {
 
   render() {
     return (
-      <Stack gap="medium" css={{ width: '100%' }}>
+      <div css={{ width: '100%' }}>
         <Heading level={2}>Other work</Heading>
 
         <Text>
@@ -64,7 +63,7 @@ export class Dribbble extends React.Component {
             </a>
           ))}
         </div>
-      </Stack>
+      </div>
     );
   }
 }

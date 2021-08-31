@@ -31,18 +31,15 @@ export const Development = () => {
           as="ul"
           gap="small"
           align="center"
+          margin="none"
+          padding="none"
           css={{
             maxWidth: 600,
             listStyle: 'none'
           }}
         >
           {development_skills.map(item => (
-            <Tag
-              label={item}
-              as="li"
-              key={item}
-              style={{ marginRight: 6, marginBottom: 6 }}
-            />
+            <Tag label={item} as="li" key={item} />
           ))}
         </Cluster>
       </Stack>

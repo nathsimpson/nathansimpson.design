@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { useMediaQuery, ResponsiveProp } from '../utils';
 
 import { Box, BoxProps } from '../box';
 import { spacing, SpacingType } from '@nathsimpson/theme';
@@ -17,7 +18,7 @@ type StackProps = {
   /** Which direction to layout the items within the stack. */
   orientation?: 'horizontal' | 'vertical';
   /** The size of the gap between each element in the stack. */
-  gap: SpacingType;
+  gap: ResponsiveProp<SpacingType>;
 } & BoxProps;
 
 export const Stack: React.FunctionComponent<StackProps> = ({
@@ -28,6 +29,7 @@ export const Stack: React.FunctionComponent<StackProps> = ({
   ...props
 }) => {
   const { dimension, autoFlow } = orientationMap[orientation];
+  const { mapResponsiveProp } = useMediaQuery();
 
   return (
     <Box
@@ -35,7 +37,7 @@ export const Stack: React.FunctionComponent<StackProps> = ({
         display: 'grid',
         // prevent grid children from expanding the gap to fill the available space
         [dimension]: 'fit-content',
-        gap: spacing[gap],
+        gap: mapResponsiveProp(gap, spacing),
         justifyItems: align,
 
         // support horizontal orientation

@@ -7,7 +7,7 @@ import { Header } from '../components';
 import { Tag } from '@design-system/tag';
 import { Divider } from '@design-system/divider';
 import { useCardStyles } from '@design-system/card';
-import { FlexBox } from '@design-system/box';
+import { Flex } from '@design-system/box';
 import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
 import { spacing } from '@nathsimpson/theme';
@@ -25,12 +25,12 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
         <TextLinkGatsby to={frontmatter.path}>
           <Heading level={2}>{frontmatter.title}</Heading>
         </TextLinkGatsby>
-        <FlexBox orientation="horizontal" align="center">
+        <Flex orientation="horizontal" align="center">
           <Tag label={frontmatter.type} size="small" />
           <Text as="span" size="small" marginLeft="small">
             {postedOn}
           </Text>
-        </FlexBox>
+        </Flex>
 
         <Divider />
 

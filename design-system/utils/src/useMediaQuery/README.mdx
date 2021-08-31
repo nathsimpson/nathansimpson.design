@@ -47,3 +47,15 @@ In the (hopefully rare) case max-width is needed, we have a helper for that too.
   }}
 />
 ```
+
+## mapResponsiveProp
+
+A helper function for handling array props.
+
+```jsx
+<Box padding={['small', 'large']} />
+```
+
+```jsx
+<Component css={{ marginTop: mapResponsiveProp(mt, spacing) }} />
+```

@@ -15,19 +15,16 @@ import {
 
 import { Box } from '@design-system/box';
 import { useTheme } from '@nathsimpson/theme';
-import { Heading } from '@design-system/typography';
+import { Heading, Text } from '@design-system/typography';
 import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';
 import { TextLink } from '@design-system/textlink';
 
 const Hero = () => {
-  const { colors } = useTheme();
   return (
     <div
       css={{
         padding: '128px 0px',
-        backgroundColor: colors.background.emphasis,
-        borderBottom: `1px solid ${colors.global.border}`,
         width: '100%'
       }}
     >
@@ -53,13 +50,12 @@ const Hero = () => {
         <Stack gap="medium" css={{ maxWidth: 800 }}>
           <Avatar />
           <Heading level={1}>G'day, I'm Nath 👋</Heading>
-
-          <Box as="p">
+          <Text as="p" size="large">
             I'm a UI Designer &amp; Developer at{' '}
             <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
             Sydney, Australia. I'm passionate about Design Systems, and building
             products from concept to delivery.
-          </Box>
+          </Text>
         </Stack>
       </div>
     </div>

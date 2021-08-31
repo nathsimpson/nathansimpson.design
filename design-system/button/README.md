@@ -21,16 +21,19 @@ import { Button, LinkButton } from 'design-system/button';
 ```
 
 There are three button weights to choose from:
+
 - primary
 - secondary
 - none
 
 and three sizes...
+
 - small
 - medium
 - large
 
 ### Icons
+
 Buttons can include icons on the left or right sides.
 
 ```jsx live
@@ -75,21 +78,21 @@ Shares the same styles as a Button, but works as an anchor link.
 | size?      | `small`, `medium`, `large`     | `medium`  |
 | weight     | `primary`, `secondary`, `none` | `primary` |
 
-
 ## IconButton
 
 A small circular button for when only an icon will do. Typically to trigger
 an immediate action like creating an item or toggling a theme.
 
 ```jsx live
-<IconButton size="medium" weight="primary" icon="plus" onPress={()=>{}} />
+<IconButton size="medium" weight="primary" icon="plus" onPress={() => {}} />
 ```
+
 ### Props
 
-| Prop       | Type                           | Default   |
-| ---------- | ------------------------------ | --------- |
-| icon       | IconType                       |           |
-| label      | string                         |           |
-| onPress    | () => void                     |           |
-| size?      | `small`, `medium`, `large`     | `medium`  |
-| weight     | `primary`, `secondary`, `none` | `primary` |
+| Prop    | Type                           | Default   |
+| ------- | ------------------------------ | --------- |
+| icon    | IconType                       |           |
+| label   | string                         |           |
+| onPress | () => void                     |           |
+| size?   | `small`, `medium`, `large`     | `medium`  |
+| weight  | `primary`, `secondary`, `none` | `primary` |

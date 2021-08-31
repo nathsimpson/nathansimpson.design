@@ -25,7 +25,11 @@ export const CodePreview = ({ className = '', children }) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={className}
-          style={{ ...style, border: `1px solid ${colors.global.border}` }}
+          style={{
+            margin: 0,
+            border: `1px solid ${colors.global.border}`,
+            ...style
+          }}
         >
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })} key={i}>

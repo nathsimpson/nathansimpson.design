@@ -6,7 +6,7 @@ import { MdxWithoutH1 } from './Mdx';
 
 import { Heading, Text } from '@design-system/typography';
 import { LinkButton } from '@design-system/button';
-import { FlexBox } from '@design-system/box';
+import { Flex } from '@design-system/box';
 import { Stack } from '@design-system/stack';
 import { TextLinkGatsby } from '@design-system/textlink';
 
@@ -42,7 +42,7 @@ export const DesignSystemTemplate = ({ data }) => {
           <NavigationBar items={navigationItems} />
 
           <article>
-            <FlexBox
+            <Flex
               orientation="horizontal"
               justify="between"
               marginBottom="large"
@@ -56,7 +56,7 @@ export const DesignSystemTemplate = ({ data }) => {
                 iconBefore="github"
                 href={githubUrl}
               />
-            </FlexBox>
+            </Flex>
             <MdxWithoutH1>{body}</MdxWithoutH1>
           </article>
         </div>
@@ -90,8 +90,10 @@ const NavigationBar = ({ items }) => {
 
 const NavBlock = ({ label, items }) => {
   return (
-    <Stack as="ul" gap="none" padding="none">
-      <Text size="xsmall">{label}</Text>
+    <Stack as="ul" gap="none" padding="none" margin="none">
+      <Text as="span" size="xsmall">
+        {label}
+      </Text>
       {items.map(({ to, label }) => (
         <NavItem to={to} key={to} label={label} />
       ))}

@@ -34,3 +34,13 @@ Using the As prop, you specify the HTML tag to be rendered. `div` is the default
   <Text as="span">I'm in a Section</Text>
 </Box>
 ```
+
+## Responsive props
+
+Styles that differ across screen sizes can be expressed as responsive props. This array syntax is read mobile-first.
+
+```jsx live
+<Box bg="emphasis" padding={['small', 'medium']} rounding={['small', 'large']}>
+  <Text as="span">Hello</Text>
+</Box>
+```

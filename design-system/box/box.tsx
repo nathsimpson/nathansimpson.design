@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { useMediaQuery, forwardRefWithAs } from '@design-system/utils';
 import { ReactNode, ElementType, StyleHTMLAttributes } from 'react';
 import { forwardRefWithAs } from '@nathsimpson/utils';
 
@@ -17,7 +18,7 @@ export const Box = forwardRefWithAs<'div', BoxProps>(
   (
     {
       as: Tag = 'div',
-      bg = 'none',
+      bg,
       height,
       margin,
       marginBottom,
@@ -38,56 +39,60 @@ export const Box = forwardRefWithAs<'div', BoxProps>(
       roundingLeft,
       roundingRight,
       roundingTop,
-      style,
       width,
       ...props
     },
     ref
   ) => {
-    const marginObj = getMarginStyles({
+    const boxStyles = useBoxStyles({
+      bg,
+      height,
       margin,
       marginBottom,
       marginLeft,
       marginRight,
       marginTop,
       marginX,
-      marginY
-    });
-
-    const paddingObj = getPaddingStyles({
+      marginY,
       padding,
       paddingBottom,
       paddingLeft,
       paddingRight,
       paddingTop,
       paddingX,
-      paddingY
-    });
-    const radiiObj = getRadiiStyles({
+      paddingY,
       rounding,
       roundingBottom,
       roundingLeft,
       roundingRight,
-      roundingTop
+      roundingTop,
+      width
     });
-
-    const colors = useBoxColors();
-    return (
-      <Tag
-        {...props}
-        css={{
-          backgroundColor: colors[bg],
-          ...radiiObj,
-          ...marginObj,
-          ...paddingObj,
-          height,
-          width
-        }}
-        ref={ref}
-      />
-    );
+    return <Tag css={boxStyles} ref={ref} {...props} />;
   }
 );
+
+export const useBoxStyles = ({
+  bg = 'none',
+  height,
+  width,
+  ...props
+}: BoxProps) => {
+  const { mq, mapResponsiveProp } = useMediaQuery();
+  const margin = getMarginStyles(props);
+  const padding = getPaddingStyles(props);
+  const radii = getRadiiStyles(props);
+  const colors = useBoxColors();
+
+  return mq({
+    background: mapResponsiveProp(bg, colors),
+    height,
+    ...margin,
+    ...padding,
+    ...radii,
+    width
+  });
+};
 
 export type BoxProps = BoxMarginProps &
   BoxPaddingProps &
@@ -101,6 +106,4 @@ export type BoxProps = BoxMarginProps &
     height?: number;
     /** Width */
     width?: number;
-    /** The regular style prop */
-    style?: StyleHTMLAttributes<'div'>;
   };

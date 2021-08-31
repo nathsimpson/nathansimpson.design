@@ -33,7 +33,6 @@ import { Card, useCardStyles } from 'design-system/card';
 </Tiles>
 ```
 
-
 ## Props
 
 | Prop   | Options                  | Desc                                                          |
@@ -51,9 +50,5 @@ The useCardStyles hook is available if you want to decorate an element with the 
 ```jsx
 const styles = useCardStyles();
 
-const Element = () => (
-  <div style={styles}>
-    Using Card Styles
-  </div>
-)
+const Element = () => <div style={styles}>Using Card Styles</div>;
 ```

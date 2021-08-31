@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 
 import { useCardStyles } from '@design-system/card';
-import { Heading } from '@design-system/typography';
+import { Heading, Text } from '@design-system/typography';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
 import { TextLink } from '@design-system/textlink';
@@ -10,10 +10,10 @@ import { useMediaQuery } from '@design-system/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>
-    <Stack gap="small" align="start" css={{ maxWidth: 800 }}>
+    <Stack gap="medium" css={{ maxWidth: 800 }}>
       <Heading level={2}>Talks</Heading>
 
-      <p>
+      <Text as="p">
         Occasionally I give talks at{' '}
         <TextLink href="https://www.sydjs.com/" target="_blank">
           SydJS
@@ -27,7 +27,7 @@ export const Talks = ({ data }) => (
         </TextLink>{' '}
         meetups. Check out the recordings below, and come and say hi at the next
         one!
-      </p>
+      </Text>
       {data.allMdx.edges
         .filter(({ node }) => node.frontmatter.type === 'talk')
         .map(({ node }) => (

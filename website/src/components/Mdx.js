@@ -7,7 +7,7 @@ import { Button, LinkButton, IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Tiles } from '@design-system/tiles';
 import { Tag, Tags } from '@design-system/tag';
-import { Box, FlexBox } from '@design-system/box';
+import { Box, Flex } from '@design-system/box';
 import { Stack } from '@design-system/stack';
 import { Card } from '@design-system/card';
 import { Cluster } from '@design-system/cluster';
@@ -25,7 +25,7 @@ const DsComponents = {
   Card,
   Cluster,
   Divider,
-  FlexBox,
+  Flex,
   Heading,
   Icon,
   IconButton,
@@ -69,6 +69,7 @@ const components = {
   em: props => (
     <Text as="em" color="emphasis" css={{ fontStyle: 'normal' }} {...props} />
   ),
+  ul: props => <Box as="ul" margin="none" {...props} />,
   img: props => (
     <div style={{ width: '100%', textAlign: 'center' }}>
       <img {...props} />

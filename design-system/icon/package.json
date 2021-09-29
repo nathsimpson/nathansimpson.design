@@ -1,0 +1,14 @@
+{
+  "name": "@nathsimpson/icon",
+  "author": "Nathan Simpson",
+  "description": "The icon library for my Design System",
+  "version": "0.1.0",
+  "main": "dist/nathsimpson-icon.cjs.js",
+  "module": "dist/nathsimpson-icon.esm.js",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "react": "^17.0.2"
+  }
+}

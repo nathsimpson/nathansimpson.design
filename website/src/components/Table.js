@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 
 export const Table = props => {
   return (

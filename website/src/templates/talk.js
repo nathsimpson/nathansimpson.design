@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import { Header, Mdx } from '../components';
 import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 
 import { Heading, Text } from '@design-system/typography';
 

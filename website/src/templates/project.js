@@ -5,7 +5,7 @@ import { BackButton } from '../components/backButton';
 import { Heading } from '@design-system/typography';
 import { Stack } from '@design-system/stack';
 import { Tags } from '@design-system/tag';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 

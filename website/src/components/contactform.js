@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { radii, colors, fontsizes } from '@design-system/theme';
-import hexAlpha from 'hex-alpha';
+import { radii, colors, fontsizes } from '@nathsimpson/theme';
+import { hexAlpha } from '@nathsimpson/utils';
 
 export const ContactForm = () => (
   <div style={{ width: '100%' }}>

@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Button, LinkButton, IconButton } from '@design-system/button';
-import { Icon } from '@design-system/icon';
+import { Icon } from '@nathsimpson/icon';
 import { Tiles } from '@design-system/tiles';
 import { Tag, Tags } from '@design-system/tag';
 import { Box, Flex } from '@design-system/box';
@@ -13,7 +13,7 @@ import { Card } from '@design-system/card';
 import { Cluster } from '@design-system/cluster';
 import { TextLink, TextLinkGatsby } from '@design-system/textlink';
 import { Text, Heading } from '@design-system/typography';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { Divider } from '@design-system/divider';
 
 import { CodeEditor, CodePreview } from './CodeEditor';

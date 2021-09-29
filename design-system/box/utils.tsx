@@ -1,4 +1,10 @@
-import { useTheme, spacing, radii, SpacingType, RadiiType } from '../theme';
+import {
+  useTheme,
+  spacing,
+  radii,
+  SpacingType,
+  RadiiType
+} from '@nathsimpson/theme';
 import { useMediaQuery, ResponsiveProp } from '../utils';
 
 export type BoxMarginProps = {

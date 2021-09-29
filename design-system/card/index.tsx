@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 import { Flex } from '../box';
 import { Stack } from '../stack';
 import { Text } from '../typography';
-import { useTheme } from '../theme';
+import { useTheme } from '@nathsimpson/theme';
 
 type CardProps = {
   desc?: string;

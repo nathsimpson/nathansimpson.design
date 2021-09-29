@@ -9,7 +9,7 @@ import { Box } from '@design-system/box';
 import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 
 const PostTemplate = ({ data }) => {
   const post = data.mdx;

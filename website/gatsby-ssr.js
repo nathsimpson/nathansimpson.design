@@ -1,6 +1,6 @@
 const React = require('react');
 const { Layout } = require('./src/components/layout');
-const { ThemeProvider } = require('../design-system/theme');
+const { ThemeProvider } = require('@nathsimpson/theme');
 
 // Wraps every page in a component
 exports.wrapPageElement = ({ element, props }) => {

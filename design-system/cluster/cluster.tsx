@@ -2,8 +2,8 @@
 import { jsx } from '@emotion/core';
 import { Children, ReactNode } from 'react';
 import { Box, BoxProps } from '../box';
-import { spacing, SpacingType } from '../theme';
-import { forwardRefWithAs } from '../utils';
+import { spacing, SpacingType } from '@nathsimpson/theme';
+import { forwardRefWithAs } from '@nathsimpson/utils';
 
 const alignment = {
   center: 'center',

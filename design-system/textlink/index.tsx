@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Link } from 'gatsby';
 
-import { useTheme, FontSizeType } from '../theme';
+import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
 const getStyles = (size?: FontSizeType) => {
   const { colors, fontFamilies, fontsizes } = useTheme();

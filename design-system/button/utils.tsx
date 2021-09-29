@@ -1,6 +1,6 @@
-import { useTheme } from '../theme';
-import hexAlpha from 'hex-alpha';
-import { IconType } from '../icon';
+import { useTheme } from '@nathsimpson/theme';
+import { hexAlpha } from '@nathsimpson/utils';
+import { IconType } from '@nathsimpson/icon';
 
 type ButtonSize = 'small' | 'medium' | 'large';
 type ButtonWeight = 'primary' | 'secondary' | 'none';

@@ -1,0 +1,14 @@
+{
+  "name": "@nathsimpson/theme",
+  "author": "Nathan Simpson",
+  "description": "The theme for my Design System",
+  "version": "0.1.0",
+  "main": "dist/nathsimpson-theme.cjs.js",
+  "module": "dist/nathsimpson-theme.esm.js",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "react": "^17.0.2"
+  }
+}

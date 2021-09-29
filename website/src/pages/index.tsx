@@ -13,7 +13,8 @@ import {
   Dribbble
 } from '../components';
 
-import { useTheme } from '@design-system/theme';
+import { Box } from '@design-system/box';
+import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@design-system/typography';
 import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';

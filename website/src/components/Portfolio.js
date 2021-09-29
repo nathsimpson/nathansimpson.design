@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 import { Heading } from '@design-system/typography';
 import { Card } from '@design-system/card';
 import { Tiles } from '@design-system/tiles';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 
 export const Portfolio = ({ data }) => {
   const { spacing } = useTheme();

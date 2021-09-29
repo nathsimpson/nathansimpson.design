@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 import { useCardStyles } from '@design-system/card';
 import { Heading, Text } from '@design-system/typography';
 import { Stack } from '@design-system/stack';
-import { useTheme } from '@design-system/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { TextLink } from '@design-system/textlink';
 import { useMediaQuery } from '@design-system/utils';
 

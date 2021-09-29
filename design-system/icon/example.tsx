@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { useMediaQuery } from '@nathsimpson/utils';
+
 import { Stack } from '../stack';
 import { spacing } from '../theme';
 import { Text } from '../typography';
-import { Icon } from './index';
-import { ICONS } from './icons';
-import { useMediaQuery } from '../utils/useMediaQuery';
+import { Icon } from './src/index';
+import { ICONS } from './src/icons';
 
 export const IconsExample = () => {
   const { mq } = useMediaQuery();

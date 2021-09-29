@@ -3,3 +3,4 @@
 public/
 built-lambda/
 node_modules/
+dist/

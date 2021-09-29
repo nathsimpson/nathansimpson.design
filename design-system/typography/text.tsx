@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Box, BoxProps } from '../box';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
-import { useMediaQuery, ResponsiveProp } from '../utils';
+import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 
 type TextProps = {
   as?: 'p' | 'span';

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { useTheme } from '../src/themecontext';
-import { Stack } from '../../stack';
-import { Text } from '../../typography';
+import { Stack } from '../../../stack';
+import { Text } from '../../../typography';
 
 export const RadiiExample = () => {
   const { radii } = useTheme();

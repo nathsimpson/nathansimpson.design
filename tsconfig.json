@@ -16,5 +16,5 @@
     },
     "allowJs": true
   },
-  "include": ["./website/src/**/*", "./design-system/*"]
+  "include": ["./website/src/**/*", "./design-system/*", "./design-system/packages/*"]
 }

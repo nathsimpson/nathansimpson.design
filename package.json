@@ -97,7 +97,7 @@
   },
   "preconstruct": {
     "packages": [
-      "design-system/*"
+      "design-system/packages/*"
     ]
   }
 }

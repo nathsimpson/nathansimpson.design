@@ -72,11 +72,8 @@
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "img-loader": "^3.0.0",
-    "mailgun-js": "^0.21.0",
-    "markdown-to-jsx": "^6.9.0",
     "netlify-lambda": "^2.0.1",
     "node-fetch": "^2.6.0",
-    "node-sass": "^4.11.0",
     "prettier": "^1.19.1",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
@@ -88,9 +85,7 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.0.1",
     "webpack": "^5.35.1",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-cli": "^4.6.0"
   },
   "resolutions": {
     "remark": "11.0.2"

@@ -6,7 +6,7 @@ import { Heading, Text } from '@design-system/typography';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
 import { TextLink } from '@design-system/textlink';
-import { useMediaQuery } from '@design-system/utils';
+import { useMediaQuery } from '@nathsimpson/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>

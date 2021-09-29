@@ -2,8 +2,8 @@ import React from 'react';
 import { useTheme } from '../src/themecontext';
 import { spacing } from '../src/index';
 
-import { Text } from '../../typography';
-import { Stack } from '../../stack';
+import { Text } from '../../../typography';
+import { Stack } from '../../../stack';
 
 export const ColorsExample = () => {
   const { colors } = useTheme();

@@ -5,7 +5,7 @@ import {
   SpacingType,
   RadiiType
 } from '@nathsimpson/theme';
-import { useMediaQuery, ResponsiveProp } from '../utils';
+import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 
 export type BoxMarginProps = {
   /** Margin */

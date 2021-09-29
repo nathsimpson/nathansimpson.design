@@ -9,7 +9,7 @@
   },
   "workspaces": [
     "website",
-    "design-system/*"
+    "design-system/packages/*"
   ],
   "scripts": {
     "dev": "cd website && gatsby develop",
@@ -97,7 +97,7 @@
   },
   "preconstruct": {
     "packages": [
-      "design-system/*"
+      "design-system/packages/*"
     ]
   }
 }

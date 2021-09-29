@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { forwardRefWithAs } from '@nathsimpson/utils';
 import { Box, BoxProps } from './box';
-import { forwardRefWithAs } from '../utils';
 
 import {
   getFlexStyles,

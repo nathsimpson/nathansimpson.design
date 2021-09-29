@@ -9,7 +9,7 @@ import { Stack } from '@design-system/stack';
 import { useTheme, useThemeContext } from '@nathsimpson/theme';
 import { Cluster } from '@design-system/cluster';
 import { TextLinkGatsby } from '@design-system/textlink';
-import { useMediaQuery } from '@design-system/utils';
+import { useMediaQuery } from '@nathsimpson/utils';
 
 const navItems = [
   {

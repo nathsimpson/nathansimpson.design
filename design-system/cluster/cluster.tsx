@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Children, ReactNode } from 'react';
 import { Box, BoxProps } from '../box';
 import { spacing, SpacingType } from '@nathsimpson/theme';

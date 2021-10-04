@@ -9,16 +9,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
-      }
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-sharp`,
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-37909733-3',
@@ -40,6 +30,13 @@ module.exports = {
       options: {
         path: `${__dirname}/../design-system`,
         name: 'design-system'
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
       }
     },
     {

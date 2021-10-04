@@ -12,6 +12,8 @@ const alignment = {
 };
 
 type StackProps = {
+  /** Allows the use of the css prop */
+  className?: string;
   /** The value of the "align-items" property. */
   align?: keyof typeof alignment;
   /** Which direction to layout the items within the stack. */

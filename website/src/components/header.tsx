@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 
 import { Box } from '@design-system/box';
 import { IconButton } from '@design-system/button';

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Box, BoxMarginProps, BoxPaddingProps, BoxRadiiProps } from '../box';
 import { useTheme, fontsizes, fontFamilies } from '@nathsimpson/theme';
 

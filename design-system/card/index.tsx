@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Flex } from '../box';
 import { Stack } from '../stack';
 import { Text } from '../typography';

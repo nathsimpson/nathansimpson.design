@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 
 import { Heading, Text } from '@design-system/typography';
 import { TextLink } from '@design-system/textlink';

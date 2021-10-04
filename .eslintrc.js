@@ -1,8 +1,9 @@
 module.exports = {
   extends: ['standard', 'standard-react', 'prettier', 'prettier/react'],
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['prettier', '@typescript-eslint', '@emotion'],
   parser: '@typescript-eslint/parser',
   rules: {
+    '@emotion/pkg-renaming': 'error',
     'prettier/prettier': 'error',
     'react/jsx-fragments': 0,
     'react/prop-types': 0,

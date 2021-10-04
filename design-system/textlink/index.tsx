@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import GatsbyLink from 'gatsby-link';
 
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
@@ -13,10 +13,9 @@ const getStyles = (size?: FontSizeType) => {
     fontFamily: fontFamilies.body,
     fontSize: size ? fontsizes[size] : 'auto',
     fontWeight: 600,
-    textDecoration: 'none',
     '&:hover, &:focus': {
       color: colors.text.linkHover,
-      textDecoration: 'underline'
+      textDecoration: 'none'
     }
   };
 };

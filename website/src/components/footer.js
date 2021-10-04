@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { Icon } from '@nathsimpson/icon';
 import { useTheme } from '@nathsimpson/theme';
 import { Divider } from '@design-system/divider';

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Fragment } from 'react';
-import { jsx } from '@emotion/core';
+import { jsx } from '@emotion/react';
 import { graphql, PageProps } from 'gatsby';
 import Helmet from 'react-helmet';
 

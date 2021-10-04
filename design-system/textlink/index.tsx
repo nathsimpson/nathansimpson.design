@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import GatsbyLink from 'gatsby-link';
 
 import { useTheme, FontSizeType } from '@nathsimpson/theme';

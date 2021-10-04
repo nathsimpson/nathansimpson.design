@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { Box, BoxProps } from '../box';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';

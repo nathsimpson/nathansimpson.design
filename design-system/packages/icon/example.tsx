@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { useMediaQuery } from '@nathsimpson/utils';
 
 import { Stack } from '../../stack';

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { useMediaQuery, forwardRefWithAs } from '@nathsimpson/utils';
 import { ReactNode, ElementType } from 'react';
 

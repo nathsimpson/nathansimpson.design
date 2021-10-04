@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 

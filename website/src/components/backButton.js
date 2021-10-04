@@ -1,7 +1,6 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import { TextLinkGatsby } from '@design-system/textlink';
 import { Icon } from '@nathsimpson/icon';
-import { jsx } from '@emotion/react';
 
 export const BackButton = ({ link }) => {
   return (

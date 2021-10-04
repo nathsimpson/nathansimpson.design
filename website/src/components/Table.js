@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { useTheme } from '@nathsimpson/theme';
 
 export const Table = props => {

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { Tag } from '@design-system/tag';
 import { Cluster } from '@design-system/cluster';
 import { Stack } from '@design-system/stack';

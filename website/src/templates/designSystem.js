@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { graphql } from 'gatsby';
 
 import { DesignSystemTemplate as Layout } from '../components';

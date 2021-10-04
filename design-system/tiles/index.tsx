@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { ReactElement } from 'react';
 import { useTheme } from '@nathsimpson/theme';
 

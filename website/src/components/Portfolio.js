@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 
 import { Heading } from '@design-system/typography';
 import { Card } from '@design-system/card';

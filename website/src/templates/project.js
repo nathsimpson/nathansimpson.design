@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
 import { Heading } from '@design-system/typography';

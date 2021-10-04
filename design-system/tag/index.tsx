@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { ElementType } from 'react';
 import { useTheme } from '@nathsimpson/theme';
 import { Cluster } from '../cluster';

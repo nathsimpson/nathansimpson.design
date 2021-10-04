@@ -1,11 +1,10 @@
-/** @jsx jsx */
-import React from 'react';
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
+import { Component } from 'react';
 
 import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
 import { TextLink } from '@design-system/textlink';
-export class Dribbble extends React.Component {
+export class Dribbble extends Component {
   constructor() {
     super();
     this.state = {

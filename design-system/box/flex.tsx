@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+/** @jsxImportSource @emotion/react */
 import { forwardRefWithAs } from '@nathsimpson/utils';
 import { Box, BoxProps } from './box';
 

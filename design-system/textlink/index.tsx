@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Link } from 'gatsby';
+import GatsbyLink from 'gatsby-link';
 
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
@@ -40,5 +40,5 @@ export const TextLinkGatsby = ({
   size?: FontSizeType;
   to: string;
 }) => {
-  return <Link css={getStyles(size)} {...props} />;
+  return <GatsbyLink css={getStyles(size)} {...props} />;
 };

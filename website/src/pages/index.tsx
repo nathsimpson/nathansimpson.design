@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import { Fragment } from 'react';
-import { jsx } from '@emotion/react';
 import { graphql, PageProps } from 'gatsby';
 import Helmet from 'react-helmet';
 
@@ -13,7 +12,6 @@ import {
   Dribbble
 } from '../components';
 
-import { Box } from '@design-system/box';
 import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@design-system/typography';
 import { Divider } from '@design-system/divider';

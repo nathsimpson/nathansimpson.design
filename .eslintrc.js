@@ -5,6 +5,8 @@ module.exports = {
   rules: {
     '@emotion/pkg-renaming': 'error',
     'prettier/prettier': 'error',
+    'react/jsx-uses-react': 0,
+    'react/react-in-jsx-scope': 0,
     'react/jsx-fragments': 0,
     'react/prop-types': 0,
     'react/no-unused-prop-types': 0,

@@ -30,6 +30,7 @@ export const radii = {
 export type SpacingType = keyof typeof spacing;
 export type RadiiType = keyof typeof radii;
 export type FontSizeType = keyof typeof fontSizes;
+export type TextStyleType = keyof typeof textStyles;
 export type Theme = typeof themeDark;
 
 export const themeDark = {

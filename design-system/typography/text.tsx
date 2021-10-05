@@ -1,33 +1,35 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Box, BoxProps } from '../box';
-import { useTheme, FontSizeType } from '@nathsimpson/theme';
+import { useTheme, TextStyleType } from '@nathsimpson/theme';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 
 type TextProps = {
   as?: 'p' | 'span';
   color?: ResponsiveProp<'default' | 'emphasis'>;
-  size?: FontSizeType;
+  token?: TextStyleType;
 } & BoxProps;
 
 export const Text = ({
-  size = 'medium',
-  color = 'default',
   as = 'p',
+  color = 'default',
+  token = 'medium',
   ...props
 }: TextProps) => {
   const { colors, textStyles } = useTheme();
   const { mq, mapResponsiveProp } = useMediaQuery();
 
+  const resolvedToken = token;
+
   return (
     <Box
       as={as}
       margin="none"
-      {...props}
       css={mq({
         color: mapResponsiveProp(color, colors.text),
-        ...textStyles[size]
+        ...textStyles[resolvedToken]
       })}
+      {...props}
     />
   );
 };

@@ -3,13 +3,14 @@ import { jsx } from '@emotion/core';
 import { useMediaQuery } from '@nathsimpson/utils';
 
 import { Stack } from '../../stack';
-import { spacing } from '../theme';
+import { useTheme } from '../theme';
 import { Text } from '../../typography';
 import { Icon } from './src/index';
 import { ICONS } from './src/icons';
 
 export const IconsExample = () => {
   const { mq } = useMediaQuery();
+  const { spacing } = useTheme();
   return (
     <div
       css={mq({
@@ -40,6 +41,6 @@ const IconExample = ({ icon }: { icon: keyof typeof ICONS }) => (
     rounding="medium"
   >
     <Icon icon={icon} size={32} />
-    <Text>{icon}</Text>
+    <Text token="code-sm">{icon}</Text>
   </Stack>
 );

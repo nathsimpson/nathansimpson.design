@@ -27,7 +27,7 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
         </TextLinkGatsby>
         <Flex orientation="horizontal" align="center">
           <Tag label={frontmatter.type} size="small" />
-          <Text as="span" size="small" marginLeft="small">
+          <Text as="span" token="small" marginLeft="small">
             {postedOn}
           </Text>
         </Flex>

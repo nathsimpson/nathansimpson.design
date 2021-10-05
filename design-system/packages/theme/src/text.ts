@@ -35,6 +35,16 @@ export const lineHeights = {
 } as const;
 
 export const textStyles = {
+  'code-xs': {
+    fontFamily: fontFamilies.mono,
+    fontSize: fontSizes.xsmall,
+    lineHeight: lineHeights.xsmall
+  },
+  'code-sm': {
+    fontFamily: fontFamilies.mono,
+    fontSize: fontSizes.small,
+    lineHeight: lineHeights.small
+  },
   xsmall: {
     fontFamily: fontFamilies.body,
     fontSize: fontSizes.xsmall,

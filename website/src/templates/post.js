@@ -40,7 +40,7 @@ const PostTemplate = ({ data }) => {
               alignItems: 'center'
             }}
           >
-            <Text size="small" as="span">
+            <Text token="small" as="span">
               Posted on {post.frontmatter.date}.
               {post.frontmatter.updated &&
                 ` Updated on ${post.frontmatter.updated}`}

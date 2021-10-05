@@ -91,7 +91,7 @@ const NavigationBar = ({ items }) => {
 const NavBlock = ({ label, items }) => {
   return (
     <Stack as="ul" gap="none" padding="none" margin="none">
-      <Text as="span" size="xsmall">
+      <Text as="span" token="xsmall">
         {label}
       </Text>
       {items.map(({ to, label }) => (

@@ -67,7 +67,7 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
 
       <Flex>
         <Stack gap="xsmall" padding="medium">
-          <Text as="span" size="xsmall">
+          <Text as="span" token="xsmall">
             {tag}
           </Text>
           <span

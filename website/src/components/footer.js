@@ -28,14 +28,14 @@ export const Footer = () => {
             style={{ display: 'inline-block', margin: '0px 5px' }}
             key={item.name}
           >
-            <TextLinkGatsby to={item.url} size="small">
+            <TextLinkGatsby to={item.url} token="small">
               {item.label}
             </TextLinkGatsby>
           </li>
         ))}
       </ul>
 
-      <Text size="xsmall" as="span" align="center">
+      <Text token="xsmall" as="span" align="center">
         &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
       </Text>
 

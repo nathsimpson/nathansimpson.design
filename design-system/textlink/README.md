@@ -15,7 +15,7 @@ import { TextLink } from 'design-system/textlink';
 TextLink will adopt it's parent's font size, unless one is specified.
 
 ```jsx live
-<Text size="small">
+<Text token="small">
   Click <TextLink href="#">here</TextLink> to learn more.
 </Text>
 ```
@@ -25,7 +25,7 @@ TextLink will adopt it's parent's font size, unless one is specified.
 Identical to TextLink, but is based on the Link component from Gatsby.
 
 ```jsx live
-<Text size="small">
+<Text token="small">
   Click
   <TextLinkGatsby href="/">here</TextLinkGatsby> to go home.
 </Text>

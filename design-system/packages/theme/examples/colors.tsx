@@ -62,7 +62,7 @@ const Color = ({ label, value }) => {
 
       <Stack gap="xsmall" bg="emphasis" padding="small">
         <Text color="emphasis">{label}</Text>
-        <Text size="small">{value.toString()}</Text>
+        <Text token="xsmall">{value.toString()}</Text>
       </Stack>
     </div>
   );

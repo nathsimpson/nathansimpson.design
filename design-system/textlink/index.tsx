@@ -29,7 +29,7 @@ export const TextLink = ({
   href: string;
   size?: FontSizeType;
 }) => {
-  return <a {...props} css={getStyles(size)} />;
+  return <a css={getStyles(size)} {...props} />;
 };
 
 export const TextLinkGatsby = ({

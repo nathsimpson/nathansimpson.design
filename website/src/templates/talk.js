@@ -46,7 +46,7 @@ const TalkTemplate = ({ data }) => {
           />
 
           <Heading level={1}>{talk.frontmatter.title}</Heading>
-          <Text as="span" size="xsmall">
+          <Text as="span" token="xsmall">
             Posted on {talk.frontmatter.date}
           </Text>
           <Divider />

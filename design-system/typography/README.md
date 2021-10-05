@@ -18,11 +18,13 @@ Text component is used for all body text in the app. It includes our body font f
 
 ```jsx live
 <Stack gap="small">
-  <Text size="xsmall">XSmall</Text>
-  <Text size="small">Small</Text>
-  <Text size="medium">Medium</Text>
-  <Text size="large">Large</Text>
-  <Text size="xlarge">XLarge</Text>
+  <Text token="code-xs">XSmall</Text>
+  <Text token="code-sm">XSmall</Text>
+  <Text token="xsmall">XSmall</Text>
+  <Text token="small">Small</Text>
+  <Text token="medium">Medium</Text>
+  <Text token="large">Large</Text>
+  <Text token="xlarge">XLarge</Text>
 </Stack>
 ```
 

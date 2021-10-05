@@ -48,3 +48,13 @@ exports.createPages = ({ actions, graphql }) => {
     });
   });
 };
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  actions
+}) => {
+  debugger;
+};

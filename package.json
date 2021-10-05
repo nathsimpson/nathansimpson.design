@@ -16,7 +16,7 @@
     "clean": "cd website && gatsby clean",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
     "postinstall": "preconstruct dev && manypkg check",
-    "types": "tsc --project tsconfig.json",
+    "types": "tsc",
     "lint": "eslint ."
   },
   "author": "Nathan Simpson",

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Box, BoxMarginProps, BoxPaddingProps, BoxRadiiProps } from '../box';
-import { useTheme, fontsizes, fontFamilies } from '@nathsimpson/theme';
+import { useTheme, fontSizes, fontFamilies } from '@nathsimpson/theme';
 
 type HeadingProps = BoxMarginProps &
   BoxPaddingProps &
@@ -31,27 +31,27 @@ export const Heading = ({ level = 1, ...props }: HeadingProps) => {
 
 const headings = {
   1: {
-    fontSize: fontsizes.xxxlarge,
+    fontSize: fontSizes.xxxlarge,
     fontWeight: 900
   },
   2: {
-    fontSize: fontsizes.xxlarge,
+    fontSize: fontSizes.xxlarge,
     fontWeight: 900
   },
   3: {
-    fontSize: fontsizes.xlarge,
+    fontSize: fontSizes.xlarge,
     fontWeight: 900
   },
   4: {
-    fontSize: fontsizes.xlarge,
+    fontSize: fontSizes.xlarge,
     fontWeight: 600
   },
   5: {
-    fontSize: fontsizes.large,
+    fontSize: fontSizes.large,
     fontWeight: 600
   },
   6: {
-    fontSize: fontsizes.medium,
+    fontSize: fontSizes.medium,
     fontWeight: 600
   }
 };

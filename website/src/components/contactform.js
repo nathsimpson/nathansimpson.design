@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import { radii, colors, fontsizes } from '@nathsimpson/theme';
+import { radii, colors, fontSizes } from '@nathsimpson/theme';
 import { hexAlpha } from '@nathsimpson/utils';
 
 export const ContactForm = () => (
@@ -100,7 +100,7 @@ const FormSubmit = styled.input({
 const Label = ({ label, isRequired }) => (
   <label
     css={{
-      fontSize: fontsizes.medium,
+      fontSize: fontSizes.medium,
       color: colors.foreground,
       display: 'block',
       marginBottom: 6

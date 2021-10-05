@@ -8,7 +8,7 @@ const getStyles = (token?: TextStyleType) => {
   const { colors, textStyles } = useTheme();
 
   return {
-    ...textStyles[token],
+    ...(token ? textStyles[token] : { fontSize: 'auto' }),
     color: colors.text.link,
     cursor: 'pointer',
     fontWeight: 600,

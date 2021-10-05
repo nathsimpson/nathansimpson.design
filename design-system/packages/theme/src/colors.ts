@@ -1,8 +1,10 @@
-export const palette = {
-  orange: '#fa6d01',
-  green: '#52e409',
-  purple: '#E509E3',
-  blue: '#089aef'
+const palette = {
+  brand: '#fa6d01',
+  decorative: {
+    green: '#52e409',
+    purple: '#E509E3',
+    blue: '#089aef'
+  }
 };
 
 const darkNeutrals = {
@@ -33,18 +35,16 @@ const lightNeutrals = {
   neutral100: '#ffffff'
 };
 
-const primary = palette.orange;
-
 export const darkColors = {
   global: {
-    brand: palette.orange,
+    brand: palette.brand,
     border: darkNeutrals.neutral50,
     shadow: darkNeutrals.neutral0
   },
   text: {
     default: darkNeutrals.neutral90,
     emphasis: darkNeutrals.neutral100,
-    link: primary,
+    link: palette.brand,
     linkHover: darkNeutrals.neutral100
   },
   background: {
@@ -60,23 +60,19 @@ export const darkColors = {
     foregroundHover: darkNeutrals.neutral100,
     foregroundActive: darkNeutrals.neutral100
   },
-  decorative: {
-    green: palette.green,
-    purple: palette.purple,
-    blue: palette.blue
-  }
+  decorative: palette.decorative
 };
 
 export const lightColors = {
   global: {
-    brand: palette.orange,
+    brand: palette.brand,
     border: lightNeutrals.neutral70,
     shadow: lightNeutrals.neutral70
   },
   text: {
     default: lightNeutrals.neutral40,
     emphasis: lightNeutrals.neutral0,
-    link: primary,
+    link: palette.brand,
     linkHover: lightNeutrals.neutral0
   },
   background: {
@@ -92,9 +88,5 @@ export const lightColors = {
     foregroundHover: lightNeutrals.neutral100,
     foregroundActive: lightNeutrals.neutral100
   },
-  decorative: {
-    green: palette.green,
-    purple: palette.purple,
-    blue: palette.blue
-  }
+  decorative: palette.decorative
 };

@@ -21,7 +21,12 @@ export const DesignSystemTemplate = ({ data }) => {
       label: fm.title,
       section: fm.section
     }))
-    .filter(({ label }) => !['Design System', 'Design Tokens'].includes(label));
+    .filter(
+      ({ label }) =>
+        !['Design System', 'Design Tokens', 'Development concepts'].includes(
+          label
+        )
+    );
   const githubUrl = `https://github.com/nathsimpson/nathansimpson.design/edit/master${path}/README.md`;
 
   return (
@@ -78,7 +83,11 @@ const NavigationBar = ({ items }) => {
         label="Guides"
         items={[
           { label: 'Welcome', to: '/design-system' },
-          { label: 'Design Tokens', to: '/design-system/tokens' }
+          { label: 'Design Tokens', to: '/design-system/tokens' },
+          {
+            label: 'Development concepts',
+            to: '/design-system/development-concepts'
+          }
         ]}
       />
       <NavBlock items={layout} label="Layout" />

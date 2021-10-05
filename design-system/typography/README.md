@@ -17,7 +17,13 @@ import { Heading, Text } from 'design-system/typography';
 Text component is used for all body text in the app. It includes our body font family, and exposes props for font size, weight and color.
 
 ```jsx live
-<Text>Gday mate</Text>
+<Stack gap="small">
+  <Text size="xsmall">XSmall</Text>
+  <Text size="small">Small</Text>
+  <Text size="medium">Medium</Text>
+  <Text size="large">Large</Text>
+  <Text size="xlarge">XLarge</Text>
+</Stack>
 ```
 
 | Prop     | Options                | Default   |

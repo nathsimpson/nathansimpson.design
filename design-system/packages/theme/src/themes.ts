@@ -1,7 +1,5 @@
 import { darkColors, lightColors } from './colors';
 
-export { palette } from './colors';
-
 export const fontFamilies = {
   heading:
     "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
@@ -37,7 +35,7 @@ export const radii = {
   circle: 99
 } as const;
 
-export const fontsizes = {
+export const fontSizes = {
   xsmall: '0.75rem',
   small: '0.875rem',
   medium: '1rem',
@@ -49,7 +47,7 @@ export const fontsizes = {
 
 export type SpacingType = keyof typeof spacing;
 export type RadiiType = keyof typeof radii;
-export type FontSizeType = keyof typeof fontsizes;
+export type FontSizeType = keyof typeof fontSizes;
 export type Theme = typeof themeDark;
 
 export const themeDark = {
@@ -61,7 +59,7 @@ export const themeDark = {
       boxShadow: `0px 6px 12px ${darkColors.global.shadow}`
     }
   },
-  fontsizes,
+  fontSizes,
   fontFamilies,
   colors: darkColors
 };
@@ -75,7 +73,7 @@ export const themeLight = {
       boxShadow: `0px 6px 12px ${lightColors.global.shadow}`
     }
   },
-  fontsizes,
+  fontSizes,
   fontFamilies,
   colors: lightColors
 };

@@ -5,13 +5,13 @@ import GatsbyLink from 'gatsby-link';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
 const getStyles = (size?: FontSizeType) => {
-  const { colors, fontFamilies, fontsizes } = useTheme();
+  const { colors, fontFamilies, fontSizes } = useTheme();
 
   return {
     color: colors.text.link,
     cursor: 'pointer',
     fontFamily: fontFamilies.body,
-    fontSize: size ? fontsizes[size] : 'auto',
+    fontSize: size ? fontSizes[size] : 'auto',
     fontWeight: 600,
     textDecoration: 'none',
     '&:hover, &:focus': {

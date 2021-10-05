@@ -29,7 +29,7 @@ export const useButtonStyles = ({
   size: ButtonSize;
   weight: ButtonWeight;
 }) => {
-  const { colors, spacing, fontsizes, fontFamilies, radii } = useTheme();
+  const { colors, spacing, fontSizes, fontFamilies, radii } = useTheme();
 
   const weights = {
     primary: {
@@ -65,7 +65,7 @@ export const useButtonStyles = ({
   return {
     fontFamily: fontFamilies.heading,
     fontWeight: 700,
-    fontSize: fontsizes[size],
+    fontSize: fontSizes[size],
     paddingTop: spacing[size],
     paddingBottom: spacing[size],
     paddingLeft: spacing[size] * 2,

@@ -2,16 +2,15 @@
 import { jsx } from '@emotion/core';
 import GatsbyLink from 'gatsby-link';
 
-import { useTheme, FontSizeType } from '@nathsimpson/theme';
+import { useTheme, TextStyleType } from '@nathsimpson/theme';
 
-const getStyles = (size?: FontSizeType) => {
-  const { colors, fontFamilies, fontSizes } = useTheme();
+const getStyles = (token?: TextStyleType) => {
+  const { colors, textStyles } = useTheme();
 
   return {
+    ...textStyles[token],
     color: colors.text.link,
     cursor: 'pointer',
-    fontFamily: fontFamilies.body,
-    fontSize: size ? fontSizes[size] : 'auto',
     fontWeight: 600,
     textDecoration: 'none',
     '&:hover, &:focus': {
@@ -22,23 +21,23 @@ const getStyles = (size?: FontSizeType) => {
 };
 
 export const TextLink = ({
-  size,
+  token,
   ...props
 }: {
   children: string;
   href: string;
-  size?: FontSizeType;
+  token?: TextStyleType;
 }) => {
-  return <a css={getStyles(size)} {...props} />;
+  return <a css={getStyles(token)} {...props} />;
 };
 
 export const TextLinkGatsby = ({
-  size,
+  token,
   ...props
 }: {
   children: string;
-  size?: FontSizeType;
   to: string;
+  token?: TextStyleType;
 }) => {
-  return <GatsbyLink css={getStyles(size)} {...props} />;
+  return <GatsbyLink css={getStyles(token)} {...props} />;
 };

@@ -54,6 +54,21 @@ export const textStyles = {
     fontSize: fontSizes.large,
     lineHeight: lineHeights.medium
   },
+  xlarge: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.xlarge,
+    lineHeight: lineHeights.medium
+  },
+  xxlarge: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.xxlarge,
+    lineHeight: lineHeights.medium
+  },
+  xxxlarge: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.xxxlarge,
+    lineHeight: lineHeights.medium
+  },
   h1: {
     fontSize: fontSizes.xxxlarge,
     fontWeight: 900,

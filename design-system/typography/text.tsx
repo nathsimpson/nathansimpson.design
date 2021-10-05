@@ -16,7 +16,7 @@ export const Text = ({
   as = 'p',
   ...props
 }: TextProps) => {
-  const { colors, fontSizes, fontFamilies } = useTheme();
+  const { colors, textStyles } = useTheme();
   const { mq, mapResponsiveProp } = useMediaQuery();
 
   return (
@@ -26,8 +26,7 @@ export const Text = ({
       {...props}
       css={mq({
         color: mapResponsiveProp(color, colors.text),
-        fontFamily: fontFamilies.body,
-        fontSize: fontSizes[size]
+        ...textStyles[size]
       })}
     />
   );

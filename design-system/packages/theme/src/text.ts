@@ -24,19 +24,36 @@ export const fontWeight = {
 } as const;
 
 export const lineHeights = {
-  xsmall: '1rem',
-  small: '1.25rem',
-  medium: '1.5rem',
-  large: '1.75rem',
-  xlarge: '2rem',
-  xxlarge: '1: 2.25rem',
-  xxxlarge: '2.75rem'
+  xsmall: '1',
+  small: '1.25',
+  medium: '1.5',
+  large: '1.75',
+  xlarge: '2',
+  xxlarge: '2.25',
+  xxxlarge: '2.75'
 } as const;
 
 export const textStyles = {
-  small: { fontSize: fontSizes.small },
-  medium: { fontSize: fontSizes.medium },
-  large: { fontSize: fontSizes.large },
+  xsmall: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.xsmall,
+    lineHeight: lineHeights.xsmall
+  },
+  small: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.small,
+    lineHeight: lineHeights.small
+  },
+  medium: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.medium,
+    lineHeight: lineHeights.medium
+  },
+  large: {
+    fontFamily: fontFamilies.body,
+    fontSize: fontSizes.large,
+    lineHeight: lineHeights.medium
+  },
   h1: {
     fontSize: fontSizes.xxxlarge,
     fontWeight: 900,

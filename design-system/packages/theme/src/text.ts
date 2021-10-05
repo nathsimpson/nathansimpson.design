@@ -20,7 +20,8 @@ export const fontFamilies = {
 export const fontWeight = {
   regular: 400,
   medium: 500,
-  strong: 700
+  strong: 700,
+  heading: 900
 } as const;
 
 export const lineHeights = {
@@ -71,38 +72,38 @@ export const textStyles = {
   },
   h1: {
     fontSize: fontSizes.xxxlarge,
-    fontWeight: 900,
+    fontWeight: fontWeight.heading,
     fontFamily: fontFamilies.heading,
-    lineHeight: 1.1
+    lineHeight: lineHeights.small
   },
   h2: {
     fontSize: fontSizes.xxlarge,
-    fontWeight: 900,
+    fontWeight: fontWeight.heading,
     fontFamily: fontFamilies.heading,
-    lineHeight: 1.1
+    lineHeight: lineHeights.small
   },
   h3: {
     fontSize: fontSizes.xlarge,
-    fontWeight: 900,
+    fontWeight: fontWeight.heading,
     fontFamily: fontFamilies.heading,
-    lineHeight: 1.1
+    lineHeight: lineHeights.small
   },
   h4: {
     fontSize: fontSizes.xlarge,
-    fontWeight: 600,
+    fontWeight: fontWeight.strong,
     fontFamily: fontFamilies.heading,
-    lineHeight: 1.1
+    lineHeight: lineHeights.small
   },
   h5: {
     fontSize: fontSizes.large,
-    fontWeight: 600,
+    fontWeight: fontWeight.strong,
     fontFamily: fontFamilies.heading,
-    lineHeight: 1.1
+    lineHeight: lineHeights.small
   },
   h6: {
     fontSize: fontSizes.medium,
-    fontWeight: 600,
+    fontWeight: fontWeight.strong,
     fontFamily: fontFamilies.heading,
-    lineHeight: 1.1
+    lineHeight: lineHeights.small
   }
 };

@@ -26,7 +26,7 @@ export const Tag = ({
   const { colors, radii } = useTheme();
   const colorMap = {
     default: colors.text.default,
-    brand: colors.global.brand,
+    brand: colors.brand,
     blue: colors.decorative.blue,
     purple: colors.decorative.purple,
     green: colors.decorative.green

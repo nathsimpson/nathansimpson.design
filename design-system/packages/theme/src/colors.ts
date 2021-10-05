@@ -1,5 +1,9 @@
 const palette = {
   brand: '#fa6d01',
+  neutrals: {
+    '000': '#0c0f13',
+    '100': '#ffffff'
+  },
   decorative: {
     green: '#52e409',
     purple: '#E509E3',
@@ -36,15 +40,16 @@ const lightNeutrals = {
 };
 
 export const darkColors = {
-  global: {
-    brand: palette.brand,
-    border: darkNeutrals.neutral50,
-    shadow: darkNeutrals.neutral0
-  },
+  brand: palette.brand,
+  action: palette.brand,
+  actionSecondary: palette.neutrals['100'],
+  border: darkNeutrals.neutral50,
+  shadow: darkNeutrals.neutral0,
   text: {
     default: darkNeutrals.neutral90,
     emphasis: darkNeutrals.neutral100,
     link: palette.brand,
+    linkSecondary: palette.neutrals['100'],
     linkHover: darkNeutrals.neutral100
   },
   background: {
@@ -64,15 +69,16 @@ export const darkColors = {
 };
 
 export const lightColors = {
-  global: {
-    brand: palette.brand,
-    border: lightNeutrals.neutral70,
-    shadow: lightNeutrals.neutral70
-  },
+  brand: palette.brand,
+  action: palette.brand,
+  actionSecondary: palette.neutrals['000'],
+  border: lightNeutrals.neutral70,
+  shadow: lightNeutrals.neutral70,
   text: {
     default: lightNeutrals.neutral40,
     emphasis: lightNeutrals.neutral0,
     link: palette.brand,
+    linkSecondary: palette.neutrals['000'],
     linkHover: lightNeutrals.neutral0
   },
   background: {

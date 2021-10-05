@@ -48,7 +48,7 @@ const Color = ({ label, value }) => {
     <div
       style={{
         minWidth: 200,
-        border: `1px solid ${colors.global.border}`
+        border: `1px solid ${colors.border}`
       }}
     >
       <div
@@ -56,7 +56,7 @@ const Color = ({ label, value }) => {
           width: '100%',
           height: 100,
           backgroundColor: value,
-          borderBottom: `1px solid ${colors.global.border}`
+          borderBottom: `1px solid ${colors.border}`
         }}
       />
 

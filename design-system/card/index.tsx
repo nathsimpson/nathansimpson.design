@@ -19,7 +19,7 @@ export const useCardStyles = () => {
   return {
     ...boxShadow[1],
     background: colors.background.emphasis,
-    border: `1px solid ${colors.global.border}`,
+    border: `1px solid ${colors.border}`,
     padding: '16px 24px',
     borderRadius: radii.large
   };
@@ -54,8 +54,8 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
           css={{
             display: 'flex',
             flex: 1,
-            backgroundColor: colors.global.border,
-            borderBottom: `1px solid ${colors.global.border}`,
+            backgroundColor: colors.border,
+            borderBottom: `1px solid ${colors.border}`,
             borderTopLeftRadius: cardStyles.borderRadius,
             borderTopRightRadius: cardStyles.borderRadius,
             backgroundImage: `url(${image})`,

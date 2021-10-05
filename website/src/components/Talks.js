@@ -45,7 +45,7 @@ const Talk = ({
 }) => {
   const { colors, radii } = useTheme();
   const cardStyles = useCardStyles();
-  const defaultBorder = `1px solid ${colors.global.border}`;
+  const defaultBorder = `1px solid ${colors.border}`;
   const { mq } = useMediaQuery();
 
   return (
@@ -53,8 +53,8 @@ const Talk = ({
       href={path}
       css={mq({
         ...cardStyles,
-        borderLeft: [defaultBorder, `2px solid ${colors.global.brand}`],
-        borderTop: [`2px solid ${colors.global.brand}`, defaultBorder],
+        borderLeft: [defaultBorder, `2px solid ${colors.brand}`],
+        borderTop: [`2px solid ${colors.brand}`, defaultBorder],
         borderTopLeftRadius: radii.none,
         borderBottomLeftRadius: [radii.large, 0],
         display: 'flex',

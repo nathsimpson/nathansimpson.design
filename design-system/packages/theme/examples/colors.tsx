@@ -51,7 +51,7 @@ const Color = ({ label, value }) => {
   return (
     <div
       style={{
-        border: `1px solid ${colors.border}`
+        border: `1px solid ${colors.border}`,
         width: '100%',
         backgroundColor: value,
         color: wcagText,

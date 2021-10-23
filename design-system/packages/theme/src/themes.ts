@@ -1,13 +1,5 @@
 import { darkColors, lightColors } from './colors';
-
-export const fontFamilies = {
-  heading:
-    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
-  body:
-    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
-  mono:
-    'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
-};
+import { fontFamilies, fontSizes, fontWeights, lineHeights } from './text';
 
 export const spacing = {
   none: 0,
@@ -35,16 +27,6 @@ export const radii = {
   circle: 99
 } as const;
 
-export const fontSizes = {
-  xsmall: '0.75rem',
-  small: '0.875rem',
-  medium: '1rem',
-  large: '1.25rem',
-  xlarge: '1.5rem',
-  xxlarge: '1.875rem',
-  xxxlarge: '2.5rem'
-} as const;
-
 export type SpacingType = keyof typeof spacing;
 export type RadiiType = keyof typeof radii;
 export type FontSizeType = keyof typeof fontSizes;
@@ -61,6 +43,8 @@ export const themeDark = {
   },
   fontSizes,
   fontFamilies,
+  fontWeights,
+  lineHeights,
   colors: darkColors
 };
 
@@ -75,5 +59,7 @@ export const themeLight = {
   },
   fontSizes,
   fontFamilies,
+  fontWeights,
+  lineHeights,
   colors: lightColors
 };

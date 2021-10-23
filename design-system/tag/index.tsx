@@ -13,33 +13,21 @@ const sizes = {
 type TagProps = {
   label: string;
   as?: ElementType;
-  color?: 'default' | 'brand' | 'blue' | 'purple' | 'green';
   size?: keyof typeof sizes;
 };
 
-export const Tag = ({
-  label,
-  as,
-  color = 'default',
-  size = 'medium'
-}: TagProps) => {
+export const Tag = ({ label, as, size = 'medium' }: TagProps) => {
   const { colors, radii } = useTheme();
-  const colorMap = {
-    default: colors.text.default,
-    brand: colors.brand,
-    blue: colors.decorative.blue,
-    purple: colors.decorative.purple,
-    green: colors.decorative.green
-  } as const;
+  const color = colors.text.default;
 
   const Div = as || 'div';
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
     <Div
       css={{
-        border: `1px solid ${colorMap[color]}`,
-        color: colorMap[color],
-        backgroundColor: hexAlpha(colorMap[color], 0.2),
+        border: `1px solid ${color}`,
+        color: color,
+        backgroundColor: hexAlpha(color, 0.2),
         borderRadius: radii.medium,
         display: 'inline-flex',
         fontSize: sizes[size] * 4,

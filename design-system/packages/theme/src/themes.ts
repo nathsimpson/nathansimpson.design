@@ -1,5 +1,5 @@
 import { darkColors, lightColors } from './colors';
-import { fontFamilies, fontSizes } from './text';
+import { fontFamilies, fontSizes, fontWeights, lineHeights } from './text';
 
 export const spacing = {
   none: 0,
@@ -43,6 +43,8 @@ export const themeDark = {
   },
   fontSizes,
   fontFamilies,
+  fontWeights,
+  lineHeights,
   colors: darkColors
 };
 
@@ -57,5 +59,7 @@ export const themeLight = {
   },
   fontSizes,
   fontFamilies,
+  fontWeights,
+  lineHeights,
   colors: lightColors
 };

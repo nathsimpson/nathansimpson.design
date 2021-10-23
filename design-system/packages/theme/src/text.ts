@@ -17,7 +17,7 @@ export const fontFamilies = {
     'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
 };
 
-export const fontWeight = {
+export const fontWeights = {
   regular: 400,
   medium: 500,
   strong: 700,

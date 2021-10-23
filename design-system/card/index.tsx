@@ -19,7 +19,6 @@ export const useCardStyles = () => {
   return {
     ...boxShadow[1],
     background: colors.background.emphasis,
-    border: `1px solid ${colors.border}`,
     padding: '16px 24px',
     borderRadius: radii.large
   };

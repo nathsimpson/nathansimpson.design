@@ -26,7 +26,7 @@ export const Footer = () => {
         {footer_navItems.map(item => (
           <li
             style={{ display: 'inline-block', margin: '0px 5px' }}
-            key={item.name}
+            key={item.label}
           >
             <TextLinkGatsby to={item.url} size="small">
               {item.label}

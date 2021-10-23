@@ -1,98 +1,69 @@
-const palette = {
-  brand: '#fa6d01',
-  neutrals: {
-    '000': '#0c0f13',
-    '100': '#ffffff'
+// palette
+const brand = '#fa6d01';
+const neutral0 = '#0d0d0e';
+const neutral10 = '#272f37';
+const neutral20 = '#353f47';
+const neutral30 = '#48535d';
+const neutral40 = '#616e79';
+const neutral50 = '#808d99';
+const neutral60 = '#a0aeba';
+const neutral70 = '#c1c7cd';
+// const neutral80 = '#dde1e6';
+const neutral90 = '#f2f4f8';
+const neutral100 = '#ffffff';
+
+export const darkColors = {
+  brand: brand,
+  action: brand,
+  actionSecondary: neutral100,
+  border: neutral20,
+  shadow: neutral0,
+  text: {
+    default: neutral60,
+    emphasis: neutral100,
+    link: brand,
+    linkSecondary: neutral100,
+    linkHover: neutral100
   },
-  decorative: {
-    green: '#52e409',
-    purple: '#E509E3',
-    blue: '#089aef'
+  background: {
+    default: neutral0,
+    emphasis: '#262a32',
+    hover: neutral10
+  },
+  input: {
+    background: neutral10,
+    backgroundHover: neutral20,
+    backgroundActive: '#262a32',
+    foreground: neutral60,
+    foregroundHover: neutral100,
+    foregroundActive: neutral100
   }
 };
 
-const darkNeutrals = {
-  neutral0: '#0c0f13',
-  neutral10: '#13181d',
-  neutral20: '#171d22',
-  neutral30: '#1e242a',
-  neutral40: '#272f37',
-  neutral50: '#353f47',
-  neutral60: '#48535d',
-  neutral70: '#616e79',
-  neutral80: '#808d99',
-  neutral90: '#a0aeba',
-  neutral100: '#ffffff'
-};
-
-const lightNeutrals = {
-  neutral0: '#0c0f13',
-  neutral10: '#272f37',
-  neutral20: '#353f47',
-  neutral30: '#48535d',
-  neutral40: '#616e79',
-  neutral50: '#808d99',
-  neutral60: '#a0aeba',
-  neutral70: '#c1c7cd',
-  neutral80: '#dde1e6',
-  neutral90: '#f2f4f8',
-  neutral100: '#ffffff'
-};
-
-export const darkColors = {
-  brand: palette.brand,
-  action: palette.brand,
-  actionSecondary: palette.neutrals['100'],
-  border: darkNeutrals.neutral50,
-  shadow: darkNeutrals.neutral0,
-  text: {
-    default: darkNeutrals.neutral90,
-    emphasis: darkNeutrals.neutral100,
-    link: palette.brand,
-    linkSecondary: palette.neutrals['100'],
-    linkHover: darkNeutrals.neutral100
-  },
-  background: {
-    default: darkNeutrals.neutral10,
-    emphasis: darkNeutrals.neutral30,
-    hover: darkNeutrals.neutral40
-  },
-  input: {
-    background: darkNeutrals.neutral40,
-    backgroundHover: darkNeutrals.neutral50,
-    backgroundActive: darkNeutrals.neutral30,
-    foreground: darkNeutrals.neutral90,
-    foregroundHover: darkNeutrals.neutral100,
-    foregroundActive: darkNeutrals.neutral100
-  },
-  decorative: palette.decorative
-};
-
 export const lightColors = {
-  brand: palette.brand,
-  action: palette.brand,
-  actionSecondary: palette.neutrals['000'],
-  border: lightNeutrals.neutral70,
-  shadow: lightNeutrals.neutral70,
+  brand: brand,
+  action: brand,
+  actionSecondary: neutral0,
+  border: neutral70,
+  shadow: neutral70,
   text: {
-    default: lightNeutrals.neutral40,
-    emphasis: lightNeutrals.neutral0,
-    link: palette.brand,
-    linkSecondary: palette.neutrals['000'],
-    linkHover: lightNeutrals.neutral0
+    default: neutral40,
+    emphasis: neutral0,
+    link: brand,
+    linkSecondary: neutral0,
+    linkHover: neutral0
   },
   background: {
-    default: lightNeutrals.neutral90,
-    emphasis: lightNeutrals.neutral100,
-    hover: lightNeutrals.neutral80
+    default: neutral90,
+    emphasis: neutral100,
+    hover: neutral70
   },
   input: {
-    background: lightNeutrals.neutral40,
-    backgroundHover: lightNeutrals.neutral50,
-    backgroundActive: lightNeutrals.neutral30,
-    foreground: lightNeutrals.neutral90,
-    foregroundHover: lightNeutrals.neutral100,
-    foregroundActive: lightNeutrals.neutral100
-  },
-  decorative: palette.decorative
+    background: neutral40,
+    backgroundHover: neutral50,
+    backgroundActive: neutral30,
+    foreground: neutral90,
+    foregroundHover: neutral100,
+    foregroundActive: neutral100
+  }
 };

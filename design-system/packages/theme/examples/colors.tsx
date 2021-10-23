@@ -1,8 +1,10 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { useTheme } from '../src/themecontext';
 import { spacing } from '../src/index';
 
-import { Text } from '../../../typography';
+import { getContrastColor, getWcagScore } from 'hex-a11y';
+
 import { Stack } from '../../../stack';
 
 export const ColorsExample = () => {
@@ -43,26 +45,31 @@ export const ColorsExample = () => {
 };
 
 const Color = ({ label, value }) => {
-  const { colors } = useTheme();
+  const { colors, fontSizes } = useTheme();
+  const wcagText = getContrastColor(value);
+
   return (
     <div
       style={{
-        minWidth: 200,
         border: `1px solid ${colors.border}`
+        width: '100%',
+        backgroundColor: value,
+        color: wcagText,
+        boxSizing: 'border-box'
       }}
     >
-      <div
-        style={{
-          width: '100%',
-          height: 100,
-          backgroundColor: value,
-          borderBottom: `1px solid ${colors.border}`
-        }}
-      />
-
-      <Stack gap="xsmall" bg="emphasis" padding="small">
-        <Text color="emphasis">{label}</Text>
-        <Text size="small">{value.toString()}</Text>
+      <Stack gap="xsmall" padding="medium">
+        <span css={{ fontWeight: 600 }}>{label}</span>
+        <span css={{ fontSize: fontSizes.small }}>{value.toString()}</span>
+        <div>
+          <span css={{ color: colors.text.default }}>
+            {getWcagScore(value, colors.text.default)}
+          </span>{' '}
+          <span css={{ color: colors.text.emphasis }}>
+            {getWcagScore(value, colors.text.emphasis)}
+          </span>{' '}
+          <span css={{ color: wcagText }}>{getWcagScore(value, wcagText)}</span>
+        </div>
       </Stack>
     </div>
   );

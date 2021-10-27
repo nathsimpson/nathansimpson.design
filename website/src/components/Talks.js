@@ -87,7 +87,7 @@ const Talk = ({
       >
         <Stack gap="small" padding="large">
           <Heading level={3}>{title}</Heading>
-          <span href={path} css={{ color: colors.text.link }}>
+          <span href={path} css={{ color: colors.action }}>
             Watch now
           </span>
         </Stack>

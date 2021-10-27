@@ -58,7 +58,7 @@ export const Footer = () => {
                 textDecoration: 'none',
 
                 '&:hover': {
-                  color: colors.text.link
+                  color: colors.action
                 }
               }}
               href={network.link}

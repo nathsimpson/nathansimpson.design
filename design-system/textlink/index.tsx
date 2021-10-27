@@ -16,7 +16,7 @@ const getStyles = ({
   const { colors, fontFamilies, fontSizes } = useTheme();
 
   return {
-    color: colors.text[weight === 'secondary' ? 'linkSecondary' : 'link'],
+    color: colors[weight === 'secondary' ? 'actionSecondary' : 'action'],
     cursor: 'pointer',
     fontFamily: fontFamilies.body,
     fontSize: size ? fontSizes[size] : 'auto',

@@ -124,11 +124,8 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             aria-label="Close menu"
             htmlFor="nav-toggle"
             css={{
-              color: colors.text.link,
-              cursor: 'pointer',
-              '&:hover': {
-                color: colors.text.linkHover
-              }
+              color: colors.action,
+              cursor: 'pointer'
             }}
           >
             <Icon icon="cross" size={32} />

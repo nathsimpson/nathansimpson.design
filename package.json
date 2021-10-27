@@ -5,7 +5,7 @@
   "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
   "engines": {
-    "node": ">=12.8.4"
+    "node": ">=14.15.0"
   },
   "workspaces": [
     "website",

@@ -5,15 +5,16 @@
   "description": "Nathans UX and Frontend Development portfolio site, built in React",
   "main": "index.js",
   "engines": {
-    "node": ">=12.8.4"
+    "node": ">=14.15.0"
   },
   "workspaces": [
     "website",
     "design-system/packages/*"
   ],
   "scripts": {
-    "dev": "cd website && gatsby develop",
-    "clean": "cd website && gatsby clean",
+    "website": "yarn workspace @nathsimpson/website",
+    "dev": "yarn website dev",
+    "clean": "yarn website clean",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md\"",
     "postinstall": "preconstruct dev && manypkg check",
     "types": "tsc --project tsconfig.json",

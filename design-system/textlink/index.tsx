@@ -4,8 +4,6 @@ import GatsbyLink from 'gatsby-link';
 
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
-type ButtonWeight = 'primary' | 'secondary';
-
 const getStyles = ({ size }: { size?: FontSizeType }) => {
   const { colors, fontFamilies, fontSizes } = useTheme();
 
@@ -25,26 +23,22 @@ const getStyles = ({ size }: { size?: FontSizeType }) => {
 
 export const TextLink = ({
   size,
-  weight = 'primary',
   ...props
 }: {
   children: string;
   href: string;
   size?: FontSizeType;
-  weight?: ButtonWeight;
 }) => {
   return <a {...props} css={getStyles({ size })} />;
 };
 
 export const TextLinkGatsby = ({
   size,
-  weight = 'primary',
   ...props
 }: {
   children: string;
   size?: FontSizeType;
   to: string;
-  weight?: ButtonWeight;
 }) => {
   return <GatsbyLink css={getStyles({ size })} {...props} />;
 };

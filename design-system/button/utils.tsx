@@ -53,10 +53,10 @@ export const useButtonStyles = ({
     },
     none: {
       border: `none`,
-      color: colors.actionSecondary,
+      color: colors.action,
       background: 'none',
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.actionSecondary, 0.2),
+        backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
       }
     }

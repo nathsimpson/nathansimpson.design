@@ -1,69 +1,68 @@
 // palette
 const brand = '#fa6d01';
-const neutral0 = '#0d0d0e';
-const neutral10 = '#272f37';
-const neutral20 = '#353f47';
-const neutral30 = '#48535d';
-const neutral40 = '#616e79';
-const neutral50 = '#808d99';
-const neutral60 = '#a0aeba';
-const neutral70 = '#c1c7cd';
+const neutral025 = '#0d0d0e';
+const neutral050 = '#13181d';
+const neutral100 = '#272f37';
+const neutral200 = '#353f47';
+const neutral300 = '#48535d';
+const neutral400 = '#616e79';
+const neutral500 = '#808d99';
+const neutral600 = '#a0aeba';
+const neutral700 = '#c1c7cd';
 // const neutral80 = '#dde1e6';
-const neutral90 = '#f2f4f8';
-const neutral100 = '#ffffff';
+const neutral900 = '#f2f4f8';
+const white = '#ffffff';
 
 export const darkColors = {
   brand: brand,
   action: brand,
-  actionSecondary: neutral100,
-  border: neutral20,
-  shadow: neutral0,
+  border: neutral200,
+  shadow: neutral025,
   text: {
-    default: neutral60,
-    emphasis: neutral100,
+    default: neutral600,
+    emphasis: white,
     link: brand,
-    linkSecondary: neutral100,
-    linkHover: neutral100
+    linkSecondary: white,
+    linkHover: white
   },
   background: {
-    default: neutral0,
-    emphasis: '#262a32',
-    hover: neutral10
+    default: neutral050,
+    emphasis: neutral100,
+    hover: neutral200
   },
   input: {
-    background: neutral10,
-    backgroundHover: neutral20,
+    background: neutral100,
+    backgroundHover: neutral200,
     backgroundActive: '#262a32',
-    foreground: neutral60,
-    foregroundHover: neutral100,
-    foregroundActive: neutral100
+    foreground: neutral600,
+    foregroundHover: white,
+    foregroundActive: white
   }
 };
 
 export const lightColors = {
   brand: brand,
   action: brand,
-  actionSecondary: neutral0,
-  border: neutral70,
-  shadow: neutral70,
+  border: neutral700,
+  shadow: neutral700,
   text: {
-    default: neutral40,
-    emphasis: neutral0,
+    default: neutral400,
+    emphasis: neutral025,
     link: brand,
-    linkSecondary: neutral0,
-    linkHover: neutral0
+    linkSecondary: neutral025,
+    linkHover: neutral025
   },
   background: {
-    default: neutral90,
-    emphasis: neutral100,
-    hover: neutral70
+    default: neutral900,
+    emphasis: white,
+    hover: neutral700
   },
   input: {
-    background: neutral40,
-    backgroundHover: neutral50,
-    backgroundActive: neutral30,
-    foreground: neutral90,
-    foregroundHover: neutral100,
-    foregroundActive: neutral100
+    background: neutral400,
+    backgroundHover: neutral500,
+    backgroundActive: neutral300,
+    foreground: neutral900,
+    foregroundHover: white,
+    foregroundActive: white
   }
 };

@@ -6,24 +6,18 @@ import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
 type ButtonWeight = 'primary' | 'secondary';
 
-const getStyles = ({
-  size,
-  weight
-}: {
-  size?: FontSizeType;
-  weight: ButtonWeight;
-}) => {
+const getStyles = ({ size }: { size?: FontSizeType }) => {
   const { colors, fontFamilies, fontSizes } = useTheme();
 
   return {
-    color: colors[weight === 'secondary' ? 'actionSecondary' : 'action'],
+    color: colors.action,
     cursor: 'pointer',
     fontFamily: fontFamilies.body,
     fontSize: size ? fontSizes[size] : 'auto',
     fontWeight: 600,
     textDecoration: 'none',
     '&:hover, &:focus': {
-      color: colors.text[weight === 'secondary' ? 'link' : 'linkHover'],
+      color: colors.text.linkHover,
       textDecoration: 'underline'
     }
   };
@@ -39,7 +33,7 @@ export const TextLink = ({
   size?: FontSizeType;
   weight?: ButtonWeight;
 }) => {
-  return <a {...props} css={getStyles({ size, weight })} />;
+  return <a {...props} css={getStyles({ size })} />;
 };
 
 export const TextLinkGatsby = ({
@@ -52,5 +46,5 @@ export const TextLinkGatsby = ({
   to: string;
   weight?: ButtonWeight;
 }) => {
-  return <GatsbyLink css={getStyles({ size, weight })} {...props} />;
+  return <GatsbyLink css={getStyles({ size })} {...props} />;
 };

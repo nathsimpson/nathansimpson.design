@@ -104,9 +104,7 @@ const NavBlock = ({ label, items }) => {
 const NavItem = ({ label, to }) => {
   return (
     <li css={{ listStyle: 'none' }}>
-      <TextLinkGatsby to={to} weight="secondary">
-        {label}
-      </TextLinkGatsby>
+      <TextLinkGatsby to={to}>{label}</TextLinkGatsby>
     </li>
   );
 };

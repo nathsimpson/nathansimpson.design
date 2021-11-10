@@ -22,7 +22,7 @@ const Block = ({ label }) => {
         style={{
           width: spacing[label],
           height: spacing.xlarge,
-          backgroundColor: colors.global.brand
+          backgroundColor: colors.brand
         }}
       />
 

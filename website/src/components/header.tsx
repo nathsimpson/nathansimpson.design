@@ -43,7 +43,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         maxWidth: '1300px',
         margin: '0 auto',
         marginBottom: spacing[hasDivider ? 'xlarge' : 'none'],
-        borderBottom: hasDivider ? `1px solid ${colors.global.border}` : 'none',
+        borderBottom: hasDivider ? `1px solid ${colors.border}` : 'none',
         padding: '8px 24px',
         display: 'flex',
         flexDirection: 'row',
@@ -83,7 +83,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         <Link
           to="/"
           css={{
-            color: colors.global.brand,
+            color: colors.brand,
             textDecoration: 'none',
             '&:hover': {
               color: colors.text.linkHover
@@ -108,7 +108,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             backgroundColor: colors.background.emphasis,
             padding: 18,
             listStyle: 'none',
-            boxShadow: `0px 6px 18px ${colors.global.shadow}`
+            boxShadow: `0px 6px 18px ${colors.shadow}`
           }
         }}
       >
@@ -124,11 +124,8 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             aria-label="Close menu"
             htmlFor="nav-toggle"
             css={{
-              color: colors.text.link,
-              cursor: 'pointer',
-              '&:hover': {
-                color: colors.text.linkHover
-              }
+              color: colors.action,
+              cursor: 'pointer'
             }}
           >
             <Icon icon="cross" size={32} />

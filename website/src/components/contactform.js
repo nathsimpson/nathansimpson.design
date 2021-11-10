@@ -80,7 +80,7 @@ const TextInput = props => (
 );
 
 const FormSubmit = styled.input({
-  background: hexAlpha(colors.link, 0.2),
+  background: hexAlpha(colors.action, 0.2),
   border: 'none',
   fontSize: '1em',
   color: colors.link,

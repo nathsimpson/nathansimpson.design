@@ -145,7 +145,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
           }}
         >
           {navItems.map(({ url, label }) => (
-            <TextLinkGatsby key={url} to={url} weight="secondary">
+            <TextLinkGatsby key={url} to={url}>
               {label}
             </TextLinkGatsby>
           ))}

@@ -4,7 +4,7 @@ import GatsbyLink from 'gatsby-link';
 
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
-const getStyles = ({ size }: { size?: FontSizeType }) => {
+export const getLinkStyles = ({ size }: { size?: FontSizeType }) => {
   const { colors, fontFamilies, fontSizes } = useTheme();
 
   return {
@@ -29,7 +29,7 @@ export const TextLink = ({
   href: string;
   size?: FontSizeType;
 }) => {
-  return <a {...props} css={getStyles({ size })} />;
+  return <a {...props} css={getLinkStyles({ size })} />;
 };
 
 export const TextLinkGatsby = ({
@@ -40,5 +40,5 @@ export const TextLinkGatsby = ({
   size?: FontSizeType;
   to: string;
 }) => {
-  return <GatsbyLink css={getStyles({ size })} {...props} />;
+  return <GatsbyLink css={getLinkStyles({ size })} {...props} />;
 };

@@ -6,10 +6,12 @@ import { Box } from '@design-system/box';
 import { IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Stack } from '@design-system/stack';
-import { useTheme, useThemeContext } from '@nathsimpson/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { Cluster } from '@design-system/cluster';
 import { TextLinkGatsby } from '@design-system/textlink';
 import { useMediaQuery } from '@nathsimpson/utils';
+
+import { useThemeSelection } from '../utils/useThemeSelection';
 
 const navItems = [
   {
@@ -32,7 +34,7 @@ const navItems = [
 
 export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
   const { spacing, colors } = useTheme();
-  const { onThemeChange, themeName } = useThemeContext();
+  const { setThemeName, themeName } = useThemeSelection();
   const { maxBreak, minBreak } = useMediaQuery();
 
   return (
@@ -152,7 +154,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
           <IconButton
             label="Toggle theme"
             onClick={() => {
-              onThemeChange(themeName === 'light' ? 'dark' : 'light');
+              setThemeName(themeName === 'light' ? 'dark' : 'light');
             }}
             icon={themeName === 'light' ? 'moon' : 'sun'}
             size="small"

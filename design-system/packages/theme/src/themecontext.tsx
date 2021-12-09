@@ -1,15 +1,9 @@
-import React, {
-  ReactElement,
-  createContext,
-  useContext,
-  useState
-} from 'react';
+import React, { ReactElement, createContext, useContext } from 'react';
 
-import { themeDark, themeLight } from './themes';
+import { themeDark } from './themes';
 
 type ThemeContextType = {
-  themeName: 'light' | 'dark';
-  onThemeChange: (themeName: 'light' | 'dark') => void;
+  theme: typeof themeDark;
 };
 
 // Context lets us pass a value deep into the component tree
@@ -25,14 +19,20 @@ export function useThemeContext() {
   return context;
 }
 
-export const ThemeProvider = ({ children }: { children: ReactElement }) => {
-  const [themeName, setThemeName] = useState<'dark' | 'light'>('dark');
+export const ThemeProvider = ({
+  children,
+  theme: providedTheme
+}: {
+  children: ReactElement;
+  theme: typeof themeDark;
+}) => {
+  // TODO: do proper deep-merging here
+  const theme = { ...themeDark, ...providedTheme };
 
   return (
     <ThemeContext.Provider
       value={{
-        themeName,
-        onThemeChange: setThemeName
+        theme
       }}
     >
       {children}
@@ -41,6 +41,6 @@ export const ThemeProvider = ({ children }: { children: ReactElement }) => {
 };
 
 export const useTheme = () => {
-  const { themeName } = useThemeContext();
-  return themeName === 'light' ? themeLight : themeDark;
+  const { theme } = useThemeContext();
+  return theme;
 };

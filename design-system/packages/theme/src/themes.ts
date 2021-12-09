@@ -1,15 +1,5 @@
 import { darkColors, lightColors } from './colors';
-
-export { palette } from './colors';
-
-export const fontFamilies = {
-  heading:
-    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
-  body:
-    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
-  mono:
-    'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
-};
+import { fontFamilies, fontSizes, fontWeights, lineHeights } from './text';
 
 export const spacing = {
   none: 0,
@@ -37,19 +27,9 @@ export const radii = {
   circle: 99
 } as const;
 
-export const fontsizes = {
-  xsmall: '0.75rem',
-  small: '0.875rem',
-  medium: '1rem',
-  large: '1.25rem',
-  xlarge: '1.5rem',
-  xxlarge: '1.875rem',
-  xxxlarge: '2.5rem'
-} as const;
-
 export type SpacingType = keyof typeof spacing;
 export type RadiiType = keyof typeof radii;
-export type FontSizeType = keyof typeof fontsizes;
+export type FontSizeType = keyof typeof fontSizes;
 export type Theme = typeof themeDark;
 
 export const themeDark = {
@@ -58,11 +38,13 @@ export const themeDark = {
   radii,
   boxShadow: {
     1: {
-      boxShadow: `0px 6px 12px ${darkColors.global.shadow}`
+      boxShadow: `0px 6px 12px ${darkColors.shadow}`
     }
   },
-  fontsizes,
+  fontSizes,
   fontFamilies,
+  fontWeights,
+  lineHeights,
   colors: darkColors
 };
 
@@ -72,10 +54,12 @@ export const themeLight = {
   radii,
   boxShadow: {
     1: {
-      boxShadow: `0px 6px 12px ${lightColors.global.shadow}`
+      boxShadow: `0px 6px 12px ${lightColors.shadow}`
     }
   },
-  fontsizes,
+  fontSizes,
   fontFamilies,
+  fontWeights,
+  lineHeights,
   colors: lightColors
 };

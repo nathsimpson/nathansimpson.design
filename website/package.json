@@ -7,7 +7,7 @@
     "build:lambda": "netlify-lambda build functions",
     "build:website": "gatsby build",
     "build:playroom": "playroom build",
-    "build": "yarn build:lambda && build:website && build:playroom",
+    "build": "yarn build:lambda && yarn build:website && yarn build:playroom",
     "dev": "gatsby develop",
     "start": "yarn dev",
     "clean": "gatsby clean",

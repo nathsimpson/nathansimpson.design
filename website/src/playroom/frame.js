@@ -3,13 +3,13 @@ import { jsx, Global } from '@emotion/core';
 import { ThemeProvider, useTheme } from '@nathsimpson/theme';
 
 const PlayroomLayout = ({ children }) => {
-  const { colors, fontsizes, fontFamilies } = useTheme();
+  const { colors, fontSizes, fontFamilies } = useTheme();
   return (
     <div>
       <Global
         styles={{
           body: {
-            fontSize: fontsizes.medium,
+            fontSize: fontSizes.medium,
             margin: 0,
             padding: 0,
             fontFamily: fontFamilies.body,

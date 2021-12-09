@@ -25,7 +25,7 @@ const PlayroomLayout = ({ children }) => {
 
 export default function FrameComponent({ theme, children }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <PlayroomLayout>{children}</PlayroomLayout>
     </ThemeProvider>
   );

@@ -9,7 +9,9 @@ type ThemeContextType = {
 // Context lets us pass a value deep into the component tree
 // without explicitly threading it through every component.
 // Create a context for the current theme (with "dark" as the default).
-export const ThemeContext = createContext<ThemeContextType | null>(null);
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: themeDark
+});
 
 export function useThemeContext() {
   const context = useContext(ThemeContext);

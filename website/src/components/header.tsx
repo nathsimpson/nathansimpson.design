@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
+import { useContext } from 'react';
 
 import { Box } from '@design-system/box';
 import { IconButton } from '@design-system/button';
@@ -11,7 +12,7 @@ import { Cluster } from '@design-system/cluster';
 import { TextLinkGatsby } from '@design-system/textlink';
 import { useMediaQuery } from '@nathsimpson/utils';
 
-import { useThemeSelection } from '../utils/useThemeSelection';
+import { ThemeSelectionContext } from '../components/core';
 
 const navItems = [
   {
@@ -34,7 +35,7 @@ const navItems = [
 
 export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
   const { spacing, colors } = useTheme();
-  const { setThemeName, themeName } = useThemeSelection();
+  const { setThemeName, themeName } = useContext(ThemeSelectionContext);
   const { maxBreak, minBreak } = useMediaQuery();
 
   return (

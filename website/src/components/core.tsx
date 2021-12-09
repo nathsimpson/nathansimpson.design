@@ -1,22 +1,43 @@
 /** @jsx jsx */
 import { jsx, Global } from '@emotion/core';
-import { Fragment, ReactElement } from 'react';
-import { ThemeProvider, useTheme } from '@nathsimpson/theme';
+import { createContext, useState, Fragment, ReactElement } from 'react';
+import {
+  ThemeProvider,
+  useTheme,
+  themeDark,
+  themeLight
+} from '@nathsimpson/theme';
 
-import { useThemeSelection } from '../utils/useThemeSelection';
+const themes = {
+  dark: themeDark,
+  light: themeLight
+};
+
+export const ThemeSelectionContext = createContext<{
+  themeName: keyof typeof themes;
+  setThemeName: (themeName: keyof typeof themes) => void;
+}>({
+  themeName: 'dark',
+  setThemeName: () => {}
+});
 
 export const Core = ({ children }: { children: ReactElement }) => {
-  const { currentTheme } = useThemeSelection();
-
-  console.log('currentTheme', currentTheme);
+  const [themeName, setThemeName] = useState<keyof typeof themes>('dark');
 
   return (
-    <ThemeProvider theme={currentTheme}>
-      <Fragment>
-        <GlobalStyles />
-        {children}
-      </Fragment>
-    </ThemeProvider>
+    <ThemeSelectionContext.Provider
+      value={{
+        themeName: themeName,
+        setThemeName: setThemeName
+      }}
+    >
+      <ThemeProvider theme={themes[themeName]}>
+        <Fragment>
+          <GlobalStyles />
+          {children}
+        </Fragment>
+      </ThemeProvider>
+    </ThemeSelectionContext.Provider>
   );
 };
 

@@ -1,12 +1,12 @@
 const React = require('react');
 const { Layout } = require('./src/components/layout');
-const { ThemeProvider } = require('@nathsimpson/theme');
+const { Core } = require('./src/components/core');
 
 // Wraps every page in a component
 exports.wrapPageElement = ({ element, props }) => {
   return (
-    <ThemeProvider>
+    <Core>
       <Layout>{element}</Layout>
-    </ThemeProvider>
+    </Core>
   );
 };

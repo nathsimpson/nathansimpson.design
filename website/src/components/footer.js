@@ -26,7 +26,7 @@ export const Footer = () => {
         {footer_navItems.map(item => (
           <li
             style={{ display: 'inline-block', margin: '0px 5px' }}
-            key={item.name}
+            key={item.label}
           >
             <TextLinkGatsby to={item.url} token="small">
               {item.label}
@@ -58,7 +58,7 @@ export const Footer = () => {
                 textDecoration: 'none',
 
                 '&:hover': {
-                  color: colors.text.link
+                  color: colors.action
                 }
               }}
               href={network.link}

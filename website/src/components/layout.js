@@ -39,7 +39,7 @@ export const Layout = ({ children }) => {
           },
 
           blockquote: {
-            borderLeft: `3px solid ${colors.global.brand}`,
+            borderLeft: `3px solid ${colors.brand}`,
             margin: 0,
             paddingLeft: 12,
             color: 'white'

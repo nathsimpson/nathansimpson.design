@@ -4,12 +4,12 @@ import GatsbyLink from 'gatsby-link';
 
 import { useTheme, TextStyleType } from '@nathsimpson/theme';
 
-const getStyles = (token?: TextStyleType) => {
+export const getLinkStyles = (token?: TextStyleType) => {
   const { colors, textStyles } = useTheme();
 
   return {
     ...(token ? textStyles[token] : { fontSize: 'auto' }),
-    color: colors.text.link,
+    color: colors.action,
     cursor: 'pointer',
     fontWeight: 600,
     textDecoration: 'none',
@@ -28,7 +28,7 @@ export const TextLink = ({
   href: string;
   token?: TextStyleType;
 }) => {
-  return <a css={getStyles(token)} {...props} />;
+  return <a css={getLinkStyles(token)} {...props} />;
 };
 
 export const TextLinkGatsby = ({
@@ -39,5 +39,5 @@ export const TextLinkGatsby = ({
   to: string;
   token?: TextStyleType;
 }) => {
-  return <GatsbyLink css={getStyles(token)} {...props} />;
+  return <GatsbyLink css={getLinkStyles(token)} {...props} />;
 };

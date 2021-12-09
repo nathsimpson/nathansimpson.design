@@ -39,7 +39,7 @@ export const themeDark = {
   radii,
   boxShadow: {
     1: {
-      boxShadow: `0px 6px 12px ${darkColors.global.shadow}`
+      boxShadow: `0px 6px 12px ${darkColors.shadow}`
     }
   },
   fontSizes,
@@ -54,7 +54,7 @@ export const themeLight = {
   radii,
   boxShadow: {
     1: {
-      boxShadow: `0px 6px 12px ${lightColors.global.shadow}`
+      boxShadow: `0px 6px 12px ${lightColors.shadow}`
     }
   },
   fontSizes,

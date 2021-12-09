@@ -17,7 +17,7 @@ export const fontFamilies = {
     'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
 };
 
-export const fontWeight = {
+export const fontWeights = {
   regular: 400,
   medium: 500,
   strong: 700,
@@ -82,37 +82,37 @@ export const textStyles = {
   },
   h1: {
     fontSize: fontSizes.xxxlarge,
-    fontWeight: fontWeight.heading,
+    fontWeight: fontWeights.heading,
     fontFamily: fontFamilies.heading,
     lineHeight: lineHeights.small
   },
   h2: {
     fontSize: fontSizes.xxlarge,
-    fontWeight: fontWeight.heading,
+    fontWeight: fontWeights.heading,
     fontFamily: fontFamilies.heading,
     lineHeight: lineHeights.small
   },
   h3: {
     fontSize: fontSizes.xlarge,
-    fontWeight: fontWeight.heading,
+    fontWeight: fontWeights.heading,
     fontFamily: fontFamilies.heading,
     lineHeight: lineHeights.small
   },
   h4: {
     fontSize: fontSizes.xlarge,
-    fontWeight: fontWeight.strong,
+    fontWeight: fontWeights.strong,
     fontFamily: fontFamilies.heading,
     lineHeight: lineHeights.small
   },
   h5: {
     fontSize: fontSizes.large,
-    fontWeight: fontWeight.strong,
+    fontWeight: fontWeights.strong,
     fontFamily: fontFamilies.heading,
     lineHeight: lineHeights.small
   },
   h6: {
     fontSize: fontSizes.medium,
-    fontWeight: fontWeight.strong,
+    fontWeight: fontWeights.strong,
     fontFamily: fontFamilies.heading,
     lineHeight: lineHeights.small
   }

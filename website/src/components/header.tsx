@@ -1,15 +1,18 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
+import { useContext } from 'react';
 
 import { Box } from '@design-system/box';
 import { IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Stack } from '@design-system/stack';
-import { useTheme, useThemeContext } from '@nathsimpson/theme';
+import { useTheme } from '@nathsimpson/theme';
 import { Cluster } from '@design-system/cluster';
 import { TextLinkGatsby } from '@design-system/textlink';
 import { useMediaQuery } from '@nathsimpson/utils';
+
+import { ThemeSelectionContext } from '../components/core';
 
 const navItems = [
   {
@@ -32,7 +35,7 @@ const navItems = [
 
 export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
   const { spacing, colors } = useTheme();
-  const { onThemeChange, themeName } = useThemeContext();
+  const { setThemeName, themeName } = useContext(ThemeSelectionContext);
   const { maxBreak, minBreak } = useMediaQuery();
 
   return (
@@ -43,7 +46,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         maxWidth: '1300px',
         margin: '0 auto',
         marginBottom: spacing[hasDivider ? 'xlarge' : 'none'],
-        borderBottom: hasDivider ? `1px solid ${colors.global.border}` : 'none',
+        borderBottom: hasDivider ? `1px solid ${colors.border}` : 'none',
         padding: '8px 24px',
         display: 'flex',
         flexDirection: 'row',
@@ -83,7 +86,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         <Link
           to="/"
           css={{
-            color: colors.global.brand,
+            color: colors.brand,
             textDecoration: 'none',
             '&:hover': {
               color: colors.text.linkHover
@@ -108,7 +111,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             backgroundColor: colors.background.emphasis,
             padding: 18,
             listStyle: 'none',
-            boxShadow: `0px 6px 18px ${colors.global.shadow}`
+            boxShadow: `0px 6px 18px ${colors.shadow}`
           }
         }}
       >
@@ -124,11 +127,8 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             aria-label="Close menu"
             htmlFor="nav-toggle"
             css={{
-              color: colors.text.link,
-              cursor: 'pointer',
-              '&:hover': {
-                color: colors.text.linkHover
-              }
+              color: colors.action,
+              cursor: 'pointer'
             }}
           >
             <Icon icon="cross" size={32} />
@@ -155,7 +155,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
           <IconButton
             label="Toggle theme"
             onClick={() => {
-              onThemeChange(themeName === 'light' ? 'dark' : 'light');
+              setThemeName(themeName === 'light' ? 'dark' : 'light');
             }}
             icon={themeName === 'light' ? 'moon' : 'sun'}
             size="small"

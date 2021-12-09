@@ -36,27 +36,27 @@ export const useButtonStyles = ({
       border: 'none',
       fontWeight: 900,
       color: 'white',
-      backgroundColor: colors.text.link,
+      backgroundColor: colors.action,
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.text.link, 0.8),
+        backgroundColor: hexAlpha(colors.action, 0.8),
         textDecoration: 'none'
       }
     },
     secondary: {
-      border: `2px solid ${colors.text.link}`,
-      color: colors.text.link,
+      border: `2px solid ${colors.action}`,
+      color: colors.action,
       background: 'none',
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.text.link, 0.2),
+        backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
       }
     },
     none: {
       border: `none`,
-      color: colors.text.link,
+      color: colors.action,
       background: 'none',
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.text.link, 0.2),
+        backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
       }
     }

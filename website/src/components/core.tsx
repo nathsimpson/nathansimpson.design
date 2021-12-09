@@ -21,12 +21,12 @@ export const Core = ({ children }: { children: ReactElement }) => {
 };
 
 const GlobalStyles = () => {
-  const { colors, fontsizes, fontFamilies } = useTheme();
+  const { colors, fontSizes, fontFamilies } = useTheme();
   return (
     <Global
       styles={{
         body: {
-          fontSize: fontsizes.medium,
+          fontSize: fontSizes.medium,
           margin: 0,
           padding: 0,
           lineHeight: 1.5,
@@ -36,7 +36,7 @@ const GlobalStyles = () => {
         },
 
         p: {
-          fontSize: fontsizes.medium,
+          fontSize: fontSizes.medium,
           lineHeight: 1.5
         },
 
@@ -45,7 +45,7 @@ const GlobalStyles = () => {
         },
 
         blockquote: {
-          borderLeft: `3px solid ${colors.global.brand}`,
+          borderLeft: `3px solid ${colors.brand}`,
           margin: 0,
           paddingLeft: 12,
           color: 'white'

@@ -24,7 +24,7 @@ const Block = ({ label }) => {
           width: spacing.xxxlarge,
           height: spacing.xxxlarge,
           borderRadius: radii[label],
-          backgroundColor: colors.global.brand
+          backgroundColor: colors.brand
         }}
       />
       <Text>{`${label} (${radii[label].toString()})`}</Text>

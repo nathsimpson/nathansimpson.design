@@ -8,7 +8,7 @@ import { useTheme } from '@nathsimpson/theme';
 
 // TODO: delete this?
 export const Layout = ({ children }) => {
-  const { colors, fontsizes, fontFamilies } = useTheme();
+  const { colors, fontSizes, fontFamilies } = useTheme();
   return (
     <Fragment>
       <Helmet>
@@ -20,7 +20,7 @@ export const Layout = ({ children }) => {
       <Global
         styles={{
           body: {
-            fontSize: fontsizes.medium,
+            fontSize: fontSizes.medium,
             margin: 0,
             padding: 0,
             lineHeight: 1.5,
@@ -30,7 +30,7 @@ export const Layout = ({ children }) => {
           },
 
           p: {
-            fontSize: fontsizes.medium,
+            fontSize: fontSizes.medium,
             lineHeight: 1.5
           },
 
@@ -39,7 +39,7 @@ export const Layout = ({ children }) => {
           },
 
           blockquote: {
-            borderLeft: `3px solid ${colors.global.brand}`,
+            borderLeft: `3px solid ${colors.brand}`,
             margin: 0,
             paddingLeft: 12,
             color: 'white'

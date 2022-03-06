@@ -29,34 +29,34 @@ export const useButtonStyles = ({
   size: ButtonSize;
   weight: ButtonWeight;
 }) => {
-  const { colors, spacing, fontsizes, fontFamilies, radii } = useTheme();
+  const { colors, spacing, fontSizes, fontFamilies, radii } = useTheme();
 
   const weights = {
     primary: {
       border: 'none',
       fontWeight: 900,
       color: 'white',
-      backgroundColor: colors.text.link,
+      backgroundColor: colors.action,
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.text.link, 0.8),
+        backgroundColor: hexAlpha(colors.action, 0.8),
         textDecoration: 'none'
       }
     },
     secondary: {
-      border: `2px solid ${colors.text.link}`,
-      color: colors.text.link,
+      border: `2px solid ${colors.action}`,
+      color: colors.action,
       background: 'none',
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.text.link, 0.2),
+        backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
       }
     },
     none: {
       border: `none`,
-      color: colors.text.link,
+      color: colors.action,
       background: 'none',
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.text.link, 0.2),
+        backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
       }
     }
@@ -65,7 +65,7 @@ export const useButtonStyles = ({
   return {
     fontFamily: fontFamilies.heading,
     fontWeight: 700,
-    fontSize: fontsizes[size],
+    fontSize: fontSizes[size],
     paddingTop: spacing[size],
     paddingBottom: spacing[size],
     paddingLeft: spacing[size] * 2,

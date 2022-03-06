@@ -36,7 +36,7 @@ export const TableRow = props => {
       css={{
         // paddingTop: spacing.small,
         // paddingBottom: spacing.small,
-        borderBottom: `1px solid ${colors.global.border}`
+        borderBottom: `1px solid ${colors.border}`
       }}
       {...props}
     />
@@ -50,7 +50,7 @@ export const TableCell = props => {
       css={{
         paddingTop: spacing.small,
         paddingBottom: spacing.small,
-        borderBottom: `1px solid ${colors.global.border}`
+        borderBottom: `1px solid ${colors.border}`
       }}
       {...props}
     />

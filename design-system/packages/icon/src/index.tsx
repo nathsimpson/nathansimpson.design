@@ -16,7 +16,7 @@ export const Icon = ({
   const theme = useTheme();
   const colors = {
     foreground: theme.colors.text.default,
-    link: theme.colors.text.link
+    link: theme.colors.action
   };
   return (
     <svg

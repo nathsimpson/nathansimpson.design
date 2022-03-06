@@ -26,7 +26,7 @@ export const CodePreview = ({ className = '', children }) => {
           className={className}
           style={{
             margin: 0,
-            border: `1px solid ${colors.global.border}`,
+            border: `1px solid ${colors.border}`,
             ...style
           }}
         >
@@ -50,7 +50,7 @@ export const CodeEditor = ({ children, components }) => {
   return (
     <div
       css={{
-        border: `1px solid ${colors.global.border}`,
+        border: `1px solid ${colors.border}`,
         borderRadius: radii.medium
       }}
     >

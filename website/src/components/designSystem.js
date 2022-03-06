@@ -72,7 +72,7 @@ const NavigationBar = ({ items }) => {
   );
 
   return (
-    <Stack gap="large">
+    <Stack as="nav" gap="large">
       <NavBlock
         label="Guides"
         items={[

@@ -18,14 +18,13 @@ export const useCardStyles = () => {
   return {
     ...boxShadow[1],
     background: colors.background.emphasis,
-    border: `1px solid ${colors.global.border}`,
     padding: '16px 24px',
     borderRadius: radii.large
   };
 };
 
 export const Card = ({ path, image, desc, title, tag }: CardProps) => {
-  const { colors, fontsizes, fontFamilies } = useTheme();
+  const { colors, fontSizes, fontFamilies } = useTheme();
   const cardStyles = useCardStyles();
   return (
     <Link
@@ -53,8 +52,8 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
           css={{
             display: 'flex',
             flex: 1,
-            backgroundColor: colors.global.border,
-            borderBottom: `1px solid ${colors.global.border}`,
+            backgroundColor: colors.border,
+            borderBottom: `1px solid ${colors.border}`,
             borderTopLeftRadius: cardStyles.borderRadius,
             borderTopRightRadius: cardStyles.borderRadius,
             backgroundImage: `url(${image})`,
@@ -73,7 +72,7 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
             css={{
               fontFamily: fontFamilies.heading,
               color: colors.text.emphasis,
-              fontSize: fontsizes.large,
+              fontSize: fontSizes.large,
               fontWeight: 600,
               textDecoration: 'none',
               display: 'block',

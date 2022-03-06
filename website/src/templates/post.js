@@ -15,7 +15,7 @@ const PostTemplate = ({ data }) => {
   const { spacing } = useTheme();
 
   return (
-    <div>
+    <article>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
@@ -50,7 +50,7 @@ const PostTemplate = ({ data }) => {
           <Mdx>{post.body}</Mdx>
         </Stack>
       </Box>
-    </div>
+    </article>
   );
 };
 

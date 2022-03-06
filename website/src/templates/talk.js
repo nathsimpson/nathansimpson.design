@@ -14,7 +14,7 @@ const TalkTemplate = ({ data }) => {
   const { spacing } = useTheme();
 
   return (
-    <div>
+    <article>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{talk.frontmatter.title} - Nathan Simpson's talks</title>
@@ -53,7 +53,7 @@ const TalkTemplate = ({ data }) => {
           <Mdx>{talk.body}</Mdx>
         </Stack>
       </div>
-    </div>
+    </article>
   );
 };
 

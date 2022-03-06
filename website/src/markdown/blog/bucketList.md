@@ -26,7 +26,7 @@ type: post
 - ~~Get married~~ 🤵🏻
 - ~~Buy first new car~~ 🚗
 - ~~Invest in the Stock Market 📈~~
-- Buy a house 🏡
+- ~~Buy a house 🏡~~
 - Buy an investment property 🏠
 - Have a son 👶
 - Have a daughter 👶

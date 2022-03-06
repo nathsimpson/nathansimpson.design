@@ -45,7 +45,7 @@ export const useCodeHighlightTheme = () => {
       {
         types: ['string', 'char', 'tag', 'selector'],
         style: {
-          color: colors.global.brand
+          color: colors.brand
         }
       },
       {

@@ -9,6 +9,7 @@ import { Tiles } from '@design-system/tiles';
 import { Tag, Tags } from '@design-system/tag';
 import { Box, Flex } from '@design-system/box';
 import { Stack } from '@design-system/stack';
+import { Prose } from '@design-system/prose';
 import { Card } from '@design-system/card';
 import { Cluster } from '@design-system/cluster';
 import { TextLink, TextLinkGatsby } from '@design-system/textlink';
@@ -30,6 +31,7 @@ const DsComponents = {
   Icon,
   IconButton,
   LinkButton,
+  Prose,
   Stack,
   Tag,
   Tags,
@@ -76,7 +78,6 @@ const components = {
     </div>
   ),
   hr: () => <Divider />,
-  wrapper: ({ children }) => <Stack gap="large">{children}</Stack>,
   code: props => {
     if (props.live) {
       return <CodeEditor components={DsComponents} {...props} />;

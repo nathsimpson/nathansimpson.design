@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 
 import { Header, Mdx } from '../components';
 import { Divider } from '@design-system/divider';
+import { Prose } from '@design-system/prose';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
 
@@ -51,7 +52,9 @@ const TalkTemplate = ({ data }) => {
           </Text>
           <Divider />
 
-          <Mdx>{talk.body}</Mdx>
+          <Prose>
+            <Mdx>{talk.body}</Mdx>
+          </Prose>
         </Stack>
       </div>
     </article>

@@ -9,6 +9,7 @@ import { LinkButton } from '@design-system/button';
 import { Flex } from '@design-system/box';
 import { Stack } from '@design-system/stack';
 import { TextLinkGatsby } from '@design-system/textlink';
+import { Prose } from '@design-system/prose';
 
 export const DesignSystemTemplate = ({ data }) => {
   const {
@@ -57,7 +58,9 @@ export const DesignSystemTemplate = ({ data }) => {
                 href={githubUrl}
               />
             </Flex>
-            <MdxWithoutH1>{body}</MdxWithoutH1>
+            <Prose>
+              <MdxWithoutH1>{body}</MdxWithoutH1>
+            </Prose>
           </article>
         </div>
       </Container>

@@ -20,6 +20,7 @@ const useProseStyles = () => {
     lineHeight: 1.1,
     color: colors.text.emphasis
   };
+
   return css({
     p: {
       fontFamily: fontFamilies.body,
@@ -37,20 +38,21 @@ const useProseStyles = () => {
       ...standardHeadingStyles,
       fontSize: fontSizes.xxlarge,
       fontWeight: 900,
-      marginTop: spacing.xxlarge,
+      marginTop: spacing.xxxlarge,
       marginBottom: spacing.large
     },
     h3: {
       ...standardHeadingStyles,
       fontSize: fontSizes.xlarge,
       fontWeight: 900,
-      marginTop: spacing.xlarge,
+      marginTop: spacing.xxlarge,
       marginBottom: spacing.large
     },
     h4: {
       ...standardHeadingStyles,
       fontSize: fontSizes.xlarge,
-      fontWeight: 600
+      fontWeight: 600,
+      marginTop: spacing.xlarge
     },
     h5: {
       ...standardHeadingStyles,

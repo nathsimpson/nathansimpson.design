@@ -1,6 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { forwardRefWithAs } from '@nathsimpson/utils';
+import {
+  forwardRefWithAs,
+  useMediaQuery,
+  ResponsiveProp
+} from '@nathsimpson/utils';
+import { spacing, SpacingType } from '@nathsimpson/theme';
 import { Box, BoxProps } from './box';
 
 import {
@@ -18,6 +23,7 @@ export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
       as: Tag = 'div',
       basis,
       flex,
+      gap,
       grow,
       justify = 'start',
       orientation = 'vertical',
@@ -26,6 +32,7 @@ export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
     },
     ref
   ) => {
+    const { mapResponsiveProp } = useMediaQuery();
     const flexStyles = getFlexStyles({
       flex,
       grow,
@@ -36,6 +43,7 @@ export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
     const styles = {
       ...flexStyles,
       display: 'flex',
+      gap: gap && mapResponsiveProp(gap, spacing),
       alignItems: alignmentMap[align],
       flexDirection: orientationMap[orientation],
       justifyContent: justificationMap[justify]
@@ -47,6 +55,7 @@ export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
 
 export type FlexBoxProps = BoxProps &
   FlexProps & {
+    gap?: ResponsiveProp<SpacingType>;
     /** The align prop maps to the align-items CSS property, and defines the alignment of items along the cross-axis of the flex container. */
     align?: keyof typeof alignmentMap;
     /** The justify prop maps to the justify-content CSS property, and defines the distribution of space between items along the main-axis of the flex container. */

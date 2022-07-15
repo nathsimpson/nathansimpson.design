@@ -1,11 +1,12 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { useTheme } from '@nathsimpson/theme';
 
-export const Container = ({ ...props }) => {
+export const Container = ({ as: Tag = 'div', ...props }) => {
   const { spacing } = useTheme();
   return (
-    <div
-      style={{
+    <Tag
+      css={{
         width: '100%',
         maxWidth: '1300px',
         paddingLeft: spacing.xlarge,

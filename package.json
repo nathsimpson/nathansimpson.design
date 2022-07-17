@@ -15,7 +15,7 @@
     "website": "yarn workspace @nathsimpson/website",
     "dev": "yarn website dev",
     "clean": "yarn website clean",
-    "format": "prettier --write \"**/*.{j}s{,on}\" \"**/*.md{,x}\" \"**/*.ts{,x}\"",
+    "format": "prettier --write \"**/*.js{,on}\" \"**/*.md{,x}\" \"**/*.ts{,x}\"",
     "postinstall": "preconstruct dev && manypkg check",
     "types": "tsc --project tsconfig.json",
     "lint": "eslint ."

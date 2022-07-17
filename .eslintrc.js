@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['standard', 'standard-react', 'prettier', 'prettier/react'],
+  extends: ['standard', 'standard-react', 'prettier'],
   plugins: ['prettier', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   rules: {

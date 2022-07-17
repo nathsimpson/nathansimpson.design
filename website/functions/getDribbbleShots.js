@@ -5,9 +5,9 @@ const API_ENDPOINT = `https://api.dribbble.com/v2/user/shots?access_token=${ACCE
 
 exports.handler = async (event, context) => {
   return fetch(API_ENDPOINT, { headers: { Accept: 'application/json' } })
-    .then(response => response.json())
-    .then(data =>
-      data.map(shot => ({
+    .then((response) => response.json())
+    .then((data) =>
+      data.map((shot) => ({
         description: shot.description.replace(/(<([^>]+)>)/gi, ''),
         image: shot.images.normal,
         link:
@@ -16,9 +16,9 @@ exports.handler = async (event, context) => {
             : shot.html_url
       }))
     )
-    .then(data => ({
+    .then((data) => ({
       statusCode: 200,
       body: JSON.stringify(data)
     }))
-    .catch(error => ({ statusCode: 422, body: JSON.stringify(error) }));
+    .catch((error) => ({ statusCode: 422, body: JSON.stringify(error) }));
 };

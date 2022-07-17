@@ -16,13 +16,13 @@ export class Dribbble extends React.Component {
   componentDidMount() {
     // may need to implement axios
     fetch('/.netlify/functions/getDribbbleShots')
-      .then(response => response.json())
-      .then(data => data.filter(shot => !shot.image.includes('.gif')))
-      .then(data => data.splice(0, 4, ''))
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => data.filter((shot) => !shot.image.includes('.gif')))
+      .then((data) => data.splice(0, 4, ''))
+      .then((data) => {
         this.setState({ shots: data });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }

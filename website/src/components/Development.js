@@ -38,7 +38,7 @@ export const Development = () => {
             listStyle: 'none'
           }}
         >
-          {development_skills.map(item => (
+          {development_skills.map((item) => (
             <Tag label={item} as="li" key={item} />
           ))}
         </Cluster>

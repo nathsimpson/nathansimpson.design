@@ -4,6 +4,7 @@ import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
 import { Heading } from '@design-system/typography';
 import { Stack } from '@design-system/stack';
+import { Prose } from '@design-system/prose';
 import { Tags } from '@design-system/tag';
 import { useTheme } from '@nathsimpson/theme';
 import { graphql } from 'gatsby';
@@ -35,10 +36,10 @@ const ProjectTemplate = ({ data }) => {
         <BackButton link="/" />
         <Stack gap="medium">
           <Heading level="1">{project.frontmatter.title}</Heading>
-
           {skills.length ? <Tags items={skills} /> : null}
-
-          <MdxWithoutH1>{project.body}</MdxWithoutH1>
+          <Prose>
+            <MdxWithoutH1>{project.body}</MdxWithoutH1>
+          </Prose>
         </Stack>
       </div>
     </div>

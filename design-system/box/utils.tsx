@@ -179,7 +179,6 @@ export const justificationMap = {
 
 export const useBoxColors = () => {
   const { colors } = useTheme();
-
   return {
     none: 'none',
     base: colors.background.default,

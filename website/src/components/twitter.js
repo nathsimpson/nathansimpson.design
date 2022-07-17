@@ -20,11 +20,11 @@ export default class Twitter extends React.Component {
   componentDidMount() {
     // may need to implement axios
     fetch('https://api.jrvs.app/twitter')
-      .then(response => response.json())
-      .then(response => {
+      .then((response) => response.json())
+      .then((response) => {
         this.setState({ tweets: response.data });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }

@@ -1,12 +1,13 @@
 module.exports = {
-  extends: ['standard', 'standard-react', 'prettier', 'prettier/react'],
-  plugins: ['prettier', '@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
+  ],
+  plugins: ['prettier', '@typescript-eslint', '@emotion'],
   parser: '@typescript-eslint/parser',
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-fragments': 0,
-    'react/prop-types': 0,
-    'react/no-unused-prop-types': 0,
     'standard/computed-property-even-spacing': 0,
     'no-template-curly-in-string': 0,
     camelcase: 0,

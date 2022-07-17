@@ -29,8 +29,8 @@ I also developed a prototype of the app using React Native, with KeystoneJS for 
 ![Event Stall](https://files.nathansimpson.design/portfolio/thegarage/eventStall.jpg)
 
 ## Project links
--  [Early project pitch deck](https://docs.google.com/presentation/d/1bJ6Ve-9kCK43EEVEmEsFk2cw0lOVxVoSWNpEttMtniA/edit?usp=sharing)
-- [Project self-brief documentation](https://drive.google.com/file/d/1EiLeaN9eeLbhovtdy4xG_Mmz3NZcQxfQ/view?usp=sharing)
 
+- [Early project pitch deck](https://docs.google.com/presentation/d/1bJ6Ve-9kCK43EEVEmEsFk2cw0lOVxVoSWNpEttMtniA/edit?usp=sharing)
+- [Project self-brief documentation](https://drive.google.com/file/d/1EiLeaN9eeLbhovtdy4xG_Mmz3NZcQxfQ/view?usp=sharing)
 
 ![Animated Logo](https://files.nathansimpson.design/portfolio/thegarage/logo_spin.gif)

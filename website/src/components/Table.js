@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { useTheme } from '@nathsimpson/theme';
 
-export const Table = props => {
+export const Table = (props) => {
   return (
     <table
       css={{
@@ -16,7 +16,7 @@ export const Table = props => {
   );
 };
 
-export const TableHead = props => {
+export const TableHead = (props) => {
   const { fontFamilies, colors } = useTheme();
   return (
     <thead
@@ -30,7 +30,7 @@ export const TableHead = props => {
   );
 };
 
-export const TableRow = props => {
+export const TableRow = (props) => {
   const { colors } = useTheme();
   return (
     <tr
@@ -44,7 +44,7 @@ export const TableRow = props => {
   );
 };
 
-export const TableCell = props => {
+export const TableCell = (props) => {
   const { colors, spacing } = useTheme();
   return (
     <td

@@ -13,10 +13,10 @@ node_modules
 out
 
 # production
-*/.cache
+.cache
 */build
 dist/
-*/public
+public
 */built-lambda
 
 # misc

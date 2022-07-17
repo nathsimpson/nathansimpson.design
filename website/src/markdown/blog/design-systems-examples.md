@@ -45,6 +45,7 @@ Personally, I think the best design systems aren't the ones built for the masses
 - [Carbon by IBM](https://www.carbondesignsystem.com/components/overview)
 - [Lightning by Salesforce](https://www.lightningdesignsystem.com/)
 - [Audi brand](https://www.audi.com/ci/en/renewed-brand.html)
+- [Goldman Sachs](https://design.gs.com/home)
 
 ---
 

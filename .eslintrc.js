@@ -4,7 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier'
   ],
-  plugins: ['prettier', '@typescript-eslint', '@emotion'],
+  plugins: ['prettier', '@typescript-eslint', 'react', '@emotion'],
   parser: '@typescript-eslint/parser',
   rules: {
     'prettier/prettier': 'error',

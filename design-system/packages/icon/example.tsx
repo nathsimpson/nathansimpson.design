@@ -24,7 +24,7 @@ export const IconsExample = () => {
         gap: spacing.medium
       })}
     >
-      {(Object.keys(ICONS) as (keyof typeof ICONS)[]).map(c => (
+      {(Object.keys(ICONS) as (keyof typeof ICONS)[]).map((c) => (
         <IconExample icon={c} key={c} />
       ))}
     </div>

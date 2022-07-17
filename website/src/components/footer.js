@@ -23,7 +23,7 @@ export const Footer = () => {
           padding: 0
         }}
       >
-        {footer_navItems.map(item => (
+        {footer_navItems.map((item) => (
           <li
             style={{ display: 'inline-block', margin: '0px 5px' }}
             key={item.label}
@@ -47,7 +47,7 @@ export const Footer = () => {
           padding: 0
         }}
       >
-        {footer_socialNetworks.map(network => (
+        {footer_socialNetworks.map((network) => (
           <li
             style={{ display: 'inline-block', margin: '0px 5px' }}
             key={network.name}

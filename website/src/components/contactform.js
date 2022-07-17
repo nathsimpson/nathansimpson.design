@@ -52,14 +52,14 @@ const baseInputStyles = {
   }
 };
 
-const Input = props => (
+const Input = (props) => (
   <div css={{ marginBottom: 12 }}>
     <Label label={props.label} isRequired={props.isRequired} />
     <input css={baseInputStyles} {...props} />
   </div>
 );
 
-const Select = props => (
+const Select = (props) => (
   <div css={{ marginBottom: 12 }}>
     <Label label={props.label} isRequired={props.isRequired} />
     <select
@@ -72,7 +72,7 @@ const Select = props => (
   </div>
 );
 
-const TextInput = props => (
+const TextInput = (props) => (
   <div css={{ marginBottom: 12 }}>
     <Label label={props.label} isRequired={props.isRequired} />
     <textArea css={baseInputStyles} {...props} />

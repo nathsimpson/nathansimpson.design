@@ -44,7 +44,7 @@ export const ColorsExample = () => {
   );
 };
 
-const Color = ({ label, value }) => {
+const Color = ({ label, value }: { label: string; value: string }) => {
   const { colors, fontSizes } = useTheme();
   const wcagText = getContrastColor(value);
 

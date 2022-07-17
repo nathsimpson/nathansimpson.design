@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { PropsWithChildren } from 'react';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 import { spacing, SpacingType } from '@nathsimpson/theme';
 
@@ -21,13 +22,13 @@ type StackProps = {
   gap: ResponsiveProp<SpacingType>;
 } & BoxProps;
 
-export const Stack: React.FunctionComponent<StackProps> = ({
+export const Stack = ({
   align = 'stretch',
   gap = 'none',
   children,
   orientation = 'vertical',
   ...props
-}) => {
+}: PropsWithChildren<StackProps>) => {
   const { dimension, autoFlow } = orientationMap[orientation];
   const { mapResponsiveProp } = useMediaQuery();
 

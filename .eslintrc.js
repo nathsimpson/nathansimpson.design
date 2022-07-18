@@ -12,6 +12,8 @@ module.exports = {
     'react/jsx-fragments': 0,
     'react/prop-types': 0,
     'react/no-unused-prop-types': 0,
+    'react/no-unescaped-entities': 0,
+    '@typescript-eslint/ban-ts-comment': 0,
     'standard/computed-property-even-spacing': 0,
     'no-template-curly-in-string': 0,
     camelcase: 0,

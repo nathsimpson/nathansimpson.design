@@ -39,7 +39,7 @@ export const Talks = ({ data }) => (
 
 const Talk = ({
   node: {
-    body,
+    // body,
     frontmatter: { path, youtubeid, title }
   }
 }) => {

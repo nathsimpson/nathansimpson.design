@@ -21,7 +21,7 @@ const minWidth = (width: number, m = true) =>
 */
 const makeMq = (breakpoints: BreakPoints) => {
   const bps = Object.values(breakpoints);
-  return facepaint(bps.map((value) => minWidth(value)));
+  return facepaint(bps.map(value => minWidth(value)));
 };
 
 // helper if array property declaration isn't appropriate.
@@ -44,7 +44,7 @@ const mapResponsiveProp = <
   valueMap: Map
 ) => {
   if (Array.isArray(value)) {
-    return value.map((k) => (k == null ? null : valueMap[k]));
+    return value.map(k => (k == null ? null : valueMap[k]));
   }
   // @ts-ignore
   return valueMap[value];

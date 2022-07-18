@@ -5,7 +5,7 @@ const { Core } = require('./src/components/core');
 require('prismjs/themes/prism-solarizedlight.css');
 
 // Wraps every page in a component
-exports.wrapPageElement = ({ element, props }) => {
+exports.wrapPageElement = ({ element }) => {
   return (
     <Core>
       <Layout>{element}</Layout>

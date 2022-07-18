@@ -7,7 +7,7 @@ import { Text } from '../../../typography';
 export const SpacingExample = () => {
   return (
     <Stack gap="small">
-      {Object.keys(spacing).map(c => (
+      {Object.keys(spacing).map((c) => (
         <Block label={c} key={c} />
       ))}
     </Stack>

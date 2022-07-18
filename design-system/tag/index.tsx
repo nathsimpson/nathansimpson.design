@@ -50,7 +50,7 @@ export const Tags = ({
   size?: keyof typeof sizes;
 }) => (
   <Cluster gap={size}>
-    {items.map(item => (
+    {items.map((item) => (
       <Tag label={item} key={item} size={size} />
     ))}
   </Cluster>

@@ -37,7 +37,7 @@ export const ColorsExample = () => {
         gap: spacing.small
       }}
     >
-      {colorsArr.map(c => (
+      {colorsArr.map((c) => (
         <Color {...c} key={c.label} />
       ))}
     </div>

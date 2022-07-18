@@ -39,7 +39,7 @@ export const Cluster = forwardRefWithAs<'div', ClusterProps>(
         ref={ref}
         {...props}
       >
-        {Children.map(children, child =>
+        {Children.map(children, (child) =>
           child !== null && child !== undefined ? (
             <div
               css={{

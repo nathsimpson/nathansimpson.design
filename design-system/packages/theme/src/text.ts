@@ -11,10 +11,8 @@ export const fontSizes = {
 export const fontFamilies = {
   heading:
     "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
-  body:
-    "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
-  mono:
-    'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
+  body: "-apple-system, BlinkMacSystemFont, 'SF Pro Display','roboto',sans-serif",
+  mono: 'Monaco,Menlo,Consolas,"Droid Sans Mono","Inconsolata","Courier New",monospace'
 };
 
 export const fontWeights = {

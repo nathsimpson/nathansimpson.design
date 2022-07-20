@@ -8,7 +8,7 @@ export const RadiiExample = () => {
   const { radii } = useTheme();
   return (
     <Stack gap="small">
-      {Object.keys(radii).map(c => (
+      {Object.keys(radii).map((c) => (
         <Block label={c} key={c} />
       ))}
     </Stack>

@@ -37,14 +37,14 @@ export const ColorsExample = () => {
         gap: spacing.small
       }}
     >
-      {colorsArr.map(c => (
+      {colorsArr.map((c) => (
         <Color {...c} key={c.label} />
       ))}
     </div>
   );
 };
 
-const Color = ({ label, value }) => {
+const Color = ({ label, value }: { label: string; value: string }) => {
   const { colors, fontSizes } = useTheme();
   const wcagText = getContrastColor(value);
 

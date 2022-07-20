@@ -13,7 +13,7 @@ import { Heading, Text } from '@design-system/typography';
 import { spacing } from '@nathsimpson/theme';
 import { TextLinkGatsby } from '@design-system/textlink';
 
-const PostCard = ({ id, frontmatter, body, excerpt }) => {
+const PostCard = ({ frontmatter, excerpt }) => {
   const cardStyles = useCardStyles();
   const postedOn = `${frontmatter.date}. ${
     frontmatter.updated ? `Updated ${frontmatter.updated}.` : ''
@@ -38,6 +38,7 @@ const PostCard = ({ id, frontmatter, body, excerpt }) => {
           <img
             css={{ width: '100%', height: 400, objectFit: 'cover' }}
             src={`https://i.ytimg.com/vi/${frontmatter.youtubeid}/hqdefault.jpg`}
+            alt="Screenshot of YouTube video"
           />
         )}
 

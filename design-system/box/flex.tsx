@@ -20,7 +20,6 @@ export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
   (
     {
       align = 'start',
-      as: Tag = 'div',
       basis,
       flex,
       gap,

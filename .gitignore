@@ -7,10 +7,10 @@ node_modules/
 /coverage
 
 # production
-*/.cache
+.cache
 */build
 dist/
-*/public
+public
 */built-lambda
 
 # misc

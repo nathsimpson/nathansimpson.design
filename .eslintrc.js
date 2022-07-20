@@ -1,12 +1,19 @@
 module.exports = {
-  extends: ['standard', 'standard-react', 'prettier', 'prettier/react'],
-  plugins: ['prettier', '@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'prettier'
+  ],
+  plugins: ['prettier', '@typescript-eslint', 'react', '@emotion'],
   parser: '@typescript-eslint/parser',
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-fragments': 0,
     'react/prop-types': 0,
     'react/no-unused-prop-types': 0,
+    'react/no-unescaped-entities': 0,
+    '@typescript-eslint/ban-ts-comment': 0,
     'standard/computed-property-even-spacing': 0,
     'no-template-curly-in-string': 0,
     camelcase: 0,
@@ -29,6 +36,9 @@ module.exports = {
     }
   ],
   settings: {
+    react: {
+      version: 'detect'
+    },
     'import/resolver': {
       alias: [['@design-system', './design-system']]
     }

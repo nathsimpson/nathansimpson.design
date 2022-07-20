@@ -1,5 +1,5 @@
 import { useTheme } from '@nathsimpson/theme';
-import { hexAlpha } from '@nathsimpson/utils';
+import { hexAlpha, getContrastColor, getTintColor } from '@nathsimpson/utils';
 import { IconType } from '@nathsimpson/icon';
 
 type ButtonSize = 'small' | 'medium' | 'large';
@@ -31,15 +31,26 @@ export const useButtonStyles = ({
 }) => {
   const { colors, spacing, fontSizes, fontFamilies, radii } = useTheme();
 
+  const buttonColors = {
+    enabled: colors.brand,
+    hover: getTintColor(colors.brand, 6),
+    active: getTintColor(colors.brand, 12)
+  };
+
   const weights = {
     primary: {
       border: 'none',
       fontWeight: 900,
-      color: 'white',
-      backgroundColor: colors.action,
+      color: getContrastColor(buttonColors.enabled),
+      backgroundColor: buttonColors.enabled,
       '&:hover, &:focus': {
-        backgroundColor: hexAlpha(colors.action, 0.8),
+        backgroundColor: buttonColors.hover,
+        color: getContrastColor(buttonColors.hover),
         textDecoration: 'none'
+      },
+      '&:active': {
+        backgroundColor: getTintColor(colors.brand, 20),
+        color: getContrastColor(buttonColors.active)
       }
     },
     secondary: {
@@ -49,6 +60,9 @@ export const useButtonStyles = ({
       '&:hover, &:focus': {
         backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
+      },
+      '&:active': {
+        backgroundColor: hexAlpha(colors.brand, 0.3)
       }
     },
     none: {
@@ -58,6 +72,9 @@ export const useButtonStyles = ({
       '&:hover, &:focus': {
         backgroundColor: hexAlpha(colors.action, 0.2),
         textDecoration: 'none'
+      },
+      '&:active': {
+        backgroundColor: hexAlpha(colors.brand, 0.3)
       }
     }
   } as const;

@@ -14,7 +14,7 @@
   "scripts": {
     "website": "yarn workspace @nathsimpson/website",
     "dev": "yarn website dev",
-    "clean": "yarn website clean",
+    "clean": "rimraf \"**/node_modules\" \"**/yarn-error.log\" \"**/out.log\" \"**/.DS_Store\" \"**/dist\" \"**/out\" \"**/.next\"",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md{,x}\" \"**/*.ts{,x}\"",
     "postinstall": "preconstruct dev && manypkg check",
     "types": "tsc --project tsconfig.json",

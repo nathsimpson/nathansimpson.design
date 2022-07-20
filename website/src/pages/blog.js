@@ -38,6 +38,7 @@ const PostCard = ({ frontmatter, excerpt }) => {
           <img
             css={{ width: '100%', height: 400, objectFit: 'cover' }}
             src={`https://i.ytimg.com/vi/${frontmatter.youtubeid}/hqdefault.jpg`}
+            alt="Screenshot of YouTube video"
           />
         )}
 

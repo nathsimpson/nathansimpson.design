@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
@@ -41,7 +42,7 @@ const DsComponents = {
   Tiles
 };
 
-const InlineCode = (props) => {
+const InlineCode = props => {
   const { colors, radii, spacing, fontFamilies } = useTheme();
   return (
     <Text
@@ -60,44 +61,44 @@ const InlineCode = (props) => {
 };
 
 const components = {
-  p: (props) => <Text {...props} />,
-  a: (props) => <TextLink {...props} />,
-  h1: (props) => <Heading level={1} {...props} />,
-  h2: (props) => <Heading level={2} {...props} />,
-  h3: (props) => <Heading level={3} {...props} />,
-  h4: (props) => <Heading level={4} {...props} />,
-  h5: (props) => <Heading level={5} {...props} />,
-  h6: (props) => <Heading level={6} {...props} />,
-  em: (props) => (
+  p: props => <Text {...props} />,
+  a: props => <TextLink {...props} />,
+  h1: props => <Heading level={1} {...props} />,
+  h2: props => <Heading level={2} {...props} />,
+  h3: props => <Heading level={3} {...props} />,
+  h4: props => <Heading level={4} {...props} />,
+  h5: props => <Heading level={5} {...props} />,
+  h6: props => <Heading level={6} {...props} />,
+  em: props => (
     <Text as="em" color="emphasis" css={{ fontStyle: 'normal' }} {...props} />
   ),
-  ul: (props) => <Box as="ul" margin="none" {...props} />,
-  img: (props) => (
+  ul: props => <Box as="ul" margin="none" {...props} />,
+  img: props => (
     <div style={{ width: '100%', textAlign: 'center' }}>
       <img {...props} />
     </div>
   ),
   hr: () => <Divider />,
-  code: (props) => {
+  code: props => {
     if (props.live) {
       return <CodeEditor components={DsComponents} {...props} />;
     } else {
       return <CodePreview {...props} />;
     }
   },
-  inlineCode: (props) => {
+  inlineCode: props => {
     return <InlineCode {...props} />;
   },
-  table: (props) => {
+  table: props => {
     return <Table {...props} />;
   },
-  thead: (props) => {
+  thead: props => {
     return <TableHead {...props} />;
   },
-  tr: (props) => {
+  tr: props => {
     return <TableRow {...props} />;
   },
-  td: (props) => {
+  td: props => {
     return <TableCell {...props} />;
   }
 };

@@ -66,6 +66,7 @@ const Avatar = () => {
   return (
     <img
       src="https://files.nathansimpson.design/avatar.jpeg"
+      alt="Nathan is smiling while sitting in a Ford Mustang."
       css={{
         width: 100,
         height: 100,

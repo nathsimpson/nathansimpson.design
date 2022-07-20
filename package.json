@@ -9,7 +9,6 @@
   },
   "workspaces": [
     "website",
-    "website-next",
     "design-system/packages/*"
   ],
   "scripts": {

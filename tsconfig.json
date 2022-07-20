@@ -17,7 +17,7 @@
     "allowJs": true
   },
   "include": [
-    "./website/src/**/*",
+    "./website/**/*",
     "./design-system/*",
     "./design-system/packages/*"
   ]

@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, Global } from '@emotion/core';
-import { createContext, useState, Fragment, ReactElement } from 'react';
+import { Global } from '@emotion/react';
+import { createContext, useState, Fragment, ReactNode } from 'react';
 import {
   ThemeProvider,
   useTheme,
@@ -21,7 +20,7 @@ export const ThemeSelectionContext = createContext<{
   setThemeName: () => {}
 });
 
-export const Core = ({ children }: { children: ReactElement }) => {
+export const Core = ({ children }: { children: ReactNode }) => {
   const [themeName, setThemeName] = useState<keyof typeof themes>('dark');
 
   return (

@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const withPreconstruct = require('@preconstruct/next');
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -9,9 +13,11 @@ const withMDX = require('@next/mdx')({
   }
 });
 
-module.exports = withMDX({
-  reactStrictMode: true,
-  swcMinify: true,
-  // Append the default value with md extensions
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
-});
+module.exports = withPreconstruct(
+  withMDX({
+    reactStrictMode: true,
+    swcMinify: true,
+    // Append the default value with md extensions
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
+  })
+);

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Box, BoxProps } from '../box';
+import { Box, BoxProps } from '@nathsimpson/box';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 

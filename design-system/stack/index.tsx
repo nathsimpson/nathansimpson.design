@@ -3,8 +3,7 @@ import { jsx } from '@emotion/core';
 import { PropsWithChildren } from 'react';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 import { spacing, SpacingType } from '@nathsimpson/theme';
-
-import { Box, BoxProps } from '../box';
+import { Box, BoxProps } from '@nathsimpson/box';
 
 const alignment = {
   center: 'center',

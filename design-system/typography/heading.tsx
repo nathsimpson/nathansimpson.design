@@ -1,6 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Box, BoxMarginProps, BoxPaddingProps, BoxRadiiProps } from '../box';
+import {
+  Box,
+  BoxMarginProps,
+  BoxPaddingProps,
+  BoxRadiiProps
+} from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 
 type HeadingProps = BoxMarginProps &

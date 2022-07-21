@@ -8,7 +8,7 @@ import { Button, LinkButton, IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Tiles } from '@design-system/tiles';
 import { Tag, Tags } from '@design-system/tag';
-import { Box, Flex } from '@design-system/box';
+import { Box, Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
 import { Prose } from '@nathsimpson/prose';
 import { Card } from '@design-system/card';

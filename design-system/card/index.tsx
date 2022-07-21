@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
-import { Flex } from '../box';
 import { Stack } from '../stack';
 import { Text } from '../typography';
+import { Flex } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 
 type CardProps = {

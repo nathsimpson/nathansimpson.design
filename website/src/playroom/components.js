@@ -2,7 +2,7 @@ export { Button, LinkButton, IconButton } from '@design-system/button';
 export { Icon } from '@nathsimpson/icon';
 export { Tiles } from '@design-system/tiles';
 export { Tag, Tags } from '@design-system/tag';
-export { Box, Flex } from '@design-system/box';
+export { Box, Flex } from '@nathsimpson/box';
 export { Stack } from '@design-system/stack';
 // export { Card } from '@design-system/card';
 export { Cluster } from '@design-system/cluster';

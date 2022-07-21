@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import { useContext } from 'react';
 
-import { Box } from '@design-system/box';
+import { Box } from '@nathsimpson/box';
 import { IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Stack } from '@design-system/stack';

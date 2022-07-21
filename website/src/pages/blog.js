@@ -5,13 +5,13 @@ import { Helmet } from 'react-helmet';
 
 import { Header } from '../components';
 import { Tag } from '@design-system/tag';
-import { Divider } from '@design-system/divider';
+import { Divider } from '../components/Divider';
 import { useCardStyles } from '@design-system/card';
-import { Flex } from '@design-system/box';
+import { Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { spacing } from '@nathsimpson/theme';
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from '../components/TextLinkGatsby';
 
 const PostCard = ({ frontmatter, excerpt }) => {
   const cardStyles = useCardStyles();

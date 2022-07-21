@@ -3,8 +3,9 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import { Stack } from '@design-system/stack';
-import { Heading, Text } from '@design-system/typography';
-import { TextLink } from '@design-system/textlink';
+import { Heading, Text } from '@nathsimpson/typography';
+import { TextLink } from '@nathsimpson/text-link';
+
 export class Dribbble extends React.Component {
   constructor() {
     super();

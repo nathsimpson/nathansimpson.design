@@ -10,3 +10,4 @@ export { Mdx, MdxWithoutH1 } from './Mdx';
 export { NotFound } from './NotFound';
 export { Portfolio } from './Portfolio';
 export { Talks } from './Talks';
+export { Divider } from './Divider';

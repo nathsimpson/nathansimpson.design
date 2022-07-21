@@ -2,10 +2,10 @@
 import { jsx } from '@emotion/core';
 
 import { useCardStyles } from '@design-system/card';
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
-import { TextLink } from '@design-system/textlink';
+import { TextLink } from '@nathsimpson/text-link';
 import { useMediaQuery } from '@nathsimpson/utils';
 
 export const Talks = ({ data }) => (

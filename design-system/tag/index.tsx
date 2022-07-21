@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
+import { Flex } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
-import { Cluster } from '../cluster';
 import { hexAlpha } from '@nathsimpson/utils';
 
 const sizes = {
@@ -49,9 +49,9 @@ export const Tags = ({
   items: string[];
   size?: keyof typeof sizes;
 }) => (
-  <Cluster gap={size}>
+  <Flex gap={size} orientation="horizontal">
     {items.map((item) => (
       <Tag label={item} key={item} size={size} />
     ))}
-  </Cluster>
+  </Flex>
 );

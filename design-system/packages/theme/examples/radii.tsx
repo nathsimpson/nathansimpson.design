@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useTheme } from '../src/themecontext';
 import { Stack } from '../../../stack';
-import { Text } from '../../../typography';
 
 export const RadiiExample = () => {
   const { radii } = useTheme();
@@ -27,7 +26,7 @@ const Block = ({ label }) => {
           backgroundColor: colors.brand
         }}
       />
-      <Text>{`${label} (${radii[label].toString()})`}</Text>
+      <p>{`${label} (${radii[label].toString()})`}</p>
     </Stack>
   );
 };

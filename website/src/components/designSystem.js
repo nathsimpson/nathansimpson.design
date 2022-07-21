@@ -4,12 +4,12 @@ import { Helmet } from 'react-helmet';
 import { Container, Header } from '.';
 import { MdxWithoutH1 } from './Mdx';
 
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { LinkButton } from '@design-system/button';
-import { Flex } from '@design-system/box';
+import { Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
-import { TextLinkGatsby } from '@design-system/textlink';
-import { Prose } from '@design-system/prose';
+import { TextLinkGatsby } from './TextLinkGatsby';
+import { Prose } from '@nathsimpson/prose';
 
 export const DesignSystemTemplate = ({ data }) => {
   const {

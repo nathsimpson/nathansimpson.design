@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Tag } from '@design-system/tag';
-import { Cluster } from '@design-system/cluster';
 import { Stack } from '@design-system/stack';
 
-import { Heading, Text } from '@design-system/typography';
-import { TextLink } from '@design-system/textlink';
+import { Heading, Text } from '@nathsimpson/typography';
+import { TextLink } from '@nathsimpson/text-link';
 
+import { Cluster } from './Cluster';
 import { development_skills } from '../data';
 
 export const Development = () => {

@@ -3,16 +3,16 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import { useContext } from 'react';
 
-import { Box } from '@design-system/box';
+import { Box } from '@nathsimpson/box';
 import { IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
-import { Cluster } from '@design-system/cluster';
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from './TextLinkGatsby';
 import { useMediaQuery } from '@nathsimpson/utils';
 
-import { ThemeSelectionContext } from '../components/core';
+import { Cluster } from './Cluster';
+import { ThemeSelectionContext } from './core';
 
 const navItems = [
   {

@@ -9,7 +9,7 @@ type: design-system
 `<Heading>` and `<Text>` components for all your typography needs
 
 ```jsx
-import { Heading, Text } from 'design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 ```
 
 ## Text

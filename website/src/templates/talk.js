@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 
 import { Header, Mdx } from '../components';
 import { Divider } from '@design-system/divider';
-import { Prose } from '@design-system/prose';
+import { Prose } from '@nathsimpson/prose';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
 

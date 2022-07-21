@@ -9,7 +9,7 @@ import { LinkButton } from '@design-system/button';
 import { Flex } from '@design-system/box';
 import { Stack } from '@design-system/stack';
 import { TextLinkGatsby } from '@design-system/textlink';
-import { Prose } from '@design-system/prose';
+import { Prose } from '@nathsimpson/prose';
 
 export const DesignSystemTemplate = ({ data }) => {
   const {

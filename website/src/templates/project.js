@@ -4,7 +4,7 @@ import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
 import { Heading } from '@design-system/typography';
 import { Stack } from '@design-system/stack';
-import { Prose } from '@design-system/prose';
+import { Prose } from '@nathsimpson/prose';
 import { Tags } from '@design-system/tag';
 import { useTheme } from '@nathsimpson/theme';
 import { graphql } from 'gatsby';

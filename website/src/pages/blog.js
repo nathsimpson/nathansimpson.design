@@ -11,7 +11,7 @@ import { Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@nathsimpson/typography';
 import { spacing } from '@nathsimpson/theme';
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from '../components/TextLinkGatsby';
 
 const PostCard = ({ frontmatter, excerpt }) => {
   const cardStyles = useCardStyles();

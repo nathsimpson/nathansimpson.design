@@ -4,7 +4,7 @@ import { Icon } from '@nathsimpson/icon';
 import { useTheme } from '@nathsimpson/theme';
 import { Divider } from './Divider';
 import { Text } from '@nathsimpson/typography';
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from './TextLinkGatsby';
 import { Stack } from '@design-system/stack';
 
 import { footer_navItems, footer_socialNetworks } from '../data';

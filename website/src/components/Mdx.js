@@ -12,11 +12,12 @@ import { Box, Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
 import { Prose } from '@nathsimpson/prose';
 import { Card } from '@design-system/card';
-import { TextLink, TextLinkGatsby } from '@design-system/textlink';
+import { TextLink } from '@nathsimpson/text-link';
 import { Text, Heading } from '@nathsimpson/typography';
 import { useTheme } from '@nathsimpson/theme';
 import { Cluster } from './Cluster';
 import { Divider } from './Divider';
+import { TextLinkGatsby } from './TextLinkGatsby';
 
 import { CodeEditor, CodePreview } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';

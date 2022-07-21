@@ -13,11 +13,10 @@ import {
   Divider,
   Dribbble
 } from '../components';
-
 import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@nathsimpson/typography';
 import { Stack } from '@design-system/stack';
-import { TextLink } from '@design-system/textlink';
+import { TextLink } from '@nathsimpson/text-link';
 
 const Hero = () => {
   return (

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from './TextLinkGatsby';
 import { Icon } from '@nathsimpson/icon';
 import { jsx } from '@emotion/core';
 

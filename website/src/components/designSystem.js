@@ -8,7 +8,7 @@ import { Heading, Text } from '@nathsimpson/typography';
 import { LinkButton } from '@design-system/button';
 import { Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from './TextLinkGatsby';
 import { Prose } from '@nathsimpson/prose';
 
 export const DesignSystemTemplate = ({ data }) => {

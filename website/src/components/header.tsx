@@ -8,7 +8,7 @@ import { IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
-import { TextLinkGatsby } from '@design-system/textlink';
+import { TextLinkGatsby } from './TextLinkGatsby';
 import { useMediaQuery } from '@nathsimpson/utils';
 
 import { Cluster } from './Cluster';

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 
 import { Heading, Text } from '@nathsimpson/typography';
-import { TextLink } from '@design-system/textlink';
+import { TextLink } from '@nathsimpson/text-link';
 
 export const Contact = () => (
   <div>

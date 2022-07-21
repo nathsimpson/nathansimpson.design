@@ -4,7 +4,7 @@ import { Tag } from '@design-system/tag';
 import { Stack } from '@design-system/stack';
 
 import { Heading, Text } from '@nathsimpson/typography';
-import { TextLink } from '@design-system/textlink';
+import { TextLink } from '@nathsimpson/text-link';
 
 import { Cluster } from './Cluster';
 import { development_skills } from '../data';

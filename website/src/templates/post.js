@@ -5,11 +5,11 @@ import { graphql } from 'gatsby';
 
 import { Header, Mdx } from '../components';
 import { BackButton } from '../components/backButton';
-import { Box } from '@design-system/box';
-import { Divider } from '@design-system/divider';
+import { Divider } from '../components/Divider';
+import { Box } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
-import { Heading, Text } from '@design-system/typography';
-import { Prose } from '@design-system/prose';
+import { Heading, Text } from '@nathsimpson/typography';
+import { Prose } from '@nathsimpson/prose';
 import { useTheme } from '@nathsimpson/theme';
 
 const PostTemplate = ({ data }) => {

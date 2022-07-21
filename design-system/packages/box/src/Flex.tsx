@@ -6,7 +6,7 @@ import {
   ResponsiveProp
 } from '@nathsimpson/utils';
 import { spacing, SpacingType } from '@nathsimpson/theme';
-import { Box, BoxProps } from './box';
+import { Box, BoxProps } from './Box';
 
 import {
   getFlexStyles,

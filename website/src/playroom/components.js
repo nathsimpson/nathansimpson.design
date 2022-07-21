@@ -4,5 +4,5 @@ export { Tiles } from '@design-system/tiles';
 export { Tag, Tags } from '@design-system/tag';
 export { Box, Flex } from '@nathsimpson/box';
 export { Stack } from '@design-system/stack';
-export { TextLink } from '@design-system/textlink';
+export { TextLink } from '@nathsimpson/text-link';
 export { Text, Heading } from '@nathsimpson/typography';

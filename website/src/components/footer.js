@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Icon } from '@nathsimpson/icon';
 import { useTheme } from '@nathsimpson/theme';
-import { Divider } from '@design-system/divider';
+import { Divider } from './Divider';
 import { Text } from '@design-system/typography';
 import { TextLinkGatsby } from '@design-system/textlink';
 import { Stack } from '@design-system/stack';

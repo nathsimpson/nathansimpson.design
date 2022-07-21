@@ -16,7 +16,7 @@ import { Cluster } from '@design-system/cluster';
 import { TextLink, TextLinkGatsby } from '@design-system/textlink';
 import { Text, Heading } from '@design-system/typography';
 import { useTheme } from '@nathsimpson/theme';
-import { Divider } from '@design-system/divider';
+import { Divider } from './Divider';
 
 import { CodeEditor, CodePreview } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';

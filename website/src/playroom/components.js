@@ -8,4 +8,3 @@ export { Stack } from '@design-system/stack';
 export { Cluster } from '@design-system/cluster';
 export { TextLink } from '@design-system/textlink';
 export { Text, Heading } from '@design-system/typography';
-export { Divider } from '@design-system/divider';

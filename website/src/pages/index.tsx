@@ -10,12 +10,12 @@ import {
   Portfolio,
   Development,
   Talks,
+  Divider,
   Dribbble
 } from '../components';
 
 import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@design-system/typography';
-import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';
 import { TextLink } from '@design-system/textlink';
 

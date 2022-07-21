@@ -5,8 +5,8 @@ import { graphql } from 'gatsby';
 
 import { Header, Mdx } from '../components';
 import { BackButton } from '../components/backButton';
+import { Divider } from '../components/Divider';
 import { Box } from '@nathsimpson/box';
-import { Divider } from '@design-system/divider';
 import { Stack } from '@design-system/stack';
 import { Heading, Text } from '@design-system/typography';
 import { Prose } from '@nathsimpson/prose';

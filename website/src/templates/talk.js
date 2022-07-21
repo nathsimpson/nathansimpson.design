@@ -3,8 +3,7 @@ import { jsx } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { Header, Mdx } from '../components';
-import { Divider } from '@design-system/divider';
+import { Divider, Header, Mdx } from '../components';
 import { Prose } from '@nathsimpson/prose';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import { Header } from '../components';
 import { Tag } from '@design-system/tag';
-import { Divider } from '@design-system/divider';
+import { Divider } from '../components/Divider';
 import { useCardStyles } from '@design-system/card';
 import { Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';

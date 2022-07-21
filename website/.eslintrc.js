@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ['../.eslintrc.js', 'next/core-web-vitals']
+  globals: {
+    __PATH_PREFIX__: true
+  },
+  extends: [`react-app`, 'prettier']
 };

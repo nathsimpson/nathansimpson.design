@@ -17,7 +17,7 @@
     "allowJs": true
   },
   "include": [
-    "./website/**/*",
+    "./website-next/**/*",
     "./design-system/*",
     "./design-system/packages/*"
   ]

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { useTheme } from '@nathsimpson/theme';
 
 export const Container = ({ as: Tag = 'div', ...props }) => {

@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { Tag } from '@design-system/tag';
 import { Stack } from '@design-system/stack';
 
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@design-system/textlink';
 
 import { Cluster } from './Cluster';

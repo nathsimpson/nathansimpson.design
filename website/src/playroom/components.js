@@ -5,4 +5,4 @@ export { Tag, Tags } from '@design-system/tag';
 export { Box, Flex } from '@nathsimpson/box';
 export { Stack } from '@design-system/stack';
 export { TextLink } from '@design-system/textlink';
-export { Text, Heading } from '@design-system/typography';
+export { Text, Heading } from '@nathsimpson/typography';

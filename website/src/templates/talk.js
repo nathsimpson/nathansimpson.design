@@ -7,8 +7,7 @@ import { Divider, Header, Mdx } from '../components';
 import { Prose } from '@nathsimpson/prose';
 import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
-
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 
 const TalkTemplate = ({ data }) => {
   const talk = data.mdx;

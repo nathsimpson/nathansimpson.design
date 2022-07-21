@@ -1,0 +1,20 @@
+{
+  "name": "@nathsimpson/typography",
+  "author": "Nathan Simpson",
+  "description": "The typography for my Design System",
+  "version": "0.1.0",
+  "main": "dist/nathsimpson-typography.cjs.js",
+  "module": "dist/nathsimpson-typography.esm.js",
+  "peerDependencies": {
+    "@nathsimpson/box": "0.1.0",
+    "@nathsimpson/theme": "0.1.0",
+    "@nathsimpson/utils": "0.1.0",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@nathsimpson/box": "*",
+    "@nathsimpson/theme": "*",
+    "@nathsimpson/utils": "*",
+    "react": "^17.0.2"
+  }
+}

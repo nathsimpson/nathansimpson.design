@@ -9,7 +9,7 @@ import { Divider } from '../components/Divider';
 import { useCardStyles } from '@design-system/card';
 import { Flex } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { spacing } from '@nathsimpson/theme';
 import { TextLinkGatsby } from '@design-system/textlink';
 

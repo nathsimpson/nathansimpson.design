@@ -8,7 +8,7 @@ import { BackButton } from '../components/backButton';
 import { Divider } from '../components/Divider';
 import { Box } from '@nathsimpson/box';
 import { Stack } from '@design-system/stack';
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
 import { useTheme } from '@nathsimpson/theme';
 

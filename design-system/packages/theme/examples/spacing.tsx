@@ -2,7 +2,6 @@ import React from 'react';
 import { useTheme } from '../src/themecontext';
 import { spacing } from '../src/index';
 import { Stack } from '../../../stack';
-import { Text } from '../../../typography';
 
 export const SpacingExample = () => {
   return (
@@ -26,7 +25,7 @@ const Block = ({ label }) => {
         }}
       />
 
-      <Text>{`${label} (${spacing[label].toString()})`}</Text>
+      <p>{`${label} (${spacing[label].toString()})`}</p>
     </Stack>
   );
 };

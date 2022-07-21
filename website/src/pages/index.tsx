@@ -15,7 +15,7 @@ import {
 } from '../components';
 
 import { useTheme } from '@nathsimpson/theme';
-import { Heading, Text } from '@design-system/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { Stack } from '@design-system/stack';
 import { TextLink } from '@design-system/textlink';
 

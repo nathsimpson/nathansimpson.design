@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
 import { Heading } from '@nathsimpson/typography';

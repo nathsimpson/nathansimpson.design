@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
 import { Flex } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';

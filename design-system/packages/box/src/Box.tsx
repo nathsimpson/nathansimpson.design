@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { useMediaQuery, forwardRefWithAs } from '@nathsimpson/utils';
 import { ReactNode, ElementType } from 'react';
 

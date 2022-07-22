@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
 

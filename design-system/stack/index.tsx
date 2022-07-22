@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { PropsWithChildren } from 'react';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
 import { spacing, SpacingType } from '@nathsimpson/theme';

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { ICONS } from './icons';
 import { useTheme } from '@nathsimpson/theme';
 

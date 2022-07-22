@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
 export const getLinkStyles = ({ size }: { size?: FontSizeType }) => {

@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-
 import { Heading } from '@nathsimpson/typography';
 import { Card } from '@design-system/card';
 import { Tiles } from '@design-system/tiles';

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Tag } from '@design-system/tag';
 import { Stack } from '@design-system/stack';
 

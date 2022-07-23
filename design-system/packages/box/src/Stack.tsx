@@ -4,23 +4,18 @@ import { forwardRefWithAs } from '@nathsimpson/utils';
 import { Box } from './Box';
 import { BoxProps } from './styles';
 
-export type StackProps = Omit<BoxProps, 'display'>;
+export type StackProps = Omit<BoxProps, 'display' | 'flexDirection'>;
 
 export const Stack = forwardRefWithAs<'div', StackProps>(
   (
-    {
-      flexDirection = 'column',
-      justifyContent = 'flex-start',
-      alignItems = 'stretch',
-      ...props
-    },
+    { justifyContent = 'flex-start', alignItems = 'stretch', ...props },
     ref
   ) => {
     return (
       <Box
         ref={ref}
         display="flex"
-        flexDirection={flexDirection}
+        flexDirection="column"
         justifyContent={justifyContent}
         alignItems={alignItems}
         {...props}

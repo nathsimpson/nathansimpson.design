@@ -140,6 +140,7 @@ type BoxLayoutProps = {
   flexDirection?: ResponsiveProp<
     'row' | 'row-reverse' | 'column' | 'column-reverse'
   >;
+  flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
 };
 
 const layoutStyles = ({
@@ -152,7 +153,8 @@ const layoutStyles = ({
   flexBasis,
   flexGrow,
   flexShrink,
-  flexDirection
+  flexDirection,
+  flexWrap
 }: BoxLayoutProps) => {
   return {
     display,
@@ -164,7 +166,8 @@ const layoutStyles = ({
     flexBasis,
     flexGrow,
     flexShrink,
-    flexDirection
+    flexDirection,
+    flexWrap
   };
 };
 

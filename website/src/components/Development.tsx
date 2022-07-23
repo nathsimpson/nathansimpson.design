@@ -28,8 +28,8 @@ export const Development = () => {
 
         <Flex
           as="ul"
+          flexWrap="wrap"
           gap="small"
-          alignItems="center"
           margin="none"
           padding="none"
           css={{

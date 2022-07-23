@@ -1,4 +1,4 @@
-export { Button, LinkButton, IconButton } from '@design-system/button';
+export { Button, LinkButton, IconButton } from '@nathsimpson/button';
 export { Icon } from '@nathsimpson/icon';
 export { Tiles } from '@design-system/tiles';
 export { Tag, Tags } from '@design-system/tag';

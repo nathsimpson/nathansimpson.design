@@ -22,6 +22,12 @@ export type IconButtonProps = {
   weight: ButtonWeight;
 };
 
+export const iconSizes = {
+  small: 17,
+  medium: 19,
+  large: 24
+};
+
 export const useButtonStyles = ({
   size,
   weight
@@ -73,11 +79,11 @@ export const useButtonStyles = ({
     borderRadius: radii[size],
     textDecoration: 'none',
     cursor: 'pointer',
-    display: 'grid',
+    display: 'flex',
+    flexDirection: 'row',
     gap: spacing.xsmall,
     justifyItems: 'center',
     alignItems: 'center',
-    gridAutoFlow: 'column',
     width: 'fit-content',
     boxSizing: 'border-box',
     lineHeight: 1,

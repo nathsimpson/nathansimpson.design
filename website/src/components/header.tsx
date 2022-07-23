@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core';
 import { useContext } from 'react';
 
 import { Box, Flex } from '@nathsimpson/box';
-import { IconButton } from '@design-system/button';
+import { IconButton } from '@nathsimpson/button';
 import { Icon } from '@nathsimpson/icon';
 import { useTheme } from '@nathsimpson/theme';
 import { TextLinkGatsby } from './TextLinkGatsby';

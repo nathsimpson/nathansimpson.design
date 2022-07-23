@@ -7,7 +7,7 @@ type: design-system
 # Button
 
 ```jsx
-import { Button, LinkButton } from 'design-system/button';
+import { Button, LinkButton } from '@nathsimpson/button';
 ```
 
 ## Button

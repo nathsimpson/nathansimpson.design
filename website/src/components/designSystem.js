@@ -5,7 +5,7 @@ import { Container, Header } from '.';
 import { MdxWithoutH1 } from './Mdx';
 
 import { Heading, Text } from '@nathsimpson/typography';
-import { LinkButton } from '@design-system/button';
+import { LinkButton } from '@nathsimpson/button';
 import { Flex, Stack } from '@nathsimpson/box';
 import { TextLinkGatsby } from './TextLinkGatsby';
 import { Prose } from '@nathsimpson/prose';

@@ -3,9 +3,8 @@ import { Container, Header } from '.';
 import { MdxWithoutH1 } from './Mdx';
 
 import { Heading, Text } from '@nathsimpson/typography';
-import { LinkButton } from '@design-system/button';
-import { Flex } from '@nathsimpson/box';
-import { Stack } from '@design-system/stack';
+import { LinkButton } from '@nathsimpson/button';
+import { Flex, Stack } from '@nathsimpson/box';
 import { TextLinkGatsby } from './TextLinkGatsby';
 import { Prose } from '@nathsimpson/prose';
 
@@ -42,10 +41,10 @@ export const DesignSystemTemplate = ({ data }) => {
 
           <article>
             <Flex
-              orientation="horizontal"
-              justify="between"
+              justifyContent="space-between"
+              alignItems="flex-end"
               marginBottom="large"
-              align="end"
+              width="100%"
             >
               <Heading>{title}</Heading>
               <LinkButton

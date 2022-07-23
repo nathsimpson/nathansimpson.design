@@ -2,18 +2,15 @@
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Button, LinkButton, IconButton } from '@design-system/button';
+import { Button, LinkButton, IconButton } from '@nathsimpson/button';
 import { Icon } from '@nathsimpson/icon';
-import { Tiles } from '@design-system/tiles';
-import { Tag, Tags } from '@design-system/tag';
-import { Box, Flex } from '@nathsimpson/box';
-import { Stack } from '@design-system/stack';
+import { Tag, Tags } from '@nathsimpson/tag';
+import { Box, Flex, Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
-import { Card } from '@design-system/card';
+import { Card } from '@nathsimpson/card';
 import { TextLink } from '@nathsimpson/text-link';
 import { Text, Heading } from '@nathsimpson/typography';
-import { useTheme } from '@nathsimpson/theme';
-import { Cluster } from './Cluster';
+import { useTheme, spacing } from '@nathsimpson/theme';
 import { Divider } from './Divider';
 import { TextLinkGatsby } from './TextLinkGatsby';
 
@@ -24,7 +21,6 @@ const DsComponents = {
   Box,
   Button,
   Card,
-  Cluster,
   Divider,
   Flex,
   Heading,
@@ -38,7 +34,7 @@ const DsComponents = {
   Text,
   TextLink,
   TextLinkGatsby,
-  Tiles
+  spacing
 };
 
 const InlineCode = (props) => {

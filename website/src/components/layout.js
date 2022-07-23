@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, Global } from '@emotion/core';
+import { Global } from '@emotion/core';
 import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 

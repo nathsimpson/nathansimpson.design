@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, Global } from '@emotion/core';
+import { Global } from '@emotion/core';
 import { ThemeProvider, useTheme } from '@nathsimpson/theme';
 
 const PlayroomLayout = ({ children }) => {

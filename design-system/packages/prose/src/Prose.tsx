@@ -1,6 +1,5 @@
-/** @jsx jsx */
 import { ReactNode } from 'react';
-import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 import { useTheme } from '@nathsimpson/theme';
 
 type ProseProps = {

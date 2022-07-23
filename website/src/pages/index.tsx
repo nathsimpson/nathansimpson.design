@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { Fragment } from 'react';
-import { jsx } from '@emotion/core';
 import { graphql, PageProps } from 'gatsby';
 import Helmet from 'react-helmet';
 
@@ -15,7 +13,7 @@ import {
 } from '../components';
 import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@nathsimpson/typography';
-import { Stack } from '@design-system/stack';
+import { Stack } from '@nathsimpson/box';
 import { TextLink } from '@nathsimpson/text-link';
 
 const Hero = () => {
@@ -82,7 +80,7 @@ const App = ({ data }: PageProps) => (
     <Hero />
 
     <Container>
-      <Stack gap="xxxlarge" marginY="xxxlarge" align="center">
+      <Stack gap="xxxlarge" marginY="xxxlarge" alignItems="center">
         <Portfolio data={data} />
 
         <Divider />

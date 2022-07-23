@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import { Divider, Header, Mdx } from '../components';
 import { Prose } from '@nathsimpson/prose';
-import { Stack } from '@design-system/stack';
+import { Stack } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@nathsimpson/typography';
 

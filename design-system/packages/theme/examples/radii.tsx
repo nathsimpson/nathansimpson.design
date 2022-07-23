@@ -1,7 +1,7 @@
 import React from 'react';
+import { Stack } from '@nathsimpson/box';
 
 import { useTheme } from '../src/themecontext';
-import { Stack } from '../../../stack';
 
 export const RadiiExample = () => {
   const { radii } = useTheme();

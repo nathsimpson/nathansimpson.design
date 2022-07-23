@@ -1,7 +1,7 @@
 import React from 'react';
+import { Stack } from '@nathsimpson/box';
 import { useTheme } from '../src/themecontext';
 import { spacing } from '../src/index';
-import { Stack } from '../../../stack';
 
 export const SpacingExample = () => {
   return (

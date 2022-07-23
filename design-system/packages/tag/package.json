@@ -1,0 +1,14 @@
+{
+  "name": "@nathsimpson/tag",
+  "author": "Nathan Simpson",
+  "description": "Tag and Tags components",
+  "version": "0.1.0",
+  "main": "dist/nathsimpson-tag.cjs.js",
+  "module": "dist/nathsimpson-tag.esm.js",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "react": "^17.0.2"
+  }
+}

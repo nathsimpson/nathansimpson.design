@@ -9,7 +9,7 @@ type: design-system
 Tags are used to label, categorise or classify items using keywords that describe them.
 
 ```jsx
-import { Tag } from 'design-system/tag';
+import { Tag } from '@nathsimpson/tag';
 ```
 
 ```jsx live
@@ -24,10 +24,10 @@ Tag comes in two sizes...
 - medium
 
 ```jsx live
-<Cluster gap="small">
+<Flex gap="small" alignItems="center">
   <Tag label="small" size="small" />
   <Tag label="medium" size="medium" />
-</Cluster>
+</Flex>
 ```
 
 ## Tags

@@ -1,17 +1,10 @@
-import {
-  Box,
-  BoxMarginProps,
-  BoxPaddingProps,
-  BoxRadiiProps
-} from '@nathsimpson/box';
+import { Box } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 
-type HeadingProps = BoxMarginProps &
-  BoxPaddingProps &
-  BoxRadiiProps & {
-    children: string;
-    level: 1 | 2 | 3 | 4 | 5 | 6;
-  };
+type HeadingProps = {
+  children: string;
+  level: 1 | 2 | 3 | 4 | 5 | 6;
+};
 
 export const Heading = ({ level = 1, ...props }: HeadingProps) => {
   const { colors, fontSizes, fontFamilies } = useTheme();

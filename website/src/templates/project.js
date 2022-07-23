@@ -1,9 +1,9 @@
 import { Header, MdxWithoutH1 } from '../components';
 import { BackButton } from '../components/backButton';
 import { Heading } from '@nathsimpson/typography';
-import { Stack } from '@design-system/stack';
+import { Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
-import { Tags } from '@design-system/tag';
+import { Tags } from '@nathsimpson/tag';
 import { useTheme } from '@nathsimpson/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';

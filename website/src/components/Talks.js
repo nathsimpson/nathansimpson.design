@@ -1,6 +1,6 @@
-import { useCardStyles } from '@design-system/card';
+import { useCardStyles } from '@nathsimpson/card';
 import { Heading, Text } from '@nathsimpson/typography';
-import { Stack } from '@design-system/stack';
+import { Stack } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 import { TextLink } from '@nathsimpson/text-link';
 import { useMediaQuery } from '@nathsimpson/utils';

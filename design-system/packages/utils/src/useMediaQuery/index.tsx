@@ -36,18 +36,18 @@ const makeMaxBreak = (breakpoints: BreakPoints) => (key: BreakPoint) => {
 };
 
 // A helper for handling string or array values
-const mapResponsiveProp = <
+export const mapResponsiveProp = <
   Map extends Record<string, string | number>,
   Keys extends keyof Map
 >(
   value: Keys | readonly (Keys | null)[],
-  valueMap: Map
+  valueMapper: Map
 ) => {
   if (Array.isArray(value)) {
-    return value.map((k) => (k == null ? null : valueMap[k]));
+    return value.map((k) => (k == null ? null : valueMapper[k]));
   }
   // @ts-ignore
-  return valueMap[value];
+  return valueMapper[value];
 };
 
 export const useMediaQuery = () => {

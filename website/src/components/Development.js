@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Tag } from '@design-system/tag';
-import { Stack } from '@design-system/stack';
+import { Flex, Stack } from '@nathsimpson/box';
 
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
 
-import { Cluster } from './Cluster';
 import { development_skills } from '../data';
 
 export const Development = () => {
@@ -27,10 +26,10 @@ export const Development = () => {
 
         <Text>I'm experienced with the following technologies...</Text>
 
-        <Cluster
+        <Flex
           as="ul"
           gap="small"
-          align="center"
+          alignItems="center"
           margin="none"
           padding="none"
           css={{
@@ -41,7 +40,7 @@ export const Development = () => {
           {development_skills.map((item) => (
             <Tag label={item} as="li" key={item} />
           ))}
-        </Cluster>
+        </Flex>
       </Stack>
     </div>
   );

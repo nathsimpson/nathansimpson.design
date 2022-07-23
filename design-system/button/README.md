@@ -13,11 +13,11 @@ import { Button, LinkButton } from 'design-system/button';
 ## Button
 
 ```jsx live
-<Stack gap="small" orientation="horizontal">
+<Flex gap="small">
   <Button label="Primary" size="medium" weight="primary" />
   <Button label="Secondary" size="medium" weight="secondary" />
   <Button label="None" size="medium" weight="none" />
-</Stack>
+</Flex>
 ```
 
 There are three button weights to choose from:
@@ -37,7 +37,7 @@ and three sizes...
 Buttons can include icons on the left or right sides.
 
 ```jsx live
-<Stack gap="small" orientation="horizontal">
+<Flex gap="small">
   <Button label="Create" size="medium" weight="primary" iconBefore="plus" />
   <Button
     label="Next"
@@ -45,7 +45,7 @@ Buttons can include icons on the left or right sides.
     weight="secondary"
     iconAfter="chevronRight"
   />
-</Stack>
+</Flex>
 ```
 
 ### Props

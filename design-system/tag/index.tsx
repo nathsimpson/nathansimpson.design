@@ -49,7 +49,7 @@ export const Tags = ({
   items: string[];
   size?: keyof typeof sizes;
 }) => (
-  <Flex gap={size} orientation="horizontal">
+  <Flex gap={size}>
     {items.map((item) => (
       <Tag label={item} key={item} size={size} />
     ))}

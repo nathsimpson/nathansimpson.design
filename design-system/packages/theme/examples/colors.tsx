@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Stack } from '@nathsimpson/box';
 import { useTheme } from '../src/themecontext';
 import { spacing } from '../src/index';
 
 import { getContrastColor, getWcagScore } from 'hex-a11y';
-
-import { Stack } from '../../../stack';
 
 export const ColorsExample = () => {
   const { colors } = useTheme();

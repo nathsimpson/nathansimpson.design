@@ -5,7 +5,7 @@ import { useTheme } from '@nathsimpson/theme';
 import { Divider } from './Divider';
 import { Text } from '@nathsimpson/typography';
 import { TextLinkGatsby } from './TextLinkGatsby';
-import { Stack } from '@design-system/stack';
+import { Stack } from '@nathsimpson/box';
 
 import { footer_navItems, footer_socialNetworks } from '../data';
 

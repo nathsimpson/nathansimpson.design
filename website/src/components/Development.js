@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Tag } from '@design-system/tag';
-import { Stack } from '@nathsimpson/box';
+import { Flex, Stack } from '@nathsimpson/box';
 
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
@@ -29,7 +29,7 @@ export const Development = () => {
         <Flex
           as="ul"
           gap="small"
-          align="center"
+          alignItems="center"
           margin="none"
           padding="none"
           css={{

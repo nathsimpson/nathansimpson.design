@@ -43,10 +43,9 @@ export const DesignSystemTemplate = ({ data }) => {
 
           <article>
             <Flex
-              orientation="horizontal"
-              justify="between"
+              justifyContent="space-between"
+              alignItems="flex-end"
               marginBottom="large"
-              align="end"
               width="100%"
             >
               <Heading>{title}</Heading>

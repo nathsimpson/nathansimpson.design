@@ -2,8 +2,8 @@
 import { jsx } from '@emotion/core';
 import { Text } from '@nathsimpson/typography';
 import { useMediaQuery } from '@nathsimpson/utils';
+import { Stack } from '@nathsimpson/box';
 
-import { Stack } from '../../stack';
 import { spacing } from '../theme';
 import { Icon } from './src/index';
 import { ICONS } from './src/icons';
@@ -33,7 +33,7 @@ export const IconsExample = () => {
 
 const IconExample = ({ icon }: { icon: keyof typeof ICONS }) => (
   <Stack
-    align="center"
+    alignItems="center"
     bg="emphasis"
     gap="medium"
     paddingY="large"

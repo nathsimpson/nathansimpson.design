@@ -6,8 +6,7 @@ import { MdxWithoutH1 } from './Mdx';
 
 import { Heading, Text } from '@nathsimpson/typography';
 import { LinkButton } from '@design-system/button';
-import { Flex } from '@nathsimpson/box';
-import { Stack } from '@design-system/stack';
+import { Flex, Stack } from '@nathsimpson/box';
 import { TextLinkGatsby } from './TextLinkGatsby';
 import { Prose } from '@nathsimpson/prose';
 

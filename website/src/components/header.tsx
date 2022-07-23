@@ -3,10 +3,9 @@ import { Link } from 'gatsby';
 import { jsx } from '@emotion/core';
 import { useContext } from 'react';
 
-import { Box } from '@nathsimpson/box';
+import { Box, Flex } from '@nathsimpson/box';
 import { IconButton } from '@design-system/button';
 import { Icon } from '@nathsimpson/icon';
-import { Stack } from '@design-system/stack';
 import { useTheme } from '@nathsimpson/theme';
 import { TextLinkGatsby } from './TextLinkGatsby';
 import { useMediaQuery } from '@nathsimpson/utils';
@@ -135,17 +134,10 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
           </label>
         </div>
 
-        <Stack
-          // TODO: JS helper for current breakpoint?
-          // orientation={isMobile ? "vertical" : "horizontal"}
-          orientation="horizontal"
+        <Flex
+          flexDirection={['column', 'row']}
+          alignItems="center"
           gap="medium"
-          css={{
-            alignItems: 'center',
-            [maxBreak('sm')]: {
-              gridAutoFlow: 'row'
-            }
-          }}
         >
           {navItems.map(({ url, label }) => (
             <TextLinkGatsby key={url} to={url}>
@@ -161,7 +153,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             size="small"
             weight="secondary"
           />
-        </Stack>
+        </Flex>
       </nav>
     </header>
   );

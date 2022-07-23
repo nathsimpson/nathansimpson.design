@@ -136,7 +136,9 @@ type BoxLayoutProps = {
   /** Define shrink "factor" of a flex item. It accepts a unitless value, which dictates the amount of available space inside the flex container the item should take up. */
   flexShrink?: number;
   /** Defines the distribution of space between items along the main-axis of the flex container. */
-  flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+  flexDirection?: ResponsiveProp<
+    'row' | 'row-reverse' | 'column' | 'column-reverse'
+  >;
 };
 
 const layoutStyles = ({
@@ -152,7 +154,7 @@ const layoutStyles = ({
   display,
   height: height,
   width,
-  gap,
+  gap: gap && mapResponsiveProp(gap, spacing),
   flexBasis,
   flexGrow,
   flexShrink,

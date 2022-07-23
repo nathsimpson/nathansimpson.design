@@ -2,7 +2,7 @@
 import React from 'react';
 import { jsx } from '@emotion/core';
 
-import { Stack } from '@design-system/stack';
+import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
 

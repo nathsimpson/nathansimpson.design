@@ -1,13 +1,13 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import { useContext } from 'react';
 
 import { Box, Flex } from '@nathsimpson/box';
 import { IconButton } from '@nathsimpson/button';
 import { Icon } from '@nathsimpson/icon';
 import { useTheme } from '@nathsimpson/theme';
-import { TextLinkGatsby } from './TextLinkGatsby';
 import { useMediaQuery } from '@nathsimpson/utils';
 
+import { NextTextLink } from './NextTextLink';
 import { ThemeSelectionContext } from './core';
 
 const navItems = [
@@ -80,7 +80,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         </Box>
 
         <Link
-          to="/"
+          href="/"
           css={{
             color: colors.brand,
             textDecoration: 'none',
@@ -137,9 +137,9 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
           gap="medium"
         >
           {navItems.map(({ url, label }) => (
-            <TextLinkGatsby key={url} to={url}>
+            <NextTextLink key={url} href={url}>
               {label}
-            </TextLinkGatsby>
+            </NextTextLink>
           ))}
           <IconButton
             label="Toggle theme"

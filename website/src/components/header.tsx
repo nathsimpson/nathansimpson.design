@@ -10,7 +10,6 @@ import { useTheme } from '@nathsimpson/theme';
 import { TextLinkGatsby } from './TextLinkGatsby';
 import { useMediaQuery } from '@nathsimpson/utils';
 
-import { Cluster } from './Cluster';
 import { ThemeSelectionContext } from './core';
 
 const navItems = [
@@ -64,7 +63,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         }}
       />
 
-      <Cluster gap="medium" align="center">
+      <Flex gap="medium" alignItems="center">
         <Box
           as="label"
           htmlFor="nav-toggle"
@@ -94,7 +93,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
         >
           <Icon icon="ns" size={50} />
         </Link>
-      </Cluster>
+      </Flex>
 
       <nav
         css={{

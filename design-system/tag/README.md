@@ -24,10 +24,10 @@ Tag comes in two sizes...
 - medium
 
 ```jsx live
-<Cluster gap="small">
+<Flex gap="small">
   <Tag label="small" size="small" />
   <Tag label="medium" size="medium" />
-</Cluster>
+</Flex>
 ```
 
 ## Tags

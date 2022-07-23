@@ -6,7 +6,6 @@ import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
 
-import { Cluster } from './Cluster';
 import { development_skills } from '../data';
 
 export const Development = () => {
@@ -27,7 +26,7 @@ export const Development = () => {
 
         <Text>I'm experienced with the following technologies...</Text>
 
-        <Cluster
+        <Flex
           as="ul"
           gap="small"
           align="center"
@@ -41,7 +40,7 @@ export const Development = () => {
           {development_skills.map((item) => (
             <Tag label={item} as="li" key={item} />
           ))}
-        </Cluster>
+        </Flex>
       </Stack>
     </div>
   );

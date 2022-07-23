@@ -47,6 +47,7 @@ export const DesignSystemTemplate = ({ data }) => {
               justify="between"
               marginBottom="large"
               align="end"
+              width="100%"
             >
               <Heading>{title}</Heading>
               <LinkButton

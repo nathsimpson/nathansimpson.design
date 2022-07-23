@@ -10,6 +10,7 @@ import {
   useMediaQuery,
   ResponsiveProp
 } from '@nathsimpson/utils';
+import { ElementType, ReactNode } from 'react';
 
 type BoxMarginProps = {
   margin?: ResponsiveProp<SpacingType>;
@@ -146,20 +147,26 @@ const layoutStyles = ({
   height,
   gap,
   width,
+  alignItems,
+  justifyContent,
   flexBasis,
   flexGrow,
   flexShrink,
   flexDirection
-}: BoxLayoutProps) => ({
-  display,
-  height: height,
-  width,
-  gap: gap && mapResponsiveProp(gap, spacing),
-  flexBasis,
-  flexGrow,
-  flexShrink,
-  flexDirection
-});
+}: BoxLayoutProps) => {
+  return {
+    display,
+    height: height,
+    width,
+    gap: gap && mapResponsiveProp(gap, spacing),
+    alignItems,
+    justifyContent,
+    flexBasis,
+    flexGrow,
+    flexShrink,
+    flexDirection
+  };
+};
 
 type BoxColorProps = {
   /** Background color */
@@ -181,18 +188,19 @@ export type BoxProps = BoxMarginProps &
   BoxPaddingProps &
   BoxColorProps &
   BoxRadiiProps &
-  BoxLayoutProps;
+  BoxLayoutProps & {
+    as?: ElementType;
+    /** The content of this container. */
+    children?: ReactNode;
+  };
 
-// {
-//   as?: ElementType;
-//   /** The content of this container. */
-//   children?: ReactNode;
-// };
 export const boxStyles = ({
   display,
   height,
   width,
   gap,
+  alignItems,
+  justifyContent,
   flexBasis,
   flexGrow,
   flexShrink,
@@ -223,16 +231,6 @@ export const boxStyles = ({
 
   return [
     mq({
-      ...layoutStyles({
-        display,
-        height,
-        gap,
-        width,
-        flexBasis,
-        flexGrow,
-        flexShrink,
-        flexDirection
-      }),
       ...colorStyles({
         bg
       }),
@@ -260,6 +258,18 @@ export const boxStyles = ({
         roundingLeft,
         roundingRight,
         roundingTop
+      }),
+      ...layoutStyles({
+        display,
+        height,
+        gap,
+        width,
+        alignItems,
+        justifyContent,
+        flexBasis,
+        flexGrow,
+        flexShrink,
+        flexDirection
       })
     }),
     attrs

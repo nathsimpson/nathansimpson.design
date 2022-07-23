@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
-import { Flex } from '@nathsimpson/box';
+import { Box, Flex } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 import { hexAlpha } from '@nathsimpson/utils';
 
@@ -16,18 +16,19 @@ type TagProps = {
   size?: keyof typeof sizes;
 };
 
-export const Tag = ({ as: Elem = 'div', label, size = 'medium' }: TagProps) => {
-  const { colors, radii } = useTheme();
+export const Tag = ({ as = 'div', label, size = 'medium' }: TagProps) => {
+  const { colors } = useTheme();
   const color = colors.text.default;
 
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
-    <Elem
+    <Box
+      as={as}
+      rounding="medium"
       css={{
         border: `1px solid ${color}`,
         color: color,
         backgroundColor: hexAlpha(color, 0.2),
-        borderRadius: radii.medium,
         display: 'inline-flex',
         flexShrink: 0,
         fontSize: sizes[size] * 4,
@@ -38,7 +39,7 @@ export const Tag = ({ as: Elem = 'div', label, size = 'medium' }: TagProps) => {
       }}
     >
       {formattedLabel}
-    </Elem>
+    </Box>
   );
 };
 
@@ -49,7 +50,16 @@ export const Tags = ({
   items: string[];
   size?: keyof typeof sizes;
 }) => (
-  <Flex as="ul" flexWrap="wrap" margin="none" padding="none" gap="small">
+  <Flex
+    as="ul"
+    flexWrap="wrap"
+    margin="none"
+    padding="none"
+    gap="small"
+    css={{
+      listStyle: 'none'
+    }}
+  >
     {items.map((item) => (
       <Tag as="li" label={item} key={item} size={size} />
     ))}

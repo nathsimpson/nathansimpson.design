@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Tags } from '@design-system/tag';
+import { Tags } from '@nathsimpson/tag';
 import { Stack } from '@nathsimpson/box';
 
 import { Heading, Text } from '@nathsimpson/typography';

@@ -24,7 +24,7 @@ Tag comes in two sizes...
 - medium
 
 ```jsx live
-<Flex gap="small">
+<Flex gap="small" alignItems="center">
   <Tag label="small" size="small" />
   <Tag label="medium" size="medium" />
 </Flex>

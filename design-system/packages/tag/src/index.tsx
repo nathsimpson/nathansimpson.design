@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ElementType } from 'react';
-import { Flex } from '@nathsimpson/box';
+import { Box, Flex } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 import { hexAlpha } from '@nathsimpson/utils';
 
@@ -16,20 +16,21 @@ type TagProps = {
   size?: keyof typeof sizes;
 };
 
-export const Tag = ({ label, as, size = 'medium' }: TagProps) => {
-  const { colors, radii } = useTheme();
+export const Tag = ({ as = 'div', label, size = 'medium' }: TagProps) => {
+  const { colors } = useTheme();
   const color = colors.text.default;
 
-  const Div = as || 'div';
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
-    <Div
+    <Box
+      as={as}
+      rounding="medium"
       css={{
         border: `1px solid ${color}`,
         color: color,
         backgroundColor: hexAlpha(color, 0.2),
-        borderRadius: radii.medium,
         display: 'inline-flex',
+        flexShrink: 0,
         fontSize: sizes[size] * 4,
         paddingTop: sizes[size],
         paddingBottom: sizes[size],
@@ -38,7 +39,7 @@ export const Tag = ({ label, as, size = 'medium' }: TagProps) => {
       }}
     >
       {formattedLabel}
-    </Div>
+    </Box>
   );
 };
 
@@ -49,9 +50,18 @@ export const Tags = ({
   items: string[];
   size?: keyof typeof sizes;
 }) => (
-  <Flex gap={size}>
+  <Flex
+    as="ul"
+    flexWrap="wrap"
+    margin="none"
+    padding="none"
+    gap="small"
+    css={{
+      listStyle: 'none'
+    }}
+  >
     {items.map((item) => (
-      <Tag label={item} key={item} size={size} />
+      <Tag as="li" label={item} key={item} size={size} />
     ))}
   </Flex>
 );

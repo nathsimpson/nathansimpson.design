@@ -4,9 +4,9 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Header } from '../components';
-import { Tag } from '@design-system/tag';
+import { Tag } from '@nathsimpson/tag';
 import { Divider } from '../components/Divider';
-import { useCardStyles } from '@design-system/card';
+import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { spacing } from '@nathsimpson/theme';

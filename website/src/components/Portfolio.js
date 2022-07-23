@@ -2,8 +2,7 @@
 import { jsx } from '@emotion/core';
 
 import { Heading } from '@nathsimpson/typography';
-import { Card } from '@design-system/card';
-import { Tiles } from '@design-system/tiles';
+import { Card } from '@nathsimpson/card';
 import { useTheme } from '@nathsimpson/theme';
 
 export const Portfolio = ({ data }) => {
@@ -13,7 +12,14 @@ export const Portfolio = ({ data }) => {
       <Heading level={2} css={{ marginBottom: spacing.large }}>
         Projects
       </Heading>
-      <Tiles>
+      <div
+        css={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: spacing.large,
+          width: '100%'
+        }}
+      >
         {data.allMdx.edges
           .filter(({ node }) => node.frontmatter.type === 'project')
           .map(({ node }) => {
@@ -35,7 +41,7 @@ export const Portfolio = ({ data }) => {
               />
             );
           })}
-      </Tiles>
+      </div>
     </div>
   );
 };

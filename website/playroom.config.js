@@ -21,11 +21,6 @@ module.exports = {
   // `,
   // baseUrl: '/playroom/',
   webpackConfig: () => ({
-    resolve: {
-      alias: {
-        '@design-system': path.resolve(__dirname, '../design-system')
-      }
-    },
     module: {
       rules: [
         {

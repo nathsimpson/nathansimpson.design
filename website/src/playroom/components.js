@@ -1,6 +1,5 @@
 export { Button, LinkButton, IconButton } from '@nathsimpson/button';
 export { Icon } from '@nathsimpson/icon';
-export { Tiles } from '@design-system/tiles';
 export { Tag, Tags } from '@design-system/tag';
 export { Box, Flex, Stack } from '@nathsimpson/box';
 export { TextLink } from '@nathsimpson/text-link';

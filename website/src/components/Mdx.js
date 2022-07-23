@@ -6,7 +6,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Button, LinkButton, IconButton } from '@nathsimpson/button';
 import { Icon } from '@nathsimpson/icon';
-import { Tiles } from '@design-system/tiles';
 import { Tag, Tags } from '@design-system/tag';
 import { Box, Flex, Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
@@ -36,8 +35,7 @@ const DsComponents = {
   Tags,
   Text,
   TextLink,
-  TextLinkGatsby,
-  Tiles
+  TextLinkGatsby
 };
 
 const InlineCode = (props) => {

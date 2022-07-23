@@ -8,8 +8,6 @@ type: design-system
 
 Card is used to link to site content like projects or blog posts.
 
-Typically Cards are tiled together, using the Tiles component.
-
 Cards can appear with or without images. If no image is provided, the desciption text will be visible instead.
 
 ```jsx
@@ -17,7 +15,7 @@ import { Card, useCardStyles } from 'design-system/card';
 ```
 
 ```jsx live
-<Tiles>
+<Flex gap='large'>
   <Card
     title="Test"
     tag="Design"
@@ -30,7 +28,7 @@ import { Card, useCardStyles } from 'design-system/card';
     tag="Development"
     desc="A really simple package that enables you to specify an opacity for your HEX colours."
   />
-</Tiles>
+</Flex>
 ```
 
 ## Props

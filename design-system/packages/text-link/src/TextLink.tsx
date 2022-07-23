@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { AnchorHTMLAttributes } from 'react';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
 export const getLinkStyles = ({ size }: { size?: FontSizeType }) => {
@@ -19,13 +20,10 @@ export const getLinkStyles = ({ size }: { size?: FontSizeType }) => {
   };
 };
 
-export const TextLink = ({
-  size,
-  ...props
-}: {
-  children: string;
-  href: string;
+type TextLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   size?: FontSizeType;
-}) => {
-  return <a {...props} css={getLinkStyles({ size })} />;
+};
+
+export const TextLink = ({ size, ...props }: TextLinkProps) => {
+  return <a css={getLinkStyles({ size })} {...props} />;
 };

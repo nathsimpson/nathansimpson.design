@@ -9,10 +9,10 @@ import { Icon } from '@nathsimpson/icon';
 import { Tag, Tags } from '@design-system/tag';
 import { Box, Flex, Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
-import { Card } from '@design-system/card';
+import { Card } from '@nathsimpson/card';
 import { TextLink } from '@nathsimpson/text-link';
 import { Text, Heading } from '@nathsimpson/typography';
-import { useTheme } from '@nathsimpson/theme';
+import { useTheme, spacing } from '@nathsimpson/theme';
 import { Divider } from './Divider';
 import { TextLinkGatsby } from './TextLinkGatsby';
 
@@ -35,7 +35,8 @@ const DsComponents = {
   Tags,
   Text,
   TextLink,
-  TextLinkGatsby
+  TextLinkGatsby,
+  spacing
 };
 
 const InlineCode = (props) => {

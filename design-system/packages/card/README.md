@@ -11,11 +11,11 @@ Card is used to link to site content like projects or blog posts.
 Cards can appear with or without images. If no image is provided, the desciption text will be visible instead.
 
 ```jsx
-import { Card, useCardStyles } from 'design-system/card';
+import { Card, useCardStyles } from '@nathansimpson/card';
 ```
 
 ```jsx live
-<Flex gap='large'>
+<div style={{display: 'grid', gap: spacing.medium, gridTemplateColumns: '1fr 1fr'}}>
   <Card
     title="Test"
     tag="Design"
@@ -28,7 +28,7 @@ import { Card, useCardStyles } from 'design-system/card';
     tag="Development"
     desc="A really simple package that enables you to specify an opacity for your HEX colours."
   />
-</Flex>
+</div>
 ```
 
 ## Props

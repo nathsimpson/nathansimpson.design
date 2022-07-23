@@ -208,6 +208,7 @@ export const boxStyles = ({
   flexGrow,
   flexShrink,
   flexDirection,
+  flexWrap,
   bg,
   margin,
   marginBottom,
@@ -272,7 +273,8 @@ export const boxStyles = ({
         flexBasis,
         flexGrow,
         flexShrink,
-        flexDirection
+        flexDirection,
+        flexWrap
       })
     }),
     attrs

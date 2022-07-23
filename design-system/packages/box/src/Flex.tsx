@@ -6,7 +6,8 @@ import {
   ResponsiveProp
 } from '@nathsimpson/utils';
 import { spacing, SpacingType } from '@nathsimpson/theme';
-import { Box, BoxProps } from './Box';
+import { Box } from './Box';
+import { BoxProps } from './styles';
 
 import {
   getFlexStyles,
@@ -14,7 +15,7 @@ import {
   alignmentMap,
   justificationMap,
   orientationMap
-} from './utils';
+} from './styles';
 
 export const Flex = forwardRefWithAs<'div', FlexBoxProps>(
   (

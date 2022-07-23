@@ -6,6 +6,7 @@ import {
   RadiiType
 } from '@nathsimpson/theme';
 import { useMediaQuery, ResponsiveProp } from '@nathsimpson/utils';
+import { ElementType, ReactNode } from 'react';
 
 export type BoxMarginProps = {
   /** Margin */
@@ -184,4 +185,84 @@ export const useBoxColors = () => {
     base: colors.background.default,
     emphasis: colors.background.emphasis
   } as const;
+};
+
+export type BoxProps = BoxMarginProps &
+  BoxPaddingProps &
+  BoxRadiiProps & {
+    as?: ElementType;
+    /** Background color */
+    bg?: 'none' | 'base' | 'emphasis';
+    /** The content of this container. */
+    children?: ReactNode | ReactNode[] | string;
+    /** Height */
+    height?: number;
+    /** Width */
+    width?: number;
+  };
+
+export const boxStyles = ({
+  bg = 'none',
+  height,
+  margin,
+  marginBottom,
+  marginLeft,
+  marginRight,
+  marginTop,
+  marginX,
+  marginY,
+  padding,
+  paddingBottom,
+  paddingLeft,
+  paddingRight,
+  paddingTop,
+  paddingX,
+  paddingY,
+  rounding,
+  roundingBottom,
+  roundingLeft,
+  roundingRight,
+  roundingTop,
+  width,
+  ...attrs
+}: BoxProps) => {
+  const { mq, mapResponsiveProp } = useMediaQuery();
+  const marginStyles = getMarginStyles({
+    margin,
+    marginBottom,
+    marginLeft,
+    marginRight,
+    marginTop,
+    marginX,
+    marginY
+  });
+  const paddingStyles = getPaddingStyles({
+    padding,
+    paddingBottom,
+    paddingLeft,
+    paddingRight,
+    paddingTop,
+    paddingX,
+    paddingY
+  });
+  const radiiStyles = getRadiiStyles({
+    rounding,
+    roundingBottom,
+    roundingLeft,
+    roundingRight,
+    roundingTop
+  });
+  const colors = useBoxColors();
+
+  return [
+    mq({
+      background: mapResponsiveProp(bg, colors),
+      height,
+      margin: marginStyles,
+      padding: paddingStyles,
+      radii: radiiStyles,
+      width
+    }),
+    attrs
+  ];
 };

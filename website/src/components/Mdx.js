@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Button, LinkButton, IconButton } from '@nathsimpson/button';
 import { Icon } from '@nathsimpson/icon';
-import { Tag, Tags } from '@design-system/tag';
+import { Tag, Tags } from '@nathsimpson/tag';
 import { Box, Flex, Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
 import { Card } from '@nathsimpson/card';

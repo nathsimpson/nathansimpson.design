@@ -9,7 +9,7 @@ type: design-system
 Tags are used to label, categorise or classify items using keywords that describe them.
 
 ```jsx
-import { Tag } from 'design-system/tag';
+import { Tag } from '@nathsimpson/tag';
 ```
 
 ```jsx live

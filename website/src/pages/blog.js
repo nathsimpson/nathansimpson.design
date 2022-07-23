@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Header } from '../components';
-import { Tag } from '@design-system/tag';
+import { Tag } from '@nathsimpson/tag';
 import { Divider } from '../components/Divider';
 import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';

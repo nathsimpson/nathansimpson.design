@@ -16,13 +16,13 @@ type TagProps = {
   size?: keyof typeof sizes;
 };
 
-export const Tag = ({ as: Tag = 'div', label, size = 'medium' }: TagProps) => {
+export const Tag = ({ as: Elem = 'div', label, size = 'medium' }: TagProps) => {
   const { colors, radii } = useTheme();
   const color = colors.text.default;
 
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
-    <Tag
+    <Elem
       css={{
         border: `1px solid ${color}`,
         color: color,
@@ -38,7 +38,7 @@ export const Tag = ({ as: Tag = 'div', label, size = 'medium' }: TagProps) => {
       }}
     >
       {formattedLabel}
-    </Tag>
+    </Elem>
   );
 };
 
@@ -49,7 +49,7 @@ export const Tags = ({
   items: string[];
   size?: keyof typeof sizes;
 }) => (
-  <Flex as="ul" gap={size}>
+  <Flex as="ul" flexWrap="wrap" margin="none" padding="none" gap="small">
     {items.map((item) => (
       <Tag as="li" label={item} key={item} size={size} />
     ))}

@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { Stack } from '@nathsimpson/';
+import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
 

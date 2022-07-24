@@ -1,11 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-import { Header, Mdx } from '../components';
-import { BackButton } from '../components/backButton';
-import { Divider } from '../components/Divider';
+import {
+  BackButton,
+  ContentContainer,
+  Divider,
+  Header,
+  Mdx
+} from '../components';
 import { Box, Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
@@ -16,44 +21,28 @@ const PostTemplate = ({ data }) => {
   const { spacing, maxWidth } = useTheme();
 
   return (
-    <article>
+    <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
       </Helmet>
       <Header />
-      <Box
-        css={{
-          maxWidth: maxWidth.content,
-          margin: '0 auto',
-          paddingLeft: spacing.xxlarge,
-          paddingRight: spacing.xxlarge
-        }}
-      >
+      <ContentContainer as="article">
         <Stack gap="small">
           <BackButton link="/blog" />
-
           <Heading level={1}>{post.frontmatter.title}</Heading>
-          <div
-            css={{
-              display: 'flex',
-              alignItems: 'center'
-            }}
-          >
-            <Text size="small" as="span">
-              Posted on {post.frontmatter.date}.
-              {post.frontmatter.updated &&
-                ` Updated on ${post.frontmatter.updated}`}
-            </Text>
-          </div>
-
+          <Text size="small" as="span">
+            Posted on {post.frontmatter.date}.
+            {post.frontmatter.updated &&
+              ` Updated on ${post.frontmatter.updated}`}
+          </Text>
           <Divider />
           <Prose>
             <Mdx>{post.body}</Mdx>
           </Prose>
         </Stack>
-      </Box>
-    </article>
+      </ContentContainer>
+    </Fragment>
   );
 };
 

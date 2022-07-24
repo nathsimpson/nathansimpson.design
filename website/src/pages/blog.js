@@ -6,7 +6,7 @@ import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { spacing, maxWidth } from '@nathsimpson/theme';
 
-import { Header } from '../components/header';
+import { Header, ContentContainer } from '../components';
 import { PostCard } from '../components/PostCard';
 
 const Blog = ({ data }) => (
@@ -15,16 +15,9 @@ const Blog = ({ data }) => (
     <Helmet>
       <title>Blog - Nathan Simpson</title>
     </Helmet>
-    <div
-      css={{
-        maxWidth: maxWidth.content,
-        margin: '0 auto',
-        paddingLeft: spacing.small,
-        paddingRight: spacing.small
-      }}
-    >
+    <ContentContainer>
       <Stack gap="large">
-        <Stack gap="small" marginX="xlarge">
+        <Stack gap="small">
           <Heading level={1}>Blog</Heading>
           <Text>A collection of thoughts and experiences.</Text>
         </Stack>
@@ -43,7 +36,7 @@ const Blog = ({ data }) => (
             );
           })}
       </Stack>
-    </div>
+    </ContentContainer>
   </div>
 );
 

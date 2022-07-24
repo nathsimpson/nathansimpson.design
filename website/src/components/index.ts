@@ -1,6 +1,7 @@
+export { BackButton } from './backButton';
 export { Contact } from './contact';
 export { Container } from './Container';
-// export { ContactForm } from './contactform';
+export { ContentContainer } from './ContentContainer';
 export { DesignSystemTemplate } from './designSystem';
 export { Development } from './Development';
 export { Dribbble } from './dribbble';

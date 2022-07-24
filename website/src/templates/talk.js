@@ -1,25 +1,40 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Prose } from '@nathsimpson/prose';
 import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 
-import { Divider, Header, Mdx, Container } from '../components';
+import {
+  BackButton,
+  Divider,
+  Header,
+  Mdx,
+  ContentContainer
+} from '../components';
 
 const TalkTemplate = ({ data }) => {
   const talk = data.mdx;
 
   return (
-    <article>
+    <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{talk.frontmatter.title} - Nathan Simpson's talks</title>
       </Helmet>
       <Header />
-      <Container maxWidth="content">
+      <ContentContainer as="article">
         <Stack gap="medium">
+          <Stack gap="small">
+            <BackButton link="/blog" />
+            <Heading level={1}>{talk.frontmatter.title}</Heading>
+            <Text size="small" as="span">
+              Posted on {talk.frontmatter.date}
+            </Text>
+            <Divider />
+          </Stack>
           <iframe
             width="100%"
             height="450"
@@ -34,20 +49,12 @@ const TalkTemplate = ({ data }) => {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-
-          <Stack gap="xsmall">
-            <Heading level={1}>{talk.frontmatter.title}</Heading>
-            <Text as="span" size="xsmall">
-              Posted on {talk.frontmatter.date}
-            </Text>
-          </Stack>
-          <Divider />
           <Prose>
             <Mdx>{talk.body}</Mdx>
           </Prose>
         </Stack>
-      </Container>
-    </article>
+      </ContentContainer>
+    </Fragment>
   );
 };
 

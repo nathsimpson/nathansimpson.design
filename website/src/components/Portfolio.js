@@ -5,7 +5,7 @@ import { Heading } from '@nathsimpson/typography';
 import { Card } from '@nathsimpson/card';
 import { useTheme } from '@nathsimpson/theme';
 
-export const Portfolio = ({ data }) => {
+export const Portfolio = ({ items }) => {
   const { spacing } = useTheme();
   return (
     <div css={{ width: '100%' }}>
@@ -14,33 +14,31 @@ export const Portfolio = ({ data }) => {
       </Heading>
       <div
         css={{
+          boxSizing: 'border-box',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
           gap: spacing.large,
           width: '100%'
         }}
       >
-        {data.allMdx.edges
-          .filter(({ node }) => node.frontmatter.type === 'project')
-          .map(({ node }) => {
-            const meta = node.frontmatter;
+        {items.map(({ node }) => {
+          const meta = node.frontmatter;
 
-            return (
-              <Card
-                key={node.id}
-                project={meta}
-                desc={meta.desc}
-                tag={meta.tag}
-                path={meta.path}
-                image={
-                  meta.imagesrc &&
-                  'https://files.nathansimpson.design/portfolio/' +
-                    meta.imagesrc
-                }
-                title={meta.title}
-              />
-            );
-          })}
+          return (
+            <Card
+              key={node.id}
+              project={meta}
+              desc={meta.desc}
+              tag={meta.tag}
+              path={meta.path}
+              image={
+                meta.imagesrc &&
+                'https://files.nathansimpson.design/portfolio/' + meta.imagesrc
+              }
+              title={meta.title}
+            />
+          );
+        })}
       </div>
     </div>
   );

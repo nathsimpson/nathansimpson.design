@@ -14,11 +14,11 @@ type CardProps = {
 };
 
 export const useCardStyles = () => {
-  const { boxShadow, radii, colors } = useTheme();
+  const { boxShadow, radii, colors, spacing } = useTheme();
   return {
     ...boxShadow[1],
     background: colors.background.emphasis,
-    padding: '16px 24px',
+    padding: spacing.large,
     borderRadius: radii.large
   };
 };
@@ -64,7 +64,7 @@ export const Card = ({ path, image, desc, title, tag }: CardProps) => {
       )}
 
       <Flex>
-        <Stack gap="xsmall" padding="medium">
+        <Stack gap="none" padding="medium">
           <Text as="span" size="xsmall">
             {tag}
           </Text>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack } from '@nathsimpson/box';
+import { Flex, Stack } from '@nathsimpson/box';
 
 import { useTheme } from '../src/themecontext';
 
@@ -17,16 +17,16 @@ export const RadiiExample = () => {
 const Block = ({ label }) => {
   const { colors, spacing, radii } = useTheme();
   return (
-    <Stack orientation="horizontal" align="center" gap="small">
+    <Flex align="center" gap="small">
       <div
         style={{
-          width: spacing.xxxlarge,
-          height: spacing.xxxlarge,
+          width: spacing.xxlarge,
+          height: spacing.xxlarge,
           borderRadius: radii[label],
           backgroundColor: colors.brand
         }}
       />
       <p>{`${label} (${radii[label].toString()})`}</p>
-    </Stack>
+    </Flex>
   );
 };

@@ -3,13 +3,14 @@ import { fontFamilies, fontSizes, fontWeights, lineHeights } from './text';
 
 export const spacing = {
   none: 0,
-  xsmall: 4,
-  small: 8,
-  medium: 12,
-  large: 16,
-  xlarge: 24,
-  xxlarge: 32,
-  xxxlarge: 40
+  xxsmall: 4,
+  xsmall: 8,
+  small: 12,
+  medium: 16,
+  large: 24,
+  xlarge: 32,
+  xxlarge: 64,
+  xxxlarge: 128
 } as const;
 
 export const maxWidth = {
@@ -17,6 +18,7 @@ export const maxWidth = {
   page: '62rem',
   content: '45rem'
 };
+export type MaxWidthType = keyof typeof maxWidth;
 
 export const breakpoints = {
   sm: 640,

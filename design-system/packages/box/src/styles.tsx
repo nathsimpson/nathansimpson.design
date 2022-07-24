@@ -235,6 +235,10 @@ export const boxStyles = ({
 
   return [
     mq({
+      // common resets
+      boxSizing: 'border-box',
+      listStyle: 'none',
+
       ...colorStyles({
         bg
       }),

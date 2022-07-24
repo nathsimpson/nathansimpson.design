@@ -1,6 +1,7 @@
+export { BackButton } from './backButton';
 export { Contact } from './contact';
-export { Container } from './container';
-// export { ContactForm } from './contactform';
+export { Container } from './Container';
+export { ContentContainer } from './ContentContainer';
 export { DesignSystemTemplate } from './designSystem';
 export { Development } from './Development';
 export { Dribbble } from './dribbble';
@@ -11,3 +12,4 @@ export { NotFound } from './NotFound';
 export { Portfolio } from './Portfolio';
 export { Talks } from './Talks';
 export { Divider } from './Divider';
+export { YouTubeVideo } from './YouTubeVideo';

@@ -24,10 +24,14 @@ const useProseStyles = () => {
   return css({
     p: {
       fontFamily: fontFamilies.body,
-      marginTop: spacing.medium,
-      marginBottom: spacing.medium,
-      lineHeight: lineHeights.medium
+      lineHeight: lineHeights.medium,
+      marginBottom: spacing.medium
     },
+
+    [`* + p`]: {
+      marginTop: spacing.medium
+    },
+
     h1: {
       ...standardHeadingStyles,
       fontSize: fontSizes.xxxlarge,

@@ -3,10 +3,9 @@ import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { Box, Stack } from '@nathsimpson/box';
+import { Stack } from '@nathsimpson/';
 import { Heading, Text } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
-import { spacing, maxWidth } from '@nathsimpson/theme';
 
 import {
   BackButton,

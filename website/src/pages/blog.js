@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
-import { spacing, maxWidth } from '@nathsimpson/theme';
 
 import { Header, ContentContainer } from '../components';
 import { PostCard } from '../components/PostCard';

@@ -6,7 +6,6 @@ import { Heading } from '@nathsimpson/typography';
 import { Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
 import { Tags } from '@nathsimpson/tag';
-import { useTheme } from '@nathsimpson/theme';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
@@ -14,7 +13,6 @@ import { ContentContainer, Header, MdxWithoutH1 } from '../components';
 
 const ProjectTemplate = ({ data }) => {
   const project = data.mdx;
-  const { spacing, maxWidth } = useTheme();
   const skills = project.frontmatter.skills
     ? project.frontmatter.skills.split(',')
     : [];

@@ -27,7 +27,7 @@ const HomePage = ({ data }: PageProps) => (
     <Header hasDivider={false} />
     <Hero />
     <Container>
-      <Stack gap="xxxlarge" marginY="xxxlarge" alignItems="center">
+      <Stack gap="xxxlarge" marginBottom="xxxlarge" alignItems="center">
         <Portfolio data={data} />
         <Development />
         <Dribbble />

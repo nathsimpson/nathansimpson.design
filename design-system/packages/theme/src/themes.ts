@@ -18,6 +18,7 @@ export const maxWidth = {
   page: '62rem',
   content: '45rem'
 };
+export type MaxWidthType = keyof typeof maxWidth;
 
 export const breakpoints = {
   sm: 640,

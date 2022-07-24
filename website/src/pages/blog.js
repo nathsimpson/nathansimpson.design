@@ -3,55 +3,14 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Header } from '../components';
+import { Header, Container, Divider } from '../components';
 import { Tag } from '@nathsimpson/tag';
-import { Divider } from '../components/Divider';
 import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { spacing, maxWidth } from '@nathsimpson/theme';
 import { TextLinkGatsby } from '../components/TextLinkGatsby';
-
-const PostCard = ({ frontmatter, excerpt }) => {
-  const cardStyles = useCardStyles();
-  const postedOn = `${frontmatter.date}. ${
-    frontmatter.updated ? `Updated ${frontmatter.updated}.` : ''
-  }`;
-
-  return (
-    <div css={cardStyles}>
-      <Stack gap="small">
-        <TextLinkGatsby to={frontmatter.path}>
-          <Heading level={2}>{frontmatter.title}</Heading>
-        </TextLinkGatsby>
-        <Flex flexDirection="row" align="center">
-          <Tag label={frontmatter.type} size="small" />
-          <Text as="span" size="small" marginLeft="small">
-            {postedOn}
-          </Text>
-        </Flex>
-
-        <Divider />
-
-        {frontmatter.youtubeid && (
-          <img
-            css={{ width: '100%', height: 400, objectFit: 'cover' }}
-            src={`https://i.ytimg.com/vi/${frontmatter.youtubeid}/hqdefault.jpg`}
-            alt="Screenshot of YouTube video"
-          />
-        )}
-
-        <Text
-          dangerouslySetInnerHTML={{
-            __html: frontmatter.description || excerpt
-          }}
-        />
-
-        <TextLinkGatsby to={frontmatter.path}>Read more</TextLinkGatsby>
-      </Stack>
-    </div>
-  );
-};
+import { PostCard } from '../components/PostCard';
 
 const Blog = ({ data }) => (
   <div>
@@ -59,29 +18,30 @@ const Blog = ({ data }) => (
     <Helmet>
       <title>Blog - Nathan Simpson</title>
     </Helmet>
-    <div
-      css={{
-        maxWidth: maxWidth.content,
-        margin: '0 auto',
-        paddingLeft: spacing.small,
-        paddingRight: spacing.small
-      }}
-    >
-      <Stack gap="xxlarge">
-        <Stack gap="medium" marginX="xlarge">
+    <Container maxWidth="content">
+      <Stack gap="xlarge">
+        <Stack gap="small">
           <Heading level={1}>Blog</Heading>
           <Text>A collection of thoughts and experiences.</Text>
         </Stack>
 
-        {data.allMdx.edges
-          .filter(({ node: p }) =>
-            ['post', 'talk'].includes(p.frontmatter.type)
-          )
-          .map(({ node }) => {
-            return <PostCard {...node} key={node.id} />;
-          })}
+        <Stack gap="large">
+          {data.allMdx.edges
+            .filter(({ node: p }) =>
+              ['post', 'talk'].includes(p.frontmatter.type)
+            )
+            .map(({ node }) => {
+              return (
+                <PostCard
+                  {...node.frontmatter}
+                  excerpt={node.excerpt}
+                  key={node.id}
+                />
+              );
+            })}
+        </Stack>
       </Stack>
-    </div>
+    </Container>
   </div>
 );
 

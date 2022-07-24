@@ -1,5 +1,5 @@
 export { Contact } from './contact';
-export { Container } from './container';
+export { Container } from './Container';
 // export { ContactForm } from './contactform';
 export { DesignSystemTemplate } from './designSystem';
 export { Development } from './Development';

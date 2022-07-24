@@ -32,7 +32,7 @@ const navItems = [
 ];
 
 export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
-  const { spacing, colors } = useTheme();
+  const { spacing, maxWidth, colors } = useTheme();
   const { setThemeName, themeName } = useContext(ThemeSelectionContext);
   const { maxBreak, minBreak } = useMediaQuery();
 
@@ -41,7 +41,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
       className="header"
       css={{
         boxSizing: 'border-box',
-        maxWidth: '1300px',
+        maxWidth: maxWidth.page,
         margin: '0 auto',
         marginBottom: spacing[hasDivider ? 'xlarge' : 'none'],
         borderBottom: hasDivider ? `1px solid ${colors.border}` : 'none',

@@ -12,7 +12,7 @@ import Helmet from 'react-helmet';
 
 const ProjectTemplate = ({ data }) => {
   const project = data.mdx;
-  const { spacing } = useTheme();
+  const { spacing, maxWidth } = useTheme();
   const skills = project.frontmatter.skills
     ? project.frontmatter.skills.split(',')
     : [];
@@ -27,7 +27,7 @@ const ProjectTemplate = ({ data }) => {
 
       <div
         css={{
-          maxWidth: 800,
+          maxWidth: maxWidth.content,
           margin: '0 auto',
           paddingLeft: spacing.xxlarge,
           paddingRight: spacing.xxlarge

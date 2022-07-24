@@ -4,13 +4,13 @@ import { jsx } from '@emotion/core';
 import { useCardStyles } from '@nathsimpson/card';
 import { Heading, Text } from '@nathsimpson/typography';
 import { Stack } from '@nathsimpson/box';
-import { useTheme } from '@nathsimpson/theme';
+import { useTheme, maxWidth } from '@nathsimpson/theme';
 import { TextLink } from '@nathsimpson/text-link';
 import { useMediaQuery } from '@nathsimpson/utils';
 
 export const Talks = ({ data }) => (
   <div css={{ width: '100%' }}>
-    <Stack gap="medium" css={{ maxWidth: 800 }}>
+    <Stack gap="medium" css={{ maxWidth: maxWidth.content }}>
       <Heading level={2}>Talks</Heading>
 
       <Text as="p">
@@ -59,7 +59,7 @@ const Talk = ({
         borderBottomLeftRadius: [radii.large, 0],
         display: 'flex',
         flexDirection: ['column', 'row'],
-        maxWidth: 800,
+        maxWidth: maxWidth.content,
         padding: 0,
         width: '100%',
         textDecoration: 'none',

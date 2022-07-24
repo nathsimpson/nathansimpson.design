@@ -24,8 +24,8 @@ const useProseStyles = () => {
   return css({
     p: {
       fontFamily: fontFamilies.body,
-      marginTop: spacing.large,
-      marginBottom: spacing.large,
+      marginTop: spacing.medium,
+      marginBottom: spacing.medium,
       lineHeight: lineHeights.medium
     },
     h1: {
@@ -38,21 +38,21 @@ const useProseStyles = () => {
       ...standardHeadingStyles,
       fontSize: fontSizes.xxlarge,
       fontWeight: 900,
-      marginTop: spacing.xxxlarge,
-      marginBottom: spacing.large
+      marginTop: spacing.xxlarge,
+      marginBottom: spacing.medium
     },
     h3: {
       ...standardHeadingStyles,
       fontSize: fontSizes.xlarge,
       fontWeight: 900,
-      marginTop: spacing.xxlarge,
-      marginBottom: spacing.large
+      marginTop: spacing.xlarge,
+      marginBottom: spacing.medium
     },
     h4: {
       ...standardHeadingStyles,
       fontSize: fontSizes.xlarge,
       fontWeight: 600,
-      marginTop: spacing.xlarge
+      marginTop: spacing.large
     },
     h5: {
       ...standardHeadingStyles,

@@ -35,11 +35,11 @@ const IconExample = ({ icon }: { icon: keyof typeof ICONS }) => (
   <Stack
     alignItems="center"
     bg="emphasis"
-    gap="medium"
+    gap="xsmall"
     paddingY="large"
     rounding="medium"
   >
     <Icon icon={icon} size={32} />
-    <Text>{icon}</Text>
+    <Text as="span">{icon}</Text>
   </Stack>
 );

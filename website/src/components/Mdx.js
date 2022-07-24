@@ -49,7 +49,7 @@ const InlineCode = (props) => {
         fontFamily: fontFamilies.mono,
         color: colors.text.emphasis,
         backgroundColor: colors.background.emphasis,
-        padding: spacing.xsmall,
+        padding: spacing.xxsmall,
         borderRadius: radii.small
       }}
       {...props}

@@ -15,7 +15,7 @@ import {
 } from '../components';
 import { Hero } from '../components/Hero';
 
-const HomePage = ({ data }: PageProps) => (
+const HomePage = ({ data }: PageProps<DataProps>) => (
   <Fragment>
     <Helmet>
       <meta
@@ -27,10 +27,10 @@ const HomePage = ({ data }: PageProps) => (
     <Hero />
     <Container>
       <Stack gap="xxxlarge" marginBottom="xxxlarge" alignItems="center">
-        <Portfolio data={data} />
+        <Portfolio items={data.projects.edges} />
         <Development />
         <Dribbble />
-        <Talks data={data} />
+        <Talks items={data.talks.edges} />
       </Stack>
     </Container>
   </Fragment>
@@ -38,17 +38,33 @@ const HomePage = ({ data }: PageProps) => (
 
 export const portfolioQuery = graphql`
   query IndexProjects {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    talks: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "talk" } } }
+    ) {
       edges {
         node {
           id
-          body
+          frontmatter {
+            path
+            title
+            type
+            youtubeid
+          }
+        }
+      }
+    }
+    projects: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          id
           frontmatter {
             path
             title
             imagesrc
-            type
-            youtubeid
             tag
             desc
           }
@@ -57,5 +73,35 @@ export const portfolioQuery = graphql`
     }
   }
 `;
+
+type DataProps = {
+  talks: {
+    edges: {
+      node: {
+        id: string;
+        frontmatter: {
+          path: string;
+          title: string;
+          type: string;
+          youtubeid: string;
+        };
+      };
+    }[];
+  };
+  projects: {
+    edges: {
+      node: {
+        id: string;
+        frontmatter: {
+          path: string;
+          title: string;
+          imagesrc: string;
+          tag: string;
+          desc: string;
+        };
+      };
+    }[];
+  };
+};
 
 export default HomePage;

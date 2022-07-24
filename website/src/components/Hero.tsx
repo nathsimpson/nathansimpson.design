@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Stack } from '@nathsimpson/box';
+import { Box, Stack } from '@nathsimpson/box';
 import { TextLink } from '@nathsimpson/text-link';
 import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@nathsimpson/typography';
@@ -9,15 +9,11 @@ export const Hero = () => {
   const { maxWidth } = useTheme();
 
   return (
-    <div
-      css={{
-        width: '100%'
-      }}
-    >
+    <Box width="100%" paddingX="medium">
       <div
         css={{
           maxWidth: maxWidth.page,
-          padding: '128px 24px',
+          padding: '128px 0px',
           margin: '0 auto',
           boxSizing: 'border-box',
           display: 'flex',
@@ -38,7 +34,7 @@ export const Hero = () => {
           </Text>
         </Stack>
       </div>
-    </div>
+    </Box>
   );
 };
 

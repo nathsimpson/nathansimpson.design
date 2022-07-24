@@ -13,8 +13,8 @@ export const Container = ({ as: Tag = 'div', children }: ContainerProps) => {
       css={{
         width: '100%',
         maxWidth: maxWidthTokens.page,
-        paddingLeft: spacing.xlarge,
-        paddingRight: spacing.xlarge,
+        paddingLeft: spacing.medium,
+        paddingRight: spacing.medium,
         margin: '0 auto'
       }}
     >

@@ -8,7 +8,7 @@ import { useTheme, maxWidth } from '@nathsimpson/theme';
 import { TextLink } from '@nathsimpson/text-link';
 import { useMediaQuery } from '@nathsimpson/utils';
 
-export const Talks = ({ data }) => (
+export const Talks = ({ items }) => (
   <div css={{ width: '100%' }}>
     <Stack gap="medium" css={{ maxWidth: maxWidth.content }}>
       <Heading level={2}>Talks</Heading>
@@ -28,21 +28,14 @@ export const Talks = ({ data }) => (
         meetups. Check out the recordings below, and come and say hi at the next
         one!
       </Text>
-      {data.allMdx.edges
-        .filter(({ node }) => node.frontmatter.type === 'talk')
-        .map(({ node }) => (
-          <Talk node={node} key={node.id} />
-        ))}
+      {items.map(({ node: { id, frontmatter } }) => (
+        <Talk {...frontmatter} key={id} />
+      ))}
     </Stack>
   </div>
 );
 
-const Talk = ({
-  node: {
-    // body,
-    frontmatter: { path, youtubeid, title }
-  }
-}) => {
+const Talk = ({ path, youtubeid, title }) => {
   const { colors, radii } = useTheme();
   const cardStyles = useCardStyles();
   const defaultBorder = `1px solid ${colors.border}`;

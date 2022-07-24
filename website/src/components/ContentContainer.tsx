@@ -9,8 +9,9 @@ export const ContentContainer = ({ children }: { children: ReactNode }) => {
       css={{
         maxWidth: maxWidth.content,
         margin: '0 auto',
-        paddingLeft: spacing.xxlarge,
-        paddingRight: spacing.xxlarge
+        paddingLeft: spacing.xlarge,
+        paddingRight: spacing.xlarge,
+        width: '100%'
       }}
     >
       {children}

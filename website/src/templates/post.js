@@ -13,7 +13,7 @@ import { useTheme } from '@nathsimpson/theme';
 
 const PostTemplate = ({ data }) => {
   const post = data.mdx;
-  const { spacing } = useTheme();
+  const { spacing, maxWidth } = useTheme();
 
   return (
     <article>
@@ -24,7 +24,7 @@ const PostTemplate = ({ data }) => {
       <Header />
       <Box
         css={{
-          maxWidth: 800,
+          maxWidth: maxWidth.content,
           margin: '0 auto',
           paddingLeft: spacing.xxlarge,
           paddingRight: spacing.xxlarge

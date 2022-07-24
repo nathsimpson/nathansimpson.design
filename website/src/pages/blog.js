@@ -9,7 +9,7 @@ import { Divider } from '../components/Divider';
 import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
-import { spacing } from '@nathsimpson/theme';
+import { spacing, maxWidth } from '@nathsimpson/theme';
 import { TextLinkGatsby } from '../components/TextLinkGatsby';
 
 const PostCard = ({ frontmatter, excerpt }) => {
@@ -61,7 +61,7 @@ const Blog = ({ data }) => (
     </Helmet>
     <div
       css={{
-        maxWidth: 800,
+        maxWidth: maxWidth.content,
         margin: '0 auto',
         paddingLeft: spacing.small,
         paddingRight: spacing.small

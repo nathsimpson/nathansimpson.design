@@ -12,6 +12,12 @@ export const spacing = {
   xxxlarge: 40
 } as const;
 
+export const maxWidth = {
+  // fill: '86rem',
+  page: '62rem',
+  content: '45rem'
+};
+
 export const breakpoints = {
   sm: 640,
   md: 768, // tablet
@@ -34,6 +40,7 @@ export type Theme = typeof themeDark;
 
 export const themeDark = {
   spacing,
+  maxWidth,
   breakpoints,
   radii,
   boxShadow: {
@@ -50,6 +57,7 @@ export const themeDark = {
 
 export const themeLight = {
   spacing,
+  maxWidth,
   breakpoints,
   radii,
   boxShadow: {

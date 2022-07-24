@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Tags } from '@nathsimpson/tag';
 import { Stack } from '@nathsimpson/box';
+import { maxWidth } from '@nathsimpson/theme';
 
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
@@ -11,7 +12,7 @@ import { development_skills } from '../data';
 export const Development = () => {
   return (
     <div css={{ width: '100%' }}>
-      <Stack gap="medium" css={{ maxWidth: 800 }}>
+      <Stack gap="medium" css={{ maxWidth: maxWidth.content }}>
         <Heading level={2}>Development</Heading>
         <Text>
           I love bringing concepts to life through code. Most of my time is

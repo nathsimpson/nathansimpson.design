@@ -11,7 +11,7 @@ import { Heading, Text } from '@nathsimpson/typography';
 
 const TalkTemplate = ({ data }) => {
   const talk = data.mdx;
-  const { spacing } = useTheme();
+  const { spacing, maxWidth } = useTheme();
 
   return (
     <article>
@@ -22,7 +22,7 @@ const TalkTemplate = ({ data }) => {
       <Header />
       <div
         css={{
-          maxWidth: 800,
+          maxWidth: maxWidth.content,
           margin: '0 auto',
           paddingLeft: spacing.xxlarge,
           paddingRight: spacing.xxlarge

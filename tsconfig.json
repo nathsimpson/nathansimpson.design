@@ -11,9 +11,6 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "noEmit": true,
     "baseUrl": ".",
-    "paths": {
-      "@design-system/*": ["./design-system/*"]
-    },
     "allowJs": true
   },
   "include": [

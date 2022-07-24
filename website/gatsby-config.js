@@ -60,17 +60,7 @@ module.exports = {
         display: 'standalone',
         icon: 'src/images/icon.png'
       }
-    },
-    {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          '@design-system': path.resolve(__dirname, '../design-system')
-        },
-        extensions: []
-      }
     }
-
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

@@ -38,9 +38,6 @@ module.exports = {
   settings: {
     react: {
       version: 'detect'
-    },
-    'import/resolver': {
-      alias: [['@design-system', './design-system']]
     }
   }
 };

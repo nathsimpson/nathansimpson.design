@@ -18,30 +18,35 @@ const Blog = ({ data }) => (
     <Helmet>
       <title>Blog - Nathan Simpson</title>
     </Helmet>
-    <Container maxWidth="content">
-      <Stack gap="xlarge">
-        <Stack gap="small">
+    <div
+      css={{
+        maxWidth: maxWidth.content,
+        margin: '0 auto',
+        paddingLeft: spacing.small,
+        paddingRight: spacing.small
+      }}
+    >
+      <Stack gap="large">
+        <Stack gap="small" marginX="xlarge">
           <Heading level={1}>Blog</Heading>
           <Text>A collection of thoughts and experiences.</Text>
         </Stack>
 
-        <Stack gap="large">
-          {data.allMdx.edges
-            .filter(({ node: p }) =>
-              ['post', 'talk'].includes(p.frontmatter.type)
-            )
-            .map(({ node }) => {
-              return (
-                <PostCard
-                  {...node.frontmatter}
-                  excerpt={node.excerpt}
-                  key={node.id}
-                />
-              );
-            })}
-        </Stack>
+        {data.allMdx.edges
+          .filter(({ node: p }) =>
+            ['post', 'talk'].includes(p.frontmatter.type)
+          )
+          .map(({ node }) => {
+            return (
+              <PostCard
+                {...node.frontmatter}
+                excerpt={node.excerpt}
+                key={node.id}
+              />
+            );
+          })}
       </Stack>
-    </Container>
+    </div>
   </div>
 );
 

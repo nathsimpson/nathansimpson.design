@@ -3,42 +3,46 @@ import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { Box, Stack } from '@nathsimpson/box';
+import { Heading, Text } from '@nathsimpson/typography';
+import { Prose } from '@nathsimpson/prose';
+import { spacing, maxWidth } from '@nathsimpson/theme';
 
 import {
   BackButton,
   ContentContainer,
   Divider,
   Header,
-  Mdx
+  Mdx,
+  YouTubeVideo
 } from '../components';
-import { Box, Stack } from '@nathsimpson/box';
-import { Heading, Text } from '@nathsimpson/typography';
-import { Prose } from '@nathsimpson/prose';
-import { useTheme } from '@nathsimpson/theme';
 
 const PostTemplate = ({ data }) => {
-  const post = data.mdx;
-  const { spacing, maxWidth } = useTheme();
+  const { frontmatter, body } = data.mdx;
 
   return (
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{post.frontmatter.title} - Nathan Simpson's blog</title>
+        <title>{frontmatter.title} - Nathan Simpson's blog</title>
       </Helmet>
       <Header />
       <ContentContainer as="article">
-        <Stack gap="small">
-          <BackButton link="/blog" />
-          <Heading level={1}>{post.frontmatter.title}</Heading>
-          <Text size="small" as="span">
-            Posted on {post.frontmatter.date}.
-            {post.frontmatter.updated &&
-              ` Updated on ${post.frontmatter.updated}`}
-          </Text>
-          <Divider />
+        <Stack gap="medium">
+          <Stack gap="small">
+            <BackButton link="/blog" />
+            <Heading level={1}>{frontmatter.title}</Heading>
+            <Text size="small" as="span">
+              Posted on {frontmatter.date}.
+              {frontmatter.updated && ` Updated on ${frontmatter.updated}`}
+            </Text>
+            <Divider />
+          </Stack>
+          {frontmatter.youtubeid && (
+            <YouTubeVideo videoId={frontmatter.youtubeid} />
+          )}
           <Prose>
-            <Mdx>{post.body}</Mdx>
+            <Mdx>{body}</Mdx>
           </Prose>
         </Stack>
       </ContentContainer>
@@ -56,6 +60,7 @@ export const query = graphql`
         date(formatString: "MMMM DD YYYY")
         updated(formatString: "MMMM DD YYYY")
         type
+        youtubeid
       }
     }
   }

@@ -11,7 +11,6 @@ import {
   Portfolio,
   Development,
   Talks,
-  Divider,
   Dribbble
 } from '../components';
 import { Hero } from '../components/Hero';

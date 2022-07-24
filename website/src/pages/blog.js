@@ -2,14 +2,11 @@
 import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-
-import { Header, Divider } from '../components';
-import { Tag } from '@nathsimpson/tag';
-import { useCardStyles } from '@nathsimpson/card';
-import { Flex, Stack } from '@nathsimpson/box';
+import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
 import { spacing, maxWidth } from '@nathsimpson/theme';
-import { TextLinkGatsby } from '../components/TextLinkGatsby';
+
+import { Header } from '../components/header';
 import { PostCard } from '../components/PostCard';
 
 const Blog = ({ data }) => (

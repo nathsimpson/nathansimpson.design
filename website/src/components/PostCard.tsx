@@ -5,6 +5,7 @@ import { Tag } from '@nathsimpson/tag';
 import { Divider } from '../components/Divider';
 import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';
+import { Prose } from '@nathsimpson/prose';
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLinkGatsby } from '../components/TextLinkGatsby';
 
@@ -54,13 +55,7 @@ export const PostCard = ({
             alt="Screenshot of YouTube video"
           />
         )}
-
-        <Text
-          dangerouslySetInnerHTML={{
-            __html: description || excerpt
-          }}
-        />
-
+        <Prose>{description || excerpt}</Prose>
         <TextLinkGatsby to={path}>Read more</TextLinkGatsby>
       </Stack>
     </div>

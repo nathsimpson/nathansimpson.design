@@ -4,14 +4,12 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Prose } from '@nathsimpson/prose';
 import { Stack } from '@nathsimpson/box';
-import { useTheme } from '@nathsimpson/theme';
 import { Heading, Text } from '@nathsimpson/typography';
 
 import { Divider, Header, Mdx, Container } from '../components';
 
 const TalkTemplate = ({ data }) => {
   const talk = data.mdx;
-  const { spacing, maxWidth } = useTheme();
 
   return (
     <article>

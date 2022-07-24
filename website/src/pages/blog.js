@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Header, Container, Divider } from '../components';
+import { Header, Divider } from '../components';
 import { Tag } from '@nathsimpson/tag';
 import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';

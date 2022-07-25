@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "main": "dist/nathsimpson-box.cjs.js",
   "module": "dist/nathsimpson-box.esm.js",
+  "dependencies": {
+    "@babel/runtime": "^7.15.3"
+  },
   "peerDependencies": {
     "@nathsimpson/theme": "0.1.0",
     "@nathsimpson/utils": "0.1.0",

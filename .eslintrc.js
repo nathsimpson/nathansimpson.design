@@ -8,8 +8,11 @@ module.exports = {
   plugins: ['prettier', '@typescript-eslint', 'react', '@emotion'],
   parser: '@typescript-eslint/parser',
   rules: {
+    '@emotion/pkg-renaming': 'error',
     'prettier/prettier': 'error',
     'react/jsx-fragments': 0,
+    'react/jsx-uses-react': 0,
+    'react/react-in-jsx-scope': 0,
     'react/prop-types': 0,
     'react/no-unused-prop-types': 0,
     'react/no-unescaped-entities': 0,

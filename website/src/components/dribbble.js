@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
 
 import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';

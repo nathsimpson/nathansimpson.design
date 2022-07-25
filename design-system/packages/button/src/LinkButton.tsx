@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Icon } from '@nathsimpson/icon';
 
 import { useButtonStyles, ButtonProps, iconSizes } from './utils';

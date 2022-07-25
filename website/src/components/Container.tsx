@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { PropsWithChildren, ElementType } from 'react';
 import { spacing, maxWidth as maxWidthTokens } from '@nathsimpson/theme';
 

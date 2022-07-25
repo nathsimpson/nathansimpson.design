@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { Link } from 'gatsby';
-import { jsx } from '@emotion/core';
 import { useContext } from 'react';
 
 import { Box, Flex } from '@nathsimpson/box';

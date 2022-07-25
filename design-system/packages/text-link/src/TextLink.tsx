@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { AnchorHTMLAttributes } from 'react';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 

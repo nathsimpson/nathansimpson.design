@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { forwardRefWithAs } from '@nathsimpson/utils';
 
 import { Box } from './Box';

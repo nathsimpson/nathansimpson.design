@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { Fragment } from 'react';
-import { jsx } from '@emotion/core';
 import { graphql, PageProps } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Stack } from '@nathsimpson/box';

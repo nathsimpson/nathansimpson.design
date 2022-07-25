@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';

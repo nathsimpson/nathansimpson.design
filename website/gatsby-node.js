@@ -27,6 +27,11 @@ exports.createPages = ({ actions, graphql }) => {
               type
               youtubeid
               skills
+              updated
+              date
+              imagesrc
+              tag
+              desc
             }
           }
         }

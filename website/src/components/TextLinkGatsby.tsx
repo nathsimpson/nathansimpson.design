@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { ReactNode } from 'react';
 import { FontSizeType } from '@nathsimpson/theme';
 import { getLinkStyles } from '@nathsimpson/text-link';

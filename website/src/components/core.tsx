@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 import { createContext, useState, Fragment, ReactElement } from 'react';
 import {
   ThemeProvider,

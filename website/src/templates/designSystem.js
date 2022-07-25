@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 
 import { DesignSystemTemplate as Layout } from '../components';

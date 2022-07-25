@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Stack } from '@nathsimpson/box';

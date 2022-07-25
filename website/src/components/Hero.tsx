@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Box, Stack } from '@nathsimpson/box';
 import { TextLink } from '@nathsimpson/text-link';
 import { useTheme } from '@nathsimpson/theme';

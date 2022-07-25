@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   siteMetadata: {
     title: `Nathan Simpson - Designer + Frontend Developer`,
@@ -64,5 +62,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ]
+  ],
+  jsxRuntime: 'automatic',
+  jsxImportSource: '@emotion/react'
 };

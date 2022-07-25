@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-
 import { Tag } from '@nathsimpson/tag';
 import { Divider } from '../components/Divider';
 import { useCardStyles } from '@nathsimpson/card';

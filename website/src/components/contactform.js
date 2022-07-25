@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { radii, colors, fontSizes } from '@nathsimpson/theme';
 import { hexAlpha } from '@nathsimpson/utils';

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Text } from '@nathsimpson/typography';
 import { useMediaQuery } from '@nathsimpson/utils';
 import { Stack } from '@nathsimpson/box';

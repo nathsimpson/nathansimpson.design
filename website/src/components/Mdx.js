@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 

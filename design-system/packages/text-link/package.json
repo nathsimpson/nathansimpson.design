@@ -7,10 +7,10 @@
   "module": "dist/nathsimpson-text-link.esm.js",
   "peerDependencies": {
     "@nathsimpson/theme": "0.1.0",
-    "react": "^17.0.2"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@nathsimpson/theme": "*",
-    "react": "^17.0.2"
+    "react": "^18.2.0"
   }
 }

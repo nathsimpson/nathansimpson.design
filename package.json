@@ -8,13 +8,13 @@
     "node": ">=14.15.0"
   },
   "workspaces": [
-    "website",
+    "website-next",
     "design-system/packages/*"
   ],
   "scripts": {
     "website": "yarn workspace @nathsimpson/website",
     "dev": "yarn website dev",
-    "clean": "yarn website clean && rimraf \"**/node_modules\" \"**/yarn-error.log\" \"**/out.log\" \"**/.DS_Store\" \"**/dist\" \"**/out\" \"**/.next\"",
+    "clean": "rimraf \"**/node_modules\" \"**/yarn-error.log\" \"**/out.log\" \"**/.DS_Store\" \"**/dist\" \"**/out\" \"**/.next\"",
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md{,x}\" \"**/*.ts{,x}\"",
     "postinstall": "preconstruct dev && manypkg check",
     "types": "tsc",
@@ -45,7 +45,7 @@
     "prettier": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.7.4"
   },
   "resolutions": {
     "remark": "11.0.2"

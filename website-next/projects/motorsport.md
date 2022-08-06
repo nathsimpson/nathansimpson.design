@@ -1,6 +1,5 @@
 ---
 title: 'Motorsport Graphic Designs'
-slug: 'motorsport'
 date: '2018-02-21'
 imagesrc: 'motorsport/cover.jpg'
 type: project

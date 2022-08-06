@@ -1,6 +1,5 @@
 ---
 title: 'ITC Learning Website'
-slug: 'itc-learning'
 date: '2018-08-01'
 imagesrc: 'itc/cover.jpg'
 type: project

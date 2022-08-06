@@ -4,12 +4,12 @@ import { useCardStyles } from '@nathsimpson/card';
 import { Flex, Stack } from '@nathsimpson/box';
 import { Prose } from '@nathsimpson/prose';
 import { Heading, Text } from '@nathsimpson/typography';
-import { TextLinkGatsby } from '../components/TextLinkGatsby';
+import { NextTextLink } from './NextTextLink';
 
 type PostCardProps = {
   date: string;
   updated: string;
-  path: string;
+  href: string;
   title: string;
   type: 'Post' | 'Talk';
   youtubeid?: string;
@@ -20,7 +20,7 @@ type PostCardProps = {
 export const PostCard = ({
   date,
   updated,
-  path,
+  href,
   title,
   type,
   youtubeid,
@@ -33,9 +33,9 @@ export const PostCard = ({
   return (
     <div css={cardStyles}>
       <Stack gap="small">
-        <TextLinkGatsby to={path}>
+        <NextTextLink href={href}>
           <Heading level={2}>{title}</Heading>
-        </TextLinkGatsby>
+        </NextTextLink>
         <Flex flexDirection="row" alignItems="center">
           <Tag label={type} size="small" />
           <Text as="span" size="small" marginLeft="small">
@@ -53,7 +53,7 @@ export const PostCard = ({
           />
         )}
         <Prose>{description || excerpt}</Prose>
-        <TextLinkGatsby to={path}>Read more</TextLinkGatsby>
+        <NextTextLink href={href}>Read more</NextTextLink>
       </Stack>
     </div>
   );

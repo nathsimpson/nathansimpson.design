@@ -1,5 +1,4 @@
 import { Core } from '../components/Core';
-import '../styles/globals.css';
 
 import { AppProps } from 'next/app';
 

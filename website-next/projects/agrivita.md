@@ -1,6 +1,5 @@
 ---
-title: 'AgriVita'
-path: /agrivita
+title: AgriVita
 date: '2018-09-01'
 imagesrc: 'agrivita/cover.jpg'
 type: project

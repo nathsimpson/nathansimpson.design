@@ -1,6 +1,5 @@
 ---
 title: 'The Garage'
-slug: 'thegarage'
 date: '2018-11-26'
 imagesrc: 'thegarage/cover.jpg'
 type: project

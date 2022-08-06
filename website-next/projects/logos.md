@@ -1,6 +1,5 @@
 ---
 title: 'Logo Designs'
-slug: 'logos'
 date: '2018-02-21'
 imagesrc: 'logos/cover.jpg'
 type: project

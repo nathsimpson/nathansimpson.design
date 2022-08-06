@@ -1,6 +1,5 @@
 ---
 title: Manipulating colour in JavaScript
-slug: 'talks/manipulate-colour-in-javascript'
 date: '2019-08-18'
 type: talk
 youtubeid: OQbF8Mx4iso

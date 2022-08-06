@@ -1,6 +1,5 @@
 ---
 title: 'Reckon'
-slug: 'reckon'
 date: '2021-07-10'
 type: project
 imagesrc: 'reckon/cover.jpg'

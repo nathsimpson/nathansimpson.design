@@ -9,26 +9,26 @@ import { Prose } from '@nathsimpson/prose';
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
-import type { ProjectType } from '../../interfaces/project';
-import { getProjectBySlug, getAllProjects } from '../../lib/projects';
+import type { PostType } from '../../interfaces/post';
+import { getPostBySlug, getAllPosts } from '../../lib/posts';
 import markdownToHtml from '../../lib/markdownToHtml';
 
 type Props = {
-  project: ProjectType;
-  // morePosts: ProjectType[];
+  // morePosts: PostType[];
   // preview?: boolean;
+  post: PostType;
 };
 
-export default function Project({
-  project
-}: //  morePosts,
-// preview
-Props) {
+export default function Post({
+  // morePosts,
+  // preview,
+  post
+}: Props) {
   const router = useRouter();
-  if (!router.isFallback && !project?.slug) {
+  if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  const skills = project.skills ? project.skills.split(',') : [];
+  const skills = post.skills ? post.skills.split(',') : [];
   return (
     <Fragment>
       <Head>
@@ -48,29 +48,22 @@ Props) {
           <Fragment>
             <article className="mb-32">
               <Head>
-                <title>{project.title} - Nathan Simpson's portfolio</title>
-                <meta property="og:image" content={project.imageSrc} />
+                <title>{post.title} - Nathan Simpson's portfolio</title>
+                <meta property="og:image" content={post.imageSrc} />
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">
-                  <BackButton href="/" />
-                  <Heading level="1">{project.title}</Heading>
+                  <BackButton href="/blog" />
+                  <Heading level={1}>{post.title}</Heading>
                   {skills.length ? <Tags items={skills} /> : null}
                 </Stack>
                 <Prose>
                   <div
                     // className={markdownStyles['markdown']}
-                    dangerouslySetInnerHTML={{ __html: project.content }}
+                    dangerouslySetInnerHTML={{ __html: post.content }}
                   />
                 </Prose>
               </Stack>
-              {/* <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} /> */}
             </article>
           </Fragment>
         )}
@@ -86,7 +79,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getProjectBySlug(params.slug, [
+  const post = getPostBySlug(params.slug, [
     'title',
     'date',
     'slug',
@@ -100,7 +93,7 @@ export async function getStaticProps({ params }: Params) {
 
   return {
     props: {
-      project: {
+      post: {
         ...post,
         content
       }
@@ -109,10 +102,10 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const projects = getAllProjects(['slug']);
+  const posts = getAllPosts(['slug']);
 
   return {
-    paths: projects.map((post) => {
+    paths: posts.map((post) => {
       return {
         params: {
           slug: post.slug

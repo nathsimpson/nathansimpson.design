@@ -31,6 +31,16 @@ const useProseStyles = () => {
       marginTop: spacing.medium
     },
 
+    a: {
+      color: colors.text.link,
+      cursor: 'pointer',
+      fontWeight: 600,
+      '&:hover, &:focus': {
+        color: colors.text.linkHover,
+        textDecoration: 'none'
+      }
+    },
+
     h1: {
       ...standardHeadingStyles,
       fontSize: fontSizes.xxxlarge,

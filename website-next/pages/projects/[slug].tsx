@@ -100,7 +100,6 @@ export async function getStaticProps({ params }: Params) {
     'imageSrc'
   ]);
 
-  console.log({ post });
   const content = await markdownToHtml(post.content || '');
 
   return {

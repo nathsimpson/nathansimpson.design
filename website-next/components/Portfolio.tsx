@@ -19,9 +19,6 @@ export const Portfolio = ({ items }) => {
         }}
       >
         {items.map((node) => {
-          console.log({ node });
-          // const meta = node.frontmatter;
-
           return (
             <Card
               key={node.id}

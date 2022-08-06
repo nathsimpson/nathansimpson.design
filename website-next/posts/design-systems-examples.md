@@ -2,7 +2,7 @@
 title: Design System examples and resources
 date: '2020-11-09'
 updated: '2020-11-12'
-path: '/blog/design-systems-examples'
+slug: 'blog/design-systems-examples'
 type: post
 ---
 

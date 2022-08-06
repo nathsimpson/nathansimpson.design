@@ -1,12 +1,12 @@
-import { TextLinkGatsby } from './TextLinkGatsby';
+import { NextTextLink } from './NextTextLink';
 import { Icon } from '@nathsimpson/icon';
 
-export const BackButton = ({ link }) => {
+export const BackButton = ({ href }: { href: string }) => {
   return (
     <div css={{ display: 'flex' }}>
-      <TextLinkGatsby
+      <NextTextLink
         size="large"
-        to={link}
+        href={href}
         css={{
           marginLeft: -32,
           alignItems: 'center',
@@ -15,7 +15,7 @@ export const BackButton = ({ link }) => {
       >
         <Icon icon="chevronLeft" size={32} />
         Back
-      </TextLinkGatsby>
+      </NextTextLink>
     </div>
   );
 };

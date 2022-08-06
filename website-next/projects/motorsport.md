@@ -1,13 +1,11 @@
 ---
 title: 'Motorsport Graphic Designs'
-path: '/motorsport'
+slug: 'motorsport'
 date: '2018-02-21'
 imagesrc: 'motorsport/cover.jpg'
 type: project
 tag: Design
 ---
-
-# Motorsport Graphic Designs
 
 Aside from being passionate about Product Development, I am also an avid motorsport fan. If you asked 14 year old Nathan what he wanted to be when he grew up, he would have said Racing Car Designer (he seems pretty cool). While my focus has shifted to digtal products, I occasionally get inspired and design a new racing livery, usually over the New Year period when teams announce their new drivers and sponsors.
 

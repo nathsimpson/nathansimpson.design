@@ -86,17 +86,18 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             <Icon icon="menu" size={32} />
           </Box>
 
-          <Link
-            href="/"
-            css={{
-              color: colors.brand,
-              textDecoration: 'none',
-              '&:hover': {
-                color: colors.text.linkHover
-              }
-            }}
-          >
-            <Icon icon="ns" size={50} />
+          <Link href="/">
+            <a
+              css={{
+                color: colors.brand,
+                textDecoration: 'none',
+                '&:hover': {
+                  color: colors.text.linkHover
+                }
+              }}
+            >
+              <Icon icon="ns" size={50} />
+            </a>
           </Link>
         </Flex>
 

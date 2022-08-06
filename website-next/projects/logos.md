@@ -1,13 +1,11 @@
 ---
 title: 'Logo Designs'
-path: '/logos'
+slug: 'logos'
 date: '2018-02-21'
 imagesrc: 'logos/cover.jpg'
 type: project
 tag: Design
 ---
-
-# Logo Designs
 
 ![Jayden Ojeda Motorsport](https://files.nathansimpson.design/portfolio/logos/1.jpg 'Jayden Ojeda Motorsport')
 

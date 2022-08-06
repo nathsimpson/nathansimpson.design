@@ -1,6 +1,6 @@
 ---
 title: Prototyping a social network with Keystone 5
-path: '/talks/prototype-a-social-network'
+slug: 'talks/prototype-a-social-network'
 date: '2019-06-23'
 type: talk
 youtubeid: 8D_bwTpDTTs

@@ -1,6 +1,6 @@
 ---
 title: 'ITC Learning Website'
-path: '/itc-learning'
+slug: 'itc-learning'
 date: '2018-08-01'
 imagesrc: 'itc/cover.jpg'
 type: project
@@ -8,8 +8,6 @@ desc: A WordPress-based website for a previous employer; Featuring a custom them
 tag: Development
 skills: 'Design,WordPress,SCSS,PHP,JavaScript'
 ---
-
-# ITC Learning Website
 
 ![ITC Learning Website](https://files.nathansimpson.design/portfolio/itc/2.jpg 'ITC Learning Website')
 

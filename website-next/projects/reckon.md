@@ -1,6 +1,6 @@
 ---
 title: 'Reckon'
-path: '/reckon'
+slug: 'reckon'
 date: '2021-07-10'
 type: project
 imagesrc: 'reckon/cover.jpg'
@@ -8,8 +8,6 @@ tag: Development
 desc: 'Building Balance Design System, and the next-generation of Reckon products.'
 skills: 'TypeScript,React,React Native,Design Systems,GraphQL'
 ---
-
-# Reckon
 
 ![Balance Design System](https://files.nathansimpson.design/portfolio/reckon/reckon.jpg 'Balance Design System')
 

@@ -18,21 +18,22 @@ export const Portfolio = ({ items }) => {
           width: '100%'
         }}
       >
-        {items.map(({ node }) => {
-          const meta = node.frontmatter;
+        {items.map((node) => {
+          console.log({ node });
+          // const meta = node.frontmatter;
 
           return (
             <Card
               key={node.id}
-              project={meta}
-              desc={meta.desc}
-              tag={meta.tag}
-              path={meta.path}
+              // project={meta}
+              // desc={node.desc}
+              tag={node.tag}
+              path={`projects/${node.slug}`}
               image={
-                meta.imagesrc &&
-                'https://files.nathansimpson.design/portfolio/' + meta.imagesrc
+                node.imagesrc &&
+                'https://files.nathansimpson.design/portfolio/' + node.imagesrc
               }
-              title={meta.title}
+              title={node.title}
             />
           );
         })}

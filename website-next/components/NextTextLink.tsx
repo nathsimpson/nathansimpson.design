@@ -8,5 +8,9 @@ type NextTextLinkProps = LinkProps & {
 
 export const NextTextLink = ({ size, href, ...props }: NextTextLinkProps) => {
   const styles = getLinkStyles({ size });
-  return <Link href={href} css={styles} {...props} />;
+  return (
+    <Link href={href}>
+      <a css={styles} {...props} />
+    </Link>
+  );
 };

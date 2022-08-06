@@ -1,13 +1,11 @@
 ---
 title: 'Nathan + Carrie Wedding'
-path: '/wedding'
+slug: 'wedding'
 date: '2016-02-06'
 imagesrc: 'wedding/cover.jpg'
 type: project
 tag: Design
 ---
-
-# Nathan + Carrie Wedding
 
 For my wedding in February 2016, I designed the invitations, place cards, order of service brochures and event website, around a unified visual theme that matched the garden wedding ceremony with vintage touches.
 

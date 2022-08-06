@@ -1,14 +1,12 @@
 ---
 title: "Simmo's Offroad Tours"
-path: '/simmos-offroad-tours'
+slug: 'simmos-offroad-tours'
 date: '2018-10-01'
 imagesrc: 'simmo/cover.jpg'
 type: project
 tag: Design
 skills: 'Branding,Web Design,NextJS,Keystone,Vehicle graphics'
 ---
-
-# Simmo's Offroad Tours
 
 Simmo's Offroad Tours is an outdoor tourism company in Orange NSW, providing winery tours, scenic 4wd tours and camping holidays in the central west of New South Wales.
 

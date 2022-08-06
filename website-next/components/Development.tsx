@@ -5,7 +5,18 @@ import { maxWidth } from '@nathsimpson/theme';
 import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
 
-import { development_skills } from '../data';
+const development_skills = [
+  'JavaScript',
+  'TypeScript',
+  'Design Systems',
+  'React',
+  'React Native',
+  'NextJS',
+  'Gatsby',
+  'NodeJS',
+  'Keystone',
+  'Swift'
+];
 
 export const Development = () => {
   return (

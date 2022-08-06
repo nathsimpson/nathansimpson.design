@@ -11,7 +11,7 @@ import {
   Talks,
   Dribbble
 } from '../components';
-import { Hero } from '../components/Hero';
+import { Hero } from '../../../website-next/components/Hero';
 
 const HomePage = ({ data }: PageProps<DataProps>) => (
   <Fragment>

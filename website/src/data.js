@@ -59,16 +59,3 @@ export const footer_navItems = [
     label: 'Design System'
   }
 ];
-
-export const development_skills = [
-  'JavaScript',
-  'TypeScript',
-  'Design Systems',
-  'React',
-  'React Native',
-  'NextJS',
-  'Gatsby',
-  'NodeJS',
-  'Keystone',
-  'Swift'
-];

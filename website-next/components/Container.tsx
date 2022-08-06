@@ -1,19 +1,22 @@
-import { useTheme } from '@nathsimpson/theme';
+import { PropsWithChildren, ElementType } from 'react';
+import { spacing, maxWidth as maxWidthTokens } from '@nathsimpson/theme';
 
-export const Container = ({ as: Tag = 'div', ...props }) => {
-  const { spacing } = useTheme();
+type ContainerProps = PropsWithChildren<{
+  as?: ElementType;
+}>;
+
+export const Container = ({ as: Tag = 'div', children }: ContainerProps) => {
   return (
     <Tag
       css={{
         width: '100%',
-        maxWidth: '1300px',
-        paddingLeft: spacing.xlarge,
-        paddingRight: spacing.xlarge,
-        padding: '0 24px',
-        margin: '0 auto',
-        boxSizing: 'border-box'
+        maxWidth: maxWidthTokens.page,
+        paddingLeft: spacing.medium,
+        paddingRight: spacing.medium,
+        margin: '0 auto'
       }}
-      {...props}
-    />
+    >
+      {children}
+    </Tag>
   );
 };

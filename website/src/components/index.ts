@@ -1,10 +1,10 @@
 export { BackButton } from './backButton';
 export { Contact } from './contact';
-export { Container } from './Container';
+export { Container } from '../../../website-next/components/Container';
 export { ContentContainer } from './ContentContainer';
 export { DesignSystemTemplate } from './designSystem';
 export { Development } from './Development';
-export { Dribbble } from './dribbble';
+export { Dribbble } from '../../../website-next/components/Dribbble';
 export { Footer } from './footer';
 export { Header } from './header';
 export { Mdx, MdxWithoutH1 } from './Mdx';

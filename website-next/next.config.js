@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
+const nextMDX = require('@next/mdx');
 const withPreconstruct = require('@preconstruct/next');
 
-const withMDX = require('@next/mdx')({
+const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],

@@ -8,7 +8,7 @@ import { maxWidth, useTheme } from '@nathsimpson/theme';
 import { useMediaQuery } from '@nathsimpson/utils';
 
 import { NextTextLink } from './NextTextLink';
-import { ThemeSelectionContext } from './core';
+import { ThemeSelectionContext } from './Core';
 
 const navItems = [
   {

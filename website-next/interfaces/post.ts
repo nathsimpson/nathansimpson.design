@@ -7,4 +7,5 @@ export type PostType = {
   updated?: string;
   type: 'post' | 'talk';
   youtubeid?: string;
+  content: string;
 };

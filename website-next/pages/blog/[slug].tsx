@@ -12,6 +12,7 @@ import { Header } from '../../components/Header';
 import type { PostType } from '../../interfaces/post';
 import { getPostBySlug, getAllPosts } from '../../lib/posts';
 import markdownToHtml from '../../lib/markdownToHtml';
+import { YouTubeVideo } from '../../YouTubeVideo';
 
 type Props = {
   // morePosts: PostType[];
@@ -58,6 +59,7 @@ export default function Post({
                   {skills.length ? <Tags items={skills} /> : null}
                 </Stack>
                 <Prose>
+                  {post.youtubeid && <YouTubeVideo videoId={post.youtubeid} />}
                   <div
                     // className={markdownStyles['markdown']}
                     dangerouslySetInnerHTML={{ __html: post.content }}
@@ -86,7 +88,8 @@ export async function getStaticProps({ params }: Params) {
     'author',
     'content',
     'ogImage',
-    'imageSrc'
+    'imageSrc',
+    'youtubeid'
   ]);
 
   const content = await markdownToHtml(post.content || '');

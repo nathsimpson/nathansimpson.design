@@ -193,6 +193,7 @@ export type BoxProps = BoxMarginProps &
   BoxRadiiProps &
   BoxLayoutProps & {
     as?: ElementType;
+    className?: string;
     /** The content of this container. */
     children?: ReactNode;
   };

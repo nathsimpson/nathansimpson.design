@@ -11,7 +11,7 @@ export const LinkButton = ({
   href,
   ...props
 }: ButtonProps & {
-  href: 'string';
+  href: string;
 }) => {
   const styles = useButtonStyles({ size, weight });
   return (

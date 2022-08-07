@@ -11,6 +11,7 @@ import { Container } from '../components/Container';
 import { Development } from '../components/Development';
 import { Dribbble } from '../components/Dribbble';
 import { getAllProjects } from '../lib/projects';
+import { Contact } from '../components/Contact';
 
 type Props = {
   allProjects: Project[];
@@ -34,6 +35,7 @@ const Home: NextPage = ({ allProjects }: Props) => {
           <Portfolio items={allProjects} />
           <Development />
           <Dribbble />
+          <Contact />
         </Stack>
       </Container>
     </Fragment>

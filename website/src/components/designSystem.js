@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { Container, Header } from '.';
-import { MdxWithoutH1 } from './Mdx';
+import { MdxWithoutH1 } from '../../../website-next/components/Mdx';
 
 import { Heading, Text } from '@nathsimpson/typography';
 import { LinkButton } from '@nathsimpson/button';

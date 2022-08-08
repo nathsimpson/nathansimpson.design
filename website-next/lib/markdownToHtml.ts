@@ -1,7 +1,12 @@
-import remark from 'remark';
-import html from 'remark-html';
+import { serialize } from 'next-mdx-remote/serialize';
+import remarkGfm from 'remark-gfm';
 
 export default async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
+  const result = await serialize(markdown, {
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: []
+    }
+  });
+  return result;
 }

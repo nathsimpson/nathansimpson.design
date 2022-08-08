@@ -12,6 +12,7 @@ import { Header } from '../../components/Header';
 import type { ProjectType } from '../../interfaces/project';
 import { getProjectBySlug, getAllProjects } from '../../lib/projects';
 import markdownToHtml from '../../lib/markdownToHtml';
+import { MdxContent } from '../../components/Mdx';
 
 type Props = {
   project: ProjectType;
@@ -58,10 +59,7 @@ Props) {
                   {skills.length ? <Tags items={skills} /> : null}
                 </Stack>
                 <Prose>
-                  <div
-                    // className={markdownStyles['markdown']}
-                    dangerouslySetInnerHTML={{ __html: project.content }}
-                  />
+                  <MdxContent content={project.content} />
                 </Prose>
               </Stack>
             </article>

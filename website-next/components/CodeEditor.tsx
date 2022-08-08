@@ -1,10 +1,11 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
+import { Box } from '@nathsimpson/box';
 import { useTheme } from '@nathsimpson/theme';
 import { useCodeHighlightTheme } from './codeHighlightTheme';
 
-export const CodePreview = ({ className = '', children }) => {
+export const StaticCode = ({ className = '', children }) => {
   const matches = className.match(/language-(?<lang>.*)/);
   const { colors } = useTheme();
   const codeTheme = useCodeHighlightTheme();
@@ -21,7 +22,10 @@ export const CodePreview = ({ className = '', children }) => {
       }
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre
+        <Box
+          as="pre"
+          padding="medium"
+          rounding="medium"
           className={className}
           style={{
             margin: 0,
@@ -36,7 +40,7 @@ export const CodePreview = ({ className = '', children }) => {
               ))}
             </div>
           ))}
-        </pre>
+        </Box>
       )}
     </Highlight>
   );

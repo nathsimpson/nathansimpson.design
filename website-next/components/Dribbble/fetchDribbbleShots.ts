@@ -8,7 +8,6 @@ export const fetchDribbbleShots = () => {
     fetch('/api/get-dribbble-shots')
       .then((response) => response.json())
       .then(({ shots }) => {
-        console.log({ shots });
         setData(shots.splice(0, 6, ''));
       })
       .catch((error) => {

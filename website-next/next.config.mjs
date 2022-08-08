@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const nextMDX = require('@next/mdx');
-const withPreconstruct = require('@preconstruct/next');
+import nextMDX from '@next/mdx';
+import withPreconstruct from '@preconstruct/next';
+import remarkGfm from 'remark-gfm';
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [],
-    rehypePlugins: []
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
+    providerImportSource: '@mdx-js/react'
   }
 });
 
-module.exports = withPreconstruct(
+export default withPreconstruct(
   withMDX({
     reactStrictMode: true,
     swcMinify: true,

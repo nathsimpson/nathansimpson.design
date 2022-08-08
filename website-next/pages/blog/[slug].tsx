@@ -13,6 +13,7 @@ import type { PostType } from '../../interfaces/post';
 import { getPostBySlug, getAllPosts } from '../../lib/posts';
 import markdownToHtml from '../../lib/markdownToHtml';
 import { YouTubeVideo } from '../../YouTubeVideo';
+import { MdxContent } from '../../components/Mdx';
 
 type Props = {
   // morePosts: PostType[];
@@ -60,10 +61,7 @@ export default function Post({
                 </Stack>
                 <Prose>
                   {post.youtubeid && <YouTubeVideo videoId={post.youtubeid} />}
-                  <div
-                    // className={markdownStyles['markdown']}
-                    dangerouslySetInnerHTML={{ __html: post.content }}
-                  />
+                  <MdxContent content={post.content} />
                 </Prose>
               </Stack>
             </article>

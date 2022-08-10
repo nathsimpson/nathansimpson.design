@@ -16,7 +16,6 @@ out
 .cache
 */build
 dist/
-public
 */built-lambda
 
 # misc

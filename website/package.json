@@ -2,10 +2,12 @@
   "name": "@nathsimpson/website",
   "author": "Nathan Simpson",
   "version": "2.0.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:next": "next build",
+    "build:playroom": "playroom build",
+    "build": "yarn build:next && yarn build:playroom",
+    "playroom-start": "playroom start",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,6 +24,7 @@
     "next": "12.2.2",
     "next-mdx-remote": "^3.0.4",
     "node-fetch": "^3.2.9",
+    "playroom": "^0.27.7",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -5,6 +5,7 @@ import ErrorPage from 'next/error';
 import { Stack } from '@nathsimpson/box';
 import { Heading } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
+import { Tags } from '@nathsimpson/tag';
 
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';

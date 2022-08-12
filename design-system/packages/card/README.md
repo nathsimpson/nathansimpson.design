@@ -15,7 +15,13 @@ import { Card, useCardStyles } from '@nathansimpson/card';
 ```
 
 ```jsx live
-<div style={{display: 'grid', gap: spacing.medium, gridTemplateColumns: '1fr 1fr'}}>
+<div
+  style={{
+    display: 'grid',
+    gap: spacing.medium,
+    gridTemplateColumns: '1fr 1fr'
+  }}
+>
   <Card
     title="Test"
     tag="Design"

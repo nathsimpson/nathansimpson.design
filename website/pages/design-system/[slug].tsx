@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { MdxContent } from '../../components/Mdx';
 import { Container } from '../../components/Container';
-import { Flex, Stack } from '@nathsimpson/box';
+import { Flex } from '@nathsimpson/box';
 import { Heading } from '@nathsimpson/typography';
 import { LinkButton } from '@nathsimpson/button';
 import { Prose } from '@nathsimpson/prose';

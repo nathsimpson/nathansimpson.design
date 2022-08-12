@@ -5,6 +5,7 @@ import ErrorPage from 'next/error';
 import { Stack } from '@nathsimpson/box';
 import { Heading } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
+import { Tags } from '@nathsimpson/tag';
 
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
@@ -50,7 +51,7 @@ export default function Post({
           <Fragment>
             <article className="mb-32">
               <Head>
-                <title>{post.title} - Nathan Simpson's portfolio</title>
+                <title>{`${post.title} - Nathan Simpson's portfolio`}</title>
                 <meta property="og:image" content={post.imageSrc} />
               </Head>
               <Stack gap="medium" as="article">

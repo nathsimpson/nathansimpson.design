@@ -13,5 +13,9 @@
     "@emotion/babel-preset-css-prop",
     "@babel/preset-typescript"
   ],
-  "plugins": ["@emotion/babel-plugin", "@babel/plugin-transform-runtime", "babel-plugin-macros"]
+  "plugins": [
+    "@emotion/babel-plugin",
+    "@babel/plugin-transform-runtime",
+    "babel-plugin-macros"
+  ]
 }

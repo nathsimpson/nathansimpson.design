@@ -12,11 +12,16 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "noEmit": true,
     "baseUrl": ".",
-    "allowJs": true
+    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
     "./website/**/*",
     "./design-system/*",
     "./design-system/packages/*"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }

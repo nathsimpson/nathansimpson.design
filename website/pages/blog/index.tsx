@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Fragment } from 'react';
 import { Stack } from '@nathsimpson/box';
 import { Heading, Text } from '@nathsimpson/typography';
@@ -11,11 +9,11 @@ import { PostCard } from '../../components/PostCard';
 import { getAllPosts } from '../../lib/posts';
 import { PostType } from '../../interfaces/post';
 
-type BlogPage = {
+type BlogPageProps = {
   allPosts: PostType[];
 };
 
-export default function BlogPage({ allPosts }: BlogPage) {
+export default function BlogPage({ allPosts }: BlogPageProps) {
   return (
     <Fragment>
       <Head>

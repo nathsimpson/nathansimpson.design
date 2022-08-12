@@ -20,6 +20,6 @@ jobs:
       - run: yarn lint
       - run: yarn manypkg check
       - run: yarn types
-      - run: cd website && yarn build
+      - run: yarn website build
         env:
           CI: true

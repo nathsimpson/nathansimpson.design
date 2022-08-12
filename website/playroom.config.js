@@ -1,12 +1,12 @@
 module.exports = {
-  components: './src/playroom/components',
+  components: './playroom/components',
   outputPath: './public/playroom',
 
   // // Optional:
   // title: 'My Awesome Library',
-  themes: './src/playroom/themes',
+  themes: './playroom/themes',
   // snippets: './playroom/snippets.js',
-  frameComponent: './src/playroom/frame',
+  frameComponent: './playroom/frame',
   // scope: './playroom/useScope.js',
   // widths: [320, 768, 1024],
   // port: 9000,

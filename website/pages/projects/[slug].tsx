@@ -56,7 +56,7 @@ Props) {
               <Stack gap="medium" as="article">
                 <Stack gap="small">
                   <BackButton href="/" />
-                  <Heading level="1">{project.title}</Heading>
+                  <Heading level={1}>{project.title}</Heading>
                   {skills.length ? <Tags items={skills} /> : null}
                 </Stack>
                 <Prose>

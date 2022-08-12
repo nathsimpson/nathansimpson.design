@@ -8,8 +8,9 @@ import { Portfolio } from '../components/Portfolio';
 import { Container } from '../components/Container';
 import { Development } from '../components/Development';
 import { Dribbble } from '../components/Dribbble';
-import { getAllProjects } from '../lib/projects';
 import { Contact } from '../components/Contact';
+import { getAllProjects } from '../lib/projects';
+import { Project } from '../interfaces/project';
 
 type Props = {
   allProjects: Project[];

@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import { ReactNode } from 'react';
 
-export default function CustomLink({ children, href }) {
+export const CustomLink = ({
+  children,
+  href
+}: {
+  children: ReactNode;
+  href: string;
+}) => {
   // If the link is local it will start with a "/"
   // Otherwise it'll be something like "https://"
   return href.startsWith('/') || href === '' ? (
@@ -12,4 +19,4 @@ export default function CustomLink({ children, href }) {
       {children}
     </a>
   );
-}
+};

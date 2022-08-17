@@ -2,7 +2,9 @@ import { Stack } from '@nathsimpson/box';
 import { Text } from '@nathsimpson/typography';
 import { NextTextLink } from '../NextTextLink';
 
-export const NavigationBar = ({ items }) => {
+type Package = { title: string; slug: string; section: string };
+
+export const NavigationBar = ({ items }: { items: Package[] }) => {
   const layout = items.filter(({ section }) => section === 'layout');
   const hooks = items.filter(({ section }) => section === 'hooks');
   const components = items.filter(
@@ -14,8 +16,12 @@ export const NavigationBar = ({ items }) => {
       <NavBlock
         label="Guides"
         items={[
-          { title: 'Welcome', slug: '/design-system' },
-          { title: 'Design Tokens', slug: '/design-system/tokens' }
+          { title: 'Welcome', slug: '/design-system', section: 'guides' },
+          {
+            title: 'Design Tokens',
+            slug: '/design-system/tokens',
+            section: 'guides'
+          }
         ]}
       />
       <NavBlock items={layout} label="Layout" />
@@ -25,23 +31,23 @@ export const NavigationBar = ({ items }) => {
   );
 };
 
-const NavBlock = ({ label, items }) => {
+const NavBlock = ({ label, items }: { label: string; items: Package[] }) => {
   return (
     <Stack as="ul" gap="none" padding="none" margin="none">
       <Text as="span" size="xsmall">
         {label}
       </Text>
       {items.map(({ slug, title }) => (
-        <NavItem slug={slug} key={slug} label={title} />
+        <NavItem slug={slug} key={slug} title={title} />
       ))}
     </Stack>
   );
 };
 
-const NavItem = ({ label, slug }) => {
+const NavItem = ({ title, slug }: Omit<Package, 'section'>) => {
   return (
     <li css={{ listStyle: 'none' }}>
-      <NextTextLink href={slug}>{label}</NextTextLink>
+      <NextTextLink href={slug}>{title}</NextTextLink>
     </li>
   );
 };

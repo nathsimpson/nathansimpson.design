@@ -6,11 +6,13 @@ type TextProps = {
   as?: 'p' | 'span';
   color?: ResponsiveProp<'default' | 'emphasis'>;
   size?: FontSizeType;
+  textAlign?: 'center' | 'left' | 'right' | 'justify';
 } & BoxProps;
 
 export const Text = ({
   size = 'medium',
   color = 'default',
+  textAlign,
   as = 'p',
   ...props
 }: TextProps) => {
@@ -25,7 +27,8 @@ export const Text = ({
       css={mq({
         color: mapResponsiveProp(color, colors.text),
         fontFamily: fontFamilies.body,
-        fontSize: fontSizes[size]
+        fontSize: fontSizes[size],
+        textAlign: textAlign
       })}
     />
   );

@@ -10,10 +10,10 @@ import { Development } from '../components/Development';
 import { Dribbble } from '../components/Dribbble';
 import { Contact } from '../components/Contact';
 import { getAllProjects } from '../lib/projects';
-import { Project } from '../interfaces/project';
+import { ProjectType } from '../interfaces/project';
 
 type Props = {
-  allProjects: Project[];
+  allProjects: ProjectType[];
 };
 
 const Home: NextPage = ({ allProjects }: Props) => {

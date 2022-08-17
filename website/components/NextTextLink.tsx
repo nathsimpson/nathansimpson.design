@@ -1,5 +1,5 @@
 import Link, { LinkProps } from 'next/link';
-import { getLinkStyles } from '@nathsimpson/text-link';
+import { useLinkStyles } from '@nathsimpson/text-link';
 import type { FontSizeType } from '@nathsimpson/theme';
 
 type NextTextLinkProps = LinkProps & {
@@ -7,7 +7,7 @@ type NextTextLinkProps = LinkProps & {
 };
 
 export const NextTextLink = ({ size, href, ...props }: NextTextLinkProps) => {
-  const styles = getLinkStyles({ size });
+  const styles = useLinkStyles({ size });
   return (
     <Link href={href}>
       <a css={styles} {...props} />

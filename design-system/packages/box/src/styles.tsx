@@ -175,7 +175,7 @@ type BoxColorProps = {
   /** Background color */
   bg?: 'none' | 'base' | 'emphasis';
 };
-const colorStyles = ({ bg }: BoxColorProps) => {
+const useColorStyles = ({ bg }: BoxColorProps) => {
   const { colors } = useTheme();
   const bgColors = {
     none: 'none',
@@ -198,7 +198,7 @@ export type BoxProps = BoxMarginProps &
     children?: ReactNode;
   };
 
-export const boxStyles = ({
+export const useBoxStyles = ({
   display,
   height,
   width,
@@ -233,6 +233,9 @@ export const boxStyles = ({
   ...attrs
 }: BoxProps) => {
   const { mq } = useMediaQuery();
+  const colorStyles = useColorStyles({
+    bg
+  });
 
   return [
     mq({
@@ -240,9 +243,7 @@ export const boxStyles = ({
       boxSizing: 'border-box',
       listStyle: 'none',
 
-      ...colorStyles({
-        bg
-      }),
+      ...colorStyles,
       ...getMarginStyles({
         margin,
         marginBottom,

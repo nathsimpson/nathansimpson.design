@@ -1,7 +1,7 @@
 import { AnchorHTMLAttributes } from 'react';
 import { useTheme, FontSizeType } from '@nathsimpson/theme';
 
-export const getLinkStyles = ({ size }: { size?: FontSizeType }) => {
+export const useLinkStyles = ({ size }: { size?: FontSizeType }) => {
   const { colors, fontFamilies, fontSizes } = useTheme();
 
   return {
@@ -23,5 +23,5 @@ type TextLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 export const TextLink = ({ size, ...props }: TextLinkProps) => {
-  return <a css={getLinkStyles({ size })} {...props} />;
+  return <a css={useLinkStyles({ size })} {...props} />;
 };

@@ -17,6 +17,8 @@ export const ThemeSelectionContext = createContext<{
   setThemeName: (themeName: keyof typeof themes) => void;
 }>({
   themeName: 'dark',
+  // TODO: Redo theme context
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setThemeName: () => {}
 });
 

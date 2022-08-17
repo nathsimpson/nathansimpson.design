@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const fetchDribbbleShots = () => {
+export const useFetchDribbbleShots = () => {
   const [error, setError] = useState();
   const [data, setData] = useState([]);
 

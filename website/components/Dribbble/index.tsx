@@ -5,11 +5,11 @@ import { Heading, Text } from '@nathsimpson/typography';
 import { TextLink } from '@nathsimpson/text-link';
 
 import { DribbbleGrid } from './DribbbleGrid';
-import { fetchDribbbleShots } from './fetchDribbbleShots';
+import { useFetchDribbbleShots } from './fetchDribbbleShots';
 import { Skeleton } from './DribbbleShotSkeleton';
 
 export const Dribbble = () => {
-  const { loading, data, error } = fetchDribbbleShots();
+  const { loading, data, error } = useFetchDribbbleShots();
 
   return (
     <Stack gap="medium" css={{ width: '100%' }}>

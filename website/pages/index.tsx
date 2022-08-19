@@ -10,20 +10,20 @@ import { Development } from '../components/Development';
 import { Dribbble } from '../components/Dribbble';
 import { Contact } from '../components/Contact';
 import { getAllProjects } from '../lib/projects';
-import { ProjectType } from '../interfaces/project';
+import { ProjectType } from '../interfaces';
 
 type Props = {
   allProjects: ProjectType[];
 };
 
-const Home: NextPage = ({ allProjects }: Props) => {
+const Home: NextPage<Props> = ({ allProjects }) => {
   return (
     <Fragment>
       <Header />
       <Hero />
       <Container>
         <Stack gap="xxxlarge" marginBottom="xxxlarge" alignItems="center">
-          <Portfolio items={allProjects} />
+          <Portfolio projects={allProjects} />
           <Development />
           <Dribbble />
           <Contact />

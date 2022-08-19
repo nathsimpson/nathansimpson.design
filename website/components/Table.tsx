@@ -1,6 +1,7 @@
 import { useTheme } from '@nathsimpson/theme';
+import { PropsWithOnlyChildren } from '../interfaces';
 
-export const Table = (props) => {
+export const Table = (props: PropsWithOnlyChildren) => {
   return (
     <table
       css={{
@@ -14,7 +15,7 @@ export const Table = (props) => {
   );
 };
 
-export const TableHead = (props) => {
+export const TableHead = (props: PropsWithOnlyChildren) => {
   const { fontFamilies, colors } = useTheme();
   return (
     <thead
@@ -28,7 +29,7 @@ export const TableHead = (props) => {
   );
 };
 
-export const TableRow = (props) => {
+export const TableRow = (props: PropsWithOnlyChildren) => {
   const { colors } = useTheme();
   return (
     <tr
@@ -42,7 +43,7 @@ export const TableRow = (props) => {
   );
 };
 
-export const TableCell = (props) => {
+export const TableCell = (props: PropsWithOnlyChildren) => {
   const { colors, spacing } = useTheme();
   return (
     <td

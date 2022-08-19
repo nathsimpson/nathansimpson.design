@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Stack } from '@nathsimpson/box';
 
 import { useTheme } from '../src/themecontext';
@@ -14,10 +13,10 @@ export const RadiiExample = () => {
   );
 };
 
-const Block = ({ label }) => {
+const Block = ({ label }: { label: string }) => {
   const { colors, spacing, radii } = useTheme();
   return (
-    <Flex align="center" gap="small">
+    <Flex alignItems="center" gap="small">
       <div
         style={{
           width: spacing.xxlarge,

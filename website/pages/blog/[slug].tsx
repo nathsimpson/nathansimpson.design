@@ -10,7 +10,7 @@ import { Tags } from '@nathsimpson/tag';
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
-import type { PostType } from '../../interfaces/post';
+import type { PostType } from '../../interfaces';
 import { getPostBySlug, getAllPosts } from '../../lib/posts';
 import markdownToHtml from '../../lib/markdownToHtml';
 import { YouTubeVideo } from '../../YouTubeVideo';
@@ -73,13 +73,13 @@ export default function Post({
   );
 }
 
-type Params = {
+export async function getStaticProps({
+  params
+}: {
   params: {
     slug: string;
   };
-};
-
-export async function getStaticProps({ params }: Params) {
+}) {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',

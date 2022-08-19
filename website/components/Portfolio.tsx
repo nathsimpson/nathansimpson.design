@@ -1,8 +1,9 @@
 import { Heading } from '@nathsimpson/typography';
 import { Card } from '@nathsimpson/card';
 import { useTheme } from '@nathsimpson/theme';
+import { ProjectType } from 'website/interfaces';
 
-export const Portfolio = ({ items }) => {
+export const Portfolio = ({ projects }: { projects: ProjectType[] }) => {
   const { spacing } = useTheme();
   return (
     <div css={{ width: '100%' }}>
@@ -18,10 +19,10 @@ export const Portfolio = ({ items }) => {
           width: '100%'
         }}
       >
-        {items.map((node) => {
+        {projects.map((node) => {
           return (
             <Card
-              key={node.id}
+              key={node.path}
               // project={meta}
               // desc={node.desc}
               tag={node.tag}

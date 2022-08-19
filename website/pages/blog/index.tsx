@@ -7,7 +7,7 @@ import { Header } from '../../components/Header';
 import { ContentContainer } from '../../components/ContentContainer';
 import { PostCard } from '../../components/PostCard';
 import { getAllPosts } from '../../lib/posts';
-import { PostType } from '../../interfaces/post';
+import { PostType } from '../../interfaces';
 
 type BlogPageProps = {
   allPosts: PostType[];

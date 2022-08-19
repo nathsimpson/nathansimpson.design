@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+import { PropsWithChildren } from 'react';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote';
 import { Button, LinkButton, IconButton } from '@nathsimpson/button';
 import { Icon } from '@nathsimpson/icon';
@@ -9,9 +10,9 @@ import { Card } from '@nathsimpson/card';
 import { TextLink } from '@nathsimpson/text-link';
 import { Text, Heading } from '@nathsimpson/typography';
 import { useTheme, spacing } from '@nathsimpson/theme';
+import { PropsWithOnlyChildren } from '../interfaces';
 import { Divider } from './Divider';
 import { NextTextLink } from './NextTextLink';
-
 import { CodeEditor, StaticCode } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';
 
@@ -55,26 +56,31 @@ const InlineCode = (props) => {
 
 const components = {
   hr: () => <Divider />,
-  code: (props) => {
-    if (props.live) {
+  code: ({
+    live,
+    ...props
+  }: PropsWithChildren<{
+    live?: boolean;
+  }>) => {
+    if (live) {
       return <CodeEditor components={DsComponents} {...props} />;
     } else {
       return <StaticCode {...props} />;
     }
   },
-  inlineCode: (props) => {
+  inlineCode: (props: PropsWithOnlyChildren) => {
     return <InlineCode {...props} />;
   },
-  table: (props) => {
+  table: (props: PropsWithOnlyChildren) => {
     return <Table {...props} />;
   },
-  thead: (props) => {
+  thead: (props: PropsWithOnlyChildren) => {
     return <TableHead {...props} />;
   },
-  tr: (props) => {
+  tr: (props: PropsWithOnlyChildren) => {
     return <TableRow {...props} />;
   },
-  td: (props) => {
+  td: (props: PropsWithOnlyChildren) => {
     return <TableCell {...props} />;
   }
 };

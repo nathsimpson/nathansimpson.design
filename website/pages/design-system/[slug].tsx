@@ -13,7 +13,7 @@ import { getAllPackages, getPackageBySlug } from '../../lib/design-system';
 import markdownToHtml from '../../lib/markdownToHtml';
 
 type PackagePageProps = {
-  allPackages: { title: string; section?: string; slug: string }[];
+  allPackages: { title: string; section: string; slug: string }[];
   pkg: {
     title: string;
     date: string;
@@ -73,7 +73,13 @@ export default function Package({
   );
 }
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({
+  params
+}: {
+  params: {
+    slug: string;
+  };
+}) {
   const allPackages = getAllPackages(['title', 'section', 'slug']);
   const pkg = getPackageBySlug(params.slug, [
     'title',

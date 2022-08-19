@@ -10,15 +10,13 @@ import { Tags } from '@nathsimpson/tag';
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
-import type { ProjectType } from '../../interfaces/project';
+import type { ProjectType } from '../../interfaces';
 import { getProjectBySlug, getAllProjects } from '../../lib/projects';
 import markdownToHtml from '../../lib/markdownToHtml';
 import { MdxContent } from '../../components/Mdx';
 
 type Props = {
   project: ProjectType;
-  // morePosts: ProjectType[];
-  // preview?: boolean;
 };
 
 export default function Project({
@@ -27,7 +25,7 @@ export default function Project({
 // preview
 Props) {
   const router = useRouter();
-  if (!router.isFallback && !project?.slug) {
+  if (!router.isFallback && !project) {
     return <ErrorPage statusCode={404} />;
   }
   const skills = project.skills ? project.skills.split(',') : [];
@@ -71,13 +69,13 @@ Props) {
   );
 }
 
-type Params = {
+export async function getStaticProps({
+  params
+}: {
   params: {
     slug: string;
   };
-};
-
-export async function getStaticProps({ params }: Params) {
+}) {
   const post = getProjectBySlug(params.slug, [
     'title',
     'date',

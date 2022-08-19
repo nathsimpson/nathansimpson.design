@@ -39,7 +39,7 @@ export const footer_socialNetworks = [
     icon: 'polywork',
     link: 'https://www.polywork.com/nathsimpson'
   }
-];
+] as const;
 
 export const footer_navItems = [
   {
@@ -58,4 +58,4 @@ export const footer_navItems = [
     url: '/design-system',
     label: 'Design System'
   }
-];
+] as const;

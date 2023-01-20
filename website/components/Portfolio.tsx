@@ -1,15 +1,14 @@
 import { Heading } from '@nathsimpson/typography';
+import { Stack } from '@nathsimpson/box';
 import { Card } from '@nathsimpson/card';
 import { useTheme } from '@nathsimpson/theme';
-import { ProjectType } from 'website/interfaces';
+import { ProjectWithSlug } from 'website/interfaces';
 
-export const Portfolio = ({ projects }: { projects: ProjectType[] }) => {
+export const Portfolio = ({ projects }: { projects: ProjectWithSlug[] }) => {
   const { spacing } = useTheme();
   return (
-    <div css={{ width: '100%' }}>
-      <Heading level={2} css={{ marginBottom: spacing.large }}>
-        Projects
-      </Heading>
+    <Stack gap="large" css={{ width: '100%' }}>
+      <Heading level={2}>Projects</Heading>
       <div
         css={{
           boxSizing: 'border-box',
@@ -22,8 +21,7 @@ export const Portfolio = ({ projects }: { projects: ProjectType[] }) => {
         {projects.map((node) => {
           return (
             <Card
-              key={node.path}
-              // project={meta}
+              key={node.slug}
               // desc={node.desc}
               tag={node.tag}
               path={`projects/${node.slug}`}
@@ -36,6 +34,6 @@ export const Portfolio = ({ projects }: { projects: ProjectType[] }) => {
           );
         })}
       </div>
-    </div>
+    </Stack>
   );
 };

@@ -28,7 +28,9 @@ export const PostCard = ({
   excerpt
 }: PostCardProps) => {
   const cardStyles = useCardStyles();
-  const postedOn = `${date}. ${updated ? `Updated ${updated}.` : ''}`;
+  const postedOn = `${new Date(date).toDateString()}. ${
+    updated ? `Updated ${new Date(updated).toDateString()}.` : ''
+  }`;
 
   return (
     <div css={cardStyles}>

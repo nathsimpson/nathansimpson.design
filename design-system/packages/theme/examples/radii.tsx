@@ -1,19 +1,20 @@
 import { Flex, Stack } from '@nathsimpson/box';
-
+import { RadiiType } from '../src/themes';
 import { useTheme } from '../src/themecontext';
 
 export const RadiiExample = () => {
   const { radii } = useTheme();
+  const radiiKeys = Object.keys(radii) as RadiiType[];
   return (
     <Stack gap="small">
-      {Object.keys(radii).map((c) => (
+      {radiiKeys.map((c) => (
         <Block label={c} key={c} />
       ))}
     </Stack>
   );
 };
 
-const Block = ({ label }: { label: string }) => {
+const Block = ({ label }: { label: RadiiType }) => {
   const { colors, spacing, radii } = useTheme();
   return (
     <Flex alignItems="center" gap="small">

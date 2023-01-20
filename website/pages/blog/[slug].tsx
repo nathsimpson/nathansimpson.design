@@ -3,9 +3,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import { Stack } from '@nathsimpson/box';
-import { Heading } from '@nathsimpson/typography';
+import { Heading, Text } from '@nathsimpson/typography';
 import { Prose } from '@nathsimpson/prose';
-import { Tags } from '@nathsimpson/tag';
 
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
@@ -17,21 +16,16 @@ import { YouTubeVideo } from '../../YouTubeVideo';
 import { MdxContent } from '../../components/Mdx';
 
 type Props = {
-  // morePosts: PostType[];
-  // preview?: boolean;
   post: PostType;
 };
 
-export default function Post({
-  // morePosts,
-  // preview,
-  post
-}: Props) {
+export default function Post({ post }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  const skills = post.skills ? post.skills.split(',') : [];
+  const postedDate = new Date(post.date).toDateString();
+  const lastUpdatedDate = post.updated && new Date(post.updated).toDateString();
   return (
     <Fragment>
       <Head>
@@ -52,13 +46,16 @@ export default function Post({
             <article className="mb-32">
               <Head>
                 <title>{`${post.title} - Nathan Simpson's portfolio`}</title>
-                <meta property="og:image" content={post.imageSrc} />
+                {/* <meta property="og:image" content={post.imageSrc} /> */}
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">
                   <BackButton href="/blog" />
                   <Heading level={1}>{post.title}</Heading>
-                  {skills.length ? <Tags items={skills} /> : null}
+                  <Text size="small" as="span">
+                    Posted on {postedDate}.
+                    {lastUpdatedDate && ` Updated on ${lastUpdatedDate}`}
+                  </Text>
                 </Stack>
                 <Prose>
                   {post.youtubeid && <YouTubeVideo videoId={post.youtubeid} />}
@@ -83,6 +80,7 @@ export async function getStaticProps({
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
+    'updated',
     'slug',
     'author',
     'content',

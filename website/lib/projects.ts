@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import { ProjectWithSlug } from '../interfaces';
 
 const projectsDirectory = join(process.cwd(), 'projects');
 

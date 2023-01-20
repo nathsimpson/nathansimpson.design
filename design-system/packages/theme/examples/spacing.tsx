@@ -2,19 +2,20 @@ import React from 'react';
 import { Flex, Stack } from '@nathsimpson/box';
 import { Text } from '@nathsimpson/typography';
 import { useTheme } from '../src/themecontext';
-import { spacing } from '../src/index';
+import { spacing, SpacingType } from '../src/themes';
 
 export const SpacingExample = () => {
+  const spacingKeys = Object.keys(spacing) as SpacingType[];
   return (
     <Stack gap="xxsmall">
-      {Object.keys(spacing).map((c) => (
+      {spacingKeys.map((c) => (
         <Block label={c} key={c} />
       ))}
     </Stack>
   );
 };
 
-const Block = ({ label }) => {
+const Block = ({ label }: { label: SpacingType }) => {
   const { colors, spacing } = useTheme();
   const formattedLabel = `${label} (${spacing[label].toString()})`;
   return (

@@ -28,6 +28,9 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     if (field === 'content') {
       items[field] = content;
     }
+    if (field === 'excerpt') {
+      items[field] = data.excerpt || `${content.slice(0, 280).trim()}...`;
+    }
 
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field];

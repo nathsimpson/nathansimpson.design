@@ -19,7 +19,7 @@ export const NavigationBar = ({ items }: { items: Package[] }) => {
           { title: 'Welcome', slug: '/design-system', section: 'guides' },
           {
             title: 'Design Tokens',
-            slug: '/design-system/tokens',
+            slug: '/design-system/theme',
             section: 'guides'
           }
         ]}

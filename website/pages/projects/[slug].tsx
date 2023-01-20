@@ -49,7 +49,7 @@ Props) {
             <article className="mb-32">
               <Head>
                 <title>{project.title} - Nathan Simpson's portfolio</title>
-                <meta property="og:image" content={project.imageSrc} />
+                <meta property="og:image" content={project.imagesrc} />
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">

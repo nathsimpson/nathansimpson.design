@@ -14,11 +14,12 @@ export type PostType = {
   type: 'post' | 'talk';
   youtubeid?: string;
   content: string;
+  excerpt: string;
 };
 
 export type ProjectType = {
   title: string;
-  imageSrc: string;
+  imagesrc: string;
   content: string;
   /** '2018-02-21' */
   date: string;
@@ -26,3 +27,5 @@ export type ProjectType = {
   tag: 'Design' | 'Development';
   skills?: string;
 };
+
+export type ProjectWithSlug = ProjectType & { slug: string };

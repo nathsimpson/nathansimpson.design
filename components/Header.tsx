@@ -22,10 +22,6 @@ const navItems = [
   {
     url: '/blog',
     label: 'Blog'
-  },
-  {
-    url: '/design-system',
-    label: 'Design System'
   }
 ];
 
@@ -86,18 +82,17 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             <Icon icon="menu" size={32} />
           </Box>
 
-          <Link href="/">
-            <a
-              css={{
-                color: colors.brand,
-                textDecoration: 'none',
-                '&:hover': {
-                  color: colors.text.linkHover
-                }
-              }}
-            >
-              <Icon icon="ns" size={50} />
-            </a>
+          <Link
+            href="/"
+            css={{
+              color: colors.brand,
+              textDecoration: 'none',
+              '&:hover': {
+                color: colors.text.linkHover
+              }
+            }}
+          >
+            <Icon icon="ns" size={50} />
           </Link>
         </Flex>
 

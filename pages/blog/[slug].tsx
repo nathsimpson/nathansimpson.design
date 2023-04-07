@@ -2,17 +2,16 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { Stack } from './design-system/box';
-import { Heading, Text } from './design-system/typography';
-import { Prose } from './design-system/prose';
-
+import { Stack } from '../../components/design-system/box';
+import { Heading, Text } from '../../components/design-system/typography';
+import { Prose } from '../../components/design-system/prose';
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
 import type { PostType } from '../../interfaces';
 import { getPostBySlug, getAllPosts } from '../../lib/posts';
 import markdownToHtml from '../../lib/markdownToHtml';
-import { YouTubeVideo } from '../../YouTubeVideo';
+import { YouTubeVideo } from '../../components/YouTubeVideo';
 import { MdxContent } from '../../components/Mdx';
 
 type Props = {

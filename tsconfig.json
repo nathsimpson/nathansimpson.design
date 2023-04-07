@@ -19,7 +19,7 @@
       "esnext"
     ],
     "skipLibCheck": true,
-    "incremental": true
+    "incremental": true,
   },
   "exclude": [
     "node_modules",
@@ -29,5 +29,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+  ],
 }

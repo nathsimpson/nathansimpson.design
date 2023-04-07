@@ -2,9 +2,9 @@ import { Heading } from './design-system/typography';
 import { Stack } from './design-system/box';
 import { Card } from './design-system/card';
 import { useTheme } from './design-system/theme';
-import { ProjectWithSlug } from '../interfaces';
+import type { Project } from 'lib/projects';
 
-export const Portfolio = ({ projects }: { projects: ProjectWithSlug[] }) => {
+export const Portfolio = ({ projects }: { projects: Project[] }) => {
   const { spacing } = useTheme();
   return (
     <Stack gap="large" css={{ width: '100%' }}>
@@ -18,18 +18,18 @@ export const Portfolio = ({ projects }: { projects: ProjectWithSlug[] }) => {
           width: '100%'
         }}
       >
-        {projects.map((node) => {
+        {projects.map(({ meta }) => {
           return (
             <Card
-              key={node.slug}
-              // desc={node.desc}
-              tag={node.tag}
-              path={`projects/${node.slug}`}
+              key={meta.slug}
+              // desc={meta.desc}
+              tag={meta.tag}
+              path={`projects/${meta.slug}`}
               image={
-                node.imagesrc &&
-                'https://files.nathansimpson.design/portfolio/' + node.imagesrc
+                meta.imagesrc &&
+                'https://files.nathansimpson.design/portfolio/' + meta.imagesrc
               }
-              title={node.title}
+              title={meta.title}
             />
           );
         })}

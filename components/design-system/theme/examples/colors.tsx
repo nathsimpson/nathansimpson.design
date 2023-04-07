@@ -1,29 +1,29 @@
-import { Stack } from '../box';
+import { getContrastColor, getWcagScore } from 'hex-a11y';
+import { Stack } from '../../box';
 import { useTheme } from '../themecontext';
 import { spacing } from '../index';
 
-import { getContrastColor, getWcagScore } from 'hex-a11y';
-
 export const ColorsExample = () => {
-  const { colors } = useTheme();
+  // const { colors } = useTheme();
   const colorsArr: { label: string; value: string }[] = [];
+  // TODO: fix this
+  // const generateCards = ({
+  //   parent = '',
+  //   value
+  // }: {
+  //   parent?: string;
+  //   value: object;
+  // }) =>
+  //   Object.keys(value).forEach((c) => {
+  //     const val = value[c];
+  //     if (typeof val === 'string') {
+  //       colorsArr.push({ label: `${parent}.${c}`, value: val });
+  //     } else {
+  //       generateCards({ parent: `${parent}.${c}`, value: val });
+  //     }
+  //   });
 
-  const generateCards = ({
-    parent = '',
-    value
-  }: {
-    parent?: string;
-    value: object;
-  }) =>
-    Object.keys(value).forEach((c: string) => {
-      if (typeof value[c] === 'string') {
-        colorsArr.push({ label: `${parent}.${c}`, value: value[c] });
-      } else {
-        generateCards({ parent: `${parent}.${c}`, value: value[c] });
-      }
-    });
-
-  generateCards({ value: colors });
+  // generateCards({ value: colors });
 
   return (
     <div

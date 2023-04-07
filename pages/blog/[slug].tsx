@@ -91,9 +91,9 @@ export async function getStaticPaths() {
   const posts = await getAllPosts();
 
   return {
-    paths: posts.map((post) => ({
+    paths: posts.map(({ meta }) => ({
       params: {
-        slug: post.meta.slug
+        slug: meta.slug
       }
     })),
     fallback: false

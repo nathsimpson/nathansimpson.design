@@ -3,32 +3,32 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import { Stack } from '../../components/design-system/box';
-import { Heading } from '../../design-system/typography';
-import { Prose } from '../../design-system/prose';
-import { Tags } from '../../design-system/tag';
+import { Heading } from '../../components/design-system/typography';
+import { Prose } from '../../components/design-system/prose';
+import { Tags } from '../../components/design-system/tag';
 
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
-import type { ProjectType } from '../../interfaces';
+import type { Project } from '../../lib/projects';
 import { getProjectBySlug, getAllProjects } from '../../lib/projects';
-import markdownToHtml from '../../lib/markdownToHtml';
 import { MdxContent } from '../../components/Mdx';
+import { GetStaticProps } from 'next';
 
-type Props = {
-  project: ProjectType;
+type ProjectPageProps = {
+  project: Project;
 };
 
-export default function Project({
-  project
-}: //  morePosts,
-// preview
-Props) {
+export default function ProjectPage({ project }: ProjectPageProps) {
   const router = useRouter();
+
   if (!router.isFallback && !project) {
     return <ErrorPage statusCode={404} />;
   }
-  const skills = project.skills ? project.skills.split(',') : [];
+
+  const { meta, source } = project;
+  const skills = meta.skills ? meta.skills.split(',') : [];
+
   return (
     <Fragment>
       <Head>
@@ -48,17 +48,17 @@ Props) {
           <Fragment>
             <article className="mb-32">
               <Head>
-                <title>{project.title} - Nathan Simpson's portfolio</title>
-                <meta property="og:image" content={project.imagesrc} />
+                <title>{meta.title} - Nathan Simpson's portfolio</title>
+                <meta property="og:image" content={meta.imagesrc} />
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">
                   <BackButton href="/" />
-                  <Heading level={1}>{project.title}</Heading>
+                  <Heading level={1}>{meta.title}</Heading>
                   {skills.length ? <Tags items={skills} /> : null}
                 </Stack>
                 <Prose>
-                  <MdxContent content={project.content} />
+                  <MdxContent source={source} />
                 </Prose>
               </Stack>
             </article>
@@ -69,44 +69,36 @@ Props) {
   );
 }
 
-export async function getStaticProps({
-  params
-}: {
-  params: {
-    slug: string;
-  };
-}) {
-  const post = getProjectBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'content',
-    'imageSrc'
-  ]);
+export const getStaticProps: GetStaticProps<
+  {
+    project: Project;
+  },
+  { slug: string }
+> = async ({ params }) => {
+  const { slug } = params || {};
 
-  const content = await markdownToHtml(post.content || '');
+  if (!slug) {
+    return { notFound: true };
+  }
+
+  const project = await getProjectBySlug(slug);
 
   return {
     props: {
-      project: {
-        ...post,
-        content
-      }
+      project
     }
   };
-}
+};
 
 export async function getStaticPaths() {
-  const projects = getAllProjects(['slug']);
+  const projects = await getAllProjects();
 
   return {
-    paths: projects.map((post) => {
-      return {
-        params: {
-          slug: post.slug
-        }
-      };
-    }),
+    paths: projects.map(({ meta }) => ({
+      params: {
+        slug: meta.slug
+      }
+    })),
     fallback: false
   };
 }

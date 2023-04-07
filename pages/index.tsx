@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import { Fragment } from 'react';
 import { Stack } from '../components/design-system/box';
-
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Portfolio } from '../components/Portfolio';
@@ -10,13 +9,13 @@ import { Development } from '../components/Development';
 import { Dribbble } from '../components/Dribbble';
 import { Contact } from '../components/Contact';
 import { getAllProjects } from '../lib/projects';
-import { ProjectWithSlug } from '../interfaces';
+import type { Project } from '../lib/projects';
 
-type Props = {
-  allProjects: ProjectWithSlug[];
+type HomePageProps = {
+  allProjects: Project[];
 };
 
-const Home: NextPage<Props> = ({ allProjects }) => {
+const Home: NextPage<HomePageProps> = ({ allProjects }) => {
   return (
     <Fragment>
       <Header />
@@ -34,15 +33,7 @@ const Home: NextPage<Props> = ({ allProjects }) => {
 };
 
 export const getStaticProps = async () => {
-  const allProjects = getAllProjects([
-    'title',
-    'slug',
-    'date',
-    'imagesrc',
-    'type',
-    'tag',
-    'skills'
-  ]);
+  const allProjects = await getAllProjects();
 
   return {
     props: { allProjects }

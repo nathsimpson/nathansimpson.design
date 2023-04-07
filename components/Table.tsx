@@ -1,5 +1,9 @@
 import { useTheme } from './design-system/theme';
-import { PropsWithOnlyChildren } from '../interfaces';
+import { ReactNode } from 'react';
+
+type PropsWithOnlyChildren = {
+  children: ReactNode;
+};
 
 export const Table = (props: PropsWithOnlyChildren) => {
   return (

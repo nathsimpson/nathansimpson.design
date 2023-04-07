@@ -16,8 +16,9 @@
     "format": "prettier --write \"**/*.js{,on}\" \"**/*.md{,x}\" \"**/*.ts{,x}\"",
     "types": "tsc",
     "lint:eslint": "eslint .",
+    "lint:typescript": "tsc --noEmit",
     "lint:next": "next lint",
-    "lint": "yarn lint:eslint && yarn lint:next"
+    "lint": "yarn lint:eslint && yarn lint:next && yarn lint:typescript"
   },
   "license": "ISC",
   "dependencies": {

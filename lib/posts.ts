@@ -31,7 +31,6 @@ export async function getPostSlugs() {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post> {
-  console.log({ slug });
   const fullPath = join(postsDirectory, `${slug.replace(/\.md$/, '')}.md`);
   const fileContents = await readFile(fullPath, { encoding: 'utf8' });
   const { data, content } = matter(fileContents);

@@ -8,7 +8,7 @@ import { NextTextLink } from './NextTextLink';
 
 type PostCardProps = {
   date: string;
-  updated: string;
+  updated?: string;
   href: string;
   title: string;
   type: 'Post' | 'Talk';

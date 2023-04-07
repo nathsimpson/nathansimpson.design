@@ -48,6 +48,7 @@
     "eslint-plugin-react": "^7.30.1",
     "facepaint": "^1.2.1",
     "gray-matter": "^4.0.3",
+    "hex-a11y": "^1.0.2",
     "hex-alpha": "^1.3.0",
     "next": "13.3.0",
     "next-mdx-remote": "^4.2.1",

@@ -1,7 +1,7 @@
 ---
 title: Prototyping a social network with Keystone 5
 date: '2019-06-23'
-type: talk
+type: Talk
 youtubeid: 8D_bwTpDTTs
 ---
 

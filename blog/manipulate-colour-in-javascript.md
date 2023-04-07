@@ -1,7 +1,7 @@
 ---
 title: Manipulating colour in JavaScript
 date: '2019-08-18'
-type: talk
+type: Talk
 youtubeid: OQbF8Mx4iso
 ---
 

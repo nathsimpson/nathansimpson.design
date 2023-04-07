@@ -1,6 +1,6 @@
 import React from 'react';
-import { Flex, Stack } from '../box';
-import { Text } from '../typography';
+import { Flex, Stack } from '../../box';
+import { Text } from '../../typography';
 import { useTheme } from '../themecontext';
 import { spacing, SpacingType } from '../themes';
 

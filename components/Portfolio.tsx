@@ -2,7 +2,7 @@ import { Heading } from './design-system/typography';
 import { Stack } from './design-system/box';
 import { Card } from './design-system/card';
 import { useTheme } from './design-system/theme';
-import { ProjectWithSlug } from 'website/interfaces';
+import { ProjectWithSlug } from '../interfaces';
 
 export const Portfolio = ({ projects }: { projects: ProjectWithSlug[] }) => {
   const { spacing } = useTheme();

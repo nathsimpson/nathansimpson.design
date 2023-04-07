@@ -8,23 +8,22 @@ import { Prose } from '../../components/design-system/prose';
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
-import type { PostType } from '../../interfaces';
+import type { Post } from '../../lib/posts';
 import { getPostBySlug, getAllPosts } from '../../lib/posts';
-import markdownToHtml from '../../lib/markdownToHtml';
 import { YouTubeVideo } from '../../components/YouTubeVideo';
 import { MdxContent } from '../../components/Mdx';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-type Props = {
-  post: PostType;
-};
-
-export default function Post({ post }: Props) {
+export default function PostPage({
+  post
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { meta, source } = post;
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
+  if (!router.isFallback && !meta?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  const postedDate = new Date(post.date).toDateString();
-  const lastUpdatedDate = post.updated && new Date(post.updated).toDateString();
+  const postedDate = new Date(meta.date).toDateString();
+  const lastUpdatedDate = meta.updated && new Date(meta.updated).toDateString();
   return (
     <Fragment>
       <Head>
@@ -44,21 +43,21 @@ export default function Post({ post }: Props) {
           <Fragment>
             <article className="mb-32">
               <Head>
-                <title>{`${post.title} - Nathan Simpson's portfolio`}</title>
-                {/* <meta property="og:image" content={post.imageSrc} /> */}
+                <title>{`${meta.title} - Nathan Simpson's portfolio`}</title>
+                {/* <meta property="og:image" content={meta.imageSrc} /> */}
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">
                   <BackButton href="/blog" />
-                  <Heading level={1}>{post.title}</Heading>
+                  <Heading level={1}>{meta.title}</Heading>
                   <Text size="small" as="span">
                     Posted on {postedDate}.
                     {lastUpdatedDate && ` Updated on ${lastUpdatedDate}`}
                   </Text>
                 </Stack>
                 <Prose>
-                  {post.youtubeid && <YouTubeVideo videoId={post.youtubeid} />}
-                  <MdxContent content={post.content} />
+                  {meta.youtubeid && <YouTubeVideo videoId={meta.youtubeid} />}
+                  <MdxContent source={source} />
                 </Prose>
               </Stack>
             </article>
@@ -69,48 +68,34 @@ export default function Post({ post }: Props) {
   );
 }
 
-export async function getStaticProps({
-  params
-}: {
-  params: {
-    slug: string;
-  };
-}) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'updated',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'imageSrc',
-    'youtubeid'
-  ]);
+export const getStaticProps: GetStaticProps<
+  {
+    post: Post;
+  },
+  { slug: string }
+> = async ({ params }) => {
+  const { slug } = params ?? {};
 
-  const content = await markdownToHtml(post.content || '');
+  if (!slug) {
+    return { notFound: true };
+  }
+
+  const post = await getPostBySlug(slug);
 
   return {
-    props: {
-      post: {
-        ...post,
-        content
-      }
-    }
+    props: { post }
   };
-}
+};
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
+  const posts = await getAllPosts();
 
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug
-        }
-      };
-    }),
+    paths: posts.map((post) => ({
+      params: {
+        slug: post.meta.slug
+      }
+    })),
     fallback: false
   };
 }

@@ -1,4 +1,4 @@
-import { Flex, Stack } from '../box';
+import { Flex, Stack } from '../../box';
 import { RadiiType } from '../themes';
 import { useTheme } from '../themecontext';
 

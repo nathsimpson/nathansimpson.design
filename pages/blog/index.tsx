@@ -6,11 +6,10 @@ import { Heading, Text } from '../../components/design-system/typography';
 import { Header } from '../../components/Header';
 import { ContentContainer } from '../../components/ContentContainer';
 import { PostCard } from '../../components/PostCard';
-import { getAllPosts } from '../../lib/posts';
-import { PostType } from '../../interfaces';
+import { getAllPosts, Post } from '../../lib/posts';
 
 type BlogPageProps = {
-  allPosts: PostType[];
+  allPosts: Post[];
 };
 
 export default function BlogPage({ allPosts }: BlogPageProps) {
@@ -27,7 +26,7 @@ export default function BlogPage({ allPosts }: BlogPageProps) {
             <Text>A collection of thoughts and experiences.</Text>
           </Stack>
 
-          {allPosts.map((post) => (
+          {allPosts.map(({ meta: post }) => (
             <PostCard href={`blog/${post.slug}`} {...post} key={post.slug} />
           ))}
         </Stack>
@@ -37,17 +36,7 @@ export default function BlogPage({ allPosts }: BlogPageProps) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'slug',
-    'date',
-    'updated',
-    'href',
-    'title',
-    'type',
-    'youtubeid',
-    'description',
-    'excerpt'
-  ]);
+  const allPosts = await getAllPosts();
 
   return {
     props: { allPosts }

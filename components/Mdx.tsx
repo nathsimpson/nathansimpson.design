@@ -1,6 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { PropsWithChildren } from 'react';
-import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote';
+import { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import {
+  MDXRemote,
+  MDXRemoteProps,
+  MDXRemoteSerializeResult
+} from 'next-mdx-remote';
 import { Button, LinkButton, IconButton } from './design-system/button';
 import { Icon } from './design-system/icon';
 import { Tag, Tags } from './design-system/tag';
@@ -10,7 +14,6 @@ import { Card } from './design-system/card';
 import { TextLink } from './design-system/text-link';
 import { Text, Heading } from './design-system/typography';
 import { useTheme, spacing } from './design-system/theme';
-import { PropsWithOnlyChildren } from '../interfaces';
 import { Divider } from './Divider';
 import { NextTextLink } from './NextTextLink';
 import { CodeEditor, StaticCode } from './CodeEditor';
@@ -36,7 +39,7 @@ const DsComponents = {
   spacing
 };
 
-const InlineCode = (props) => {
+const InlineCode = (props: any) => {
   const { fontFamilies } = useTheme();
   return (
     <Box
@@ -54,51 +57,50 @@ const InlineCode = (props) => {
   );
 };
 
-const components = {
+const components: MDXRemoteProps['components'] = {
   hr: () => <Divider />,
   code: ({
     live,
-    ...props
+    children,
+    className
   }: PropsWithChildren<{
     live?: boolean;
+    className?: string;
   }>) => {
     if (live) {
-      return <CodeEditor components={DsComponents} {...props} />;
+      return <CodeEditor components={DsComponents}>{children}</CodeEditor>;
     } else {
-      return <StaticCode {...props} />;
+      return <StaticCode className={className}>{children}</StaticCode>;
     }
   },
-  inlineCode: (props: PropsWithOnlyChildren) => {
-    return <InlineCode {...props} />;
+  inlineCode: ({ children }: { children: ReactNode }) => {
+    return <InlineCode>{children}</InlineCode>;
   },
-  table: (props: PropsWithOnlyChildren) => {
-    return <Table {...props} />;
+  table: ({ children, ...props }: HTMLAttributes<HTMLTableElement>) => {
+    return <Table {...props}>{children}</Table>;
   },
-  thead: (props: PropsWithOnlyChildren) => {
-    return <TableHead {...props} />;
+  thead: ({ children, ...props }: HTMLAttributes<HTMLTableSectionElement>) => {
+    return <TableHead {...props}>{children}</TableHead>;
   },
-  tr: (props: PropsWithOnlyChildren) => {
-    return <TableRow {...props} />;
+  tr: ({ children }: HTMLAttributes<HTMLTableRowElement>) => {
+    return <TableRow>{children}</TableRow>;
   },
-  td: (props: PropsWithOnlyChildren) => {
-    return <TableCell {...props} />;
+  td: ({ children }: HTMLAttributes<HTMLTableCellElement>) => {
+    return <TableCell>{children}</TableCell>;
   }
 };
 
 export const MdxContent = ({
-  content,
+  source,
   hideH1
 }: {
-  content: MDXRemoteProps;
+  source: MDXRemoteSerializeResult;
   hideH1?: boolean;
 }) => {
   return (
     <MDXRemote
-      components={{
-        ...components,
-        ...(hideH1 ? { h1: () => null } : {})
-      }}
-      {...content}
+      components={{ ...components, ...(hideH1 ? { h1: () => null } : {}) }}
+      {...source}
     />
   );
 };

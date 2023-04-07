@@ -2,7 +2,7 @@
 title: Design System examples and resources
 date: '2020-11-09'
 updated: '2020-11-12'
-type: post
+type: Post
 ---
 
 A Design System defines the language and building blocks of an organisation's digital experiences. It is primarily used by designers and developers, and aims to bridge the two professions.

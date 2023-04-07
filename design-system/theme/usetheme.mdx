@@ -1,0 +1,48 @@
+---
+title: useTheme
+path: '/design-system/usetheme'
+type: design-system
+section: hooks
+---
+
+# useTheme
+
+Hooks for interacting with themes.
+
+## useTheme
+
+useTheme allows us to use our [design tokens](tokens) anywhere in our application.
+
+```jsx
+import { useTheme } from '../theme';
+
+const Page = () => {
+  const { colors, spacing } = useTheme();
+  // ...
+};
+```
+
+## useThemeContext
+
+Read and set the active theme in the application. Dark is the default.
+
+```jsx
+const { onThemeChange, themeName } = useThemeContext();
+```
+
+| Name          | Type               | Notes                     |
+| ------------- | ------------------ | ------------------------- |
+| themeName     | 'light', 'dark'    | Name of the active theme. |
+| onThemeChange | (newTheme) => void | Set the active theme      |
+
+## ThemeProvider
+
+In order to make use of these hooks, the application must be wrapped in the ThemeProvider component.
+
+```jsx
+const App = () => (
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+);
+```

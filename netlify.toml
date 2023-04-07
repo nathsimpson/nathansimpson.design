@@ -1,0 +1,5 @@
+[build]
+  publish = ".next/"
+
+  # Default build command.
+  command = "yarn build"

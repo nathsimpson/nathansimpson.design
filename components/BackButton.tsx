@@ -1,5 +1,5 @@
 import { NextTextLink } from './NextTextLink';
-import { Icon } from '../design-system/icon';
+import { Icon } from './design-system/icon';
 
 export const BackButton = ({ href }: { href: string }) => {
   return (

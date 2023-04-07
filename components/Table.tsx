@@ -1,4 +1,4 @@
-import { useTheme } from '../design-system/theme';
+import { useTheme } from './design-system/theme';
 import { PropsWithOnlyChildren } from '../interfaces';
 
 export const Table = (props: PropsWithOnlyChildren) => {

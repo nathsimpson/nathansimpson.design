@@ -1,5 +1,5 @@
 import { PropsWithChildren, ElementType } from 'react';
-import { spacing, maxWidth as maxWidthTokens } from '../design-system/theme';
+import { spacing, maxWidth as maxWidthTokens } from './design-system/theme';
 
 type ContainerProps = PropsWithChildren<{
   as?: ElementType;

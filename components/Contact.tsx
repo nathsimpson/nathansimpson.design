@@ -1,4 +1,4 @@
-import { Prose } from '../design-system/prose';
+import { Prose } from './design-system/prose';
 
 export const Contact = () => (
   <div css={{ width: '100%' }}>

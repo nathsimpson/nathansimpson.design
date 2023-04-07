@@ -2,9 +2,9 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { Stack } from '../design-system/box';
-import { Heading, Text } from '../design-system/typography';
-import { Prose } from '../design-system/prose';
+import { Stack } from './design-system/box';
+import { Heading, Text } from './design-system/typography';
+import { Prose } from './design-system/prose';
 
 import { ContentContainer } from '../../components/ContentContainer';
 import { BackButton } from '../../components/BackButton';

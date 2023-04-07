@@ -1,4 +1,4 @@
-import { Box } from '../../design-system/box';
+import { Box } from '../design-system/box';
 
 export const Skeleton = () => {
   return (

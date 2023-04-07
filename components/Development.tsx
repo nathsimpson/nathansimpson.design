@@ -1,9 +1,9 @@
-import { Tags } from '../design-system/tag';
-import { Stack } from '../design-system/box';
-import { maxWidth } from '../design-system/theme';
+import { Tags } from './design-system/tag';
+import { Stack } from './design-system/box';
+import { maxWidth } from './design-system/theme';
 
-import { Heading, Text } from '../design-system/typography';
-import { TextLink } from '../design-system/text-link';
+import { Heading, Text } from './design-system/typography';
+import { TextLink } from './design-system/text-link';
 
 const development_skills = [
   'JavaScript',

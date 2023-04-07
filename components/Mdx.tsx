@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { PropsWithChildren } from 'react';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote';
-import { Button, LinkButton, IconButton } from '../design-system/button';
-import { Icon } from '../design-system/icon';
-import { Tag, Tags } from '../design-system/tag';
-import { Box, Flex, Stack } from '../design-system/box';
-import { Prose } from '../design-system/prose';
-import { Card } from '../design-system/card';
-import { TextLink } from '../design-system/text-link';
-import { Text, Heading } from '../design-system/typography';
-import { useTheme, spacing } from '../design-system/theme';
+import { Button, LinkButton, IconButton } from './design-system/button';
+import { Icon } from './design-system/icon';
+import { Tag, Tags } from './design-system/tag';
+import { Box, Flex, Stack } from './design-system/box';
+import { Prose } from './design-system/prose';
+import { Card } from './design-system/card';
+import { TextLink } from './design-system/text-link';
+import { Text, Heading } from './design-system/typography';
+import { useTheme, spacing } from './design-system/theme';
 import { PropsWithOnlyChildren } from '../interfaces';
 import { Divider } from './Divider';
 import { NextTextLink } from './NextTextLink';

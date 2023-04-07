@@ -1,9 +1,9 @@
-import { Icon } from '../design-system/icon';
-import { useTheme } from '../design-system/theme';
+import { Icon } from './design-system/icon';
+import { useTheme } from './design-system/theme';
 import { Divider } from './Divider';
-import { Text } from '../design-system/typography';
+import { Text } from './design-system/typography';
 import { NextTextLink } from './NextTextLink';
-import { Stack } from '../design-system/box';
+import { Stack } from './design-system/box';
 
 import { footer_navItems, footer_socialNetworks } from '../data';
 

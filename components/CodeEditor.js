@@ -1,8 +1,8 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
-import { Box } from '../design-system/box';
-import { useTheme } from '../design-system/theme';
+import { Box } from './design-system/box';
+import { useTheme } from './design-system/theme';
 import { useCodeHighlightTheme } from './codeHighlightTheme';
 
 export const StaticCode = ({ className = '', children }) => {

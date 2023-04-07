@@ -5,7 +5,7 @@ import {
   useTheme,
   themeDark,
   themeLight
-} from '../design-system/theme';
+} from './design-system/theme';
 
 const themes = {
   dark: themeDark,

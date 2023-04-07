@@ -1,7 +1,7 @@
-import { Box, Stack } from '../design-system/box';
-import { TextLink } from '../design-system/text-link';
-import { useTheme } from '../design-system/theme';
-import { Heading, Text } from '../design-system/typography';
+import { Box, Stack } from './design-system/box';
+import { TextLink } from './design-system/text-link';
+import { useTheme } from './design-system/theme';
+import { Heading, Text } from './design-system/typography';
 
 export const Hero = () => {
   const { maxWidth } = useTheme();

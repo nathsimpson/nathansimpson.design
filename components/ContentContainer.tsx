@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { maxWidth, spacing } from '../design-system/theme';
+import { maxWidth, spacing } from './design-system/theme';
 
 export const ContentContainer = ({ children }: { children: ReactNode }) => {
   return (

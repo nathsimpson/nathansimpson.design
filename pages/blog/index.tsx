@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Fragment } from 'react';
-import { Stack } from '../../design-system/box';
+import { Stack } from '../../components/design-system/box';
 import { Heading, Text } from '../../design-system/typography';
 
 import { Header } from '../../components/Header';

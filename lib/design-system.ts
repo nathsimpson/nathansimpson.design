@@ -2,7 +2,7 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-const postsDirectory = join(process.cwd(), '../design-system/packages');
+const postsDirectory = join(process.cwd(), './design-system/packages');
 
 export function getPackageSlugs() {
   return fs.readdirSync(postsDirectory);

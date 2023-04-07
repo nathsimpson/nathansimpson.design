@@ -1,6 +1,6 @@
 import Link, { LinkProps } from 'next/link';
-import { useLinkStyles } from '../design-system/text-link';
-import type { FontSizeType } from '../design-system/theme';
+import { useLinkStyles } from './design-system/text-link';
+import type { FontSizeType } from './design-system/theme';
 import { ReactNode } from 'react';
 
 type NextTextLinkProps = LinkProps & {

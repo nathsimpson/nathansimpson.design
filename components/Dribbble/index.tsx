@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Stack } from '../../design-system/box';
-import { Heading, Text } from '../../design-system/typography';
-import { TextLink } from '../../design-system/text-link';
+import { Stack } from '../design-system/box';
+import { Heading, Text } from '../design-system/typography';
+import { TextLink } from '../design-system/text-link';
 
 import { DribbbleGrid } from './DribbbleGrid';
 import { useFetchDribbbleShots } from './fetchDribbbleShots';

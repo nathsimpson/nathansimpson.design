@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { useTheme } from '../design-system/theme';
+import { useTheme } from '../components/design-system/theme';
 import { Core } from '../components/Core';
 import { Footer } from '../components/Footer';
 

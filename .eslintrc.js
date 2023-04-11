@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'next/core-web-vitals',
-    'prettier'
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'next/core-web-vitals', 'prettier', 'plugin:storybook/recommended'],
   plugins: ['prettier', '@typescript-eslint', 'react', '@emotion'],
   parser: '@typescript-eslint/parser',
   rules: {
@@ -32,14 +27,12 @@ module.exports = {
   env: {
     browser: true
   },
-  overrides: [
-    {
-      files: ['*.test.js', '**/__tests__/**'],
-      env: {
-        jest: true
-      }
+  overrides: [{
+    files: ['*.test.js', '**/__tests__/**'],
+    env: {
+      jest: true
     }
-  ],
+  }],
   settings: {
     react: {
       version: 'detect'

@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { Fragment } from 'react';
 import { Stack } from '../components/design-system/box';
 import { Header } from '../components/Header';
-import { Hero } from '../components/Hero';
+import { Hero } from '../components/Home/Hero';
 import { Portfolio } from '../components/Portfolio';
 import { Container } from '../components/Container';
 import { Development } from '../components/Development';

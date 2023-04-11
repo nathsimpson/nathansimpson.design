@@ -13,21 +13,10 @@
     "noEmit": true,
     "baseUrl": ".",
     "allowJs": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
-    "incremental": true,
+    "incremental": true
   },
-  "exclude": [
-    "node_modules",
-    "./design-system/packages/*/dist"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "exclude": ["node_modules", "./design-system/packages/*/dist"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

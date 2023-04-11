@@ -8,8 +8,8 @@ const meta: Meta<typeof Header> = {
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/7.0/react/configure/story-layout
-    layout: 'fullscreen',
-  },
+    layout: 'fullscreen'
+  }
 };
 
 export default meta;
@@ -18,9 +18,9 @@ type Story = StoryObj<typeof Header>;
 export const LoggedIn: Story = {
   args: {
     user: {
-      name: 'Jane Doe',
-    },
-  },
+      name: 'Jane Doe'
+    }
+  }
 };
 
 export const LoggedOut: Story = {};

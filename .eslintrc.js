@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
+    'next/core-web-vitals',
     'prettier'
   ],
   plugins: ['prettier', '@typescript-eslint', 'react', '@emotion'],
@@ -19,6 +19,8 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 0,
     'standard/computed-property-even-spacing': 0,
     'no-template-curly-in-string': 0,
+    // FIXME
+    'react/no-unknown-property': 0,
     camelcase: 0,
     'import/no-duplicates': 0,
     'react/jsx-no-target-blank': 0,

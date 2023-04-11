@@ -1,0 +1,5 @@
+[build]
+  publish = "out/"
+
+  # Default build command.
+  command = "yarn build"

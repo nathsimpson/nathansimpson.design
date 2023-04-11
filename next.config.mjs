@@ -14,7 +14,6 @@ const withMDX = nextMDX({
 });
 
 export default withMDX({
-  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   // Append the default value with md extensions

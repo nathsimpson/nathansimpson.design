@@ -1,5 +1,5 @@
 import { ProjectCard } from './ProjectCard';
-import type { Project } from 'lib/projects';
+import type { Project } from 'lib/mdxContent/projects';
 
 import { Heading } from '../../ui/typography';
 import { Stack } from '../../ui/box';

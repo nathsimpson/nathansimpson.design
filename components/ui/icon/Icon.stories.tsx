@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { Icon } from './Icon';
 import { Text } from '../typography';
-import { useMediaQuery } from '../utils';
+import { useMediaQuery } from '../../../lib/useMediaQuery';
 import { Stack } from '../box';
 import { spacing } from '../../../lib/theme';
 import { ICONS } from './icons';

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { Fragment } from 'react';
-import { Stack } from '../components/design-system/box';
+import { Stack } from '../components/ui/box';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/Home/HomeHero';
 import { Projects } from '../components/Home/Projects';
@@ -9,7 +9,7 @@ import { Development } from '../components/Home/Development';
 import { Dribbble } from '../components/Home/Dribbble/Dribbble';
 import { getAllProjects } from '../lib/projects';
 import type { Project } from '../lib/projects';
-import { Prose } from 'components/design-system/prose';
+import { Prose } from 'components/ui/prose';
 
 type HomePageProps = {
   allProjects: Project[];

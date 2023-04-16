@@ -2,10 +2,10 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { Stack } from '../../components/design-system/box';
-import { Heading } from '../../components/design-system/typography';
-import { Prose } from '../../components/design-system/prose';
-import { Tags } from '../../components/design-system/tag';
+import { Stack } from '../../components/ui/box';
+import { Heading } from '../../components/ui/typography';
+import { Prose } from '../../components/ui/prose';
+import { Tags } from '../../components/ui/tag';
 
 import { ContentContainer } from '../../components/Container/ContentContainer';
 import { BackButton } from '../../components/BackButton';

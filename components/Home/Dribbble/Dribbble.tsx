@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Stack } from '../../design-system/box';
-import { Heading, Text } from '../../design-system/typography';
+import { Stack } from '../../ui/box';
+import { Heading, Text } from '../../ui/typography';
 import { TextLink } from '../../TextLink';
 
 import { DribbbleGrid } from './DribbbleGrid';

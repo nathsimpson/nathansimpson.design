@@ -1,9 +1,9 @@
 import { ProjectCard } from './ProjectCard';
 import type { Project } from 'lib/projects';
 
-import { Heading } from '../../design-system/typography';
-import { Stack } from '../../design-system/box';
-import { useTheme } from '../../design-system/theme';
+import { Heading } from '../../ui/typography';
+import { Stack } from '../../ui/box';
+import { useTheme } from '../../ui/theme';
 
 export const Projects = ({ data }: { data: Project[] }) => {
   const { spacing } = useTheme();

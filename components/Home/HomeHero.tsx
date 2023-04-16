@@ -1,7 +1,7 @@
-import { Box, Stack } from '../design-system/box';
+import { Box, Stack } from '../ui/box';
 import { TextLink } from '../TextLink';
-import { useTheme } from '../design-system/theme';
-import { Heading, Text } from '../design-system/typography';
+import { useTheme } from '../ui/theme';
+import { Heading, Text } from '../ui/typography';
 
 export const HomeHero = () => {
   const { maxWidth } = useTheme();

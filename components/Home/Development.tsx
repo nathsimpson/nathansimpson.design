@@ -1,8 +1,8 @@
-import { Tags } from '../design-system/tag';
-import { Stack } from '../design-system/box';
-import { maxWidth } from '../design-system/theme';
+import { Tags } from '../ui/tag';
+import { Stack } from '../ui/box';
+import { maxWidth } from '../ui/theme';
 
-import { Heading, Text } from '../design-system/typography';
+import { Heading, Text } from '../ui/typography';
 import { TextLink } from '../TextLink';
 
 const development_skills = [

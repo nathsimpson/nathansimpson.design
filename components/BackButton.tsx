@@ -1,5 +1,5 @@
 import { TextLink } from './TextLink';
-import { Icon } from './design-system/icon';
+import { Icon } from './ui/icon';
 
 export const BackButton = ({ href }: { href: string }) => {
   return (

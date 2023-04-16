@@ -1,4 +1,4 @@
-import { FontSizeType, useTheme } from 'components/design-system/theme';
+import { FontSizeType, useTheme } from 'components/ui/theme';
 
 export const useLinkStyles = ({ size }: { size?: FontSizeType } = {}) => {
   const { colors, fontFamilies, fontSizes } = useTheme();

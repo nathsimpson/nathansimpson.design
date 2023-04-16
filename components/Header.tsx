@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { useContext } from 'react';
 
-import { Box, Flex } from './design-system/box';
-import { IconButton } from './design-system/button';
-import { Icon } from './design-system/icon';
-import { maxWidth, useTheme } from './design-system/theme';
-import { useMediaQuery } from './design-system/utils';
+import { Box, Flex } from './ui/box';
+import { IconButton } from './ui/button';
+import { Icon } from './ui/icon';
+import { maxWidth, useTheme } from './ui/theme';
+import { useMediaQuery } from './ui/utils';
 
 import { TextLink } from './TextLink';
 import { ThemeSelectionContext } from './Core';

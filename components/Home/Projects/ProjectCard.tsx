@@ -1,7 +1,7 @@
-import { useTheme } from '../../design-system/theme';
-import { Flex, Stack } from 'components/design-system/box';
-import { useCardStyles } from 'components/design-system/utils';
-import { Text } from 'components/design-system/typography';
+import { useTheme } from '../../ui/theme';
+import { Flex, Stack } from 'components/ui/box';
+import { useCardStyles } from 'components/ui/utils';
+import { Text } from 'components/ui/typography';
 import Link from 'next/link';
 
 type ProjectCardProps = {

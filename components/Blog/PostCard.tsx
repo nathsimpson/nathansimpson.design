@@ -1,9 +1,9 @@
-import { Tag } from '../design-system/tag';
+import { Tag } from '../ui/tag';
 import { Divider } from '../Divider';
-import { useCardStyles } from '../design-system/utils/useCardStyles';
-import { Flex, Stack } from '../design-system/box';
-import { Prose } from '../design-system/prose';
-import { Heading, Text } from '../design-system/typography';
+import { useCardStyles } from '../ui/utils/useCardStyles';
+import { Flex, Stack } from '../ui/box';
+import { Prose } from '../ui/prose';
+import { Heading, Text } from '../ui/typography';
 import { TextLink } from '../TextLink';
 
 type PostCardProps = {

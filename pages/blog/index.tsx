@@ -6,7 +6,7 @@ import { Heading, Text } from '../../components/ui/typography';
 import { Header } from '../../components/Header';
 import { ContentContainer } from '../../components/Container/ContentContainer';
 import { PostCard } from '../../components/Blog/PostCard';
-import { getAllPosts, Post } from '../../lib/posts';
+import { getAllPosts, Post } from '../../lib/mdxContent/posts';
 
 type BlogPageProps = {
   allPosts: Post[];

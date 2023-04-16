@@ -1,7 +1,7 @@
 import { ElementType } from 'react';
 import { Box, Flex } from '../box';
-import { useTheme } from '../theme';
-import { hexAlpha } from '../utils';
+import { useTheme } from '../../../lib/theme';
+import hexAlpha from 'hex-alpha';
 
 const sizes = {
   medium: 4,

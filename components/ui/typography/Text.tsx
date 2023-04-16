@@ -1,6 +1,6 @@
 import { Box, BoxProps } from '../box';
-import { useTheme, FontSizeType } from '../theme';
-import { useMediaQuery, ResponsiveProp } from '../utils';
+import { useTheme, FontSizeType } from '../../../lib/theme';
+import { useMediaQuery, ResponsiveProp } from '../../../lib/useMediaQuery';
 
 type TextProps = {
   as?: 'p' | 'span';

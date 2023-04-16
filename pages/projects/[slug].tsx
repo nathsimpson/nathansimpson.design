@@ -10,8 +10,11 @@ import { Tags } from '../../components/ui/tag';
 import { ContentContainer } from '../../components/Container/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
-import type { Project } from '../../lib/projects';
-import { getProjectBySlug, getAllProjects } from '../../lib/projects';
+import type { Project } from '../../lib/mdxContent/projects';
+import {
+  getProjectBySlug,
+  getAllProjects
+} from '../../lib/mdxContent/projects';
 import { MdxContent } from '../../components/Mdx';
 import { GetStaticProps } from 'next';
 

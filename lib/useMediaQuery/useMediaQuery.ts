@@ -1,5 +1,5 @@
 import facepaint from 'facepaint';
-import { breakpoints, useTheme } from '../../theme';
+import { breakpoints, useTheme } from '../theme';
 
 type BreakPoints = typeof breakpoints;
 type BreakPoint = keyof BreakPoints;
@@ -24,7 +24,7 @@ const makeMq = (breakpoints: BreakPoints) => {
   return facepaint(bps.map((value) => minWidth(value)));
 };
 
-// helper if array property declaration isn't appropriate.
+/** helper if array property declaration isn't appropriate. */
 const makeMinBreak = (breakpoints: BreakPoints) => (key: BreakPoint) => {
   return minWidth(breakpoints[key]);
 };
@@ -35,7 +35,7 @@ const makeMaxBreak = (breakpoints: BreakPoints) => (key: BreakPoint) => {
   return maxWidth(breakpoints[key] - 1);
 };
 
-// A helper for handling string or array values
+/** A helper function for handling array props */
 export const mapResponsiveProp = <
   Map extends Record<string, string | number>,
   Keys extends keyof Map
@@ -52,8 +52,10 @@ export const mapResponsiveProp = <
 
 export const useMediaQuery = () => {
   const { breakpoints } = useTheme();
+
   return {
     mapResponsiveProp,
+    /** Enables the use of responsive props anywhere in the app */
     mq: makeMq(breakpoints),
     maxBreak: makeMaxBreak(breakpoints),
     minBreak: makeMinBreak(breakpoints)

@@ -1,4 +1,4 @@
-import { forwardRefWithAs } from '../utils';
+import { forwardRefWithAs } from '../../../lib/forwardRefWithAs';
 import { BoxProps, useBoxStyles } from './styles';
 
 export const Box = forwardRefWithAs<'div', BoxProps>(function Box(

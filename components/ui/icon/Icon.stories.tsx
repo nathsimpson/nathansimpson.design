@@ -4,7 +4,7 @@ import { Icon } from './Icon';
 import { Text } from '../typography';
 import { useMediaQuery } from '../utils';
 import { Stack } from '../box';
-import { spacing } from '../theme';
+import { spacing } from '../../../lib/theme';
 import { ICONS } from './icons';
 
 const IconsExample = () => {

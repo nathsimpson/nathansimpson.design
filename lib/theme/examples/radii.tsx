@@ -1,6 +1,6 @@
-import { Flex, Stack } from '../../box';
+import { Flex, Stack } from '../../../components/ui/box';
 import { RadiiType } from '../themes';
-import { useTheme } from '../themecontext';
+import { useTheme } from '../useTheme';
 
 export const RadiiExample = () => {
   const { radii } = useTheme();

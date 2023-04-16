@@ -50,9 +50,7 @@ const { spacing } = useTheme();
 
 ## Radii
 
-Tokens used for border radius.
-
-Radii can be used through utility props in `<Box />` component.
+Tokens used for border radius. Radii can be used through utility props in `<Box />` component.
 
 ```jsx
 const { radii } = useTheme();

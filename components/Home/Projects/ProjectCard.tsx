@@ -1,4 +1,4 @@
-import { useTheme } from '../../ui/theme';
+import { useTheme } from '../../../lib/theme';
 import { Flex, Stack } from '../../ui/box';
 import { useCardStyles } from '../../ui/styles/useCardStyles';
 import { Text } from '../../ui/typography';

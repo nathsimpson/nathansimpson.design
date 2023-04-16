@@ -1,5 +1,5 @@
-import { useTheme } from '../theme';
-import { hexAlpha } from '../utils';
+import hexAlpha from 'hex-alpha';
+import { useTheme } from '../../../lib/theme';
 import { IconType } from '../icon';
 
 type ButtonSize = 'small' | 'medium' | 'large';

@@ -7,8 +7,8 @@ import { Projects } from '../components/Home/Projects';
 import { PageContainer } from '../components/Container';
 import { Development } from '../components/Home/Development';
 import { Dribbble } from '../components/Home/Dribbble/Dribbble';
-import { getAllProjects } from '../lib/projects';
-import type { Project } from '../lib/projects';
+import { getAllProjects } from '../lib/mdxContent/projects';
+import type { Project } from '../lib/mdxContent/projects';
 import { Prose } from 'components/ui/prose';
 
 type HomePageProps = {

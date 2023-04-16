@@ -1,5 +1,5 @@
 import { Box } from '../box';
-import { useTheme } from '../theme';
+import { useTheme } from '../../../lib/theme';
 
 type HeadingProps = {
   children: string;

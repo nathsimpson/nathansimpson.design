@@ -1,4 +1,4 @@
-import { themeDark } from './ui/theme';
+import { themeDark } from '../lib/theme';
 
 // Original: https://github.com/dracula/visual-studio-code
 // Converted automatically using ./tools/themeFromVsCode

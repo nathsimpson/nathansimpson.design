@@ -1,6 +1,6 @@
 import { Tags } from '../ui/tag';
 import { Stack } from '../ui/box';
-import { maxWidth } from '../ui/theme';
+import { maxWidth } from '../../lib/theme';
 
 import { Heading, Text } from '../ui/typography';
 import { TextLink } from '../TextLink';

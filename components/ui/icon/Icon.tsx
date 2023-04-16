@@ -1,5 +1,5 @@
 import { ICONS } from './icons';
-import { useTheme } from '../theme';
+import { useTheme } from '../../../lib/theme';
 
 export type IconType = keyof typeof ICONS;
 

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { css } from '@emotion/react';
-import { useTheme } from '../theme';
+import { useTheme } from '../../../lib/theme';
 import { useLinkStyles } from '../styles/useLinkStyles';
 
 type ProseProps = {

@@ -1,6 +1,6 @@
 import { Box, Stack } from '../ui/box';
 import { TextLink } from '../TextLink';
-import { useTheme } from '../ui/theme';
+import { useTheme } from '../../lib/theme';
 import { Heading, Text } from '../ui/typography';
 
 export const HomeHero = () => {

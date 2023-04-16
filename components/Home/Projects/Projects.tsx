@@ -3,7 +3,7 @@ import type { Project } from 'lib/projects';
 
 import { Heading } from '../../ui/typography';
 import { Stack } from '../../ui/box';
-import { useTheme } from '../../ui/theme';
+import { useTheme } from '../../../lib/theme';
 
 export const Projects = ({ data }: { data: Project[] }) => {
   const { spacing } = useTheme();

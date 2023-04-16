@@ -1,6 +1,6 @@
 import { getContrastColor, getWcagScore } from 'hex-a11y';
-import { Stack } from '../../box';
-import { useTheme } from '../themecontext';
+import { Stack } from '../../../components/ui/box';
+import { useTheme } from '../useTheme';
 import { spacing } from '../index';
 
 export const ColorsExample = () => {

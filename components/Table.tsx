@@ -1,4 +1,4 @@
-import { useTheme } from './ui/theme';
+import { useTheme } from '../lib/theme';
 import { ReactNode } from 'react';
 
 type PropsWithOnlyChildren = {

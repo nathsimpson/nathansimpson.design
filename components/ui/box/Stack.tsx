@@ -1,4 +1,4 @@
-import { forwardRefWithAs } from '../utils';
+import { forwardRefWithAs } from '../../../lib/forwardRefWithAs';
 import { Box } from './Box';
 import { BoxProps } from './styles';
 

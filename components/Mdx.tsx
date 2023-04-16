@@ -12,7 +12,7 @@ import { Box, Flex, Stack } from './ui/box';
 import { Prose } from './ui/prose';
 import { TextLink } from './TextLink';
 import { Text, Heading } from './ui/typography';
-import { useTheme, spacing } from './ui/theme';
+import { useTheme, spacing } from '../lib/theme';
 import { Divider } from './Divider';
 import { CodeEditor, StaticCode } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';

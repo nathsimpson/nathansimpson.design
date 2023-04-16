@@ -1,6 +1,6 @@
 import Link, { LinkProps } from 'next/link';
 
-import type { FontSizeType } from './ui/theme';
+import type { FontSizeType } from '../lib/theme';
 import { AnchorHTMLAttributes, PropsWithChildren } from 'react';
 import { useLinkStyles } from './ui/styles/useLinkStyles';
 

@@ -1,4 +1,4 @@
-import { useTheme } from '../theme';
+import { useTheme } from '../../../lib/theme';
 
 export const useCardStyles = () => {
   const { boxShadow, radii, colors, spacing, maxWidth } = useTheme();

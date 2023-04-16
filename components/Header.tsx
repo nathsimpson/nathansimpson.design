@@ -4,8 +4,8 @@ import { useContext } from 'react';
 import { Box, Flex } from './ui/box';
 import { IconButton } from './ui/button';
 import { Icon } from './ui/icon';
-import { maxWidth, useTheme } from './ui/theme';
-import { useMediaQuery } from './ui/utils';
+import { maxWidth, useTheme } from '../lib/theme';
+import { useMediaQuery } from '../lib/useMediaQuery';
 
 import { TextLink } from './TextLink';
 import { ThemeSelectionContext } from './Core';

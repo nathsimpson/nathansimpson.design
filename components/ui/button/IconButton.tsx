@@ -1,4 +1,4 @@
-import { useTheme } from '../theme';
+import { useTheme } from '../../../lib/theme';
 import { Icon } from '../icon';
 
 import { useButtonStyles, IconButtonProps } from './utils';

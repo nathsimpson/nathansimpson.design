@@ -1,4 +1,4 @@
-import React, { ReactElement, createContext, useContext } from 'react';
+import { ReactElement, createContext, useContext } from 'react';
 
 import { themeDark } from './themes';
 
@@ -13,6 +13,7 @@ export const ThemeContext = createContext<ThemeContextType>({
   theme: themeDark
 });
 
+/** Read and set the active theme in the application. Dark is the default. */
 export function useThemeContext() {
   const context = useContext(ThemeContext);
   if (!context) {
@@ -21,6 +22,7 @@ export function useThemeContext() {
   return context;
 }
 
+/** In order to make use of these hooks, the application must be wrapped in the ThemeProvider component. */
 export const ThemeProvider = ({
   children,
   theme: providedTheme
@@ -40,9 +42,4 @@ export const ThemeProvider = ({
       {children}
     </ThemeContext.Provider>
   );
-};
-
-export const useTheme = () => {
-  const { theme } = useThemeContext();
-  return theme;
 };

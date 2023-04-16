@@ -1,5 +1,5 @@
 import { Icon } from './ui/icon';
-import { useTheme } from './ui/theme';
+import { useTheme } from '../lib/theme';
 import { Divider } from './Divider';
 import { Text } from './ui/typography';
 import { TextLink } from './TextLink';

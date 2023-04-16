@@ -1,7 +1,7 @@
 import React from 'react';
-import { Flex, Stack } from '../../box';
-import { Text } from '../../typography';
-import { useTheme } from '../themecontext';
+import { Flex, Stack } from '../../../components/ui/box';
+import { Text } from '../../../components/ui/typography';
+import { useTheme } from '../useTheme';
 import { spacing, SpacingType } from '../themes';
 
 export const SpacingExample = () => {

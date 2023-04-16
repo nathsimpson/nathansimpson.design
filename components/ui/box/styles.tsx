@@ -1,5 +1,15 @@
-import { useTheme, spacing, radii, SpacingType, RadiiType } from '../theme';
-import { mapResponsiveProp, useMediaQuery, ResponsiveProp } from '../utils';
+import {
+  useTheme,
+  spacing,
+  radii,
+  SpacingType,
+  RadiiType
+} from '../../../lib/theme';
+import {
+  mapResponsiveProp,
+  useMediaQuery,
+  ResponsiveProp
+} from '../../../lib/useMediaQuery';
 import { ElementType, ReactNode } from 'react';
 
 type BoxMarginProps = {

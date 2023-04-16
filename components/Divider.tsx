@@ -1,4 +1,4 @@
-import { useTheme } from './ui/theme';
+import { useTheme } from '../lib/theme';
 
 export const Divider = () => {
   const { colors } = useTheme();

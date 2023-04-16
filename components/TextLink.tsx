@@ -1,8 +1,8 @@
 import Link, { LinkProps } from 'next/link';
 
-import type { FontSizeType } from '../ui/theme';
+import type { FontSizeType } from './ui/theme';
 import { ReactNode, AnchorHTMLAttributes, PropsWithChildren } from 'react';
-import { useLinkStyles } from './useLinkStyles';
+import { useLinkStyles } from './ui/styles/useLinkStyles';
 
 type TextLinkProps = PropsWithChildren<LinkProps> &
   AnchorHTMLAttributes<HTMLAnchorElement> & {

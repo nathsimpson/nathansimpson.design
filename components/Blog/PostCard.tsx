@@ -1,6 +1,6 @@
 import { Tag } from '../ui/tag';
 import { Divider } from '../Divider';
-import { useCardStyles } from '../ui/utils/useCardStyles';
+import { useCardStyles } from '../ui/styles/useCardStyles';
 import { Flex, Stack } from '../ui/box';
 import { Prose } from '../ui/prose';
 import { Heading, Text } from '../ui/typography';

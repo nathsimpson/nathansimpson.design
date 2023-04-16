@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { css } from '@emotion/react';
 import { useTheme } from '../theme';
-import { useLinkStyles } from 'components/TextLink';
+import { useLinkStyles } from '../styles/useLinkStyles';
 
 type ProseProps = {
   children: ReactNode;

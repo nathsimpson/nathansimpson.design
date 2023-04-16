@@ -10,4 +10,4 @@ export default meta;
 
 type Story = StoryObj<typeof Header>;
 
-const Basic: Story = {};
+export const Basic: Story = {};

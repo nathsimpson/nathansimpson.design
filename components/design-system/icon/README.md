@@ -4,7 +4,6 @@ path: '/design-system/icon'
 type: design-system
 ---
 
-import { IconsExample } from './example.tsx';
 
 # Icon
 
@@ -17,7 +16,3 @@ import { Icon } from '../icon';
 ```jsx live
 <Icon icon="ns" size={64} />
 ```
-
-## All icons
-
-<IconsExample />

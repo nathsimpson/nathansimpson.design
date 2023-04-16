@@ -3,7 +3,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals',
-    'prettier'
+    'prettier',
+    'plugin:storybook/recommended'
   ],
   plugins: ['prettier', '@typescript-eslint', 'react', '@emotion'],
   parser: '@typescript-eslint/parser',

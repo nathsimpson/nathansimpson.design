@@ -14,9 +14,11 @@ out
 
 # production
 .cache
+.out
 */build
 dist/
 */built-lambda
+public/storybook
 
 # misc
 .DS_Store
@@ -40,3 +42,4 @@ yarn-error.log*
 
 # misc
 scratchpad.md
+build-storybook.log

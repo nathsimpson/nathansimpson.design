@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
-import { maxWidth, spacing } from './design-system/theme';
+import { maxWidth, spacing } from '../design-system/theme';
 
+/** This is a container component that is used to constrain the width of written post content */
 export const ContentContainer = ({ children }: { children: ReactNode }) => {
   return (
     <div

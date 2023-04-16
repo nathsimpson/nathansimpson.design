@@ -10,19 +10,16 @@ import { Icon } from './design-system/icon';
 import { Tag, Tags } from './design-system/tag';
 import { Box, Flex, Stack } from './design-system/box';
 import { Prose } from './design-system/prose';
-import { Card } from './design-system/card';
 import { TextLink } from './TextLink';
 import { Text, Heading } from './design-system/typography';
 import { useTheme, spacing } from './design-system/theme';
 import { Divider } from './Divider';
-import { TextLink } from './TextLink';
 import { CodeEditor, StaticCode } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';
 
 const DsComponents = {
   Box,
   Button,
-  Card,
   Divider,
   Flex,
   Heading,
@@ -34,7 +31,6 @@ const DsComponents = {
   Tag,
   Tags,
   Text,
-  TextLink,
   TextLink,
   spacing
 };

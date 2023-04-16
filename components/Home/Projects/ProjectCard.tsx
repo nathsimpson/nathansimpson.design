@@ -1,9 +1,10 @@
+import { useTheme } from '../../design-system/theme';
+import { Flex, Stack } from 'components/design-system/box';
+import { useCardStyles } from 'components/design-system/utils';
+import { Text } from 'components/design-system/typography';
 import Link from 'next/link';
-import { Flex, Stack } from '../box';
-import { useTheme } from '../theme';
-import { Text } from '../typography';
 
-type CardProps = {
+type ProjectCardProps = {
   desc?: string;
   path: string;
   image?: string;
@@ -11,18 +12,13 @@ type CardProps = {
   tag: 'Design' | 'Development';
 };
 
-export const useCardStyles = () => {
-  const { boxShadow, radii, colors, spacing, maxWidth } = useTheme();
-  return {
-    ...boxShadow[1],
-    background: colors.background.emphasis,
-    padding: spacing.large,
-    borderRadius: radii.large,
-    maxWidth: maxWidth.content
-  };
-};
-
-export const Card = ({ path, image, desc, title, tag }: CardProps) => {
+export const ProjectCard = ({
+  path,
+  image,
+  desc,
+  title,
+  tag
+}: ProjectCardProps) => {
   const { colors, fontSizes, fontFamilies } = useTheme();
   const cardStyles = useCardStyles();
   return (

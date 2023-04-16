@@ -1,10 +1,10 @@
-import { Tag } from './design-system/tag';
-import { Divider } from '../components/Divider';
-import { useCardStyles } from './design-system/card';
-import { Flex, Stack } from './design-system/box';
-import { Prose } from './design-system/prose';
-import { Heading, Text } from './design-system/typography';
-import { TextLink } from './TextLink';
+import { Tag } from '../design-system/tag';
+import { Divider } from '../Divider';
+import { useCardStyles } from '../design-system/utils/useCardStyles';
+import { Flex, Stack } from '../design-system/box';
+import { Prose } from '../design-system/prose';
+import { Heading, Text } from '../design-system/typography';
+import { TextLink } from '../TextLink';
 
 type PostCardProps = {
   date: string;

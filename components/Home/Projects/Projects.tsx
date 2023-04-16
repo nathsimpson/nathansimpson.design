@@ -1,10 +1,11 @@
-import { Heading } from './design-system/typography';
-import { Stack } from './design-system/box';
-import { Card } from './design-system/card';
-import { useTheme } from './design-system/theme';
+import { ProjectCard } from './ProjectCard';
 import type { Project } from 'lib/projects';
 
-export const Portfolio = ({ projects }: { projects: Project[] }) => {
+import { Heading } from '../../design-system/typography';
+import { Stack } from '../../design-system/box';
+import { useTheme } from '../../design-system/theme';
+
+export const Projects = ({ data }: { data: Project[] }) => {
   const { spacing } = useTheme();
   return (
     <Stack gap="large" css={{ width: '100%' }}>
@@ -18,9 +19,9 @@ export const Portfolio = ({ projects }: { projects: Project[] }) => {
           width: '100%'
         }}
       >
-        {projects.map(({ meta }) => {
+        {data.map(({ meta }) => {
           return (
-            <Card
+            <ProjectCard
               key={meta.slug}
               // desc={meta.desc}
               tag={meta.tag}

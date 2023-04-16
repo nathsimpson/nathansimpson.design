@@ -5,12 +5,12 @@ import ErrorPage from 'next/error';
 import { Stack } from '../../components/design-system/box';
 import { Heading, Text } from '../../components/design-system/typography';
 import { Prose } from '../../components/design-system/prose';
-import { ContentContainer } from '../../components/ContentContainer';
+import { ContentContainer } from '../../components/Container';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
 import type { Post } from '../../lib/posts';
 import { getPostBySlug, getAllPosts } from '../../lib/posts';
-import { YouTubeVideo } from '../../components/YouTubeVideo';
+import { YouTubeVideo } from '../../components/Blog/YouTubeVideo';
 import { MdxContent } from '../../components/Mdx';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 

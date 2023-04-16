@@ -7,7 +7,7 @@ import { Heading } from '../../components/design-system/typography';
 import { Prose } from '../../components/design-system/prose';
 import { Tags } from '../../components/design-system/tag';
 
-import { ContentContainer } from '../../components/ContentContainer';
+import { ContentContainer } from '../../components/Container/ContentContainer';
 import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
 import type { Project } from '../../lib/projects';

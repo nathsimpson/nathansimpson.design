@@ -4,8 +4,8 @@ import { Stack } from '../../components/design-system/box';
 import { Heading, Text } from '../../components/design-system/typography';
 
 import { Header } from '../../components/Header';
-import { ContentContainer } from '../../components/ContentContainer';
-import { PostCard } from '../../components/PostCard';
+import { ContentContainer } from '../../components/Container/ContentContainer';
+import { PostCard } from '../../components/Blog/PostCard';
 import { getAllPosts, Post } from '../../lib/posts';
 
 type BlogPageProps = {

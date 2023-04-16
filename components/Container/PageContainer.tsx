@@ -1,11 +1,15 @@
 import { PropsWithChildren, ElementType } from 'react';
-import { spacing, maxWidth as maxWidthTokens } from './design-system/theme';
+import { spacing, maxWidth as maxWidthTokens } from '../design-system/theme';
 
 type ContainerProps = PropsWithChildren<{
   as?: ElementType;
 }>;
 
-export const Container = ({ as: Tag = 'div', children }: ContainerProps) => {
+// This is a container component that is used to constrain the width of a page
+export const PageContainer = ({
+  as: Tag = 'div',
+  children
+}: ContainerProps) => {
   return (
     <Tag
       css={{

@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import { Fragment } from 'react';
 import { Stack } from '../components/design-system/box';
 import { Header } from '../components/Header';
-import { Hero } from '../components/Home/Hero';
-import { Portfolio } from '../components/Portfolio';
-import { Container } from '../components/Container';
-import { Development } from '../components/Development';
-import { Dribbble } from '../components/Dribbble';
+import { HomeHero } from '../components/Home/HomeHero';
+import { Projects } from '../components/Home/Projects';
+import { PageContainer } from '../components/Container';
+import { Development } from '../components/Home/Development';
+import { Dribbble } from '../components/Home/Dribbble/Dribbble';
 import { getAllProjects } from '../lib/projects';
 import type { Project } from '../lib/projects';
 import { Prose } from 'components/design-system/prose';
@@ -19,10 +19,10 @@ const Home: NextPage<HomePageProps> = ({ allProjects }) => {
   return (
     <Fragment>
       <Header />
-      <Hero />
-      <Container>
+      <HomeHero />
+      <PageContainer>
         <Stack gap="xxxlarge" marginBottom="xxxlarge">
-          <Portfolio projects={allProjects} />
+          <Projects data={allProjects} />
           <Development />
           <Dribbble />
 
@@ -41,7 +41,7 @@ const Home: NextPage<HomePageProps> = ({ allProjects }) => {
             </p>
           </Prose>
         </Stack>
-      </Container>
+      </PageContainer>
     </Fragment>
   );
 };

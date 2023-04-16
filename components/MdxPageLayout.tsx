@@ -1,5 +1,5 @@
 import { Fragment, ReactNode } from 'react';
-import { ContentContainer } from './ContentContainer';
+import { ContentContainer } from './Container/ContentContainer';
 import { Prose } from './design-system/prose';
 import { Header } from './Header';
 

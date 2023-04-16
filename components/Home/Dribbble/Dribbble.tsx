@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Stack } from '../design-system/box';
-import { Heading, Text } from '../design-system/typography';
-import { TextLink } from '../TextLink';
+import { Stack } from '../../design-system/box';
+import { Heading, Text } from '../../design-system/typography';
+import { TextLink } from '../../TextLink';
 
 import { DribbbleGrid } from './DribbbleGrid';
-import { useFetchDribbbleShots } from './fetchDribbbleShots';
-import { Skeleton } from './DribbbleShotSkeleton';
+import { useFetchDribbbleShots } from './utils';
+import { DribbbleShot, DribbbleShotSkeleton } from './DribbbleShot';
 
 export const Dribbble = () => {
   const { loading, data, error } = useFetchDribbbleShots();
@@ -32,21 +32,17 @@ export const Dribbble = () => {
       ) : (
         <DribbbleGrid>
           {loading
-            ? [1, 2, 3, 4, 5, 6].map((item) => <Skeleton key={item} />)
+            ? [1, 2, 3, 4, 5, 6].map((item) => (
+                <DribbbleShotSkeleton key={item} />
+              ))
             : data.map(({ id, link, imageUrl, description }) => (
-                <a
-                  href={link}
+                <DribbbleShot
                   key={id}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={imageUrl}
-                    title={description}
-                    alt={description}
-                    css={{ width: '100%' }}
-                  />
-                </a>
+                  link={link}
+                  id={id}
+                  imageUrl={imageUrl}
+                  description={description}
+                />
               ))}
         </DribbbleGrid>
       )}

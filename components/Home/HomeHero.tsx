@@ -3,7 +3,7 @@ import { TextLink } from '../TextLink';
 import { useTheme } from '../design-system/theme';
 import { Heading, Text } from '../design-system/typography';
 
-export const Hero = () => {
+export const HomeHero = () => {
   const { maxWidth } = useTheme();
 
   return (

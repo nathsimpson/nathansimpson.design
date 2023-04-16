@@ -14,7 +14,7 @@
     "dev": "next dev",
     "storybook": "storybook dev -p 6006",
     "build:next": "next build",
-    "build:storybook": "storybook build -o public/storybook",
+    "build:storybook": "storybook build --output-dir ./public/storybook",
     "build": "yarn build:next && yarn build:storybook",
     "start": "next start",
     "clean": "rimraf \"**/node_modules\" \"**/yarn-error.log\" \"**/out.log\" \"**/.DS_Store\" \"**/dist\" \"**/out\" \"**/.next\"",

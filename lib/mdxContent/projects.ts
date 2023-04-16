@@ -27,7 +27,7 @@ export async function getProjectSlugs() {
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project> {
-  const fullPath = join(projectsDirectory, `${slug.replace(/\.md$/, '')}.md`);
+  const fullPath = join(projectsDirectory, `${slug.replace(/\.mdx$/, '')}.mdx`);
   const fileContents = await readFile(fullPath, { encoding: 'utf8' });
   const { data, content } = matter(fileContents);
 

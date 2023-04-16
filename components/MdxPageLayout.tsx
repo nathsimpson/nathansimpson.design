@@ -1,6 +1,6 @@
 import { Fragment, ReactNode } from 'react';
-import { ContentContainer } from './ContentContainer';
-import { Prose } from './design-system/prose';
+import { ContentContainer } from './Container/ContentContainer';
+import { Prose } from './ui/prose';
 import { Header } from './Header';
 
 export const MdxPageLayout = ({ children }: { children: ReactNode }) => {

@@ -5,24 +5,21 @@ import {
   MDXRemoteProps,
   MDXRemoteSerializeResult
 } from 'next-mdx-remote';
-import { Button, LinkButton, IconButton } from './design-system/button';
-import { Icon } from './design-system/icon';
-import { Tag, Tags } from './design-system/tag';
-import { Box, Flex, Stack } from './design-system/box';
-import { Prose } from './design-system/prose';
-import { Card } from './design-system/card';
-import { TextLink } from './design-system/text-link';
-import { Text, Heading } from './design-system/typography';
-import { useTheme, spacing } from './design-system/theme';
+import { Button, LinkButton, IconButton } from './ui/button';
+import { Icon } from './ui/icon';
+import { Tag, Tags } from './ui/tag';
+import { Box, Flex, Stack } from './ui/box';
+import { Prose } from './ui/prose';
+import { TextLink } from './TextLink';
+import { Text, Heading } from './ui/typography';
+import { useTheme, spacing } from '../lib/theme';
 import { Divider } from './Divider';
-import { NextTextLink } from './NextTextLink';
 import { CodeEditor, StaticCode } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';
 
 const DsComponents = {
   Box,
   Button,
-  Card,
   Divider,
   Flex,
   Heading,
@@ -35,7 +32,6 @@ const DsComponents = {
   Tags,
   Text,
   TextLink,
-  NextTextLink,
   spacing
 };
 

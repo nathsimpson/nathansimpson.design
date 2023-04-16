@@ -1,4 +1,4 @@
-import { useTheme } from './design-system/theme';
+import { useTheme } from '../lib/theme';
 
 export const Divider = () => {
   const { colors } = useTheme();

@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
 import { Fragment } from 'react';
-import { Stack } from '../components/design-system/box';
+import { Stack } from '../components/ui/box';
 import { Header } from '../components/Header';
-import { Hero } from '../components/Home/Hero';
-import { Portfolio } from '../components/Portfolio';
-import { Container } from '../components/Container';
-import { Development } from '../components/Development';
-import { Dribbble } from '../components/Dribbble';
-import { Contact } from '../components/Contact';
-import { getAllProjects } from '../lib/projects';
-import type { Project } from '../lib/projects';
+import { HomeHero } from '../components/Home/HomeHero';
+import { Projects } from '../components/Home/Projects';
+import { PageContainer } from '../components/Container';
+import { Development } from '../components/Home/Development';
+import { Dribbble } from '../components/Home/Dribbble/Dribbble';
+import { getAllProjects } from '../lib/mdxContent/projects';
+import type { Project } from '../lib/mdxContent/projects';
+import { Prose } from 'components/ui/prose';
 
 type HomePageProps = {
   allProjects: Project[];
@@ -19,15 +19,29 @@ const Home: NextPage<HomePageProps> = ({ allProjects }) => {
   return (
     <Fragment>
       <Header />
-      <Hero />
-      <Container>
-        <Stack gap="xxxlarge" marginBottom="xxxlarge" alignItems="center">
-          <Portfolio projects={allProjects} />
+      <HomeHero />
+      <PageContainer>
+        <Stack gap="xxxlarge" marginBottom="xxxlarge">
+          <Projects data={allProjects} />
           <Development />
           <Dribbble />
-          <Contact />
+
+          <Prose>
+            <h2>Contact Me</h2>
+            <p>
+              Would you like to get in touch? Feel free to message me through{' '}
+              <a href="https://twitter.com/nathjsimpson" target="_blank">
+                Twitter
+              </a>{' '}
+              or{' '}
+              <a href="https://www.linkedin.com/in/nathan-simpson-71512a75/?trk">
+                LinkedIn
+              </a>
+              .
+            </p>
+          </Prose>
         </Stack>
-      </Container>
+      </PageContainer>
     </Fragment>
   );
 };

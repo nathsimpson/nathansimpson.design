@@ -1,11 +1,6 @@
 import { Global } from '@emotion/react';
 import { createContext, useState, Fragment, ReactNode } from 'react';
-import {
-  ThemeProvider,
-  useTheme,
-  themeDark,
-  themeLight
-} from './design-system/theme';
+import { ThemeProvider, useTheme, themeDark, themeLight } from '../lib/theme';
 
 const themes = {
   dark: themeDark,

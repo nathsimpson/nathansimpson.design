@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import { Fragment } from 'react';
-import { Stack } from '../../components/design-system/box';
-import { Heading, Text } from '../../components/design-system/typography';
+import { Stack } from '../../components/ui/box';
+import { Heading, Text } from '../../components/ui/typography';
 
 import { Header } from '../../components/Header';
-import { ContentContainer } from '../../components/ContentContainer';
-import { PostCard } from '../../components/PostCard';
-import { getAllPosts, Post } from '../../lib/posts';
+import { ContentContainer } from '../../components/Container/ContentContainer';
+import { PostCard } from '../../components/Blog/PostCard';
+import { getAllPosts, Post } from '../../lib/mdxContent/posts';
 
 type BlogPageProps = {
   allPosts: Post[];

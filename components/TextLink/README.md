@@ -9,7 +9,7 @@ type: design-system
 A stylised wrapper over the standard HTML anchor attribute.
 
 ```jsx
-import { TextLink } from '../text-link';
+import { TextLink } from '../TextLink';
 ```
 
 TextLink will adopt it's parent's font size, unless one is specified.

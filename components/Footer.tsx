@@ -2,7 +2,7 @@ import { Icon } from './design-system/icon';
 import { useTheme } from './design-system/theme';
 import { Divider } from './Divider';
 import { Text } from './design-system/typography';
-import { NextTextLink } from './NextTextLink';
+import { TextLink } from './TextLink';
 import { Stack } from './design-system/box';
 
 import { footer_navItems, footer_socialNetworks } from '../data';
@@ -26,9 +26,9 @@ export const Footer = () => {
             style={{ display: 'inline-block', margin: '0px 5px' }}
             key={item.label}
           >
-            <NextTextLink href={item.url} size="small">
+            <TextLink href={item.url} size="small">
               {item.label}
-            </NextTextLink>
+            </TextLink>
           </li>
         ))}
       </ul>

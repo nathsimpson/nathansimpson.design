@@ -1,5 +1,5 @@
 import { Box, Stack } from '../design-system/box';
-import { TextLink } from '../design-system/text-link';
+import { TextLink } from '../TextLink';
 import { useTheme } from '../design-system/theme';
 import { Heading, Text } from '../design-system/typography';
 

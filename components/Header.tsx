@@ -7,7 +7,7 @@ import { Icon } from './design-system/icon';
 import { maxWidth, useTheme } from './design-system/theme';
 import { useMediaQuery } from './design-system/utils';
 
-import { NextTextLink } from './NextTextLink';
+import { TextLink } from './TextLink';
 import { ThemeSelectionContext } from './Core';
 
 const navItems = [
@@ -140,9 +140,9 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             gap="medium"
           >
             {navItems.map(({ url, label }) => (
-              <NextTextLink key={url} href={url}>
+              <TextLink key={url} href={url}>
                 {label}
-              </NextTextLink>
+              </TextLink>
             ))}
             <IconButton
               label="Toggle theme"

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { css } from '@emotion/react';
 import { useTheme } from '../theme';
+import { useLinkStyles } from 'components/TextLink';
 
 type ProseProps = {
   children: ReactNode;
@@ -13,6 +14,7 @@ export const Prose = ({ children }: ProseProps) => {
 
 const useProseStyles = () => {
   const { spacing, fontSizes, fontFamilies, lineHeights, colors } = useTheme();
+  const linkStyles = useLinkStyles();
 
   const standardHeadingStyles = {
     fontFamily: fontFamilies.heading,
@@ -32,13 +34,7 @@ const useProseStyles = () => {
     },
 
     a: {
-      color: colors.text.link,
-      cursor: 'pointer',
-      fontWeight: 600,
-      '&:hover, &:focus': {
-        color: colors.text.linkHover,
-        textDecoration: 'none'
-      }
+      ...linkStyles
     },
 
     h1: {

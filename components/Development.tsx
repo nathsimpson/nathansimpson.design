@@ -3,7 +3,7 @@ import { Stack } from './design-system/box';
 import { maxWidth } from './design-system/theme';
 
 import { Heading, Text } from './design-system/typography';
-import { TextLink } from './design-system/text-link';
+import { TextLink } from './TextLink';
 
 const development_skills = [
   'JavaScript',

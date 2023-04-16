@@ -4,7 +4,7 @@ import { useCardStyles } from './design-system/card';
 import { Flex, Stack } from './design-system/box';
 import { Prose } from './design-system/prose';
 import { Heading, Text } from './design-system/typography';
-import { NextTextLink } from './NextTextLink';
+import { TextLink } from './TextLink';
 
 type PostCardProps = {
   date: string;
@@ -35,9 +35,9 @@ export const PostCard = ({
   return (
     <div css={cardStyles}>
       <Stack gap="small">
-        <NextTextLink href={href}>
+        <TextLink href={href}>
           <Heading level={2}>{title}</Heading>
-        </NextTextLink>
+        </TextLink>
         <Flex flexDirection="row" alignItems="center">
           <Tag label={type} size="small" />
           <Text as="span" size="small" marginLeft="small">
@@ -55,7 +55,7 @@ export const PostCard = ({
           />
         )}
         <Prose>{description || excerpt}</Prose>
-        <NextTextLink href={href}>Read more</NextTextLink>
+        <TextLink href={href}>Read more</TextLink>
       </Stack>
     </div>
   );

@@ -1,4 +1,4 @@
-import { NextTextLink } from './NextTextLink';
+import { TextLink } from './TextLink';
 import { Icon } from './design-system/icon';
 
 export const BackButton = ({ href }: { href: string }) => {
@@ -13,10 +13,10 @@ export const BackButton = ({ href }: { href: string }) => {
         }
       }}
     >
-      <NextTextLink size="large" href={href}>
+      <TextLink size="large" href={href}>
         <Icon icon="chevronLeft" size={32} />
         Back
-      </NextTextLink>
+      </TextLink>
     </div>
   );
 };

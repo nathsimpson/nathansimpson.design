@@ -1,7 +1,7 @@
 import Link, { LinkProps } from 'next/link';
 
 import type { FontSizeType } from './ui/theme';
-import { ReactNode, AnchorHTMLAttributes, PropsWithChildren } from 'react';
+import { AnchorHTMLAttributes, PropsWithChildren } from 'react';
 import { useLinkStyles } from './ui/styles/useLinkStyles';
 
 type TextLinkProps = PropsWithChildren<LinkProps> &
@@ -21,15 +21,5 @@ export const TextLink = ({ size, href, ...props }: TextLinkProps) => {
     return <a css={styles} {...props} />;
   }
 
-  return <Link href={href} css={styles} {...props} />;
-};
-
-type NextLinkProps = LinkProps & {
-  children: ReactNode;
-  size?: FontSizeType;
-};
-
-export const NextLink = ({ size, href, ...props }: NextLinkProps) => {
-  const styles = useLinkStyles({ size });
   return <Link href={href} css={styles} {...props} />;
 };

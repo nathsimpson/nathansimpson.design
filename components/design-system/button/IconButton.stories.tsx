@@ -16,7 +16,6 @@ type Story = StoryObj<typeof IconButton>;
 
 export const Basic: Story = {
   args: {
-    icon: 'plus',
-    onClick: () => {}
+    icon: 'plus'
   }
 };

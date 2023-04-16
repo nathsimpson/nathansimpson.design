@@ -43,14 +43,14 @@ export const Large: Story = {
   }
 };
 
-export const iconBefore: Story = {
+export const IconBefore: Story = {
   args: {
     iconBefore: 'plus',
     label: 'Create'
   }
 };
 
-export const iconAfter: Story = {
+export const IconAfter: Story = {
   args: {
     iconAfter: 'chevronRight',
     label: 'Next',

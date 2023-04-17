@@ -26,7 +26,7 @@ export const TableHead = (props: PropsWithOnlyChildren) => {
       css={{
         textAlign: 'left',
         fontFamily: fontFamilies.heading,
-        color: colors.text.emphasis
+        color: colors.text.default
       }}
       {...props}
     />

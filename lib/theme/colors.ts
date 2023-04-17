@@ -22,8 +22,7 @@ export const darkColors = {
     default: white,
     muted: neutral600,
     link: brand,
-    linkSecondary: white,
-    linkHover: white
+    linkSecondary: white
   },
   background: {
     default: neutral050,
@@ -49,8 +48,7 @@ export const lightColors = {
     default: neutral025,
     muted: neutral400,
     link: brand,
-    linkSecondary: neutral025,
-    linkHover: neutral025
+    linkSecondary: neutral025
   },
   background: {
     default: neutral900,

@@ -10,7 +10,6 @@ export const useLinkStyles = ({ size }: { size?: FontSizeType } = {}) => {
     fontSize: size ? fontSizes[size] : 'auto',
     textDecoration: 'underline',
     '&:hover, &:focus': {
-      color: colors.text.linkHover,
       textDecoration: 'none'
     }
   };

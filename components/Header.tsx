@@ -72,7 +72,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
             css={{
               cursor: 'pointer',
               '&:hover': {
-                color: colors.text.linkHover
+                color: colors.text.default
               },
               [minBreak('sm')]: {
                 display: 'none'
@@ -88,7 +88,7 @@ export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
               color: colors.brand,
               textDecoration: 'none',
               '&:hover': {
-                color: colors.text.linkHover
+                color: colors.text.default
               }
             }}
           >

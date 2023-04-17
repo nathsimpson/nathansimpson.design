@@ -16,6 +16,7 @@ import { useTheme, spacing } from '../lib/theme';
 import { Divider } from './Divider';
 import { CodeEditor, StaticCode } from './CodeEditor';
 import { Table, TableHead, TableRow, TableCell } from './Table';
+import { YouTubeVideo } from './YouTubeVideo';
 
 const DsComponents = {
   Box,
@@ -83,7 +84,8 @@ const components: MDXRemoteProps['components'] = {
   },
   td: ({ children }: HTMLAttributes<HTMLTableCellElement>) => {
     return <TableCell>{children}</TableCell>;
-  }
+  },
+  YouTubeVideo
 };
 
 export const MdxContent = ({

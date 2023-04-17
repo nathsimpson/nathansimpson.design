@@ -10,7 +10,7 @@ import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
 import type { Post } from '../../lib/mdxContent/posts';
 import { getPostBySlug, getAllPosts } from '../../lib/mdxContent/posts';
-import { YouTubeVideo } from '../../components/Blog/YouTubeVideo';
+import { YouTubeVideo } from '../../components/YouTubeVideo';
 import { MdxContent } from '../../components/Mdx';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 

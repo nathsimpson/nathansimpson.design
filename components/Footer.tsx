@@ -33,7 +33,7 @@ export const Footer = () => {
         ))}
       </ul>
 
-      <Text size="xsmall" as="span" textAlign="center">
+      <Text size="xsmall" as="span" textAlign="center" color="muted">
         &copy; Copyright 2021 Nathan Simpson. Made in Sydney Australia.
       </Text>
 
@@ -52,7 +52,7 @@ export const Footer = () => {
           >
             <a
               css={{
-                color: colors.text.default,
+                color: colors.text.muted,
                 textDecoration: 'none',
 
                 '&:hover': {

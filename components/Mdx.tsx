@@ -44,7 +44,7 @@ const InlineCode = (props: any) => {
       padding="xxsmall"
       rounding="small"
       bg="emphasis"
-      color="emphasis"
+      color="default"
       css={{
         display: 'inline',
         fontFamily: fontFamilies.mono

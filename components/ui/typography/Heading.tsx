@@ -44,7 +44,7 @@ export const Heading = ({ level = 1, ...props }: HeadingProps) => {
       css={{
         fontFamily: fontFamilies.heading,
         lineHeight: 1.1,
-        color: colors.text.emphasis,
+        color: colors.text.default,
         margin: 0,
         ...headings[level]
       }}

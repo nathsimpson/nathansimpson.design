@@ -19,7 +19,7 @@ const useProseStyles = () => {
   const standardHeadingStyles = {
     fontFamily: fontFamilies.heading,
     lineHeight: 1.1,
-    color: colors.text.emphasis
+    color: colors.text.default
   };
 
   return css({
@@ -41,7 +41,7 @@ const useProseStyles = () => {
       ...standardHeadingStyles,
       fontSize: fontSizes.xxxlarge,
       fontWeight: 900,
-      color: colors.text.emphasis
+      color: colors.text.default
     },
     h2: {
       ...standardHeadingStyles,

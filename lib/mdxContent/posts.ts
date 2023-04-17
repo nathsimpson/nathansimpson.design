@@ -31,7 +31,7 @@ export async function getPostSlugs() {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post> {
-  const fullPath = join(postsDirectory, `${slug.replace(/\.md$/, '')}.md`);
+  const fullPath = join(postsDirectory, `${slug}.md`);
   const fileContents = await readFile(fullPath, { encoding: 'utf8' });
   const { data, content } = matter(fileContents);
 
@@ -43,7 +43,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
       title: data.title,
       date: data.date,
       type: data.type,
-      slug: slug.replace(/\.md$/, ''),
+      slug: slug,
       excerpt: data.excerpt || `${content.slice(0, 280).trim()}...`
     },
     source
@@ -52,7 +52,9 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 
 export async function getAllPosts() {
   const slugs = await getPostSlugs();
-  const posts = await Promise.all(slugs.map((slug) => getPostBySlug(slug)));
+  const posts = await Promise.all(
+    slugs.map((slug) => getPostBySlug(slug.replace(/\.md$/, '')))
+  );
 
   // sort posts by date in descending orde
   return posts.sort((post1, post2) =>

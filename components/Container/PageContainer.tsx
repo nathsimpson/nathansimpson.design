@@ -1,6 +1,6 @@
 import { Box, Flex } from 'components/ui/box';
 import { PropsWithChildren, ElementType } from 'react';
-import { spacing, maxWidth } from '../../lib/theme';
+import { maxWidth } from '../../lib/theme';
 
 type ContainerProps = PropsWithChildren<{
   as?: ElementType;

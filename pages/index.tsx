@@ -19,8 +19,8 @@ const Home: NextPage<HomePageProps> = ({ allProjects }) => {
   return (
     <Fragment>
       <Header />
-      <HomeHero />
       <PageContainer>
+        <HomeHero />
         <Stack gap="xxxlarge" marginBottom="xxxlarge">
           <Projects data={allProjects} />
           <Development />

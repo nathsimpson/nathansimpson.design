@@ -60,13 +60,13 @@ export const ProjectCard = ({
 
       <Flex>
         <Stack gap="none" padding="medium">
-          <Text as="span" size="xsmall">
+          <Text as="span" size="xsmall" color="muted">
             {tag}
           </Text>
           <span
             css={{
               fontFamily: fontFamilies.heading,
-              color: colors.text.emphasis,
+              color: colors.text.default,
               fontSize: fontSizes.large,
               fontWeight: 600,
               textDecoration: 'none',

@@ -16,7 +16,7 @@ type TagProps = {
 
 export const Tag = ({ as = 'div', label, size = 'medium' }: TagProps) => {
   const { colors } = useTheme();
-  const color = colors.text.default;
+  const color = colors.text.muted;
 
   const formattedLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (

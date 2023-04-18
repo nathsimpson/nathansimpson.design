@@ -19,11 +19,10 @@ export const darkColors = {
   border: neutral200,
   shadow: neutral025,
   text: {
-    default: neutral600,
-    emphasis: white,
+    default: white,
+    muted: neutral600,
     link: brand,
-    linkSecondary: white,
-    linkHover: white
+    linkSecondary: white
   },
   background: {
     default: neutral050,
@@ -46,11 +45,10 @@ export const lightColors = {
   border: neutral700,
   shadow: neutral700,
   text: {
-    default: neutral400,
-    emphasis: neutral025,
+    default: neutral025,
+    muted: neutral400,
     link: brand,
-    linkSecondary: neutral025,
-    linkHover: neutral025
+    linkSecondary: neutral025
   },
   background: {
     default: neutral900,

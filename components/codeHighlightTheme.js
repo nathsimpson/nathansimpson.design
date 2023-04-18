@@ -58,13 +58,13 @@ export const useCodeHighlightTheme = () => {
       {
         types: ['comment'],
         style: {
-          color: colors.text.default
+          color: colors.text.muted
         }
       },
       {
         types: ['attr-name'],
         style: {
-          color: colors.text.emphasis
+          color: colors.text.default
         }
       }
     ]

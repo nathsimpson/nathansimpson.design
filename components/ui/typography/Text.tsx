@@ -4,7 +4,7 @@ import { useMediaQuery, ResponsiveProp } from '../../../lib/useMediaQuery';
 
 type TextProps = {
   as?: 'p' | 'span';
-  color?: ResponsiveProp<'default' | 'emphasis'>;
+  color?: ResponsiveProp<'default' | 'muted'>;
   size?: FontSizeType;
   textAlign?: 'center' | 'left' | 'right' | 'justify';
 } & BoxProps;

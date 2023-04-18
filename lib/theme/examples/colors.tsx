@@ -62,8 +62,8 @@ const Color = ({ label, value }: { label: string; value: string }) => {
           <span css={{ color: colors.text.default }}>
             {getWcagScore(value, colors.text.default)}
           </span>{' '}
-          <span css={{ color: colors.text.emphasis }}>
-            {getWcagScore(value, colors.text.emphasis)}
+          <span css={{ color: colors.text.default }}>
+            {getWcagScore(value, colors.text.default)}
           </span>{' '}
           <span css={{ color: wcagText }}>{getWcagScore(value, wcagText)}</span>
         </div>

@@ -27,7 +27,7 @@ export async function getProjectSlugs() {
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project> {
-  const fullPath = join(projectsDirectory, `${slug.replace(/\.md$/, '')}.md`);
+  const fullPath = join(projectsDirectory, `${slug}.mdx`);
   const fileContents = await readFile(fullPath, { encoding: 'utf8' });
   const { data, content } = matter(fileContents);
 
@@ -39,7 +39,7 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
       title: data.title,
       date: data.date,
       imagesrc: data.imagesrc,
-      slug: slug.replace(/\.md$/, ''),
+      slug: slug,
       tag: data.tag
     },
     source
@@ -48,7 +48,9 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
 
 export async function getAllProjects() {
   const slugs = await getProjectSlugs();
-  const posts = await Promise.all(slugs.map((slug) => getProjectBySlug(slug)));
+  const posts = await Promise.all(
+    slugs.map((slug) => getProjectBySlug(slug.replace('.mdx', '')))
+  );
 
   // sort posts by date in descending order
   return posts.sort((post1, post2) =>

@@ -121,15 +121,16 @@ type BoxLayoutProps = {
   width?: ResponsiveProp<number | string>;
   gap?: ResponsiveProp<SpacingType>;
   /** Defines the alignment of items along the cross-axis of the flex container. */
-  alignItems?: 'center' | 'flex-end' | 'flex-start' | 'stretch';
-  justifyContent?:
+  alignItems?: ResponsiveProp<'center' | 'flex-end' | 'flex-start' | 'stretch'>;
+  justifyContent?: ResponsiveProp<
     | 'space-around'
     | 'space-between'
     | 'center'
     | 'flex-end'
     | 'space-evenly'
     | 'flex-start'
-    | 'stretch';
+    | 'stretch'
+  >;
   /** Define the initial main size of a flex item. */
   flexBasis?: number | string;
   /** Define grow "factor" of a flex item. It accepts a unitless value, which dictates the amount of available space inside the flex container the item should take up. */

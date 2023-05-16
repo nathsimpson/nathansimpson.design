@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import { ReactNode, useContext } from 'react';
-
 import { Box, Flex } from './ui/box';
 import { IconButton } from './ui/button';
 import { Icon } from './ui/icon';
+import { Text } from './ui/typography';
 import { maxWidth, useTheme } from '../lib/theme';
 import { useMediaQuery } from '../lib/useMediaQuery';
-
 import { TextLink } from './TextLink';
 import { ThemeSelectionContext } from './Core';
 
@@ -27,7 +26,7 @@ const navItems = [
 ];
 
 export const Header = () => {
-  const { colors } = useTheme();
+  const { colors, fontWeights } = useTheme();
 
   return (
     <HeaderContainer>
@@ -45,18 +44,25 @@ export const Header = () => {
 
         <Flex gap="medium" alignItems="center">
           <MenuToggle />
-          <Link
+          <Flex
+            as={Link}
             href="/"
+            gap="small"
+            alignItems="center"
             css={{
               color: colors.brand,
               textDecoration: 'none',
+              fontWeight: fontWeights.heading,
               '&:hover': {
                 color: colors.text.default
               }
             }}
           >
             <Icon icon="ns" size={50} />
-          </Link>
+            <Text as="span" size="xlarge">
+              Nathan Simpson
+            </Text>
+          </Flex>
         </Flex>
 
         <HeaderNav>

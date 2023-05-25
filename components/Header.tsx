@@ -1,80 +1,75 @@
 import Link from 'next/link';
-import { ReactNode, useContext } from 'react';
+import { useContext } from 'react';
 import { Box, Flex } from './ui/box';
 import { IconButton } from './ui/button';
 import { Icon } from './ui/icon';
 import { Text } from './ui/typography';
 import { maxWidth, useTheme } from '../lib/theme';
-import { useMediaQuery } from '../lib/useMediaQuery';
-import { TextLink } from './TextLink';
 import { ThemeSelectionContext } from './Core';
+import { BackButton } from './BackButton';
+import { useMediaQuery } from 'lib/useMediaQuery';
 
-const menuToggleId = 'nav-toggle';
-const navItems = [
-  {
-    url: '/',
-    label: 'Home'
-  },
-  {
-    url: '/about',
-    label: 'About'
-  },
-  {
-    url: '/blog',
-    label: 'Blog'
-  }
-];
+export type BackToPageConfig = {
+  href: string;
+  label: string;
+};
 
-export const Header = () => {
-  const { colors, fontWeights } = useTheme();
+export const backToHome: BackToPageConfig = {
+  href: '/',
+  label: 'Home'
+};
 
+export const Header = ({ backTo }: { backTo?: BackToPageConfig }) => {
   return (
     <HeaderContainer>
       <Flex justifyContent="space-between" alignItems="center">
-        <input
-          type="checkbox"
-          id={menuToggleId}
-          css={{
-            display: 'none',
-            '&:checked ~ nav': {
-              transform: 'translate(0%)'
-            }
-          }}
-        />
+        <Box width="5rem">
+          {backTo && <BackButton href={backTo.href} label={backTo.label} />}
+        </Box>
 
         <Flex gap="medium" alignItems="center">
-          <MenuToggle />
-          <Flex
-            as={Link}
-            href="/"
-            gap="small"
-            alignItems="center"
-            css={{
-              color: colors.brand,
-              textDecoration: 'none',
-              fontWeight: fontWeights.heading,
-              '&:hover': {
-                color: colors.text.default
-              }
-            }}
-          >
-            <Icon icon="ns" size={50} />
-            <Text as="span" size="xlarge">
-              Nathan Simpson
-            </Text>
-          </Flex>
+          <HeaderBrand />
         </Flex>
 
-        <HeaderNav>
-          {navItems.map(({ url, label }) => (
-            <TextLink key={url} href={url}>
-              {label}
-            </TextLink>
-          ))}
+        <Flex width="5rem" justifyContent="flex-end">
           <HeaderThemeToggle />
-        </HeaderNav>
+        </Flex>
       </Flex>
     </HeaderContainer>
+  );
+};
+
+const HeaderBrand = () => {
+  const { mq } = useMediaQuery();
+  const { colors, fontWeights } = useTheme();
+
+  return (
+    <Flex
+      as={Link}
+      href="/"
+      gap="small"
+      alignItems="center"
+      css={{
+        color: colors.brand,
+        textDecoration: 'none',
+        fontWeight: fontWeights.heading,
+        '&:hover': {
+          color: colors.text.default
+        }
+      }}
+    >
+      <Icon icon="ns" size={50} />
+
+      <Text
+        as="span"
+        size="xlarge"
+        css={mq({
+          display: ['none', 'block']
+        })}
+      >
+        Nathan Simpson
+      </Text>
+    </Flex>
   );
 };
 
@@ -110,84 +105,5 @@ const HeaderThemeToggle = () => {
       size="small"
       weight="secondary"
     />
-  );
-};
-
-const MenuToggle = () => {
-  const { colors } = useTheme();
-  const { minBreak } = useMediaQuery();
-  return (
-    <Box
-      as="label"
-      htmlFor={menuToggleId}
-      aria-label="Open menu"
-      css={{
-        cursor: 'pointer',
-        '&:hover': {
-          color: colors.text.default
-        },
-        [minBreak('sm')]: {
-          display: 'none'
-        }
-      }}
-    >
-      <Icon icon="menu" size={32} />
-    </Box>
-  );
-};
-
-export const HeaderNav = ({ children }: { children: ReactNode }) => {
-  const { colors } = useTheme();
-  const { maxBreak, minBreak } = useMediaQuery();
-  return (
-    <Flex
-      as="nav"
-      flexDirection="column"
-      gap={['large', 'none']}
-      css={{
-        [maxBreak('sm')]: {
-          transform: 'translate(-100%)',
-          transition: 'transform 300ms ease-out',
-          width: 240,
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          height: '100vh',
-          fontWeight: 500,
-          backgroundColor: colors.background.emphasis,
-          padding: 18,
-          listStyle: 'none',
-          boxShadow: `0px 6px 18px ${colors.shadow}`
-        }
-      }}
-    >
-      <Flex
-        justifyContent="flex-end"
-        css={{
-          [minBreak('sm')]: {
-            display: 'none'
-          }
-        }}
-      >
-        <label
-          aria-label="Close menu"
-          htmlFor="nav-toggle"
-          css={{
-            color: colors.action,
-            cursor: 'pointer'
-          }}
-        >
-          <Icon icon="cross" size={32} />
-        </label>
-      </Flex>
-
-      <Flex
-        flexDirection={['column', 'row']}
-        alignItems={['flex-start', 'center']}
-        gap="medium"
-      >
-        {children}
-      </Flex>
-    </Flex>
   );
 };

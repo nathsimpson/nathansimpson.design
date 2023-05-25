@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Stack } from '../../components/ui/box';
 import { Heading, Text } from '../../components/ui/typography';
 
-import { Header } from '../../components/Header';
+import { backToHome, Header } from '../../components/Header';
 import { ContentContainer } from '../../components/Container/ContentContainer';
 import { PostCard } from '../../components/Blog/PostCard';
 import { getAllPosts, Post } from '../../lib/mdxContent/posts';
@@ -18,7 +18,7 @@ export default function BlogPage({ allPosts }: BlogPageProps) {
       <Head>
         <title>Blog - Nathan Simpson</title>
       </Head>
-      <Header />
+      <Header backTo={backToHome} />
       <ContentContainer>
         <Stack gap="large" marginBottom="xxxlarge">
           <Stack gap="small">

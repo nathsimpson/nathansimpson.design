@@ -8,8 +8,7 @@ import { Prose } from '../../components/ui/prose';
 import { Tags } from '../../components/ui/tag';
 
 import { ContentContainer } from '../../components/Container/ContentContainer';
-import { BackButton } from '../../components/BackButton';
-import { Header } from '../../components/Header';
+import { backToHome, Header } from '../../components/Header';
 import type { Project } from '../../lib/mdxContent/projects';
 import {
   getProjectBySlug,
@@ -42,7 +41,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header backTo={backToHome} />
 
       <ContentContainer>
         {router.isFallback ? (
@@ -56,7 +55,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">
-                  <BackButton href="/" />
                   <Heading level={1}>{meta.title}</Heading>
                   {skills.length ? <Tags items={skills} /> : null}
                 </Stack>

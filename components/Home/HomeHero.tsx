@@ -29,6 +29,13 @@ export const HomeHero = () => {
           Sydney, Australia. I'm passionate about Design Systems, and building
           products from concept to delivery.
         </Text>
+        <TextLink href="/about" size="large">
+          About me
+        </TextLink>
+
+        <TextLink href="/blog" size="large">
+          Blog
+        </TextLink>
       </Stack>
     </Flex>
   );

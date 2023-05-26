@@ -7,14 +7,18 @@ export const useFetchDribbbleShots = () => {
   useEffect(() => {
     fetch('/api/get-dribbble-shots')
       .then((response) => response.json())
-      .then(({ shots }) => {
-        setData(shots.splice(0, 6, ''));
+      .then(({ shots, error }) => {
+        if (error) {
+          setError(error);
+          return;
+        }
+        setData(shots);
       })
       .catch((error) => {
         console.error(error);
         setError(error);
       });
-  });
+  }, []);
 
   return { error, data, loading: data.length === 0 };
 };

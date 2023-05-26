@@ -1,5 +1,6 @@
 // palette
 const brand = '#fa6d01';
+const blue = '#154dff';
 const neutral025 = '#0d0d0e';
 const neutral050 = '#13181d';
 const neutral100 = '#272f37';
@@ -41,13 +42,13 @@ export const darkColors = {
 
 export const lightColors = {
   brand: brand,
-  action: brand,
+  action: blue,
   border: neutral700,
   shadow: neutral700,
   text: {
     default: neutral025,
     muted: neutral400,
-    link: brand,
+    link: blue,
     linkSecondary: neutral025
   },
   background: {

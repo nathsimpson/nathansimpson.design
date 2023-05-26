@@ -8,8 +8,12 @@ type DribbbleShot = {
   link: string;
 };
 
-type Data = {
+type ResponseData = {
   shots: DribbbleShot[];
+};
+
+type ResponseError = {
+  error: string;
 };
 
 // Return type from Dribbble API
@@ -30,7 +34,10 @@ const getDribbbleShots = async (): Promise<DribbbleShot[]> => {
     headers: { Accept: 'application/json' }
   })
     .then((response) => response.json())
-
+    .catch((error) => {
+      console.error(error);
+      throw new Error(error);
+    })
     .then((data) => {
       return (data as DribbbleApiShot[])
         .map((shot) => ({
@@ -49,14 +56,13 @@ const getDribbbleShots = async (): Promise<DribbbleShot[]> => {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<ResponseData | ResponseError>
 ) {
-  return getDribbbleShots()
-    .then((shots) => {
-      res.status(200).json({ shots });
-    })
-    .catch((error) => ({
-      statusCode: 422,
-      body: JSON.stringify(error)
-    }));
+  try {
+    const shots = await getDribbbleShots();
+    res.status(200).json({ shots });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Could not fetch Dribbble shots.' });
+  }
 }

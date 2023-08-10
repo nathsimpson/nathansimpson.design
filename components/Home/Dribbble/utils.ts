@@ -14,7 +14,7 @@ export const useFetchDribbbleShots = () => {
         console.error(error);
         setError(error);
       });
-  });
+  }, []);
 
   return { error, data, loading: data.length === 0 };
 };

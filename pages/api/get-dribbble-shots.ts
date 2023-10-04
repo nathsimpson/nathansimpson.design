@@ -8,8 +8,12 @@ type DribbbleShot = {
   link: string;
 };
 
-type Data = {
+type ResponseData = {
   shots: DribbbleShot[];
+};
+
+type ResponseError = {
+  error: string;
 };
 
 // Return type from Dribbble API
@@ -25,38 +29,35 @@ type DribbbleApiShot = {
 const ACCESS_TOKEN = process.env.DRIBBBLE_ACCESS_TOKEN;
 const API_ENDPOINT = `https://api.dribbble.com/v2/user/shots?access_token=${ACCESS_TOKEN}`;
 
-const getDribbbleShots = async (): Promise<DribbbleShot[]> => {
-  const dribbbleShots = fetch(API_ENDPOINT, {
-    headers: { Accept: 'application/json' }
-  })
-    .then((response) => response.json())
-
-    .then((data) => {
-      return (data as DribbbleApiShot[])
-        .map((shot) => ({
-          description: shot.description.replace(/(<([^>]+)>)/gi, ''),
-          imageUrl: shot.images.normal,
-          link:
-            shot.images && (shot.images.hidpi || shot.images.normal)
-              ? shot.images.hidpi || shot.images.normal
-              : shot.html_url
-        }))
-        .filter((shot) => !shot.imageUrl.includes('.gif'));
-    });
-
-  return dribbbleShots;
+const formatShots = (shots: DribbbleApiShot[]): DribbbleShot[] => {
+  return shots
+    .map((shot) => ({
+      description: shot.description.replace(/(<([^>]+)>)/gi, ''),
+      imageUrl: shot.images.normal,
+      link:
+        shot.images && (shot.images.hidpi || shot.images.normal)
+          ? shot.images.hidpi || shot.images.normal
+          : shot.html_url
+    }))
+    .filter((shot) => !shot.imageUrl.includes('.gif'));
 };
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<ResponseData | ResponseError>
 ) {
-  return getDribbbleShots()
-    .then((shots) => {
-      res.status(200).json({ shots });
+  await fetch(API_ENDPOINT, {
+    headers: { Accept: 'application/json' }
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Unsuccessful response from Dribbble's API");
+      }
+
+      return response.json().then((data) => {
+        const formatted = formatShots(data as DribbbleApiShot[]);
+        return res.status(200).json({ shots: formatted });
+      });
     })
-    .catch((error) => ({
-      statusCode: 422,
-      body: JSON.stringify(error)
-    }));
+    .catch((error) => res.status(422).json({ error }));
 }

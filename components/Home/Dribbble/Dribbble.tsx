@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Stack } from '../../ui/box';
 import { Heading, Text } from '../../ui/typography';
 import { TextLink } from '../../TextLink';

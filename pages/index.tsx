@@ -6,7 +6,7 @@ import { HomeHero } from '../components/Home/HomeHero';
 import { Projects } from '../components/Home/Projects';
 import { PageContainer } from '../components/Container';
 import { Development } from '../components/Home/Development';
-// import { Dribbble } from '../components/Home/Dribbble/Dribbble';
+import { Dribbble } from '../components/Home/Dribbble/Dribbble';
 import { getAllProjects } from '../lib/mdxContent/projects';
 import type { Project } from '../lib/mdxContent/projects';
 import { Prose } from 'components/ui/prose';
@@ -24,7 +24,7 @@ const Home: NextPage<HomePageProps> = ({ allProjects }) => {
         <Stack gap="xxxlarge" marginBottom="xxxlarge">
           <Projects data={allProjects} />
           <Development />
-          {/* <Dribbble /> */}
+          <Dribbble />
 
           <Prose>
             <h2>Contact Me</h2>

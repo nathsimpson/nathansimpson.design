@@ -1,161 +1,109 @@
 import Link from 'next/link';
 import { useContext } from 'react';
-
 import { Box, Flex } from './ui/box';
 import { IconButton } from './ui/button';
 import { Icon } from './ui/icon';
+import { Text } from './ui/typography';
 import { maxWidth, useTheme } from '../lib/theme';
-import { useMediaQuery } from '../lib/useMediaQuery';
-
-import { TextLink } from './TextLink';
 import { ThemeSelectionContext } from './Core';
+import { BackButton } from './BackButton';
+import { useMediaQuery } from 'lib/useMediaQuery';
 
-const navItems = [
-  {
-    url: '/',
-    label: 'Home'
-  },
-  {
-    url: '/about',
-    label: 'About'
-  },
-  {
-    url: '/blog',
-    label: 'Blog'
-  }
-];
+export type BackToPageConfig = {
+  href: string;
+  label: string;
+};
 
-export const Header = ({ hasDivider = true }: { hasDivider?: boolean }) => {
-  const { spacing, colors } = useTheme();
-  const { setThemeName, themeName } = useContext(ThemeSelectionContext);
-  const { maxBreak, minBreak } = useMediaQuery();
+export const backToHome: BackToPageConfig = {
+  href: '/',
+  label: 'Home'
+};
+
+export const Header = ({ backTo }: { backTo?: BackToPageConfig }) => {
+  return (
+    <HeaderContainer>
+      <Flex justifyContent="space-between" alignItems="center">
+        <Box width="5rem">
+          {backTo && <BackButton href={backTo.href} label={backTo.label} />}
+        </Box>
+
+        <Flex gap="medium" alignItems="center">
+          <HeaderBrand />
+        </Flex>
+
+        <Flex width="5rem" justifyContent="flex-end">
+          <HeaderThemeToggle />
+        </Flex>
+      </Flex>
+    </HeaderContainer>
+  );
+};
+
+const HeaderBrand = () => {
+  const { mq } = useMediaQuery();
+  const { colors, fontWeights } = useTheme();
 
   return (
-    <header
-      className="header"
+    <Flex
+      as={Link}
+      href="/"
+      gap="small"
+      alignItems="center"
       css={{
-        boxSizing: 'border-box',
-        width: '100%',
-        marginBottom: spacing[hasDivider ? 'xlarge' : 'none'],
-        borderBottom: hasDivider ? `1px solid ${colors.border}` : 'none',
-        paddingTop: spacing.xsmall,
-        paddingBottom: spacing.xsmall,
-        paddingLeft: spacing.medium,
-        paddingRight: spacing.medium
+        color: colors.brand,
+        textDecoration: 'none',
+        fontWeight: fontWeights.heading,
+        '&:hover': {
+          color: colors.text.default
+        }
       }}
     >
-      <Flex
-        justifyContent="space-between"
-        alignItems="center"
+      <Icon icon="ns" size={50} />
+
+      <Text
+        as="span"
+        size="xlarge"
+        css={mq({
+          display: ['none', 'block']
+        })}
+      >
+        Nathan Simpson
+      </Text>
+    </Flex>
+  );
+};
+
+const HeaderContainer = ({ children }: { children: React.ReactNode }) => {
+  const { spacing } = useTheme();
+  return (
+    <Flex as="header" justifyContent="center">
+      <Box
+        paddingX="medium"
+        paddingY="xsmall"
         width="100%"
         css={{
           maxWidth: maxWidth.page,
-          margin: '0 auto'
+          marginBottom: spacing.xlarge
         }}
       >
-        <input
-          type="checkbox"
-          id="nav-toggle"
-          css={{
-            display: 'none',
-            '&:checked ~ nav': {
-              transform: 'translate(0%)'
-            }
-          }}
-        />
+        {children}
+      </Box>
+    </Flex>
+  );
+};
 
-        <Flex gap="medium" alignItems="center">
-          <Box
-            as="label"
-            htmlFor="nav-toggle"
-            aria-label="Open menu"
-            css={{
-              cursor: 'pointer',
-              '&:hover': {
-                color: colors.text.default
-              },
-              [minBreak('sm')]: {
-                display: 'none'
-              }
-            }}
-          >
-            <Icon icon="menu" size={32} />
-          </Box>
+const HeaderThemeToggle = () => {
+  const { setThemeName, themeName } = useContext(ThemeSelectionContext);
 
-          <Link
-            href="/"
-            css={{
-              color: colors.brand,
-              textDecoration: 'none',
-              '&:hover': {
-                color: colors.text.default
-              }
-            }}
-          >
-            <Icon icon="ns" size={50} />
-          </Link>
-        </Flex>
-
-        <nav
-          css={{
-            [maxBreak('sm')]: {
-              transform: 'translate(-100%)',
-              transition: 'transform 300ms ease-out',
-              width: 240,
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              height: '100vh',
-              fontWeight: 500,
-              backgroundColor: colors.background.emphasis,
-              padding: 18,
-              listStyle: 'none',
-              boxShadow: `0px 6px 18px ${colors.shadow}`
-            }
-          }}
-        >
-          <div
-            css={{
-              float: 'right',
-              [minBreak('sm')]: {
-                display: 'none'
-              }
-            }}
-          >
-            <label
-              aria-label="Close menu"
-              htmlFor="nav-toggle"
-              css={{
-                color: colors.action,
-                cursor: 'pointer'
-              }}
-            >
-              <Icon icon="cross" size={32} />
-            </label>
-          </div>
-
-          <Flex
-            flexDirection={['column', 'row']}
-            alignItems="center"
-            gap="medium"
-          >
-            {navItems.map(({ url, label }) => (
-              <TextLink key={url} href={url}>
-                {label}
-              </TextLink>
-            ))}
-            <IconButton
-              label="Toggle theme"
-              onClick={() => {
-                setThemeName(themeName === 'light' ? 'dark' : 'light');
-              }}
-              icon={themeName === 'light' ? 'moon' : 'sun'}
-              size="small"
-              weight="secondary"
-            />
-          </Flex>
-        </nav>
-      </Flex>
-    </header>
+  return (
+    <IconButton
+      label="Toggle theme"
+      onClick={() => {
+        setThemeName(themeName === 'light' ? 'dark' : 'light');
+      }}
+      icon={themeName === 'light' ? 'moon' : 'sun'}
+      size="small"
+      weight="secondary"
+    />
   );
 };

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Flex, Stack } from '../ui/box';
 import { TextLink } from '../TextLink';
 import { useTheme } from '../../lib/theme';
@@ -28,6 +29,13 @@ export const HomeHero = () => {
           Sydney, Australia. I'm passionate about Design Systems, and building
           products from concept to delivery.
         </Text>
+        <TextLink href="/about" size="large">
+          About me
+        </TextLink>
+
+        <TextLink href="/blog" size="large">
+          Blog
+        </TextLink>
       </Stack>
     </Flex>
   );
@@ -35,14 +43,14 @@ export const HomeHero = () => {
 
 const Avatar = () => {
   const { colors } = useTheme();
-  const size = '6rem';
+  const size = 96; // 6 * 16
   return (
-    <img
-      src="https://files.nathansimpson.design/avatar.jpeg"
+    <Image
+      src="/avatar.jpg"
       alt="Nathan is smiling while sitting in a Ford Mustang."
+      width={size}
+      height={size}
       css={{
-        width: size,
-        height: size,
         borderRadius: size,
         backgroundColor: colors.text.default
       }}

@@ -6,7 +6,6 @@ import { Stack } from '../../components/ui/box';
 import { Heading, Text } from '../../components/ui/typography';
 import { Prose } from '../../components/ui/prose';
 import { ContentContainer } from '../../components/Container';
-import { BackButton } from '../../components/BackButton';
 import { Header } from '../../components/Header';
 import type { Post } from '../../lib/mdxContent/posts';
 import { getPostBySlug, getAllPosts } from '../../lib/mdxContent/posts';
@@ -34,7 +33,12 @@ export default function PostPage({
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header
+        backTo={{
+          href: '/blog',
+          label: 'Blog'
+        }}
+      />
 
       <ContentContainer>
         {router.isFallback ? (
@@ -48,7 +52,6 @@ export default function PostPage({
               </Head>
               <Stack gap="medium" as="article">
                 <Stack gap="small">
-                  <BackButton href="/blog" />
                   <Heading level={1}>{meta.title}</Heading>
                   <Text size="small" as="span">
                     Posted on {postedDate}.

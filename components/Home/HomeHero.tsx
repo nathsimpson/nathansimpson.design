@@ -43,7 +43,7 @@ const Avatar = () => {
   const size = 96;
   return (
     <Image
-      src="https://files.nathansimpson.design/avatar.jpeg"
+      src="https://files.nathansimpson.design/avatar3.jpg"
       alt="Nathan is smiling while sitting in a Ford Mustang."
       width={size}
       height={size}

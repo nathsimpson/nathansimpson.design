@@ -12,10 +12,13 @@ const development_skills = [
   'React',
   'React Native',
   'NextJS',
+  'TailwindCSS',
+  'CSS-in-JS',
+  'Storybook',
+  'GraphQL',
   'Gatsby',
   'NodeJS',
-  'Keystone',
-  'Swift'
+  'Keystone'
 ];
 
 export const Development = () => {

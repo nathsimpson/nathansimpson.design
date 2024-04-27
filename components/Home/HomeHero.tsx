@@ -23,10 +23,14 @@ export const HomeHero = () => {
         <Avatar />
         <Heading level={1}>G'day, I'm Nath 👋</Heading>
         <Text as="p" size="large">
-          I'm a UI Designer &amp; Developer at{' '}
-          <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink> in
-          Sydney, Australia. I'm passionate about Design Systems, and building
-          products from concept to delivery.
+          I'm a Frontend Developer at{' '}
+          <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink>, based
+          in Orange, Australia.
+        </Text>
+
+        <Text as="p" color="muted">
+          I'm passionate about bridging the gap between design and development,
+          and crafting digital products which marry form and function.
         </Text>
       </Stack>
     </Flex>

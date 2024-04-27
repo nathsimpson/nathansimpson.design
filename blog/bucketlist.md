@@ -27,9 +27,9 @@ type: Post
 - ~~Invest in the Stock Market 📈~~
 - ~~Buy a house 🏡~~
 - ~~Get a dog 🐶~~
+- ~~Have a daughter 👶~~
 - Buy an investment property 🏠
 - Have a son 👶
-- Have a daughter 👶
 
 ## Hobbies
 

@@ -1,15 +1,5 @@
 export const footer_socialNetworks = [
   {
-    name: 'Twitter',
-    icon: 'twitter',
-    link: 'https://twitter.com/nathjsimpson'
-  },
-  {
-    name: 'Instagram',
-    icon: 'instagram',
-    link: 'https://www.instagram.com/nathansimpson.design'
-  },
-  {
     name: 'LinkedIn',
     icon: 'linkedin',
     link: 'https://www.linkedin.com/in/nathsimpson'
@@ -18,6 +8,11 @@ export const footer_socialNetworks = [
     name: 'Github',
     icon: 'github',
     link: 'https://github.com/nathsimpson'
+  },
+  {
+    name: 'Instagram',
+    icon: 'instagram',
+    link: 'https://www.instagram.com/nathansimpson.design'
   },
   // {
   //   name: 'Codepen',
@@ -34,10 +29,15 @@ export const footer_socialNetworks = [
     icon: 'youtube',
     link: 'https://www.youtube.com/channel/UCa__hNMzVWIQOHErctX0leg'
   },
+  // {
+  //   name: 'Polywork',
+  //   icon: 'polywork',
+  //   link: 'https://www.polywork.com/nathsimpson'
+  // }
   {
-    name: 'Polywork',
-    icon: 'polywork',
-    link: 'https://www.polywork.com/nathsimpson'
+    name: 'Twitter',
+    icon: 'twitter',
+    link: 'https://twitter.com/nathjsimpson'
   }
 ] as const;
 

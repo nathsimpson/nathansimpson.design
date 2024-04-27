@@ -14,6 +14,14 @@ const withMDX = nextMDX({
 });
 
 export default withMDX({
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'files.nathansimpson.design'
+      }
+    ]
+  },
   reactStrictMode: true,
   swcMinify: true,
   // Append the default value with md extensions

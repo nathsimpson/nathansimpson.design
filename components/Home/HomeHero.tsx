@@ -2,6 +2,7 @@ import { Flex, Stack } from '../ui/box';
 import { TextLink } from '../TextLink';
 import { useTheme } from '../../lib/theme';
 import { Heading, Text } from '../ui/typography';
+import Image from 'next/image';
 
 export const HomeHero = () => {
   const { maxWidth } = useTheme();
@@ -39,16 +40,16 @@ export const HomeHero = () => {
 
 const Avatar = () => {
   const { colors } = useTheme();
-  const size = '6rem';
+  const size = 96;
   return (
-    <img
+    <Image
       src="https://files.nathansimpson.design/avatar.jpeg"
       alt="Nathan is smiling while sitting in a Ford Mustang."
+      width={size}
+      height={size}
       css={{
-        width: size,
-        height: size,
         borderRadius: size,
-        backgroundColor: colors.text.default
+        backgroundColor: colors.background.emphasis
       }}
     />
   );

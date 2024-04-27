@@ -53,9 +53,5 @@ export const footer_navItems = [
   {
     url: '/blog',
     label: 'Blog'
-  },
-  {
-    url: '/design-system',
-    label: 'Design System'
   }
 ] as const;

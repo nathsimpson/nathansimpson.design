@@ -18,14 +18,19 @@ const development_skills = [
   'GraphQL',
   'Gatsby',
   'NodeJS',
-  'Keystone'
+  'Keystone',
+  'HTML',
+  'CSS3',
+  'Git',
+  'Jest',
+  'Playwright'
 ];
 
 export const Development = () => {
   return (
     <div css={{ width: '100%' }}>
       <Stack gap="medium" css={{ maxWidth: maxWidth.content }}>
-        <Heading level={2}>Development</Heading>
+        <Heading level={2}>Technical skills</Heading>
         <Text>
           I love bringing concepts to life through code. Most of my time is
           spent building products for awesome clients, as well as creating and

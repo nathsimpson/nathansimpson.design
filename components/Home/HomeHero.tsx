@@ -25,8 +25,8 @@ export const HomeHero = () => {
         <Heading level={1}>G'day, I'm Nath 👋</Heading>
         <Text as="p" size="large">
           I'm a Frontend Developer at{' '}
-          <TextLink href="https://thinkmill.com.au">Thinkmill</TextLink>, based
-          in Orange, Australia.
+          <TextLink href="https://atlassian.com">Atlassian</TextLink>, based in
+          Orange, Australia.
         </Text>
 
         <Text as="p" color="muted">

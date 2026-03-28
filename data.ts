@@ -38,6 +38,16 @@ export const footer_socialNetworks = [
     name: 'Twitter',
     icon: 'twitter',
     link: 'https://twitter.com/nathjsimpson'
+  },
+  {
+    name: 'Mastodon',
+    icon: 'mastodon',
+    link: 'https://mastodon.social/@nathsimpson'
+  },
+  {
+    name: 'Bluesky',
+    icon: 'bluesky',
+    link: 'https://bsky.app/profile/nathsimpson.bsky.social'
   }
 ] as const;
 
